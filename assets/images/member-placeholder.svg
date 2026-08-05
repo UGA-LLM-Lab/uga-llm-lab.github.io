@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 1000" role="img" aria-labelledby="title desc">
+  <title id="title">Member portrait placeholder</title>
+  <desc id="desc">An abstract portrait silhouette on a light background.</desc>
+  <rect width="800" height="1000" fill="#ece9e5"/>
+  <path d="M0 720 800 300v700H0z" fill="#ded8d1"/>
+  <circle cx="400" cy="355" r="142" fill="#b8b1aa"/>
+  <path d="M130 930c28-230 123-344 270-344s242 114 270 344" fill="#b8b1aa"/>
+  <circle cx="664" cy="156" r="74" fill="none" stroke="#ba0c2f" stroke-width="9" opacity=".75"/>
+  <path d="M617 156h94M664 109v94" stroke="#ba0c2f" stroke-width="7" stroke-linecap="round" opacity=".75"/>
+</svg>

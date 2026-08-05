@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Research areas and representative publications from the UGA LLM Lab.">
+  <title>Research | UGA LLM Lab</title>
+  <link rel="icon" href="assets/images/lab-logo-placeholder.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="assets/css/styles.css">
+  <script src="assets/js/data.js" defer></script>
+  <script src="assets/js/site.js" defer></script>
+</head>
+<body data-page="research">
+  <div data-site-header></div>
+  <main id="main-content">
+    <div class="shell">
+      <header class="page-heading">
+        <p class="breadcrumb"><a href="index.html">Home</a><span>/</span>Research</p>
+        <h1>Research</h1>
+        <p>We develop and evaluate methods across language models, quantum AI, and brain-inspired intelligence, with applications in medicine, science, manufacturing, and education.</p>
+      </header>
+    </div>
+
+    <section class="section">
+      <div class="shell">
+        <div class="section-heading">
+          <h2>Research areas</h2>
+          <p>Current directions and the technical topics that connect them.</p>
+        </div>
+        <div class="research-grid" data-research-areas></div>
+      </div>
+    </section>
+
+    <section class="section section--soft" id="publications">
+      <div class="shell">
+        <div class="section-heading">
+          <h2>Representative publications</h2>
+          <p>Authors, publication month, venue, and links are maintained centrally and sorted newest first within each area.</p>
+        </div>
+        <nav class="publication-jump" aria-label="Publication categories">
+          <a href="#llms">Large Language Models</a>
+          <a href="#quantum-ai">Quantum AI</a>
+          <a href="#brain-inspired-ai">Brain-inspired AI</a>
+        </nav>
+        <div data-publications-list></div>
+      </div>
+    </section>
+  </main>
+  <div data-site-footer></div>
+</body>
+</html>
