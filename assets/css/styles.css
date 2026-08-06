@@ -1291,6 +1291,10 @@ a:focus-visible {
 }
 
 @media (max-width: 900px) {
+  :root {
+    --shell: min(100% - 48px, 1160px);
+  }
+
   .brand-row {
     grid-template-columns: 135px minmax(0, 1fr) auto;
     gap: 14px;
@@ -1363,7 +1367,17 @@ a:focus-visible {
   }
 
   .nav-wordmark {
-    width: 112px;
+    width: 150px;
+    height: 28px;
+    place-items: center start;
+  }
+
+  .nav-wordmark img {
+    max-height: 28px;
+  }
+
+  .nav-link--wordmark {
+    justify-content: flex-start;
   }
 
   .dropdown-menu {
@@ -1409,11 +1423,49 @@ a:focus-visible {
   .research-grid {
     grid-template-columns: 1fr;
   }
+
+  .footer-row {
+    align-items: center;
+    flex-direction: column;
+    gap: 12px;
+    text-align: center;
+  }
+
+  .footer-identity {
+    width: 100%;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: center;
+    gap: 4px;
+    text-align: center;
+  }
+
+  .footer-identity > div {
+    display: block;
+  }
+
+  .footer-identity strong {
+    display: block;
+  }
+
+  .footer-identity span {
+    display: block;
+    text-align: center;
+  }
+
+  .footer-links {
+    width: 100%;
+    text-align: center;
+  }
+
+  .footer-email {
+    margin: 0 auto 4px;
+  }
 }
 
 @media (max-width: 680px) {
   :root {
-    --shell: min(100% - 28px, 1160px);
+    --shell: min(100% - 40px, 1160px);
   }
 
   body {
@@ -1521,11 +1573,6 @@ a:focus-visible {
     gap: 11px;
   }
 
-  .footer-row {
-    align-items: flex-start;
-    flex-direction: column;
-  }
-
   .ez-intro__grid {
     grid-template-columns: 1fr;
     gap: 22px;
@@ -1533,14 +1580,6 @@ a:focus-visible {
 
   .ez-wordmark {
     width: min(300px, 100%);
-  }
-
-  .footer-links {
-    text-align: left;
-  }
-
-  .footer-email {
-    margin-left: 0;
   }
 
   .feature-list li {
