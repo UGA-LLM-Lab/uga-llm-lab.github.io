@@ -139,10 +139,11 @@ window.LLM_LAB_DATA = {
           name: "Siyuan Li",
           role: "Ph.D. Student in Computer Science",
           bio: "Research interests include multimodal large language models, model architecture, deep reasoning, and AI for medicine.",
-          photo: "assets/images/members-siyuan-li.png",
+          photo: "assets/images/members-siyuan-li.jpg",
           website: "https://siyuanli.tech/",
           links: [
             { label: "Website", url: "https://siyuanli.tech/" },
+            { label: "Google Scholar", url: "https://scholar.google.com/citations?user=n1d5mYoAAAAJ&hl=zh-CN" },
             { label: "LinkedIn", url: "https://www.linkedin.com/in/siyuan-li-uga/" },
             { label: "GitHub", url: "https://github.com/liaoyanqing666" },
             { label: "Email", url: "mailto:sl64343@uga.edu" }
@@ -164,6 +165,7 @@ window.LLM_LAB_DATA = {
           bio: "Studies efficient optimization and adaptation methods for large language models.",
           photo: "assets/images/members-huaqin-zhao.jpg",
           links: [
+            { label: "Google Scholar", url: "https://scholar.google.com/citations?user=V5vlj4kAAAAJ&hl=en" },
             { label: "LinkedIn", url: "https://www.linkedin.com/in/huaqin-zhao-860b19219" },
             { label: "Email", url: "mailto:hz33227@uga.edu" }
           ]
@@ -228,7 +230,7 @@ window.LLM_LAB_DATA = {
           name: "Yi Pan",
           role: "Ph.D. Student in Computer Science",
           bio: "Studies multi-agent systems, quantum AI, multimodal large language models, and healthcare applications.",
-          photo: "assets/images/members-yi-pan.png",
+          photo: "assets/images/members-yi-pan.jpg",
           website: "https://ypanstupidog.github.io/",
           links: [
             { label: "Website", url: "https://ypanstupidog.github.io/" },
@@ -251,7 +253,7 @@ window.LLM_LAB_DATA = {
           name: "Xinliang Li",
           role: "Ph.D. Student in Computer Science",
           bio: "Works at the intersection of AI, brain biomechanics, and data-driven biomedical engineering.",
-          photo: "assets/images/members-xinliang-li.png",
+          photo: "assets/images/members-xinliang-li.jpg",
           website: "https://xqwang.engr.uga.edu/group/",
           links: [
             { label: "Website", url: "https://xqwang.engr.uga.edu/group/" },
@@ -281,7 +283,7 @@ window.LLM_LAB_DATA = {
           name: "Zongtan Li",
           role: "Ph.D. Student in Engineering",
           bio: "Research interests include control theory, robotics, and 3D computer vision.",
-          photo: "assets/images/members-zongtan-li.jpeg",
+          photo: "assets/images/members-zongtan-li.jpg",
           website: "https://yunlishao.github.io/people.html",
           links: [
             { label: "Website", url: "https://yunlishao.github.io/people.html" },
@@ -307,7 +309,7 @@ window.LLM_LAB_DATA = {
           name: "Khoa Le",
           role: "Ph.D. Student in Computer Science",
           bio: "Works on biomedical image analysis, connections between vision and brain function, and quantum medical applications.",
-          photo: "assets/images/members-khoa-le.jpeg",
+          photo: "assets/images/members-khoa-le.jpg",
           website: "https://computing.uga.edu/news/stories/2025/khoa-le-inspiring-next-generation-computer-scientists-uga",
           links: [
             { label: "UGA profile", url: "https://computing.uga.edu/news/stories/2025/khoa-le-inspiring-next-generation-computer-scientists-uga" },
@@ -344,10 +346,8 @@ window.LLM_LAB_DATA = {
       members: [
         {
           name: "Dajiang Zhu",
-          role: "Former Ph.D. Student · 2014",
-          sortYear: 2014,
-          affiliation: "Current: The University of Texas at Arlington",
-          bio: "Associate Professor in Computer Science and Engineering, working on brain imaging, computational neuroscience, brain-inspired AI, and medical data analysis.",
+          role: "Former Ph.D. Student",
+          bio: "Associate Professor in Computer Science and Engineering at The University of Texas at Arlington, working on brain imaging, computational neuroscience, brain-inspired AI, and medical data analysis.",
           photo: "assets/images/members-dajiang-zhu.jpg",
           website: "https://ranger.uta.edu/~zhu/index.html",
           links: [
@@ -358,26 +358,9 @@ window.LLM_LAB_DATA = {
           ]
         },
         {
-          name: "Jinglei Lv",
-          role: "Former Ph.D. Student · 2016",
-          sortYear: 2016.03,
-          affiliation: "Current: The University of Sydney",
-          bio: "Senior Lecturer in Biomedical Engineering, working on neuroimaging, connectomics, and AI for brain health.",
-          photo: "assets/images/members-jinglei-lv.jpg",
-          website: "https://profiles.sydney.edu.au/jinglei.lv",
-          links: [
-            { label: "Website", url: "https://profiles.sydney.edu.au/jinglei.lv" },
-            { label: "Google Scholar", url: "https://scholar.google.com/citations?user=jA838pcAAAAJ&hl=en" },
-            { label: "LinkedIn", url: "https://au.linkedin.com/in/jinglei-lv-6428449a" },
-            { label: "Email", url: "mailto:jinglei.lv@sydney.edu.au" }
-          ]
-        },
-        {
           name: "Xiang Li",
-          role: "Former Ph.D. Student · 2016",
-          sortYear: 2016.05,
-          affiliation: "Current: Massachusetts General Hospital · Harvard Medical School · Kempner Institute",
-          bio: "Assistant Professor of Radiology developing generalized, robust, and explainable multimodal AI for healthcare.",
+          role: "Former Ph.D. Student",
+          bio: "Assistant Professor of Radiology at Massachusetts General Hospital and Harvard Medical School, and an affiliate of the Kempner Institute, developing generalized, robust, and explainable multimodal AI for healthcare.",
           photo: "assets/images/members-xiang-li.jpg",
           website: "https://xiangli-shaun.github.io/",
           links: [
@@ -388,11 +371,22 @@ window.LLM_LAB_DATA = {
           ]
         },
         {
+          name: "Jinglei Lv",
+          role: "Former Ph.D. Student",
+          bio: "Senior Lecturer in Biomedical Engineering at The University of Sydney, working on neuroimaging, connectomics, and AI for brain health.",
+          photo: "assets/images/members-jinglei-lv.jpg",
+          website: "https://profiles.sydney.edu.au/jinglei.lv",
+          links: [
+            { label: "Website", url: "https://profiles.sydney.edu.au/jinglei.lv" },
+            { label: "Google Scholar", url: "https://scholar.google.com/citations?user=jA838pcAAAAJ&hl=en" },
+            { label: "LinkedIn", url: "https://au.linkedin.com/in/jinglei-lv-6428449a" },
+            { label: "Email", url: "mailto:jinglei.lv@sydney.edu.au" }
+          ]
+        },
+        {
           name: "Wei Zhang",
-          role: "Former Ph.D. Student · 2019",
-          sortYear: 2019,
-          affiliation: "Current: Augusta University",
-          bio: "Assistant Professor whose research includes machine learning, optimization, computational neuroscience, and quantum AI.",
+          role: "Former Ph.D. Student",
+          bio: "Assistant Professor at Augusta University whose research includes machine learning, optimization, computational neuroscience, and quantum AI.",
           photo: "assets/images/members-wei-zhang.jpg",
           website: "https://www.augusta.edu/faculty/directory/view.php?id=WZHANG2",
           links: [
@@ -403,22 +397,19 @@ window.LLM_LAB_DATA = {
         },
         {
           name: "Haixing Dai",
-          role: "Former Ph.D. Student · 2023",
-          sortYear: 2023.05,
-          affiliation: "Current: Meta",
-          bio: "Research Scientist working on memory systems, personalization, generative models, and advanced AI systems.",
+          role: "Former Ph.D. Student",
+          bio: "Research Scientist at Meta, working on memory systems, personalization, generative models, and advanced AI systems.",
           photo: "assets/images/members-haixing-dai.jpg",
           links: [
+            { label: "Google Scholar", url: "https://scholar.google.com/citations?user=R3eikdMAAAAJ&hl=en" },
             { label: "LinkedIn", url: "https://www.linkedin.com/in/haixing-dai-754490181" }
           ]
         },
         {
           name: "Lin Zhao",
-          role: "Former Ph.D. Student · 2023",
-          sortYear: 2023.06,
-          affiliation: "Current: New Jersey Institute of Technology",
-          bio: "Assistant Professor of Biomedical Engineering and director of the Machine Intelligence in Medicine and Imaging Lab.",
-          photo: "assets/images/members-lin-zhao.jpeg",
+          role: "Former Ph.D. Student",
+          bio: "Assistant Professor of Biomedical Engineering at the New Jersey Institute of Technology and director of the Machine Intelligence in Medicine and Imaging Lab.",
+          photo: "assets/images/members-lin-zhao.jpg",
           website: "https://lin-zhao-research.github.io/",
           links: [
             { label: "Website", url: "https://lin-zhao-research.github.io/" },
@@ -429,27 +420,25 @@ window.LLM_LAB_DATA = {
         },
         {
           name: "Zihao Wu",
-          role: "Former Ph.D. Student · 2025",
-          sortYear: 2025.12,
-          affiliation: "Current: Nankai University",
-          bio: "Researcher working on brain-inspired foundation models, data-efficient learning, and large language models.",
-          photo: "assets/images/members-zihao-wu.png",
+          role: "Former Ph.D. Student",
+          bio: "Researcher at Nankai University working on brain-inspired foundation models, data-efficient learning, and large language models.",
+          photo: "assets/images/members-zihao-wu.jpg",
           links: [
             { label: "UGA dissertation", url: "https://openscholar.uga.edu/record/27708" },
+            { label: "Google Scholar", url: "https://scholar.google.com/citations?user=RMvoE4sAAAAJ&hl=en" },
             { label: "LinkedIn", url: "https://www.linkedin.com/in/zihao-wu-60203b198" }
           ]
         },
         {
           name: "Zhengliang Liu",
-          role: "Former Ph.D. Student · 2026 (estimated)",
-          sortYear: 2026.5,
-          affiliation: "Current: GyriQAI, Inc",
-          affiliationUrl: "https://ezcollegeapp.com/",
-          bio: "Chief Technology Officer (CTO) at the UGA LLM Lab startup, leading the development and translation of AI systems into practical products.",
-          photo: "assets/images/members-zhengliang-liu.jpeg",
+          role: "Former Ph.D. Student",
+          bio: "Chief Technology Officer (CTO) at GyriQAI, Inc, leading the development and translation of AI systems into practical products.",
+          bioLink: { text: "GyriQAI, Inc", url: "https://ezcollegeapp.com/" },
+          photo: "assets/images/members-zhengliang-liu.jpg",
           website: "https://zl-liu.github.io/",
           links: [
             { label: "Website", url: "https://zl-liu.github.io/" },
+            { label: "Google Scholar", url: "https://scholar.google.com/citations?user=p8tAM0AAAAAJ&hl=en" },
             { label: "LinkedIn", url: "https://www.linkedin.com/in/zhengliang-liu-938186136" },
             { label: "GitHub", url: "https://github.com/zl-liu" },
             { label: "Email", url: "mailto:zl18864@uga.edu" }

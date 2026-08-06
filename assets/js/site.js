@@ -180,9 +180,7 @@
     if (!mount) return;
 
     mount.innerHTML = data.memberGroups.map((group) => {
-      const members = group.id === "alumni"
-        ? [...group.members].sort((a, b) => (a.sortYear ?? Infinity) - (b.sortYear ?? Infinity))
-        : group.members;
+      const members = group.members;
       return `
         <section class="member-section${group.id === "principal-investigator" ? " member-section--pi" : ""}" id="${escapeHtml(group.id)}">
           <div class="section-bar"><h2>${escapeHtml(group.title)}</h2></div>
@@ -195,6 +193,12 @@
             const affiliation = member.affiliationUrl
               ? `<a href="${escapeHtml(member.affiliationUrl)}"${externalAttributes(member.affiliationUrl)}>${escapeHtml(member.affiliation)}</a>`
               : escapeHtml(member.affiliation || "");
+            const bio = member.bioLink
+              ? escapeHtml(member.bio).replace(
+                escapeHtml(member.bioLink.text),
+                `<a href="${escapeHtml(member.bioLink.url)}"${externalAttributes(member.bioLink.url)}>${escapeHtml(member.bioLink.text)}</a>`
+              )
+              : escapeHtml(member.bio || "");
             const links = member.links?.length
               ? `<div class="member-links">${member.links.map((link) => `<a href="${escapeHtml(link.url)}"${externalAttributes(link.url)} aria-label="${escapeHtml(link.label)}" title="${escapeHtml(link.label)}">${iconForLink(link.label)}</a>`).join("")}</div>`
               : "";
@@ -209,7 +213,7 @@
                   <h3>${name}</h3>
                   ${member.role ? `<p class="member-role">${escapeHtml(member.role)}</p>` : ""}
                   ${member.affiliation ? `<p class="member-affiliation">${affiliation}</p>` : ""}
-                  ${member.bio ? `<p class="member-bio">${escapeHtml(member.bio)}</p>` : ""}
+                  ${bio ? `<p class="member-bio">${bio}</p>` : ""}
                   ${links}
                 </div>
               </article>`;
