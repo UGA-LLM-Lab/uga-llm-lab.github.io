@@ -1367,13 +1367,13 @@ a:focus-visible {
   }
 
   .nav-wordmark {
-    width: 150px;
-    height: 28px;
+    width: 132px;
+    height: 24px;
     place-items: center start;
   }
 
   .nav-wordmark img {
-    max-height: 28px;
+    max-height: 24px;
   }
 
   .nav-link--wordmark {

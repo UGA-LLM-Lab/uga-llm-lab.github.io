@@ -155,6 +155,7 @@ window.LLM_LAB_DATA = {
           bio: "Works on large language models and biomedical applications, including medical question answering and pharmacy.",
           photo: "assets/images/members-shaochen-xu.jpg",
           links: [
+            { label: "Google Scholar", url: "https://scholar.google.com/citations?user=TQ7qH6oAAAAJ&hl=en" },
             { label: "LinkedIn", url: "https://www.linkedin.com/in/stevenxsc/" },
             { label: "Email", url: "mailto:sx76699@uga.edu" }
           ]
@@ -204,6 +205,7 @@ window.LLM_LAB_DATA = {
           bio: "Works on large language models, medical AI, agent systems, and knowledge-intensive reasoning.",
           photo: "assets/images/members-peng-shu.jpg",
           links: [
+            { label: "Google Scholar", url: "https://scholar.google.com/citations?user=yai_fREAAAAJ&hl=en" },
             { label: "LinkedIn", url: "https://www.linkedin.com/in/pengshu7" },
             { label: "Email", url: "mailto:ps47974@uga.edu" }
           ]
@@ -212,6 +214,7 @@ window.LLM_LAB_DATA = {
           name: "Weihang You",
           role: "Ph.D. Student in Computer Science",
           bio: "Studies agent memory, multimodal language models, and applications of AI in education and science.",
+          photo: "assets/images/members-weihang-you.jpg",
           links: [
             { label: "Email", url: "mailto:weihang.you@uga.edu" }
           ]
@@ -222,6 +225,7 @@ window.LLM_LAB_DATA = {
           bio: "Researches quantum machine learning and multimodal models for biomedical applications.",
           photo: "assets/images/members-yifan-zhou.jpg",
           links: [
+            { label: "Google Scholar", url: "https://scholar.google.com/citations?user=Khsw8YoAAAAJ&hl=en" },
             { label: "LinkedIn", url: "https://www.linkedin.com/in/yifan-zhou-19a677238" },
             { label: "Email", url: "mailto:yz44466@uga.edu" }
           ]
@@ -244,6 +248,7 @@ window.LLM_LAB_DATA = {
           name: "Junhao Chen",
           role: "Ph.D. Student in Computer Science",
           bio: "Works on quantum language models, compact hybrid architectures, and medical AI.",
+          photo: "assets/images/members-junhao-chen.jpg",
           links: [
             { label: "LinkedIn", url: "https://www.linkedin.com/in/junhao-chen-4770111b3" },
             { label: "Email", url: "mailto:jc43275@uga.edu" }
@@ -254,9 +259,7 @@ window.LLM_LAB_DATA = {
           role: "Ph.D. Student in Computer Science",
           bio: "Works at the intersection of AI, brain biomechanics, and data-driven biomedical engineering.",
           photo: "assets/images/members-xinliang-li.jpg",
-          website: "https://xqwang.engr.uga.edu/group/",
           links: [
-            { label: "Website", url: "https://xqwang.engr.uga.edu/group/" },
             { label: "Email", url: "mailto:Xinliang.Li@uga.edu" }
           ]
         },
@@ -284,9 +287,8 @@ window.LLM_LAB_DATA = {
           role: "Ph.D. Student in Engineering",
           bio: "Research interests include control theory, robotics, and 3D computer vision.",
           photo: "assets/images/members-zongtan-li.jpg",
-          website: "https://yunlishao.github.io/people.html",
           links: [
-            { label: "Website", url: "https://yunlishao.github.io/people.html" },
+            { label: "Google Scholar", url: "https://scholar.google.com/citations?user=aieHH-QAAAAJ&hl=en" },
             { label: "LinkedIn", url: "https://www.linkedin.com/in/zongtan-li-92120a28a" },
             { label: "Email", url: "mailto:zongtan.li@uga.edu" }
           ]
@@ -310,9 +312,8 @@ window.LLM_LAB_DATA = {
           role: "Ph.D. Student in Computer Science",
           bio: "Works on biomedical image analysis, connections between vision and brain function, and quantum medical applications.",
           photo: "assets/images/members-khoa-le.jpg",
-          website: "https://computing.uga.edu/news/stories/2025/khoa-le-inspiring-next-generation-computer-scientists-uga",
           links: [
-            { label: "UGA profile", url: "https://computing.uga.edu/news/stories/2025/khoa-le-inspiring-next-generation-computer-scientists-uga" },
+            { label: "LinkedIn", url: "https://www.linkedin.com/in/khoalend" },
             { label: "Email", url: "mailto:kl58277@uga.edu" }
           ]
         }

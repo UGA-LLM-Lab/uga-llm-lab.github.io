@@ -186,37 +186,41 @@
           <div class="section-bar"><h2>${escapeHtml(group.title)}</h2></div>
           <div class="member-list">
             ${members.map((member) => {
-            const destination = member.website || member.profilePage;
-            const name = destination
-              ? `<a href="${escapeHtml(destination)}"${externalAttributes(destination)}>${escapeHtml(member.name)}</a>`
-              : escapeHtml(member.name);
-            const affiliation = member.affiliationUrl
-              ? `<a href="${escapeHtml(member.affiliationUrl)}"${externalAttributes(member.affiliationUrl)}>${escapeHtml(member.affiliation)}</a>`
-              : escapeHtml(member.affiliation || "");
-            const bio = member.bioLink
-              ? escapeHtml(member.bio).replace(
-                escapeHtml(member.bioLink.text),
-                `<a href="${escapeHtml(member.bioLink.url)}"${externalAttributes(member.bioLink.url)}>${escapeHtml(member.bioLink.text)}</a>`
-              )
-              : escapeHtml(member.bio || "");
-            const links = member.links?.length
-              ? `<div class="member-links">${member.links.map((link) => `<a href="${escapeHtml(link.url)}"${externalAttributes(link.url)} aria-label="${escapeHtml(link.label)}" title="${escapeHtml(link.label)}">${iconForLink(link.label)}</a>`).join("")}</div>`
-              : "";
-            const photo = `<img src="${escapeHtml(member.photo || "assets/images/member-placeholder.svg")}" alt="${member.photo ? escapeHtml(member.name) : "Portrait placeholder"}" data-member-photo>`;
-            const photoElement = destination
-              ? `<a class="member-photo" href="${escapeHtml(destination)}"${externalAttributes(destination)} aria-label="View ${escapeHtml(member.name)} profile">${photo}</a>`
-              : `<div class="member-photo">${photo}</div>`;
-            return `
-              <article class="member-card${member.isPlaceholder ? " member-card--placeholder" : ""}" data-reveal>
-                ${photoElement}
-                <div class="member-copy">
-                  <h3>${name}</h3>
-                  ${member.role ? `<p class="member-role">${escapeHtml(member.role)}</p>` : ""}
-                  ${member.affiliation ? `<p class="member-affiliation">${affiliation}</p>` : ""}
-                  ${bio ? `<p class="member-bio">${bio}</p>` : ""}
-                  ${links}
-                </div>
-              </article>`;
+              const personalDestination = member.website || member.profilePage;
+              const memberLink = (label) => member.links?.find((link) => link.label.toLowerCase() === label);
+              const photoDestination = personalDestination
+                || memberLink("linkedin")?.url
+                || memberLink("google scholar")?.url;
+              const name = personalDestination
+                ? `<a href="${escapeHtml(personalDestination)}"${externalAttributes(personalDestination)}>${escapeHtml(member.name)}</a>`
+                : escapeHtml(member.name);
+              const affiliation = member.affiliationUrl
+                ? `<a href="${escapeHtml(member.affiliationUrl)}"${externalAttributes(member.affiliationUrl)}>${escapeHtml(member.affiliation)}</a>`
+                : escapeHtml(member.affiliation || "");
+              const bio = member.bioLink
+                ? escapeHtml(member.bio).replace(
+                  escapeHtml(member.bioLink.text),
+                  `<a href="${escapeHtml(member.bioLink.url)}"${externalAttributes(member.bioLink.url)}>${escapeHtml(member.bioLink.text)}</a>`
+                )
+                : escapeHtml(member.bio || "");
+              const links = member.links?.length
+                ? `<div class="member-links">${member.links.map((link) => `<a href="${escapeHtml(link.url)}"${externalAttributes(link.url)} aria-label="${escapeHtml(link.label)}" title="${escapeHtml(link.label)}">${iconForLink(link.label)}</a>`).join("")}</div>`
+                : "";
+              const photo = `<img src="${escapeHtml(member.photo || "assets/images/member-placeholder.svg")}" alt="${member.photo ? escapeHtml(member.name) : "Portrait placeholder"}" data-member-photo>`;
+              const photoElement = photoDestination
+                ? `<a class="member-photo" href="${escapeHtml(photoDestination)}"${externalAttributes(photoDestination)} aria-label="View ${escapeHtml(member.name)} profile">${photo}</a>`
+                : `<div class="member-photo">${photo}</div>`;
+              return `
+                <article class="member-card${member.isPlaceholder ? " member-card--placeholder" : ""}" data-reveal>
+                  ${photoElement}
+                  <div class="member-copy">
+                    <h3>${name}</h3>
+                    ${member.role ? `<p class="member-role">${escapeHtml(member.role)}</p>` : ""}
+                    ${member.affiliation ? `<p class="member-affiliation">${affiliation}</p>` : ""}
+                    ${bio ? `<p class="member-bio">${bio}</p>` : ""}
+                    ${links}
+                  </div>
+                </article>`;
             }).join("")}
           </div>
         </section>`;
