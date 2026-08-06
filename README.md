@@ -12,16 +12,17 @@ Then open `http://localhost:8000`.
 
 ## Where to edit content
 
-Routine content lives in [`assets/js/data.js`](assets/js/data.js), organized into six clearly labeled sections:
+Routine content lives in [`assets/js/data.js`](assets/js/data.js), organized into seven clearly labeled sections:
 
-- `site`: lab name, sponsor, address, and contact information.
+- `site`: lab name, sponsor, institutional links, designer credit, and contact information.
 - `navigation`: top-level pages and the Opportunities submenu. A navigation record can use a text `label` or a `logo` image.
+- `home`: the homepage summary and Mission items.
 - `news`: add a record with date, category, title, and optional summary, image, and URL.
 - `memberGroups`: add one member object to the appropriate group. Only `name` is required; missing photos use the shared placeholder.
 - `researchAreas` and `publications`: research summaries and complete publication metadata. Publications include `year`, `month`, `monthNumber`, `authors`, `venue`, and optional `url`; the page automatically sorts each category newest first.
-- `opportunities`: content for the four audience-specific opportunity pages.
+- `opportunities`: content, application instructions, email subjects, and action links for the four audience-specific opportunity pages.
 
-Page-specific biography or product copy remains in the relevant HTML file so long-form content is easy to locate.
+Page-specific biography or product copy remains in the relevant HTML file so long-form content is easy to locate. The supplied Ambassador and Counselor Program page, including its embedded application form, is preserved directly as `ambassador-program-gform.html`; the audience pages link to it through their central data records.
 
 ## Shared code
 
@@ -29,7 +30,7 @@ Page-specific biography or product copy remains in the relevant HTML file so lon
 - [`assets/css/styles.css`](assets/css/styles.css) contains the compact responsive visual system.
 - Replacing `assets/images/lab-logo-placeholder.svg` with a final square lab logo requires no code change.
 - The transparent UGA mark is `assets/images/uga-logo-transparent.png`.
-- The navigation-ready brand wordmark is `assets/images/ezcollegeapp-wordmark-transparent.png` and displays the required spelling `EZCollegeApp`.
+- The dark-background product wordmark is `assets/images/ezcollegeapp-wordmark-transparent.png`; the cropped blue navigation variant is `assets/images/ezcollegeapp-wordmark-nav.png`. Both display the required spelling `EZCollegeApp`.
 
 ## Adding a page
 

@@ -15,6 +15,23 @@
     ? ' target="_blank" rel="noopener noreferrer"'
     : "";
 
+  const linkIcons = {
+    website: '<svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c3 3 4.5 6 4.5 9S15 18 12 21c-3-3-4.5-6-4.5-9S9 6 12 3Z"/></svg>',
+    scholar: '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="m3 9 9-5 9 5-9 5-9-5Z"/><path d="M7 12.5V17c3 2.2 7 2.2 10 0v-4.5M21 9v7"/></svg>',
+    linkedin: '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6.5 9.5V19M6.5 5.5v.1M11 19v-9.5M11 14c0-2.5 6-3 6 1v4"/></svg>',
+    github: '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.9c0-1.1.1-1.5-.5-2.1 2.8-.3 5.8-1.4 5.8-6.2 0-1.4-.5-2.5-1.3-3.4.1-.3.6-1.6-.1-3.3 0 0-1.1-.3-3.5 1.3a12 12 0 0 0-6.4 0C7.6 2.7 6.5 3.1 6.5 3.1c-.7 1.7-.2 3-.1 3.3A4.8 4.8 0 0 0 5 9.8c0 4.8 3 5.9 5.8 6.2-.5.5-.6 1.1-.6 2.1V22"/></svg>',
+    email: '<svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m4 7 8 6 8-6"/></svg>'
+  };
+
+  const iconForLink = (label = "") => {
+    const normalized = label.toLowerCase();
+    if (normalized.includes("scholar")) return linkIcons.scholar;
+    if (normalized.includes("linkedin")) return linkIcons.linkedin;
+    if (normalized.includes("github")) return linkIcons.github;
+    if (normalized.includes("email")) return linkIcons.email;
+    return linkIcons.website;
+  };
+
   function renderHeader() {
     const mount = document.querySelector("[data-site-header]");
     if (!mount) return;
@@ -53,7 +70,7 @@
           <div class="lab-brand">
             <a class="lab-brand__main" href="index.html">
               <img src="assets/images/lab-logo-placeholder.svg" alt="UGA LLM Lab logo placeholder">
-              <span>${escapeHtml(data.site.name)}</span>
+              <span class="notranslate" translate="no">${escapeHtml(data.site.name)}</span>
             </a>
             <span class="sponsor-line">sponsored by <a href="${escapeHtml(data.site.sponsorUrl)}" target="_blank" rel="noopener noreferrer">${escapeHtml(data.site.sponsorName)}</a></span>
           </div>
@@ -114,11 +131,15 @@
         <div class="shell footer-row">
           <div class="footer-identity">
             <img src="assets/images/lab-logo-placeholder.svg" alt="" aria-hidden="true">
-            <div><strong>${escapeHtml(data.site.name)}</strong><span>${escapeHtml(data.site.address)}</span></div>
+            <div>
+              <strong class="notranslate" translate="no">${escapeHtml(data.site.name)}</strong>
+              <span><a href="${escapeHtml(data.site.computingUrl)}" target="_blank" rel="noopener noreferrer">School of Computing</a> · <a href="${escapeHtml(data.site.ugaUrl)}" target="_blank" rel="noopener noreferrer">University of Georgia</a> · Athens, GA</span>
+            </div>
           </div>
           <div class="footer-links">
-            <a href="mailto:${escapeHtml(data.site.contactEmail)}">${escapeHtml(data.site.contactEmail)}</a>
-            <span>© ${new Date().getFullYear()} University of Georgia</span>
+            <a class="footer-email" href="mailto:${escapeHtml(data.site.contactEmail)}" aria-label="Email Tianming Liu" title="Email Tianming Liu">${linkIcons.email}</a>
+            <span>© ${new Date().getFullYear()} <a href="${escapeHtml(data.site.ugaUrl)}" target="_blank" rel="noopener noreferrer">University of Georgia</a></span>
+            <span>Website designed by <a href="${escapeHtml(data.site.designerUrl)}" target="_blank" rel="noopener noreferrer">${escapeHtml(data.site.designerName)}</a></span>
           </div>
         </div>
       </footer>`;
@@ -147,8 +168,8 @@
         : "";
       return `
         <article class="news-item${item.image ? " has-image" : ""}" data-reveal>
-          ${image}
           <div class="news-item__date"><time>${escapeHtml(item.date)}</time><span>${escapeHtml(item.category)}</span></div>
+          ${image}
           <div class="news-item__body"><h3>${title}</h3>${item.excerpt ? `<p>${escapeHtml(item.excerpt)}</p>` : ""}</div>
         </article>`;
     }).join("");
@@ -158,32 +179,44 @@
     const mount = document.querySelector("[data-members-list]");
     if (!mount) return;
 
-    mount.innerHTML = data.memberGroups.map((group) => `
-      <section class="member-section${group.id === "principal-investigator" ? " member-section--pi" : ""}" id="${escapeHtml(group.id)}">
-        <div class="section-bar"><h2>${escapeHtml(group.title)}</h2><span>${group.members.length}</span></div>
-        <div class="member-list">
-          ${group.members.map((member) => {
+    mount.innerHTML = data.memberGroups.map((group) => {
+      const members = group.id === "alumni"
+        ? [...group.members].sort((a, b) => (a.sortYear ?? Infinity) - (b.sortYear ?? Infinity))
+        : group.members;
+      return `
+        <section class="member-section${group.id === "principal-investigator" ? " member-section--pi" : ""}" id="${escapeHtml(group.id)}">
+          <div class="section-bar"><h2>${escapeHtml(group.title)}</h2></div>
+          <div class="member-list">
+            ${members.map((member) => {
             const destination = member.website || member.profilePage;
             const name = destination
               ? `<a href="${escapeHtml(destination)}"${externalAttributes(destination)}>${escapeHtml(member.name)}</a>`
               : escapeHtml(member.name);
+            const affiliation = member.affiliationUrl
+              ? `<a href="${escapeHtml(member.affiliationUrl)}"${externalAttributes(member.affiliationUrl)}>${escapeHtml(member.affiliation)}</a>`
+              : escapeHtml(member.affiliation || "");
             const links = member.links?.length
-              ? `<div class="member-links">${member.links.map((link) => `<a href="${escapeHtml(link.url)}"${externalAttributes(link.url)}>${escapeHtml(link.label)}</a>`).join("")}</div>`
+              ? `<div class="member-links">${member.links.map((link) => `<a href="${escapeHtml(link.url)}"${externalAttributes(link.url)} aria-label="${escapeHtml(link.label)}" title="${escapeHtml(link.label)}">${iconForLink(link.label)}</a>`).join("")}</div>`
               : "";
+            const photo = `<img src="${escapeHtml(member.photo || "assets/images/member-placeholder.svg")}" alt="${member.photo ? escapeHtml(member.name) : "Portrait placeholder"}" data-member-photo>`;
+            const photoElement = destination
+              ? `<a class="member-photo" href="${escapeHtml(destination)}"${externalAttributes(destination)} aria-label="View ${escapeHtml(member.name)} profile">${photo}</a>`
+              : `<div class="member-photo">${photo}</div>`;
             return `
               <article class="member-card${member.isPlaceholder ? " member-card--placeholder" : ""}" data-reveal>
-                <div class="member-photo"><img src="${escapeHtml(member.photo || "assets/images/member-placeholder.svg")}" alt="${member.photo ? escapeHtml(member.name) : "Portrait placeholder"}" data-member-photo></div>
+                ${photoElement}
                 <div class="member-copy">
                   <h3>${name}</h3>
                   ${member.role ? `<p class="member-role">${escapeHtml(member.role)}</p>` : ""}
-                  ${member.affiliation ? `<p class="member-affiliation">${escapeHtml(member.affiliation)}</p>` : ""}
+                  ${member.affiliation ? `<p class="member-affiliation">${affiliation}</p>` : ""}
                   ${member.bio ? `<p class="member-bio">${escapeHtml(member.bio)}</p>` : ""}
                   ${links}
                 </div>
               </article>`;
-          }).join("")}
-        </div>
-      </section>`).join("");
+            }).join("")}
+          </div>
+        </section>`;
+    }).join("");
 
     mount.querySelectorAll("[data-member-photo]").forEach((image) => {
       image.addEventListener("error", () => {
@@ -212,7 +245,7 @@
         (b.year - a.year) || (b.monthNumber - a.monthNumber));
       return `
         <section class="publication-group" id="${escapeHtml(group.id)}">
-          <div class="section-bar"><h3>${escapeHtml(group.label)}</h3><span>${publications.length}</span></div>
+          <div class="section-bar"><h3>${escapeHtml(group.label)}</h3></div>
           <ol class="publication-list">
             ${publications.map((publication) => {
               const title = publication.url
@@ -250,16 +283,12 @@
       <div class="opportunity-grid">
         ${page.tracks.map((track) => `
           <article class="opportunity-card" data-reveal>
-            <p class="card-kicker">${escapeHtml(track.type)}</p>
             <h2>${escapeHtml(track.title)}</h2>
-            <p>${escapeHtml(track.description)}</p>
-            <ul>${track.points.map((point) => `<li>${escapeHtml(point)}</li>`).join("")}</ul>
+            <p>${track.descriptionHtml || escapeHtml(track.description)}</p>
+            ${track.points?.length ? `<ul>${track.points.map((point) => `<li>${escapeHtml(point)}</li>`).join("")}</ul>` : ""}
+            ${track.action ? `<a class="opportunity-action" href="${escapeHtml(track.action.url)}"${externalAttributes(track.action.url)}>${escapeHtml(track.action.label)} <span aria-hidden="true">→</span></a>` : ""}
           </article>`).join("")}
-      </div>
-      <aside class="contact-strip" data-reveal>
-        <div><strong>Interested?</strong><span>Send a concise introduction, your current school or program, and the opportunity that interests you.</span></div>
-        <a class="button" href="mailto:${escapeHtml(data.site.contactEmail)}?subject=${encodeURIComponent(page.subject)}">Contact the lab</a>
-      </aside>`;
+      </div>`;
   }
 
   function enableReveals() {
