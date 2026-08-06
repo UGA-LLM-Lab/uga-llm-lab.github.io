@@ -726,8 +726,8 @@ a:focus-visible {
 .member-card {
   min-width: 0;
   display: grid;
-  grid-template-columns: 72px minmax(0, 1fr);
-  gap: 13px;
+  grid-template-columns: 104px minmax(0, 1fr);
+  gap: 14px;
   padding: 10px;
   background: white;
   border: 1px solid var(--line);
@@ -735,7 +735,7 @@ a:focus-visible {
 }
 
 .member-section--pi .member-card {
-  grid-template-columns: 100px minmax(0, 1fr);
+  grid-template-columns: 132px minmax(0, 1fr);
   padding: 12px 0;
   border: 0;
   border-radius: 0;
@@ -1495,12 +1495,12 @@ a:focus-visible {
 
   .member-card,
   .member-section--pi .member-card {
-    grid-template-columns: 72px minmax(0, 1fr);
+    grid-template-columns: 92px minmax(0, 1fr);
     gap: 12px;
   }
 
   .member-section--pi .member-card {
-    grid-template-columns: 88px minmax(0, 1fr);
+    grid-template-columns: 108px minmax(0, 1fr);
   }
 
   .profile-header {
