@@ -28,7 +28,7 @@ Page-specific biography or product copy remains in the relevant HTML file so lon
 
 - [`assets/js/site.js`](assets/js/site.js) renders the shared header, navigation, footer, and all data-driven lists.
 - [`assets/css/styles.css`](assets/css/styles.css) contains the compact responsive visual system.
-- Replacing `assets/images/lab-logo-placeholder.svg` with a final square lab logo requires no code change.
+- Replacing `assets/images/lab-logo.svg` with a final square lab logo requires no code change.
 - The transparent UGA mark is `assets/images/uga-logo-transparent.png`.
 - The dark-background product wordmark is `assets/images/ezcollegeapp-wordmark-transparent.png`; the cropped blue navigation variant is `assets/images/ezcollegeapp-wordmark-nav.png`. Both display the required spelling `EZCollegeApp`.
 

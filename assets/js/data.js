@@ -421,7 +421,7 @@ window.LLM_LAB_DATA = {
         {
           name: "Zihao Wu",
           role: "Former Ph.D. Student",
-          bio: "Researcher at Nankai University working on brain-inspired foundation models, data-efficient learning, and large language models.",
+          bio: "Researcher working on brain-inspired foundation models, data-efficient learning, and large language models.",
           photo: "assets/images/members-zihao-wu.jpg",
           links: [
             { label: "UGA dissertation", url: "https://openscholar.uga.edu/record/27708" },

@@ -69,7 +69,7 @@
           </a>
           <div class="lab-brand">
             <a class="lab-brand__main" href="index.html">
-              <img src="assets/images/lab-logo-placeholder.svg" alt="UGA LLM Lab logo placeholder">
+              <img src="assets/images/lab-logo.svg" alt="UGA LLM Lab logo">
               <span class="notranslate" translate="no">${escapeHtml(data.site.name)}</span>
             </a>
             <span class="sponsor-line">sponsored by <a href="${escapeHtml(data.site.sponsorUrl)}" target="_blank" rel="noopener noreferrer">${escapeHtml(data.site.sponsorName)}</a></span>
@@ -130,7 +130,7 @@
       <footer class="site-footer">
         <div class="shell footer-row">
           <div class="footer-identity">
-            <img src="assets/images/lab-logo-placeholder.svg" alt="" aria-hidden="true">
+            <img src="assets/images/lab-logo.svg" alt="" aria-hidden="true">
             <div>
               <strong class="notranslate" translate="no">${escapeHtml(data.site.name)}</strong>
               <span><a href="${escapeHtml(data.site.computingUrl)}" target="_blank" rel="noopener noreferrer">School of Computing</a> · <a href="${escapeHtml(data.site.ugaUrl)}" target="_blank" rel="noopener noreferrer">University of Georgia</a> · Athens, GA</span>
