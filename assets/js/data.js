@@ -161,6 +161,17 @@ window.LLM_LAB_DATA = {
           ]
         },
         {
+          name: "Wei Ruan",
+          role: "Ph.D. Student in Computer Science",
+          bio: "Works on large language models, model merging, quantum AI, and AI for bioinformatics.",
+          photo: "assets/images/members-wei-ruan.jpg",
+          links: [
+            { label: "Google Scholar", url: "https://scholar.google.com/citations?user=1fxB2LYAAAAJ&hl=en" },
+            { label: "LinkedIn", url: "https://www.linkedin.com/in/wei-ruan/" },
+            { label: "Email", url: "mailto:wei.ruan@uga.edu" }
+          ]
+        },
+        {
           name: "Huaqin Zhao",
           role: "Ph.D. Student in Computer Science",
           bio: "Studies efficient optimization and adaptation methods for large language models.",
@@ -307,6 +318,7 @@ window.LLM_LAB_DATA = {
           name: "Mani Deepika Adusumilli",
           role: "Ph.D. Student in Computer Science",
           bio: "Research interests include large language models and applied artificial intelligence.",
+          photo: "assets/images/members-mani-deepika-adusumilli.png",
           links: [
             { label: "LinkedIn", url: "https://www.linkedin.com/in/adusumilli-manideepika" },
             { label: "Email", url: "mailto:ma42392@uga.edu" }
@@ -322,17 +334,6 @@ window.LLM_LAB_DATA = {
             { label: "Email", url: "mailto:kl58277@uga.edu" }
           ]
         }
-      ]
-    },
-    {
-      id: "masters-students",
-      title: "Master’s Students",
-      members: [
-        {
-          name: "Xinrui Shen",
-          role: "Master in Data Science at USC",
-          bio: "Intern Student.",
-        },
       ]
     },
     // {
@@ -378,6 +379,19 @@ window.LLM_LAB_DATA = {
           ]
         },
         {
+          name: "Xi Jiang",
+          role: "Former Ph.D. Student",
+          bio: "Professor and Ph.D. advisor at the University of Electronic Science and Technology of China, working on brain MRI analysis, machine learning, and computational neuroscience.",
+          photo: "assets/images/members-xi-jiang.jpg",
+          website: "https://faculty.uestc.edu.cn/jiangxi/en/index.htm",
+          links: [
+            { label: "Website", url: "https://faculty.uestc.edu.cn/jiangxi/en/index.htm" },
+            { label: "Google Scholar", url: "https://scholar.google.com/citations?user=Cv3JHdYAAAAJ&hl=en" },
+            { label: "LinkedIn", url: "https://www.linkedin.com/in/xi-jiang-77555837" },
+            { label: "Email", url: "mailto:xijiang@uestc.edu.cn" }
+          ]
+        },
+        {
           name: "Jinglei Lv",
           role: "Former Ph.D. Student",
           bio: "Senior Lecturer in Biomedical Engineering at The University of Sydney, working on neuroimaging, connectomics, and AI for brain health.",
@@ -388,6 +402,48 @@ window.LLM_LAB_DATA = {
             { label: "Google Scholar", url: "https://scholar.google.com/citations?user=jA838pcAAAAJ&hl=en" },
             { label: "LinkedIn", url: "https://au.linkedin.com/in/jinglei-lv-6428449a" },
             { label: "Email", url: "mailto:jinglei.lv@sydney.edu.au" }
+          ]
+        },
+        {
+          name: "Hanbo Chen",
+          role: "Former Ph.D. Student",
+          bio: "AI and machine learning researcher at Snap Inc., with research spanning deep learning, computer vision, computational neuroscience, and medical image analysis.",
+          photo: "assets/images/members-hanbo-chen.jpg",
+          links: [
+            { label: "Google Scholar", url: "https://scholar.google.com/citations?user=XxAaMR8AAAAJ&hl=en" },
+            { label: "LinkedIn", url: "https://www.linkedin.com/in/hanbo-chen-aiml" }
+          ]
+        },
+        {
+          name: "Shu Zhang",
+          role: "Former Ph.D. Student",
+          bio: "Professor in the School of Computer Science at Northwestern Polytechnical University, working on biomedical image analysis, brain imaging, EEG, and deep learning.",
+          photo: "assets/images/members-shu-zhang.png",
+          website: "https://teacher.nwpu.edu.cn/shuzhang2019.html",
+          links: [
+            { label: "Website", url: "https://teacher.nwpu.edu.cn/shuzhang2019.html" },
+            { label: "Email", url: "mailto:shu.zhang@nwpu.edu.cn" }
+          ]
+        },
+        {
+          name: "Yu Zhao",
+          role: "Former Ph.D. Student",
+          bio: "AI and machine learning engineer at Meta, with experience in computer vision, multimodal learning, and medical imaging systems.",
+          photo: "assets/images/members-yu-zhao.jpg",
+          website: "https://zhaoyuac09.github.io/",
+          links: [
+            { label: "Website", url: "https://zhaoyuac09.github.io/" },
+            { label: "Google Scholar", url: "https://scholar.google.com/citations?user=LRHUhlAAAAAJ" },
+            { label: "LinkedIn", url: "https://www.linkedin.com/in/yu-zhao-0008419a" }
+          ]
+        },
+        {
+          name: "Yujie Li",
+          role: "Former Ph.D. Student",
+          bio: "Machine learning researcher at Apple, working on foundation models for health and behavioral data, computer vision, and data-driven biomedical applications.",
+          photo: "assets/images/members-yujie-li.png",
+          links: [
+            { label: "LinkedIn", url: "https://www.linkedin.com/in/yujie-li-37457742" }
           ]
         },
         {
@@ -403,13 +459,23 @@ window.LLM_LAB_DATA = {
           ]
         },
         {
-          name: "Haixing Dai",
+          name: "Fangfei Ge",
           role: "Former Ph.D. Student",
-          bio: "Research Scientist at Meta, working on memory systems, personalization, generative models, and advanced AI systems.",
-          photo: "assets/images/members-haixing-dai.jpg",
+          bio: "Software engineer at Meta, building scalable backend systems after doctoral research in brain imaging, cortical folding, and deep learning.",
+          photo: "assets/images/members-fangfei-ge.png",
           links: [
-            { label: "Google Scholar", url: "https://scholar.google.com/citations?user=R3eikdMAAAAJ&hl=en" },
-            { label: "LinkedIn", url: "https://www.linkedin.com/in/haixing-dai-754490181" }
+            { label: "LinkedIn", url: "https://www.linkedin.com/in/fangfei-ge" }
+          ]
+        },
+        {
+          name: "Qinglin Dong",
+          role: "Former Ph.D. Student",
+          bio: "Software engineer at Meta, with interests in AI agents, evaluation, and intelligent systems following doctoral research in deep learning for functional brain networks.",
+          photo: "assets/images/members-qinglin-dong.jpg",
+          website: "https://qinglindong.github.io/",
+          links: [
+            { label: "Website", url: "https://qinglindong.github.io/" },
+            { label: "LinkedIn", url: "https://www.linkedin.com/in/qinglin-dong" }
           ]
         },
         {
@@ -426,12 +492,21 @@ window.LLM_LAB_DATA = {
           ]
         },
         {
+          name: "Haixing Dai",
+          role: "Former Ph.D. Student",
+          bio: "Research Scientist at Meta, working on memory systems, personalization, generative models, and advanced AI systems.",
+          photo: "assets/images/members-haixing-dai.jpg",
+          links: [
+            { label: "Google Scholar", url: "https://scholar.google.com/citations?user=R3eikdMAAAAJ&hl=en" },
+            { label: "LinkedIn", url: "https://www.linkedin.com/in/haixing-dai-754490181" }
+          ]
+        },
+        {
           name: "Zihao Wu",
           role: "Former Ph.D. Student",
           bio: "Researcher working on brain-inspired foundation models, data-efficient learning, and large language models.",
           photo: "assets/images/members-zihao-wu.jpg",
           links: [
-            { label: "UGA dissertation", url: "https://openscholar.uga.edu/record/27708" },
             { label: "Google Scholar", url: "https://scholar.google.com/citations?user=RMvoE4sAAAAJ&hl=en" },
             { label: "LinkedIn", url: "https://www.linkedin.com/in/zihao-wu-60203b198" }
           ]
