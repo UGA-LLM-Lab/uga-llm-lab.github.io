@@ -348,10 +348,11 @@ window.LLM_LAB_DATA = {
     //     }
     //   ]
     // },
-    {
-      id: "alumni",
-      title: "Alumni",
-      members: [
+  ],
+
+  recentGraduateAlumniNames: ["Zihao Wu", "Zhengliang Liu"],
+
+  alumniMembers: [
         {
           name: "Dajiang Zhu",
           role: "Former Ph.D. Student",
@@ -526,8 +527,6 @@ window.LLM_LAB_DATA = {
             { label: "Email", url: "mailto:zl18864@uga.edu" }
           ]
         }
-      ]
-    }
   ],
 
   researchAreas: [

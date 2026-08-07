@@ -833,6 +833,22 @@ a:focus-visible {
   border-style: solid;
 }
 
+.alumni-archive-link {
+  margin: 10px 2px 0;
+  color: var(--muted);
+  font-size: 0.7rem;
+}
+
+.alumni-archive-link a {
+  border-bottom: 1px solid transparent;
+}
+
+.alumni-archive-link a:hover,
+.alumni-archive-link a:focus-visible {
+  color: var(--ink-soft);
+  border-bottom-color: var(--line-dark);
+}
+
 /* PI profile */
 .profile-header {
   display: grid;

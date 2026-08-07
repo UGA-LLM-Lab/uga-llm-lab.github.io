@@ -175,15 +175,12 @@
     }).join("");
   }
 
-  function renderMembers() {
-    const mount = document.querySelector("[data-members-list]");
-    if (!mount) return;
-
-    mount.innerHTML = data.memberGroups.map((group) => {
+  function renderMemberGroups(mount, groups, { showGroupTitles = true } = {}) {
+    mount.innerHTML = groups.map((group) => {
       const members = group.members;
       return `
         <section class="member-section${group.id === "principal-investigator" ? " member-section--pi" : ""}" id="${escapeHtml(group.id)}">
-          <div class="section-bar"><h2>${escapeHtml(group.title)}</h2></div>
+          ${showGroupTitles ? `<div class="section-bar"><h2>${escapeHtml(group.title)}</h2></div>` : ""}
           <div class="member-list">
             ${members.map((member) => {
               const personalDestination = member.website || member.profilePage;
@@ -223,6 +220,7 @@
                 </article>`;
             }).join("")}
           </div>
+          ${group.archiveLink ? `<p class="alumni-archive-link"><a href="${escapeHtml(group.archiveLink.href)}">${escapeHtml(group.archiveLink.label)}</a></p>` : ""}
         </section>`;
     }).join("");
 
@@ -231,6 +229,30 @@
         image.src = "assets/images/member-placeholder.svg";
       }, { once: true });
     });
+  }
+
+  function renderMembers() {
+    const mount = document.querySelector("[data-members-list]");
+    if (!mount) return;
+
+    const recentGraduateNames = new Set(data.recentGraduateAlumniNames);
+    const recentGraduateAlumni = {
+      id: "recent-graduated-alumni",
+      title: "Recent Graduated Alumni",
+      members: data.alumniMembers.filter((member) => recentGraduateNames.has(member.name)),
+      archiveLink: { label: "Some other Alumni", href: "alumni.html" }
+    };
+
+    renderMemberGroups(mount, [...data.memberGroups, recentGraduateAlumni]);
+  }
+
+  function renderAlumni() {
+    const mount = document.querySelector("[data-alumni-list]");
+    if (!mount) return;
+
+    const recentGraduateNames = new Set(data.recentGraduateAlumniNames);
+    const alumni = data.alumniMembers.filter((member) => !recentGraduateNames.has(member.name));
+    renderMemberGroups(mount, [{ id: "alumni-list", members: alumni }], { showGroupTitles: false });
   }
 
   function renderResearchAreas() {
@@ -322,6 +344,7 @@
   renderHome();
   renderNews();
   renderMembers();
+  renderAlumni();
   renderResearchAreas();
   renderPublications();
   renderOpportunity();
