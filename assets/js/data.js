@@ -296,7 +296,12 @@ window.LLM_LAB_DATA = {
         {
           name: "Lifeng Chen",
           role: "Ph.D. Student in Linguistics",
-          bio: "Studies low-resource language technologies and the adaptation of large language models, including work on Tibetan."
+          bio: "Studies low-resource language technologies and the adaptation of large language models, including work on Tibetan.",
+          photo: "assets/images/members-lifeng-chen.png",
+          links: [
+            { label: "LinkedIn", url: "https://www.linkedin.com/in/ccconstant-chen/" },
+            { label: "Email", url: "mailto:lifeng.chen@uga.edu" }
+          ]
         },
         {
           name: "Mani Deepika Adusumilli",
@@ -325,7 +330,8 @@ window.LLM_LAB_DATA = {
       members: [
         {
           name: "Xinrui Shen",
-          role: "Master in Data Science at USC"
+          role: "Master in Data Science at USC",
+          bio: "Intern Student.",
         },
       ]
     },
