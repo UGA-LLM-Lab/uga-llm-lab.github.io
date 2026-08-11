@@ -227,6 +227,7 @@ window.LLM_LAB_DATA = {
           bio: "Studies agent memory, multimodal language models, and applications of AI in education and science.",
           photo: "assets/images/members-weihang-you.jpg",
           links: [
+            { label: "Google Scholar", url: "https://scholar.google.com/citations?hl=en&user=kLB8P5oAAAAJ" },
             { label: "Email", url: "mailto:weihang.you@uga.edu" }
           ]
         },
@@ -515,7 +516,7 @@ window.LLM_LAB_DATA = {
         {
           name: "Zhengliang Liu",
           role: "Former Ph.D. Student",
-          bio: "Chief Technology Officer (CTO) at GyriQAI, Inc, leading the development and translation of AI systems into practical products.",
+          bio: "AI researcher working on adapting LLMs to specialized domains (medicine, education).",
           bioLink: { text: "GyriQAI, Inc", url: "https://ezcollegeapp.com/" },
           photo: "assets/images/members-zhengliang-liu.jpg",
           website: "https://zl-liu.github.io/",
