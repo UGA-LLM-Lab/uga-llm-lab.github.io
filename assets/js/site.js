@@ -20,6 +20,9 @@
     scholar: '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="m3 9 9-5 9 5-9 5-9-5Z"/><path d="M7 12.5V17c3 2.2 7 2.2 10 0v-4.5M21 9v7"/></svg>',
     linkedin: '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6.5 9.5V19M6.5 5.5v.1M11 19v-9.5M11 14c0-2.5 6-3 6 1v4"/></svg>',
     github: '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.9c0-1.1.1-1.5-.5-2.1 2.8-.3 5.8-1.4 5.8-6.2 0-1.4-.5-2.5-1.3-3.4.1-.3.6-1.6-.1-3.3 0 0-1.1-.3-3.5 1.3a12 12 0 0 0-6.4 0C7.6 2.7 6.5 3.1 6.5 3.1c-.7 1.7-.2 3-.1 3.3A4.8 4.8 0 0 0 5 9.8c0 4.8 3 5.9 5.8 6.2-.5.5-.6 1.1-.6 2.1V22"/></svg>',
+    instagram: '<svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.4" cy="6.6" r=".8" class="social-icon-dot"/></svg>',
+    tiktok: '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M14 4v10.2a4.2 4.2 0 1 1-3.2-4.1M14 4c.5 2.5 2 4 4.5 4.5"/></svg>',
+    facebook: '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M14.5 21v-8h3l.5-3h-3.5V8.5c0-1.7.7-2.5 2.5-2.5h1.5V3.2c-.7-.1-1.5-.2-2.4-.2-3 0-4.8 1.8-4.8 5.1V10H8v3h3.3v8"/></svg>',
     email: '<svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m4 7 8 6 8-6"/></svg>'
   };
 
@@ -28,9 +31,16 @@
     if (normalized.includes("scholar")) return linkIcons.scholar;
     if (normalized.includes("linkedin")) return linkIcons.linkedin;
     if (normalized.includes("github")) return linkIcons.github;
+    if (normalized.includes("instagram")) return linkIcons.instagram;
+    if (normalized.includes("tiktok")) return linkIcons.tiktok;
+    if (normalized.includes("facebook")) return linkIcons.facebook;
     if (normalized.includes("email")) return linkIcons.email;
     return linkIcons.website;
   };
+
+  const socialLinkMarkup = (className = "social-link") => data.site.socialLinks.map((link) =>
+    `<a class="${escapeHtml(className)}" href="${escapeHtml(link.url)}"${externalAttributes(link.url)} aria-label="${escapeHtml(link.label)}" title="${escapeHtml(link.label)}">${iconForLink(link.label)}</a>`
+  ).join("");
 
   function renderHeader() {
     const mount = document.querySelector("[data-site-header]");
@@ -137,7 +147,10 @@
             </div>
           </div>
           <div class="footer-links">
-            <a class="footer-email" href="mailto:${escapeHtml(data.site.contactEmail)}" aria-label="Email Tianming Liu" title="Email Tianming Liu">${linkIcons.email}</a>
+            <nav class="footer-contact-links" aria-label="Contact and social media links">
+              <a class="social-link footer-email" href="mailto:${escapeHtml(data.site.contactEmail)}" aria-label="Email Tianming Liu" title="Email Tianming Liu">${linkIcons.email}</a>
+              ${socialLinkMarkup()}
+            </nav>
             <span>© ${new Date().getFullYear()} <a href="${escapeHtml(data.site.ugaUrl)}" target="_blank" rel="noopener noreferrer">University of Georgia</a></span>
             <span>Website designed by <a href="${escapeHtml(data.site.designerUrl)}" target="_blank" rel="noopener noreferrer">${escapeHtml(data.site.designerName)}</a></span>
           </div>
@@ -149,9 +162,11 @@
     const summary = document.querySelector("[data-home-summary]");
     const mission = document.querySelector("[data-home-mission]");
     const focus = document.querySelector("[data-home-focus]");
+    const socials = document.querySelector("[data-home-socials]");
     if (summary) summary.textContent = data.home.summary;
     if (mission) mission.innerHTML = data.home.mission.map((item) => `<li>${escapeHtml(item)}</li>`).join("");
     if (focus) focus.innerHTML = data.researchAreas.map((area) => `<li><a href="research.html#${escapeHtml(area.id)}">${escapeHtml(area.title)} <span>→</span></a></li>`).join("");
+    if (socials) socials.innerHTML = `<span>Follow us</span>${socialLinkMarkup()}`;
   }
 
   function renderNews() {

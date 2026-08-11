@@ -547,7 +547,7 @@ a:focus-visible {
   max-width: 760px;
   margin-bottom: 18px;
   color: var(--ink-soft);
-  font-size: 1.06rem;
+  font-size: 0.96rem;
   line-height: 1.65;
 }
 
@@ -556,6 +556,51 @@ a:focus-visible {
   border-bottom: 1px solid var(--line-dark);
   font-size: 0.8rem;
   font-weight: 700;
+}
+
+.home-social-links {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  margin-top: 13px;
+}
+
+.home-social-links > span {
+  margin-right: 2px;
+  color: var(--muted);
+  font-size: 0.72rem;
+}
+
+.social-link {
+  width: 28px;
+  height: 28px;
+  display: inline-grid;
+  flex: 0 0 auto;
+  place-items: center;
+  color: var(--ink-soft);
+  border: 1px solid var(--line-dark);
+  border-radius: 50%;
+}
+
+.social-link:hover,
+.social-link:focus-visible {
+  color: var(--uga-red);
+  border-color: var(--uga-red);
+}
+
+.social-link svg {
+  width: 15px;
+  height: 15px;
+  fill: none;
+  stroke: currentColor;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-width: 1.7;
+}
+
+.social-link .social-icon-dot {
+  fill: currentColor;
+  stroke: none;
 }
 
 .focus-index {
@@ -1274,24 +1319,28 @@ a:focus-visible {
   color: white;
 }
 
-.footer-email {
-  width: 26px;
-  height: 26px;
-  display: inline-grid !important;
-  place-items: center;
-  margin: 0 0 4px auto;
-  border: 1px solid rgba(255, 255, 255, 0.35);
-  border-radius: 50%;
+.footer-contact-links {
+  display: flex;
+  justify-content: flex-end;
+  gap: 5px;
+  margin-bottom: 4px;
 }
 
-.footer-email svg {
+.footer-contact-links .social-link {
+  width: 26px;
+  height: 26px;
+  border: 1px solid rgba(255, 255, 255, 0.35);
+}
+
+.footer-contact-links .social-link:hover,
+.footer-contact-links .social-link:focus-visible {
+  color: white;
+  border-color: white;
+}
+
+.footer-contact-links .social-link svg {
   width: 14px;
   height: 14px;
-  fill: none;
-  stroke: currentColor;
-  stroke-linecap: round;
-  stroke-linejoin: round;
-  stroke-width: 1.7;
 }
 
 /* Restrained motion */
@@ -1474,8 +1523,8 @@ a:focus-visible {
     text-align: center;
   }
 
-  .footer-email {
-    margin: 0 auto 4px;
+  .footer-contact-links {
+    justify-content: center;
   }
 }
 
@@ -1531,7 +1580,7 @@ a:focus-visible {
   }
 
   .home-intro__summary {
-    font-size: 0.96rem;
+    font-size: 0.9rem;
   }
 
   .section-heading {

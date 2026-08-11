@@ -14,7 +14,13 @@ window.LLM_LAB_DATA = {
     computingUrl: "https://computing.uga.edu/",
     contactEmail: "tliu@uga.edu",
     designerName: "Siyuan Li",
-    designerUrl: "https://siyuanli.tech/"
+    designerUrl: "https://siyuanli.tech/",
+    socialLinks: [
+      { label: "GitHub", url: "https://github.com/UGA-LLM-Lab" },
+      { label: "Instagram", url: "https://www.instagram.com/llmlab.uga/" },
+      { label: "TikTok", url: "https://www.tiktok.com/@uga_llm_lab" },
+      { label: "Facebook", url: "https://www.facebook.com/people/UGA-LLM-Lab/61592839514640/" }
+    ]
   },
 
   navigation: [
