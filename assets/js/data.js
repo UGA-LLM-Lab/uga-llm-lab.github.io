@@ -33,7 +33,7 @@ window.LLM_LAB_DATA = {
       children: [
         { id: "high-school", label: "High School", href: "opportunities-high-school.html" },
         { id: "undergraduate", label: "Undergraduate", href: "opportunities-undergraduate.html" },
-        { id: "masters", label: "Master’s", href: "opportunities-masters.html" },
+        { id: "masters", label: "Master's", href: "opportunities-masters.html" },
         { id: "phd", label: "Ph.D.", href: "opportunities-phd.html" }
       ]
     },
@@ -126,7 +126,7 @@ window.LLM_LAB_DATA = {
           name: "Tianming Liu",
           role: "Distinguished Research Professor & UGA Athletic Association Professor",
           affiliation: "School of Computing · Department of Linguistics",
-          bio: "Professor Liu directs the lab. His work spans computational neuroscience, biomedical image analysis, brain-inspired AI, large language models, artificial general intelligence, and quantum AI.",
+          bio: "Professor Liu directs the lab. He is an American Institute for Medical and Biological Engineering (AIMBE) Fellow and a Medical Image Computing and Computer Assisted Intervention Society (MICCAI) Fellow whose work spans computational neuroscience, biomedical image analysis, brain-inspired AI, large language models, artificial general intelligence, and quantum AI.",
           photo: "assets/images/tianming-liu.jpg",
           profilePage: "tianming-liu.html",
           links: [
@@ -741,20 +741,20 @@ window.LLM_LAB_DATA = {
         },
         {
           title: "Undergraduate Research",
-          description: "Work with a graduate mentor on implementation, evaluation, literature review, data preparation, or reproducibility in one of the lab’s research areas.",
+          description: "Work with a graduate mentor on implementation, evaluation, literature review, data preparation, or reproducibility in one of the lab's research areas.",
           points: ["Relevant coursework or project experience", "Consistent weekly availability", "Ability to document work", "Attach a CV and include your expected graduation date", "Email subject: Undergraduate application - Current School - Name", "Multi-semester participation preferred"],
           action: { label: "Apply by email", url: "mailto:tliu@uga.edu?subject=Undergraduate%20application%20-%20Current%20School%20-%20Name" }
         }
       ]
     },
     masters: {
-      title: "Master’s Opportunities",
-      summary: "We welcome master’s students from UGA and other universities for implementation-focused internships aligned with current lab projects and mentoring capacity.",
+      title: "Master's Opportunities",
+      summary: "We welcome master's students from UGA and other universities for implementation-focused internships aligned with current lab projects and mentoring capacity.",
       tracks: [
         {
           title: "Internship",
-          description: "Projects may involve model development, experimental pipelines, data curation, evaluation, literature synthesis, or reproducibility across language, quantum, and brain-inspired AI. Interns may also participate in the lab’s startup projects when the work and team needs align.",
-          points: ["Open to master’s students at UGA and other universities", "Strong programming and research communication", "Relevant coursework or project portfolio", "Clear alignment with an active research area", "The lab currently does not provide financial support for master’s students"]
+          description: "Projects may involve model development, experimental pipelines, data curation, evaluation, literature synthesis, or reproducibility across language, quantum, and brain-inspired AI. Interns may also participate in the lab's startup projects when the work and team needs align.",
+          points: ["Open to master's students at UGA and other universities", "Strong programming and research communication", "Relevant coursework or project portfolio", "Clear alignment with an active research area", "The lab currently does not provide financial support for master's students"]
         },
         {
           title: "How to Contact Us",
@@ -766,11 +766,11 @@ window.LLM_LAB_DATA = {
     },
     phd: {
       title: "Ph.D. Opportunities",
-      summary: "Prospective Ph.D. students should apply through the University of Georgia and explain how their research goals connect with the lab’s active directions.",
+      summary: "Prospective Ph.D. students should apply through the University of Georgia and explain how their research goals connect with the lab's active directions.",
       tracks: [
         {
           title: "Research Fit",
-          description: "We are interested in students who want to develop foundational methods while remaining attentive to evaluation, scientific rigor, and real-world impact. Ph.D. students also participate in the lab’s startup projects as part of translating research into practice.",
+          description: "We are interested in students who want to develop foundational methods while remaining attentive to evaluation, scientific rigor, and real-world impact. Ph.D. students also participate in the lab's startup projects as part of translating research into practice.",
           points: ["Large language models and agent systems", "Quantum and hybrid quantum-classical AI", "Brain-inspired learning and neuroimaging", "AI for medicine, science, and education"]
         },
         {
