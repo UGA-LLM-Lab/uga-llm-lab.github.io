@@ -713,7 +713,7 @@ window.LLM_LAB_DATA = {
           title: "Campus Ambassador Program",
           description: "Represent EZCollegeApp in your school and community. Ambassadors explain the platform in their own voice, introduce it to students and families who may benefit, organize outreach, and return useful feedback to the team.",
           points: ["Invitation-based, flexible, and remote", "Product, AI, marketing, and entrepreneurship learning", "A unique referral code and tentative 10% commission on paid referrals", "Program certificate and potential pathway to future internships for strong contributors", "Rates and program terms may change; no earnings are guaranteed"],
-          action: { label: "View details and apply", url: "ambassador-program-gform.html" }
+          action: { label: "View details and apply", url: "https://ezcollegeapp.com/ambassador-program" }
         },
         {
           title: "Research Exploration",
@@ -731,13 +731,13 @@ window.LLM_LAB_DATA = {
           title: "Campus Ambassador Program",
           description: "Represent EZCollegeApp in your campus and community. Ambassadors explain the platform in their own voice, introduce it to students and families who may benefit, organize outreach, and return useful feedback to the team.",
           points: ["Invitation-based, flexible, and remote", "Product, AI, marketing, and entrepreneurship learning", "A unique referral code and tentative 10% commission on paid referrals", "Program certificate and potential pathway to future internships for strong contributors", "Rates and program terms may change; no earnings are guaranteed"],
-          action: { label: "View details and apply", url: "ambassador-program-gform.html" }
+          action: { label: "View details and apply", url: "https://ezcollegeapp.com/ambassador-program" }
         },
         {
           title: "Counselor Program",
           description: "Represent the university you attend and your own academic major. Counselors give prospective students a first-hand, factual view of curricula, campus resources, student life, and pathways within their discipline.",
           points: ["Represent your current university and major accurately", "Answer structured student questions", "Separate personal experience from official admissions advice", "Share recurring questions with the product team"],
-          action: { label: "View details and apply", url: "ambassador-program-gform.html" }
+          action: { label: "View details and apply", url: "https://ezcollegeapp.com/ambassador-program" }
         },
         {
           title: "Undergraduate Research",
