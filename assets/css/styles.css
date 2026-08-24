@@ -24,17 +24,32 @@
 }
 
 html {
+  min-height: 100%;
   scroll-behavior: smooth;
 }
 
 body {
+  min-height: 100vh;
+  min-height: 100svh;
   margin: 0;
+  display: flex;
+  flex-direction: column;
   color: var(--ink);
   background: var(--paper);
   font-family: var(--sans);
   font-size: 15px;
   line-height: 1.55;
   -webkit-font-smoothing: antialiased;
+}
+
+body > main {
+  width: 100%;
+  flex: 1 0 auto;
+}
+
+body > [data-site-header],
+body > [data-site-footer] {
+  flex: 0 0 auto;
 }
 
 body.nav-open {
@@ -299,7 +314,10 @@ a:focus-visible {
 
 .nav-link:hover,
 .nav-link:focus-visible,
-.nav-item.is-active > .nav-link {
+.nav-item.is-active > .nav-link,
+.dropdown-trigger:hover > .nav-link,
+.dropdown-trigger:focus-within > .nav-link,
+.nav-item.is-active .dropdown-trigger > .nav-link {
   color: var(--uga-red);
   background: var(--paper-soft);
   border-bottom-color: var(--uga-red);
@@ -322,6 +340,38 @@ a:focus-visible {
 .nav-link--wordmark:focus-visible .nav-wordmark,
 .nav-item.is-active .nav-wordmark {
   background: transparent;
+}
+
+.dropdown-trigger {
+  position: relative;
+}
+
+.dropdown-trigger > .nav-link {
+  padding-inline: 32px;
+}
+
+.dropdown-toggle--separate {
+  position: absolute;
+  inset: 0 0 0 auto;
+  width: 34px;
+  display: grid;
+  place-items: center;
+  padding: 0;
+  color: var(--ink);
+  background: transparent;
+  border: 0;
+  cursor: pointer;
+}
+
+.dropdown-trigger:hover > .dropdown-toggle--separate,
+.dropdown-trigger:focus-within > .dropdown-toggle--separate,
+.nav-item.is-active .dropdown-toggle--separate {
+  color: var(--uga-red);
+}
+
+.dropdown-toggle--separate:focus-visible {
+  outline: 2px solid var(--uga-red);
+  outline-offset: -3px;
 }
 
 .dropdown-toggle svg {
@@ -1151,6 +1201,79 @@ a:focus-visible {
   font-weight: 750;
 }
 
+/* Entrepreneurship */
+.entrepreneurship-overview {
+  display: grid;
+  grid-template-columns: minmax(0, 0.9fr) minmax(360px, 1.1fr);
+  gap: 48px;
+  padding: 30px 0 34px;
+}
+
+.entrepreneurship-overview h2,
+.venture-section .section-bar h2 {
+  margin-bottom: 9px;
+  font-family: var(--serif);
+  font-size: 1.3rem;
+}
+
+.entrepreneurship-copy p {
+  margin-bottom: 10px;
+  color: var(--ink-soft);
+  font-size: 0.86rem;
+}
+
+.entrepreneurship-copy p:last-child {
+  margin-bottom: 0;
+}
+
+.entrepreneurship-support ul {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  padding: 0;
+  margin: 0;
+  border-top: 2px solid var(--ink);
+  list-style: none;
+}
+
+.entrepreneurship-support li {
+  min-width: 0;
+  padding: 10px 14px 11px 0;
+  border-bottom: 1px solid var(--line);
+}
+
+.entrepreneurship-support li:nth-child(even) {
+  padding-right: 0;
+  padding-left: 14px;
+}
+
+.entrepreneurship-support strong,
+.entrepreneurship-support span {
+  display: block;
+}
+
+.entrepreneurship-support strong {
+  margin-bottom: 2px;
+  color: var(--uga-red-dark);
+  font-size: 0.78rem;
+}
+
+.entrepreneurship-support span {
+  color: var(--ink-soft);
+  font-size: 0.76rem;
+}
+
+.venture-section {
+  padding-bottom: 6px;
+}
+
+.venture-section .section-bar {
+  align-items: end;
+}
+
+.venture-section .section-bar h2 {
+  margin-bottom: 0;
+}
+
 /* EZCollegeApp */
 .ez-intro {
   padding: 30px 0;
@@ -1425,9 +1548,20 @@ a:focus-visible {
     text-transform: none;
   }
 
+  .dropdown-trigger > .nav-link {
+    padding: 8px 44px 8px 4px;
+  }
+
+  .dropdown-toggle--separate {
+    width: 44px;
+  }
+
   .nav-link:hover,
   .nav-link:focus-visible,
-  .nav-item.is-active > .nav-link {
+  .nav-item.is-active > .nav-link,
+  .dropdown-trigger:hover > .nav-link,
+  .dropdown-trigger:focus-within > .nav-link,
+  .nav-item.is-active .dropdown-trigger > .nav-link {
     background: transparent;
   }
 
@@ -1480,9 +1614,14 @@ a:focus-visible {
   .mission-grid,
   .profile-content,
   .product-layout,
-  .lab-connection {
+  .lab-connection,
+  .entrepreneurship-overview {
     grid-template-columns: 1fr;
     gap: 24px;
+  }
+
+  .venture-section .section-bar {
+    display: block;
   }
 
   .research-grid {
@@ -1535,6 +1674,15 @@ a:focus-visible {
 
   body {
     font-size: 14px;
+  }
+
+  .entrepreneurship-support ul {
+    grid-template-columns: 1fr;
+  }
+
+  .entrepreneurship-support li,
+  .entrepreneurship-support li:nth-child(even) {
+    padding-inline: 0;
   }
 
   .brand-row {

@@ -50,23 +50,32 @@
     const items = data.navigation.map((item) => {
       const active = item.id === currentPage || item.children?.some((child) => child.id === currentPage);
       const activeClass = active ? " is-active" : "";
-
-      if (item.children) {
-        const children = item.children.map((child) => `
-          <li><a class="dropdown-link${child.id === currentPage ? " is-active" : ""}" href="${escapeHtml(child.href)}">${escapeHtml(child.label)}</a></li>`).join("");
-        return `
-          <li class="nav-item nav-item--dropdown${activeClass}">
-            <button class="nav-link dropdown-toggle" type="button" aria-expanded="false">
-              <span>${escapeHtml(item.label)}</span>
-              <svg viewBox="0 0 12 8" aria-hidden="true"><path d="m1 1 5 5 5-5"/></svg>
-            </button>
-            <ul class="dropdown-menu">${children}</ul>
-          </li>`;
-      }
-
       const label = item.logo
         ? `<span class="nav-wordmark"><img src="${escapeHtml(item.logo)}" alt="${escapeHtml(item.label)}"></span>`
         : escapeHtml(item.label);
+
+      if (item.children) {
+        const children = item.children.map((child) => `
+          <li><a class="dropdown-link${child.id === currentPage ? " is-active" : ""}" href="${escapeHtml(child.href)}"${externalAttributes(child.href)}>${escapeHtml(child.label)}</a></li>`).join("");
+        const menuId = `nav-menu-${item.id}`;
+        const control = item.href
+          ? `<div class="dropdown-trigger">
+              <a class="nav-link" href="${escapeHtml(item.href)}"${externalAttributes(item.href)}>${label}</a>
+              <button class="dropdown-toggle dropdown-toggle--separate" type="button" aria-expanded="false" aria-controls="${escapeHtml(menuId)}" aria-label="Toggle ${escapeHtml(item.label)} submenu">
+                <svg viewBox="0 0 12 8" aria-hidden="true"><path d="m1 1 5 5 5-5"/></svg>
+              </button>
+            </div>`
+          : `<button class="nav-link dropdown-toggle" type="button" aria-expanded="false" aria-controls="${escapeHtml(menuId)}">
+              <span>${label}</span>
+              <svg viewBox="0 0 12 8" aria-hidden="true"><path d="m1 1 5 5 5-5"/></svg>
+            </button>`;
+        return `
+          <li class="nav-item nav-item--dropdown${activeClass}">
+            ${control}
+            <ul class="dropdown-menu" id="${escapeHtml(menuId)}">${children}</ul>
+          </li>`;
+      }
+
       return `<li class="nav-item${activeClass}"><a class="nav-link${item.logo ? " nav-link--wordmark" : ""}" href="${escapeHtml(item.href)}">${label}</a></li>`;
     }).join("");
 
@@ -336,6 +345,44 @@
       </div>`;
   }
 
+  function renderEntrepreneurship() {
+    const mount = document.querySelector("[data-entrepreneurship-page]");
+    if (!mount) return;
+
+    const page = data.entrepreneurship;
+    mount.innerHTML = `
+      <header class="page-heading">
+        <p class="breadcrumb"><a href="index.html">Home</a><span>/</span>${escapeHtml(page.title)}</p>
+        <h1>${escapeHtml(page.title)}</h1>
+        <p>${escapeHtml(page.summary)}</p>
+      </header>
+      <section class="entrepreneurship-overview" aria-labelledby="entrepreneurship-overview-title">
+        <div class="entrepreneurship-copy" data-reveal>
+          <h2 id="entrepreneurship-overview-title">${escapeHtml(page.overviewTitle)}</h2>
+          ${page.overview.map((paragraph) => `<p>${escapeHtml(paragraph)}</p>`).join("")}
+        </div>
+        <div class="entrepreneurship-support" data-reveal>
+          <h2>${escapeHtml(page.supportTitle)}</h2>
+          <ul>
+            ${page.support.map((item) => `<li><strong>${escapeHtml(item.title)}</strong><span>${escapeHtml(item.description)}</span></li>`).join("")}
+          </ul>
+        </div>
+      </section>
+      <section class="venture-section" aria-labelledby="student-ventures-title">
+        <header class="section-bar">
+          <h2 id="student-ventures-title">${escapeHtml(page.venturesTitle)}</h2>
+        </header>
+        <div class="opportunity-grid">
+          ${page.ventures.map((venture) => `
+            <article class="opportunity-card" data-reveal>
+              <h2>${escapeHtml(venture.name)}</h2>
+              <p>${escapeHtml(venture.description)}</p>
+              <a class="opportunity-action" href="${escapeHtml(venture.url)}"${externalAttributes(venture.url)}>Visit ${escapeHtml(venture.name)} <span aria-hidden="true">↗</span></a>
+            </article>`).join("")}
+        </div>
+      </section>`;
+  }
+
   function enableReveals() {
     const elements = [...document.querySelectorAll("[data-reveal]")];
     if (!elements.length) return;
@@ -363,5 +410,6 @@
   renderResearchAreas();
   renderPublications();
   renderOpportunity();
+  renderEntrepreneurship();
   enableReveals();
 })();

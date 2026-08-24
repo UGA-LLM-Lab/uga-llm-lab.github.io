@@ -42,6 +42,14 @@ window.LLM_LAB_DATA = {
       label: "EZCollegeApp",
       href: "ezcollegeapp.html",
       logo: "assets/images/ezcollegeapp-wordmark-nav.png"
+    },
+    {
+      id: "entrepreneurship",
+      label: "Entrepreneurship",
+      href: "entrepreneurship.html",
+      children: [
+        { id: "alavon", label: "Alavon", href: "https://www.alavonai.com/" }
+      ]
     }
   ],
 
@@ -51,6 +59,31 @@ window.LLM_LAB_DATA = {
       "Develop language-based intelligent systems that can reason across domains, learn from multimodal evidence, and collaborate with people.",
       "Connect advances in AI, neuroscience, and quantum computing to research problems in science, medicine, education, and the humanities.",
       "Train researchers who can move between foundational methods and applications with measurable social value."
+    ]
+  },
+
+  entrepreneurship: {
+    title: "Entrepreneurship",
+    summary: "The UGA LLM Lab encourages lab members and undergraduate students participating in our courses to explore entrepreneurship as a path for translating research and course projects into useful tools, services, and organizations.",
+    overviewTitle: "From ideas to responsible ventures",
+    overview: [
+      "Research and teaching often reveal practical problems that deserve solutions beyond a paper or classroom demonstration. Students interested in pursuing those opportunities can develop the problem definition, identify intended users, test technical assumptions, and build an initial prototype.",
+      "Projects remain student-led. We value responsible development, evidence-based decisions, honest communication about AI capabilities, and work that creates meaningful value for its users."
+    ],
+    supportTitle: "How the lab supports student founders",
+    support: [
+      { title: "Problem discovery", description: "Clarify the need, the intended users, and why an AI-based approach is appropriate." },
+      { title: "Technical feedback", description: "Review models, data, evaluation plans, system design, and prototype feasibility." },
+      { title: "Team formation", description: "Connect students across research, engineering, product, and other relevant disciplines." },
+      { title: "Responsible translation", description: "Consider reliability, privacy, safety, and real-world impact as the project develops." }
+    ],
+    venturesTitle: "Student ventures",
+    ventures: [
+      {
+        name: "Alavon",
+        description: "Alavon is a student entrepreneurship project and creator community for discovering and sharing useful AI prompts, learning what works for others, and running prompts in one connected experience.",
+        url: "https://www.alavonai.com/"
+      }
     ]
   },
 
