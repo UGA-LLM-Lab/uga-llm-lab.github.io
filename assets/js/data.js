@@ -76,7 +76,9 @@ window.LLM_LAB_DATA = {
       { title: "Problem discovery", description: "Clarify the need, the intended users, and why an AI-based approach is appropriate." },
       { title: "Technical feedback", description: "Review models, data, evaluation plans, system design, and prototype feasibility." },
       { title: "Team formation", description: "Connect students across research, engineering, product, and other relevant disciplines." },
-      { title: "Responsible translation", description: "Consider reliability, privacy, safety, and real-world impact as the project develops." }
+      { title: "Responsible translation", description: "Consider reliability, privacy, safety, and real-world impact as the project develops." },
+      { title: "Product and launch planning", description: "Turn promising prototypes into practical roadmaps for user testing, iteration, and launch." },
+      { title: "Promotion and visibility", description: "Use the lab's social media platforms to help introduce student-led projects and share important milestones." }
     ],
     venturesTitle: "Student ventures",
     ventures: [
