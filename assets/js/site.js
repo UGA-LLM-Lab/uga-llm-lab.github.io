@@ -377,7 +377,7 @@
             <article class="opportunity-card" data-reveal>
               <h2>${escapeHtml(venture.name)}</h2>
               <p>${escapeHtml(venture.description)}</p>
-              <a class="opportunity-action" href="${escapeHtml(venture.url)}"${externalAttributes(venture.url)}>Visit ${escapeHtml(venture.name)} <span aria-hidden="true">↗</span></a>
+              <a class="opportunity-action" href="${escapeHtml(venture.url)}"${externalAttributes(venture.url)}>${escapeHtml(venture.actionLabel || "Learn more")} <span aria-hidden="true">→</span></a>
             </article>`).join("")}
         </div>
       </section>`;

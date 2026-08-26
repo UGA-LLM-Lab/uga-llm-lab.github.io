@@ -1274,6 +1274,204 @@ a:focus-visible {
   margin-bottom: 0;
 }
 
+/* Alavon */
+.alavon-hero {
+  position: relative;
+  overflow: hidden;
+  padding: 38px 0 40px;
+  color: white;
+  background:
+    radial-gradient(circle at 88% 15%, rgba(21, 211, 195, 0.2), transparent 28%),
+    radial-gradient(circle at 72% 100%, rgba(0, 116, 184, 0.22), transparent 34%),
+    #061a38;
+}
+
+.alavon-hero::after {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  height: 4px;
+  background: linear-gradient(90deg, #086bb4, #18d5c3);
+  content: "";
+}
+
+.alavon-hero__content {
+  position: relative;
+  z-index: 1;
+}
+
+.alavon-kicker,
+.alavon-eyebrow {
+  margin-bottom: 8px;
+  color: #0878a7;
+  font-size: 0.68rem;
+  font-weight: 800;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.alavon-kicker {
+  color: #4de1d4;
+}
+
+.alavon-hero__logo {
+  width: min(360px, 72vw);
+  margin-bottom: 20px;
+}
+
+.alavon-hero__copy p {
+  margin-bottom: 9px;
+  color: rgba(255, 255, 255, 0.78);
+  font-size: 0.9rem;
+}
+
+.alavon-hero__copy strong {
+  color: white;
+}
+
+.alavon-hero__copy a {
+  color: white;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+}
+
+.alavon-hero__copy a:hover,
+.alavon-hero__copy a:focus-visible {
+  color: #69e9de;
+  border-bottom-color: #69e9de;
+}
+
+.alavon-hero .button-row {
+  margin-top: 19px;
+}
+
+.alavon-button {
+  color: #061a38;
+  background: #21d7c6;
+  border-color: #21d7c6;
+}
+
+.alavon-button:hover,
+.alavon-button:focus-visible {
+  color: #061a38;
+  background: #69e9de;
+  border-color: #69e9de;
+}
+
+.alavon-button--outline {
+  color: white;
+  background: transparent;
+  border-color: rgba(255, 255, 255, 0.55);
+}
+
+.alavon-button--outline:hover,
+.alavon-button--outline:focus-visible {
+  color: white;
+  background: rgba(255, 255, 255, 0.09);
+  border-color: white;
+}
+
+.alavon-section-intro {
+  margin-bottom: 24px;
+}
+
+.alavon-section-intro h2,
+.alavon-capabilities h2 {
+  margin-bottom: 9px;
+  font-family: var(--serif);
+  font-size: 1.45rem;
+  letter-spacing: -0.02em;
+}
+
+.alavon-section-intro > p:last-child {
+  color: var(--ink-soft);
+  font-size: 0.86rem;
+}
+
+.alavon-steps {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 28px;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+.alavon-steps li {
+  padding-top: 12px;
+  border-top: 2px solid #0784a7;
+}
+
+.alavon-steps span {
+  display: block;
+  margin-bottom: 5px;
+  color: #0784a7;
+  font-size: 0.68rem;
+  font-weight: 800;
+}
+
+.alavon-steps h3 {
+  margin-bottom: 4px;
+  font-family: var(--serif);
+  font-size: 1.08rem;
+}
+
+.alavon-steps p {
+  margin-bottom: 0;
+  color: var(--ink-soft);
+  font-size: 0.79rem;
+}
+
+.alavon-capabilities {
+  display: grid;
+  grid-template-columns: 210px minmax(0, 1fr);
+  gap: 46px;
+  align-items: center;
+}
+
+.alavon-mark {
+  display: grid;
+  place-items: center;
+  aspect-ratio: 1;
+  background: #eef8f8;
+  border-radius: 50%;
+}
+
+.alavon-mark img {
+  width: 68%;
+}
+
+.alavon-capability-list {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0 24px;
+  padding: 0;
+  margin: 18px 0 0;
+  border-top: 2px solid var(--ink);
+  list-style: none;
+}
+
+.alavon-capability-list li {
+  padding: 10px 0 11px;
+  border-bottom: 1px solid var(--line);
+}
+
+.alavon-capability-list strong,
+.alavon-capability-list span {
+  display: block;
+}
+
+.alavon-capability-list strong {
+  margin-bottom: 2px;
+  color: #0878a7;
+  font-size: 0.78rem;
+}
+
+.alavon-capability-list span {
+  color: var(--ink-soft);
+  font-size: 0.76rem;
+}
+
 /* EZCollegeApp */
 .ez-intro {
   padding: 30px 0;
@@ -1620,6 +1818,11 @@ a:focus-visible {
     gap: 24px;
   }
 
+  .alavon-capabilities {
+    grid-template-columns: 130px minmax(0, 1fr);
+    gap: 28px;
+  }
+
   .venture-section .section-bar {
     display: block;
   }
@@ -1683,6 +1886,33 @@ a:focus-visible {
   .entrepreneurship-support li,
   .entrepreneurship-support li:nth-child(even) {
     padding-inline: 0;
+  }
+
+  .alavon-hero {
+    padding-block: 30px 32px;
+  }
+
+  .alavon-hero__logo {
+    width: min(290px, 78vw);
+    margin-bottom: 16px;
+  }
+
+  .alavon-steps,
+  .alavon-capability-list {
+    grid-template-columns: 1fr;
+    gap: 0;
+  }
+
+  .alavon-steps li + li {
+    margin-top: 18px;
+  }
+
+  .alavon-capabilities {
+    grid-template-columns: 1fr;
+  }
+
+  .alavon-mark {
+    width: 116px;
   }
 
   .brand-row {

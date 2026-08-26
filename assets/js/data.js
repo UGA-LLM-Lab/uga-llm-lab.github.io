@@ -48,7 +48,7 @@ window.LLM_LAB_DATA = {
       label: "Entrepreneurship",
       href: "entrepreneurship.html",
       children: [
-        { id: "alavon", label: "Alavon", href: "https://www.alavonai.com/" }
+        { id: "alavon", label: "Alavon", href: "alavon.html" }
       ]
     }
   ],
@@ -68,7 +68,8 @@ window.LLM_LAB_DATA = {
     overviewTitle: "From ideas to responsible ventures",
     overview: [
       "Research and teaching often reveal practical problems that deserve solutions beyond a paper or classroom demonstration. Students interested in pursuing those opportunities can develop the problem definition, identify intended users, test technical assumptions, and build an initial prototype.",
-      "Projects remain student-led. We value responsible development, evidence-based decisions, honest communication about AI capabilities, and work that creates meaningful value for its users."
+      "The projects featured here are student-led. Tianming Liu, director of the UGA LLM Lab, serves as faculty advisor, offering mentorship, pointing teams toward relevant resources, and helping students evaluate technical and product decisions while the student teams retain leadership of their ventures.",
+      "We value responsible development, evidence-based decisions, honest communication about AI capabilities, and work that creates meaningful value for its users."
     ],
     supportTitle: "How the lab supports student founders",
     support: [
@@ -81,8 +82,9 @@ window.LLM_LAB_DATA = {
     ventures: [
       {
         name: "Alavon",
-        description: "Alavon is a student entrepreneurship project and creator community for discovering and sharing useful AI prompts, learning what works for others, and running prompts in one connected experience.",
-        url: "https://www.alavonai.com/"
+        description: "Alavon is building a creator community for discovering and sharing useful AI prompts, learning what works for others, and running prompts in one connected experience.",
+        url: "alavon.html",
+        actionLabel: "Learn about Alavon"
       }
     ]
   },
