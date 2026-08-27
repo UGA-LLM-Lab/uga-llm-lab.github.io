@@ -48,7 +48,8 @@ window.LLM_LAB_DATA = {
       label: "Entrepreneurship",
       href: "entrepreneurship.html",
       children: [
-        { id: "alavon", label: "Alavon", href: "alavon.html" }
+        { id: "alavon", label: "Alavon", href: "alavon.html" },
+        { id: "rostudio", label: "RoStudio", href: "rostudio.html" }
       ]
     }
   ],
@@ -87,6 +88,12 @@ window.LLM_LAB_DATA = {
         description: "Alavon is building a creator community for discovering and sharing useful AI prompts, learning what works for others, and running prompts in one connected experience.",
         url: "alavon.html",
         actionLabel: "Learn about Alavon"
+      },
+      {
+        name: "RoStudio",
+        description: "RoStudio is building an AI-assisted workflow for creating Roblox games from a description, coordinating code and creative assets within one project.",
+        url: "rostudio.html",
+        actionLabel: "Learn about RoStudio"
       }
     ]
   },

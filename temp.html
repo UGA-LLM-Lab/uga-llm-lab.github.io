@@ -1,0 +1,196 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex, nofollow">
+  <title>RoStudio | UGA LLM Lab</title>
+  <link rel="icon" href="/favicon.ico">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@700;900&amp;display=swap" rel="stylesheet">
+  <link rel="preload" href="/fonts/LufgaRegular.otf" as="font" type="font/otf" crossorigin>
+  <style>
+    @font-face {
+      font-family: "Lufga";
+      src: url("/fonts/LufgaRegular.otf") format("opentype");
+      font-weight: normal;
+      font-style: normal;
+      font-display: swap;
+    }
+
+    @font-face {
+      font-family: "Instrument Sans";
+      src: url("/fonts/InstrumentSans-VariableFont_wdth,wght.ttf") format("truetype");
+      font-weight: 100 900;
+      font-style: normal;
+      font-display: swap;
+    }
+
+    :root {
+      --purple: #7c3aed;
+      --purple-light: #a78bfa;
+      --purple-soft: #c084fc;
+      --black: #000;
+      --panel: #0a0714;
+      --text: #d4d4d8;
+      --text-dim: #a1a1aa;
+      --serif: "Merriweather", Georgia, "Times New Roman", serif;
+      --sans: "Lufga", "Instrument Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+    }
+
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; -webkit-text-size-adjust: 100%; }
+    body { margin: 0; color: var(--text); background: var(--black); font-family: var(--sans); font-size: 17px; line-height: 1.6; }
+    a { color: inherit; }
+    img { max-width: 100%; }
+    .wrap { max-width: 1080px; padding: 0 32px; margin: 0 auto; }
+
+    .hero {
+      position: relative;
+      overflow: hidden;
+      padding: 76px 0 72px;
+      background:
+        radial-gradient(900px 420px at 12% -10%, rgba(124, 58, 237, 0.3), transparent 62%),
+        radial-gradient(700px 380px at 88% 0%, rgba(147, 51, 234, 0.16), transparent 60%),
+        linear-gradient(180deg, #0a0714 0%, #000 78%);
+    }
+
+    .hero-logo { width: min(340px, 66vw); height: auto; display: block; margin: 0 0 72px; }
+    .hero p { max-width: 720px; margin: 0 0 18px; color: #cbc6d6; font-size: 18.5px; line-height: 1.66; text-wrap: pretty; }
+    .hero p strong { color: white; font-weight: 400; }
+    .hero p a { color: var(--purple-light); text-decoration-color: rgba(167, 139, 250, 0.5); text-underline-offset: 4px; }
+    .btns { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 30px; }
+
+    .btn-app,
+    .btn-app-ghost { display: inline-flex; align-items: center; justify-content: center; padding: 12px 24px; color: white; border-radius: 8px; font-size: 14px; text-decoration: none; }
+    .btn-app { background: linear-gradient(#9333ea, #7e22ce); border: 1px solid rgba(147, 51, 234, 0.3); }
+    .btn-app-ghost { background: rgba(255, 255, 255, 0.05); border: 1px solid rgba(255, 255, 255, 0.1); }
+
+    section { padding: 66px 0; border-top: 1px solid rgba(255, 255, 255, 0.05); }
+    .kicker { margin: 0 0 12px; color: var(--purple-light); font-size: 12px; letter-spacing: 0.2em; text-transform: uppercase; }
+    h2 { margin: 0 0 18px; color: white; font-family: var(--serif); font-size: clamp(25px, 3vw, 32px); font-weight: 900; line-height: 1.2; }
+    .lede { max-width: 760px; margin: 0 0 16px; color: var(--text-dim); font-size: 17.5px; line-height: 1.68; text-wrap: pretty; }
+    .lede strong { color: #e9e4f5; font-weight: 400; }
+
+    .gist { display: grid; grid-template-columns: minmax(0, 1fr) 300px; gap: 56px; align-items: center; }
+    .gist-art { width: 100%; height: auto; display: block; }
+    .gist .lede:last-child { margin-bottom: 0; }
+
+    .statband { padding: 46px 0; }
+    .stats { display: flex; justify-content: center; flex-wrap: wrap; gap: 56px; text-align: center; }
+    .stats .n { color: white; font-family: var(--serif); font-size: 44px; font-weight: 900; line-height: 1; }
+    .stats .l { margin-top: 10px; color: var(--purple-light); font-size: 11.5px; letter-spacing: 0.18em; text-transform: uppercase; }
+
+    .centered { text-align: center; }
+    .centered .hero-logo,
+    .centered .lede,
+    .centered .roles,
+    .hero.centered p { margin-right: auto; margin-left: auto; }
+    .centered .btns,
+    .centered .roles { justify-content: center; }
+    .centered .founder { text-align: left; }
+
+    .agents { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 14px; margin-top: 30px; }
+    .agent { display: flex; flex-direction: column; padding: 20px; background: linear-gradient(#242424, #1a1a1a 55%, #131313); border: 1px solid rgba(255, 255, 255, 0.05); border-radius: 12px; }
+    .agent h4 { margin: 0 0 6px; color: white; font-size: 16px; font-weight: 400; }
+    .agent p { margin: 0 0 14px; color: #d1d5db; font-size: 14px; line-height: 1.625; }
+    .pill { align-self: flex-start; padding: 3px 9px; margin-top: auto; color: var(--purple-soft); border: 1px solid rgba(167, 139, 250, 0.35); border-radius: 100px; font-size: 10px; letter-spacing: 0.14em; text-transform: uppercase; }
+    .pill.soon { color: #8b8b95; border-color: rgba(255, 255, 255, 0.14); }
+
+    .roles { max-width: 820px; display: flex; flex-wrap: wrap; gap: 10px; margin-top: 24px; }
+    .roles span { display: inline-flex; align-items: center; justify-content: center; gap: 8px; padding: 6px 12px; color: rgba(255, 255, 255, 0.7); border: 1px solid rgba(255, 255, 255, 0.16); border-radius: 6px; font-size: 11px; }
+    .roles svg { width: 12px; height: 12px; flex: 0 0 auto; opacity: 0.7; }
+
+    .founder { display: grid; grid-template-columns: 64px 1fr auto; gap: 20px; align-items: center; padding-top: 28px; margin-top: 36px; border-top: 1px solid rgba(255, 255, 255, 0.06); }
+    .avatar { width: 64px; height: 64px; display: block; object-fit: cover; background: linear-gradient(135deg, var(--purple-light), var(--purple)); border-radius: 50%; }
+    .founder h3 { margin: 0 0 3px; color: white; font-family: var(--serif); font-size: 19px; font-weight: 900; }
+    .founder .role-line { margin: 0; color: var(--purple-light); font-size: 12px; letter-spacing: 0.12em; text-transform: uppercase; }
+
+    @media (max-width: 900px) {
+      .gist { grid-template-columns: 1fr; gap: 32px; }
+      .gist-art { max-width: 260px; }
+      .agents { grid-template-columns: 1fr; }
+      .founder { grid-template-columns: 64px 1fr; }
+      .founder .btn-app { grid-column: 1 / -1; justify-self: start; }
+    }
+
+    @media (max-width: 640px) {
+      .roles { flex-direction: column; }
+      .roles span,
+      .founder .btn-app { width: 100%; }
+      .stats { gap: 36px; }
+    }
+  </style>
+</head>
+<body>
+  <div class="hero centered">
+    <div class="wrap">
+      <img class="hero-logo" src="https://rostud.io/imgs/rostudio-banner-logo.png" alt="RoStudio">
+      <p>We are striving to create a platform where tuned agents can simultaneously work together - creating and integrating all aspects of game development in one workflow.</p>
+      <p>However, we are not just trying to serve game developers. We believe that by getting AI to overcome the struggles of game development, we can thereby build the blueprint and foundation of multimodal AI.</p>
+      <p>Founded and built by <strong>Sadiq Rasheed</strong>, a second-year UGA student, with support from the UGA LLM Lab and its director, <a href="#">Tianming Liu</a>.</p>
+      <div class="btns">
+        <a class="btn-app" href="https://rostud.io/signup" target="_blank" rel="noopener noreferrer">Visit RoStudio</a>
+        <a class="btn-app-ghost" href="https://www.linkedin.com/company/rostud-io/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="statband">
+    <div class="wrap">
+      <div class="stats">
+        <div><div class="n">30K+</div><div class="l">Developers</div></div>
+        <div><div class="n">10B+</div><div class="l">Tokens a week</div></div>
+      </div>
+    </div>
+  </div>
+
+  <section>
+    <div class="wrap">
+      <div class="gist">
+        <div>
+          <h2>Coding was only half the problem</h2>
+          <p class="lede">Generating one asset was never the hard part. The hard part is coordinating many. A sword is a model, a texture, an animation, a sound, a damage rule, and a network boundary - <strong>six outputs that only count as finished if they agree with each other</strong>.</p>
+          <p class="lede">Game development is the clearest place that limitation shows up, which makes it the right place to attack it first. Solving it there produces a blueprint for multimodal AI more broadly - the same question the lab studies from the model side.</p>
+        </div>
+        <img class="gist-art" src="/imgs/img1.svg" alt="" aria-hidden="true">
+      </div>
+    </div>
+  </section>
+
+  <section class="centered">
+    <div class="wrap">
+      <p class="kicker">The platform</p>
+      <h2>Specialized agents, one project</h2>
+      <div class="agents">
+        <div class="agent"><h4>Code</h4><p>Syntax written with the whole project in view.</p><span class="pill">Shipped</span></div>
+        <div class="agent"><h4>Animation &amp; rigging</h4><p>Rigs and motion built against the code that will drive them.</p><span class="pill soon">In development</span></div>
+        <div class="agent"><h4>3D modeling</h4><p>Geometry built to fit its system, not exported as a one-off.</p><span class="pill soon">In development</span></div>
+        <div class="agent"><h4>Visual effects</h4><p>Effects timed to the animation and the event that fires them.</p><span class="pill soon">In development</span></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="centered">
+    <div class="wrap">
+      <p class="kicker">Get involved</p>
+      <h2>Contribute to a Better Future</h2>
+      <p class="lede">We're looking for talented people. RoStudio is used by <strong>30K+ developers</strong>, and the next stage gets built by whoever shows up to build it.</p>
+      <div class="roles">
+        <span>Agent &amp; ML engineering</span>
+        <span>Technical art</span>
+        <span>Gameplay engineering</span>
+      </div>
+      <div class="founder">
+        <img class="avatar" src="https://media.licdn.com/dms/image/v2/D4E03AQEpNGgKiNO6jg/profile-displayphoto-crop_800_800/B4EaAdJOXdIUAI-/0/1787195354418?e=1789603200&amp;v=beta&amp;t=YL_tnUdRA2LAHXzHo87AyUaP0IzVOEO0tceaHP3LkEs" alt="Sadiq Rasheed" loading="lazy" width="64" height="64">
+        <div>
+          <h3>Sadiq Rasheed</h3>
+          <p class="role-line">Founder · Second-year, University of Georgia</p>
+        </div>
+        <a class="btn-app" href="mailto:sadiqr@rostud.io?cc=sadiq.rasheed%40uga.edu&amp;subject=Joining%20RoStudio">Get in touch</a>
+      </div>
+    </div>
+  </section>
+</body>
+</html>

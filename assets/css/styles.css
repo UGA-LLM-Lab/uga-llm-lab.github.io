@@ -1472,6 +1472,279 @@ a:focus-visible {
   font-size: 0.76rem;
 }
 
+/* RoStudio */
+.rostudio-page {
+  --ro-purple: #7c3aed;
+  --ro-purple-light: #a78bfa;
+  --ro-line: #ddd6e8;
+  color: var(--ink);
+  background: white;
+}
+
+.rostudio-hero {
+  position: relative;
+  overflow: hidden;
+  padding: 54px 0 50px;
+  text-align: center;
+  background: white;
+  border-bottom: 1px solid var(--line);
+}
+
+.rostudio-hero__content {
+  position: relative;
+  z-index: 1;
+}
+
+.rostudio-kicker {
+  margin-bottom: 10px;
+  color: #6d28d9;
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+}
+
+.rostudio-hero__logo {
+  width: min(390px, 76vw);
+  margin: 0 auto 34px;
+}
+
+.rostudio-hero__copy {
+  width: 100%;
+}
+
+.rostudio-hero__copy p,
+.rostudio-section p:not(.rostudio-kicker) {
+  color: var(--ink-soft);
+  font-size: 0.9rem;
+}
+
+.rostudio-hero__copy p {
+  margin-bottom: 10px;
+}
+
+.rostudio-hero__copy a {
+  color: #6d28d9;
+  border-bottom: 1px solid rgba(109, 40, 217, 0.4);
+}
+
+.rostudio-hero__copy a:hover,
+.rostudio-hero__copy a:focus-visible {
+  color: var(--uga-red);
+  border-bottom-color: var(--uga-red);
+}
+
+.rostudio-hero .button-row {
+  justify-content: center;
+  margin-top: 24px;
+}
+
+.rostudio-button {
+  color: white;
+  background: linear-gradient(#9333ea, #7e22ce);
+  border-color: rgba(167, 139, 250, 0.35);
+  border-radius: 7px;
+}
+
+.rostudio-button:hover,
+.rostudio-button:focus-visible {
+  color: white;
+  background: linear-gradient(#a044f0, #8b2bd7);
+  border-color: rgba(196, 181, 253, 0.6);
+}
+
+.rostudio-button--outline {
+  color: #6d28d9;
+  background: transparent;
+  border-color: rgba(109, 40, 217, 0.35);
+}
+
+.rostudio-button--outline:hover,
+.rostudio-button--outline:focus-visible {
+  color: white;
+  background: #6d28d9;
+  border-color: #6d28d9;
+}
+
+.rostudio-statband {
+  padding: 28px 0;
+  background: var(--paper-soft);
+  border-bottom: 1px solid var(--line);
+}
+
+.rostudio-stats {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(140px, 180px));
+  justify-content: center;
+  gap: 64px;
+  padding: 0;
+  margin-block: 0;
+  margin-inline: auto;
+  list-style: none;
+  text-align: center;
+}
+
+.rostudio-stats strong,
+.rostudio-stats span {
+  display: block;
+}
+
+.rostudio-stats strong {
+  color: var(--ink);
+  font-family: var(--serif);
+  font-size: 2rem;
+  line-height: 1;
+}
+
+.rostudio-stats span {
+  margin-top: 7px;
+  color: #6d28d9;
+  font-size: 0.64rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
+.rostudio-section {
+  padding: 48px 0;
+  border-top: 1px solid var(--line);
+}
+
+.rostudio-section h2 {
+  margin-bottom: 12px;
+  color: var(--ink);
+  font-family: var(--serif);
+  font-size: 1.55rem;
+  letter-spacing: -0.02em;
+}
+
+.rostudio-gist {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 340px;
+  gap: 52px;
+  align-items: center;
+}
+
+.rostudio-gist p:last-child {
+  margin-bottom: 0;
+}
+
+.rostudio-system-map {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 8px;
+  padding: 18px;
+  background: #f7f5fa;
+  border: 1px solid var(--ro-line);
+  border-radius: 12px;
+}
+
+.rostudio-system-map strong,
+.rostudio-system-map span {
+  display: grid;
+  min-height: 58px;
+  place-items: center;
+  padding: 8px;
+  text-align: center;
+}
+
+.rostudio-system-map strong {
+  grid-column: 1 / -1;
+  color: var(--ink);
+  background: #eee8fa;
+  border: 1px solid #d7caef;
+  border-radius: 7px;
+  font-size: 0.78rem;
+}
+
+.rostudio-system-map span {
+  color: #5b21b6;
+  background: white;
+  border: 1px solid #e5e0ea;
+  border-radius: 6px;
+  font-size: 0.72rem;
+}
+
+.rostudio-agents-section,
+.rostudio-recruit {
+  text-align: center;
+}
+
+.rostudio-agents-section {
+  background: var(--paper-soft);
+}
+
+.rostudio-agents-section > .shell > p:not(.rostudio-kicker),
+.rostudio-recruit > .shell > p:not(.rostudio-kicker) {
+  max-width: 760px;
+  margin-inline: auto;
+}
+
+.rostudio-agents {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 12px;
+  margin-top: 24px;
+}
+
+.rostudio-agent {
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  padding: 17px;
+  text-align: left;
+  background: white;
+  border: 1px solid var(--line);
+  border-radius: 10px;
+}
+
+.rostudio-agent h3 {
+  margin-bottom: 5px;
+  color: var(--ink);
+  font-size: 0.9rem;
+}
+
+.rostudio-agent p {
+  margin-bottom: 13px;
+  font-size: 0.76rem;
+}
+
+.rostudio-status {
+  align-self: flex-start;
+  margin-top: auto;
+  padding: 3px 8px;
+  color: #c084fc;
+  border: 1px solid rgba(192, 132, 252, 0.35);
+  border-radius: 999px;
+  font-size: 0.58rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.rostudio-status--soon {
+  color: var(--muted);
+  border-color: var(--line-dark);
+}
+
+.rostudio-roles {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 8px;
+  padding: 0;
+  margin: 20px 0 0;
+  list-style: none;
+}
+
+.rostudio-roles li {
+  padding: 5px 10px;
+  color: var(--ink-soft);
+  background: white;
+  border: 1px solid var(--line-dark);
+  border-radius: 5px;
+  font-size: 0.68rem;
+}
+
 /* EZCollegeApp */
 .ez-intro {
   padding: 30px 0;
@@ -1823,6 +2096,20 @@ a:focus-visible {
     gap: 28px;
   }
 
+  .rostudio-gist {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+
+  .rostudio-system-map {
+    width: min(420px, 100%);
+    margin-inline: auto;
+  }
+
+  .rostudio-agents {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
   .venture-section .section-bar {
     display: block;
   }
@@ -1909,10 +2196,64 @@ a:focus-visible {
 
   .alavon-capabilities {
     grid-template-columns: 1fr;
+    gap: 16px;
   }
 
   .alavon-mark {
-    width: 116px;
+    width: 92px;
+    margin-inline: auto;
+  }
+
+  .alavon-capabilities > div:last-child {
+    min-width: 0;
+  }
+
+  .alavon-capabilities .alavon-eyebrow,
+  .alavon-capabilities h2 {
+    text-align: center;
+  }
+
+  .alavon-capability-list {
+    margin-top: 14px;
+  }
+
+  .alavon-capability-list li {
+    padding-block: 11px;
+  }
+
+  .rostudio-hero {
+    padding-block: 38px 40px;
+  }
+
+  .rostudio-hero__logo {
+    width: min(330px, 82vw);
+    margin-bottom: 26px;
+  }
+
+  .rostudio-stats {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 16px;
+  }
+
+  .rostudio-agents {
+    grid-template-columns: 1fr;
+  }
+
+  .rostudio-system-map {
+    grid-template-columns: 1fr;
+  }
+
+  .rostudio-system-map strong {
+    grid-column: auto;
+  }
+
+  .rostudio-roles {
+    align-items: stretch;
+    flex-direction: column;
+  }
+
+  .rostudio-roles li {
+    text-align: center;
   }
 
   .brand-row {
