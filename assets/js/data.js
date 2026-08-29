@@ -48,8 +48,10 @@ window.LLM_LAB_DATA = {
       label: "Entrepreneurship",
       href: "entrepreneurship.html",
       children: [
-        { id: "alavon", label: "Alavon", href: "alavon.html" },
-        { id: "rostudio", label: "RoStudio", href: "rostudio.html" }
+        { id: "alavon", label: "Alavon", href: "startup/alavon.html" },
+        { id: "rostudio", label: "RoStudio", href: "startup/rostudio.html" },
+        { id: "teams", label: "Find Teams", href: "teams.html", emphasis: true },
+        { id: "support", label: "Support", href: "entrepreneurship-support.html", emphasis: true }
       ]
     }
   ],
@@ -82,18 +84,16 @@ window.LLM_LAB_DATA = {
       { title: "Promotion and visibility", description: "Use the lab's social media platforms to help introduce student-led projects and share important milestones." }
     ],
     venturesTitle: "Student ventures",
-    ventures: [
+    paths: [
       {
-        name: "Alavon",
-        description: "Alavon is building a creator community for discovering and sharing useful AI prompts, learning what works for others, and running prompts in one connected experience.",
-        url: "alavon.html",
-        actionLabel: "Learn about Alavon"
+        title: "Find Teams",
+        description: "Browse student ideas that are looking for co-founders, builders, researchers, designers, or other collaborators.",
+        url: "teams.html"
       },
       {
-        name: "RoStudio",
-        description: "RoStudio is building an AI-assisted workflow for creating Roblox games from a description, coordinating code and creative assets within one project.",
-        url: "rostudio.html",
-        actionLabel: "Learn about RoStudio"
+        title: "Support",
+        description: "Request faculty guidance or collaboration for an existing venture, or submit a new idea and team listing.",
+        url: "entrepreneurship-support.html"
       }
     ]
   },

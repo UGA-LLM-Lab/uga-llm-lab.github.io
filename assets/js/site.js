@@ -56,7 +56,7 @@
 
       if (item.children) {
         const children = item.children.map((child) => `
-          <li><a class="dropdown-link${child.id === currentPage ? " is-active" : ""}" href="${escapeHtml(child.href)}"${externalAttributes(child.href)}>${escapeHtml(child.label)}</a></li>`).join("");
+          <li><a class="dropdown-link${child.emphasis ? " dropdown-link--strong" : ""}${child.id === currentPage ? " is-active" : ""}" href="${escapeHtml(child.href)}"${externalAttributes(child.href)}>${escapeHtml(child.label)}</a></li>`).join("");
         const menuId = `nav-menu-${item.id}`;
         const control = item.href
           ? `<div class="dropdown-trigger">
@@ -371,15 +371,18 @@
       <section class="venture-section" aria-labelledby="student-ventures-title">
         <header class="section-bar">
           <h2 id="student-ventures-title">${escapeHtml(page.venturesTitle)}</h2>
+          <span data-venture-count aria-live="polite"></span>
         </header>
-        <div class="opportunity-grid">
-          ${page.ventures.map((venture) => `
-            <article class="opportunity-card" data-reveal>
-              <h2>${escapeHtml(venture.name)}</h2>
-              <p>${escapeHtml(venture.description)}</p>
-              <a class="opportunity-action" href="${escapeHtml(venture.url)}"${externalAttributes(venture.url)}>${escapeHtml(venture.actionLabel || "Learn more")} <span aria-hidden="true">→</span></a>
-            </article>`).join("")}
-        </div>
+        <div class="venture-directory__status" data-venture-status role="status">Loading student ventures...</div>
+        <div class="opportunity-grid" data-venture-directory></div>
+      </section>
+      <section class="entrepreneurship-paths" aria-label="Entrepreneurship resources">
+        ${page.paths.map((path) => `
+          <a href="${escapeHtml(path.url)}" data-reveal>
+            <strong>${escapeHtml(path.title)}</strong>
+            <span>${escapeHtml(path.description)}</span>
+            <i aria-hidden="true">→</i>
+          </a>`).join("")}
       </section>`;
   }
 
