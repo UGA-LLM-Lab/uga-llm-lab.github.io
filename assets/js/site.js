@@ -355,6 +355,9 @@
         <p class="breadcrumb"><a href="index.html">Home</a><span>/</span>${escapeHtml(page.title)}</p>
         <h1>${escapeHtml(page.title)}</h1>
         <p>${escapeHtml(page.summary)}</p>
+        <div class="button-row page-heading__actions">
+          ${page.actions.map((action, index) => `<a class="button${index ? " button--outline" : ""}" href="${escapeHtml(action.url)}">${escapeHtml(action.label)}</a>`).join("")}
+        </div>
       </header>
       <section class="entrepreneurship-overview" aria-labelledby="entrepreneurship-overview-title">
         <div class="entrepreneurship-copy" data-reveal>

@@ -68,6 +68,10 @@ window.LLM_LAB_DATA = {
   entrepreneurship: {
     title: "Entrepreneurship",
     summary: "The UGA LLM Lab encourages lab members and undergraduate students participating in our courses to explore entrepreneurship as a path for translating research and course projects into useful tools, services, and organizations.",
+    actions: [
+      { label: "Get Guidance", url: "entrepreneurship-support.html" },
+      { label: "Join a Startup Team", url: "teams.html" }
+    ],
     overviewTitle: "From ideas to responsible ventures",
     overview: [
       "Research and teaching often reveal practical problems that deserve solutions beyond a paper or classroom demonstration. Students interested in pursuing those opportunities can develop the problem definition, identify intended users, test technical assumptions, and build an initial prototype.",
