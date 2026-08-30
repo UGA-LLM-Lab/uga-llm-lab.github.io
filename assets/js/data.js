@@ -104,6 +104,12 @@ window.LLM_LAB_DATA = {
 
   news: [
     {
+      date: "August 2026",
+      sortDate: "2026-08-29",
+      category: "Publication",
+      title: "2 papers accepted to EMNLP 2026"
+    },
+    {
       date: "July 2026",
       sortDate: "2026-07",
       category: "Publication",
@@ -610,6 +616,22 @@ window.LLM_LAB_DATA = {
       id: "llms",
       label: "Large Language Models",
       items: [
+        {
+          year: 2026,
+          month: "October",
+          monthNumber: 10,
+          title: "Who Speaks for the Pruned? Visual Token Pruning as Coverage Optimization",
+          authors: "Author list forthcoming",
+          venue: "Proceedings of the 2026 Conference on Empirical Methods in Natural Language Processing (EMNLP 2026), accepted"
+        },
+        {
+          year: 2026,
+          month: "October",
+          monthNumber: 10,
+          title: "SCOPE: Stepwise Calibration of Reasoning Confidence with Outcome-Grounded Prefix Evidence",
+          authors: "Author list forthcoming",
+          venue: "Proceedings of the 2026 Conference on Empirical Methods in Natural Language Processing (EMNLP 2026), accepted"
+        },
         {
           year: 2026,
           month: "July",
