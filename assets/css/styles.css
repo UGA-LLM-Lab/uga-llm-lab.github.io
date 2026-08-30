@@ -1385,6 +1385,66 @@ a:focus-visible {
   border-bottom: 1px solid rgba(186, 12, 47, 0.32);
 }
 
+.support-steps {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+.support-step {
+  display: grid;
+  grid-template-columns: 34px minmax(0, 1fr);
+  gap: 15px;
+  padding: 20px 0;
+  border-top: 1px solid var(--line);
+}
+
+.support-step:first-child {
+  padding-top: 0;
+  border-top: 0;
+}
+
+.support-step__number {
+  color: var(--uga-red);
+  font-size: 0.78rem;
+  font-weight: 850;
+}
+
+.support-step__content h3 {
+  margin-bottom: 7px;
+  font-family: var(--serif);
+  font-size: 1.08rem;
+}
+
+.support-step__content > p {
+  max-width: 900px;
+  margin-bottom: 12px;
+  color: var(--ink-soft);
+  font-size: 0.82rem;
+}
+
+.support-step__content > p a {
+  color: var(--uga-red-dark);
+  border-bottom: 1px solid rgba(186, 12, 47, 0.32);
+}
+
+.support-step__content > p code {
+  padding: 2px 5px;
+  color: var(--ink);
+  background: var(--paper-soft);
+  border-radius: 3px;
+  font-family: ui-monospace, SFMono-Regular, Consolas, monospace;
+  font-size: 0.75rem;
+}
+
+.support-step .submission-details {
+  margin-block: 14px 16px;
+}
+
+.support-step .template-picker {
+  margin-top: 16px;
+}
+
 .submission-details {
   margin: 18px 0 20px;
   border-top: 1px solid var(--line-dark);

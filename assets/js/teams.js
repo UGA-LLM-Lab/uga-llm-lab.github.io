@@ -7,6 +7,7 @@
   if (!directory || !status || !count) return;
 
   const repositoryApi = "https://api.github.com/repos/UGA-LLM-Lab/uga-llm-lab.github.io/contents/startup/teams";
+  const profileDirectory = "startup/teams/";
 
   const getMeta = (documentNode, name) =>
     documentNode.head.querySelector(`meta[name="${name}"]`)?.content.trim() || "";
@@ -39,6 +40,45 @@
       stage: getMeta(documentNode, "team-stage"),
       url: `startup/teams/${encodeURIComponent(file.name)}`
     };
+  }
+
+  async function listRepositoryFiles() {
+    const response = await fetch(repositoryApi, {
+      headers: { Accept: "application/vnd.github+json" }
+    });
+    if (!response.ok) throw new Error("Directory request failed");
+    return response.json();
+  }
+
+  async function listLocalFiles() {
+    const directoryUrl = new URL(profileDirectory, window.location.href);
+    const response = await fetch(directoryUrl, { cache: "no-store" });
+    if (!response.ok) throw new Error("Local directory request failed");
+
+    const source = await response.text();
+    const documentNode = new DOMParser().parseFromString(source, "text/html");
+    const files = [...documentNode.querySelectorAll("a[href]")].map((link) => {
+      const url = new URL(link.getAttribute("href"), directoryUrl);
+      const name = decodeURIComponent(url.pathname.split("/").filter(Boolean).pop() || "");
+      if (!url.pathname.startsWith(directoryUrl.pathname) || !name.toLowerCase().endsWith(".html")) return null;
+      return { type: "file", name, download_url: url.href };
+    }).filter(Boolean);
+
+    const uniqueFiles = [...new Map(files.map((file) => [file.name, file])).values()];
+    if (!uniqueFiles.length) throw new Error("Local directory listing is unavailable");
+    return uniqueFiles;
+  }
+
+  async function listProfileFiles() {
+    const isLocalServer = ["localhost", "127.0.0.1", "::1"].includes(window.location.hostname);
+    if (isLocalServer) {
+      try {
+        return await listLocalFiles();
+      } catch (error) {
+        // Some local servers do not expose directory indexes; use the published repository as a fallback.
+      }
+    }
+    return listRepositoryFiles();
   }
 
   function addDefinition(list, term, description) {
@@ -99,12 +139,7 @@
 
   async function loadDirectory() {
     try {
-      const response = await fetch(repositoryApi, {
-        headers: { Accept: "application/vnd.github+json" }
-      });
-      if (!response.ok) throw new Error("Directory request failed");
-
-      const files = await response.json();
+      const files = await listProfileFiles();
       const profiles = (await Promise.all(files.map(readProfile)))
         .filter(Boolean)
         .sort((a, b) => a.title.localeCompare(b.title));
