@@ -175,7 +175,9 @@
     if (summary) summary.textContent = data.home.summary;
     if (mission) mission.innerHTML = data.home.mission.map((item) => `<li>${escapeHtml(item)}</li>`).join("");
     if (focus) focus.innerHTML = data.researchAreas.map((area) => `<li><a href="research.html#${escapeHtml(area.id)}">${escapeHtml(area.title)} <span>→</span></a></li>`).join("");
-    if (socials) socials.innerHTML = `<span>Follow us</span>${socialLinkMarkup()}`;
+    if (socials) socials.innerHTML = `
+      <a class="home-forum-link" href="${escapeHtml(data.site.forumUrl)}"${externalAttributes(data.site.forumUrl)}>Visit the Community Forum <span aria-hidden="true">↗</span></a>
+      <div class="home-social-row"><span>Follow us</span>${socialLinkMarkup()}</div>`;
   }
 
   function renderNews() {

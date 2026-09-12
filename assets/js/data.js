@@ -10,6 +10,7 @@ window.LLM_LAB_DATA = {
     name: "UGA LLM Lab",
     sponsorName: "GyriQAI, Inc",
     sponsorUrl: "https://ezcollegeapp.com/",
+    forumUrl: "https://forum.ezcollegeapp.com/",
     ugaUrl: "https://www.uga.edu/",
     computingUrl: "https://computing.uga.edu/",
     contactEmail: "tliu@uga.edu",
@@ -69,8 +70,9 @@ window.LLM_LAB_DATA = {
     title: "Entrepreneurship",
     summary: "The UGA LLM Lab encourages lab members and undergraduate students participating in our courses to explore entrepreneurship as a path for translating research and course projects into useful tools, services, and organizations.",
     actions: [
-      { label: "Get Guidance", url: "entrepreneurship-support.html" },
-      { label: "Join a Startup Team", url: "teams.html" }
+      { label: "How to be supported", url: "entrepreneurship-support.html" },
+      { label: "Join a Startup Team", url: "teams.html" },
+      { label: "Follow us on Instgram", url: "https://www.instagram.com/llmlab.uga/" }
     ],
     overviewTitle: "From ideas to responsible ventures",
     overview: [
@@ -367,7 +369,7 @@ window.LLM_LAB_DATA = {
         },
         {
           name: "Lifeng Chen",
-          role: "Ph.D. Student in Linguistics",
+          role: "Ph.D. Student in Computer Science",
           bio: "Studies low-resource language technologies and the adaptation of large language models, including work on Tibetan.",
           photo: "assets/images/members-lifeng-chen.png",
           links: [
@@ -393,6 +395,19 @@ window.LLM_LAB_DATA = {
           links: [
             { label: "LinkedIn", url: "https://www.linkedin.com/in/khoalend" },
             { label: "Email", url: "mailto:kl58277@uga.edu" }
+          ]
+        },
+        {
+          name: "Abel Yagubyan",
+          role: "Ph.D. Student in Artificial Intelligence",
+          bio: "Research interests include reliable LLM agents, deep learning, high-performance computing, and production AI systems.",
+          photo: "assets/images/members-abel-yagubyan.jpg",
+          website: "https://abelo9996.github.io/",
+          links: [
+            { label: "Website", url: "https://abelo9996.github.io/" },
+            { label: "Google Scholar", url: "https://scholar.google.com/citations?user=rgd3iYwAAAAJ" },
+            { label: "LinkedIn", url: "https://www.linkedin.com/in/abelyagubyan" },
+            { label: "GitHub", url: "https://github.com/Abelo9996" }
           ]
         }
       ]
