@@ -31,6 +31,7 @@ window.LLM_LAB_DATA = {
     {
       id: "opportunities",
       label: "Opportunities",
+      href: "opportunities.html",
       children: [
         { id: "high-school", label: "High School", href: "opportunities-high-school.html" },
         { id: "undergraduate", label: "Undergraduate", href: "opportunities-undergraduate.html" },
@@ -843,9 +844,9 @@ window.LLM_LAB_DATA = {
         },
         {
           title: "How to Contact Us",
-          descriptionHtml: "Email <a href=\"mailto:tliu@uga.edu\">Tianming Liu</a> and copy <a href=\"mailto:sl64343@uga.edu\">Siyuan Li</a>. Briefly describe your background, the research area that interests you, and one paper or project you would like to build on.",
+          descriptionHtml: "Email <a href=\"mailto:tliu@uga.edu\">Tianming Liu (tliu@uga.edu)</a> and copy <a href=\"mailto:Siyuan.Li1@uga.edu\">Siyuan Li (Siyuan.Li1@uga.edu)</a>. Briefly describe your background, the research area that interests you, and one paper or project you would like to build on.",
           points: ["Attach a CV", "Include a transcript if helpful", "State your expected graduation date", "Email subject: Master application - Current School - Name"],
-          action: { label: "Apply by email", url: "mailto:tliu@uga.edu?cc=sl64343@uga.edu&subject=Master%20application%20-%20Current%20School%20-%20Name" }
+          action: { label: "Apply by email", url: "mailto:tliu@uga.edu?cc=Siyuan.Li1@uga.edu&subject=Master%20application%20-%20Current%20School%20-%20Name" }
         }
       ]
     },
@@ -860,9 +861,9 @@ window.LLM_LAB_DATA = {
         },
         {
           title: "How to Contact Us",
-          descriptionHtml: "In addition to the formal UGA graduate application, email <a href=\"mailto:tliu@uga.edu\">Tianming Liu</a> and copy <a href=\"mailto:sl64343@uga.edu\">Siyuan Li</a> with a concise introduction and your research interests.",
+          descriptionHtml: "In addition to the formal UGA graduate application, email <a href=\"mailto:tliu@uga.edu\">Tianming Liu (tliu@uga.edu)</a> and copy <a href=\"mailto:Siyuan.Li1@uga.edu\">Siyuan Li (Siyuan.Li1@uga.edu)</a> with a concise introduction and your research interests.",
           points: ["Attach a CV and summarize your academic background", "Selected publications or technical work (optional)", "Email subject: PhD application - Current School - Name"],
-          action: { label: "Apply by email", url: "mailto:tliu@uga.edu?cc=sl64343@uga.edu&subject=PhD%20application%20-%20Current%20School%20-%20Name" }
+          action: { label: "Apply by email", url: "mailto:tliu@uga.edu?cc=Siyuan.Li1@uga.edu&subject=PhD%20application%20-%20Current%20School%20-%20Name" }
         }
       ]
     }

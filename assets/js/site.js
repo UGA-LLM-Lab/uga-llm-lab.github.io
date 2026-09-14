@@ -327,6 +327,23 @@
     if (!mount) return;
 
     const pageId = document.body.dataset.page;
+    if (pageId === "opportunities") {
+      const navigationItem = data.navigation.find((item) => item.id === "opportunities");
+      const links = navigationItem?.children || [];
+      mount.innerHTML = `
+        <header class="page-heading">
+          <p class="breadcrumb"><a href="index.html">Home</a><span>/</span>Opportunities</p>
+          <h1>Opportunities</h1>
+        </header>
+        <div class="opportunity-grid opportunity-index">
+          ${links.map((link) => `
+            <article class="opportunity-card" data-reveal>
+              <h2><a href="${escapeHtml(link.href)}">${escapeHtml(link.label)} Opportunities <span aria-hidden="true">→</span></a></h2>
+            </article>`).join("")}
+        </div>`;
+      return;
+    }
+
     const page = data.opportunities[pageId];
     if (!page) return;
 
