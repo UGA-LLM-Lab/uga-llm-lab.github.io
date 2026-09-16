@@ -189,11 +189,12 @@
       const title = item.url
         ? `<a href="${escapeHtml(item.url)}"${externalAttributes(item.url)}>${escapeHtml(item.title)}</a>`
         : escapeHtml(item.title);
+      const isLogo = item.imageDisplay === "logo";
       const image = item.image
-        ? `<div class="news-item__image"><img src="${escapeHtml(item.image)}" alt="${escapeHtml(item.imageAlt || "")}"></div>`
+        ? `<div class="news-item__image${isLogo ? " news-item__image--logo" : ""}"><img src="${escapeHtml(item.image)}" alt="${escapeHtml(item.imageAlt || "")}"></div>`
         : "";
       return `
-        <article class="news-item${item.image ? " has-image" : ""}" data-reveal>
+        <article class="news-item${item.image ? " has-image" : ""}${isLogo ? " has-logo" : ""}" data-reveal>
           <div class="news-item__date"><time>${escapeHtml(item.date)}</time><span>${escapeHtml(item.category)}</span></div>
           ${image}
           <div class="news-item__body"><h3>${title}</h3>${item.excerpt ? `<p>${escapeHtml(item.excerpt)}</p>` : ""}</div>

@@ -108,10 +108,26 @@ window.LLM_LAB_DATA = {
 
   news: [
     {
+      date: "September 2026",
+      sortDate: "2026-09-16",
+      category: "Recognition",
+      title: "Tianming Liu elected MICCAI Fellow",
+      excerpt: "Professor Tianming Liu has been elected a Fellow of the Medical Image Computing and Computer Assisted Intervention Society for significant contributions to the development of novel biomedical image analysis methods and tools. He will formally receive the honor at MICCAI 2026 in Strasbourg, France.",
+      url: "tianming-liu.html",
+      image: "assets/images/news-miccai-2026.png",
+      imageAlt: "MICCAI 2026 Strasbourg conference logo",
+      imageDisplay: "logo"
+    },
+    {
       date: "August 2026",
       sortDate: "2026-08-29",
       category: "Publication",
-      title: "2 papers accepted to EMNLP 2026"
+      title: "2 papers accepted to EMNLP 2026",
+      excerpt: "The accepted papers are “Who Speaks for the Pruned? Visual Token Pruning as Coverage Optimization” and “SCOPE: Stepwise Calibration of Reasoning Confidence with Outcome-Grounded Prefix Evidence.”",
+      url: "research.html#llms",
+      image: "assets/images/news-emnlp-2026.png",
+      imageAlt: "EMNLP 2026 Budapest conference logo",
+      imageDisplay: "logo"
     },
     {
       date: "July 2026",
@@ -638,8 +654,9 @@ window.LLM_LAB_DATA = {
           month: "October",
           monthNumber: 10,
           title: "Who Speaks for the Pruned? Visual Token Pruning as Coverage Optimization",
-          authors: "Author list forthcoming",
-          venue: "Proceedings of the 2026 Conference on Empirical Methods in Natural Language Processing (EMNLP 2026), accepted"
+          authors: "Qingchan Zhu, Weihang You, Hanqi Jiang, Changdi Yang, Tianming Liu, Geng Yuan",
+          venue: "Proceedings of the 2026 Conference on Empirical Methods in Natural Language Processing (EMNLP 2026), accepted",
+          url: "http://arxiv.org/html/2609.03158v1"
         },
         {
           year: 2026,
