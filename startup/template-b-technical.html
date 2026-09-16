@@ -19,6 +19,16 @@
   <title>Template B | UGA LLM Lab</title>
   <base href="../">
   <link rel="icon" href="assets/images/lab-logo.svg" type="image/svg+xml">
+  <style>
+    @media (min-width: 901px) {
+      .nav-link { font-size: .74rem !important; letter-spacing: .025em !important; text-transform: none !important; }
+      .dropdown-trigger > .nav-link { padding: 7px 34px 6px 8px !important; }
+      .dropdown-toggle--separate { width: 30px !important; }
+    }
+    @media (max-width: 900px) {
+      .nav-link { font-size: 1rem !important; text-transform: none !important; }
+    }
+  </style>
 </head>
 <body data-template-filename="template-b-technical.html">
   <!-- EDITABLE CONTENT START -->
@@ -42,6 +52,7 @@
             <button class="nav-link dropdown-toggle" type="button" aria-expanded="false" aria-controls="nav-menu-opportunities"><span>Opportunities</span><svg viewBox="0 0 12 8" aria-hidden="true"><path d="m1 1 5 5 5-5"/></svg></button>
             <ul class="dropdown-menu" id="nav-menu-opportunities"><li><a class="dropdown-link" href="opportunities-high-school.html">High School</a></li><li><a class="dropdown-link" href="opportunities-undergraduate.html">Undergraduate</a></li><li><a class="dropdown-link" href="opportunities-masters.html">Master's</a></li><li><a class="dropdown-link" href="opportunities-phd.html">Ph.D.</a></li></ul>
           </li>
+          <li class="nav-item"><a class="nav-link" href="ai-news.html">AI News</a></li>
           <li class="nav-item"><a class="nav-link nav-link--wordmark" href="ezcollegeapp.html"><span class="nav-wordmark"><img src="assets/images/ezcollegeapp-wordmark-nav.png" alt="EZCollegeApp"></span></a></li>
           <li class="nav-item nav-item--dropdown is-active">
             <div class="dropdown-trigger"><a class="nav-link" href="entrepreneurship.html">Entrepreneurship</a><button class="dropdown-toggle dropdown-toggle--separate" type="button" aria-expanded="false" aria-controls="nav-menu-entrepreneurship" aria-label="Toggle Entrepreneurship submenu"><svg viewBox="0 0 12 8" aria-hidden="true"><path d="m1 1 5 5 5-5"/></svg></button></div>

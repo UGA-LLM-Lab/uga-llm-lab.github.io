@@ -39,6 +39,7 @@ window.LLM_LAB_DATA = {
         { id: "phd", label: "Ph.D.", href: "opportunities-phd.html" }
       ]
     },
+    { id: "ai-news", label: "AI News", href: "ai-news.html" },
     {
       id: "ezcollegeapp",
       label: "EZCollegeApp",
