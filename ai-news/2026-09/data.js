@@ -11,6 +11,283 @@ window.AI_NEWS_MONTH_DATA["2026-09"] = {
   label: "September 2026",
   articles: [
     {
+      "slug": "gemini-38-live-rollout",
+      "category": "Products · Multimodal AI",
+      "sortDate": "2026-09-17",
+      "dateLabel": "September 17, 2026",
+      "title": "Google starts rolling out Gemini 3.8 Live, with a second model that reasons while it talks",
+      "summary": "Google’s two new live-audio models can keep a conversation moving while they inspect visual input, call tools and work through longer tasks. The September 17 rollout reaches the Gemini API, Search Live, the Gemini app and parts of Workspace.",
+      "image": {
+        "src": "ai-news/2026-09/images/gemini-38-live.png",
+        "alt": "Google artwork announcing Gemini 3.8 Live and Gemini 3.8 Live Extended Thinking",
+        "caption": "Google’s announcement artwork for Gemini 3.8 Live and Gemini 3.8 Live Extended Thinking. Source: Google."
+      },
+      "content": [
+        {
+          "type": "paragraph",
+          "text": "Google began rolling out Gemini 3.8 Live and Gemini 3.8 Live Extended Thinking on September 17, moving its newest voice models into the Gemini API, Search Live, the Gemini app and selected Workspace products. The underlying announcement and model card were published on September 15; Google updated the release page two days later with availability details and said both models were starting to ship."
+        },
+        {
+          "type": "paragraph",
+          "text": "The split is easy to understand. Gemini 3.8 Live is the faster, lower-cost option for conversations that need to stay responsive. Extended Thinking is aimed at jobs with more steps: Google shows it coordinating bookings, handling asynchronous function calls and turning spoken feedback plus a sketch into a React interface. It can speak short acknowledgements and narrate progress while the deeper work continues, rather than going silent until every tool has returned."
+        },
+        {
+          "type": "paragraph",
+          "text": "Both models take audio, images, video and text, and return audio and text. Google’s model card lists a context window of up to 128,000 tokens and output of up to 64,000 tokens. They are based on Gemini 3 Pro, but tuned for the awkward demands of a live exchange: interruptions, background noise, changing instructions and the need to react quickly enough that a conversation still feels like a conversation."
+        },
+        {
+          "type": "paragraph",
+          "text": "The everyday demos are deliberately practical. A user can point a camera at an unfamiliar workplace screen and ask for onboarding help, show the model a chess position, or talk through a pile of email and tasks. Gemini 3.8 Live can process visual input near real time, switch automatically among 97 languages during a conversation and keep talking while tools or APIs run in the background. Extended Thinking is the version Google is positioning for planning and multi-step execution."
+        },
+        {
+          "type": "heading",
+          "text": "Voice agents are becoming tool users"
+        },
+        {
+          "type": "paragraph",
+          "text": "For developers, the important bit is not a warmer synthetic voice. Google’s Live API accepts continuous audio, image and text streams over a stateful WebSocket connection. It supports user interruption, function calling, Google Search, input and output transcripts, proactive audio and direct client-to-server connections using short-lived tokens. The company also lists integrations with LiveKit, Pipecat, Agora, LangChain and other real-time infrastructure providers."
+        },
+        {
+          "type": "paragraph",
+          "text": "That plumbing changes the rhythm of an application. A conventional assistant often waits for a complete request, produces text, calls a tool and comes back. A live model has to listen while speaking, survive an interruption and decide whether to answer now or keep a longer job running. Google’s examples make that choreography visible: the model acknowledges a booking request, continues the conversation and reports progress as separate calls finish."
+        },
+        {
+          "type": "paragraph",
+          "text": "Google reports that Extended Thinking scored 82.6 on Artificial Analysis’ Speech-to-Speech Quality Index, 68.6% on τ-Voice and 35.1% on the banking version of that benchmark. The release also cites a 97.7% result on Big Bench Audio. Those figures come from different tests with different goals, so they are better read as a map of the model’s intended range than as one all-purpose ranking."
+        },
+        {
+          "type": "paragraph",
+          "text": "Availability varies by surface. Developers can access both models through the Gemini API and Google AI Studio. Gemini 3.8 Live is entering private preview for enterprises and Search Live. Extended Thinking is also rolling into the Gemini app, Docs for Google AI Pro and Ultra subscribers, and Gmail and Keep for Google AI subscribers; business availability in Workspace is described as coming soon."
+        },
+        {
+          "type": "paragraph",
+          "text": "The model card is less theatrical than the demos. Google lists hallucinations, occasional slowness and timeouts among the known limitations, and gives the models a January 2025 knowledge cutoff. Generated audio in Google products carries SynthID watermarking. The result is a broad launch, but not a promise that every live task will finish perfectly or that every customer has access on day one."
+        }
+      ],
+      "sources": [
+        {
+          "label": "Google — Gemini 3.8 Live launch and September 17 rollout update",
+          "url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-3-8-live-gemini-3-8-live-extended-thinking/"
+        },
+        {
+          "label": "Google DeepMind — Gemini 3.8 Audio model card",
+          "url": "https://deepmind.google/models/model-cards/gemini-3-8-audio/"
+        },
+        {
+          "label": "Google AI for Developers — Gemini Live API overview",
+          "url": "https://ai.google.dev/gemini-api/docs/live-api"
+        }
+      ]
+    },
+    {
+      "slug": "huawei-peerium-ascend-960",
+      "category": "Infrastructure · AI Chips",
+      "sortDate": "2026-09-17",
+      "dateLabel": "September 17, 2026",
+      "title": "Huawei pulls Ascend 960 forward and pitches one million processors as one computer",
+      "summary": "Huawei’s new Peerium architecture ties processors, memory, storage and networking together through UnifiedBus. The company also moved the Ascend 960DT chip to the first quarter of 2027 as domestic demand outruns supply.",
+      "image": {
+        "src": "ai-news/2026-09/images/huawei-peerium.jpg",
+        "alt": "Huawei campus building in Shenzhen",
+        "caption": "Huawei’s Shenzhen campus. Official press image supplied with the Peerium announcement. Source: Huawei."
+      },
+      "content": [
+        {
+          "type": "paragraph",
+          "text": "Huawei used its Connect conference in Shanghai to make two linked announcements on September 17: a new system architecture called Peerium and a faster timetable for its next Ascend AI chips. The Ascend 960DT is now due in the first quarter of 2027, three quarters earlier than the company’s previous plan, according to a Huawei spokesperson. Ascend 960PR is scheduled for the third quarter."
+        },
+        {
+          "type": "paragraph",
+          "text": "The chip dates grab attention, but Huawei spent just as much time on the wires between them. Peerium is its plan for making CPUs, neural processors, memory, solid-state drives, network cards and switches behave as a larger shared machine. UnifiedBus is the interconnect underneath it. Huawei says the protocol provides peer-to-peer links across compute, storage and networking instead of organizing everything around one master device."
+        },
+        {
+          "type": "paragraph",
+          "text": "Huawei calls the scheduling design Nested Bulk Synchronous Parallel, or Nested BSP. In ordinary terms, a huge job can be divided into layers of smaller synchronized jobs, giving software a way to coordinate far more processors without pretending they are all sitting on one board. Unified memory addressing is intended to let those processors reach a common address space. The company’s headline ambition is strong scaling to one million processors."
+        },
+        {
+          "type": "paragraph",
+          "text": "The first hardware family is less abstract. Huawei says an Atlas 950 SuperCluster with 256,000 accelerator cards is already being deployed, while an Atlas 960 system using near-packaged optics is under test. The optical design moves communication components close to the chips, an increasingly popular way to carry more data without allowing interconnect power and heat to swallow the gains from faster processors."
+        },
+        {
+          "type": "paragraph",
+          "text": "This is not only a bigger cluster announcement. Peerium is meant to give software one programming and memory model across hardware that would usually be treated as separate pools. If Huawei can make that abstraction hold at scale, model teams spend less effort deciding which processor owns which data. The harder engineering problem is keeping millions of parts synchronized without turning communication delays into the system’s speed limit."
+        },
+        {
+          "type": "heading",
+          "text": "Scale is Huawei’s answer to the single-chip gap"
+        },
+        {
+          "type": "paragraph",
+          "text": "Huawei does not claim that one Ascend chip has caught NVIDIA’s best accelerator. Its argument is that a tightly connected system can compete at the level that matters to model builders: the whole cluster. Reuters reported that demand for Huawei’s current AI equipment is already greater than its supply in China. The company says it has delivered more than 1,000 smaller supernode systems to more than 370 customers."
+        },
+        {
+          "type": "paragraph",
+          "text": "That explains the accelerated roadmap. Huawei plans a new Ascend generation every year, with Ascend 970 in 2028 and Ascend 980 in 2029. It is also splitting 960 variants across workloads: the DT line is aimed at training and decode, while the PR line targets inference prefill and recommendation. The Atlas 860 and 960 systems are expected to pair those chips with air-cooled and liquid-cooled configurations."
+        },
+        {
+          "type": "paragraph",
+          "text": "There are still two numbers that should not be collapsed. Peerium is an architecture Huawei says can eventually coordinate processors at million-unit scale; the announced Atlas 950 deployment contains 256,000 accelerator cards. A future ceiling is not the same thing as a running cluster, and Huawei has not published a full independent benchmark showing application performance across the largest configuration."
+        },
+        {
+          "type": "paragraph",
+          "text": "Even with that distinction, the shape of the contest is changing. The industry once compared accelerator cards almost one by one. Huawei is now putting its case at the rack and data-center level: processors, memory, optics and software arriving as one system. For Chinese AI labs that cannot simply order the newest NVIDIA hardware, that system is becoming a much more immediate option."
+        }
+      ],
+      "sources": [
+        {
+          "label": "Huawei — Peerium Computing Architecture announcement",
+          "url": "https://www.huawei.com/en/news/2026/9/new-computing-architecture-peerium"
+        },
+        {
+          "label": "Reuters — Huawei accelerates its Ascend roadmap as demand exceeds supply",
+          "url": "https://www.reuters.com/world/asia-pacific/chinas-huawei-launch-two-new-ai-chips-2027-2026-09-17/"
+        },
+        {
+          "label": "TechCrunch — Huawei confirms the earlier Ascend 960DT schedule",
+          "url": "https://techcrunch.com/2026/09/17/huawei-plans-q1-2027-launch-of-new-ai-chip-as-it-takes-on-nvidia/"
+        }
+      ]
+    },
+    {
+      "slug": "lucid-bolt-robotaxi-plan",
+      "category": "Industry · Autonomous Vehicles",
+      "sortDate": "2026-09-17",
+      "dateLabel": "September 17, 2026",
+      "title": "Lucid and Bolt set a 25,000-vehicle target for European robotaxis",
+      "summary": "Bolt plans to own and operate a fleet built on Lucid’s coming midsize platform, with NVIDIA Hyperion hardware underneath. It is a large target, but the announcement includes no purchase order, investment amount or deployment timetable.",
+      "image": {
+        "src": "ai-news/2026-09/images/lucid-bolt-robotaxi.jpg",
+        "alt": "Lucid and Bolt partnership image showing a future autonomous vehicle",
+        "caption": "Lucid and Bolt’s official image for their European autonomous-mobility partnership. Source: Lucid Group."
+      },
+      "content": [
+        {
+          "type": "paragraph",
+          "text": "Lucid and European mobility company Bolt announced a plan on September 17 to develop autonomous vehicles for a fleet of at least 25,000 robotaxis. Bolt intends to put them into service across multiple European cities and countries, own the vehicles and run the network. The cars would be based on Lucid’s upcoming midsize electric-vehicle platform and use NVIDIA Hyperion as the compute-and-sensor architecture."
+        },
+        {
+          "type": "paragraph",
+          "text": "The two companies are starting earlier than the point where a finished car rolls out of a factory. Bolt will help specify the vehicle, software, safety and rider experience, using operating data gathered across more than 850 cities. Lucid’s newly formed Lucid Technologies unit will bring together the automaker’s AI, driver-assistance, autonomy and digital teams for the program."
+        },
+        {
+          "type": "paragraph",
+          "text": "The platform is being designed for SAE Level 4 automation. That does not mean a car can drive itself anywhere. Level 4 systems can operate without human intervention only inside the conditions and places for which they are approved. Bolt says it will build the depots, fleet systems and city partnerships around the vehicles, while the companies work with autonomous-driving suppliers and European regulators."
+        },
+        {
+          "type": "paragraph",
+          "text": "NVIDIA Hyperion supplies a reference design for the onboard computer and standardized sensor suite. It is the platform beneath the autonomy stack, not the company that will necessarily drive the cars. Lucid and Bolt did not identify the provider of the complete autonomous-driving software, leaving one of the most consequential pieces of the eventual service open."
+        },
+        {
+          "type": "heading",
+          "text": "A target, not a booked order"
+        },
+        {
+          "type": "paragraph",
+          "text": "The 25,000 figure is substantial, but the wording matters. Bolt ‘aims to deploy’ the vehicles as part of an ambition to host 100,000 autonomous vehicles on its platform by 2035. The announcement does not give a start date, a schedule for reaching 25,000, the size of an investment or a per-vehicle price. Lucid told TechCrunch that no money had changed hands and Bolt had not placed an order."
+        },
+        {
+          "type": "paragraph",
+          "text": "Lucid already has a separate American robotaxi agreement with Uber and autonomy developer Nuro covering at least 35,000 vehicles. Adding the two public targets puts more than 60,000 potential fleet vehicles around Lucid’s technology. Only the U.S. program currently includes announced capital: Uber and an affiliate of Saudi Arabia’s Public Investment Fund committed a combined $750 million in connection with that deal."
+        },
+        {
+          "type": "paragraph",
+          "text": "The European plan lands while Lucid is restructuring. The company recently cut close to one fifth of its workforce and delayed the first midsize model to the second half of 2027. Reuters reports that vehicles for Bolt would be manufactured at Lucid’s new Saudi Arabian plant, scheduled to begin operating early next year. The partnership gives that future platform another job beyond retail sales."
+        },
+        {
+          "type": "paragraph",
+          "text": "Europe has commercial driverless services, but nothing yet at the breadth suggested here. Uber, Verne and Pony.ai began robotaxi rides in Zagreb in August, while Waymo is testing in Munich ahead of a planned German launch in late 2027. Bolt is proposing a network rather than one city pilot, which makes local approvals, remote support, cleaning, charging and vehicle recovery as important as the driving model itself."
+        },
+        {
+          "type": "paragraph",
+          "text": "Bolt’s task is different from launching one demonstration route. It wants to translate a vehicle platform into a service across countries with different streets, regulators and operating rules. The number is big enough to show the intended scale; the missing dates and commercial terms show how much engineering, approval and financing still sits between the announcement and a passenger tapping ‘book.’"
+        }
+      ],
+      "sources": [
+        {
+          "label": "Lucid Group — Lucid and Bolt autonomous-mobility partnership",
+          "url": "https://ir.lucidmotors.com/news-releases/news-release-details/lucid-and-bolt-partner-develop-and-deploy-autonomous-mobility"
+        },
+        {
+          "label": "Reuters — Bolt and Lucid target 25,000 autonomous vehicles in Europe",
+          "url": "https://www.reuters.com/technology/lucid-bolt-team-up-deploy-25000-robotaxis-across-europe-2026-09-17/"
+        },
+        {
+          "label": "TechCrunch — Lucid’s potential European robotaxi partner",
+          "url": "https://techcrunch.com/2026/09/17/lucid-motors-has-a-potential-robotaxi-partner-for-europe/"
+        }
+      ]
+    },
+    {
+      "slug": "figure-helix-25-unseen-homes",
+      "category": "Research · Robotics",
+      "sortDate": "2026-09-17",
+      "dateLabel": "September 17, 2026",
+      "title": "Figure takes Helix 2.5 into 30 unfamiliar homes — and reports a sixfold jump from human-video pretraining",
+      "summary": "Figure says its humanoid completed bed-making, towel-folding and room-tidying trials in homes it had never seen, without collecting data or adapting the model there. In a controlled comparison, pretraining on the company’s Index dataset raised full-task success from 9% to 56%.",
+      "image": {
+        "src": "ai-news/2026-09/images/figure-helix-25.jpg",
+        "alt": "Figure humanoid robot performing household tasks in an unfamiliar home",
+        "caption": "Figure evaluated Helix 2.5 on three whole-body household tasks across 30 Bay Area homes. Image: Figure."
+      },
+      "content": [
+        {
+          "type": "paragraph",
+          "text": "A robot that can make one carefully prepared bed is a demonstration. A robot that is carried into someone else’s house, finds the bed and finishes the job without a fresh round of training is a much tougher test. Figure says Helix 2.5 did that kind of work across 30 unfamiliar Bay Area homes."
+        },
+        {
+          "type": "paragraph",
+          "text": "The September 17 release covers three behaviors: tidying a living room, folding towels and making a bed. All require the humanoid to combine walking, perception and two-handed manipulation over a sequence of actions. Figure says it collected no training data in the evaluation homes, used none of their toys, towels or bedding in task-specific training, and kept one fixed model checkpoint for all 30 locations."
+        },
+        {
+          "type": "paragraph",
+          "text": "The phrase ‘zero-shot’ applies to the homes and objects, not to the tasks themselves. Figure first pretrained Helix 2.5 on Index, its dataset of recorded human behavior, then adapted that base model with task examples gathered elsewhere. The robot arrived knowing how to perform each behavior but without a map of the room or a rehearsal with the objects waiting inside."
+        },
+        {
+          "type": "heading",
+          "text": "From 9% to 56% under the same task data"
+        },
+        {
+          "type": "paragraph",
+          "text": "Figure isolated the effect of Index pretraining by training two policies with the same architecture, optimization settings, task-specific data and evaluation. One began with random weights; the other began from the Index-pretrained Helix 2.5 model. In blind trials, the from-scratch policy completed 9% of tasks, while the pretrained policy completed 56%."
+        },
+        {
+          "type": "paragraph",
+          "text": "Success was all or nothing. For room tidying, every one of 13 to 15 scattered toys had to reach the basket. Every towel had to be folded and placed in its basket. Bed making required both pillows and the comforter corners at the head of the bed, with the comforter pulled smooth. No partial credit meant a late mistake could erase several minutes of correct work."
+        },
+        {
+          "type": "paragraph",
+          "text": "The company also compared data efficiency with an earlier Helix 02 behavior. Helix 2.5 matched that task’s reported success rate using half as much task-specific robot data, then carried the behavior into 30 homes rather than the environment where the examples were collected. Figure attributes the broader transfer to pretraining on diverse human activity."
+        },
+        {
+          "type": "paragraph",
+          "text": "Video from the trials shows another practical difference: the policy does not always commit to its first approach. The robot sometimes backs away from furniture, changes its stance or walks around a bed before trying again. Those recoveries matter in a long task because a controller that can only replay an ideal motion will quickly get stranded by a blanket corner or an object just outside its reach."
+        },
+        {
+          "type": "heading",
+          "text": "A scaling experiment for physical work"
+        },
+        {
+          "type": "paragraph",
+          "text": "A separate experiment trained four models on nested Index subsets spanning an eightfold range, while holding model size and downstream training fixed. Action-prediction loss declined smoothly as the human-behavior dataset doubled. Figure says the smaller runs predicted the largest run’s loss to four decimal places, with forecast error equal to 0.54% of the variation across the tested range."
+        },
+        {
+          "type": "paragraph",
+          "text": "That measurement is about next-action prediction, not a promise that twice the video will produce twice as many successful chores. Still, it gives Figure a planning signal that robotics teams rarely get: an estimate of whether the next expensive expansion of pretraining data is likely to improve the downstream policy before the full run begins."
+        },
+        {
+          "type": "paragraph",
+          "text": "Figure says Index is now recording roughly 35 minutes of new human experience every second and that it has committed $3.5 billion of compute to Helix training. Helix 2.5 does not turn a humanoid into a universal housekeeper; its own aggregate success rate leaves plenty of unfinished beds. It does show a more scalable route than teaching the same chore again in every new room: learn broadly from people, specify the behavior once, then see how far it travels."
+        }
+      ],
+      "sources": [
+        {
+          "label": "Figure — Helix 2.5: Zero-Shot 30-Home Generalization",
+          "url": "https://www.figure.ai/news/helix-2-5-zero-shot-30-home-generalization"
+        }
+      ]
+    },
+
+    {
       "slug": "claude-small-business",
       "category": "AI Applications · Small Business",
       "sortDate": "2026-09-16",
