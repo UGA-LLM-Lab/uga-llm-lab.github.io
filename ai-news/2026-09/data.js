@@ -11,6 +11,267 @@ window.AI_NEWS_MONTH_DATA["2026-09"] = {
   label: "September 2026",
   articles: [
     {
+      "slug": "anthropic-accenture-embedded-evaluation",
+      "category": "Industry · AI Safety",
+      "sortDate": "2026-09-18",
+      "dateLabel": "September 18, 2026",
+      "title": "Anthropic and Accenture commit at least $1 billion each to put evaluators inside frontier-model development",
+      "summary": "Faculty, Accenture's specialist AI business, will evaluate and red-team Anthropic models with access comparable to an employee's. The arrangement is non-exclusive, directly funded by Anthropic at first and still missing shared standards for access and reporting.",
+      "image": {
+        "src": "ai-news/2026-09/images/embedded-evaluation-model.svg",
+        "alt": "Diagram showing an embedded evaluator between frontier model development and public reporting",
+        "caption": "UGA LLM Lab graphic based on Anthropic's September 18 partnership announcement."
+      },
+      "content": [
+        {
+          "type": "paragraph",
+          "text": "Anthropic and Accenture announced a five-year partnership on September 18 to test frontier AI from inside the development process. Each company expects to invest at least $1 billion in the work. Faculty, Accenture's specialist AI business, will lead the evaluations, including model red-teaming, alignment assessments and safeguard testing."
+        },
+        {
+          "type": "paragraph",
+          "text": "The unusual part is access. Anthropic says embedded evaluators will work inside AI companies with access comparable to an employee's. Instead of receiving a finished model and a test endpoint, they may observe training, follow decisions about how models are built and deployed, and speak directly with employees. The intended scope includes not only a model's behavior but also whether the company is following its own safety commitments and how it responds to incidents."
+        },
+        {
+          "type": "paragraph",
+          "text": "External model audits usually begin after a lab has selected what to expose. An embedded team can see problems earlier and inspect the organizational choices around them, but that proximity creates a second question: how independent can an evaluator remain when the company being examined pays the bill? Anthropic acknowledges that no settled funding system exists and says pooled or government funding would be preferable in the long term. For the initial work, Anthropic will fund Accenture directly."
+        },
+        {
+          "type": "heading",
+          "text": "A large experiment before there is a standard"
+        },
+        {
+          "type": "paragraph",
+          "text": "The partners are beginning before the field has agreed on basic rules. Anthropic says there are no common standards for what an embedded evaluator should be able to see or how findings should be reported. Those details determine whether the public gets meaningful evidence or only another layer of private assurance. The company says evaluators could report incidents and provide a more informed account of model benefits and risks, but the exact reporting mechanism has not been fixed."
+        },
+        {
+          "type": "paragraph",
+          "text": "The arrangement is explicitly non-exclusive. Anthropic says it is talking with METR and other nonprofit evaluators about separate pilots, and expects frontier labs to work with several organizations at once. Accenture can also take similar roles with other model developers. Multiple evaluators may reduce dependence on one firm's methods, although comparable results will require shared definitions and reporting practices that do not yet exist."
+        },
+        {
+          "type": "paragraph",
+          "text": "The investment language is broader than a payment for one audit. Both companies expect to put at least $1 billion into building capacity in this area over five years, but the announcement does not divide that money among staffing, infrastructure, research or individual evaluations. It therefore establishes the scale of the commitment without providing a budget that can be compared directly with a model-training run or a conventional assurance contract."
+        },
+        {
+          "type": "paragraph",
+          "text": "Access and publication will pull in opposite directions. An evaluator needs internal documents, training artifacts and incident records to understand what happened, while a model company has security, privacy and commercial reasons not to disclose all of that material. A credible standard will need rules for protected access, evidence retention, conflicts of interest and public summaries that remain informative when technical details cannot be released. None of those rules was settled in the announcement."
+        },
+        {
+          "type": "paragraph",
+          "text": "Accenture brings experience from deploying AI in businesses and governments. Anthropic argues that this gives Faculty a view of how failures appear in real enterprise settings rather than only in laboratory benchmarks. The risk is that commercial deployment priorities and public-interest evaluation are not always the same. The value of the partnership will therefore depend on what access Faculty actually receives, which findings it can publish and how disagreements are handled."
+        },
+        {
+          "type": "paragraph",
+          "text": "The $2 billion combined commitment makes this more than a small audit contract. It is an attempt to build evaluation capacity alongside frontier-model development, not after it. Yet the announcement is also careful about what has not been solved: funding independence, disclosure standards and the boundary between confidential technical access and public accountability. Those unresolved pieces will determine whether embedded evaluation becomes a durable institution or simply a closer consulting relationship."
+        }
+      ],
+      "sources": [
+        {
+          "label": "Anthropic — Partnering with Accenture on embedded evaluation",
+          "url": "https://www.anthropic.com/news/accenture-embedded-evaluation"
+        }
+      ]
+    },
+    {
+      "slug": "qwen-38-omni-flash",
+      "category": "Models · Multimodal AI",
+      "sortDate": "2026-09-18",
+      "dateLabel": "September 18, 2026",
+      "title": "Qwen3.8-Omni-Flash takes text, images, audio and video into a one-million-token context",
+      "summary": "Alibaba's new Qwen model accepts four input modalities, supports tool use and web search, and can process up to one million tokens. It produces text rather than live audio, making it a multimodal analysis model rather than a voice-chat replacement.",
+      "image": {
+        "src": "ai-news/2026-09/images/qwen-omni-capabilities.svg",
+        "alt": "Diagram of Qwen3.8-Omni-Flash inputs, context window and text output",
+        "caption": "UGA LLM Lab graphic based on Alibaba Cloud's official Qwen3.8-Omni-Flash documentation."
+      },
+      "content": [
+        {
+          "type": "paragraph",
+          "text": "Alibaba released Qwen3.8-Omni-Flash on September 18 with a one-million-token context window and support for text, images, audio and video in the same request. The model returns text, not generated speech, and is available through Alibaba Cloud's Model Studio APIs in six regions: Beijing, Singapore, Hong Kong, Tokyo, Frankfurt and Virginia."
+        },
+        {
+          "type": "paragraph",
+          "text": "The long context is the headline, but the practical difference is that the context can contain more than words. A developer can combine a large document collection with diagrams, recorded conversations or video frames, then ask one model to reason across the mixture. Alibaba lists a maximum input of 991,808 tokens when thinking is disabled and 983,616 when it is enabled, leaving room for up to 131,072 output tokens."
+        },
+        {
+          "type": "paragraph",
+          "text": "Audio support covers 113 languages and dialects, according to the product documentation. Multichannel mode can preserve spatial information from separate audio channels, which matters for tasks such as identifying who spoke in a meeting or tracing sounds in a recorded environment. The model also supports automatic context caching and session caching, so repeated requests can reuse material instead of sending an entire long context through the model from scratch each time."
+        },
+        {
+          "type": "heading",
+          "text": "One model, several ways to look at the same evidence"
+        },
+        {
+          "type": "paragraph",
+          "text": "Qwen3.8-Omni-Flash includes custom function calling and a built-in web-search tool. Reasoning is enabled by default, with adjustable effort, so an application can spend more computation on a difficult analysis and less on a routine extraction. Alibaba exposes the model through both Chat Completions and Responses interfaces, which gives existing API applications two familiar integration paths."
+        },
+        {
+          "type": "paragraph",
+          "text": "That combination is more useful than treating each modality as a separate feature. A research assistant could compare a lecture recording with its slides and a paper; a support system could inspect screenshots while reading the accompanying ticket history; a media-analysis workflow could search the web after identifying an entity in a clip. Function calling then lets the model hand structured work to databases or other services."
+        },
+        {
+          "type": "paragraph",
+          "text": "The name 'Omni' can still invite the wrong expectation. This release is documented as a non-real-time model and its output modality is text. It is suited to analyzing audio and video, but it is not the same product category as a low-latency speech-to-speech assistant that listens and talks continuously. Developers also need to choose a regional endpoint and API key together; availability and data routing follow that region."
+        },
+        {
+          "type": "paragraph",
+          "text": "A million-token limit also describes capacity, not guaranteed usefulness at every distance. Retrieval accuracy can fall as relevant evidence is buried among unrelated material, and long audio or video must still be encoded into the model's context. Teams will need to test whether a single enormous request is better than indexing, segmenting or summarizing the material first. Caching may lower the cost of repeated context, but it does not remove the need to measure latency and answer quality on the application's own data."
+        },
+        {
+          "type": "paragraph",
+          "text": "Alibaba's public release is an API product, so the announcement should not be confused with an open-weight checkpoint that customers can run on their own hardware. The relevant choice for developers is therefore less about downloading a model and more about consolidating a pipeline: whether one hosted system can replace separate speech recognition, visual analysis and text reasoning stages without losing the controls or accuracy those specialized components provide."
+        },
+        {
+          "type": "paragraph",
+          "text": "The result is a model designed for unusually large, mixed-media workspaces. Its most consequential feature may not be any single input type, but the ability to keep all four inside one context while reasoning, searching and calling tools. Independent evaluations will still be needed to show how reliably that scale holds across long videos, noisy recordings and million-token documents, but the product boundary is clear: multimodal evidence can now be assembled into one request instead of a chain of separate preprocessing models."
+        }
+      ],
+      "sources": [
+        {
+          "label": "Qwen — Qwen3.8-Omni-Flash announcement",
+          "url": "https://qwen.ai/blog?id=qwen3.8-omni-flash"
+        },
+        {
+          "label": "Alibaba Cloud Model Studio — Qwen3.8-Omni-Flash model information",
+          "url": "https://www.alibabacloud.com/help/en/model-studio/qwen3-8-omni-flash"
+        }
+      ]
+    },
+    {
+      "slug": "sair-open-math-model-initiative",
+      "category": "Research · Open Models",
+      "sortDate": "2026-09-18",
+      "dateLabel": "September 18, 2026",
+      "title": "Terence Tao's SAIR starts an open-model initiative built around mathematical research",
+      "summary": "The nonprofit plans open-weight models and open-source tools for mathematics, with published training methods, reproducible evaluations and community governance. No model has been released yet; SAIR is collecting partners for funding, compute, expertise and community building.",
+      "image": {
+        "src": "ai-news/2026-09/images/open-math-model-principles.svg",
+        "alt": "Diagram of the open development principles in SAIR's mathematics model initiative",
+        "caption": "UGA LLM Lab graphic summarizing the principles published by SAIR and Terence Tao."
+      },
+      "content": [
+        {
+          "type": "paragraph",
+          "text": "The Foundation for Science and AI Research, co-founded by mathematician Terence Tao, announced an initiative on September 18 to build open-weight models for mathematics and open-source tools for scientific AI. SAIR is not releasing a model today. It is collecting expressions of interest from organizations that can contribute funding, compute, technical expertise or community building while the detailed plan and partner list are still being assembled."
+        },
+        {
+          "type": "paragraph",
+          "text": "Tao said the group had expected to begin with pilot projects over the next few months, but accelerated the public announcement because demand for open models had risen. SAIR's earlier work included mathematical competitions, events and podcasts. The new initiative is an attempt to move from individual programs toward shared infrastructure that researchers can inspect and adapt rather than access only through a commercial interface."
+        },
+        {
+          "type": "paragraph",
+          "text": "The published principles are unusually specific for an early announcement. SAIR says model weights and code will use open licenses; training methods will be published; evaluations will be reproducible; and training data will include documented sources and compatible permissions. Releases are also supposed to report failures and limitations alongside successes, giving independent teams enough information to reproduce the work or adapt it to a mathematical specialty."
+        },
+        {
+          "type": "heading",
+          "text": "Open weights are only one part of the promise"
+        },
+        {
+          "type": "paragraph",
+          "text": "A downloadable checkpoint does not explain where its data came from or how its abilities were measured. SAIR's proposal links open weights to data governance, evaluation and authorship. It says user data will be used for training or improvement only with explicit consent and agreed terms. Contributors should retain ownership of their independent and prior work, while jointly developed models, code and tools are intended to be shared under licenses such as Apache 2.0, MIT or CC BY 4.0 where appropriate."
+        },
+        {
+          "type": "paragraph",
+          "text": "Governance is meant to sit with the mathematical community. SAIR says priorities, resource allocation and rule changes should be decided through public processes with participation across institutions, regions and career stages. Industry partners may provide compute and other resources, but the group says those relationships must preserve research independence. That balance will be difficult: frontier-scale training is expensive, while scientific communities rarely have the infrastructure budgets of major AI companies."
+        },
+        {
+          "type": "paragraph",
+          "text": "Mathematics offers a demanding test bed. Answers can often be checked, but useful systems also need to represent definitions, search through long proof chains, use formal tools and distinguish a plausible argument from a valid one. SAIR's existing competitions already include tasks that require Lean certificates or finite counterexamples, which points toward evaluations where correctness can be inspected rather than inferred from style."
+        },
+        {
+          "type": "paragraph",
+          "text": "The initiative also leaves room for tools around closed models. Tao described open-source tooling for using both open and closed LLMs in science, alongside the plan for open-weight models. That distinction matters because researchers may use a strong hosted model for one stage while keeping prompts, verifiers, datasets and orchestration code in a public stack. An open scientific workflow can therefore be useful before SAIR trains a competitive model of its own."
+        },
+        {
+          "type": "paragraph",
+          "text": "The data principles may prove as difficult as the training run. Mathematical literature mixes public-domain works, copyrighted papers, informal notes, proof-assistant libraries and private research discussions. Documenting permission and attribution across those sources is slower than collecting text at web scale, but it is essential if contributors are expected to trust the project with unpublished ideas or specialized datasets. Explicit consent is a strong starting promise; the governance process will have to turn it into enforceable practice."
+        },
+        {
+          "type": "paragraph",
+          "text": "For now, the initiative is a commitment and an invitation, not a finished technical result. SAIR has not named the models, training budget, compute partners, datasets or release schedule. That incompleteness is important because open-model projects can be shaped as much by resource agreements as by license language. The next announcements will show whether the group can turn its principles into a training program with enough scale to be useful and enough transparency to be independently trusted."
+        }
+      ],
+      "sources": [
+        {
+          "label": "Terence Tao — SAIR's Open Math Model initiative",
+          "url": "https://terrytao.wordpress.com/2026/09/18/sairs-open-math-model-initiative/"
+        },
+        {
+          "label": "SAIR Foundation — Open Models for Mathematics",
+          "url": "https://sair.foundation/open-math-model/"
+        },
+        {
+          "label": "SAIR Contributor Network — mathematical competitions and open tools",
+          "url": "https://competition.sair.foundation/"
+        }
+      ]
+    },
+    {
+      "slug": "crusoe-series-f-ai-infrastructure",
+      "category": "Industry · AI Infrastructure",
+      "sortDate": "2026-09-17",
+      "dateLabel": "September 17, 2026",
+      "title": "Crusoe closes the first part of a $3.9 billion Series F at a $30.9 billion valuation",
+      "summary": "The AI-infrastructure company says it has more than $140 billion in contracted value and over six gigawatts of contracted capacity. The funding round is described as an initial closing, so the anticipated total and the cash already closed should not be treated as identical.",
+      "image": {
+        "src": "ai-news/2026-09/images/crusoe-series-f-scale.svg",
+        "alt": "Graphic showing Crusoe's Series F size, valuation and contracted capacity",
+        "caption": "UGA LLM Lab graphic based on Crusoe's September 17 funding announcement; operating figures are company-reported."
+      },
+      "content": [
+        {
+          "type": "paragraph",
+          "text": "Crusoe announced the initial closing of an anticipated $3.9 billion Series F on September 17, at a $30.9 billion post-money valuation. The announcement arrived after the previous Daily cutoff and falls inside this edition's window. Atreides Management, Mubadala Capital and Valor Equity Partners co-led the oversubscribed round, with investors including NVIDIA, Founders Fund, GIC, Qatar Investment Authority, Radical Ventures and TPG."
+        },
+        {
+          "type": "paragraph",
+          "text": "The wording deserves attention. Crusoe calls this the 'initial closing' of an 'anticipated' $3.9 billion round. That confirms the financing process and its target, but does not say that every dollar of the full amount had closed on announcement day. The valuation is post-money, meaning it includes the new capital in the value assigned to the company."
+        },
+        {
+          "type": "paragraph",
+          "text": "Crusoe began by using otherwise-wasted natural gas to power computing equipment and has expanded into data centers, energy development and cloud services. It now describes itself as vertically integrated from energy generation to AI cloud software. The company says the new capital will support large campuses, modular Crusoe Spark units and continued growth of Crusoe Cloud."
+        },
+        {
+          "type": "heading",
+          "text": "A funding round measured against power, contracts and cloud demand"
+        },
+        {
+          "type": "paragraph",
+          "text": "The operating numbers in the announcement are large and company-reported. Crusoe says its platform has more than $140 billion in total contracted value and more than six gigawatts of gross contracted capacity, including one gigawatt already delivered and operating. Total contracted value represents the value of agreements over their terms, not current-year revenue or cash already collected. Gross capacity likewise describes infrastructure commitments rather than the amount of compute available to customers today."
+        },
+        {
+          "type": "paragraph",
+          "text": "On the software side, Crusoe reports that cloud bookings have grown more than twentyfold year over year in 2026 and that Managed Inference, launched late last year, has passed $100 million in contracted annual recurring revenue. The company also advertises faster time to first token and higher throughput than vLLM for its inference engine, but those performance claims depend on model, hardware, batch size and workload settings and should not be read as universal across every deployment."
+        },
+        {
+          "type": "paragraph",
+          "text": "The investor list shows why AI infrastructure is no longer treated as a conventional software expansion. Building a large AI campus requires land, power generation and transmission, cooling, networking and thousands of accelerators before a model can train or answer a request. Capital needs arrive earlier and at a much larger scale than revenue, while long-term contracts are used to support construction and financing."
+        },
+        {
+          "type": "paragraph",
+          "text": "The financing also marks a rapid change in Crusoe's stated value. In October 2025, the company announced a $1.375 billion Series E at a valuation above $10 billion. Less than a year later, the Series F announcement puts the post-money figure at $30.9 billion. That increase follows a wave of data-center contracting, but it also raises the execution bar: investors are valuing capacity that must be built, energized and filled with paying workloads over several years."
+        },
+        {
+          "type": "paragraph",
+          "text": "Crusoe's model attempts to reduce coordination costs by owning more of that chain. The advantage is speed if energy, construction and cloud operations can be planned together. The exposure is equally broad: delays in power, equipment or customer demand can affect the same balance sheet. A $30.9 billion valuation therefore prices not only cloud growth but also the company's ability to deliver infrastructure that may take years to build."
+        },
+        {
+          "type": "paragraph",
+          "text": "The round is a useful marker of where the AI race is moving. Model launches still capture attention, but the largest checks are increasingly tied to megawatts, factory schedules and contracted capacity. Crusoe's announcement does not prove that every planned campus will arrive on time, but it shows investors funding the physical stack as a technology platform in its own right."
+        }
+      ],
+      "sources": [
+        {
+          "label": "Crusoe — $3.9 billion Series F announcement",
+          "url": "https://www.crusoe.ai/resources/newsroom/crusoe-announces-series-f-funding"
+        },
+        {
+          "label": "GlobeNewswire — Crusoe Series F press release",
+          "url": "https://www.globenewswire.com/news-release/2026/09/17/3364326/0/en/crusoe-raises-3-9-billion-series-f-for-its-vertically-integrated-ai-infrastructure-platform.html"
+        }
+      ]
+    },
+
+    {
       "slug": "gemini-38-live-rollout",
       "category": "Products · Multimodal AI",
       "sortDate": "2026-09-17",

@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="900" viewBox="0 0 1600 900" role="img" aria-labelledby="title desc">
+  <title id="title">SAIR Open Math Model principles</title>
+  <desc id="desc">Four principles surround an open mathematics model: open weights and code, documented data, reproducible evaluation, and community governance.</desc>
+  <rect width="1600" height="900" fill="#071a18"/>
+  <path d="M0 0 H1600 V170 Q1200 260 800 170 Q400 80 0 170 Z" fill="#103e39"/>
+  <text x="90" y="95" fill="#ffffff" font-family="Arial, sans-serif" font-size="52" font-weight="700">SAIR's Open Models for Mathematics</text>
+  <text x="90" y="148" fill="#b7ddd6" font-family="Arial, sans-serif" font-size="25">An initiative and invitation — not yet a released model</text>
+  <circle cx="800" cy="485" r="175" fill="#f2b84b"/>
+  <text x="800" y="455" text-anchor="middle" fill="#1b231f" font-family="Arial, sans-serif" font-size="35" font-weight="700">OPEN MATH</text>
+  <text x="800" y="500" text-anchor="middle" fill="#1b231f" font-family="Arial, sans-serif" font-size="35" font-weight="700">MODEL</text>
+  <text x="800" y="548" text-anchor="middle" fill="#425249" font-family="Arial, sans-serif" font-size="22">community research infrastructure</text>
+  <g fill="#103e39" stroke="#57b5a6" stroke-width="3" font-family="Arial, sans-serif">
+    <rect x="90" y="265" width="435" height="175" rx="26"/><rect x="1075" y="265" width="435" height="175" rx="26"/>
+    <rect x="90" y="590" width="435" height="175" rx="26"/><rect x="1075" y="590" width="435" height="175" rx="26"/>
+  </g>
+  <g font-family="Arial, sans-serif">
+    <text x="130" y="330" fill="#ffffff" font-size="31" font-weight="700">OPEN DEVELOPMENT</text>
+    <text x="130" y="380" fill="#b7ddd6" font-size="24">Weights, code, training methods</text>
+    <text x="1115" y="330" fill="#ffffff" font-size="31" font-weight="700">DOCUMENTED DATA</text>
+    <text x="1115" y="380" fill="#b7ddd6" font-size="24">Sources, permissions, consent</text>
+    <text x="130" y="655" fill="#ffffff" font-size="31" font-weight="700">REPRODUCIBLE TESTS</text>
+    <text x="130" y="705" fill="#b7ddd6" font-size="24">Results, failures, limitations</text>
+    <text x="1115" y="655" fill="#ffffff" font-size="31" font-weight="700">PUBLIC GOVERNANCE</text>
+    <text x="1115" y="705" fill="#b7ddd6" font-size="24">Community priorities and rules</text>
+  </g>
+  <g stroke="#57b5a6" stroke-width="6" fill="none"><path d="M525 355 L650 420"/><path d="M1075 355 L950 420"/><path d="M525 675 L650 550"/><path d="M1075 675 L950 550"/></g>
+  <text x="90" y="850" fill="#83aca5" font-family="Arial, sans-serif" font-size="18">UGA LLM Lab graphic · Sources: SAIR Foundation and Terence Tao · September 18, 2026</text>
+</svg>

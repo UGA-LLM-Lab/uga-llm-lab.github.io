@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="900" viewBox="0 0 1600 900" role="img" aria-labelledby="title desc">
+  <title id="title">Embedded frontier model evaluation</title>
+  <desc id="desc">A diagram showing model development, an embedded independent evaluator, and reporting, with a five-year investment commitment.</desc>
+  <rect width="1600" height="900" fill="#f6f3ee"/>
+  <rect x="0" y="0" width="1600" height="18" fill="#d97757"/>
+  <text x="90" y="110" fill="#1d2833" font-family="Arial, sans-serif" font-size="54" font-weight="700">Embedded evaluation moves inside model development</text>
+  <text x="90" y="165" fill="#5c6875" font-family="Arial, sans-serif" font-size="25">Anthropic × Accenture / Faculty · announced September 18, 2026</text>
+  <g font-family="Arial, sans-serif">
+    <rect x="90" y="285" width="410" height="300" rx="28" fill="#1d2833"/>
+    <text x="130" y="355" fill="#ffffff" font-size="35" font-weight="700">FRONTIER LAB</text>
+    <text x="130" y="420" fill="#cfdae4" font-size="26">Training decisions</text>
+    <text x="130" y="468" fill="#cfdae4" font-size="26">Deployment choices</text>
+    <text x="130" y="516" fill="#cfdae4" font-size="26">Safeguard implementation</text>
+    <rect x="595" y="245" width="410" height="380" rx="28" fill="#d97757"/>
+    <text x="635" y="325" fill="#ffffff" font-size="35" font-weight="700">EMBEDDED EVALUATOR</text>
+    <text x="635" y="390" fill="#fff7f1" font-size="26">Employee-like access</text>
+    <text x="635" y="438" fill="#fff7f1" font-size="26">Red-teaming</text>
+    <text x="635" y="486" fill="#fff7f1" font-size="26">Alignment assessment</text>
+    <text x="635" y="534" fill="#fff7f1" font-size="26">Safeguard testing</text>
+    <rect x="1100" y="285" width="410" height="300" rx="28" fill="#ffffff" stroke="#9aa7b2" stroke-width="3"/>
+    <text x="1140" y="355" fill="#1d2833" font-size="35" font-weight="700">ACCOUNTABILITY</text>
+    <text x="1140" y="420" fill="#5c6875" font-size="26">Verify commitments</text>
+    <text x="1140" y="468" fill="#5c6875" font-size="26">Identify blind spots</text>
+    <text x="1140" y="516" fill="#5c6875" font-size="26">Report incidents</text>
+  </g>
+  <g stroke="#d97757" stroke-width="8" fill="none" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M515 435 H570"/><path d="M550 415 L575 435 L550 455"/>
+    <path d="M1020 435 H1075"/><path d="M1055 415 L1080 435 L1055 455"/>
+  </g>
+  <rect x="330" y="700" width="940" height="105" rx="52" fill="#e8ddd5"/>
+  <text x="800" y="765" text-anchor="middle" fill="#1d2833" font-family="Arial, sans-serif" font-size="36" font-weight="700">At least $1B from each company over five years</text>
+  <text x="90" y="860" fill="#7a858f" font-family="Arial, sans-serif" font-size="18">UGA LLM Lab graphic · Source: Anthropic · Standards for access, funding, and reporting remain under development</text>
+</svg>

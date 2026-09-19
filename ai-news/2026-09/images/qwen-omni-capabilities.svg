@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="900" viewBox="0 0 1600 900" role="img" aria-labelledby="title desc">
+  <title id="title">Qwen3.8-Omni-Flash capability map</title>
+  <desc id="desc">Text, image, audio, and video inputs flow into a one million token context and produce text output, with tool use, web search, and caching.</desc>
+  <rect width="1600" height="900" fill="#07111f"/>
+  <circle cx="1450" cy="110" r="240" fill="#5138ee" opacity=".23"/>
+  <circle cx="170" cy="790" r="300" fill="#00b7a5" opacity=".15"/>
+  <text x="92" y="105" fill="#ffffff" font-family="Arial, sans-serif" font-size="54" font-weight="700">Qwen3.8-Omni-Flash</text>
+  <text x="92" y="155" fill="#a9bad0" font-family="Arial, sans-serif" font-size="26">A multimodal analysis model with a one-million-token context</text>
+  <g font-family="Arial, sans-serif" text-anchor="middle">
+    <g fill="#10243b" stroke="#496a8a" stroke-width="2">
+      <rect x="92" y="270" width="220" height="120" rx="22"/><rect x="92" y="430" width="220" height="120" rx="22"/>
+      <rect x="92" y="590" width="220" height="120" rx="22"/><rect x="92" y="750" width="220" height="80" rx="22"/>
+    </g>
+    <g fill="#e6f1ff" font-size="30" font-weight="700">
+      <text x="202" y="342">TEXT</text><text x="202" y="502">IMAGES</text><text x="202" y="662">AUDIO</text><text x="202" y="800">VIDEO</text>
+    </g>
+  </g>
+  <g stroke="#5bd8ca" stroke-width="8" fill="none" stroke-linecap="round">
+    <path d="M330 330 C470 330 500 430 600 450"/><path d="M330 490 C470 490 500 470 600 470"/>
+    <path d="M330 650 C470 650 500 520 600 490"/><path d="M330 790 C470 790 500 560 600 510"/>
+  </g>
+  <rect x="600" y="235" width="520" height="430" rx="42" fill="#5138ee"/>
+  <text x="860" y="355" text-anchor="middle" fill="#ffffff" font-family="Arial, sans-serif" font-size="98" font-weight="700">1M</text>
+  <text x="860" y="410" text-anchor="middle" fill="#e7e1ff" font-family="Arial, sans-serif" font-size="30">token context window</text>
+  <line x1="670" y1="455" x2="1050" y2="455" stroke="#8878ff" stroke-width="2"/>
+  <text x="860" y="515" text-anchor="middle" fill="#ffffff" font-family="Arial, sans-serif" font-size="28">Reasoning · Function calling</text>
+  <text x="860" y="565" text-anchor="middle" fill="#ffffff" font-family="Arial, sans-serif" font-size="28">Web search · Context caching</text>
+  <text x="860" y="615" text-anchor="middle" fill="#ffffff" font-family="Arial, sans-serif" font-size="28">113 audio languages &amp; dialects</text>
+  <path d="M1145 450 H1280" stroke="#5bd8ca" stroke-width="9" stroke-linecap="round"/>
+  <path d="M1260 425 L1295 450 L1260 475" fill="none" stroke="#5bd8ca" stroke-width="9" stroke-linecap="round" stroke-linejoin="round"/>
+  <rect x="1300" y="365" width="210" height="170" rx="28" fill="#10243b" stroke="#496a8a" stroke-width="2"/>
+  <text x="1405" y="440" text-anchor="middle" fill="#ffffff" font-family="Arial, sans-serif" font-size="34" font-weight="700">TEXT</text>
+  <text x="1405" y="482" text-anchor="middle" fill="#a9bad0" font-family="Arial, sans-serif" font-size="22">output</text>
+  <text x="92" y="860" fill="#778da9" font-family="Arial, sans-serif" font-size="18">UGA LLM Lab graphic · Source: Alibaba Cloud Model Studio · September 18, 2026</text>
+</svg>
