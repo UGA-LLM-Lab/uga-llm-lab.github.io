@@ -11,6 +11,80 @@ window.AI_NEWS_MONTH_DATA["2026-09"] = {
   label: "September 2026",
   articles: [
     {
+      "slug": "claude-code-auto-mode-server-classifier",
+      "category": "Products · AI Agents",
+      "sortDate": "2026-09-19",
+      "dateLabel": "September 19, 2026",
+      "title": "Claude Code moves auto-mode safety checks server-side—and flags billed fallbacks",
+      "summary": "Claude Code 2.1.278 shifts auto mode's action classifier to Anthropic's servers for supported enterprise and API sessions. The safety checks are uncharged when the server performs them, while a visible fallback keeps unsupported sessions working under the previous billing path.",
+      "image": {
+        "src": "ai-news/2026-09/images/claude-code-auto-mode-classifier.svg",
+        "alt": "Flow diagram showing a Claude Code action passing through a server-side safety classifier before it runs",
+        "caption": "How eligible Claude Code 2.1.278 sessions route auto-mode safety checks. Diagram based on Anthropic's release notes and documentation."
+      },
+      "content": [
+        {
+          "type": "paragraph",
+          "text": "Claude Code 2.1.278 changes who performs a small but frequent job inside its auto mode: checking whether an action is safe to run. For supported Claude API and Enterprise sessions, as well as eligible deployments through Amazon Bedrock, Google Cloud, Microsoft Foundry and compatible gateways, the classifier now runs on the server by default. When that path is available, Anthropic says it does not charge for the classifier overhead."
+        },
+        {
+          "type": "paragraph",
+          "text": "The release arrived at 03:10 UTC on September 19. It does not make Claude Code or auto mode free. The change is narrower: server-performed safety checks are included within the session's model requests, instead of appearing as separately billed classifier requests. Ordinary model usage is still billed, and the old classifier path remains billable when Claude Code has to fall back to it."
+        },
+        {
+          "type": "paragraph",
+          "text": "Auto mode sits between the coding agent and actions such as shell commands or network requests. A classifier inspects those proposed actions before execution. Moving that decision to the server can remove a layer of metered traffic from eligible sessions without removing the check itself—a cost change that preserves the safety gate rather than bypassing it."
+        },
+        {
+          "type": "heading",
+          "text": "A fallback that announces itself"
+        },
+        {
+          "type": "paragraph",
+          "text": "Availability depends on platform and regional rollout. If the server-side checks cannot reach a session, Claude Code continues using its own classifier requests and charges them as before. Before the first action that would use that fallback, the tool pauses and displays a notice. Pressing Enter continues with the billed classifier; Esc or Ctrl+C cancels the held action and stops the current turn."
+        },
+        {
+          "type": "paragraph",
+          "text": "The warning also has machine-readable forms. Non-interactive runs using -p print it to standard error, stream-json emits it as a system message, and the VS Code extension places it in the conversation. Version 2.1.278 adds an Auto mode server row to /status: Enabled means the server is deciding the session's checked actions, while Disabled means the session has fallen back. Pro, Max and Team subscribers do not see this particular billing notice."
+        },
+        {
+          "type": "paragraph",
+          "text": "That visibility matters most in automated pipelines, where nobody may be watching an interactive prompt. An application using Claude Code's Agent SDK can read the stream-json warning as a system message, while a command-line job can capture standard error. The update therefore gives both a person and an orchestrator a way to notice the change in billing path."
+        },
+        {
+          "type": "paragraph",
+          "text": "An individual server check can fail without ending eligibility. Claude Code handles that action locally and asks the server again on the next request. The persistent warning appears only after server-side checks have stopped reaching the session for the remainder of it. That distinction keeps a temporary miss from being mistaken for a permanent configuration problem."
+        },
+        {
+          "type": "heading",
+          "text": "Gateways now have one more compatibility test"
+        },
+        {
+          "type": "paragraph",
+          "text": "Anthropic says gateways and proxies are the most common reason the new path can fail. Middleware that strips unfamiliar request fields, rewrites headers or changes streaming responses may prevent the server from receiving the safety-check request or the client from receiving the result. The documentation specifically calls out the safeguards request field and safeguard_results response field, along with rewritten tool-use identifiers."
+        },
+        {
+          "type": "paragraph",
+          "text": "Administrators can restore eligibility by passing those requests and responses through unchanged. Deployments on Bedrock, Google Cloud, Microsoft Foundry and gateway routes can also set CLAUDE_CODE_AUTO_MODE_SERVER=0 to stop asking for server-side checks and remain on the billed local classifier path. Anthropic describes that variable as temporary, and it is not read on a direct connection to the Anthropic API."
+        },
+        {
+          "type": "paragraph",
+          "text": "The practical saving will vary with how often an agent proposes checked actions and whether its route supports the rollout. Anthropic publishes no universal dollar figure, and the release changes neither the underlying model price nor the permission policy. What it does add is a cleaner default for supported enterprise deployments and a status signal that makes the fallback visible before a billing surprise becomes a debugging session."
+        }
+      ],
+      "sources": [
+        {
+          "label": "Claude Code v2.1.278 release notes",
+          "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.278"
+        },
+        {
+          "label": "Anthropic documentation: Auto mode classifier request charges",
+          "url": "https://code.claude.com/docs/en/auto-mode-classifier-billing"
+        }
+      ]
+    },
+
+    {
       "slug": "anthropic-accenture-embedded-evaluation",
       "category": "Industry · AI Safety",
       "sortDate": "2026-09-18",
