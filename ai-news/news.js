@@ -33,15 +33,20 @@
     });
   };
 
+  const compareArticles = (a, b) => {
+    const pinnedDifference = Number(Boolean(b.pinned)) - Number(Boolean(a.pinned));
+    return pinnedDifference || b.sortDate.localeCompare(a.sortDate);
+  };
+
   const getArticles = () => catalog.months.flatMap((month) => {
     const monthData = monthStore[month.id];
     if (!monthData?.articles) return [];
-    return monthData.articles.map((article) => ({
+    return monthData.articles.filter((article) => !article.hidden).map((article) => ({
       ...article,
       monthId: month.id,
       monthLabel: month.label
     }));
-  }).sort((a, b) => b.sortDate.localeCompare(a.sortDate));
+  }).sort(compareArticles);
 
   const articleMeta = (article) => `
     <div class="ai-news-meta">
@@ -52,10 +57,11 @@
     <img src="${escapeHtml(article.image.src)}" alt="${escapeHtml(article.image.alt || "")}"${eager ? "" : ' loading="lazy"'}>` : "";
 
   const articleCard = (article) => `
-    <article class="ai-news-card">
-      <a class="ai-news-card__image" href="${articleHref(article)}" aria-label="Read ${escapeHtml(article.title)}">
-        ${articleImage(article)}
-      </a>
+    <article class="ai-news-card${article.image ? "" : " ai-news-card--text"}">
+      ${article.image ? `
+        <a class="ai-news-card__image" href="${articleHref(article)}" aria-label="Read ${escapeHtml(article.title)}">
+          ${articleImage(article)}
+        </a>` : ""}
       <div class="ai-news-card__body">
         ${articleMeta(article)}
         <h3><a href="${articleHref(article)}">${escapeHtml(article.title)}</a></h3>
@@ -63,6 +69,59 @@
         <a class="ai-news-read" href="${articleHref(article)}">Read article <span aria-hidden="true">→</span></a>
       </div>
     </article>`;
+
+  const renderWeeklyAnalysis = (articles) => {
+    const feature = window.AI_NEWS_WEEKLY_FEATURE;
+    const entry = catalog.weeklyAnalyses?.find((item) => item.id === feature?.analysisId)
+      || catalog.weeklyAnalyses?.[0];
+    if (!feature || !entry) return "";
+
+    const analysisHref = `ai-weekly-analysis.html?week=${encodeURIComponent(entry.id)}`;
+    const review = articles.find((article) => article.slug === entry.reviewSlug);
+    const previous = articles
+      .filter((article) => article.category === "AI Weekly" && article.slug !== entry.reviewSlug)
+      .slice(0, 2);
+
+    return `
+      <section class="ai-news-weekly" data-ai-news-weekly aria-labelledby="ai-news-weekly-title">
+        <div class="ai-news-weekly__heading">
+          <div>
+            <p>WEEKLY IN-DEPTH ANALYSIS</p>
+            <h2 id="ai-news-weekly-title">A closer view of the week in AI</h2>
+          </div>
+          <span>${escapeHtml(entry.label)}</span>
+        </div>
+
+        <div class="ai-news-weekly__feature">
+          <a class="ai-news-weekly__visual" href="${analysisHref}" aria-label="Open ${escapeHtml(feature.title)}">
+            <img src="${escapeHtml(entry.cover)}" alt="${escapeHtml(feature.coverAlt || "")}" loading="lazy">
+          </a>
+
+          <div class="ai-news-weekly__body">
+            <p class="ai-news-weekly__kicker">Analysis · Research · Industry</p>
+            <h2><a href="${analysisHref}">${escapeHtml(feature.title)}</a></h2>
+            <p>${escapeHtml(feature.summary)}</p>
+            <dl class="ai-news-weekly__metrics">
+              ${feature.metrics.map((metric) => `
+                <div>
+                  <dt>${escapeHtml(metric.value)}</dt>
+                  <dd>${escapeHtml(metric.label)}</dd>
+                </div>`).join("")}
+            </dl>
+            <div class="ai-news-weekly__actions">
+              <a class="button" href="${analysisHref}">Explore Weekly In-Depth Analysis</a>
+              ${review ? `<a href="${articleHref(review)}">Read the week in review <span aria-hidden="true">→</span></a>` : ""}
+            </div>
+          </div>
+        </div>
+
+        ${previous.length ? `
+          <div class="ai-news-weekly__previous">
+            <strong>Previous weekly reports</strong>
+            ${previous.map((article) => `<a href="${articleHref(article)}">${escapeHtml(article.dateLabel)} <span aria-hidden="true">→</span></a>`).join("")}
+          </div>` : ""}
+      </section>`;
+  };
 
   const normalizeSearchValue = (value = "") => String(value)
     .toLocaleLowerCase()
@@ -94,7 +153,7 @@
   const searchArticles = (articles, query) => articles
     .map((article) => ({ article, rank: searchRank(article, query) }))
     .filter((result) => result.rank !== null)
-    .sort((a, b) => a.rank - b.rank || b.article.sortDate.localeCompare(a.article.sortDate))
+    .sort((a, b) => a.rank - b.rank || compareArticles(a.article, b.article))
     .map((result) => result.article);
 
   const renderAttention = () => {
@@ -177,6 +236,8 @@
       return;
     }
 
+    const archiveArticles = articles;
+
     mount.innerHTML = `
       <header class="page-heading ai-news-heading">
         <h1>AI News</h1>
@@ -194,6 +255,8 @@
         </form>
       </details>
 
+      ${renderWeeklyAnalysis(articles)}
+
       <div class="ai-news-index-layout">
         <div data-ai-news-archive></div>
         ${renderAttention()}
@@ -204,11 +267,18 @@
     const searchForm = mount.querySelector(".ai-news-search__form");
     const searchInput = mount.querySelector("#ai-news-search-input");
     const searchStatus = mount.querySelector("[data-ai-news-search-status]");
-    renderArchive(archiveMount, articles);
+    const weeklySection = mount.querySelector("[data-ai-news-weekly]");
+    renderArchive(archiveMount, archiveArticles);
 
     searchForm.addEventListener("submit", (event) => event.preventDefault());
     searchInput.addEventListener("input", () => {
-      const count = renderArchive(archiveMount, articles, searchInput.value);
+      const hasQuery = Boolean(normalizeSearchValue(searchInput.value));
+      const count = renderArchive(
+        archiveMount,
+        hasQuery ? articles : archiveArticles,
+        searchInput.value
+      );
+      if (weeklySection) weeklySection.hidden = hasQuery;
       searchStatus.textContent = `${count} ${count === 1 ? "article" : "articles"}`;
     });
     searchDetails.addEventListener("toggle", () => {
@@ -219,7 +289,8 @@
 
       if (searchInput.value) {
         searchInput.value = "";
-        renderArchive(archiveMount, articles);
+        renderArchive(archiveMount, archiveArticles);
+        if (weeklySection) weeklySection.hidden = false;
         searchStatus.textContent = `${articles.length} ${articles.length === 1 ? "article" : "articles"}`;
       }
     });

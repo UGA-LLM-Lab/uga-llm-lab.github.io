@@ -1,0 +1,723 @@
+{
+  "schema_version": "1.0",
+  "title": "AI This Week: Evidence, Direction, and Uncertainty",
+  "period": {
+    "current": [
+      "2026-09-14",
+      "2026-09-20"
+    ],
+    "previous": [
+      "2026-09-07",
+      "2026-09-13"
+    ],
+    "timezone": "America/New_York"
+  },
+  "synthesis": "This week, Google and Qwen released live multimodal updates, Figure tested robots in unfamiliar homes, agent products gained new safeguards, and infrastructure companies announced new funding and systems work. Evidence of broad and reliable business impact remains mixed.",
+  "coverage": {
+    "internal_event_ledger": "Reopened for the full current week, including verified items not selected for Daily.",
+    "source_receipts": "Daily source attempts were broad but interval completeness varied substantially. Missing intervals remain missing data, not evidence of no activity.",
+    "hiring_panel": "Baseline-building only. The dedicated recruitment family was attempted on September 20, but no normalized job records were available for a comparable week-over-week panel.",
+    "research_panel": "Hugging Face Daily Papers recommendations, deduplicated by paper ID and classified with the unchanged title rules. Weekend panels contained no recommendations."
+  },
+  "sources": [
+    {
+      "id": "internal-ledger",
+      "name": "UGA AI News normalized event ledger",
+      "type": "internal monitoring",
+      "date_range": "2026-09-14 to 2026-09-20",
+      "method": "Verified event records and primary-source evidence; coverage is not assumed complete.",
+      "url": "https://llm.franklinresearch.uga.edu/ai-news/2026-09/data.js"
+    },
+    {
+      "id": "hf-daily-papers",
+      "name": "Hugging Face Daily Papers",
+      "type": "research recommendation sample",
+      "date_range": "2026-09-07 to 2026-09-20",
+      "method": "Unique recommended paper IDs; platform recommendation date; stable title classifier; overlapping topic labels.",
+      "url": "https://huggingface.co/papers"
+    },
+    {
+      "id": "hai-2026",
+      "name": "Stanford HAI 2026 AI Index",
+      "type": "annual structural dataset",
+      "date_range": "primarily 2025 with historical series",
+      "method": "Multi-source annual report covering models, investment, adoption, infrastructure, research and workforce; definitions vary by chapter.",
+      "url": "https://hai.stanford.edu/ai-index/2026-ai-index-report"
+    },
+    {
+      "id": "hai-2025",
+      "name": "Stanford HAI 2025 AI Index",
+      "type": "annual structural dataset",
+      "date_range": "primarily 2024 with historical series",
+      "method": "Multi-source annual report; used as a prior-year comparison.",
+      "url": "https://hai.stanford.edu/ai-index/2025-ai-index-report"
+    },
+    {
+      "id": "mckinsey-2026",
+      "name": "McKinsey — The state of AI in 2026",
+      "type": "repeated enterprise survey",
+      "date_range": "fielded May 4–June 8, 2026",
+      "sample": "1,719 respondents in 97 nations; results weighted by national GDP contribution",
+      "method": "Survey measures reported organizational behavior and outcomes, not an audit of deployments.",
+      "url": "https://www.mckinsey.com/capabilities/quantumblack/our-insights/the-state-of-ai"
+    },
+    {
+      "id": "deloitte-2026",
+      "name": "Deloitte — State of AI in the Enterprise 2026",
+      "type": "enterprise survey",
+      "date_range": "fielded August–September 2025",
+      "sample": "3,235 business and IT leaders across 24 countries and six industries",
+      "method": "Respondent reports; distinguishes workforce access from process redesign and measurable impact.",
+      "url": "https://www.deloitte.com/nz/en/services/consulting/perspectives/state-of-ai-in-the-enterprise.html"
+    },
+    {
+      "id": "pwc-ceo-2026",
+      "name": "PwC 29th Annual Global CEO Survey",
+      "type": "global executive survey",
+      "date_range": "fielded September 30–November 10, 2025",
+      "sample": "4,454 CEOs in 95 countries and territories",
+      "method": "CEO-reported deployment and business outcomes; not direct system telemetry.",
+      "url": "https://www.pwc.com/gx/en/1/issues/c-suite-insights/ceo-survey.html"
+    },
+    {
+      "id": "bls-data-scientists",
+      "name": "U.S. Bureau of Labor Statistics — Data Scientists",
+      "type": "official occupational projections",
+      "date_range": "2025–2035 projections",
+      "sample": "U.S. employment estimates and projections",
+      "method": "Occupational Employment and Wage Statistics / Employment Projections; projections are not current vacancies.",
+      "url": "https://www.bls.gov/ooh/math/data-scientists.htm"
+    },
+    {
+      "id": "bls-research-scientists",
+      "name": "U.S. Bureau of Labor Statistics — Computer and Information Research Scientists",
+      "type": "official occupational projections",
+      "date_range": "2025–2035 projections",
+      "sample": "U.S. employment estimates and projections",
+      "method": "Occupational Employment and Wage Statistics / Employment Projections; broader than AI-specific roles.",
+      "url": "https://www.bls.gov/ooh/computer-and-information-technology/computer-and-information-research-scientists.htm"
+    },
+    {
+      "id": "wef-foj-2025",
+      "name": "World Economic Forum — Future of Jobs Report 2025",
+      "type": "employer expectations survey",
+      "date_range": "expectations for 2025–2030",
+      "sample": "More than 1,000 employers representing more than 14 million workers in 55 economies",
+      "method": "Forward-looking employer expectations, not observed hiring.",
+      "url": "https://www.weforum.org/publications/the-future-of-jobs-report-2025/"
+    }
+  ],
+  "tabs": [
+    {
+      "id": "research",
+      "label": "Research / Academia",
+      "claims": [
+        {
+          "id": "research-diversification",
+          "claim": "The monitored week emphasized the engineering of multimodal, embodied and evaluable systems more than a single dominant research theme.",
+          "scope": "HF recommendation sample and verified internal event ledger; global public research signals; September 14–20, 2026.",
+          "this_week": "The event ledger included live multimodal models, zero-shot home robotics, a robot runtime, model-misalignment reports, structured-data modeling, open mathematics and multimodal medical attribution. The attention panel quantifies the paper mix separately.",
+          "near_term": "The prior week favored reasoning and robotics in the same HF sample, but two weeks are not enough to establish persistence. A month-scale direction remains baseline-building.",
+          "structural": "Stanford HAI reports that industry produced more than 90% of notable frontier models in 2025 while academia remained central to highly cited research. That division supports a research landscape in which frontier-model construction concentrates in industry while open and academic work expands around methods, evaluation and domains.",
+          "long_run": "The 2025 and 2026 AI Index editions both describe falling model costs, tighter frontier competition and continued growth in research output. These conditions can spread model methods into applied fields without making the original topic labels more common.",
+          "interpretation": "The week is better read as diversification and diffusion than as evidence that one field is replacing another.",
+          "counterevidence": "The HF panel is a recommendation sample, not the research literature. Title rules miss semantic matches, topic labels overlap, weekend panels are empty, conference cycles can move counts, and a few high-volume labs can distort a week.",
+          "confidence": "Medium",
+          "what_would_change": "Three comparable months showing a broad, sustained decline across paper share, major conference programs and independent lab activity would support a stronger displacement claim.",
+          "evidence": [
+            "internal-ledger",
+            "hf-daily-papers",
+            "hai-2026",
+            "hai-2025"
+          ]
+        },
+        {
+          "id": "evaluation-production",
+          "claim": "Evaluation is moving closer to model development and deployment, but the quality of that transition is not yet measurable from announcements alone.",
+          "scope": "Public industry and research actions observed this week, interpreted against 2025–2026 safety and adoption evidence.",
+          "this_week": "OpenAI published six misalignment reports and a reporting framework; Anthropic and Accenture announced large commitments to embedded evaluation; Claude Code moved an action classifier server-side for eligible sessions.",
+          "near_term": "Recent releases increasingly bundle model capability with classifiers, evaluators and operational controls, suggesting that evaluation is becoming a continuous engineering function.",
+          "structural": "The 2026 AI Index reports rising incident counts and uneven safety reporting while agent benchmark performance improves but remains imperfect. That combination raises the practical value of embedded monitoring.",
+          "long_run": "Safety and evaluation have shifted from benchmark-only work toward deployment evidence, incident disclosure and system controls, but standardized cross-company reporting remains immature.",
+          "interpretation": "The institutional direction is real; effectiveness is an open empirical question.",
+          "counterevidence": "Funding commitments are inputs, not outcomes. Company-authored incident reports may be selective, and a visible classifier does not establish lower real-world harm.",
+          "confidence": "Medium",
+          "what_would_change": "Comparable before-and-after evidence showing fewer severe failures, broader disclosure coverage or independent replication would raise confidence; continued opaque reporting would lower it.",
+          "evidence": [
+            "internal-ledger",
+            "hai-2026"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "industry",
+      "label": "Industry",
+      "claims": [
+        {
+          "id": "deployment-stack",
+          "claim": "AI competition is broadening from model quality into an integrated deployment stack, but scaled business value still lags access and experimentation.",
+          "scope": "Global public product and infrastructure events this week plus multi-country enterprise surveys from 2025–2026.",
+          "this_week": "Google and Qwen launched live multimodal systems; Anthropic unified agent workspaces; OpenAI formalized incident reporting; Figure tested in unfamiliar homes; NVIDIA and Lambda optimized a fixed power budget; Huawei described a system-scale accelerator roadmap.",
+          "near_term": "The observed release mix increasingly includes runtimes, evaluators, persistent workspaces, power controls and domain-specific models rather than model weights alone.",
+          "structural": "McKinsey reports 44% of organizations scaling AI across the enterprise, but only 37% report positive EBIT impact and only about one fifth report scaled agents or coding agents. Deloitte reports only 30% redesigning key processes and 20% demonstrating measurable impact. PwC reports 56% of CEOs saw neither higher revenue nor lower costs from AI in the measured period.",
+          "long_run": "Stanford HAI reports organizational AI use rising from 55% in 2023 to 78% in 2024 and 88% in 2025, while inference costs fell sharply. The stock of users is expanding faster than proven, scaled returns.",
+          "interpretation": "The structural shift is from access to systems integration. Experimentation is widespread; mature deployment remains uneven.",
+          "counterevidence": "The surveys use different populations, questions and field dates; self-reported scaling can overstate actual use. Strong gains in specific firms may be hidden by aggregate averages, while lagged returns may arrive later.",
+          "confidence": "High",
+          "what_would_change": "A broad rise in independently measured production utilization and audited financial outcomes—rather than respondent expectations—would support calling agents and multimodal systems mature.",
+          "evidence": [
+            "internal-ledger",
+            "mckinsey-2026",
+            "deloitte-2026",
+            "pwc-ceo-2026",
+            "hai-2026",
+            "hai-2025"
+          ]
+        },
+        {
+          "id": "infrastructure-constraint",
+          "claim": "AI infrastructure investment remains structural, while power, interconnects and supply concentration increasingly shape realized capacity.",
+          "scope": "Public company actions and global infrastructure evidence; current week through a 2–5 year baseline.",
+          "this_week": "Crusoe announced the first closing of an expected $3.9 billion Series F; Huawei accelerated its Ascend roadmap and introduced Peerium; NVIDIA and Lambda reported 24% more throughput in one fixed-power test.",
+          "near_term": "Large model providers and infrastructure firms continue to pair funding and hardware roadmaps with data-center and power-management investments.",
+          "structural": "The 2026 AI Index reports $285.9 billion in U.S. private AI investment in 2025 and 5,427 U.S. data centers, alongside supply concentration in advanced chip manufacturing.",
+          "long_run": "Compared with the 2025 AI Index’s $109.1 billion in U.S. private AI investment for 2024, the capital base expanded sharply, but nominal commitments should not be treated as delivered compute or utilization.",
+          "interpretation": "Capital intensity is durable; execution is increasingly a power-and-systems problem rather than simply a chip-purchase problem.",
+          "counterevidence": "Crusoe’s announcement was a first closing, Huawei’s million-processor system is a target, and one Lambda workload cannot generalize to all data centers. Investment may also run ahead of demand.",
+          "confidence": "Medium",
+          "what_would_change": "Persistent underutilization, delayed grid connections or materially lower realized capex would weaken the view; transparent utilization and delivered-capacity data would strengthen it.",
+          "evidence": [
+            "internal-ledger",
+            "hai-2026",
+            "hai-2025"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "hiring",
+      "label": "Hiring / Talent",
+      "claims": [
+        {
+          "id": "hiring-baseline",
+          "claim": "This week does not support a numerical claim about AI hiring acceleration or shortage; the internal recruitment panel is still establishing a comparable baseline.",
+          "scope": "Registered public recruitment sources observed by the Daily process, with U.S. official projections and global employer expectations used only as structural context.",
+          "this_week": "The dedicated recruitment family was attempted, but normalized job records were not available for a stable current/prior intersection. A blocked or unparsed source is missing data, not zero postings.",
+          "near_term": "At least two comparable weeks are required before a numerical week-over-week panel, and eight weeks are targeted before stronger internal trend analysis. Large-company, startup and academic panels will remain separate.",
+          "structural": "BLS projects U.S. data-scientist employment to grow 35% from 2025 to 2035 and computer-and-information research scientist employment to grow 22%. These are broad occupational projections, not current AI vacancies or hires.",
+          "long_run": "The WEF employer survey expects AI and big-data skills to grow in importance through 2030, while the 2026 AI Index reports a large decline in the inflow of AI researchers and developers to the United States since 2017. Expectations, labor supply and job postings describe different parts of the market.",
+          "interpretation": "Specialized technical demand has a strong structural backdrop, but there is no defensible weekly shortage or surge claim from the current internal sample.",
+          "counterevidence": "Occupational categories are broader than AI, projections can miss cycles, job boards undercount confidential hiring and internal transfers, and postings do not equal hires. Changing source composition can mimic growth.",
+          "confidence": "High for the no-WoW-conclusion judgment; Medium for the structural demand backdrop.",
+          "what_would_change": "A stable, deduplicated panel showing sustained employer breadth, posting persistence, comparable compensation and actual hire evidence would permit a stronger market claim.",
+          "evidence": [
+            "bls-data-scientists",
+            "bls-research-scientists",
+            "wef-foj-2025",
+            "hai-2026"
+          ]
+        }
+      ]
+    }
+  ],
+  "structural_context": {
+    "reinforces_or_contradicts": "Reinforces the 6–24 month move toward integrated deployment stacks, while contradicting any claim that widespread access already means mature enterprise value.",
+    "one_year_change": "Model access and organizational use are broader than roughly one year ago, but 2026 surveys still show limited process redesign and uneven EBIT impact.",
+    "cyclical_vs_structural": "Weekly release cadence and paper attention are cyclical; investment in compute, lower inference costs and integration of evaluation into production appear structural, subject to realized deployment data.",
+    "frontier_to_infrastructure": "Live multimodal interaction, coding agents and evaluation controls are moving from frontier demonstrations into ordinary product infrastructure.",
+    "early_stage": "Home robotics generalization, open mathematical models and rigorous multimodal medical attribution remain early-stage with large open evaluation questions.",
+    "talent": "Systems, research and data roles have persistent structural support, but current-week hiring demand is not measurable from the internal baseline.",
+    "confounders": "Overall hiring conditions, capital costs, grid and semiconductor constraints, survey self-reporting, conference cycles and source-access gaps can all distort AI-specific interpretation."
+  },
+  "research_attention": {
+    "sampling_unit": "unique paper ID per Hugging Face Daily Papers platform week; retrospective listing snapshot",
+    "date_basis": "platform recommendation date, not first publication",
+    "denominators": [
+      146,
+      131
+    ],
+    "topics_overlap": true,
+    "classifier": "case-insensitive explicit title rules; unchanged from the prior panel; no claim of semantic or field-wide prevalence",
+    "rules": {
+      "agents": "\\bagents?\\b|agentic|multi[- ]agent|tool[- ](?:use|calling)|harness",
+      "code": "\\bcode\\b|\\bcoding\\b|software|programming|debug|repositor|kernel",
+      "reason": "reasoning|mathemat|\\bmath\\b|theorem|\\bproof|planning",
+      "multimodal": "visual|vision|multimodal|image|video|diffusion|\\bvlm",
+      "embodied": "robot|embodied|manipulation|locomot|world[- ]model|\\bvla\\b",
+      "efficiency": "inference|efficien|quantiz|compression|spars|\\bcache|attention|distillation|low[- ]rank",
+      "bio": "medical|clinical|health|radiolog|protein|molecul|drug|genom|biolog",
+      "eval": "benchmark|evaluat|\\baudit|verif|\\bbench\\b",
+      "safety": "safety|security|alignment|privacy|hallucinat|jailbreak|deception|reliab",
+      "self": "self[- ](?:improv|evol)|co[- ]?evol|recursive improvement",
+      "memory": "\\bmemory\\b|\\bcontext\\b",
+      "audio": "speech|audio|voice|music"
+    },
+    "threshold": "index shown only when both weeks have at least five matches and the prior share is nonzero",
+    "stable_band": "95–105",
+    "metrics": [
+      {
+        "id": "agents",
+        "label": "Agents & tool use",
+        "counts": [
+          31,
+          30
+        ],
+        "denominators": [
+          146,
+          131
+        ],
+        "shares": [
+          21.232876712328768,
+          22.900763358778626
+        ],
+        "index": 108,
+        "state": "Rising",
+        "direction": "up",
+        "examples": [
+          {
+            "id": "2609.11682",
+            "title": "COBRA-Skills: Contextual Bandit-Guided Evolution for Agent Skill Optimization",
+            "url": "https://huggingface.co/papers/2609.11682"
+          },
+          {
+            "id": "2609.05824",
+            "title": "Beyond Top-k Skill Retrieval: Diversity-Aware Skill Routing for LLM Agents",
+            "url": "https://huggingface.co/papers/2609.05824"
+          },
+          {
+            "id": "2609.10297",
+            "title": "TRACE: Trajectory-robust Admission with Evidence Ordering for Efficient GUI Agents",
+            "url": "https://huggingface.co/papers/2609.10297"
+          },
+          {
+            "id": "2609.15818",
+            "title": "Atria Dawn: The Dawn of Agentic Superintelligence",
+            "url": "https://huggingface.co/papers/2609.15818"
+          }
+        ]
+      },
+      {
+        "id": "code",
+        "label": "Coding & software",
+        "counts": [
+          5,
+          1
+        ],
+        "denominators": [
+          146,
+          131
+        ],
+        "shares": [
+          3.4246575342465753,
+          0.7633587786259542
+        ],
+        "index": null,
+        "state": "Watching",
+        "direction": "watch",
+        "examples": [
+          {
+            "id": "2609.20804",
+            "title": "An Empirical Study of Harness Design for Coding Agents",
+            "url": "https://huggingface.co/papers/2609.20804"
+          }
+        ]
+      },
+      {
+        "id": "reason",
+        "label": "Reasoning & mathematics",
+        "counts": [
+          15,
+          11
+        ],
+        "denominators": [
+          146,
+          131
+        ],
+        "shares": [
+          10.273972602739725,
+          8.396946564885496
+        ],
+        "index": 82,
+        "state": "Falling",
+        "direction": "down",
+        "examples": [
+          {
+            "id": "2609.06251",
+            "title": "MobileVLA-R1 2.0: RL-Enhanced Reasoning for Mobile Robot Control",
+            "url": "https://huggingface.co/papers/2609.06251"
+          },
+          {
+            "id": "2609.10728",
+            "title": "Towards a Deterministic Math Solver for Clinical Language Models",
+            "url": "https://huggingface.co/papers/2609.10728"
+          },
+          {
+            "id": "2609.13356",
+            "title": "ZGCM-1: A Fully Open and Extremely Efficient Foundation Model for Math and Agentic Search",
+            "url": "https://huggingface.co/papers/2609.13356"
+          },
+          {
+            "id": "2609.14302",
+            "title": "E2A-Bench: Benchmarking Evidence-to-Action Reliability in Financial Chart Reasoning",
+            "url": "https://huggingface.co/papers/2609.14302"
+          }
+        ]
+      },
+      {
+        "id": "multimodal",
+        "label": "Vision & multimodality",
+        "counts": [
+          36,
+          25
+        ],
+        "denominators": [
+          146,
+          131
+        ],
+        "shares": [
+          24.65753424657534,
+          19.083969465648856
+        ],
+        "index": 77,
+        "state": "Falling",
+        "direction": "down",
+        "examples": [
+          {
+            "id": "2609.12641",
+            "title": "Breaking the Vision-Action Shortcut: Latent Interface Training for Generalizable Robotics Foundation Models",
+            "url": "https://huggingface.co/papers/2609.12641"
+          },
+          {
+            "id": "2609.10895",
+            "title": "ReactHuman: A Physics-Grounded Benchmark for Human-Like Reactive Decision-Making in Embodied Multimodal LLMs",
+            "url": "https://huggingface.co/papers/2609.10895"
+          },
+          {
+            "id": "2609.07099",
+            "title": "Ambient @ EgoProactive 2026 : Proactive Egocentric Assistance with Visually Grounded Supervision",
+            "url": "https://huggingface.co/papers/2609.07099"
+          },
+          {
+            "id": "2609.07154",
+            "title": "Ambient @ EgoLongQA 2026: Distilling Long-Video perception into a Sub-2B Model",
+            "url": "https://huggingface.co/papers/2609.07154"
+          }
+        ]
+      },
+      {
+        "id": "embodied",
+        "label": "Robotics & world models",
+        "counts": [
+          11,
+          12
+        ],
+        "denominators": [
+          146,
+          131
+        ],
+        "shares": [
+          7.534246575342466,
+          9.16030534351145
+        ],
+        "index": 122,
+        "state": "Rising",
+        "direction": "up",
+        "examples": [
+          {
+            "id": "2609.12641",
+            "title": "Breaking the Vision-Action Shortcut: Latent Interface Training for Generalizable Robotics Foundation Models",
+            "url": "https://huggingface.co/papers/2609.12641"
+          },
+          {
+            "id": "2609.10895",
+            "title": "ReactHuman: A Physics-Grounded Benchmark for Human-Like Reactive Decision-Making in Embodied Multimodal LLMs",
+            "url": "https://huggingface.co/papers/2609.10895"
+          },
+          {
+            "id": "2609.12036",
+            "title": "Pelican-Sim 1.0: A General World Model Simulator for Embodied Intelligence",
+            "url": "https://huggingface.co/papers/2609.12036"
+          },
+          {
+            "id": "2609.08230",
+            "title": "ActionSplice: In-Flight Action Editing for Interactive World Models",
+            "url": "https://huggingface.co/papers/2609.08230"
+          }
+        ]
+      },
+      {
+        "id": "efficiency",
+        "label": "Efficiency & inference systems",
+        "counts": [
+          23,
+          18
+        ],
+        "denominators": [
+          146,
+          131
+        ],
+        "shares": [
+          15.753424657534246,
+          13.740458015267176
+        ],
+        "index": 87,
+        "state": "Falling",
+        "direction": "down",
+        "examples": [
+          {
+            "id": "2609.13141",
+            "title": "SAS: Simple Attention Sparsification via End-to-End Optimization of Context Ranking",
+            "url": "https://huggingface.co/papers/2609.13141"
+          },
+          {
+            "id": "2609.10297",
+            "title": "TRACE: Trajectory-robust Admission with Evidence Ordering for Efficient GUI Agents",
+            "url": "https://huggingface.co/papers/2609.10297"
+          },
+          {
+            "id": "2609.13356",
+            "title": "ZGCM-1: A Fully Open and Extremely Efficient Foundation Model for Math and Agentic Search",
+            "url": "https://huggingface.co/papers/2609.13356"
+          },
+          {
+            "id": "2609.13285",
+            "title": "Grouped Value Attention: Efficient KV Caching via On-Demand Key Reconstruction",
+            "url": "https://huggingface.co/papers/2609.13285"
+          }
+        ]
+      },
+      {
+        "id": "bio",
+        "label": "Health & life sciences",
+        "counts": [
+          2,
+          2
+        ],
+        "denominators": [
+          146,
+          131
+        ],
+        "shares": [
+          1.36986301369863,
+          1.5267175572519085
+        ],
+        "index": null,
+        "state": "Watching",
+        "direction": "watch",
+        "examples": [
+          {
+            "id": "2609.10728",
+            "title": "Towards a Deterministic Math Solver for Clinical Language Models",
+            "url": "https://huggingface.co/papers/2609.10728"
+          },
+          {
+            "id": "2609.15635",
+            "title": "ModaLens: Measuring Image Sensitivity in Report-Conditioned Medical VLMs",
+            "url": "https://huggingface.co/papers/2609.15635"
+          }
+        ]
+      },
+      {
+        "id": "eval",
+        "label": "Evaluation & verification",
+        "counts": [
+          14,
+          13
+        ],
+        "denominators": [
+          146,
+          131
+        ],
+        "shares": [
+          9.58904109589041,
+          9.923664122137405
+        ],
+        "index": 103,
+        "state": "Broadly stable",
+        "direction": "flat",
+        "examples": [
+          {
+            "id": "2609.11115",
+            "title": "Benchmark Radar: A Living Database and Search Engine for AI Benchmarks and Evaluation",
+            "url": "https://huggingface.co/papers/2609.11115"
+          },
+          {
+            "id": "2609.06107",
+            "title": "DataFlex-RL: An Evaluation Platform for RLVR Data Policies",
+            "url": "https://huggingface.co/papers/2609.06107"
+          },
+          {
+            "id": "2609.10895",
+            "title": "ReactHuman: A Physics-Grounded Benchmark for Human-Like Reactive Decision-Making in Embodied Multimodal LLMs",
+            "url": "https://huggingface.co/papers/2609.10895"
+          },
+          {
+            "id": "2609.03502",
+            "title": "Building and Evaluating Fixed-Voice Thai TTS from Synthetic Speech",
+            "url": "https://huggingface.co/papers/2609.03502"
+          }
+        ]
+      },
+      {
+        "id": "safety",
+        "label": "Safety & reliability",
+        "counts": [
+          6,
+          3
+        ],
+        "denominators": [
+          146,
+          131
+        ],
+        "shares": [
+          4.109589041095891,
+          2.2900763358778624
+        ],
+        "index": null,
+        "state": "Watching",
+        "direction": "watch",
+        "examples": [
+          {
+            "id": "2609.14302",
+            "title": "E2A-Bench: Benchmarking Evidence-to-Action Reliability in Financial Chart Reasoning",
+            "url": "https://huggingface.co/papers/2609.14302"
+          },
+          {
+            "id": "2609.19144",
+            "title": "A Zeroth-Order Paradigm for LLM Preference Alignment",
+            "url": "https://huggingface.co/papers/2609.19144"
+          },
+          {
+            "id": "2609.12397",
+            "title": "UFO: Chain-of-Evaluation for Omni-Condition Alignment in Multi-Modal Image Generation",
+            "url": "https://huggingface.co/papers/2609.12397"
+          }
+        ]
+      },
+      {
+        "id": "self",
+        "label": "Self-improvement & evolution",
+        "counts": [
+          7,
+          9
+        ],
+        "denominators": [
+          146,
+          131
+        ],
+        "shares": [
+          4.794520547945205,
+          6.870229007633588
+        ],
+        "index": 143,
+        "state": "Rising",
+        "direction": "up",
+        "examples": [
+          {
+            "id": "2609.14858",
+            "title": "Dream-RSI: Recursive Self-Improvement through Evolving Worlds",
+            "url": "https://huggingface.co/papers/2609.14858"
+          },
+          {
+            "id": "2609.15364",
+            "title": "RSIAgent: Autonomous Exploration for Recursive Self-improvement in New Environments",
+            "url": "https://huggingface.co/papers/2609.15364"
+          },
+          {
+            "id": "2609.14857",
+            "title": "ModularRSI: Modular and Generalizable Recursive Harness Self-Improvement",
+            "url": "https://huggingface.co/papers/2609.14857"
+          },
+          {
+            "id": "2609.13406",
+            "title": "Generalized Agent Iteration: One Formal Framework for Iterative Policy Improvement and Recursive Self-Improvement",
+            "url": "https://huggingface.co/papers/2609.13406"
+          }
+        ]
+      },
+      {
+        "id": "memory",
+        "label": "Memory & context",
+        "counts": [
+          8,
+          8
+        ],
+        "denominators": [
+          146,
+          131
+        ],
+        "shares": [
+          5.47945205479452,
+          6.106870229007634
+        ],
+        "index": 111,
+        "state": "Rising",
+        "direction": "up",
+        "examples": [
+          {
+            "id": "2609.13141",
+            "title": "SAS: Simple Attention Sparsification via End-to-End Optimization of Context Ranking",
+            "url": "https://huggingface.co/papers/2609.13141"
+          },
+          {
+            "id": "2609.17521",
+            "title": "PhysStream: Streaming Physics-Grounded Video Generation with Structured Scene Memory and Fine-Grained Motion Control",
+            "url": "https://huggingface.co/papers/2609.17521"
+          },
+          {
+            "id": "2609.14011",
+            "title": "Convergent Emergence of In-Context Learning Across Modalities",
+            "url": "https://huggingface.co/papers/2609.14011"
+          },
+          {
+            "id": "2609.18094",
+            "title": "Agora: Git as Shared Memory for Collective AutoResearch",
+            "url": "https://huggingface.co/papers/2609.18094"
+          }
+        ]
+      },
+      {
+        "id": "audio",
+        "label": "Speech & audio",
+        "counts": [
+          9,
+          5
+        ],
+        "denominators": [
+          146,
+          131
+        ],
+        "shares": [
+          6.164383561643835,
+          3.816793893129771
+        ],
+        "index": 62,
+        "state": "Falling",
+        "direction": "down",
+        "examples": [
+          {
+            "id": "2609.12945",
+            "title": "StepAudio 3 Gen Technical Report",
+            "url": "https://huggingface.co/papers/2609.12945"
+          },
+          {
+            "id": "2609.03502",
+            "title": "Building and Evaluating Fixed-Voice Thai TTS from Synthetic Speech",
+            "url": "https://huggingface.co/papers/2609.03502"
+          },
+          {
+            "id": "2609.13498",
+            "title": "Building a Production Greek-English Speech Recognizer",
+            "url": "https://huggingface.co/papers/2609.13498"
+          },
+          {
+            "id": "2609.14005",
+            "title": "StepAudio 3 Realtime Technical Report",
+            "url": "https://huggingface.co/papers/2609.14005"
+          }
+        ]
+      }
+    ]
+  }
+}

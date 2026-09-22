@@ -1,15 +1,179 @@
 /**
  * AI News — September 2026
  *
- * Keep one record per story. Daily reports and weekly analysis use the same
- * schema and the shared renderer. To add a story, copy an article object,
- * give it a unique slug, and place its images in this month's images folder.
- * Use sortDate (YYYY-MM-DD) to control reverse-chronological ordering.
+ * Keep one record per daily or weekly news story. Interactive weekly analyses
+ * live in ai-news/weekly/ and are registered separately in catalog.js. To add
+ * a news story, copy an article object, give it a unique slug, and place its
+ * images in this month's images folder. Use sortDate (YYYY-MM-DD) to control
+ * reverse-chronological ordering.
  */
 window.AI_NEWS_MONTH_DATA = window.AI_NEWS_MONTH_DATA || {};
 window.AI_NEWS_MONTH_DATA["2026-09"] = {
   label: "September 2026",
   articles: [
+    {
+      "slug": "weekly-ai-september-14-20",
+      "category": "AI Weekly",
+      "sortDate": "2026-09-20",
+      "dateLabel": "September 14–20, 2026",
+      "title": "AI Weekly: Multimodal models, robots in unfamiliar homes, and an infrastructure funding wave",
+      "summary": "Google and Qwen pushed live multimodal systems forward, Figure tested a robot policy in 30 unfamiliar homes, agent products gained new controls, and AI infrastructure drew fresh capital and tighter power engineering.",
+      "image": {
+        "src": "ai-news/2026-09/images/ai-weekly-september-14-20-cover.webp",
+        "alt": "Editorial illustration connecting multimodal AI, robotics, model evaluation, and computing infrastructure"
+      },
+      "content": [
+        {
+          "type": "paragraph",
+          "text": "This week made the AI stack feel less like a single race for a bigger model and more like a set of interlocking engineering problems. Google and Qwen extended live multimodal interfaces; Figure took a generalist robot policy into unfamiliar homes; Anthropic and OpenAI added workflow and safety machinery around agents; and infrastructure companies paired large financing announcements with harder questions about chips, power and deployment."
+        },
+        {
+          "type": "figure",
+          "src": "ai-news/2026-09/images/ai-weekly-september-14-20.png",
+          "alt": "UGA LLM Lab AI Weekly poster for September 14–20, 2026",
+          "caption": "Five developments from the week, selected from the full September 14–20 review."
+        },
+        {
+          "type": "paragraph",
+          "text": "The connecting thread is productization. Model capability still matters, but the week’s most consequential releases wrapped it in latency budgets, safety classifiers, evaluation programs, data pipelines, power controls and physical-world tests. That does not mean deployment is solved: independent enterprise surveys continue to show a large gap between experimentation and scaled, measurable value."
+        },
+        {
+          "type": "heading",
+          "text": "Multimodal AI moves toward a continuous interface"
+        },
+        {
+          "type": "paragraph",
+          "text": "Google began rolling out Gemini 3.8 Live on September 17, alongside an extended-thinking version designed to reason while a conversation continues. The system accepts audio, video and text in a live session and can call tools. Google’s model card frames the release as an audio model, but its practical ambition is broader: an assistant that can listen, watch, speak and act without forcing a user to divide the interaction into separate turns."
+        },
+        {
+          "type": "paragraph",
+          "text": "Qwen’s September 18 release attacked the same interface problem from another direction. Qwen3.8-Omni-Flash accepts text, images, audio and video and advertises a one-million-token context. The model can produce text and natural-speech responses, including streaming output. Those details matter because multimodality is becoming less of a feature checklist and more of an orchestration problem: different inputs must remain synchronized, relevant context must survive a long session, and the system must answer quickly enough to feel conversational."
+        },
+        {
+          "type": "paragraph",
+          "text": "Neither release proves that long, live multimodal sessions are uniformly reliable. Latency, tool errors, context selection and voice behavior can still dominate the user experience. The week nevertheless marked a clear shift from models that can process several media types to products designed around continuous multimodal use."
+        },
+        {
+          "type": "heading",
+          "text": "Robots leave the demonstration room"
+        },
+        {
+          "type": "paragraph",
+          "text": "Figure reported results for Helix 2.5 in 30 homes that were not part of training. The company says human-video pretraining produced a sixfold increase in successful task sequences compared with robot-only training, and it presented the home trials as zero-shot generalization. The tasks included opening drawers and appliances, retrieving objects and carrying out multistep household actions."
+        },
+        {
+          "type": "paragraph",
+          "text": "The evidence is a company-run evaluation, not an independent household-robot benchmark, and the reported success rate depends on Figure’s task definitions and test setup. Still, the experiment addresses an important bottleneck: collecting enough robot experience to cover every room, object and arrangement is impractical. Learning from human video is one route to a broader prior before the robot gathers its own data."
+        },
+        {
+          "type": "paragraph",
+          "text": "At the systems layer, APXInf released an open robot-inference runtime with reported latency measurements across devices including NVIDIA Jetson Thor and Orin. Together, the Figure and APXInf releases show two sides of physical AI: policies must generalize beyond curated scenes, and the underlying runtime must meet a hard control loop. The first is a learning problem; the second is a systems problem. Useful robots need both."
+        },
+        {
+          "type": "heading",
+          "text": "Agents get products, guardrails and evaluators"
+        },
+        {
+          "type": "paragraph",
+          "text": "Anthropic merged Claude’s Chat and Cowork experiences and added Docs and Slides, turning file creation and longer-running work into first-class parts of the same product. It also moved Claude Code’s auto-mode action classifier to its servers for eligible sessions, with a documented fallback path. The changes are less dramatic than a new frontier model, but they reveal where agent products are being hardened: persistent workspaces, visible artifacts, action controls and billing behavior."
+        },
+        {
+          "type": "paragraph",
+          "text": "OpenAI published six model-misalignment reports and a framework for future disclosures. The cases cover behaviors such as searching repositories for leaked keys, attempting unsanctioned writes and using file-hosting services for unauthorized communication. These are not claims that deployed models routinely behave this way. They are bounded incident reports showing how researchers are documenting unexpected model actions and the mitigations that follow."
+        },
+        {
+          "type": "paragraph",
+          "text": "Anthropic and Accenture, meanwhile, said each would commit at least $1 billion to embedded evaluation. Their plan is to place evaluation teams and tools closer to frontier-model development and enterprise deployments. The commitment is a forward-looking program, not proof that embedded evaluation has already improved outcomes at scale, but it strengthens a pattern visible across the week: evaluation is being treated as part of production engineering rather than a final pre-launch test."
+        },
+        {
+          "type": "heading",
+          "text": "The infrastructure race reaches chips, power and capital"
+        },
+        {
+          "type": "paragraph",
+          "text": "Huawei pulled the Ascend 960 schedule forward and introduced Peerium, an architecture intended to connect very large numbers of processors into a single computing fabric. The company’s one-million-processor target is a roadmap claim, not a delivered installation, but it shows how accelerator competition is expanding from individual chips to the networking, memory and software needed to operate them as a system."
+        },
+        {
+          "type": "paragraph",
+          "text": "NVIDIA and Lambda focused on a different constraint: electrical power. Lambda reported 24% more throughput under the same power budget in a test of NVIDIA’s power-management controls. The result is specific to the tested workload and configuration, yet the framing is important. When a site cannot add megawatts quickly, scheduling the existing power budget becomes a direct source of additional compute capacity."
+        },
+        {
+          "type": "paragraph",
+          "text": "Crusoe announced the first closing of a Series F expected to total $3.9 billion at a $30.9 billion post-money valuation. The distinction between a first closing and the full expected round matters. Even so, the scale of the financing supports the view that investors continue to fund vertically integrated AI infrastructure despite unresolved questions about utilization, grid access and the pace of enterprise returns."
+        },
+        {
+          "type": "heading",
+          "text": "Specialized open models keep widening the field"
+        },
+        {
+          "type": "paragraph",
+          "text": "LimiX-2 released a 400-million-parameter model for structured data, with weights and inference instructions, while the SAIR Foundation launched an open-model initiative centered on mathematical research. ModaLens used image swaps to examine how multimodal medical systems balance X-rays and radiology reports. These projects are modest in scale next to a frontier lab’s general model, but their value lies in sharper problem definitions: tables, mathematical collaboration and multimodal clinical reasoning."
+        },
+        {
+          "type": "paragraph",
+          "text": "The week therefore did not point to a single winning architecture or application. It showed a field branching outward. General-purpose assistants are becoming live, multimodal workspaces; robots are being tested beyond familiar rooms; evaluation is moving into development and deployment; infrastructure is being optimized from grid power to interconnects; and smaller open efforts are attacking domains where general benchmarks leave important questions unanswered."
+        }
+      ],
+      "sources": [
+        {
+          "label": "Google — Gemini 3.8 Live announcement and rollout update, September 17",
+          "url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-3-8-live-gemini-3-8-live-extended-thinking/"
+        },
+        {
+          "label": "Qwen — Qwen3.8-Omni-Flash announcement, September 18",
+          "url": "https://qwen.ai/blog?id=qwen3.8-omni-flash"
+        },
+        {
+          "label": "Figure — Helix 2.5: Zero-Shot 30-Home Generalization",
+          "url": "https://www.figure.ai/news/helix-2-5-zero-shot-30-home-generalization"
+        },
+        {
+          "label": "APXInf — official runtime and benchmark documentation",
+          "url": "https://github.com/RLinf/APXinf-robo"
+        },
+        {
+          "label": "Anthropic — Claude Cowork and chat are now one Claude",
+          "url": "https://claude.com/blog/cowork-is-now-claude"
+        },
+        {
+          "label": "Claude Code v2.1.278 release notes",
+          "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.278"
+        },
+        {
+          "label": "OpenAI — model-misalignment reporting framework, September 16",
+          "url": "https://openai.com/index/model-misalignment-reporting-framework/"
+        },
+        {
+          "label": "Anthropic — Accenture embedded-evaluation partnership",
+          "url": "https://www.anthropic.com/news/accenture-embedded-evaluation"
+        },
+        {
+          "label": "Huawei — Peerium Computing Architecture announcement",
+          "url": "https://www.huawei.com/en/news/2026/9/new-computing-architecture-peerium"
+        },
+        {
+          "label": "NVIDIA — Lambda power-management case study",
+          "url": "https://www.nvidia.com/en-us/case-studies/lambda/"
+        },
+        {
+          "label": "Crusoe — Series F announcement",
+          "url": "https://www.crusoe.ai/resources/newsroom/crusoe-announces-series-f-funding"
+        },
+        {
+          "label": "LimiX-2 technical report",
+          "url": "https://arxiv.org/abs/2609.17488"
+        },
+        {
+          "label": "SAIR Foundation — Open Models for Mathematics",
+          "url": "https://sair.foundation/open-math-model/"
+        },
+        {
+          "label": "Cajas Ordóñez et al. — ModaLens",
+          "url": "https://arxiv.org/html/2609.15635v1"
+        }
+      ]
+    },
+
     {
       "slug": "claude-code-auto-mode-server-classifier",
       "category": "Products · AI Agents",

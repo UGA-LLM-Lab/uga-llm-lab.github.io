@@ -11,7 +11,7 @@ AI News uses a separate monthly archive so that articles do not require individu
 - Add each month's stories to `ai-news/YYYY-MM/data.js` and place their images in that month's `images` folder.
 - Register a new month once in `ai-news/catalog.js`.
 - Update the heat and research-attention panel in `ai-news/trending.js`.
-- Daily reports and weekly analysis use the same article schema and are rendered by the shared `ai-news/news.js` file.
+- Daily reports and weekly news use the shared article schema; weekly in-depth analysis is rendered from its separate JSON dataset.
 - A copyable generation specification for future AI-produced news packages is available in `ai-news/IMPORT_GUIDE.md`.
 
 To propose an update:
