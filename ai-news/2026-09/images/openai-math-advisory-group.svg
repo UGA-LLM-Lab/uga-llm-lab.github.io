@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="900" viewBox="0 0 1600 900" role="img" aria-labelledby="title desc">
+  <title id="title">Independent mathematics and AI advisory group</title>
+  <desc id="desc">A warm paper-style logic diagram showing nine member nodes around an independent advisory group, links to review, communicate, standards, and learning functions, and a dashed boundary separating OpenAI model development from the group’s authority.</desc>
+  <defs>
+    <pattern id="paper-grid" width="36" height="36" patternUnits="userSpaceOnUse">
+      <path d="M36 0H0V36" fill="none" stroke="#BFAF95" stroke-width="1" opacity="0.16"/>
+    </pattern>
+    <filter id="paper-grain" x="-10%" y="-10%" width="120%" height="120%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.82" numOctaves="2" seed="17" result="noise"/>
+      <feColorMatrix in="noise" type="saturate" values="0" result="gray"/>
+      <feComponentTransfer in="gray" result="faded"><feFuncA type="table" tableValues="0 0.035"/></feComponentTransfer>
+      <feBlend in="SourceGraphic" in2="faded" mode="multiply"/>
+    </filter>
+    <style>
+      .sans { font-family: Inter, Arial, Helvetica, sans-serif; }
+      .serif { font-family: Georgia, "Times New Roman", serif; }
+      .ink { fill: #2B261F; }
+      .muted { fill: #6E6253; }
+      .member-line { fill: none; stroke: #9B876E; stroke-width: 2.25; stroke-linecap: round; }
+      .function-line { fill: none; stroke: #66513A; stroke-width: 2.5; stroke-linecap: round; stroke-linejoin: round; }
+      .member-node { fill: #FFF9EE; stroke: #80684D; stroke-width: 2; }
+      .function-box { fill: #E8DFCF; stroke: #88745B; stroke-width: 1.7; }
+    </style>
+  </defs>
+
+  <rect width="1600" height="900" fill="#F3ECDF"/>
+  <rect width="1600" height="900" fill="url(#paper-grid)"/>
+  <rect width="1600" height="900" fill="#F3ECDF" opacity="0.35" filter="url(#paper-grain)"/>
+
+  <g transform="translate(82 62)">
+    <text class="serif ink" x="0" y="0" font-size="48" font-weight="700">Who advises on mathematics and AI?</text>
+    <text class="sans muted" x="2" y="42" font-size="19" letter-spacing="0.4">AN INDEPENDENT GROUP, MAPPED BY ROLE AND DECISION BOUNDARY</text>
+    <path d="M0 64H1015" stroke="#7F6A50" stroke-width="2"/>
+    <path d="M0 70H520" stroke="#7F6A50" stroke-width="1" opacity="0.38"/>
+  </g>
+
+  <g aria-label="Nine initial member nodes">
+    <path class="member-line" d="M695 370L695 172M695 370L914 218M695 370L1030 348M695 370L990 497M695 370L811 589M695 370L579 589M695 370L400 497M695 370L360 348M695 370L476 218"/>
+    <g aria-label="Member 1" transform="translate(695 172)"><circle class="member-node" r="34"/><text class="serif ink" x="0" y="8" text-anchor="middle" font-size="25" font-weight="700">1</text></g>
+    <g aria-label="Member 2" transform="translate(914 218)"><circle class="member-node" r="34"/><text class="serif ink" x="0" y="8" text-anchor="middle" font-size="25" font-weight="700">2</text></g>
+    <g aria-label="Member 3" transform="translate(1030 348)"><circle class="member-node" r="34"/><text class="serif ink" x="0" y="8" text-anchor="middle" font-size="25" font-weight="700">3</text></g>
+    <g aria-label="Member 4" transform="translate(990 497)"><circle class="member-node" r="34"/><text class="serif ink" x="0" y="8" text-anchor="middle" font-size="25" font-weight="700">4</text></g>
+    <g aria-label="Member 5" transform="translate(811 589)"><circle class="member-node" r="34"/><text class="serif ink" x="0" y="8" text-anchor="middle" font-size="25" font-weight="700">5</text></g>
+    <g aria-label="Member 6" transform="translate(579 589)"><circle class="member-node" r="34"/><text class="serif ink" x="0" y="8" text-anchor="middle" font-size="25" font-weight="700">6</text></g>
+    <g aria-label="Member 7" transform="translate(400 497)"><circle class="member-node" r="34"/><text class="serif ink" x="0" y="8" text-anchor="middle" font-size="25" font-weight="700">7</text></g>
+    <g aria-label="Member 8" transform="translate(360 348)"><circle class="member-node" r="34"/><text class="serif ink" x="0" y="8" text-anchor="middle" font-size="25" font-weight="700">8</text></g>
+    <g aria-label="Member 9" transform="translate(476 218)"><circle class="member-node" r="34"/><text class="serif ink" x="0" y="8" text-anchor="middle" font-size="25" font-weight="700">9</text></g>
+    <text class="sans muted" x="290" y="168" font-size="16" letter-spacing="1.2">NINE INITIAL MEMBERS</text>
+  </g>
+
+  <g>
+    <path d="M500 305Q500 280 525 280H865Q890 280 890 305V435Q890 460 865 460H525Q500 460 500 435Z" transform="translate(0 8)" fill="#4A3825" opacity="0.12"/>
+    <path d="M500 305Q500 280 525 280H865Q890 280 890 305V435Q890 460 865 460H525Q500 460 500 435Z" fill="#FFF9EE" stroke="#5F4A33" stroke-width="3"/>
+    <path d="M530 318H860" stroke="#B29C7D" stroke-width="1.5"/>
+    <text class="serif ink" x="695" y="354" text-anchor="middle" font-size="24" font-style="italic">Mathematics &amp; AI</text>
+    <text class="serif ink" x="695" y="393" text-anchor="middle" font-size="24" font-weight="700">Independent advisory group</text>
+    <text class="sans muted" x="695" y="424" text-anchor="middle" font-size="17">advice and public communication — not governance</text>
+  </g>
+
+  <g aria-label="Advisory functions">
+    <path class="function-line" d="M695 460V636H238M695 636H1058M238 636V673M508 636V673M778 636V673M1048 636V673"/>
+    <g transform="translate(148 673)"><rect class="function-box" width="180" height="70" rx="35"/><path d="M30 38l10 10 22-25" fill="none" stroke="#5F4A33" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/><text class="serif ink" x="110" y="43" text-anchor="middle" font-size="22" font-weight="700">Review</text></g>
+    <g transform="translate(418 673)"><rect class="function-box" width="180" height="70" rx="35"/><path d="M25 25h32v24H42l-9 8v-8h-8Z" fill="none" stroke="#5F4A33" stroke-width="2.4" stroke-linejoin="round"/><text class="serif ink" x="121" y="43" text-anchor="middle" font-size="18" font-weight="700">Communicate</text></g>
+    <g transform="translate(688 673)"><rect class="function-box" width="180" height="70" rx="35"/><path d="M28 23h32M28 35h26M28 47h20" fill="none" stroke="#5F4A33" stroke-width="2.6" stroke-linecap="round"/><text class="serif ink" x="119" y="43" text-anchor="middle" font-size="21" font-weight="700">Standards</text></g>
+    <g transform="translate(958 673)"><rect class="function-box" width="180" height="70" rx="35"/><path d="M26 49V27l17-8 17 8v22l-17-8Z" fill="none" stroke="#5F4A33" stroke-width="2.4" stroke-linejoin="round"/><path d="M43 19v22" stroke="#5F4A33" stroke-width="2"/><text class="serif ink" x="116" y="43" text-anchor="middle" font-size="21" font-weight="700">Learning</text></g>
+  </g>
+
+  <g aria-label="OpenAI model development is outside the advisory group's decision authority">
+    <rect x="1188" y="208" width="334" height="528" rx="20" fill="#F7F0E4" fill-opacity="0.74" stroke="#9C5D51" stroke-width="3" stroke-dasharray="11 10"/>
+    <rect x="1218" y="184" width="274" height="48" rx="24" fill="#9C5D51"/>
+    <text class="sans" x="1355" y="215" text-anchor="middle" font-size="16" font-weight="700" fill="#FFF9EE" letter-spacing="1.1">OUTSIDE ADVISORY AUTHORITY</text>
+    <text class="serif ink" x="1230" y="286" font-size="30" font-weight="700">OpenAI model</text>
+    <text class="serif ink" x="1230" y="324" font-size="30" font-weight="700">development</text>
+    <path d="M1230 348H1477" stroke="#B69A83" stroke-width="1.5"/>
+    <g class="sans ink" font-size="18">
+      <circle cx="1240" cy="391" r="4" fill="#9C5D51"/><text x="1257" y="397">Internal research direction</text>
+      <circle cx="1240" cy="438" r="4" fill="#9C5D51"/><text x="1257" y="444">Model release decisions</text>
+      <circle cx="1240" cy="485" r="4" fill="#9C5D51"/><text x="1257" y="491">Pace of model progress</text>
+    </g>
+    <path d="M1228 530H1480" stroke="#9C5D51" stroke-width="2" stroke-dasharray="4 7"/>
+    <text class="sans muted" x="1230" y="570" font-size="16" font-weight="700" letter-spacing="0.8">CLAIM STATUS</text>
+    <text class="serif ink" x="1230" y="604" font-size="20">“100+ problems” is</text>
+    <text class="serif ink" x="1230" y="631" font-size="20">company-reported,</text>
+    <text class="serif ink" x="1230" y="658" font-size="20">not independently</text>
+    <text class="serif ink" x="1230" y="685" font-size="20">verified here.</text>
+    <text class="sans muted" x="1230" y="716" font-size="14">The boundary is the key distinction.</text>
+  </g>
+
+  <path d="M1065 396H1148" stroke="#9C5D51" stroke-width="2.5" stroke-dasharray="6 7"/>
+  <path d="M1148 378V414" stroke="#9C5D51" stroke-width="5" stroke-linecap="round"/>
+  <text class="sans muted" x="1105" y="437" text-anchor="middle" font-size="13" letter-spacing="0.7">NO DECISION POWER</text>
+
+  <g transform="translate(82 826)">
+    <path d="M0 0H1440" stroke="#9F8A70" stroke-width="1.4"/>
+    <text class="sans muted" x="0" y="31" font-size="15">Logic diagram based on the group’s stated charter and OpenAI’s announcement. Member nodes represent the nine-person initial structure; they do not depict individuals.</text>
+    <text class="sans muted" x="1440" y="31" text-anchor="end" font-size="14" letter-spacing="0.8">UGA LLM LAB · EDITORIAL GRAPHIC</text>
+  </g>
+</svg>

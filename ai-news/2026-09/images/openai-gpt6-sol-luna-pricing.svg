@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="900" viewBox="0 0 1600 900" role="img" aria-labelledby="title desc">
+  <title id="title">GPT-6 Sol and Luna API pricing</title>
+  <desc id="desc">A factual comparison of published input and output prices per one million tokens for GPT-6 Sol and GPT-6 Luna.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#071724"/>
+      <stop offset="0.55" stop-color="#102f3d"/>
+      <stop offset="1" stop-color="#1c5d63"/>
+    </linearGradient>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="18" stdDeviation="24" flood-color="#001018" flood-opacity="0.38"/>
+    </filter>
+  </defs>
+  <rect width="1600" height="900" fill="url(#bg)"/>
+  <circle cx="1370" cy="120" r="250" fill="#83e4cc" opacity="0.12"/>
+  <circle cx="180" cy="820" r="300" fill="#71a8ff" opacity="0.10"/>
+  <text x="110" y="125" fill="#e9fbf7" font-family="Arial, Helvetica, sans-serif" font-size="34" font-weight="700" letter-spacing="4">OPENAI · SEPTEMBER 22, 2026</text>
+  <text x="110" y="230" fill="#ffffff" font-family="Arial, Helvetica, sans-serif" font-size="82" font-weight="800">GPT-6 Sol &amp; Luna</text>
+  <text x="110" y="292" fill="#bde7df" font-family="Arial, Helvetica, sans-serif" font-size="32">Frontier-derived models move into lower-cost tiers</text>
+  <g filter="url(#shadow)">
+    <rect x="110" y="360" width="650" height="360" rx="34" fill="#f3fbfa"/>
+    <rect x="840" y="360" width="650" height="360" rx="34" fill="#f3fbfa"/>
+  </g>
+  <text x="165" y="440" fill="#0b2430" font-family="Arial, Helvetica, sans-serif" font-size="52" font-weight="800">GPT-6 Sol</text>
+  <text x="895" y="440" fill="#0b2430" font-family="Arial, Helvetica, sans-serif" font-size="52" font-weight="800">GPT-6 Luna</text>
+  <text x="165" y="505" fill="#49636d" font-family="Arial, Helvetica, sans-serif" font-size="26">Complex coding, agents and professional work</text>
+  <text x="895" y="505" fill="#49636d" font-family="Arial, Helvetica, sans-serif" font-size="26">High-volume and cost-sensitive workloads</text>
+  <text x="165" y="600" fill="#0b2430" font-family="Arial, Helvetica, sans-serif" font-size="30" font-weight="700">INPUT</text>
+  <text x="165" y="670" fill="#0b766d" font-family="Arial, Helvetica, sans-serif" font-size="64" font-weight="800">$2</text>
+  <text x="440" y="600" fill="#0b2430" font-family="Arial, Helvetica, sans-serif" font-size="30" font-weight="700">OUTPUT</text>
+  <text x="440" y="670" fill="#0b766d" font-family="Arial, Helvetica, sans-serif" font-size="64" font-weight="800">$10</text>
+  <text x="895" y="600" fill="#0b2430" font-family="Arial, Helvetica, sans-serif" font-size="30" font-weight="700">INPUT</text>
+  <text x="895" y="670" fill="#0b766d" font-family="Arial, Helvetica, sans-serif" font-size="64" font-weight="800">$0.10</text>
+  <text x="1210" y="600" fill="#0b2430" font-family="Arial, Helvetica, sans-serif" font-size="30" font-weight="700">OUTPUT</text>
+  <text x="1210" y="670" fill="#0b766d" font-family="Arial, Helvetica, sans-serif" font-size="64" font-weight="800">$0.50</text>
+  <text x="800" y="795" text-anchor="middle" fill="#d5f4ed" font-family="Arial, Helvetica, sans-serif" font-size="27">Prices per 1M API tokens · Cached input reads receive a 90% discount</text>
+  <text x="800" y="842" text-anchor="middle" fill="#97c8c0" font-family="Arial, Helvetica, sans-serif" font-size="22">UGA LLM Lab graphic · Source: OpenAI launch documentation</text>
+</svg>

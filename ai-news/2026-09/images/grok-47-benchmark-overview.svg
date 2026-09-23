@@ -1,0 +1,152 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="900" viewBox="0 0 1600 900" role="img" aria-labelledby="title desc">
+  <title id="title">Grok 4.7 launch snapshot for coding and knowledge work</title>
+  <desc id="desc">A data-news graphic showing a 500,000-token context window, API prices, a long-task workflow, and four separately scaled vendor-reported benchmark panels.</desc>
+
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#071620"/>
+      <stop offset="0.55" stop-color="#0B2230"/>
+      <stop offset="1" stop-color="#07131C"/>
+    </linearGradient>
+    <linearGradient id="cyanGlow" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#36E2CE"/>
+      <stop offset="1" stop-color="#80F7A4"/>
+    </linearGradient>
+    <linearGradient id="barA" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#36E2CE"/>
+      <stop offset="1" stop-color="#8BFFB0"/>
+    </linearGradient>
+    <radialGradient id="contextHalo" cx="50%" cy="50%" r="50%">
+      <stop offset="0" stop-color="#36E2CE" stop-opacity="0.22"/>
+      <stop offset="0.62" stop-color="#36E2CE" stop-opacity="0.06"/>
+      <stop offset="1" stop-color="#36E2CE" stop-opacity="0"/>
+    </radialGradient>
+    <pattern id="dotGrid" width="32" height="32" patternUnits="userSpaceOnUse">
+      <circle cx="2" cy="2" r="1.2" fill="#8CC3CC" opacity="0.13"/>
+    </pattern>
+  </defs>
+
+  <rect width="1600" height="900" fill="url(#bg)"/>
+  <rect width="1600" height="900" fill="url(#dotGrid)"/>
+  <circle cx="315" cy="360" r="290" fill="url(#contextHalo)"/>
+  <path d="M0 8H1600" stroke="url(#cyanGlow)" stroke-width="16"/>
+
+  <g font-family="Arial, Helvetica, sans-serif">
+    <text x="64" y="72" font-size="18" font-weight="700" letter-spacing="3" fill="#72E7D4">MODEL RELEASE · SEPTEMBER 21, 2026</text>
+    <text x="64" y="148" font-size="68" font-weight="800" fill="#F4FBFC">Grok 4.7</text>
+    <text x="356" y="145" font-size="26" font-weight="400" fill="#B6CDD3">Coding and knowledge work, designed to run longer</text>
+    <g transform="translate(1260 62)">
+      <rect width="276" height="46" rx="23" fill="#FFCA5C"/>
+      <circle cx="25" cy="23" r="6" fill="#513B08"/>
+      <text x="43" y="30" font-size="17" font-weight="800" letter-spacing="1" fill="#3A2B08">VENDOR-REPORTED DATA</text>
+    </g>
+  </g>
+
+  <path d="M64 177H1536" stroke="#7BA8B2" stroke-opacity="0.32"/>
+
+  <g font-family="Arial, Helvetica, sans-serif">
+    <text x="64" y="226" font-size="17" font-weight="700" letter-spacing="2.4" fill="#7EAEB7">CONTEXT WINDOW</text>
+    <text x="64" y="343" font-size="132" font-weight="800" fill="#F4FBFC">500K</text>
+    <text x="68" y="383" font-size="24" fill="#AFC7CD">tokens · text and image input</text>
+    <g transform="translate(70 421)">
+      <path d="M0 28H432" stroke="#244958" stroke-width="2"/>
+      <g fill="#36E2CE">
+        <circle cx="0" cy="28" r="7"/><circle cx="54" cy="28" r="5"/><circle cx="108" cy="28" r="5"/>
+        <circle cx="162" cy="28" r="5"/><circle cx="216" cy="28" r="5"/><circle cx="270" cy="28" r="5"/>
+        <circle cx="324" cy="28" r="5"/><circle cx="378" cy="28" r="5"/><circle cx="432" cy="28" r="7"/>
+      </g>
+      <text x="0" y="65" font-size="16" fill="#789BA4">LARGER WORKING MEMORY FOR MULTI-STEP TASKS</text>
+    </g>
+    <path d="M64 519H528" stroke="#7BA8B2" stroke-opacity="0.26"/>
+    <text x="64" y="557" font-size="17" font-weight="700" letter-spacing="2.4" fill="#7EAEB7">API LIST PRICE · PER 1M TOKENS</text>
+    <text x="64" y="625" font-size="52" font-weight="800" fill="#80F7A4">$2</text>
+    <text x="143" y="622" font-size="20" fill="#AFC7CD">input</text>
+    <path d="M244 577V628" stroke="#31515D"/>
+    <text x="278" y="625" font-size="52" font-weight="800" fill="#80F7A4">$6</text>
+    <text x="357" y="622" font-size="20" fill="#AFC7CD">output</text>
+  </g>
+
+  <g transform="translate(64 690)" font-family="Arial, Helvetica, sans-serif">
+    <text x="0" y="0" font-size="17" font-weight="700" letter-spacing="2.2" fill="#7EAEB7">LONG-RUN TASK LOOP</text>
+    <path d="M16 50H446" stroke="#4D7983" stroke-width="3" stroke-dasharray="5 8"/>
+    <g>
+      <circle cx="16" cy="50" r="15" fill="#36E2CE"/><text x="16" y="56" text-anchor="middle" font-size="15" font-weight="800" fill="#06202A">1</text>
+      <circle cx="158" cy="50" r="15" fill="#36E2CE"/><text x="158" y="56" text-anchor="middle" font-size="15" font-weight="800" fill="#06202A">2</text>
+      <circle cx="302" cy="50" r="15" fill="#36E2CE"/><text x="302" y="56" text-anchor="middle" font-size="15" font-weight="800" fill="#06202A">3</text>
+      <circle cx="446" cy="50" r="15" fill="#80F7A4"/><text x="446" y="56" text-anchor="middle" font-size="15" font-weight="800" fill="#06202A">4</text>
+    </g>
+    <g font-size="18" font-weight="700" fill="#E4F2F4">
+      <text x="16" y="93" text-anchor="middle">PLAN</text>
+      <text x="158" y="93" text-anchor="middle">CODE</text>
+      <text x="302" y="93" text-anchor="middle">TEST</text>
+      <text x="446" y="93" text-anchor="middle">VERIFY</text>
+    </g>
+  </g>
+
+  <g font-family="Arial, Helvetica, sans-serif">
+    <text x="586" y="226" font-size="17" font-weight="700" letter-spacing="2.4" fill="#7EAEB7">SELECTED RESULTS · READ EACH BENCHMARK SEPARATELY</text>
+    <g transform="translate(586 252)">
+      <path d="M0 20Q0 0 20 0H438Q458 0 458 20V204Q458 224 438 224H20Q0 224 0 204Z" fill="#102B39" stroke="#315867"/>
+      <text x="24" y="37" font-size="18" font-weight="700" fill="#F4FBFC">CursorBench 4.0</text>
+      <text x="434" y="37" text-anchor="end" font-size="14" fill="#88ABB3">SCORE (%)</text>
+      <text x="24" y="82" font-size="15" fill="#AFC7CD">Grok 4.7</text>
+      <rect x="132" y="63" width="267" height="26" rx="13" fill="#183E4B"/>
+      <rect x="132" y="63" width="247" height="26" rx="13" fill="url(#barA)"/>
+      <text x="414" y="83" font-size="21" font-weight="800" fill="#80F7A4">46.3</text>
+      <text x="24" y="131" font-size="15" fill="#AFC7CD">Release comparison</text>
+      <rect x="132" y="112" width="267" height="26" rx="13" fill="#183E4B"/>
+      <rect x="132" y="112" width="216" height="26" rx="13" fill="#6D8790"/>
+      <text x="414" y="132" font-size="21" font-weight="700" fill="#BCD0D4">40.4</text>
+      <path d="M24 164H434" stroke="#31515D"/>
+      <text x="24" y="192" font-size="14" fill="#789BA4">Comparison reproduced as reported in the release</text>
+    </g>
+    <g transform="translate(1062 252)">
+      <path d="M0 20Q0 0 20 0H454Q474 0 474 20V204Q474 224 454 224H20Q0 224 0 204Z" fill="#102B39" stroke="#315867"/>
+      <text x="24" y="37" font-size="18" font-weight="700" fill="#F4FBFC">DeepSWE v1.1</text>
+      <text x="450" y="37" text-anchor="end" font-size="14" fill="#88ABB3">HIGH EFFORT · SCORE (%)</text>
+      <path d="M45 173A86 86 0 0 1 217 173" fill="none" stroke="#1F4654" stroke-width="22" stroke-linecap="round"/>
+      <path d="M45 173A86 86 0 0 1 188 109" fill="none" stroke="#36E2CE" stroke-width="22" stroke-linecap="round"/>
+      <circle cx="188" cy="109" r="6" fill="#F4FBFC"/>
+      <text x="131" y="163" text-anchor="middle" font-size="50" font-weight="800" fill="#F4FBFC">71.0</text>
+      <text x="278" y="104" font-size="16" fill="#AFC7CD">Software-engineering</text>
+      <text x="278" y="128" font-size="16" fill="#AFC7CD">task benchmark</text>
+      <text x="278" y="169" font-size="14" fill="#789BA4">Independent scale</text>
+      <text x="278" y="191" font-size="14" fill="#789BA4">and test set</text>
+    </g>
+    <g transform="translate(586 494)">
+      <path d="M0 20Q0 0 20 0H438Q458 0 458 20V204Q458 224 438 224H20Q0 224 0 204Z" fill="#102B39" stroke="#315867"/>
+      <text x="24" y="37" font-size="18" font-weight="700" fill="#F4FBFC">AA Briefcase v1.1</text>
+      <text x="434" y="37" text-anchor="end" font-size="14" fill="#88ABB3">REPORTED SCORE</text>
+      <g transform="translate(35 73)">
+        <rect x="0" y="20" width="112" height="82" rx="12" fill="#173E4B" stroke="#4E8791"/>
+        <path d="M32 20V7Q32 0 40 0H72Q80 0 80 7V20" fill="none" stroke="#80F7A4" stroke-width="7"/>
+        <path d="M0 50H112" stroke="#4E8791"/>
+        <rect x="48" y="45" width="16" height="11" rx="3" fill="#80F7A4"/>
+      </g>
+      <text x="186" y="136" font-size="64" font-weight="800" fill="#80F7A4">1,657</text>
+      <text x="188" y="166" font-size="15" fill="#AFC7CD">A task-specific point total</text>
+      <text x="188" y="191" font-size="14" fill="#789BA4">Not comparable with percentages</text>
+    </g>
+    <g transform="translate(1062 494)">
+      <path d="M0 20Q0 0 20 0H454Q474 0 474 20V204Q474 224 454 224H20Q0 224 0 204Z" fill="#102B39" stroke="#315867"/>
+      <text x="24" y="37" font-size="18" font-weight="700" fill="#F4FBFC">Terminal-Bench 4.0</text>
+      <text x="450" y="37" text-anchor="end" font-size="14" fill="#88ABB3">SCORE (%)</text>
+      <rect x="24" y="60" width="426" height="118" rx="10" fill="#06151D" stroke="#284957"/>
+      <circle cx="45" cy="80" r="5" fill="#FF6B72"/>
+      <circle cx="62" cy="80" r="5" fill="#FFCA5C"/>
+      <circle cx="79" cy="80" r="5" fill="#80F7A4"/>
+      <text x="43" y="119" font-family="Courier New, monospace" font-size="16" fill="#72E7D4">$ run agent-eval --terminal</text>
+      <rect x="43" y="137" width="263" height="14" rx="7" fill="#183E4B"/>
+      <rect x="43" y="137" width="100" height="14" rx="7" fill="#36E2CE"/>
+      <text x="425" y="151" text-anchor="end" font-size="35" font-weight="800" fill="#F4FBFC">38.0%</text>
+      <text x="24" y="204" font-size="14" fill="#789BA4">A separate benchmark population and scoring setup</text>
+    </g>
+  </g>
+
+  <g font-family="Arial, Helvetica, sans-serif">
+    <rect x="586" y="744" width="950" height="62" rx="14" fill="#FFCA5C"/>
+    <text x="612" y="771" font-size="17" font-weight="800" fill="#3A2B08">DO NOT RANK ACROSS PANELS</text>
+    <text x="612" y="792" font-size="15" fill="#513B08">Different tasks, datasets and scoring rules make the four headline numbers non-equivalent.</text>
+    <text x="64" y="866" font-size="16" fill="#789BA4">UGA LLM Lab factual graphic · Sources: SpaceXAI release and documentation · Benchmark values are vendor-reported, not independent verification.</text>
+  </g>
+</svg>

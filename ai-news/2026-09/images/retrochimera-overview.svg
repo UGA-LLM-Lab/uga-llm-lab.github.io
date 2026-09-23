@@ -1,0 +1,79 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="900" viewBox="0 0 1600 900" role="img" aria-labelledby="title desc">
+  <title id="title">RetroChimera complementary retrosynthesis workflow</title>
+  <desc id="desc">An explanatory schematic showing a target molecule entering R-SMILES 2 and NeuralLoc, two distinct candidate-generation paths, followed by learned voting and a ranked retrosynthesis route.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#F8FBF7"/><stop offset="1" stop-color="#EEF5F3"/></linearGradient>
+    <linearGradient id="sequenceWash" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#DCF5EF"/><stop offset="1" stop-color="#CDEAE8"/></linearGradient>
+    <linearGradient id="graphWash" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#FFF0D7"/><stop offset="1" stop-color="#F6DFD0"/></linearGradient>
+    <radialGradient id="voteGlow" cx="50%" cy="45%" r="60%"><stop offset="0" stop-color="#FFFFFF"/><stop offset="1" stop-color="#DCE8E5"/></radialGradient>
+    <pattern id="grid" width="44" height="44" patternUnits="userSpaceOnUse"><path d="M44 0H0V44" fill="none" stroke="#193934" stroke-width="1" opacity="0.045"/></pattern>
+    <filter id="softShadow" x="-20%" y="-20%" width="140%" height="150%">
+      <feGaussianBlur in="SourceAlpha" stdDeviation="12" result="blur"/>
+      <feOffset in="blur" dx="0" dy="10" result="offsetBlur"/>
+      <feFlood flood-color="#173C36" flood-opacity="0.12" result="shadowColor"/>
+      <feComposite in="shadowColor" in2="offsetBlur" operator="in" result="shadow"/>
+      <feMerge><feMergeNode in="shadow"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <marker id="arrowDark" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto" markerUnits="strokeWidth"><path d="M0 0L10 5L0 10Z" fill="#244844"/></marker>
+    <marker id="arrowTeal" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto" markerUnits="strokeWidth"><path d="M0 0L10 5L0 10Z" fill="#198A7A"/></marker>
+    <marker id="arrowAmber" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto" markerUnits="strokeWidth"><path d="M0 0L10 5L0 10Z" fill="#C9783B"/></marker>
+  </defs>
+  <rect width="1600" height="900" fill="url(#bg)"/><rect width="1600" height="900" fill="url(#grid)"/>
+  <circle cx="1510" cy="55" r="190" fill="#A6D6CF" opacity="0.15"/><circle cx="30" cy="890" r="190" fill="#F1C798" opacity="0.14"/>
+  <g font-family="Inter, Arial, Helvetica, sans-serif">
+    <text x="82" y="82" font-size="18" font-weight="700" letter-spacing="2.8" fill="#198A7A">RETROSYNTHESIS • EXPLANATORY SCHEMATIC</text>
+    <text x="82" y="139" font-size="48" font-weight="750" fill="#173732">Two proposal systems, one learned ranking</text>
+    <text x="82" y="178" font-size="23" fill="#4E6864">RetroChimera combines complementary candidate paths before selecting a route.</text>
+    <text x="82" y="258" font-size="16" font-weight="700" letter-spacing="1.8" fill="#687D79">TARGET</text>
+    <text x="430" y="258" font-size="16" font-weight="700" letter-spacing="1.8" fill="#687D79">CANDIDATE GENERATION</text>
+    <text x="878" y="258" font-size="16" font-weight="700" letter-spacing="1.8" fill="#687D79">LEARNED VOTING</text>
+    <text x="1198" y="258" font-size="16" font-weight="700" letter-spacing="1.8" fill="#687D79">RANKED ROUTE</text>
+  </g>
+  <!-- Abstract target molecule -->
+  <g filter="url(#softShadow)"><circle cx="176" cy="472" r="104" fill="#FFFFFF" stroke="#C9D9D5" stroke-width="2"/></g>
+  <g fill="none" stroke="#234943" stroke-width="7" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M127 444L151 403H199L223 444L199 486H151Z"/><path d="M151 403L139 374"/><path d="M223 444L252 455"/><path d="M151 486L140 516"/>
+    <path d="M141 426L158 415M195 415L211 442M195 474L158 474" stroke-width="3.5" opacity="0.55"/>
+  </g>
+  <g font-family="Inter, Arial, Helvetica, sans-serif" text-anchor="middle"><text x="176" y="591" font-size="19" font-weight="700" fill="#173732">Target structure</text><text x="176" y="618" font-size="15" fill="#647873">abstract molecule</text></g>
+  <path d="M280 455C330 455 338 353 396 353" fill="none" stroke="#198A7A" stroke-width="5" marker-end="url(#arrowTeal)"/>
+  <path d="M280 489C330 489 338 593 396 593" fill="none" stroke="#C9783B" stroke-width="5" marker-end="url(#arrowAmber)"/>
+  <!-- R-SMILES 2 sequence lane -->
+  <path d="M408 295C502 276 692 278 804 311C836 320 849 348 834 376C816 410 741 424 643 416C548 409 446 430 407 392C380 366 383 311 408 295Z" fill="url(#sequenceWash)" stroke="#91CFC5" stroke-width="2"/>
+  <g font-family="Inter, Arial, Helvetica, sans-serif"><text x="430" y="330" font-size="25" font-weight="750" fill="#116D61">R-SMILES 2</text><text x="430" y="359" font-size="16" fill="#3F6B64">sequence-based proposals</text></g>
+  <g transform="translate(430 377)"><rect x="0" y="0" width="34" height="18" rx="9" fill="#198A7A"/><rect x="43" y="0" width="26" height="18" rx="9" fill="#56AFA1"/><rect x="78" y="0" width="42" height="18" rx="9" fill="#198A7A" opacity="0.7"/><rect x="129" y="0" width="22" height="18" rx="9" fill="#56AFA1"/><rect x="160" y="0" width="39" height="18" rx="9" fill="#198A7A" opacity="0.82"/></g>
+  <path d="M650 354C688 354 701 354 730 354" fill="none" stroke="#198A7A" stroke-width="3" stroke-dasharray="7 7" marker-end="url(#arrowTeal)"/>
+  <g transform="translate(771 354)" fill="none" stroke="#147A6D" stroke-width="4" stroke-linejoin="round"><path d="M-29 0L-14-26H16L31 0L16 26H-14Z"/><path d="M31 0L52-12"/><circle cx="58" cy="-16" r="6" fill="#147A6D" stroke="none"/></g>
+  <!-- NeuralLoc graph lane -->
+  <path d="M407 536C466 505 568 526 655 520C752 513 817 529 838 567C855 598 833 637 797 650C694 686 533 660 433 669C393 673 373 625 382 583C386 562 394 543 407 536Z" fill="url(#graphWash)" stroke="#E3B07A" stroke-width="2"/>
+  <g font-family="Inter, Arial, Helvetica, sans-serif"><text x="430" y="574" font-size="25" font-weight="750" fill="#9A552A">NeuralLoc</text><text x="430" y="603" font-size="16" fill="#7C604E">graph-based proposals</text></g>
+  <g transform="translate(548 605)" stroke="#C9783B" stroke-width="3" fill="#FFF9F1"><path d="M0 0L45-22L88 5L130-25L172 3" fill="none"/><circle cx="0" cy="0" r="10"/><circle cx="45" cy="-22" r="10"/><circle cx="88" cy="5" r="10"/><circle cx="130" cy="-25" r="10"/><circle cx="172" cy="3" r="10"/></g>
+  <path d="M744 596C758 585 770 582 787 583" fill="none" stroke="#C9783B" stroke-width="3" stroke-dasharray="7 7" marker-end="url(#arrowAmber)"/>
+  <g transform="translate(810 594)" fill="none" stroke="#B86531" stroke-width="4" stroke-linejoin="round"><path d="M-18 0L-7-19H15L26 0L15 19H-7Z"/><path d="M26 0L43 12"/></g>
+  <path d="M837 361C892 365 892 400 918 420" fill="none" stroke="#198A7A" stroke-width="5" marker-end="url(#arrowTeal)"/>
+  <path d="M842 597C892 587 893 540 918 518" fill="none" stroke="#C9783B" stroke-width="5" marker-end="url(#arrowAmber)"/>
+  <!-- Learned voting core -->
+  <g filter="url(#softShadow)"><circle cx="1000" cy="470" r="108" fill="url(#voteGlow)" stroke="#AFC4BF" stroke-width="2"/><circle cx="1000" cy="470" r="77" fill="#FFFFFF" stroke="#D6E2DF" stroke-width="2" stroke-dasharray="5 6"/></g>
+  <g fill="#198A7A"><circle cx="957" cy="377" r="9"/><circle cx="1046" cy="383" r="7"/><circle cx="1094" cy="444" r="10"/></g>
+  <g fill="#C9783B"><circle cx="1090" cy="510" r="8"/><circle cx="1039" cy="558" r="10"/><circle cx="944" cy="551" r="7"/></g>
+  <g font-family="Inter, Arial, Helvetica, sans-serif" text-anchor="middle"><text x="1000" y="450" font-size="17" font-weight="700" letter-spacing="1.8" fill="#617671">LEARNED</text><text x="1000" y="484" font-size="28" font-weight="800" fill="#173732">VOTING</text><text x="1000" y="512" font-size="14" fill="#687D79">compare + combine</text></g>
+  <!-- Ranked route tree -->
+  <path d="M1108 470H1194" fill="none" stroke="#244844" stroke-width="6" marker-end="url(#arrowDark)"/>
+  <g transform="translate(1243 470)" fill="none" stroke="#244844" stroke-width="4" stroke-linejoin="round"><path d="M-30 0L-15-26H15L30 0L15 26H-15Z"/></g>
+  <path d="M1273 470C1321 470 1305 380 1360 380" fill="none" stroke="#244844" stroke-width="6"/>
+  <path d="M1273 470C1321 470 1305 560 1360 560" fill="none" stroke="#8CA29E" stroke-width="3" stroke-dasharray="8 8"/>
+  <g transform="translate(1396 380)" fill="none" stroke="#244844" stroke-width="4" stroke-linejoin="round"><path d="M-26 0L-13-22H13L26 0L13 22H-13Z"/><path d="M26 0L44-12"/></g>
+  <g transform="translate(1396 560)" fill="none" stroke="#8CA29E" stroke-width="3" stroke-linejoin="round" opacity="0.78"><path d="M-25 0L-12-21H12L25 0L12 21H-12Z"/></g>
+  <path d="M1440 368C1470 349 1481 335 1504 321" fill="none" stroke="#244844" stroke-width="5"/><path d="M1440 391C1473 410 1484 423 1507 437" fill="none" stroke="#244844" stroke-width="5"/>
+  <g fill="#FFFFFF" stroke="#244844" stroke-width="3"><circle cx="1523" cy="310" r="18"/><circle cx="1524" cy="447" r="18"/></g>
+  <path d="M1514 310H1532M1523 301V319" stroke="#244844" stroke-width="3"/><path d="M1515 447H1533" stroke="#244844" stroke-width="3"/>
+  <g font-family="Inter, Arial, Helvetica, sans-serif"><g transform="translate(1307 324)"><rect width="118" height="34" rx="17" fill="#173732"/><text x="59" y="23" text-anchor="middle" font-size="15" font-weight="700" fill="#FFFFFF">TOP ROUTE</text></g><text x="1336" y="612" font-size="15" fill="#7A8D89">lower-ranked alternative</text></g>
+  <!-- Reading key and provenance -->
+  <g font-family="Inter, Arial, Helvetica, sans-serif">
+    <line x1="82" y1="744" x2="1518" y2="744" stroke="#C5D5D1" stroke-width="2"/>
+    <circle cx="98" cy="790" r="8" fill="#198A7A"/><text x="118" y="796" font-size="17" fill="#4C6661">R-SMILES 2 proposal path</text>
+    <circle cx="380" cy="790" r="8" fill="#C9783B"/><text x="400" y="796" font-size="17" fill="#4C6661">NeuralLoc proposal path</text>
+    <path d="M688 790H728" stroke="#244844" stroke-width="5" marker-end="url(#arrowDark)"/><text x="748" y="796" font-size="17" fill="#4C6661">selected synthesis direction</text>
+    <text x="82" y="848" font-size="16" fill="#6D817D">UGA LLM Lab explanatory schematic • Conceptual pathway only • Not an original paper figure or a specific chemical reaction</text>
+  </g>
+</svg>

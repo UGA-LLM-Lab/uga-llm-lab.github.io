@@ -1,0 +1,175 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="900" viewBox="0 0 1600 900" role="img" aria-labelledby="title desc">
+  <title id="title">Power and liquid cooling paths in an AI data center</title>
+  <desc id="desc">Industrial blueprint showing battery energy storage feeding power distribution and AI racks, while a cooling distribution unit circulates liquid through the racks. A dashed green boundary marks the equipment categories covered by DSX Ready qualification; site engineering remains outside that boundary.</desc>
+  <defs>
+    <pattern id="minorGrid" width="24" height="24" patternUnits="userSpaceOnUse">
+      <path d="M24 0H0V24" fill="none" stroke="#123651" stroke-width="1"/>
+    </pattern>
+    <pattern id="majorGrid" width="120" height="120" patternUnits="userSpaceOnUse">
+      <rect width="120" height="120" fill="url(#minorGrid)"/>
+      <path d="M120 0H0V120" fill="none" stroke="#1B4967" stroke-width="1.5"/>
+    </pattern>
+    <linearGradient id="panelGlow" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#0E2B42"/>
+      <stop offset="1" stop-color="#081B2C"/>
+    </linearGradient>
+    <linearGradient id="batteryFill" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#153F55"/>
+      <stop offset="1" stop-color="#0A263B"/>
+    </linearGradient>
+    <linearGradient id="rackFill" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#14374D"/>
+      <stop offset="1" stop-color="#071B2A"/>
+    </linearGradient>
+    <filter id="softGlow" x="-25%" y="-25%" width="150%" height="150%">
+      <feGaussianBlur stdDeviation="5" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+    <marker id="arrowCyan" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto" markerUnits="strokeWidth">
+      <path d="M1 1L11 6L1 11Z" fill="#47D7FF"/>
+    </marker>
+    <marker id="arrowBlue" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto" markerUnits="strokeWidth">
+      <path d="M1 1L11 6L1 11Z" fill="#5DA8FF"/>
+    </marker>
+    <marker id="arrowReturn" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto" markerUnits="strokeWidth">
+      <path d="M1 1L11 6L1 11Z" fill="#2AAECA"/>
+    </marker>
+  </defs>
+
+  <rect width="1600" height="900" fill="#061725"/>
+  <rect width="1600" height="900" fill="url(#majorGrid)" opacity="0.72"/>
+  <path d="M0 126H1600M0 787H1600" stroke="#27516C" stroke-width="1" opacity="0.75"/>
+
+  <g font-family="Arial, Helvetica, sans-serif">
+    <text x="84" y="66" font-size="18" font-weight="700" letter-spacing="4" fill="#47D7FF">AI DATA CENTER SYSTEM MAP</text>
+    <text x="84" y="107" font-size="28" font-weight="700" fill="#F2F8FB">Power delivery and liquid cooling are two connected engineering paths</text>
+    <text x="1516" y="65" text-anchor="end" font-size="16" fill="#9AB7C7">REFERENCE LOGIC · NOT TO SCALE</text>
+    <text x="1516" y="95" text-anchor="end" font-size="16" fill="#789CAF">DSX READY · INITIAL EQUIPMENT CATEGORIES</text>
+
+    <!-- DSX Ready equipment qualification boundary -->
+    <path d="M60 170Q60 150 80 150H472Q492 150 492 170V706Q492 726 472 726H80Q60 726 60 706Z"
+          fill="#8DD638" fill-opacity="0.035" stroke="#8DD638" stroke-width="2.5" stroke-dasharray="11 9"/>
+    <rect x="84" y="134" width="394" height="34" rx="17" fill="#102C32" stroke="#8DD638" stroke-width="1.5"/>
+    <circle cx="104" cy="151" r="6" fill="#8DD638"/>
+    <text x="120" y="158" font-size="14" font-weight="700" letter-spacing="1" fill="#C9F39C">DSX READY QUALIFICATION BOUNDARY</text>
+    <text x="86" y="754" font-size="15" fill="#AED181">Equipment-category qualification</text>
+    <text x="86" y="775" font-size="15" fill="#749A62">BESS + CDU products shown inside</text>
+
+    <!-- Battery energy storage system -->
+    <g transform="translate(104 202)">
+      <rect width="340" height="212" rx="14" fill="url(#panelGlow)" stroke="#56B7D7" stroke-width="2"/>
+      <text x="22" y="35" font-size="14" font-weight="700" letter-spacing="2.5" fill="#8AB8CC">POWER INPUT</text>
+      <text x="22" y="65" font-size="23" font-weight="700" fill="#F1F8FB">Battery energy storage</text>
+      <text x="22" y="89" font-size="15" fill="#8FB0C0">BESS equipment category</text>
+      <g transform="translate(24 113)">
+        <rect width="76" height="70" rx="5" fill="url(#batteryFill)" stroke="#47D7FF" stroke-width="2"/>
+        <rect x="28" y="-7" width="20" height="7" rx="2" fill="#47D7FF"/>
+        <path d="M39 13L25 40H39L31 58L55 31H41L50 13Z" fill="#8DD638"/>
+        <rect x="112" width="76" height="70" rx="5" fill="url(#batteryFill)" stroke="#47D7FF" stroke-width="2"/>
+        <rect x="140" y="-7" width="20" height="7" rx="2" fill="#47D7FF"/>
+        <path d="M151 13L137 40H151L143 58L167 31H153L162 13Z" fill="#8DD638"/>
+        <rect x="224" width="76" height="70" rx="5" fill="url(#batteryFill)" stroke="#47D7FF" stroke-width="2"/>
+        <rect x="252" y="-7" width="20" height="7" rx="2" fill="#47D7FF"/>
+        <path d="M263 13L249 40H263L255 58L279 31H265L274 13Z" fill="#8DD638"/>
+      </g>
+    </g>
+
+    <!-- Cooling distribution unit -->
+    <g transform="translate(104 470)">
+      <rect width="340" height="212" rx="14" fill="url(#panelGlow)" stroke="#56B7D7" stroke-width="2"/>
+      <text x="22" y="35" font-size="14" font-weight="700" letter-spacing="2.5" fill="#8AB8CC">THERMAL INPUT</text>
+      <text x="22" y="65" font-size="23" font-weight="700" fill="#F1F8FB">Cooling distribution unit</text>
+      <text x="22" y="89" font-size="15" fill="#8FB0C0">CDU equipment category</text>
+      <g transform="translate(22 112)">
+        <rect width="296" height="71" rx="8" fill="#0B2638" stroke="#47D7FF" stroke-width="2"/>
+        <circle cx="49" cy="36" r="22" fill="none" stroke="#47D7FF" stroke-width="2"/>
+        <circle cx="49" cy="36" r="6" fill="#47D7FF"/>
+        <path d="M49 14C64 22 65 31 49 36M71 36C63 51 54 52 49 36M49 58C34 50 33 41 49 36M27 36C35 21 44 20 49 36" fill="none" stroke="#5DA8FF" stroke-width="3"/>
+        <path d="M91 25H199M91 47H199" stroke="#2AAECA" stroke-width="4"/>
+        <path d="M218 24H275M218 48H275" stroke="#47D7FF" stroke-width="4"/>
+        <circle cx="207" cy="25" r="5" fill="#2AAECA"/>
+        <circle cx="207" cy="47" r="5" fill="#47D7FF"/>
+      </g>
+    </g>
+
+    <!-- power distribution -->
+    <g transform="translate(586 222)">
+      <rect width="302" height="175" rx="10" fill="#0B2234" stroke="#5DA8FF" stroke-width="2"/>
+      <text x="22" y="33" font-size="14" font-weight="700" letter-spacing="2.3" fill="#76AEEF">SITE POWER SYSTEM</text>
+      <text x="22" y="64" font-size="22" font-weight="700" fill="#F1F8FB">Power distribution</text>
+      <g transform="translate(24 87)">
+        <path d="M0 12H58M58 12V66M58 38H125M125 12V66M125 38H192M192 12V66M192 38H252" fill="none" stroke="#5DA8FF" stroke-width="3"/>
+        <circle cx="58" cy="38" r="8" fill="#0B2234" stroke="#8CC4FF" stroke-width="2"/>
+        <circle cx="125" cy="38" r="8" fill="#0B2234" stroke="#8CC4FF" stroke-width="2"/>
+        <circle cx="192" cy="38" r="8" fill="#0B2234" stroke="#8CC4FF" stroke-width="2"/>
+        <path d="M50 56L66 72M117 56L133 72M184 56L200 72" stroke="#5DA8FF" stroke-width="2"/>
+      </g>
+    </g>
+
+    <!-- AI rack hall -->
+    <g transform="translate(1040 195)">
+      <text x="0" y="0" font-size="14" font-weight="700" letter-spacing="2.5" fill="#8AB8CC">COMPUTE LOAD</text>
+      <text x="0" y="34" font-size="25" font-weight="700" fill="#F1F8FB">AI rack row</text>
+      <text x="0" y="60" font-size="15" fill="#8FB0C0">Electrical load + direct liquid cooling</text>
+      <g transform="translate(0 87)">
+        <g>
+          <rect width="132" height="328" rx="8" fill="url(#rackFill)" stroke="#5DA8FF" stroke-width="2"/>
+          <rect x="14" y="18" width="104" height="270" rx="4" fill="#071926" stroke="#2A5977"/>
+          <g fill="#153B52" stroke="#47D7FF" stroke-width="1"><rect x="23" y="31" width="86" height="35" rx="3"/><rect x="23" y="76" width="86" height="35" rx="3"/><rect x="23" y="121" width="86" height="35" rx="3"/><rect x="23" y="166" width="86" height="35" rx="3"/><rect x="23" y="211" width="86" height="35" rx="3"/><rect x="23" y="256" width="86" height="21" rx="3"/></g>
+          <g fill="#8DD638"><circle cx="96" cy="48" r="3"/><circle cx="96" cy="93" r="3"/><circle cx="96" cy="138" r="3"/><circle cx="96" cy="183" r="3"/><circle cx="96" cy="228" r="3"/></g>
+          <text x="66" y="313" text-anchor="middle" font-size="13" fill="#8FB0C0">RACK A</text>
+        </g>
+        <g transform="translate(160)">
+          <rect width="132" height="328" rx="8" fill="url(#rackFill)" stroke="#5DA8FF" stroke-width="2"/>
+          <rect x="14" y="18" width="104" height="270" rx="4" fill="#071926" stroke="#2A5977"/>
+          <g fill="#153B52" stroke="#47D7FF" stroke-width="1"><rect x="23" y="31" width="86" height="35" rx="3"/><rect x="23" y="76" width="86" height="35" rx="3"/><rect x="23" y="121" width="86" height="35" rx="3"/><rect x="23" y="166" width="86" height="35" rx="3"/><rect x="23" y="211" width="86" height="35" rx="3"/><rect x="23" y="256" width="86" height="21" rx="3"/></g>
+          <g fill="#8DD638"><circle cx="96" cy="48" r="3"/><circle cx="96" cy="93" r="3"/><circle cx="96" cy="138" r="3"/><circle cx="96" cy="183" r="3"/><circle cx="96" cy="228" r="3"/></g>
+          <text x="66" y="313" text-anchor="middle" font-size="13" fill="#8FB0C0">RACK B</text>
+        </g>
+        <g transform="translate(320)">
+          <rect width="132" height="328" rx="8" fill="url(#rackFill)" stroke="#5DA8FF" stroke-width="2"/>
+          <rect x="14" y="18" width="104" height="270" rx="4" fill="#071926" stroke="#2A5977"/>
+          <g fill="#153B52" stroke="#47D7FF" stroke-width="1"><rect x="23" y="31" width="86" height="35" rx="3"/><rect x="23" y="76" width="86" height="35" rx="3"/><rect x="23" y="121" width="86" height="35" rx="3"/><rect x="23" y="166" width="86" height="35" rx="3"/><rect x="23" y="211" width="86" height="35" rx="3"/><rect x="23" y="256" width="86" height="21" rx="3"/></g>
+          <g fill="#8DD638"><circle cx="96" cy="48" r="3"/><circle cx="96" cy="93" r="3"/><circle cx="96" cy="138" r="3"/><circle cx="96" cy="183" r="3"/><circle cx="96" cy="228" r="3"/></g>
+          <text x="66" y="313" text-anchor="middle" font-size="13" fill="#8FB0C0">RACK C</text>
+        </g>
+      </g>
+    </g>
+
+    <!-- electrical path -->
+    <path d="M444 307H553" fill="none" stroke="#5DA8FF" stroke-width="6" marker-end="url(#arrowBlue)" filter="url(#softGlow)"/>
+    <path d="M888 309H985V345H1020" fill="none" stroke="#5DA8FF" stroke-width="6" marker-end="url(#arrowBlue)" filter="url(#softGlow)"/>
+    <text x="502" y="287" text-anchor="middle" font-size="14" font-weight="700" fill="#95C7FF">STORED ENERGY</text>
+    <text x="953" y="289" text-anchor="middle" font-size="14" font-weight="700" fill="#95C7FF">CONDITIONED POWER</text>
+
+    <!-- supply and return liquid paths -->
+    <path d="M444 548H932Q964 548 964 516V470Q964 442 992 442H1020" fill="none" stroke="#47D7FF" stroke-width="7" marker-end="url(#arrowCyan)" filter="url(#softGlow)"/>
+    <text x="713" y="529" text-anchor="middle" font-size="14" font-weight="700" fill="#75E6FF">COOLED SUPPLY</text>
+    <path d="M1020 585H986Q948 585 948 623V647Q948 664 928 664H444" fill="none" stroke="#2AAECA" stroke-width="5" stroke-dasharray="13 8" marker-end="url(#arrowReturn)"/>
+    <text x="713" y="688" text-anchor="middle" font-size="14" font-weight="700" fill="#68C5D7">WARM RETURN</text>
+
+    <!-- Site engineering annotation -->
+    <path d="M523 171V707" stroke="#F0B35A" stroke-width="2" stroke-dasharray="4 8" opacity="0.8"/>
+    <rect x="546" y="703" width="872" height="62" rx="10" fill="#251F19" stroke="#F0B35A" stroke-width="1.5"/>
+    <circle cx="575" cy="734" r="8" fill="#F0B35A"/>
+    <text x="598" y="728" font-size="16" font-weight="700" fill="#FFD397">SITE ENGINEERING REMAINS OUTSIDE QUALIFICATION</text>
+    <text x="598" y="750" font-size="14" fill="#C9B69D">System integration, controls, topology, safety studies and site-level performance still require project-specific engineering.</text>
+
+    <!-- legend/footer -->
+    <g transform="translate(84 832)">
+      <line x1="0" y1="0" x2="44" y2="0" stroke="#5DA8FF" stroke-width="6"/>
+      <text x="57" y="6" font-size="15" fill="#A8C3D1">Electrical path</text>
+      <line x1="205" y1="0" x2="249" y2="0" stroke="#47D7FF" stroke-width="7"/>
+      <text x="262" y="6" font-size="15" fill="#A8C3D1">Cooled supply</text>
+      <line x1="421" y1="0" x2="465" y2="0" stroke="#2AAECA" stroke-width="5" stroke-dasharray="10 6"/>
+      <text x="478" y="6" font-size="15" fill="#A8C3D1">Warm return</text>
+      <line x1="640" y1="0" x2="684" y2="0" stroke="#8DD638" stroke-width="2.5" stroke-dasharray="9 7"/>
+      <text x="697" y="6" font-size="15" fill="#A8C3D1">Qualified category boundary</text>
+    </g>
+    <text x="1516" y="840" text-anchor="end" font-size="14" fill="#69899B">UGA LLM Lab explanatory graphic · based on the NVIDIA DSX Ready announcement</text>
+    <text x="1516" y="866" text-anchor="end" font-size="13" fill="#527187">Qualification maps equipment to applicable reference-design requirements; it is not complete-site certification.</text>
+  </g>
+</svg>

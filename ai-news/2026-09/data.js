@@ -11,6 +11,325 @@ window.AI_NEWS_MONTH_DATA = window.AI_NEWS_MONTH_DATA || {};
 window.AI_NEWS_MONTH_DATA["2026-09"] = {
   label: "September 2026",
   articles: [
+{
+      "slug": "openai-gpt6-sol-luna",
+      "category": "Models · AI Agents",
+      "sortDate": "2026-09-22",
+      "dateLabel": "September 22, 2026",
+      "title": "OpenAI launches GPT-6 Sol and Luna with 50% lower API prices and stronger agent performance",
+      "summary": "OpenAI’s GPT-6 Sol and Luna bring parts of the GPT-6 Astra training stack to faster, cheaper models. API prices fall to $2/$10 per million input/output tokens for Sol and $0.10/$0.50 for Luna, while new caching controls target long-running agents and repeated context.",
+      "image": {
+        "src": "ai-news/2026-09/images/openai-gpt6-sol-luna-pricing.svg",
+        "alt": "Factual graphic comparing the published API prices and intended roles of OpenAI GPT-6 Sol and GPT-6 Luna",
+        "caption": "UGA LLM Lab graphic based on OpenAI’s September 22 launch data. Prices are per one million API tokens; benchmark results in the article are vendor-reported unless otherwise noted."
+      },
+      "content": [
+        {
+          "type": "paragraph",
+          "text": "OpenAI released GPT-6 Sol and GPT-6 Luna on September 22, extending the GPT-6 family beyond the higher-cost Astra model introduced earlier this month. Sol is positioned for difficult coding, computer-use and professional workflows that do not require Astra’s full capability, while Luna is the smaller, cheaper model for high-volume work. Both are available through the API as gpt-6-sol and gpt-6-luna and are beginning to roll out in ChatGPT Work and Codex."
+        },
+        {
+          "type": "paragraph",
+          "text": "The clearest change is price. OpenAI lists Sol at $2 per million input tokens and $10 per million output tokens, half the promotional prices of GPT-5.6 Sol. Luna costs $0.10 for input and $0.50 for output, down from $0.20 and $1.20. Cached input reads receive a 90% discount. That matters for agents because long-running work repeatedly sends instructions, repository context and tool histories back to the model; reducing the amount that must be processed again can matter as much as the headline token rate."
+        },
+        {
+          "type": "heading",
+          "text": "The launch is built around cost per completed task"
+        },
+        {
+          "type": "paragraph",
+          "text": "OpenAI’s evidence focuses less on isolated question answering and more on end-to-end work. On AutomationBench 1.0.6, which exercises 47 tools across business functions, GPT-6 Sol at xhigh effort scored 33.2% at a reported $0.27 per task. The company’s comparison table puts GPT-6 Astra at low effort at 30.3% and 3.9 times the cost, while Claude Opus 5 at max effort scored 26.9% at 11.1 times the cost. These are benchmark-specific comparisons, not proof that Sol is cheaper or better for every production workflow."
+        },
+        {
+          "type": "paragraph",
+          "text": "The coding results tell a similar story. OpenAI reports 68.8% for Sol at maximum effort on DeepSWE v1.1, within 1.1 percentage points of the Claude Fable 5 result shown in the same evaluation, at roughly 80% lower cost per task. Luna reached 66.6% at maximum effort. On OSWorld 2.0 offline, Sol scored 60.5% for computer-use tasks, nearly level with the 60.3% comparison reported for Claude Opus 5 at medium effort. Different models, tools and effort settings complicate direct ranking, so the useful signal is the effort to move frontier-style agent behavior into lower price tiers."
+        },
+        {
+          "type": "heading",
+          "text": "Caching becomes a product feature, not just an implementation detail"
+        },
+        {
+          "type": "paragraph",
+          "text": "The GPT-6 release adds a prompt-caching dashboard, diagnostics for missed cache opportunities and explicit breakpoints that let developers choose which prompt prefixes should be reused. Changing reasoning effort or enabling and disabling tools no longer has to invalidate the earlier cached context. OpenAI says GitHub reduced the share of prompt tokens requiring fresh processing by more than 50% across billions of requests to OpenAI models over several months, although that observation comes from one large integration and may not transfer directly to other workloads."
+        },
+        {
+          "type": "paragraph",
+          "text": "OpenAI also says Sol makes about half as many mistakes as GPT-5.6 Sol on an internal factuality set built from conversations where users flagged errors. The company cautions that those conversations are deliberately error-prone and are not representative of ordinary traffic. Its updated deployment-safety material similarly reports alignment improvements over the GPT-5.6 models while stressing that difficult evaluations do not measure typical failure rates and that changing graders and datasets can limit comparisons across releases."
+        },
+        {
+          "type": "paragraph",
+          "text": "Availability is broad but not identical across products. Plus, Pro, Business, Enterprise and Edu users can access Sol and Luna in ChatGPT Work and Codex, while Free and Go users receive Luna in the desktop app. OpenAI says the models are not yet available in the standard Chat interface and that the rollout may take time. Astra remains the company’s recommended option when capability matters more than price."
+        },
+        {
+          "type": "paragraph",
+          "text": "Sol and Luna therefore matter less as a new absolute frontier than as a distribution move. OpenAI is taking capabilities developed for Astra, pairing them with lower inference and caching costs, and putting them into tiers that can be called far more often. Whether that changes real agent economics will depend on reliability across repeated production work, not only on launch-day scores, but the price cuts make that test considerably easier for developers to run."
+        }
+      ],
+      "sources": [
+        {
+          "label": "OpenAI — Introducing GPT-6 Sol and Luna",
+          "url": "https://openai.com/index/introducing-gpt-6-sol-and-luna/"
+        },
+        {
+          "label": "OpenAI — Better prompt caching for GPT-6",
+          "url": "https://openai.com/index/better-prompt-caching-for-gpt-6/"
+        },
+        {
+          "label": "OpenAI Deployment Safety Hub — GPT-6 Sol and Luna appendix",
+          "url": "https://deploymentsafety.openai.com/gpt-6-astra#gpt-6-sol-gpt-6-luna"
+        }
+      ]
+    },
+{
+      "slug": "grok-47-coding-knowledge-work",
+      "category": "Models · Agents",
+      "sortDate": "2026-09-21",
+      "dateLabel": "September 21, 2026",
+      "title": "Grok 4.7 pushes xAI toward longer-running coding agents without raising standard API prices",
+      "summary": "SpaceXAI says Grok 4.7 uses a larger base model and longer reinforcement-learning runs on harder, multi-hour tasks. The API keeps Grok 4.6 pricing at $2 per million input tokens and $6 per million output tokens, while a 500,000-token context window and a broader Copilot rollout make the model easier to deploy for agentic coding and knowledge work.",
+      "image": {
+        "src": "ai-news/2026-09/images/grok-47-benchmark-overview.svg",
+        "alt": "Data-news graphic separating Grok 4.7 API economics, context length, long-task workflow and vendor-reported benchmark panels",
+        "caption": "A UGA LLM Lab explanatory graphic based on SpaceXAI’s release and documentation. Each benchmark keeps its own unit and scale; the panels should not be read as one composite ranking or independent verification."
+      },
+      "content": [
+        {
+          "type": "paragraph",
+          "text": "SpaceXAI released Grok 4.7 on September 21, positioning the model for coding, agentic tasks and professional knowledge work rather than as a simple chat-model refresh. The company says it moved to a larger base model than Grok 4.6 and extended reinforcement learning on a harder task mix weighted toward work that can take hours. It also says the model was trained to verify its own work more carefully, manage longer context and understand the Grok Bot harness natively."
+        },
+        {
+          "type": "paragraph",
+          "text": "The deployment details are as important as the benchmark table. SpaceXAI’s API documentation lists a 500,000-token context window, text-and-image input, text output and four reasoning settings from low through xhigh. Standard pricing starts at $2 per million input tokens and $6 per million output tokens, the same prices xAI lists for Grok 4.6. A faster variant is advertised at roughly twice the output speed and twice the price. The model is available through the xAI API and Grok Build, with third-party coding environments also adding it."
+        },
+        {
+          "type": "heading",
+          "text": "The benchmark picture is strong but not uniformly leading"
+        },
+        {
+          "type": "paragraph",
+          "text": "On SpaceXAI’s own launch table, Grok 4.7 xHigh reaches 46.3% on CursorBench 4.0, up from 40.4% for Grok 4.6. On DeepSWE v1.1 it reports 71.0% at high effort, close to the 72.7% number shown for GPT-5.6 Sol and above the 70.0% shown for Fable 5.1. Results are more mixed on other long-horizon tasks: Grok 4.7 reports 1,657 on AA Briefcase v1.1 and 38.0% on Terminal-Bench 4.0, while the same table shows Fable 5.1 at 1,678 and 57.9% respectively. That pattern makes the launch more interesting than a blanket “best model” claim: the gain appears broad over Grok 4.6, while which frontier model leads still depends on the workload."
+        },
+        {
+          "type": "paragraph",
+          "text": "SpaceXAI also published safety results, including 62.4% on LatchBio’s biosafety benchmark and a 3.3% pass-through rate for risky dual-use prompts on its HackerBench v0.3 evaluation. Those figures are vendor-reported. They are useful for documenting what xAI measured, but they do not substitute for independent red-team or deployment evidence."
+        },
+        {
+          "type": "heading",
+          "text": "Distribution is expanding beyond xAI’s own interface"
+        },
+        {
+          "type": "paragraph",
+          "text": "GitHub announced a gradual Grok 4.7 rollout in Copilot for Pro, Pro+, Max, Business and Enterprise customers. GitHub lists VS Code, Visual Studio, Copilot CLI, its cloud agent and app, JetBrains, Xcode and Eclipse as model-picker surfaces. Usage is billed at provider list pricing under GitHub’s usage-based model. This matters because coding-model competition is increasingly decided not only by raw scores but also by how readily a model can be dropped into existing repositories, terminals and agent workflows."
+        },
+        {
+          "type": "paragraph",
+          "text": "The practical question after launch is therefore durability. Multi-hour coding benchmarks are closer to the way autonomous coding agents are being used than short isolated tasks, but they still abstract away repository-specific constraints, flaky tests, human review and long production feedback loops. Grok 4.7’s larger context and training emphasis make it a credible candidate for that regime; real-world agent reliability will depend on how its gains hold up across repeated, messy software work rather than a single leaderboard snapshot."
+        }
+      ],
+      "sources": [
+        {
+          "label": "SpaceXAI — Introducing Grok 4.7",
+          "url": "https://x.ai/news/grok-4-7"
+        },
+        {
+          "label": "SpaceXAI Docs — Grok 4.7",
+          "url": "https://docs.x.ai/developers/grok-4-7"
+        },
+        {
+          "label": "GitHub Changelog — Grok 4.7 in Copilot",
+          "url": "https://github.blog/changelog/2026-09-21-grok-4-7-is-now-available-in-github-copilot/"
+        }
+      ]
+    },
+    {
+      "slug": "microsoft-retrochimera-retrosynthesis",
+      "category": "Research · AI for Science",
+      "sortDate": "2026-09-21",
+      "dateLabel": "September 21, 2026",
+      "title": "RetroChimera combines different model biases to make retrosynthesis predictions chemists prefer",
+      "summary": "A Nature paper from Microsoft Research, Novartis, GSK and collaborators introduces RetroChimera, which ensembles a de-novo Transformer and a template-grounded graph model. Expert chemists accepted complete routes for 9 of 10 challenging targets in Microsoft’s reported evaluation, and the implementation and checkpoints are now public for research use.",
+      "image": {
+        "src": "ai-news/2026-09/images/retrochimera-overview.svg",
+        "alt": "Schematic showing R-SMILES 2 and NeuralLoc proposing molecular candidates that a learned voting layer ranks into a retrosynthesis route",
+        "caption": "RetroChimera combines de-novo and template-grounded proposals before learned voting and route ranking. The molecule icons and pathway are a UGA LLM Lab explanatory schematic, not model output or an original paper figure."
+      },
+      "content": [
+        {
+          "type": "paragraph",
+          "text": "Microsoft Research and collaborators at GSK, Novartis, the University of Cambridge and other institutions published RetroChimera in Nature on September 21. The work targets a stubborn step in molecular discovery: after researchers design a potentially useful molecule, they still need a plausible route for building it from available starting materials. Retrosynthesis systems work backward from the target molecule, repeatedly proposing reactions that split it into simpler precursors until the path reaches purchasable building blocks."
+        },
+        {
+          "type": "paragraph",
+          "text": "The paper’s central design choice is to stop asking one model family to be good at every kind of chemistry. R-SMILES 2 is a Transformer-style de-novo model that can generate precursor molecules directly, giving it flexibility to learn reaction patterns beyond a fixed template library but also exposing it to hallucinated chemistry. NeuralLoc instead represents molecules and reaction templates as graphs and predicts which known template should be applied where. That constrains the search and can improve reliability, but it can also make rare or unfamiliar chemistry harder."
+        },
+        {
+          "type": "paragraph",
+          "text": "RetroChimera treats those differences as complementary inductive biases. The two systems produce ranked candidate reactions, and a learned voting mechanism decides how much to trust each model at different ranks. Microsoft reports that the de-novo component is particularly useful for reactions with large structural changes, while NeuralLoc is strong on lower-precedence and more localized transformations. The combined system is designed to approximate whichever component is stronger for a given reaction class rather than average their errors."
+        },
+        {
+          "type": "figure",
+          "src": "ai-news/2026-09/images/retrochimera-expert-evaluation.svg",
+          "alt": "Factual graphic summarizing RetroChimera expert route evaluation and limitations",
+          "caption": "Microsoft reports expert acceptance for complete routes on 9 of 10 challenging targets, versus 2–5 for the comparison models. The repository also warns that predictions can hallucinate and require independent chemistry-expert verification."
+        },
+        {
+          "type": "heading",
+          "text": "Human chemists were part of the evaluation, not just another automated metric"
+        },
+        {
+          "type": "paragraph",
+          "text": "In blind review, PhD-level organic chemists rated individual reaction suggestions and complete multi-step routes. Microsoft’s research blog reports that RetroChimera produced an acceptable full route for nine of ten challenging target molecules, compared with five for its de-novo submodel, four for an editing model and two for NeuralSym. The Nature abstract also reports that chemists preferred RetroChimera predictions over published reference reactions and other AI systems, and that the model transferred to internal datasets from two major pharmaceutical companies through both zero-shot use and fine-tuning."
+        },
+        {
+          "type": "paragraph",
+          "text": "Those tests address an important weakness of synthesis benchmarks: a route can score well locally yet fail globally if even one proposed reaction is chemically implausible. Expert preference does not prove that every recommended route will work at the bench, but it gives a more direct check on whether the suggestions resemble decisions synthetic chemists would actually consider."
+        },
+        {
+          "type": "heading",
+          "text": "Open weights make the next stage easier to test independently"
+        },
+        {
+          "type": "paragraph",
+          "text": "Microsoft has released the implementation and checkpoints in a public GitHub repository under an MIT license. The repository is unusually explicit about limits: RetroChimera 1 is for research and experimentation; it can hallucinate, especially outside its training distribution; predictions should be grounded in literature and independently assessed by chemistry experts; and the main released Pistachio checkpoint was trained on reaction data available through 2023. The team recommends requesting only a small number of top-ranked reactions unless stronger filtering is used."
+        },
+        {
+          "type": "paragraph",
+          "text": "That makes RetroChimera a useful AI-for-science release for a reason beyond a headline accuracy gain. It pairs architecture choices, domain-expert evaluation, pharmaceutical distribution-shift tests and an open implementation in one package. The unresolved question is laboratory validation at scale: the paper shows that the model’s plans look better to experts and transfer across datasets, while the harder downstream standard is whether those plans consistently lead to successful, efficient real synthesis."
+        }
+      ],
+      "sources": [
+        {
+          "label": "Microsoft Research — RetroChimera overview",
+          "url": "https://www.microsoft.com/en-us/research/blog/improving-synthesis-prediction-of-small-molecules-at-scale-with-retrochimera/"
+        },
+        {
+          "label": "Nature — Chemist-aligned retrosynthesis by ensembling diverse inductive bias models",
+          "url": "https://www.nature.com/articles/s41586-026-11160-9"
+        },
+        {
+          "label": "GitHub — microsoft/retrochimera",
+          "url": "https://github.com/microsoft/retrochimera"
+        }
+      ]
+    },
+    {
+      "slug": "nvidia-dsx-ready-power-cooling",
+      "category": "Infrastructure · AI Factories",
+      "sortDate": "2026-09-21",
+      "dateLabel": "September 21, 2026",
+      "title": "NVIDIA’s DSX Ready program pulls batteries and liquid cooling into the AI-factory qualification stack",
+      "summary": "NVIDIA launched DSX Ready with qualification paths for battery energy storage systems and cooling distribution units. Hitachi Energy, LG Energy Solution and Tesla are listed for BESS; LG Electronics, LiquidStack and Vertiv for CDUs. NVIDIA stresses that qualification does not replace site-level engineering.",
+      "image": {
+        "src": "ai-news/2026-09/images/nvidia-dsx-ready-power-cooling.svg",
+        "alt": "Systems diagram connecting battery energy storage, power distribution, AI racks and a cooling distribution loop within the DSX Ready equipment boundary",
+        "caption": "A UGA LLM Lab systems diagram of the first DSX Ready categories. The qualification boundary applies to equipment; site integration and complete facility engineering remain outside it."
+      },
+      "content": [
+        {
+          "type": "paragraph",
+          "text": "NVIDIA’s AI-factory strategy moved one layer farther from GPUs on September 21. The company launched NVIDIA DSX Ready, a qualification program for partner products that meet applicable requirements in the NVIDIA DSX AI-factory reference designs. The first categories are battery energy storage systems (BESS) and cooling distribution units (CDUs), two pieces of infrastructure that increasingly determine whether high-density compute can actually be installed and operated at a site."
+        },
+        {
+          "type": "paragraph",
+          "text": "At launch, NVIDIA lists BESS offerings from Hitachi Energy, LG Energy Solution and Tesla, and CDU offerings from LG Electronics, LiquidStack and Vertiv. NVIDIA says BESS vendors run required qualification tests and submit supporting data for review and approval within a defined qualification boundary. CDU vendors use a self-qualification suite to determine whether a specific product meets applicable functional requirements. Additional infrastructure and software categories are planned over time."
+        },
+        {
+          "type": "heading",
+          "text": "The interesting part is the boundary around the badge"
+        },
+        {
+          "type": "paragraph",
+          "text": "NVIDIA explicitly says passing DSX Ready qualification does not replace site-level engineering and does not imply site-level stability. A cooling distribution unit may satisfy the relevant reference-design criteria while a data-center builder still has to determine whether it fits the facility’s actual topology, water loop, redundancy targets and operating conditions. The same distinction applies to power systems: component qualification reduces one integration uncertainty, but it does not make the grid connection, backup architecture or whole-site behavior a solved problem."
+        },
+        {
+          "type": "paragraph",
+          "text": "That caveat helps explain what NVIDIA is trying to standardize. Modern AI infrastructure is no longer a collection of mostly independent components. Higher rack densities push liquid cooling deeper into the facility; large power steps can interact with local grid constraints; battery systems can influence how quickly capacity can be brought online; and choices in one layer can simply shift a bottleneck into another. NVIDIA describes DSX as a platform spanning compute, networking, power, cooling, facilities and software so builders can reason about the factory as one system."
+        },
+        {
+          "type": "heading",
+          "text": "Reference designs are becoming an ecosystem-control surface"
+        },
+        {
+          "type": "paragraph",
+          "text": "For NVIDIA, a qualification program also extends the influence of its reference architecture into partner selection. Instead of a customer separately evaluating every battery or cooling product against a loosely defined GPU deployment, DSX Ready provides a common set of applicable requirements and a recognizable qualification path. For suppliers, the incentive is to design around a widely used AI-factory blueprint; for builders, the potential gain is a smaller integration search space."
+        },
+        {
+          "type": "paragraph",
+          "text": "The program should therefore be read as infrastructure coordination rather than a new accelerator announcement. Its importance will depend on how broad the qualified catalog becomes, whether customers use the designation in procurement, and whether the tests track the operational problems seen in real facilities. For now, NVIDIA has formalized a trend that was already visible across the sector: power delivery and cooling are becoming first-class parts of the AI systems stack rather than background data-center utilities."
+        }
+      ],
+      "sources": [
+        {
+          "label": "NVIDIA Blog — NVIDIA DSX Ready",
+          "url": "https://blogs.nvidia.com/blog/dsx-ready-ai-factories-power-cooling/"
+        }
+      ]
+    },
+    {
+      "slug": "openai-math-advisory-group",
+      "category": "Research · AI for Mathematics",
+      "sortDate": "2026-09-21",
+      "dateLabel": "September 21, 2026",
+      "title": "OpenAI forms an independent mathematics advisory group as it reports 100+ internal problem resolutions",
+      "summary": "OpenAI says an internal model being trained since August 28 has resolved more than 100 long-standing mathematical problems, but its September 21 announcement does not publish a problem-by-problem evidence set. A nine-member advisory group hosted at the Institute for Advanced Study says it will advise on responsible presentation and release while retaining independence from AI companies.",
+      "image": {
+        "src": "ai-news/2026-09/images/openai-math-advisory-group.svg",
+        "alt": "Governance diagram showing nine independent advisory members connected to review, communication, standards and learning, outside OpenAI model decisions",
+        "caption": "The nine-member group advises on review, communication, standards and learning but has no decision-making authority over AI companies. OpenAI’s separate “100+ problems” statement remains company-reported and is not independently verified here."
+      },
+      "content": [
+        {
+          "type": "paragraph",
+          "text": "OpenAI announced a new Advisory Group on Mathematics and Artificial Intelligence on September 21 after making an unusually large research claim: the company says an internal model that began training on August 28 has now resolved more than 100 long-standing open problems across most areas of mathematics. The announcement does not enumerate those problems or provide a public proof package for the full set, so the number should be treated as an OpenAI-reported result rather than as independently established mathematical consensus."
+        },
+        {
+          "type": "paragraph",
+          "text": "The advisory group is designed around that verification and release problem. OpenAI says the mathematicians will advise on the significance of emerging results, how to coordinate dissemination, academic and professional standards, and how AI tools can support mathematical research and learning. The initial nine members are François Charles, Camillo De Lellis, Timothy Gowers, Martin Hairer, Nikhil Srivastava, Ulrike Tillmann, Ravi Vakil, Edward Witten and Melanie Matchett Wood."
+        },
+        {
+          "type": "heading",
+          "text": "The group chose independence rather than a conventional company board"
+        },
+        {
+          "type": "paragraph",
+          "text": "The group’s own charter says it operates independently of any AI company, members do not accept payment for this work, and recommendations will be published on its website. It may advise companies beyond OpenAI and says it has no decision-making power at any AI company. The group formed after OpenAI approached some members about an external advisory board; in agreement with OpenAI, they instead created an independent organization hosted at the Institute for Advanced Study."
+        },
+        {
+          "type": "paragraph",
+          "text": "OpenAI draws another boundary: the group can advise on review, communication and standards, but it is not responsible for setting the pace of OpenAI’s internal mathematical work. That leaves the company in control of model development and deployment while giving mathematicians a public channel for recommendations about how results should enter the research community."
+        },
+        {
+          "type": "heading",
+          "text": "One earlier result has substantially more public evidence than the new aggregate claim"
+        },
+        {
+          "type": "paragraph",
+          "text": "On September 8, OpenAI separately published what it describes as a solution to the Navier–Stokes Millennium Prize problem. For that case, the company released both a mathematical write-up and a Lean formalization, and described the internal system, agent workflow and verification process used to generate the proof. Whether the broader mathematical community ultimately accepts the result is a separate question, but the public artifacts at least make detailed checking possible."
+        },
+        {
+          "type": "paragraph",
+          "text": "The September 21 “100+” figure is at a different evidence stage. OpenAI says the advisory group is currently helping it think through how to coordinate the release of a large number of significant results reported by the internal model. Until those results are identified and proofs are made available for expert scrutiny, readers cannot infer how many represent genuinely new theorems, independent rediscoveries, partial results, reformulations or claims that will survive review."
+        },
+        {
+          "type": "paragraph",
+          "text": "That distinction is precisely why the governance mechanism is newsworthy. Mathematical discovery has unusually crisp notions of proof, yet community validation still depends on problem selection, novelty checks, readable exposition, formal and informal verification, attribution and responsible release. If AI systems begin producing results faster than expert communities can assess them, the bottleneck shifts from generating candidate proofs to evaluating, contextualizing and integrating them into mathematics. The advisory group is an early attempt to build institutions for that new bottleneck; its effectiveness will be measurable through the transparency, independence and review quality of the results that follow."
+        }
+      ],
+      "sources": [
+        {
+          "label": "OpenAI — Advisory Group on Mathematics and Artificial Intelligence",
+          "url": "https://openai.com/index/advisory-group-on-mathematics-and-ai/"
+        },
+        {
+          "label": "Advisory Group on Mathematics and Artificial Intelligence — charter",
+          "url": "https://agmai.org/"
+        },
+        {
+          "label": "OpenAI — On the Navier–Stokes Millennium Prize Problem",
+          "url": "https://openai.com/index/navier-stokes-solution/"
+        }
+      ]
+    },
     {
       "slug": "weekly-ai-september-14-20",
       "category": "AI Weekly",

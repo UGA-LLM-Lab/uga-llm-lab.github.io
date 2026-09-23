@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1400" height="788" viewBox="0 0 1400 788">
+<rect width="1400" height="788" fill="#F7F7F5"/>
+<rect x="0" y="0" width="18" height="788" fill="#BA0C2F"/>
+<text x="72" y="88" font-family="Arial, Helvetica, sans-serif" font-size="48" font-weight="700" fill="#111111">RetroChimera: expert evaluation on challenging routes</text>
+<text x="72" y="133" font-family="Arial, Helvetica, sans-serif" font-size="25" fill="#444444">What Microsoft reports from blind chemist review</text>
+
+<rect x="72" y="190" width="1256" height="150" rx="18" fill="#FFFFFF" stroke="#D8D8D4"/>
+<text x="104" y="232" font-family="Arial, Helvetica, sans-serif" font-size="24" font-weight="700" fill="#111111">Ten challenging targets</text>
+<text x="104" y="268" font-family="Arial, Helvetica, sans-serif" font-size="22" fill="#333333">RetroChimera: 9 routes accepted by experts</text>
+<text x="104" y="298" font-family="Arial, Helvetica, sans-serif" font-size="22" fill="#333333">Comparison models: 2–5 routes accepted</text>
+<rect x="72" y="358" width="1256" height="150" rx="18" fill="#FFFFFF" stroke="#D8D8D4"/>
+<text x="104" y="400" font-family="Arial, Helvetica, sans-serif" font-size="24" font-weight="700" fill="#111111">Why route-level errors matter</text>
+<text x="104" y="436" font-family="Arial, Helvetica, sans-serif" font-size="22" fill="#333333">A single implausible reaction can invalidate an entire synthesis route</text>
+<text x="104" y="466" font-family="Arial, Helvetica, sans-serif" font-size="22" fill="#333333">Expert assessment complements top-k benchmark accuracy</text>
+<rect x="72" y="526" width="1256" height="150" rx="18" fill="#FFFFFF" stroke="#D8D8D4"/>
+<text x="104" y="568" font-family="Arial, Helvetica, sans-serif" font-size="24" font-weight="700" fill="#111111">Important limit</text>
+<text x="104" y="604" font-family="Arial, Helvetica, sans-serif" font-size="22" fill="#333333">Predictions still require chemistry-expert risk assessment and independent verification</text>
+<text x="104" y="634" font-family="Arial, Helvetica, sans-serif" font-size="22" fill="#333333">Microsoft warns that lower-ranked outputs are increasingly likely to hallucinate</text>
+<text x="72" y="748" font-family="Arial, Helvetica, sans-serif" font-size="18" fill="#666666">UGA LLM Lab factual graphic. Sources: Microsoft Research blog and microsoft/retrochimera repository.</text>
+</svg>
