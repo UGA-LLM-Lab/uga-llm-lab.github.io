@@ -110,6 +110,16 @@ window.LLM_LAB_DATA = {
     {
       date: "September 2026",
       sortDate: "2026-09-16",
+      category: "Media",
+      title: "Our Synapse research featured by Franklin College",
+      excerpt: "Franklin College highlighted our work on Synapse, a brain-inspired memory architecture for AI agents, including reported accuracy gains of up to 23% on complex tasks and its potential for reliable long-horizon applications.",
+      url: "https://www.franklin.uga.edu/news/stories/2026/ai-agents-have-memory-problem-franklin-researchers-are-working-fix-it",
+      image: "assets/images/news-synapse.png",
+      imageAlt: "Figure from the Synapse paper showing its episodic-semantic memory architecture"
+    },
+    {
+      date: "September 2026",
+      sortDate: "2026-09-16",
       category: "Recognition",
       title: "Tianming Liu elected MICCAI Fellow",
       excerpt: "Professor Tianming Liu has been elected a Fellow of the Medical Image Computing and Computer Assisted Intervention Society for significant contributions to the development of novel biomedical image analysis methods and tools. He will formally receive the honor at MICCAI 2026 in Strasbourg, France.",
