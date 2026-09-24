@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 900" role="img" aria-labelledby="t d">
+  <title id="t">Alibaba full-stack AI roadmap</title>
+  <desc id="d">A dark systems stack showing chips, cloud infrastructure, Qwen models, and agent services, with selected published roadmap figures.</desc>
+  <rect width="1600" height="900" fill="#11151b"/>
+  <path d="M0 0H1600V900H0Z" fill="none" stroke="#2a323d" stroke-width="50"/>
+  <text x="90" y="100" font-family="Arial, sans-serif" font-size="50" font-weight="700" fill="#f5f7fa">Alibaba’s full-stack AI roadmap</text>
+  <text x="92" y="145" font-family="Arial, sans-serif" font-size="23" fill="#aeb8c5">Apsara 2026 links planned silicon, cloud capacity, frontier models and agent services.</text>
+  <g transform="translate(115 230)" font-family="Arial, sans-serif">
+    <rect x="0" y="450" width="860" height="125" rx="20" fill="#e43d30"/><text x="38" y="500" font-size="29" font-weight="700" fill="white">ZHENWU V900</text><text x="38" y="540" font-size="21" fill="#ffe1dc">216 GB memory · 1,200 GB/s inter-chip bandwidth · Q1 2027 target</text>
+    <rect x="75" y="300" width="785" height="125" rx="20" fill="#24313f" stroke="#ff875d" stroke-width="4"/><text x="113" y="350" font-size="29" font-weight="700" fill="white">AI CLOUD</text><text x="113" y="390" font-size="18" fill="#c8d1db">More than 20 GW targeted by 2032 · supernode roadmap up to 500,000 cards</text>
+    <rect x="150" y="150" width="710" height="125" rx="20" fill="#24313f" stroke="#39c5bb" stroke-width="4"/><text x="188" y="200" font-size="29" font-weight="700" fill="white">QWEN MODEL LAYER</text><text x="188" y="240" font-size="21" fill="#c8d1db">Qwen 4 training · Qwen 4.5/5 roadmap at 5–10T parameters</text>
+    <rect x="225" y="0" width="635" height="125" rx="20" fill="#f2f5f7"/><text x="263" y="50" font-size="29" font-weight="700" fill="#11151b">AGENT SERVICES</text><text x="263" y="90" font-size="21" fill="#45515f">AgentCore · security · context engine</text>
+    <path d="M40 437L145 437 145 287 220 287 220 137 295 137" fill="none" stroke="#f5f7fa" stroke-width="6" stroke-dasharray="12 14"/>
+  </g>
+  <g transform="translate(1060 245)" font-family="Arial, sans-serif">
+    <rect width="420" height="470" rx="36" fill="#1c232c" stroke="#3c4856" stroke-width="3"/>
+    <text x="44" y="66" font-size="24" font-weight="700" fill="#ff875d">ROADMAP, NOT DEPLOYMENT</text>
+    <line x1="44" y1="92" x2="376" y2="92" stroke="#3c4856" stroke-width="3"/>
+    <text x="44" y="155" font-size="22" fill="#f5f7fa">The processor, scale and</text><text x="44" y="190" font-size="22" fill="#f5f7fa">capacity numbers are targets.</text>
+    <circle cx="86" cy="285" r="42" fill="#39c5bb"/><text x="150" y="280" font-size="22" fill="#f5f7fa">Model work today</text><text x="150" y="314" font-size="19" fill="#aeb8c5">Qwen 4 training</text>
+    <circle cx="86" cy="390" r="42" fill="#e43d30"/><text x="150" y="385" font-size="22" fill="#f5f7fa">Planned capacity</text><text x="150" y="419" font-size="19" fill="#aeb8c5">2027–2032 horizon</text>
+  </g>
+  <text x="95" y="842" font-family="Arial" font-size="20" fill="#aeb8c5">All performance, scale and timing figures are Alibaba’s published targets or company-reported results.</text>
+</svg>

@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 900" role="img" aria-labelledby="t d">
+  <title id="t">Claude-assisted discovery pipeline for the ART enzyme system</title>
+  <desc id="d">A laboratory-style explanatory diagram moving from DNA sequence search through candidate filtering to a newly identified reverse transcriptase and repeat-array system.</desc>
+  <defs>
+    <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse"><path d="M40 0H0V40" fill="none" stroke="#d9ece8" stroke-width="1"/></pattern>
+    <linearGradient id="dna" x1="0" x2="1"><stop stop-color="#0b6b62"/><stop offset="1" stop-color="#65c466"/></linearGradient>
+  </defs>
+  <rect width="1600" height="900" fill="#f7fbf8"/>
+  <rect width="1600" height="900" fill="url(#grid)" opacity=".75"/>
+  <text x="95" y="105" font-family="Arial, sans-serif" font-size="46" font-weight="700" fill="#163532">From sequence space to an ART system</text>
+  <text x="98" y="150" font-family="Arial, sans-serif" font-size="23" fill="#496b66">A factual map of the reported Claude-assisted search; biological function remains unknown.</text>
+  <path d="M150 520 C240 340 330 700 420 520 S600 340 690 520" fill="none" stroke="url(#dna)" stroke-width="20" stroke-linecap="round"/>
+  <path d="M150 520 C240 700 330 340 420 520 S600 700 690 520" fill="none" stroke="#79cfc2" stroke-width="20" stroke-linecap="round"/>
+  <g stroke="#d34f5b" stroke-width="8">
+    <path d="M190 446L190 594"/><path d="M255 438L255 602"/><path d="M320 455L320 585"/><path d="M385 492L385 548"/><path d="M450 454L450 586"/><path d="M515 438L515 602"/><path d="M580 446L580 594"/><path d="M645 490L645 550"/>
+  </g>
+  <rect x="90" y="680" width="640" height="92" rx="20" fill="#163532"/>
+  <text x="125" y="724" font-family="Arial, sans-serif" font-size="24" font-weight="700" fill="white">Sequence search</text>
+  <text x="125" y="756" font-family="Arial, sans-serif" font-size="21" fill="#cce8df">&gt;200,000 reverse transcriptases gathered</text>
+  <path d="M760 460H915" stroke="#163532" stroke-width="6" stroke-linecap="round"/><path d="M895 435L930 460 895 485" fill="none" stroke="#163532" stroke-width="6"/>
+  <g transform="translate(950 245)">
+    <rect width="250" height="105" rx="24" fill="#fff" stroke="#0b6b62" stroke-width="4"/><text x="28" y="45" font-family="Arial" font-size="25" font-weight="700" fill="#163532">3,500</text><text x="28" y="77" font-family="Arial" font-size="20" fill="#496b66">candidate systems</text>
+    <rect y="150" width="250" height="105" rx="24" fill="#fff" stroke="#d34f5b" stroke-width="4"/><text x="28" y="195" font-family="Arial" font-size="25" font-weight="700" fill="#163532">20</text><text x="28" y="227" font-family="Arial" font-size="20" fill="#496b66">detailed reports</text>
+    <rect y="300" width="250" height="105" rx="24" fill="#fff" stroke="#65c466" stroke-width="4"/><text x="28" y="345" font-family="Arial" font-size="25" font-weight="700" fill="#163532">ART</text><text x="28" y="377" font-family="Arial" font-size="20" fill="#496b66">novel architecture</text>
+  </g>
+  <g transform="translate(1260 285)">
+    <rect width="250" height="330" rx="34" fill="#163532"/>
+    <circle cx="125" cy="90" r="52" fill="#79cfc2"/><path d="M92 90h66M125 57v66" stroke="#163532" stroke-width="12" stroke-linecap="round"/>
+    <text x="34" y="180" font-family="Arial" font-size="25" font-weight="700" fill="white">Observed parts</text>
+    <text x="34" y="224" font-family="Arial" font-size="20" fill="#cce8df">• reverse transcriptase</text>
+    <text x="34" y="260" font-family="Arial" font-size="20" fill="#cce8df">• partner gene</text>
+    <text x="34" y="296" font-family="Arial" font-size="20" fill="#cce8df">• repeat RNA array</text>
+  </g>
+  <text x="100" y="840" font-family="Arial" font-size="20" fill="#496b66">Scale and stages are reported by Anthropic; human scientists performed the laboratory work.</text>
+</svg>
