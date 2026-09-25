@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="900" viewBox="0 0 1600 900" role="img" aria-labelledby="t d">
+  <title id="t">Waymo safety evidence at 271.3 million rider-only miles</title>
+  <desc id="d">A data-journalism graphic comparing Waymo crash rates with adjusted human benchmarks and showing vulnerable road user reductions.</desc>
+  <defs><linearGradient id="road" x1="0" y1="0" x2="1" y2="0"><stop stop-color="#17212a"/><stop offset="1" stop-color="#313b43"/></linearGradient></defs>
+  <rect width="1600" height="900" fill="#fbfaf6"/>
+  <rect x="0" y="0" width="1600" height="188" fill="#f3cc4e"/>
+  <text x="92" y="88" fill="#17212a" font-family="Inter,Arial,sans-serif" font-size="50" font-weight="820">271.3 MILLION DRIVERLESS MILES</text>
+  <text x="95" y="138" fill="#3e464c" font-family="Inter,Arial,sans-serif" font-size="23">Waymo rider-only operations through June 2026 · five metropolitan areas</text>
+  <g transform="translate(94 240)" font-family="Inter,Arial,sans-serif">
+    <text fill="#17212a" font-size="22" font-weight="800" letter-spacing="2">INCIDENTS PER MILLION MILES</text>
+    <text y="40" fill="#60707a" font-size="18">Any-injury-reported crashes · combined cities</text>
+    <rect y="82" width="1010" height="74" rx="15" fill="#e7e4dc"/>
+    <rect y="82" width="180" height="74" rx="15" fill="#36a889"/>
+    <text x="28" y="129" fill="#fff" font-size="26" font-weight="820">WAYMO 0.67</text>
+    <text x="650" y="130" fill="#17212a" font-size="25" font-weight="800">HUMAN BENCHMARK 3.77</text>
+    <text y="210" fill="#17212a" font-size="22" font-weight="800" letter-spacing="2">SERIOUS INJURY OR WORSE</text>
+    <rect y="235" width="1010" height="74" rx="15" fill="#e7e4dc"/>
+    <rect y="235" width="48" height="74" rx="15" fill="#d95b43"/>
+    <text x="68" y="282" fill="#17212a" font-size="26" font-weight="820">WAYMO 0.01</text>
+    <text x="650" y="282" fill="#17212a" font-size="25" font-weight="800">HUMAN BENCHMARK 0.21</text>
+    <g transform="translate(0 372)">
+      <rect width="445" height="230" rx="24" fill="#17212a"/>
+      <text x="34" y="52" fill="#f3cc4e" font-size="19" font-weight="800" letter-spacing="2">COMPANY-REPORTED REDUCTIONS</text>
+      <text x="34" y="112" fill="#fff" font-size="46" font-weight="850">82% fewer</text><text x="34" y="145" fill="#c7d2d8" font-size="20">injury-causing crashes</text>
+      <text x="34" y="196" fill="#fff" font-size="46" font-weight="850">95% fewer</text><text x="270" y="196" fill="#c7d2d8" font-size="20">serious+</text>
+      <rect x="485" width="825" height="230" rx="24" fill="#fff" stroke="#d5d0c4" stroke-width="2"/>
+      <text x="520" y="52" fill="#17212a" font-size="19" font-weight="800" letter-spacing="2">VULNERABLE ROAD USERS · INJURY CRASHES</text>
+      <g transform="translate(522 84)"><circle cx="45" cy="45" r="45" fill="#ee7158"/><text x="45" y="53" text-anchor="middle" fill="#fff" font-size="25" font-weight="850">93%</text><text x="102" y="41" fill="#17212a" font-size="21" font-weight="750">PEDESTRIANS</text><text x="102" y="69" fill="#60707a" font-size="18">86 fewer estimated</text></g>
+      <g transform="translate(785 84)"><circle cx="45" cy="45" r="45" fill="#3ca88a"/><text x="45" y="53" text-anchor="middle" fill="#fff" font-size="25" font-weight="850">86%</text><text x="102" y="41" fill="#17212a" font-size="21" font-weight="750">CYCLISTS</text><text x="102" y="69" fill="#60707a" font-size="18">56 fewer estimated</text></g>
+      <g transform="translate(1044 84)"><circle cx="45" cy="45" r="45" fill="#4e84b5"/><text x="45" y="53" text-anchor="middle" fill="#fff" font-size="25" font-weight="850">82%</text><text x="102" y="41" fill="#17212a" font-size="21" font-weight="750">MOTORCYCLISTS</text><text x="102" y="69" fill="#60707a" font-size="18">36 fewer estimated</text></g>
+    </g>
+  </g>
+  <g font-family="Inter,Arial,sans-serif"><path d="M1175 296h330v335h-330z" fill="url(#road)"/><path d="M1340 296v335" stroke="#f7e88b" stroke-width="8" stroke-dasharray="34 28"/><path d="M1240 455h200" stroke="#fff" stroke-width="7"/><path d="M1310 410h60l32 45v70h-124v-70z" fill="#f3cc4e" stroke="#17212a" stroke-width="5"/><circle cx="1305" cy="525" r="18" fill="#17212a"/><circle cx="1377" cy="525" r="18" fill="#17212a"/><circle cx="1340" cy="425" r="24" fill="#d9eef2" stroke="#17212a" stroke-width="5"/><text x="1340" y="678" text-anchor="middle" fill="#17212a" font-size="19" font-weight="800">PHX · SF · LA · AUS · ATL</text></g>
+  <text x="95" y="856" fill="#60707a" font-family="Inter,Arial,sans-serif" font-size="18">Human benchmarks are spatially adjusted and use different reporting sources. Waymo states that no perfect human-versus-AV comparison exists.</text>
+</svg>

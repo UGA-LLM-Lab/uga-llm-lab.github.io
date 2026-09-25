@@ -12,6 +12,266 @@ window.AI_NEWS_MONTH_DATA["2026-09"] = {
   label: "September 2026",
   articles: [
 {
+      "slug": "gemini-38-live-avatar",
+      "category": "Models · Multimodal AI",
+      "sortDate": "2026-09-24",
+      "dateLabel": "September 24, 2026",
+      "title": "Google gives Gemini 3.8 Live a real-time avatar that can keep talking while tools run",
+      "summary": "Gemini 3.8 Live with Live Avatar adds synchronized, low-latency video to Google's live dialogue model. Google says it can switch across 97 languages, call tools without interrupting the conversation and create custom enterprise avatars from a reference image, with SynthID embedded in audio and video.",
+      "image": {
+        "src": "ai-news/2026-09/images/gemini-live-avatar-conversation-loop.svg",
+        "alt": "Diagram showing simultaneous camera and microphone input flowing through Gemini reasoning and background tools into synchronized avatar video and speech",
+        "caption": "UGA LLM Lab explanatory diagram based on Google's September 24 release. The 97-language capability and continuous background tool use are Google-reported; custom avatar creation is restricted to allowlisted enterprise users."
+      },
+      "content": [
+        {
+          "type": "paragraph",
+          "text": "Google introduced Gemini 3.8 Live with Live Avatar on September 24, one week after launching the underlying Gemini 3.8 Live dialogue models. The new feature couples speech with low-latency video generation so an enterprise agent can listen, look, speak and appear as an animated visual persona in near real time. Google says the output includes synchronized lip movement, facial expressions and turn-taking rather than a separate talking-head layer added after the model has already answered."
+        },
+        {
+          "type": "paragraph",
+          "text": "The distinction matters for live service. A conventional avatar can read completed text, but pauses whenever an application needs to search a database, verify a reservation or call another system. Google says Live Avatar supports asynchronous tool execution: the model can trigger a tool and fetch data in the background while maintaining the conversation. Its hotel check-in example is designed to show an agent filling the waiting time naturally instead of freezing until a transaction returns."
+        },
+        {
+          "type": "heading",
+          "text": "Speech, video and tools share one conversational loop"
+        },
+        {
+          "type": "paragraph",
+          "text": "Live Avatar processes visual and audio input together and returns expressive audio and video. Google describes customer support and interactive walkthroughs as early enterprise uses, but the design also points toward training, guided sales and remote assistance. In each case the difficult part is not merely rendering a face. The system has to preserve the state of the conversation, decide when to use a tool, speak without inventing the tool's result and keep the visual stream synchronized as the dialogue changes direction."
+        },
+        {
+          "type": "paragraph",
+          "text": "The release also extends Gemini Live's multilingual claim into the visual layer. Google says the avatar can move between 97 languages in one conversation while adapting lip-sync and expressions without degrading video fidelity or drifting out of sync. That is a vendor-reported capability rather than an independent evaluation. Real deployments will need to test accents, code-switching, names and domain vocabulary, as well as whether expression remains appropriate when the model is uncertain or delivering sensitive information."
+        },
+        {
+          "type": "heading",
+          "text": "Customization raises the identity and disclosure stakes"
+        },
+        {
+          "type": "paragraph",
+          "text": "Organizations can choose from preset characters or create a custom avatar from a high-quality reference image. Google says the generated character can preserve likeness, styling and identity, but custom creation currently requires enterprise allowlisting. That restriction is important because a convincing visual representative can create more trust than a text box, even when the underlying answer is uncertain. Consent, impersonation controls and clear disclosure therefore become part of product quality, not optional polish."
+        },
+        {
+          "type": "paragraph",
+          "text": "Google says all Live Avatar output carries SynthID in both audio and video. An imperceptible watermark can help platforms identify generated media, but it does not by itself tell a viewer who authorized an avatar or whether the agent's claims are accurate. Enterprises will still need visible cues, audit logs and escalation paths, especially when the avatar speaks for a brand or handles customer data."
+        },
+        {
+          "type": "paragraph",
+          "text": "Performance will also be judged differently from a text agent. A delayed sentence is inconvenient; a delayed face can feel broken, and a confident expression attached to an incorrect answer can amplify the error. Useful evaluations should therefore separate speech latency, video continuity, tool completion, factual accuracy and recovery after an interruption. Google has demonstrated the integrated experience, but has not published a broad independent comparison of those dimensions across noisy rooms, weak networks or long enterprise sessions."
+        },
+        {
+          "type": "paragraph",
+          "text": "Gemini 3.8 Live with Live Avatar is available through Gemini Enterprise. The launch is a substantive follow-up to the September 17 Gemini 3.8 Live rollout, not a separate base model: the new event is the synchronized visual presence, background tool behavior and enterprise availability. Its practical value will be determined by latency, tool reliability and user trust over long conversations. The technical novelty is that video presence is becoming part of the agent loop itself rather than a cosmetic layer at the end."
+        }
+      ],
+      "sources": [
+        {
+          "label": "Google — Introducing Gemini 3.8 Live with Live Avatar",
+          "url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-3-8-live-with-live-avatar/"
+        },
+        {
+          "label": "Google Cloud — Gemini 3.8 Live with Live Avatar availability",
+          "url": "https://cloud.google.com/blog/products/ai-machine-learning/gemini-3-8-live-with-live-avatar-is-now-generally-available"
+        }
+      ]
+    },
+    {
+      "slug": "liquid-lfm25-vl-dspark",
+      "category": "Models · Efficient Inference",
+      "sortDate": "2026-09-24",
+      "dateLabel": "September 24, 2026",
+      "title": "Liquid AI adds a 280M-parameter drafter that speeds vision-language decoding by up to 3.13×",
+      "summary": "LFM2.5-VL-DSpark is an experimental speculative-decoding companion for Liquid AI's 3B vision-language model. Liquid reports up to 3.13× faster decoding on Apple silicon and 2.66× on an H100, while explicitly showing that unchanged vision encoding and prefill limit end-to-end gains.",
+      "image": {
+        "src": "ai-news/2026-09/images/liquid-vl-dspark-inference.svg",
+        "alt": "Technical pipeline showing unchanged vision encoding and prefill followed by DSpark drafting and target-model verification during token decoding",
+        "caption": "UGA LLM Lab technical diagram based on Liquid AI's DSpark description. Speculation accelerates decoding, while vision encoding and prefill remain unchanged and continue to bound total latency."
+      },
+      "content": [
+        {
+          "type": "paragraph",
+          "text": "Liquid AI released LFM2.5-VL-DSpark on September 24, an experimental draft model that accelerates inference for its LFM2.5-VL-3B vision-language model. The drafter adds about 279.5 million parameters, or 8.9% to the deployed parameter count, and proposes several future tokens for the 3-billion-parameter target to verify at once. When the target accepts those proposals, it avoids a separate full-model pass for every generated token."
+        },
+        {
+          "type": "paragraph",
+          "text": "Liquid reports decoding-throughput improvements of as much as 3.13 times on edge hardware and 2.66 times on a data-center GPU, without changing the target model's output distribution under matched sampling settings. The more useful numbers are the end-to-end gains: up to 2.62 times on the tested edge devices and 2.27 times on an H100. The gap between decoding speed and total speed is not a footnote; it shows exactly where speculative decoding stops helping."
+        },
+        {
+          "type": "heading",
+          "text": "Vision workloads expose the part speculation cannot accelerate"
+        },
+        {
+          "type": "paragraph",
+          "text": "Before a vision-language model can generate an answer, the image passes through a vision encoder and the language backbone processes the resulting visual tokens together with the prompt. DSpark accelerates neither stage. Liquid notes that encoding and prefill consume a larger share of wall-clock time on edge devices, where compute is more constrained, so a dramatic improvement in token decoding can translate into a smaller improvement in the response a user actually experiences."
+        },
+        {
+          "type": "paragraph",
+          "text": "The drafter itself is a four-layer attention-only model trained for ten epochs on a mixture weighted toward common vision-language tasks. It uses hidden states from the target model to propose blocks of tokens and includes a confidence mechanism that helps decide how far to speculate. Liquid recommends a block size of eight or nine depending on hardware. The design treats text and image-derived hidden states the same once both have entered the language model, which lets the technique reuse the inference concept developed for Liquid's text models."
+        },
+        {
+          "type": "heading",
+          "text": "The speed claim is bounded by specific hardware and settings"
+        },
+        {
+          "type": "paragraph",
+          "text": "On an M5 Max MacBook Pro using MLX-VLM, Liquid reports decoding gains from 2.30 to 3.13 times and end-to-end gains from 1.56 to 2.62 times across six tasks. An M3 Ultra using llama.cpp showed smaller ranges: 1.57 to 2.14 times for decoding and 1.30 to 1.77 times end to end. On one H100 80GB with SGLang, batch size one and BF16 processing, decoding improved 2.04 to 2.66 times and end-to-end performance 1.64 to 2.27 times. Quantized inference was outside the test scope."
+        },
+        {
+          "type": "paragraph",
+          "text": "Temperature and concurrency also matter. Higher sampling temperatures make the draft and target distributions disagree more often, reducing the acceptance rate and therefore the speedup. At higher concurrency, DSpark kept an advantage in Liquid's tests, but the gap narrowed as the workload shifted from memory-bound toward compute-bound. Those qualifications make the release more informative than a single peak figure, and they give developers concrete reasons to benchmark their own response lengths, sampling settings and devices."
+        },
+        {
+          "type": "paragraph",
+          "text": "There is a practical memory trade-off too. The extra 279.5 million parameters are small relative to the target, but edge deployments are often constrained by memory bandwidth and capacity as much as arithmetic. A drafter is attractive when its added footprint fits comfortably and the saved target passes outweigh verification overhead. If prompts are dominated by large images, short answers or expensive prefill, the same device may gain less than the headline throughput suggests."
+        },
+        {
+          "type": "paragraph",
+          "text": "The model is available in Safetensors and GGUF formats, with support in llama.cpp, MLX-VLM and SGLang. That makes the result reproducible enough for external testing, though Liquid's published measurements remain vendor-run. The broader lesson is architectural: small draft models can make local multimodal agents feel much faster, but only after the field measures the full pipeline. Vision encoding, prefill and tool latency can remain dominant even when token generation becomes several times faster."
+        }
+      ],
+      "sources": [
+        {
+          "label": "Liquid AI — LFM2.5-VL-DSpark",
+          "url": "https://www.liquid.ai/blog/lfm2-5-vl-dspark"
+        },
+        {
+          "label": "Hugging Face — Liquid AI DSpark implementation guide",
+          "url": "https://huggingface.co/blog/liquidai/lfm2-5-vl-dspark"
+        }
+      ]
+    },
+    {
+      "slug": "meta-muse-code-model-api-ga",
+      "category": "Industry · Developer Platforms",
+      "sortDate": "2026-09-24",
+      "dateLabel": "September 24, 2026",
+      "title": "Meta takes Muse Code out of beta and makes its Model API generally available worldwide",
+      "summary": "Meta's Connect developer update moves Muse Code into general release, adds Windows support and keeps its multi-agent workspace design. The Meta Model API is now generally available globally, while Muse Spark 1.3 reaches Oracle Cloud and enters private preview on Google Cloud.",
+      "image": {
+        "src": "ai-news/2026-09/images/meta-muse-developer-stack.svg",
+        "alt": "Blueprint-style diagram of parallel Muse Code workers feeding tested changes into the Meta Model API and cloud deployment channels",
+        "caption": "UGA LLM Lab systems diagram based on Meta's Connect 2026 developer recap. It separates Muse Code's parallel isolated workspaces from the API and partner-cloud distribution paths announced on September 24."
+      },
+      "content": [
+        {
+          "type": "paragraph",
+          "text": "Meta used its Connect 2026 developer recap to turn several Muse products from previews into broader deployment options. Muse Code is now out of beta and available on Windows, while the Meta Model API is generally available globally. Meta also says Muse Spark 1.3 is available through Oracle Cloud AI Platform and is in private preview on Google Cloud. The common theme is distribution: Meta is trying to make the same model family usable in a terminal, through a first-party API, through partners and on local hardware."
+        },
+        {
+          "type": "paragraph",
+          "text": "Muse Code is the most concrete workflow change. Meta describes it as multi-agent by default, with parallel workers writing and testing code in isolated workspaces. That architecture is meant for substantial, multi-step engineering tasks rather than a single completion in an editor. Isolation can keep concurrent workers from overwriting one another, but it does not remove the need to reconcile competing changes, run shared tests and let a human decide which result belongs in the main repository."
+        },
+        {
+          "type": "heading",
+          "text": "A model release becomes a developer stack"
+        },
+        {
+          "type": "paragraph",
+          "text": "The Meta Model API gives developers direct access to Muse Spark through an interface designed to work with existing OpenAI-compatible client code. Meta's current product page lists a one-million-token context window for Muse Spark 1.3 and separates a lower-priced contributor tier, where prompts may be used to improve products, from a standard tier that is not used that way. That pricing and data distinction is operationally important: two endpoints can expose similar capabilities while carrying different privacy and governance implications."
+        },
+        {
+          "type": "paragraph",
+          "text": "Cloud distribution broadens the deployment choices again. Oracle availability gives enterprises another managed route to Muse Spark 1.3; Google Cloud remains a private preview rather than a general release. Meta also points developers who want greater local control to Muse Glimmer, an open-weights 30-billion-parameter model that it says can run on a single GPU or Mac Mini. These are different products with different maturity levels, and the Connect recap should not be read as making every Muse model generally available everywhere."
+        },
+        {
+          "type": "heading",
+          "text": "Parallel agents shift the bottleneck toward evaluation"
+        },
+        {
+          "type": "paragraph",
+          "text": "Running several coding agents at once can increase the number of attempted solutions, but it can also multiply plausible-looking errors. The durable advantage depends on whether tests are strong enough to reject bad changes and whether the orchestration layer can recognize two edits that are individually valid but incompatible together. Long-horizon coding systems therefore need repository permissions, secret handling, reproducible environments and clear rules for when an agent may merge, deploy or stop."
+        },
+        {
+          "type": "paragraph",
+          "text": "Meta is pairing the release with a ten-day Global AI Developer Hackathon. It plans separate tracks for independent developers and startups, free Model API credits, technical workshops and a $1 million cash prize pool. The program may accelerate experimentation, but hackathon output is not evidence of production reliability; the more revealing measures will be sustained use, completed tasks that survive review and the cost of unsuccessful agent runs."
+        },
+        {
+          "type": "paragraph",
+          "text": "The global-availability claim applies to the API, not necessarily to every feature, partner region or enterprise control on day one. Organizations still need to check data residency, retention, supported tools and contractual terms for the route they choose. Windows support similarly broadens Muse Code's addressable developer base without proving parity across operating systems. Those details matter because agent platforms succeed or fail in the integration edges that launch announcements often compress into the word availability."
+        },
+        {
+          "type": "paragraph",
+          "text": "The September 24 event is therefore not the first appearance of Muse Spark or Muse Glimmer. The new facts are the graduation of Muse Code, its Windows availability, global general availability for Meta's Model API and new cloud channels. Together they show Meta moving from model launches toward the unglamorous infrastructure that determines adoption: access, tooling, isolation, billing and evaluation. Whether that stack wins developers will depend less on one benchmark than on how consistently it completes real engineering work without creating more review than it saves."
+        }
+      ],
+      "sources": [
+        {
+          "label": "Meta for Developers — Meta Connect 2026 end-to-end recap",
+          "url": "https://developers.meta.com/blog/meta-connect-recap/"
+        },
+        {
+          "label": "Meta for Developers — Meta Model API",
+          "url": "https://dev.meta.ai/products/meta-model-api"
+        }
+      ]
+    },
+    {
+      "slug": "waymo-270m-mile-safety-update",
+      "category": "Applications · Autonomous Driving",
+      "sortDate": "2026-09-24",
+      "dateLabel": "September 24, 2026",
+      "title": "Waymo's safety dataset reaches 271.3 million driverless miles across five cities",
+      "summary": "Waymo's updated dashboard covers rider-only driving through June 2026 in Phoenix, San Francisco, Los Angeles, Austin and Atlanta. It reports 82% fewer injury-causing crashes and 95% fewer serious-injury-or-worse crashes than adjusted human benchmarks, while documenting important comparison limits.",
+      "image": {
+        "src": "ai-news/2026-09/images/waymo-safety-evidence-scale.svg",
+        "alt": "Data-journalism graphic comparing Waymo and adjusted human crash rates per million miles across injury, serious injury and vulnerable road user outcomes",
+        "caption": "UGA LLM Lab data graphic based on Waymo's September 24 safety dashboard. Rates compare rider-only autonomous miles with spatially adjusted human benchmarks; Waymo notes that no perfect human-versus-AV comparison is available."
+      },
+      "content": [
+        {
+          "type": "paragraph",
+          "text": "Waymo updated its public safety dataset on September 24 to cover 271.3 million rider-only miles through June 2026. The miles come from fully autonomous operations without a human driver in Phoenix, the San Francisco Bay Area, Los Angeles, Austin and Atlanta. Waymo reports an any-injury crash rate of 0.67 incidents per million miles across those areas, compared with 3.77 for an adjusted human benchmark."
+        },
+        {
+          "type": "paragraph",
+          "text": "Expressed as reductions, Waymo says its vehicles were involved in 82% fewer injury-causing crashes and 95% fewer serious-injury-or-worse crashes than human drivers traveling the same distance in the same operating cities. It estimates 841 fewer injury crashes and 55 fewer serious-injury-or-worse crashes. The company also reports 93% fewer injury crashes involving pedestrians, 86% fewer involving cyclists and 82% fewer involving motorcyclists. All figures count crashes regardless of fault."
+        },
+        {
+          "type": "heading",
+          "text": "A much larger denominator strengthens—but does not simplify—the comparison"
+        },
+        {
+          "type": "paragraph",
+          "text": "Hundreds of millions of miles provide far more exposure than early robotaxi studies, especially for ordinary injury outcomes. Serious crashes remain rare, however, and city-level road mix matters. Waymo's service does not drive a random sample of every road or condition in the United States. The dashboard therefore compares rates within its operating areas and adjusts human benchmarks for the spatial distribution of where the autonomous fleet actually drives. It is evidence about these deployments, not a universal estimate for every autonomous system or geography."
+        },
+        {
+          "type": "paragraph",
+          "text": "The underlying data sources also use different reporting systems. Autonomous-vehicle operators must report qualifying physical-contact crashes under the National Highway Traffic Safety Administration's Standing General Order, including many minor incidents. Human crash databases rely heavily on police reports and miss some events. Waymo applies a 32% underreporting adjustment to the human injury benchmark, based on a federal study, but does not apply such a correction to serious-injury or airbag-deployment comparisons because an appropriate estimate is not available."
+        },
+        {
+          "type": "heading",
+          "text": "The dashboard exposes rates, intervals and raw identifiers"
+        },
+        {
+          "type": "paragraph",
+          "text": "Waymo publishes incidents per million miles by city and outcome, 95% confidence intervals and downloadable links connecting included crashes to federal report identifiers. The combined serious-injury-or-worse rate is listed as 0.01 per million miles for Waymo versus 0.21 for the benchmark. The any-injury rate varies by city, from 0.52 in Austin to 0.86 in Los Angeles for Waymo, while the corresponding adjusted human rates range from 1.95 in Phoenix to 6.64 in San Francisco."
+        },
+        {
+          "type": "paragraph",
+          "text": "Those differences illustrate why a single national comparison would be misleading. Street design, speeds, traffic density, reporting practices and the routes served all change the baseline. Waymo says its spatial adjustment is intended to make the human comparison more representative of the fleet's actual driving distribution. Independent researchers can examine the public inputs and methods, but the company still selected and produced the dashboard, so external replication remains valuable."
+        },
+        {
+          "type": "paragraph",
+          "text": "The 841 figure is an estimate of crashes avoided, not a count of individual people whose injuries were directly observed and prevented. Waymo derives it by applying the human benchmark rate to the fleet's mileage and subtracting the observed autonomous-vehicle outcome, then uses a conservative assumption of at least one injured person per avoided crash. That framing is useful for scale, but the rate comparison and its uncertainty are the more precise evidence."
+        },
+        {
+          "type": "paragraph",
+          "text": "The update is one of the stronger deployment signals in applied AI because it reports realized road behavior rather than a simulated benchmark or future promise. It still cannot answer every policy question: safety outside Waymo's current operational design domains, performance in new cities, incident severity not captured by the chosen outcomes and comparisons with improving human-assistance systems all require separate evidence. What the September dataset does show is that the safety claim now rests on a multi-city exposure measured in hundreds of millions of driverless miles, with enough methodological detail to be challenged rather than accepted as marketing alone."
+        }
+      ],
+      "sources": [
+        {
+          "label": "Waymo — September 24 safety update",
+          "url": "https://blog.waymo.com/blog/shorts/safetydata-september26/"
+        },
+        {
+          "label": "Waymo — Safety Impact dashboard and methodology",
+          "url": "https://waymo.com/safety/impact/"
+        }
+      ]
+    },
+{
       "slug": "anthropic-claude-art-enzyme-system",
       "category": "Research · AI for Science",
       "sortDate": "2026-09-23",

@@ -1,0 +1,48 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="900" viewBox="0 0 1600 900" role="img" aria-labelledby="t d">
+  <title id="t">Gemini 3.8 Live Avatar conversation loop</title>
+  <desc id="d">A visual explanation of simultaneous camera and microphone input, Gemini reasoning, background tool calls, and synchronized avatar video and speech.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#071c2f"/><stop offset=".58" stop-color="#113a57"/><stop offset="1" stop-color="#2c1646"/></linearGradient>
+    <linearGradient id="halo" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#4ed9ff"/><stop offset=".5" stop-color="#8a7dff"/><stop offset="1" stop-color="#ff77b9"/></linearGradient>
+    <filter id="glow"><feGaussianBlur stdDeviation="10" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+    <marker id="arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="8" markerHeight="8" orient="auto"><path d="M0 0L10 5L0 10z" fill="#84e8ff"/></marker>
+  </defs>
+  <rect width="1600" height="900" rx="42" fill="url(#bg)"/>
+  <g opacity=".18" stroke="#8eeaff"><path d="M0 138H1600M0 760H1600"/><path d="M136 0V900M1464 0V900"/></g>
+  <text x="110" y="112" fill="#fff" font-family="Inter,Arial,sans-serif" font-size="44" font-weight="700">LIVE AVATAR IS PART OF THE AGENT LOOP</text>
+  <text x="112" y="158" fill="#b9d8e8" font-family="Inter,Arial,sans-serif" font-size="23">Gemini 3.8 Live · September 24, 2026</text>
+  <g transform="translate(110 245)">
+    <rect width="330" height="380" rx="32" fill="#0c263d" stroke="#2d728f" stroke-width="2"/>
+    <text x="34" y="55" fill="#82e8ff" font-family="Inter,Arial,sans-serif" font-size="19" font-weight="700" letter-spacing="2">SENSE</text>
+    <circle cx="165" cy="155" r="74" fill="#123b57" stroke="#63dfff" stroke-width="4"/>
+    <circle cx="165" cy="155" r="34" fill="#061725" stroke="#b0f3ff" stroke-width="10"/>
+    <circle cx="165" cy="155" r="12" fill="#7fe8ff"/>
+    <path d="M76 279c19-30 39-30 58 0s39 30 58 0 39-30 58 0 39 30 58 0" fill="none" stroke="#ff75ba" stroke-width="10" stroke-linecap="round"/>
+    <text x="165" y="344" text-anchor="middle" fill="#fff" font-family="Inter,Arial,sans-serif" font-size="24" font-weight="650">CAMERA + MIC</text>
+  </g>
+  <path d="M455 435H580" stroke="#84e8ff" stroke-width="8" marker-end="url(#arrow)"/>
+  <g transform="translate(600 232)">
+    <circle cx="205" cy="205" r="190" fill="#0b2037" stroke="url(#halo)" stroke-width="8" filter="url(#glow)"/>
+    <path d="M118 183c48-75 126-76 175-1M121 254c52 60 126 61 176 0" fill="none" stroke="#fff" stroke-width="12" stroke-linecap="round" opacity=".92"/>
+    <circle cx="145" cy="211" r="13" fill="#62e4ff"/><circle cx="265" cy="211" r="13" fill="#ff7abf"/>
+    <text x="205" y="425" text-anchor="middle" fill="#fff" font-family="Inter,Arial,sans-serif" font-size="28" font-weight="700">GEMINI REASONS</text>
+  </g>
+  <path d="M1015 435H1140" stroke="#84e8ff" stroke-width="8" marker-end="url(#arrow)"/>
+  <g transform="translate(1165 245)">
+    <rect width="330" height="380" rx="32" fill="#221a3d" stroke="#865cb8" stroke-width="2"/>
+    <text x="34" y="55" fill="#ff8ac6" font-family="Inter,Arial,sans-serif" font-size="19" font-weight="700" letter-spacing="2">RESPOND</text>
+    <circle cx="165" cy="153" r="72" fill="url(#halo)" opacity=".9"/>
+    <circle cx="140" cy="142" r="8" fill="#081624"/><circle cx="190" cy="142" r="8" fill="#081624"/>
+    <path d="M137 178q28 25 56 0" fill="none" stroke="#081624" stroke-width="8" stroke-linecap="round"/>
+    <g stroke="#8eeaff" stroke-width="6" stroke-linecap="round"><path d="M90 280h150"/><path d="M72 304h186"/><path d="M103 328h124"/></g>
+    <text x="165" y="356" text-anchor="middle" fill="#fff" font-family="Inter,Arial,sans-serif" font-size="22" font-weight="650">SYNCED VIDEO + SPEECH</text>
+  </g>
+  <g transform="translate(570 700)">
+    <rect width="470" height="96" rx="26" fill="#081827" stroke="#5bdcf6" stroke-width="2" stroke-dasharray="10 8"/>
+    <text x="235" y="45" text-anchor="middle" fill="#7de7ff" font-family="Inter,Arial,sans-serif" font-size="19" font-weight="700" letter-spacing="2">BACKGROUND TOOLS</text>
+    <text x="235" y="76" text-anchor="middle" fill="#fff" font-family="Inter,Arial,sans-serif" font-size="22">fetch data while dialogue continues</text>
+    <path d="M235 0V-54" stroke="#84e8ff" stroke-width="6" marker-end="url(#arrow)"/>
+  </g>
+  <g transform="translate(112 838)" font-family="Inter,Arial,sans-serif"><text fill="#fff" font-size="30" font-weight="750">97</text><text x="58" y="0" fill="#b9d8e8" font-size="20">languages with adaptive lip-sync</text></g>
+  <g transform="translate(1180 823)" font-family="Inter,Arial,sans-serif"><text fill="#fff" font-size="24" font-weight="750">SynthID</text><text x="0" y="34" fill="#b9d8e8" font-size="18">in audio + video</text></g>
+</svg>
