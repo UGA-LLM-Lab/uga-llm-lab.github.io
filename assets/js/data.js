@@ -109,6 +109,17 @@ window.LLM_LAB_DATA = {
   news: [
     {
       date: "September 2026",
+      sortDate: "2026-09-24",
+      category: "Publication",
+      title: "2 papers accepted to NeurIPS 2026",
+      excerpt: "The accepted papers are “MedVIGIL: Evaluating Trustworthy Medical VLMs Under Broken Visual Evidence,” accepted as an Evaluations and Datasets Track poster, and “A World Model of Radiologist Reading for Medical Image Representation Learning,” accepted as a Main Track poster.",
+      url: "research.html#llms",
+      image: "assets/images/news-neurips-2026.svg",
+      imageAlt: "NeurIPS conference logo",
+      imageDisplay: "logo"
+    },
+    {
+      date: "September 2026",
       sortDate: "2026-09-16",
       category: "Media",
       title: "Our Synapse research featured by Franklin College",
@@ -659,6 +670,24 @@ window.LLM_LAB_DATA = {
       id: "llms",
       label: "Large Language Models",
       items: [
+        {
+          year: 2026,
+          month: "December",
+          monthNumber: 12,
+          title: "MedVIGIL: Evaluating Trustworthy Medical VLMs Under Broken Visual Evidence",
+          authors: "Hanqi Jiang, Junhao Chen, Mingyu Kang, Hyeokjae Kwon, Yi Pan, Lifeng Chen, Weihang You, Haozhen Gong, Ruiyu Yan, Jinglei Lv, Lin Zhao, Hui Ren, Quanzheng Li, Tianming Liu, Xiang Li",
+          venue: "NeurIPS 2026 Evaluations and Datasets Track, poster",
+          url: "https://arxiv.org/abs/2605.07919"
+        },
+        {
+          year: 2026,
+          month: "December",
+          monthNumber: 12,
+          title: "A World Model of Radiologist Reading for Medical Image Representation Learning",
+          authors: "Yiwei Li, Zihao Wu, Huaqin Zhao, Yifan Zhou, Chao Cao, Dajiang Zhu, Tianming Liu, Lin Zhao",
+          venue: "NeurIPS 2026 Main Track, poster",
+          url: "https://arxiv.org/abs/2605.23992"
+        },
         {
           year: 2026,
           month: "October",
