@@ -17,15 +17,31 @@
       <header class="page-heading">
         <p class="breadcrumb"><a href="index.html">Home</a><span>/</span><a href="entrepreneurship.html">Entrepreneurship</a><span>/</span>Support</p>
         <h1>Support</h1>
-        <p>Choose the path that matches your situation, then complete the steps in order. Both paths use a clear four-step process.</p>
+        <p>Start with the option that best describes your current situation. Each path gives you a short, ordered process and the correct materials to submit.</p>
       </header>
 
-      <section class="support-path" aria-labelledby="existing-venture-title">
+      <nav class="support-route-grid" aria-label="Choose an entrepreneurship support path">
+        <a href="#existing-startup" data-reveal>
+          <span class="support-route-grid__label">Path 1</span>
+          <strong>I already have a startup</strong>
+          <span>Request faculty guidance or collaboration and prepare a project page for the lab website.</span>
+          <i aria-hidden="true">View this path ↓</i>
+        </a>
+        <a href="#find-a-team" data-reveal>
+          <span class="support-route-grid__label">Path 2</span>
+          <strong>I have an idea or want to join a team</strong>
+          <span>Browse current teams first, then submit a listing if you still need collaborators.</span>
+          <i aria-hidden="true">View this path ↓</i>
+        </a>
+      </nav>
+
+      <section class="support-path" id="existing-startup" aria-labelledby="existing-venture-title">
         <header class="support-path__heading" data-reveal>
           <span>01</span>
           <div>
-            <p class="support-path__eyebrow">Existing venture</p>
-            <h2 id="existing-venture-title">Request guidance or collaboration</h2>
+            <p class="support-path__eyebrow">You already have a startup</p>
+            <h2 id="existing-venture-title">Request guidance and publish your project page</h2>
+            <p class="support-path__summary">Introduce the startup first. After making contact, use one of the website templates to prepare the page that will represent your project on the lab website.</p>
           </div>
         </header>
         <div class="support-path__body">
@@ -88,12 +104,13 @@
         </div>
       </section>
 
-      <section class="support-path" aria-labelledby="new-team-title">
+      <section class="support-path" id="find-a-team" aria-labelledby="new-team-title">
         <header class="support-path__heading" data-reveal>
           <span>02</span>
           <div>
-            <p class="support-path__eyebrow">New venture</p>
-            <h2 id="new-team-title">Find students who want to build with you</h2>
+            <p class="support-path__eyebrow">You need a team</p>
+            <h2 id="new-team-title">Find a team or share your idea</h2>
+            <p class="support-path__summary">Check the current listings before creating a new one. Contact an existing team directly when there is a match; otherwise, submit your own founder profile.</p>
           </div>
         </header>
         <div class="support-path__body support-path__body--single">

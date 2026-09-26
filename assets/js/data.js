@@ -89,7 +89,8 @@ window.LLM_LAB_DATA = {
       { title: "Team formation", description: "Connect students across research, engineering, product, and other relevant disciplines." },
       { title: "Responsible translation", description: "Consider reliability, privacy, safety, and real-world impact as the project develops." },
       { title: "Product and launch planning", description: "Turn promising prototypes into practical roadmaps for user testing, iteration, and launch." },
-      { title: "Promotion and visibility", description: "Use the lab's social media platforms to help introduce student-led projects and share important milestones." }
+      { title: "Promotion and visibility", description: "Use the lab's social media platforms to help introduce student-led projects and share important milestones." },
+      { title: "GPT Pro support", description: "Eligible student venture teams may receive $100 in GPT Pro support for early prototyping, subject to review and availability." }
     ],
     venturesTitle: "Student ventures",
     paths: [
