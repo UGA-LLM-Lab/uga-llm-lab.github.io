@@ -1676,6 +1676,18 @@ a:focus-visible {
   font-size: 1.2rem;
 }
 
+.team-card__heading h2 a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.team-card__heading h2 a:hover,
+.team-card__heading h2 a:focus-visible {
+  color: var(--uga-red);
+  text-decoration: underline;
+  text-underline-offset: 0.12em;
+}
+
 .team-card__heading p {
   grid-column: 1;
   min-width: 0;

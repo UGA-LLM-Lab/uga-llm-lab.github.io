@@ -862,8 +862,8 @@ window.LLM_LAB_DATA = {
         {
           title: "Research Exploration",
           description: "A small number of students may join a clearly scoped reading, data, evaluation, or software task with a defined mentor and schedule.",
-          points: ["Evidence of sustained technical interest", "A realistic weekly time commitment", "Parent or guardian awareness", "Attach a CV or short activity résumé", "Email subject: High school application - Current School - Name", "No guaranteed placement"],
-          action: { label: "Apply by email", url: "mailto:tliu@uga.edu?subject=High%20school%20application%20-%20Current%20School%20-%20Name" }
+          points: ["Evidence of sustained technical interest", "A realistic weekly time commitment", "Parent or guardian awareness", "Attach a CV or short activity résumé", "Email subject: [High school application - Current School - Name]", "No guaranteed placement"],
+          action: { label: "Apply by email", url: "mailto:tliu@uga.edu?subject=%5BHigh%20school%20application%20-%20Current%20School%20-%20Name%5D" }
         }
       ]
     },
@@ -886,8 +886,8 @@ window.LLM_LAB_DATA = {
         {
           title: "Undergraduate Research",
           description: "Work with a graduate mentor on implementation, evaluation, literature review, data preparation, or reproducibility in one of the lab's research areas.",
-          points: ["Relevant coursework or project experience", "Consistent weekly availability", "Ability to document work", "Attach a CV and include your expected graduation date", "Email subject: Undergraduate application - Current School - Name", "Multi-semester participation preferred"],
-          action: { label: "Apply by email", url: "mailto:tliu@uga.edu?subject=Undergraduate%20application%20-%20Current%20School%20-%20Name" }
+          points: ["Relevant coursework or project experience", "Consistent weekly availability", "Ability to document work", "Attach a CV and include your expected graduation date", "Email subject: [Undergraduate application - Current School - Name]", "Multi-semester participation preferred"],
+          action: { label: "Apply by email", url: "mailto:tliu@uga.edu?subject=%5BUndergraduate%20application%20-%20Current%20School%20-%20Name%5D" }
         }
       ]
     },
@@ -903,8 +903,8 @@ window.LLM_LAB_DATA = {
         {
           title: "How to Contact Us",
           descriptionHtml: "Email <a href=\"mailto:tliu@uga.edu\">Tianming Liu (tliu@uga.edu)</a> and copy <a href=\"mailto:Siyuan.Li1@uga.edu\">Siyuan Li (Siyuan.Li1@uga.edu)</a>. Briefly describe your background, the research area that interests you, and one paper or project you would like to build on.",
-          points: ["Attach a CV", "Include a transcript if helpful", "State your expected graduation date", "Email subject: Master application - Current School - Name"],
-          action: { label: "Apply by email", url: "mailto:tliu@uga.edu?cc=Siyuan.Li1@uga.edu&subject=Master%20application%20-%20Current%20School%20-%20Name" }
+          points: ["Attach a CV", "Include a transcript if helpful", "State your expected graduation date", "Email subject: [Master application - Current School - Name]"],
+          action: { label: "Apply by email", url: "mailto:tliu@uga.edu?cc=Siyuan.Li1@uga.edu&subject=%5BMaster%20application%20-%20Current%20School%20-%20Name%5D" }
         }
       ]
     },
@@ -920,8 +920,8 @@ window.LLM_LAB_DATA = {
         {
           title: "How to Contact Us",
           descriptionHtml: "In addition to the formal UGA graduate application, email <a href=\"mailto:tliu@uga.edu\">Tianming Liu (tliu@uga.edu)</a> and copy <a href=\"mailto:Siyuan.Li1@uga.edu\">Siyuan Li (Siyuan.Li1@uga.edu)</a> with a concise introduction and your research interests.",
-          points: ["Attach a CV and summarize your academic background", "Selected publications or technical work (optional)", "Email subject: PhD application - Current School - Name"],
-          action: { label: "Apply by email", url: "mailto:tliu@uga.edu?cc=Siyuan.Li1@uga.edu&subject=PhD%20application%20-%20Current%20School%20-%20Name" }
+          points: ["Attach a CV and summarize your academic background", "Selected publications or technical work (optional)", "Email subject: [PhD application - Current School - Name]"],
+          action: { label: "Apply by email", url: "mailto:tliu@uga.edu?cc=Siyuan.Li1@uga.edu&subject=%5BPhD%20application%20-%20Current%20School%20-%20Name%5D" }
         }
       ]
     }

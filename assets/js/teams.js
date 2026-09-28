@@ -100,7 +100,10 @@
     const heading = document.createElement("div");
     heading.className = "team-card__heading";
     const title = document.createElement("h2");
-    title.textContent = profile.title;
+    const titleLink = document.createElement("a");
+    titleLink.href = profile.url;
+    titleLink.textContent = profile.title;
+    title.append(titleLink);
     heading.append(title);
 
     const context = [`Proposed by ${profile.name}`, profile.location].filter(Boolean).join(" · ");
