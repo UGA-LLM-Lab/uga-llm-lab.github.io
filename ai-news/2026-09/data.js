@@ -8,6 +8,339 @@ window.AI_NEWS_MONTH_DATA["2026-09"] = {
   "label": "September 2026",
   "articles": [
     {
+      "slug": "meta-enterprise-platform-muse-ai-stack",
+      "category": "Industry · Enterprise AI",
+      "sortDate": "2026-09-28",
+      "dateLabel": "September 28, 2026",
+      "title": "Meta starts an enterprise AI platform around Muse agents and its full technology stack",
+      "summary": "Meta is creating a new enterprise business that will package its Muse agent, Business Agent, Muse API, Muse Code, models and infrastructure for companies and developers. Former MongoDB CEO Chirantan Desai will lead the effort, but Meta has not yet published pricing, customer deployments or a detailed rollout schedule.",
+      "image": {
+        "src": "ai-news/2026-09/images/meta-enterprise-platform.jpg",
+        "alt": "Official Meta newsroom graphic for the launch of Meta Enterprise Platform",
+        "caption": "Official Meta newsroom image for the September 28 announcement. Meta says the new business will package its models, agents and infrastructure for enterprise use."
+      },
+      "content": [
+        {
+          "type": "paragraph",
+          "text": "Meta is opening a new front in enterprise AI. The company says Meta Enterprise Platform will turn its broader AI stack into products and services that companies can deploy in their own operations, beginning with the Muse agent, Meta Business Agent, Muse API and Muse Code. The announcement positions the effort as a new business pillar rather than a single feature inside an existing advertising product."
+        },
+        {
+          "type": "heading",
+          "text": "The leadership hire signals a full-stack enterprise push"
+        },
+        {
+          "type": "paragraph",
+          "text": "Chirantan “CJ” Desai will join as chief enterprise platform officer and report directly to Mark Zuckerberg. Desai most recently served as chief executive and president of MongoDB, after leadership roles at Cloudflare and ServiceNow. Meta says his organization will combine models, agents, infrastructure and the company’s existing relationships with businesses and advertisers."
+        },
+        {
+          "type": "paragraph",
+          "text": "The move widens Meta’s commercial AI strategy beyond consumer assistants, creator tools and advertising systems. It also puts the company more directly against established enterprise platforms that already package models, orchestration, governance and developer tooling for corporate customers."
+        },
+        {
+          "type": "paragraph",
+          "text": "Meta’s proposed bundle spans several layers that enterprises often buy separately: foundation models, application-level agents, developer APIs, coding tools and the infrastructure needed to run them. If those pieces become a coherent service, Meta could reuse both its model development and its long-standing business-distribution channels. The launch post, however, does not say whether customers will be able to use each component independently, deploy it in their own environments or connect it to non-Meta models."
+        },
+        {
+          "type": "heading",
+          "text": "Important deployment details remain open"
+        },
+        {
+          "type": "paragraph",
+          "text": "Meta describes security and privacy as foundational, but the launch post does not specify general-availability dates, pricing, service-level commitments, customer deployments or the governance controls enterprises will receive. It is therefore evidence of a strategic commitment and a new organization, not yet evidence of broad production adoption."
+        },
+        {
+          "type": "paragraph",
+          "text": "The distinction matters in a market crowded with agent announcements. A named organization, an executive appointment and a defined initial product family make this more concrete than a general statement of intent, but enterprise credibility will depend on implementation details: identity and access controls, data residency, auditability, model choice, integration support and verifiable customer outcomes. Meta has not yet supplied that evidence."
+        }
+      ],
+      "sources": [
+        {
+          "label": "Meta — Launching Meta Enterprise Platform, September 28",
+          "url": "https://about.fb.com/news/2026/09/launching-meta-enterprise-platform/"
+        }
+      ]
+    },
+    {
+      "slug": "nvidia-open-agent-safety-platform-openshell-sentry",
+      "category": "Industry · Agent Security",
+      "sortDate": "2026-09-28",
+      "dateLabel": "September 28, 2026",
+      "title": "NVIDIA launches an open agent-safety stack with software and hardware enforcement",
+      "summary": "NVIDIA’s Open Agent Safety Platform combines the open-source OpenShell runtime with a Sentry reference design that monitors agents from an isolated BlueField-4 DPU. OpenShell is broadly available, while NVIDIA says many partner integrations and hardware features remain in different stages of delivery.",
+      "image": {
+        "src": "ai-news/2026-09/images/nvidia-open-agent-safety-platform.png",
+        "alt": "Official NVIDIA graphic for the Open Agent Safety Platform",
+        "caption": "Official NVIDIA press image for Open Agent Safety Platform. The launch combines the OpenShell policy runtime with the Sentry out-of-band monitoring design."
+      },
+      "content": [
+        {
+          "type": "paragraph",
+          "text": "NVIDIA has introduced Open Agent Safety Platform, a layered control system for AI agents that spans software sandboxes, CPUs and data-processing units. Its central idea is that an agent should not be the only component responsible for policing its own behavior: policies and monitoring should also run outside the model and, in Sentry’s case, outside the host CPU."
+        },
+        {
+          "type": "heading",
+          "text": "OpenShell creates an enforceable runtime boundary"
+        },
+        {
+          "type": "paragraph",
+          "text": "The Apache-2.0-licensed OpenShell project isolates each agent in a sandbox and applies policy checks to files, system calls, network connections, credentials and approved API endpoints. NVIDIA says policy changes can be checked before they are applied so that risky access expansions wait for review. The software is broadly available and is designed to support open and closed models; NVIDIA also says it can be extended to Arm and Intel compute platforms."
+        },
+        {
+          "type": "paragraph",
+          "text": "The public repository describes two complementary controls. Kernel-level enforcement constrains filesystem, process and network behavior at runtime, while a policy prover checks what a proposed permission change would newly allow before an operator approves it. Credentials are intended to remain outside the sandbox and be attached only to requests bound for approved endpoints. Those mechanisms target practical agent risks that cannot be solved by prompt instructions alone."
+        },
+        {
+          "type": "heading",
+          "text": "Sentry moves monitoring into an isolated trust domain"
+        },
+        {
+          "type": "paragraph",
+          "text": "The Sentry reference design runs on NVIDIA BlueField-4 DPUs and continuously watches agent activity from an out-of-band environment. NVIDIA says it can inspect requests and responses, verify identities, enforce zero-trust access policies and quarantine an agent that crosses its boundary. That separation is meant to make the watchdog less visible and less alterable from inside the agent’s normal execution path."
+        },
+        {
+          "type": "paragraph",
+          "text": "NVIDIA lists more than 100 organizations working with parts of the platform, including Anthropic, Microsoft, Red Hat, Salesforce, SAP, Cisco, financial institutions and robotics companies. Those relationships range from integrations and infrastructure support to engineering collaboration; they should not be read as proof that every organization has deployed the complete stack in production."
+        },
+        {
+          "type": "paragraph",
+          "text": "Several examples show the breadth of the design rather than a single standardized deployment. Anthropic describes OpenShell and BlueField as additional enforcement around Claude Managed Agents; Salesforce has connected OpenShell activity to Slack approval flows; SAP is integrating the runtime with Joule Studio; robotics companies are exploring controls for systems that act in the physical world. A shared platform could make agent boundaries more portable, but interoperability across these environments remains an implementation task."
+        },
+        {
+          "type": "heading",
+          "text": "The architecture is testable, but the launch is not a security guarantee"
+        },
+        {
+          "type": "paragraph",
+          "text": "OpenShell’s public repository and documentation make the software layer inspectable. The press release, however, does not provide a common independent benchmark for containment, quarantine latency or bypass resistance across the named deployments. NVIDIA also notes that many described products and features remain at different stages and may change before delivery."
+        },
+        {
+          "type": "paragraph",
+          "text": "Security also depends on policy quality. A correctly functioning sandbox can still permit harmful behavior if an operator grants overly broad access, while an out-of-band monitor needs sufficiently complete and timely signals to recognize violations. The launch advances the architecture of agent governance, but ongoing red-team evidence and transparent failure reporting will be needed to judge its effectiveness."
+        }
+      ],
+      "sources": [
+        {
+          "label": "NVIDIA — Open Agent Safety Platform launch, September 28",
+          "url": "https://nvidianews.nvidia.com/news/open-agent-safety-platform"
+        },
+        {
+          "label": "NVIDIA OpenShell — public source repository",
+          "url": "https://github.com/NVIDIA/OpenShell"
+        },
+        {
+          "label": "NVIDIA Technical Blog — OpenShell runtime controls",
+          "url": "https://developer.nvidia.com/blog/add-runtime-controls-to-ai-agents-with-nvidia-openshell"
+        }
+      ]
+    },
+    {
+      "slug": "mit-agent-ai-thermostable-mrna-lnp-vaccines",
+      "category": "Research · AI for Science",
+      "sortDate": "2026-09-28",
+      "dateLabel": "September 28, 2026",
+      "title": "Data-efficient AI finds mRNA vaccine formulations that stay active after months at higher temperatures",
+      "summary": "MIT researchers used Bayesian optimization and iterative experiments to identify solid-state mRNA–lipid nanoparticle formulations in six rounds. Two clinically relevant LNP compositions retained full measured bioactivity after more than two months at 37 °C and produced non-inferior immune responses in animal studies, but the work is not a human clinical trial.",
+      "image": {
+        "src": "ai-news/2026-09/images/mit-ai-vaccine-stability.jpg",
+        "alt": "MIT illustration of an AI optimization process for heat-stable mRNA lipid nanoparticle formulations",
+        "caption": "MIT News illustration by Second Bay Studios showing the algorithm-guided formulation search. Reproduced from MIT News under its stated CC BY-NC-ND media terms; no alteration beyond package-local delivery."
+      },
+      "content": [
+        {
+          "type": "paragraph",
+          "text": "A peer-reviewed Nature Biotechnology study from MIT reports a data-efficient route to thermostable mRNA vaccines. The AGENT framework—Algorithm-Guided Experimental design for lipid Nanoparticle Thermostabilization—combines sparse laboratory measurements with Bayesian optimization so that each new experimental round targets more promising excipient mixtures."
+        },
+        {
+          "type": "heading",
+          "text": "Six optimization rounds replaced a much larger combinatorial search"
+        },
+        {
+          "type": "paragraph",
+          "text": "The team first screened nearly 50 FDA-approved excipients, then selected five promising ingredients and iteratively tested ratios proposed by the algorithm. The paper says optimization converged in six iterations completed within one month. The method was applied to two lipid nanoparticle compositions representative of those used in Moderna and Pfizer-BioNTech vaccines."
+        },
+        {
+          "type": "paragraph",
+          "text": "That setup is a useful example of AI for science working with a small, expensive experimental loop rather than a giant training corpus. Each laboratory result updated the optimizer, which then proposed the next formulations to test. The contribution is not a new general-purpose model; it is a decision strategy that uses limited measurements to search a large mixture space more efficiently."
+        },
+        {
+          "type": "heading",
+          "text": "The strongest result is animal evidence after high-temperature storage"
+        },
+        {
+          "type": "paragraph",
+          "text": "After vacuum drying, the optimized solid-state formulations retained 100% measured bioactivity following storage at 37 °C for more than two months. The paper also reports antigen-specific immune responses in rodents and non-human primates that were non-inferior to responses from freshly prepared soluble vaccines delivered intramuscularly. A microneedle-patch formulation produced comparable immune responses in the reported animal experiments."
+        },
+        {
+          "type": "paragraph",
+          "text": "The public paper record includes a Zenodo dataset and links the Bayesian optimization implementation to the AutODEx framework and an open source repository. That supports technical inspection, although the full journal article is subscription content."
+        },
+        {
+          "type": "paragraph",
+          "text": "The study also separates formulation stability from biological response. Bioactivity measurements show whether stored mRNA can still express its encoded protein, while animal experiments test whether a vaccine formulation produces the intended immune response. Neither measure alone establishes human protection, but together they provide stronger preclinical evidence than a chemistry-only stability result."
+        },
+        {
+          "type": "heading",
+          "text": "The result does not remove the clinical-development burden"
+        },
+        {
+          "type": "paragraph",
+          "text": "The study demonstrates formulation stability and immune response in preclinical models; it does not establish safety, efficacy or shelf life in people. Manufacturing scale-up, packaging, repeated-batch validation and regulatory review would still be required before the formulation could change vaccine distribution in practice."
+        },
+        {
+          "type": "paragraph",
+          "text": "The work was supported in part by the Gates Foundation, and the paper discloses commercial relationships for senior authors Ana Jaklenec and Robert Langer. Those disclosures do not invalidate the findings, but they belong in the evidence record. The most defensible conclusion is that the method produced a reproducible, data-backed preclinical formulation result—not that the cold-chain problem has already been solved for deployed vaccines."
+        }
+      ],
+      "sources": [
+        {
+          "label": "Nature Biotechnology — Accelerated discovery of thermostable mRNA–LNP vaccines, September 28",
+          "url": "https://www.nature.com/articles/s41587-026-03331-w"
+        },
+        {
+          "label": "MIT News — New formulation helps RNA vaccines withstand high temperatures, September 28",
+          "url": "https://news.mit.edu/2026/new-formulation-helps-rna-vaccines-withstand-high-temperatures-0928"
+        },
+        {
+          "label": "Zenodo — study dataset",
+          "url": "https://zenodo.org/records/21726997"
+        }
+      ]
+    },
+    {
+      "slug": "tempus-ecg-mr-fda-clearance-mitral-regurgitation",
+      "category": "Industry · Medical AI",
+      "sortDate": "2026-09-28",
+      "dateLabel": "September 28, 2026",
+      "title": "Tempus says FDA cleared its ECG-MR model to flag signs of undiagnosed mitral regurgitation",
+      "summary": "Tempus says ECG-MR received 510(k) clearance to analyze standard 12-lead ECGs for signs associated with moderate or severe mitral regurgitation in certain patients aged 65 or older. The binary output is an assistive flag for follow-up, not a diagnosis or stand-alone clinical decision.",
+      "image": {
+        "src": "ai-news/2026-09/images/tempus-ecg-ai.jpg",
+        "alt": "Official Tempus graphic showing ECG-AI connected to clinical workflows",
+        "caption": "Official image from the Tempus ECG-AI product page. Tempus says ECG-MR is the fourth FDA-cleared product in its ECG-AI portfolio."
+      },
+      "content": [
+        {
+          "type": "paragraph",
+          "text": "Tempus says the U.S. Food and Drug Administration has granted 510(k) clearance to ECG-MR, software that analyzes a standard resting 12-lead electrocardiogram for signs associated with moderate or severe mitral regurgitation. The condition allows blood to leak backward through the mitral valve and can remain difficult to recognize when early symptoms are absent or nonspecific."
+        },
+        {
+          "type": "heading",
+          "text": "The software is a referral aid, not a diagnostic replacement"
+        },
+        {
+          "type": "paragraph",
+          "text": "According to Tempus, ECG-MR is intended for people aged 65 or older who are at risk of cardiovascular disease and who do not already have moderate or severe mitral regurgitation or a prior mitral-valve intervention. It produces a binary output that can help identify patients for additional evaluation such as diagnostic imaging."
+        },
+        {
+          "type": "paragraph",
+          "text": "The labeled risk population includes people with factors such as coronary artery disease, hypertension, obesity or diabetes, as well as symptoms including shortness of breath, chest pain or leg swelling. The intended workflow is therefore targeted screening inside an existing clinical setting, not population-wide diagnosis from a consumer ECG."
+        },
+        {
+          "type": "paragraph",
+          "text": "The company explicitly says the result should be interpreted with the original ECG, symptoms, clinical history and other tests. The software is not intended as a stand-alone diagnosis, for serial monitoring or for paced-rhythm ECGs. Those restrictions are important because the product identifies an association in ECG data rather than directly imaging a leaking valve."
+        },
+        {
+          "type": "paragraph",
+          "text": "A positive flag can therefore change who receives follow-up rather than determine treatment. Echocardiography or another appropriate imaging study would still be needed to evaluate valve structure and severity. The potential value is to extract an additional signal from an inexpensive test already embedded in clinical care, but that value depends on how accurately the model performs and how health systems respond to its alerts."
+        },
+        {
+          "type": "heading",
+          "text": "A growing portfolio, with evidence details still to inspect"
+        },
+        {
+          "type": "paragraph",
+          "text": "Tempus describes ECG-MR as its fourth FDA-cleared ECG-AI product, following tools addressing atrial fibrillation, low ejection fraction and pulmonary hypertension. The September 28 release does not include the device’s 510(k) number, sensitivity, specificity or prospective clinical-outcome data, so its announcement supports the regulatory and intended-use facts but does not by itself quantify real-world benefit."
+        },
+        {
+          "type": "paragraph",
+          "text": "A 510(k) clearance is a marketing authorization based on the FDA’s substantial-equivalence pathway; it is not the same as demonstrating that screening improves outcomes across all intended settings. Independent study details, subgroup performance, false-positive burden and prospective evidence will matter for judging whether ECG-MR finds clinically important disease earlier without creating unnecessary imaging."
+        }
+      ],
+      "sources": [
+        {
+          "label": "Tempus — ECG-MR FDA clearance announcement, September 28",
+          "url": "https://investors.tempus.com/news-releases/news-release-details/tempus-receives-fda-clearance-its-ecg-mr-ai-product-designed"
+        },
+        {
+          "label": "Tempus — ECG-AI product information",
+          "url": "https://www.tempus.com/solutions/ecg-ai/"
+        },
+        {
+          "label": "FDA — How AI-enabled medical devices are regulated",
+          "url": "https://www.fda.gov/medical-devices/digital-health-center-excellence/artificial-intelligence-enabled-medical-devices"
+        }
+      ]
+    },
+    {
+      "slug": "hcompany-holo4-generalist-computer-use-agents",
+      "category": "Industry · Open Models",
+      "sortDate": "2026-09-28",
+      "dateLabel": "September 28, 2026",
+      "title": "H Company releases Holo4 models that move between GUIs, code, MCP and APIs",
+      "summary": "H Company released two open-weight Holo4 computer-use models, a 27B dense model and a 35B-A3B mixture-of-experts model, plus public benchmark trajectories. The strongest model reaches 61.7% on the company’s OSWorld 2.0 comparison, though harnesses, subsets and cost methods differ across competitors.",
+      "image": {
+        "src": "ai-news/2026-09/images/hcompany-holo4.jpg",
+        "alt": "Official H Company Holo4 release graphic",
+        "caption": "Official H Company release image distributed with the Holo4 team post on Hugging Face. Holo4 is designed to use graphical interfaces, code, MCP and APIs within one agent model."
+      },
+      "content": [
+        {
+          "type": "paragraph",
+          "text": "H Company has released Holo4, a family of computer-use models intended to switch among graphical interfaces, shell and code execution, Model Context Protocol tools and conventional APIs during the same task. The release includes a 27-billion-parameter dense model, a 35B-A3B mixture-of-experts model and an updated Holotron4 Nano model."
+        },
+        {
+          "type": "heading",
+          "text": "The release is open-weight and exposes task trajectories"
+        },
+        {
+          "type": "paragraph",
+          "text": "Weights are available on Hugging Face in BF16, FP8, NVFP4 and 4-bit GGUF formats, while both larger models are also served through the H Models API. H Company published trajectories for public benchmark runs so developers can inspect and replay individual steps rather than seeing only aggregate scores."
+        },
+        {
+          "type": "paragraph",
+          "text": "The company says its task-generation pipeline has produced about 10,000 interactive tasks across web applications, MCP servers and desktop environments. Its updated harness adds longer-lived memory and a shell on the desktop machine so the agent can work across hundreds of steps."
+        },
+        {
+          "type": "paragraph",
+          "text": "H Company presents this cross-interface behavior as the main difference from agents trained for only a graphical desktop or only a tool API. In principle, a single model can choose the cheapest or most reliable path available: call an API when one exists, write code for a structured transformation, and fall back to clicking when software exposes no machine-readable interface. The published examples span FreeCAD and Godot as well as web and business workflows."
+        },
+        {
+          "type": "heading",
+          "text": "Benchmark comparisons need careful qualification"
+        },
+        {
+          "type": "paragraph",
+          "text": "On H Company’s OSWorld 2.0 comparison, Holo4 27B scores 61.7%, versus 81.8% for Claude Opus 5.5, while Holo4 35B-A3B scores 30.9%. The company argues that the 27B model offers a lower cost per task, but it also notes that harnesses, task subsets and pricing assumptions differ. For AutomationBench, some Holo4 results come from the public set in the company’s own harness while several comparison points use the benchmark’s private set."
+        },
+        {
+          "type": "paragraph",
+          "text": "The two Holo4 sizes also do not form a simple larger-is-better ranking: the dense 27B model substantially outperforms the 35B-A3B mixture-of-experts model in the reported OSWorld comparison. That makes release-specific behavior, routing and post-training at least as important as headline parameter count. Users should evaluate the exact checkpoint and harness they intend to deploy."
+        },
+        {
+          "type": "paragraph",
+          "text": "The release is therefore most useful as an inspectable open model and training artifact, not as proof that a smaller agent matches frontier systems in every workflow. Long tasks in the company’s examples can still consume more than a million tokens and dozens of tool calls, leaving reliability and operating cost highly dependent on the harness and task."
+        },
+        {
+          "type": "paragraph",
+          "text": "Public trajectories are a meaningful step toward reproducibility because they expose where an agent clicked, typed, called tools and recovered from errors. They do not eliminate benchmark contamination, environment drift or grader uncertainty. The strongest immediate value is that researchers and developers can inspect and run a cross-interface agent locally instead of relying only on a closed API score."
+        }
+      ],
+      "sources": [
+        {
+          "label": "H Company / Hugging Face — Holo4 release, September 28",
+          "url": "https://huggingface.co/blog/Hcompany/holo4"
+        },
+        {
+          "label": "H Company — Holo4 27B model card",
+          "url": "https://huggingface.co/Hcompany/Holo4-27B"
+        },
+        {
+          "label": "H Company — public benchmark trajectories",
+          "url": "https://huggingface.co/datasets/Hcompany/trajectories"
+        }
+      ]
+    },
+    {
       "slug": "weekly-ai-september-21-27",
       "category": "AI Weekly",
       "sortDate": "2026-09-27",
