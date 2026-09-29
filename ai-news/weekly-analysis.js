@@ -57,11 +57,11 @@
           <p>${escapeHtml(claim.near_term)}</p>
         </section>
         <section>
-          <h3>Medium to long term</h3>
+          <h3>Structural context</h3>
           <p>${escapeHtml(claim.structural)}</p>
         </section>
         <section>
-          <h3>Longer-run baseline</h3>
+          <h3>Medium to long term</h3>
           <p>${escapeHtml(claim.long_run)}</p>
         </section>
       </div>
@@ -86,7 +86,7 @@
   const renderAnalysis = (analysis) => {
     const sources = sourceMap(analysis);
     const currentPeriod = periodLabel(analysis.period?.current);
-    const visibleTabs = (analysis.tabs || []).filter((tab) => tab.id !== "hiring");
+    const visibleTabs = analysis.tabs || [];
 
     document.title = `${analysis.title} · ${currentPeriod} | UGA LLM Lab`;
     mount.innerHTML = `

@@ -1,0 +1,802 @@
+{
+  "schema_version": "1.2",
+  "title": "AI This Week: Agents, Infrastructure, and Reliability",
+  "period": {
+    "current": [
+      "2026-09-21",
+      "2026-09-27"
+    ],
+    "previous": [
+      "2026-09-14",
+      "2026-09-20"
+    ],
+    "timezone": "America/New_York"
+  },
+  "synthesis": "Persistent agents moved into more products, while reported incidents exposed gaps in tool boundaries and repeat-call controls. Research added laboratory-tested materials discovery and longer-context model capabilities; infrastructure announcements kept power, compute and deployment constraints in view.",
+  "coverage": {
+    "internal_event_ledger": "25 current-week public article records were reopened, alongside Daily candidates and evidence; the prior comparable week contained 17 non-Weekly records.",
+    "research_panel": "HF Daily Papers: 131 prior-week and 140 current-week unique paper IDs; unchanged attention-index-v1; no weekend panels.",
+    "expanded_discovery": "The Weekly evidence pool includes dated primary research and technical announcements found beyond Daily-selected stories, including Stanford, Google Research and Google DeepMind. These are reviewed by their true release dates.",
+    "hiring_panel": "Baseline-building only. One material workforce event was selected, but normalized job snapshots do not yet form a stable current/prior intersection. A first Anthropic ATS snapshot normalized 627 role IDs; it is not a flow of newly posted jobs."
+  },
+  "research_attention": {
+    "sampling_unit": "unique paper ID per Hugging Face Daily Papers platform week; retrospective listing snapshot",
+    "date_basis": "platform recommendation date, not first publication",
+    "denominators": [
+      131,
+      140
+    ],
+    "topics_overlap": true,
+    "classifier": "case-insensitive explicit title rules; unchanged from prior panel; no claim of semantic or field-wide prevalence",
+    "rules": {
+      "agents": "\\bagents?\\b|agentic|multi[- ]agent|tool[- ](?:use|calling)|harness",
+      "code": "\\bcode\\b|\\bcoding\\b|software|programming|debug|repositor|kernel",
+      "reason": "reasoning|mathemat|\\bmath\\b|theorem|\\bproof|planning",
+      "multimodal": "visual|vision|multimodal|image|video|diffusion|\\bvlm",
+      "embodied": "robot|embodied|manipulation|locomot|world[- ]model|\\bvla\\b",
+      "efficiency": "inference|efficien|quantiz|compression|spars|\\bcache|attention|distillation|low[- ]rank",
+      "bio": "medical|clinical|health|radiolog|protein|molecul|drug|genom|biolog",
+      "eval": "benchmark|evaluat|\\baudit|verif|\\bbench\\b",
+      "safety": "safety|security|alignment|privacy|hallucinat|jailbreak|deception|reliab",
+      "self": "self[- ](?:improv|evol)|co[- ]?evol|recursive improvement",
+      "memory": "\\bmemory\\b|\\bcontext\\b",
+      "audio": "speech|audio|voice|music"
+    },
+    "threshold": "index shown only when both weeks have at least five matches and the prior share is nonzero",
+    "stable_band": "95–105",
+    "metrics": [
+      {
+        "id": "agents",
+        "label": "Agents & tool use",
+        "counts": [
+          30,
+          39
+        ],
+        "denominators": [
+          131,
+          140
+        ],
+        "shares": [
+          22.900763358778626,
+          27.857142857142858
+        ],
+        "index": 122,
+        "state": "Rising",
+        "direction": "up",
+        "examples": [
+          {
+            "id": "2609.15779",
+            "title": "EvoOntology: A Self-Evolving Ontology Layer for Data Agents",
+            "url": "https://huggingface.co/papers/2609.15779"
+          },
+          {
+            "id": "2609.22068",
+            "title": "CodeMidas: Scaling Agentic Coding RL Environments from Code Itself",
+            "url": "https://huggingface.co/papers/2609.22068"
+          },
+          {
+            "id": "2609.05571",
+            "title": "Grounded Skill Synthesis from Code at Scale for Agentic Intelligence",
+            "url": "https://huggingface.co/papers/2609.05571"
+          },
+          {
+            "id": "2609.22000",
+            "title": "RecreationWorld: Scalable and Verifiable Environments for Hybrid Computer-Use Agents",
+            "url": "https://huggingface.co/papers/2609.22000"
+          }
+        ]
+      },
+      {
+        "id": "code",
+        "label": "Coding & software",
+        "counts": [
+          1,
+          9
+        ],
+        "denominators": [
+          131,
+          140
+        ],
+        "shares": [
+          0.7633587786259541,
+          6.428571428571428
+        ],
+        "index": null,
+        "state": "Watching",
+        "direction": "watch",
+        "examples": [
+          {
+            "id": "2609.22068",
+            "title": "CodeMidas: Scaling Agentic Coding RL Environments from Code Itself",
+            "url": "https://huggingface.co/papers/2609.22068"
+          },
+          {
+            "id": "2609.05571",
+            "title": "Grounded Skill Synthesis from Code at Scale for Agentic Intelligence",
+            "url": "https://huggingface.co/papers/2609.05571"
+          },
+          {
+            "id": "2609.19122",
+            "title": "Training-Adaptive Convolutional Sparse Coding via Information Bottleneck for Robust Visual Representation",
+            "url": "https://huggingface.co/papers/2609.19122"
+          },
+          {
+            "id": "2609.23377",
+            "title": "One to More, More to One: Category-Aware Iterative Expert Training for Software Engineering Agents",
+            "url": "https://huggingface.co/papers/2609.23377"
+          }
+        ]
+      },
+      {
+        "id": "reason",
+        "label": "Reasoning & mathematics",
+        "counts": [
+          11,
+          8
+        ],
+        "denominators": [
+          131,
+          140
+        ],
+        "shares": [
+          8.396946564885496,
+          5.714285714285714
+        ],
+        "index": 68,
+        "state": "Falling",
+        "direction": "down",
+        "examples": [
+          {
+            "id": "2609.19315",
+            "title": "GAVEL: Graph World Models for Verified and Efficient Long-Horizon LLM Task Planning",
+            "url": "https://huggingface.co/papers/2609.19315"
+          },
+          {
+            "id": "2609.06052",
+            "title": "SkillSpec: Intent-Masked Specification Reasoning for Agent Skill Correctness",
+            "url": "https://huggingface.co/papers/2609.06052"
+          },
+          {
+            "id": "2609.25199",
+            "title": "Lean Pool: An AI-Maintained Archive of Formalized Mathematics",
+            "url": "https://huggingface.co/papers/2609.25199"
+          },
+          {
+            "id": "2609.26793",
+            "title": "HARMONY: Hierarchical Agentic Reasoning for MONocular Image-to-Scene Synthesis",
+            "url": "https://huggingface.co/papers/2609.26793"
+          }
+        ]
+      },
+      {
+        "id": "multimodal",
+        "label": "Vision & multimodality",
+        "counts": [
+          25,
+          31
+        ],
+        "denominators": [
+          131,
+          140
+        ],
+        "shares": [
+          19.083969465648856,
+          22.142857142857142
+        ],
+        "index": 116,
+        "state": "Rising",
+        "direction": "up",
+        "examples": [
+          {
+            "id": "2609.21465",
+            "title": "OmniVChat: Synthesizing, Benchmarking, and Training for Native Audio-Visual Dialogue",
+            "url": "https://huggingface.co/papers/2609.21465"
+          },
+          {
+            "id": "2609.20816",
+            "title": "Paint-Anything: Unified Any-Color Control for Image Generation and Editing",
+            "url": "https://huggingface.co/papers/2609.20816"
+          },
+          {
+            "id": "2609.22069",
+            "title": "OmniVBench: A Benchmark and Large-Scale Dataset for Omni Reference-to-Video Generation",
+            "url": "https://huggingface.co/papers/2609.22069"
+          },
+          {
+            "id": "2609.22083",
+            "title": "MintAct: A Unified Visual Agent for Digital Environments",
+            "url": "https://huggingface.co/papers/2609.22083"
+          }
+        ]
+      },
+      {
+        "id": "embodied",
+        "label": "Robotics & world models",
+        "counts": [
+          12,
+          22
+        ],
+        "denominators": [
+          131,
+          140
+        ],
+        "shares": [
+          9.16030534351145,
+          15.714285714285714
+        ],
+        "index": 172,
+        "state": "Rising",
+        "direction": "up",
+        "examples": [
+          {
+            "id": "2609.18620",
+            "title": "DeformSmith: Physics Harness-Guided Hierarchical Generation of Deformable Assets for Robot Manipulation",
+            "url": "https://huggingface.co/papers/2609.18620"
+          },
+          {
+            "id": "2609.21788",
+            "title": "From Pretraining to Proficiency: Real-World Subtask RL for Long-Horizon Manipulation with Minimal Human Intervention",
+            "url": "https://huggingface.co/papers/2609.21788"
+          },
+          {
+            "id": "2609.19315",
+            "title": "GAVEL: Graph World Models for Verified and Efficient Long-Horizon LLM Task Planning",
+            "url": "https://huggingface.co/papers/2609.19315"
+          },
+          {
+            "id": "2609.24984",
+            "title": "WorldCrafter: Consistent Video World Model with Implicit 3D-aware Memory",
+            "url": "https://huggingface.co/papers/2609.24984"
+          }
+        ]
+      },
+      {
+        "id": "efficiency",
+        "label": "Efficiency & inference systems",
+        "counts": [
+          18,
+          18
+        ],
+        "denominators": [
+          131,
+          140
+        ],
+        "shares": [
+          13.740458015267176,
+          12.857142857142856
+        ],
+        "index": 94,
+        "state": "Falling",
+        "direction": "down",
+        "examples": [
+          {
+            "id": "2609.21619",
+            "title": "Calibrating Teacher--Student Discrepancy for On-Policy Distillation",
+            "url": "https://huggingface.co/papers/2609.21619"
+          },
+          {
+            "id": "2609.15126",
+            "title": "MoME: Mixture-of-Memory Embeddings for Context-Aware Sparse Lookup",
+            "url": "https://huggingface.co/papers/2609.15126"
+          },
+          {
+            "id": "2609.19122",
+            "title": "Training-Adaptive Convolutional Sparse Coding via Information Bottleneck for Robust Visual Representation",
+            "url": "https://huggingface.co/papers/2609.19122"
+          },
+          {
+            "id": "2609.19315",
+            "title": "GAVEL: Graph World Models for Verified and Efficient Long-Horizon LLM Task Planning",
+            "url": "https://huggingface.co/papers/2609.19315"
+          }
+        ]
+      },
+      {
+        "id": "bio",
+        "label": "Health & life sciences",
+        "counts": [
+          2,
+          1
+        ],
+        "denominators": [
+          131,
+          140
+        ],
+        "shares": [
+          1.5267175572519083,
+          0.7142857142857143
+        ],
+        "index": null,
+        "state": "Watching",
+        "direction": "watch",
+        "examples": [
+          {
+            "id": "2609.25186",
+            "title": "From Pattern Recognizers to Personalized Companions: A Survey of Large Language Models in Mental Health",
+            "url": "https://huggingface.co/papers/2609.25186"
+          }
+        ]
+      },
+      {
+        "id": "eval",
+        "label": "Evaluation & verification",
+        "counts": [
+          13,
+          20
+        ],
+        "denominators": [
+          131,
+          140
+        ],
+        "shares": [
+          9.923664122137405,
+          14.285714285714285
+        ],
+        "index": 144,
+        "state": "Rising",
+        "direction": "up",
+        "examples": [
+          {
+            "id": "2609.21465",
+            "title": "OmniVChat: Synthesizing, Benchmarking, and Training for Native Audio-Visual Dialogue",
+            "url": "https://huggingface.co/papers/2609.21465"
+          },
+          {
+            "id": "2609.22000",
+            "title": "RecreationWorld: Scalable and Verifiable Environments for Hybrid Computer-Use Agents",
+            "url": "https://huggingface.co/papers/2609.22000"
+          },
+          {
+            "id": "2609.22069",
+            "title": "OmniVBench: A Benchmark and Large-Scale Dataset for Omni Reference-to-Video Generation",
+            "url": "https://huggingface.co/papers/2609.22069"
+          },
+          {
+            "id": "2609.20886",
+            "title": "BI-Agent and BI-Bench: Towards Automating End-to-End Business Intelligence",
+            "url": "https://huggingface.co/papers/2609.20886"
+          }
+        ]
+      },
+      {
+        "id": "safety",
+        "label": "Safety & reliability",
+        "counts": [
+          3,
+          6
+        ],
+        "denominators": [
+          131,
+          140
+        ],
+        "shares": [
+          2.2900763358778624,
+          4.285714285714286
+        ],
+        "index": null,
+        "state": "Watching",
+        "direction": "watch",
+        "examples": [
+          {
+            "id": "2609.09206",
+            "title": "MLLMs Hallucinate when Information Distribution Drifts in Synergy Heads",
+            "url": "https://huggingface.co/papers/2609.09206"
+          },
+          {
+            "id": "2609.21094",
+            "title": "Geometry of Values: Task Vector Composition for Ethical Preference Alignment in Language Models",
+            "url": "https://huggingface.co/papers/2609.21094"
+          },
+          {
+            "id": "2609.24983",
+            "title": "onPanda: Efficient Annotation of On-Policy Alignment Data for LLMs and Agents via Token-Level Correction",
+            "url": "https://huggingface.co/papers/2609.24983"
+          },
+          {
+            "id": "2609.13231",
+            "title": "ShieldVLA: Feasibility-Aware Safety Alignment for Vision-Language-Action Models",
+            "url": "https://huggingface.co/papers/2609.13231"
+          }
+        ]
+      },
+      {
+        "id": "self",
+        "label": "Self-improvement & evolution",
+        "counts": [
+          9,
+          3
+        ],
+        "denominators": [
+          131,
+          140
+        ],
+        "shares": [
+          6.870229007633588,
+          2.142857142857143
+        ],
+        "index": null,
+        "state": "Watching",
+        "direction": "watch",
+        "examples": [
+          {
+            "id": "2609.15779",
+            "title": "EvoOntology: A Self-Evolving Ontology Layer for Data Agents",
+            "url": "https://huggingface.co/papers/2609.15779"
+          },
+          {
+            "id": "2609.24972",
+            "title": "RRSI: Regularized Recursive Self-Improvement of Agent Harnesses",
+            "url": "https://huggingface.co/papers/2609.24972"
+          },
+          {
+            "id": "2609.26457",
+            "title": "Recursive self-improvement of AI research agents",
+            "url": "https://huggingface.co/papers/2609.26457"
+          }
+        ]
+      },
+      {
+        "id": "memory",
+        "label": "Memory & context",
+        "counts": [
+          8,
+          11
+        ],
+        "denominators": [
+          131,
+          140
+        ],
+        "shares": [
+          6.106870229007633,
+          7.857142857142857
+        ],
+        "index": 129,
+        "state": "Rising",
+        "direction": "up",
+        "examples": [
+          {
+            "id": "2609.22086",
+            "title": "Designer-RSI: Evolving Procedural Memory from User Traffic for Agentic Graphic Design",
+            "url": "https://huggingface.co/papers/2609.22086"
+          },
+          {
+            "id": "2609.15126",
+            "title": "MoME: Mixture-of-Memory Embeddings for Context-Aware Sparse Lookup",
+            "url": "https://huggingface.co/papers/2609.15126"
+          },
+          {
+            "id": "2609.19169",
+            "title": "SiliconBench: Speed, Memory, and Fidelity for LLM Serving on Unified-Memory Desktops",
+            "url": "https://huggingface.co/papers/2609.19169"
+          },
+          {
+            "id": "2609.24984",
+            "title": "WorldCrafter: Consistent Video World Model with Implicit 3D-aware Memory",
+            "url": "https://huggingface.co/papers/2609.24984"
+          }
+        ]
+      },
+      {
+        "id": "audio",
+        "label": "Speech & audio",
+        "counts": [
+          5,
+          7
+        ],
+        "denominators": [
+          131,
+          140
+        ],
+        "shares": [
+          3.816793893129771,
+          5.0
+        ],
+        "index": 131,
+        "state": "Rising",
+        "direction": "up",
+        "examples": [
+          {
+            "id": "2609.21465",
+            "title": "OmniVChat: Synthesizing, Benchmarking, and Training for Native Audio-Visual Dialogue",
+            "url": "https://huggingface.co/papers/2609.21465"
+          },
+          {
+            "id": "2609.18748",
+            "title": "TeleAntiFraud 2.0: A Refreshable, Profile-Grounded, and Audio-Based Benchmark for Telecom Fraud Detection",
+            "url": "https://huggingface.co/papers/2609.18748"
+          },
+          {
+            "id": "2609.18766",
+            "title": "FRAUDSkill: Structured Frozen-Weight Skill Optimization for Audio Anti-Fraud Detection",
+            "url": "https://huggingface.co/papers/2609.18766"
+          },
+          {
+            "id": "2609.12623",
+            "title": "SteerDuplex: Steerable Duplex Speech Dialogue Models",
+            "url": "https://huggingface.co/papers/2609.12623"
+          }
+        ]
+      }
+    ]
+  },
+  "sources": [
+    {
+      "id": "internal-ledger",
+      "name": "UGA AI News normalized event ledger",
+      "type": "internal monitoring",
+      "date_range": "2026-09-21 to 2026-09-27",
+      "method": "25 non-Weekly public article records plus Daily candidate/evidence records; missing intervals are not treated as zero activity.",
+      "url": "https://llm.franklinresearch.uga.edu/ai-news/2026-09/data.js"
+    },
+    {
+      "id": "hf-daily-papers",
+      "name": "Hugging Face Daily Papers",
+      "type": "research recommendation sample",
+      "date_range": "2026-09-14 to 2026-09-27",
+      "sample": "131 prior-week and 140 current-week unique paper IDs",
+      "method": "Platform recommendation date; unchanged title classifier; overlapping labels; no Saturday/Sunday panels.",
+      "url": "https://huggingface.co/papers"
+    },
+    {
+      "id": "hai-2026",
+      "name": "Stanford HAI 2026 AI Index",
+      "type": "annual structural dataset",
+      "date_range": "primarily 2025 with historical series",
+      "method": "Multi-source annual report covering R&D, benchmarks, infrastructure, investment, adoption and workforce.",
+      "url": "https://hai.stanford.edu/ai-index/2026-ai-index-report"
+    },
+    {
+      "id": "mckinsey-2026",
+      "name": "McKinsey — State of AI 2026",
+      "type": "repeated enterprise survey",
+      "date_range": "May 4–June 8, 2026",
+      "sample": "1,719 respondents in 97 nations; GDP-weighted",
+      "method": "Self-reported organizational behavior and outcomes; not deployment telemetry or audited financial statements.",
+      "url": "https://www.mckinsey.com/capabilities/quantumblack/our-insights/the-state-of-ai"
+    },
+    {
+      "id": "deloitte-2026",
+      "name": "Deloitte — State of AI in the Enterprise 2026",
+      "type": "enterprise survey",
+      "date_range": "August–September 2025",
+      "sample": "3,235 senior leaders in 24 countries; IT and line-of-business split equally",
+      "method": "Self-reported access, production and organizational change.",
+      "url": "https://www.deloitte.com/us/en/what-we-do/capabilities/applied-artificial-intelligence/content/state-of-ai-in-the-enterprise.html"
+    },
+    {
+      "id": "stanford-polymers",
+      "name": "Stanford University — bacteria-killing polymers",
+      "type": "university research report",
+      "date_range": "September 21, 2026",
+      "method": "Original Stanford account of model-assisted selection from 1.7 million candidates, uncertainty-led experiments, synthesis and E. coli tests; preclinical proof of concept.",
+      "url": "https://news.stanford.edu/stories/2026/09/bacteria-killing-polymers-new-class-antibiotics"
+    },
+    {
+      "id": "google-video",
+      "name": "Google Research — coherent long-form video generation",
+      "type": "corporate research report",
+      "date_range": "September 24, 2026",
+      "method": "Primary description of four related research systems and stated benchmark comparisons; company-authored and not independent deployment telemetry.",
+      "url": "https://research.google/blog/coherent-long-form-video-generation/"
+    },
+    {
+      "id": "deepmind-memory",
+      "name": "Google DeepMind — secure server-side memory",
+      "type": "technical architecture announcement",
+      "date_range": "September 23, 2026",
+      "method": "Primary architectural proposal and published verification materials; future persistent cross-device capability rather than evidence of broad rollout.",
+      "url": "https://deepmind.google/blog/advancing-private-ai-compute-with-secure-server-side-memory/"
+    },
+    {
+      "id": "transluce-agents",
+      "name": "Transluce — early rogue agent activity",
+      "type": "independent research report",
+      "date_range": "September 23, 2026",
+      "method": "Primary analysis of public urlquery records; reports attempted probes during routine retrieval tasks, with no evidence the three attempts succeeded.",
+      "url": "https://transluce.org/agent-activity"
+    },
+    {
+      "id": "nature-pascode",
+      "name": "Nature Medicine — PASCode Alzheimer single-cell study",
+      "type": "peer-reviewed open-access paper",
+      "date_range": "Published September 23, 2026",
+      "method": "Primary paper: 6.3 million nuclei from 1,494 donors; phenotype analysis on 584 with external cohort checks; open code and controlled-access human data. Associations are not clinical interventions.",
+      "url": "https://www.nature.com/articles/s41591-025-04128-1"
+    },
+    {
+      "id": "lightcast-2026",
+      "name": "Lightcast / Stanford AI Index 2026 labor-market analysis",
+      "type": "job-posting dataset",
+      "date_range": "through 2025 with decade baseline",
+      "sample": "Billions of job postings collected daily; reported U.S. and global aggregates",
+      "method": "Posting demand and requested skills; postings are not realized hires.",
+      "url": "https://lightcast.io/resources/research/stanford-ai-index-2026"
+    },
+    {
+      "id": "pwc-jobs-2026",
+      "name": "PwC 2026 Global AI Jobs Barometer",
+      "type": "job-posting and company dataset",
+      "date_range": "through 2025",
+      "sample": "More than one billion job advertisements in 27 countries and territories",
+      "method": "Posting, financial and occupational-task analysis; does not measure every hire.",
+      "url": "https://www.pwc.com/gx/en/news-room/press-releases/2026/pwc-2026-ai-jobs-barometer.html"
+    },
+    {
+      "id": "linkedin-2026",
+      "name": "LinkedIn Economic Graph — 2026 Labor Market Report",
+      "type": "platform labor-market data",
+      "date_range": "2026 update",
+      "method": "LinkedIn data; reports macro hiring in advanced economies 20%–35% below pre-pandemic levels and attributes weakness mainly to macro conditions.",
+      "url": "https://economicgraph.linkedin.com/research/labor-market-report-2026"
+    },
+    {
+      "id": "bls-2026",
+      "name": "U.S. Bureau of Labor Statistics employment projections",
+      "type": "official statistics",
+      "date_range": "2025–2035",
+      "sample": "U.S. employment estimates and projections",
+      "method": "Occupational projections are not current vacancies or AI-specific job counts.",
+      "url": "https://www.bls.gov/emp/"
+    },
+    {
+      "id": "wef-2025",
+      "name": "World Economic Forum — Future of Jobs 2025",
+      "type": "employer expectations survey",
+      "date_range": "2025–2030 outlook",
+      "sample": "More than 1,000 employers representing 14+ million workers, 55 economies",
+      "method": "Employer expectations, not observed hiring.",
+      "url": "https://www.weforum.org/publications/the-future-of-jobs-report-2025/"
+    },
+    {
+      "id": "wef-workforce",
+      "name": "World Economic Forum — Future of Jobs 2025 workforce strategies",
+      "type": "employer expectations survey",
+      "date_range": "2025–2030 outlook",
+      "method": "Employer intentions for upskilling, AI-role hiring, internal transition and reductions; not observed hires or layoffs.",
+      "url": "https://www.weforum.org/publications/the-future-of-jobs-report-2025/in-full/4-workforce-strategies/",
+      "sample": "More than 1,000 employers across 55 economies, representing over 14 million workers"
+    },
+    {
+      "id": "axis-report",
+      "name": "Business Standard — Axis Bank workforce plans",
+      "type": "reported company interview",
+      "date_range": "September 27, 2026",
+      "method": "Attributed company plans for campus hiring and role redeployment; one employer, not a market-wide panel.",
+      "url": "https://www.business-standard.com/industry/news/axis-bank-to-ramp-up-campus-hiring-amid-ai-led-workforce-shift-126092700259_1.html"
+    }
+  ],
+  "tabs": [
+    {
+      "id": "research",
+      "label": "Research / Academia",
+      "claims": [
+        {
+          "id": "agent-eval-attention",
+          "claim": "Agents, embodiment and evaluation rose together in this week’s monitored paper mix; the pattern is consistent with systems engineering around action, but one week cannot establish field-wide growth.",
+          "scope": "HF Daily Papers recommendation population; 131 prior-week and 140 current-week unique IDs; global public sample.",
+          "this_week": "Agent/tool-use matches rose from 30/131 to 39/140 (index 122); robotics/world-model matches from 12/131 to 22/140 (172); evaluation from 13/131 to 20/140 (144). Memory rose from 8/131 to 11/140 (129).",
+          "near_term": "The internal ledger independently emphasized RECLAIM, MiMo’s loop diagnosis, Synthetic Hospital and agent safety incidents—work on reproducibility, failure modes and bounded evaluation rather than capability-only announcements.",
+          "structural": "Frontier-model construction is concentrated in industry, while academic and open research remains important for methods and evaluation. A recommendation feed captures only part of that work.",
+          "long_run": "The broader arc is from benchmark capability toward reliable action in open environments. Rising evaluation share may reflect this bottleneck, not simply more enthusiasm for agents.",
+          "interpretation": "The co-movement is more plausibly “agents create demand for harnesses, memory and evaluation” than four independent booms.",
+          "counterevidence": "HF is a recommendation sample, titles are a lossy taxonomy, labels overlap, conference/release cadence matters, and corporate work can migrate outside public papers.",
+          "confidence": "Medium",
+          "what_would_change": "Three comparable months plus conference-program or OpenAlex evidence showing the same cross-topic rise would strengthen the structural claim; reversal after one release cycle would reduce it.",
+          "evidence": [
+            "hf-daily-papers",
+            "internal-ledger",
+            "hai-2026"
+          ]
+        },
+        {
+          "id": "science-bounded",
+          "claim": "This week contained credible examples of AI-assisted science, but the evidence supports task-specific acceleration—not autonomous science as a mature general capability.",
+          "scope": "Selected public events in chemistry, biology, physics and clinical simulation; September 21–25, 2026.",
+          "this_week": "RetroChimera combined model biases for chemist-preferred retrosynthesis; Claude-assisted work reported an unusual reverse-transcriptase system and a nine-loop amplitude; Synthetic Hospital provided an open longitudinal EHR benchmark. Stanford’s polymer study screened 1.7 million candidates and experimentally tested ten selected polymers against E. coli; this is preclinical laboratory evidence. A peer-reviewed Nature Medicine study introduced PASCode for phenotype-associated single cells, using 584 donors with Alzheimer-related phenotype information and external cohorts; it is mechanistic association research, not a treatment.",
+          "near_term": "The ledger has accumulated more domain-specific models, benchmarks and human-AI workflows, but evidence standards and human validation vary sharply by field.",
+          "structural": "Scientific use depends on domain data, experimental access and expert validation. Results in chemistry, biology or simulation do not automatically transfer to clinical or laboratory practice.",
+          "long_run": "Methods are diffusing into scientific infrastructure and workflows. That is structurally important even if “AI scientist” remains premature.",
+          "interpretation": "The durable signal is domain integration with expert checks, not replacement of the scientific process.",
+          "counterevidence": "Vendor-led case studies can select successful examples; publication volume does not equal importance; negative results and failed replications are less visible.",
+          "confidence": "Medium",
+          "what_would_change": "Independent replication, prospective lab outcomes, and measured time/cost gains across multiple institutions would raise confidence.",
+          "evidence": [
+            "internal-ledger",
+            "hai-2026",
+            "stanford-polymers",
+            "nature-pascode"
+          ]
+        },
+        {
+          "id": "video-continuity",
+          "claim": "Long-form generative video research is shifting from clip quality toward explicit world state and closed-loop evaluation, but the new results remain author-reported.",
+          "scope": "Google Research’s September 24 work; corporate research, global public release; one research program rather than field-wide volume.",
+          "this_week": "Google described Co-Director, CANVAS, A²RD and VQQA for multi-shot story planning, visual memory, segment generation and critique. It presented a ten-minute demonstration and benchmark comparisons.",
+          "near_term": "The previous week’s live multimodal releases emphasized continuous audio/video interaction. This week’s work tackles a related long-horizon consistency problem on the creation side.",
+          "structural": "Generating coherent stories across multiple shots requires persistent scene information and checks on continuity, beyond the visual quality of any single clip.",
+          "long_run": "Multi-year generative-video progress has made short clips much stronger, but this specific four-system program lacks a comparable long-run deployment series.",
+          "interpretation": "An early systems-research direction is visible: memory and test-time checking become part of generation.",
+          "counterevidence": "The blog selects favorable demonstrations and uses model-based judging; the individual papers, baselines and human evaluations need separate scrutiny. One release cannot establish a structural field-wide shift.",
+          "confidence": "Early signal",
+          "what_would_change": "Independent human evaluations across unfamiliar stories and replicated cost/consistency comparisons over several release cycles would change the view.",
+          "evidence": [
+            "google-video",
+            "hai-2026"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "industry",
+      "label": "Industry",
+      "claims": [
+        {
+          "id": "agents-productization",
+          "claim": "Agent products are becoming a durable software layer, but scaled deployment and enterprise value remain uneven.",
+          "scope": "Global public product releases this week plus enterprise surveys fielded in 2025–2026.",
+          "this_week": "n8n exposed workflow tools to persistent agents; Microsoft centered Copilot on Home, Code and Autopilot; xAI emphasized longer-running coding work. In the same week, OpenAI disclosed sandbox and user-data incidents and Xiaomi traced tool loops to an RL reward blind spot. Transluce independently reported public urlquery evidence of agent attempts to probe three public data providers during ordinary retrieval tasks; it found no evidence those attempts succeeded.",
+          "near_term": "The release mix is shifting from chat surfaces toward persistent workspaces, tool permissions, harnesses, memory, cost controls and post-deployment review.",
+          "structural": "Enterprise surveys show agent experimentation expanding faster than measured business impact. Permissions, evaluation and process redesign remain uneven across organizations.",
+          "long_run": "Agent capabilities improved sharply on structured benchmarks, yet production maturity is constrained by reliability, governance and cost. Chatbots are more mature than agents.",
+          "interpretation": "The week reinforces productization, not maturity. Reliability engineering is becoming part of the product surface.",
+          "counterevidence": "Survey respondents may overstate scale; vendors selectively publish successes; 37% reporting any EBIT impact was unchanged year over year and only 6% met McKinsey’s high-performer definition.",
+          "confidence": "Medium",
+          "what_would_change": "Audited utilization, incident-normalized reliability and broad EBIT gains across smaller as well as large firms would justify calling agents mature.",
+          "evidence": [
+            "internal-ledger",
+            "mckinsey-2026",
+            "deloitte-2026",
+            "hai-2026",
+            "transluce-agents"
+          ]
+        },
+        {
+          "id": "infrastructure-systems",
+          "claim": "AI infrastructure demand is structural, while realized capacity increasingly depends on power, cooling, financing and system integration—not accelerators alone.",
+          "scope": "Company actions in the current week, interpreted against 2025 investment and infrastructure data.",
+          "this_week": "Alibaba described a chip-to-cloud-to-agent roadmap including 20 GW of capacity; NVIDIA’s DSX Ready program brought batteries and liquid cooling into qualification; Nscale announced $3.36B of pre-IPO convertible financing.",
+          "near_term": "Recent ledgers repeatedly show power scheduling, networking, grid access and capital formation alongside model releases.",
+          "structural": "AI investment has grown rapidly, while advanced chip supply remains concentrated. Power, cooling and grid connections determine when announced facilities can deliver usable compute.",
+          "long_run": "Compared with the 2024 private-investment base reported by prior AI Index editions, capital intensity has expanded sharply. Supply concentration and energy constraints make delivery risk part of the cycle.",
+          "interpretation": "The constraint set is moving outward from chips to whole facilities and grids.",
+          "counterevidence": "Roadmaps and financing are not delivered megawatts or utilized compute. Demand may be overbuilt, grid queues may delay projects, and one company’s announced capacity is not market-wide realization.",
+          "confidence": "Medium",
+          "what_would_change": "Transparent commissioned capacity, utilization and realized capex across at least three operators would strengthen the claim; cancellations or persistent underutilization would weaken it.",
+          "evidence": [
+            "internal-ledger",
+            "hai-2026"
+          ]
+        },
+        {
+          "id": "private-memory",
+          "claim": "Persistent assistant memory is becoming an infrastructure and privacy design question; Google’s architecture is an announced capability, not broad observed use.",
+          "scope": "Google DeepMind technical announcement on September 23; one company’s proposed cross-device service.",
+          "this_week": "Private AI Compute described per-user encrypted storage, device-held keys, secure enclaves, a public server-software record and an independent audit. It framed cross-device memory as a future capability.",
+          "near_term": "The previous week’s continuous multimodal assistant releases and this week’s persistent workflow agents make continuity and permissions more relevant to product design.",
+          "structural": "Persistent assistants need to manage data across devices and sessions. Storage, key control, access policy and independent audit therefore become part of the service architecture.",
+          "long_run": "The longer arc from stateless cloud inference to persistent assistants raises durable questions of data retention, authentication and user control; evidence for deployment outcomes is still early.",
+          "interpretation": "The announcement adds a concrete architecture and inspectable verification route to an emerging product requirement.",
+          "counterevidence": "A technical design and audit summary do not prove operational security under every threat model or user acceptance. Feature availability and independent field performance remain unclear.",
+          "confidence": "Early signal",
+          "what_would_change": "A public rollout with independent security analysis and evidence of user controls and incident rates would strengthen the claim.",
+          "evidence": [
+            "deepmind-memory",
+            "mckinsey-2026"
+          ]
+        }
+      ]
+    }
+  ],
+  "adversarial_review": {
+    "material_claims_reviewed": 8,
+    "tests": [
+      "population/time/geography scope",
+      "source-mix and dominant-entity effects",
+      "release and conference cycles",
+      "taxonomy drift and missing access",
+      "alternative maturation/absorption explanations",
+      "duplicate jobs and postings-versus-hires"
+    ],
+    "public_notes": "Counterevidence and “What would change this view?” are shown with every claim. No hidden reviewer notes or chain-of-thought are included."
+  }
+}

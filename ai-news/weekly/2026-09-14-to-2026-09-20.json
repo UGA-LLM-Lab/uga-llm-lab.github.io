@@ -194,31 +194,6 @@
           ]
         }
       ]
-    },
-    {
-      "id": "hiring",
-      "label": "Hiring / Talent",
-      "claims": [
-        {
-          "id": "hiring-baseline",
-          "claim": "This week does not support a numerical claim about AI hiring acceleration or shortage; the internal recruitment panel is still establishing a comparable baseline.",
-          "scope": "Registered public recruitment sources observed by the Daily process, with U.S. official projections and global employer expectations used only as structural context.",
-          "this_week": "The dedicated recruitment family was attempted, but normalized job records were not available for a stable current/prior intersection. A blocked or unparsed source is missing data, not zero postings.",
-          "near_term": "At least two comparable weeks are required before a numerical week-over-week panel, and eight weeks are targeted before stronger internal trend analysis. Large-company, startup and academic panels will remain separate.",
-          "structural": "BLS projects U.S. data-scientist employment to grow 35% from 2025 to 2035 and computer-and-information research scientist employment to grow 22%. These are broad occupational projections, not current AI vacancies or hires.",
-          "long_run": "The WEF employer survey expects AI and big-data skills to grow in importance through 2030, while the 2026 AI Index reports a large decline in the inflow of AI researchers and developers to the United States since 2017. Expectations, labor supply and job postings describe different parts of the market.",
-          "interpretation": "Specialized technical demand has a strong structural backdrop, but there is no defensible weekly shortage or surge claim from the current internal sample.",
-          "counterevidence": "Occupational categories are broader than AI, projections can miss cycles, job boards undercount confidential hiring and internal transfers, and postings do not equal hires. Changing source composition can mimic growth.",
-          "confidence": "High for the no-WoW-conclusion judgment; Medium for the structural demand backdrop.",
-          "what_would_change": "A stable, deduplicated panel showing sustained employer breadth, posting persistence, comparable compensation and actual hire evidence would permit a stronger market claim.",
-          "evidence": [
-            "bls-data-scientists",
-            "bls-research-scientists",
-            "wef-foj-2025",
-            "hai-2026"
-          ]
-        }
-      ]
     }
   ],
   "structural_context": {
