@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 900" role="img" aria-labelledby="title desc">
+  <title id="title">Reported Anthropic compute commitments from its confidential IPO prospectus</title>
+  <desc id="desc">A factual bar chart showing reported commitments: Broadcom-related leases 161.2 billion dollars, Google 111.1 billion, Amazon 110 billion, Microsoft 31.4 billion, and other or flexible arrangements including up to 84.5 billion with xAI, within at least 518 billion total.</desc>
+  <defs><linearGradient id="abg" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#efe6d7"/><stop offset="1" stop-color="#faf7f1"/></linearGradient><filter id="s"><feDropShadow dx="0" dy="8" stdDeviation="12" flood-opacity=".15"/></filter></defs>
+  <rect width="1600" height="900" fill="url(#abg)"/>
+  <text x="100" y="112" fill="#5d392c" font-family="Arial, sans-serif" font-size="28" font-weight="700" letter-spacing="2">REPORTED FROM A CONFIDENTIAL IPO PROSPECTUS</text>
+  <text x="100" y="195" fill="#1d1b19" font-family="Arial, sans-serif" font-size="62" font-weight="700">Anthropic's compute commitments</text>
+  <text x="100" y="250" fill="#5b5650" font-family="Arial, sans-serif" font-size="29">At least $518B over roughly a decade · about 80% reportedly non-cancelable or payable regardless of use</text>
+  <g transform="translate(100 325)" font-family="Arial, sans-serif" filter="url(#s)">
+    <rect width="1400" height="390" rx="28" fill="#ffffff"/>
+    <g transform="translate(90 68)">
+      <text x="0" y="24" fill="#2d2925" font-size="25" font-weight="700">Broadcom-related leases</text><rect x="360" y="0" width="760" height="36" rx="18" fill="#5d392c"/><text x="1140" y="27" fill="#2d2925" font-size="25" font-weight="700">$161.2B</text>
+      <text x="0" y="92" fill="#2d2925" font-size="25" font-weight="700">Google</text><rect x="360" y="68" width="524" height="36" rx="18" fill="#8a5d48"/><text x="904" y="95" fill="#2d2925" font-size="25" font-weight="700">$111.1B</text>
+      <text x="0" y="160" fill="#2d2925" font-size="25" font-weight="700">Amazon</text><rect x="360" y="136" width="519" height="36" rx="18" fill="#ad785c"/><text x="899" y="163" fill="#2d2925" font-size="25" font-weight="700">$110.0B</text>
+      <text x="0" y="228" fill="#2d2925" font-size="25" font-weight="700">xAI capacity option*</text><rect x="360" y="204" width="399" height="36" rx="18" fill="#c6987d"/><text x="779" y="231" fill="#2d2925" font-size="25" font-weight="700">up to $84.5B</text>
+      <text x="0" y="296" fill="#2d2925" font-size="25" font-weight="700">Microsoft</text><rect x="360" y="272" width="148" height="36" rx="18" fill="#dfbca8"/><text x="528" y="299" fill="#2d2925" font-size="25" font-weight="700">$31.4B</text>
+    </g>
+  </g>
+  <text x="100" y="770" fill="#514b45" font-family="Arial, sans-serif" font-size="23">* Reuters reports much of the xAI arrangement can be canceled with notice. Other agreements complete the reported total.</text>
+  <text x="100" y="810" fill="#514b45" font-family="Arial, sans-serif" font-size="23">The detailed prospectus is not yet public; values await verification against a public SEC filing.</text>
+  <text x="1500" y="855" text-anchor="end" fill="#776e66" font-family="Arial, sans-serif" font-size="20">UGA LLM Lab · factual editorial graphic</text>
+</svg>

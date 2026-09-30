@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="900" viewBox="0 0 1600 900" role="img" aria-labelledby="title desc">
+  <title id="title">McKinsey workforce pathways to 2035</title>
+  <desc id="desc">A factual editorial graphic summarizing McKinsey Global Institute's modeled U.S. workforce transitions from 2025 to 2035.</desc>
+  <rect width="1600" height="900" fill="#f4f7fb"/>
+  <rect width="1600" height="116" fill="#0b1f41"/>
+  <text x="90" y="72" font-family="Arial, Helvetica, sans-serif" font-size="44" font-weight="700" fill="#fff">WORKFORCE IN MOTION</text>
+  <text x="90" y="176" font-family="Arial, Helvetica, sans-serif" font-size="26" fill="#36506f">McKinsey Global Institute · United States · 2025–2035 modeled scenario</text>
+  <text x="90" y="286" font-family="Arial, Helvetica, sans-serif" font-size="78" font-weight="700" fill="#0b1f41">11 million</text>
+  <text x="90" y="336" font-family="Arial, Helvetica, sans-serif" font-size="28" fill="#24364d">workers may need to move into a different occupation</text>
+  <line x1="90" y1="386" x2="1510" y2="386" stroke="#b9c6d8" stroke-width="3"/>
+  <g font-family="Arial, Helvetica, sans-serif">
+    <rect x="90" y="446" width="420" height="260" rx="26" fill="#d9e9ff"/>
+    <text x="130" y="520" font-size="58" font-weight="700" fill="#1456a0">36M</text>
+    <text x="130" y="572" font-size="26" fill="#15324f">labor-demand reduction</text>
+    <text x="130" y="612" font-size="26" fill="#15324f">equivalent from automation</text>
+    <text x="130" y="668" font-size="20" fill="#52657b">Not a one-for-one job-loss forecast</text>
+    <rect x="590" y="446" width="420" height="260" rx="26" fill="#dcefe3"/>
+    <text x="630" y="520" font-size="58" font-weight="700" fill="#1f7646">40M+</text>
+    <text x="630" y="572" font-size="26" fill="#234734">potential labor-demand growth</text>
+    <text x="630" y="612" font-size="26" fill="#234734">from AI and broader forces</text>
+    <text x="630" y="668" font-size="20" fill="#4b6a59">Growth and displacement differ by occupation</text>
+    <rect x="1090" y="446" width="420" height="260" rx="26" fill="#efe5fb"/>
+    <text x="1130" y="520" font-size="58" font-weight="700" fill="#633b92">1 in 7</text>
+    <text x="1130" y="572" font-size="26" fill="#49355e">transitioning workers may have</text>
+    <text x="1130" y="612" font-size="26" fill="#49355e">a direct pathway</text>
+    <text x="1130" y="668" font-size="20" fill="#695876">Credentials and geography can block routes</text>
+  </g>
+  <text x="90" y="812" font-family="Arial, Helvetica, sans-serif" font-size="22" fill="#52657b">Directional model, not a deterministic forecast. Source: McKinsey Global Institute, September 29, 2026.</text>
+</svg>

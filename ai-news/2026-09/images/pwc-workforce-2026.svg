@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="900" viewBox="0 0 1600 900" role="img" aria-labelledby="title desc">
+  <title id="title">PwC Global Workforce Hopes and Fears Survey 2026</title>
+  <desc id="desc">A factual editorial graphic showing headline results from PwC's September 2026 survey of 49,364 workers.</desc>
+  <rect width="1600" height="900" fill="#fff4ea"/>
+  <path d="M0 0h1600v146H0z" fill="#2d132c"/>
+  <rect x="90" y="44" width="22" height="58" fill="#e0301e"/><rect x="118" y="34" width="52" height="68" fill="#f28c00"/><rect x="176" y="54" width="36" height="48" fill="#ffb600"/>
+  <text x="250" y="91" font-family="Arial, Helvetica, sans-serif" font-size="48" font-weight="700" fill="#fff">GLOBAL WORKFORCE · 2026</text>
+  <text x="90" y="222" font-family="Arial, Helvetica, sans-serif" font-size="29" fill="#6b405d">PwC Hopes and Fears Survey · 49,364 workers · 48 countries and regions</text>
+  <text x="90" y="337" font-family="Arial, Helvetica, sans-serif" font-size="78" font-weight="700" fill="#2d132c">AI use is rising.</text>
+  <text x="90" y="410" font-family="Arial, Helvetica, sans-serif" font-size="52" fill="#7d204f">Its benefits are not evenly distributed.</text>
+  <g font-family="Arial, Helvetica, sans-serif">
+    <rect x="90" y="492" width="440" height="244" rx="26" fill="#ffe0c2"/>
+    <text x="135" y="574" font-size="64" font-weight="700" fill="#b43117">64%</text><text x="135" y="628" font-size="27" fill="#5f2e20">used AI at work</text><text x="135" y="671" font-size="27" fill="#5f2e20">in the past year</text>
+    <rect x="580" y="492" width="440" height="244" rx="26" fill="#eadcf4"/>
+    <text x="625" y="574" font-size="64" font-weight="700" fill="#672b7d">22%</text><text x="625" y="628" font-size="27" fill="#493054">use generative AI</text><text x="625" y="671" font-size="27" fill="#493054">daily, up from 14%</text>
+    <rect x="1070" y="492" width="440" height="244" rx="26" fill="#f9d9df"/>
+    <text x="1115" y="574" font-size="64" font-weight="700" fill="#a61b45">31%</text><text x="1115" y="628" font-size="27" fill="#5b2a38">of daily users cite</text><text x="1115" y="671" font-size="27" fill="#5b2a38">quality or accuracy barriers</text>
+  </g>
+  <text x="90" y="825" font-family="Arial, Helvetica, sans-serif" font-size="22" fill="#6d5965">Survey fielded May–June 2026; results weighted by age and gender. Source: PwC, September 29, 2026.</text>
+</svg>

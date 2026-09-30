@@ -8,6 +8,279 @@ window.AI_NEWS_MONTH_DATA["2026-09"] = {
   "label": "September 2026",
   "articles": [
     {
+      "slug": "openai-devday-dots-gpt-61-sol",
+      "category": "Industry · AI Agents",
+      "sortDate": "2026-09-29",
+      "dateLabel": "September 29, 2026",
+      "title": "OpenAI launches always-on Dots agents and expands its enterprise AI stack",
+      "summary": "OpenAI used its 2026 developer conference to introduce Dots, agents designed to keep pursuing goals across workplace applications, alongside GPT-6.1 Sol, Codex Cloud and new team collaboration controls. Dots require permission for sensitive actions, but their reliability and real-world safety will depend on deployments beyond the launch demonstrations.",
+      "image": {
+        "src": "ai-news/2026-09/images/openai-september-29-release-notes.png",
+        "alt": "OpenAI Business release notes dated September 29, 2026, listing Codex Cloud, team tools and GPT-6.1 Sol",
+        "caption": "OpenAI's September 29 Business release notes list Codex Cloud, team connections, collaboration features and GPT-6.1 Sol. Screenshot of the official source page."
+      },
+      "content": [
+        {
+          "type": "paragraph",
+          "text": "OpenAI introduced Dots at its annual developer conference, describing them as always-on agents that can keep working toward a user's objectives across applications. Reuters reported that Dots can update evolving projects, communicate through Slack and Microsoft Teams, and combine ChatGPT Work and Codex capabilities for research, analysis, documents and software."
+        },
+        {
+          "type": "heading",
+          "text": "The launch extends beyond one agent product"
+        },
+        {
+          "type": "paragraph",
+          "text": "The same release cycle added GPT-6.1 Sol, which OpenAI positions below Astra on price while targeting complex coding, computer-use and professional work. The API documentation lists a 1.05-million-token context window, up to 128,000 output tokens, and prices of $2 per million input tokens and $10 per million output tokens. OpenAI also announced Codex Cloud, team tasks, shared Pages and Spaces, and broader workplace integrations."
+        },
+        {
+          "type": "paragraph",
+          "text": "OpenAI says Dots run on isolated cloud computers and can be governed with custom rules. Sensitive actions such as password changes and permanent deletion require explicit user consent, while business data is not used for training by default. Those safeguards address known failure modes, but they do not establish that long-running agents will be reliable across every connected system."
+        },
+        {
+          "type": "heading",
+          "text": "A launch with scale claims and visible limits"
+        },
+        {
+          "type": "paragraph",
+          "text": "The company said Codex and ChatGPT Work together have more than 35 million weekly users and ChatGPT has more than 1.2 billion weekly users. Reuters also observed failed voice updates during live Dots demonstrations. The evidence therefore supports a major product expansion and broad distribution, not yet a conclusion that autonomous workplace agents are dependable at scale."
+        }
+      ],
+      "sources": [
+        {
+          "label": "OpenAI — ChatGPT Business release notes, September 29",
+          "url": "https://help-lb.openai.com/en/articles/11391654-chatgpt-business-release-notes"
+        },
+        {
+          "label": "OpenAI — GPT-6.1 Sol model documentation",
+          "url": "https://developers.openai.com/api/docs/models/gpt-6.1-sol"
+        },
+        {
+          "label": "Reuters — OpenAI launches Dots at DevDay, September 29",
+          "url": "https://www.reuters.com/business/openai-takes-meta-with-always-on-dots-agent-enterprise-ai-push-2026-09-29/"
+        },
+        {
+          "label": "Associated Press — OpenAI DevDay and Dots, September 29",
+          "url": "https://apnews.com/article/77b6b8888145869206996d7509d24256"
+        }
+      ]
+    },
+    {
+      "slug": "white-house-voluntary-ai-safety-accord",
+      "category": "Policy · AI Governance",
+      "sortDate": "2026-09-29",
+      "dateLabel": "September 29, 2026",
+      "title": "U.S. tech leaders sign a voluntary AI safety accord built around internal and external reviews",
+      "summary": "President Donald Trump and executives from major AI companies announced a voluntary agreement calling for internal controls, independent audits and board-level oversight. The accord is politically significant, but its public enforceability, auditor independence and implementation timetable remain unclear.",
+      "image": {
+        "src": "ai-news/2026-09/images/white-house-ai-safety-accord.svg",
+        "alt": "Editorial diagram of the four oversight layers described for the September 29 voluntary AI safety accord",
+        "caption": "The announced framework emphasizes internal controls, dedicated oversight, independent auditing and board review. UGA LLM Lab factual graphic based on reported terms; it is not the agreement document."
+      },
+      "content": [
+        {
+          "type": "paragraph",
+          "text": "President Donald Trump said leading AI companies agreed to a voluntary safety framework after a White House meeting with technology executives. Reporting by Reuters and the Associated Press says the participants included leaders from OpenAI, Anthropic, Meta, Google, NVIDIA and other large technology companies."
+        },
+        {
+          "type": "heading",
+          "text": "The accord focuses on audits and technical control"
+        },
+        {
+          "type": "paragraph",
+          "text": "The reported commitments call for robust internal controls, dedicated internal oversight teams, independent external reviewers and board-level supervision. They also ask developers to assess whether systems behave as intended and to reduce the risk that agents access or compromise technical systems outside their authorization."
+        },
+        {
+          "type": "paragraph",
+          "text": "That design responds to recent incidents involving autonomous agents and to concern that company safety programs may lack independent verification. It could create a common minimum process across competing labs if the signatories publish comparable audit scopes, findings and remediation practices."
+        },
+        {
+          "type": "heading",
+          "text": "Voluntary does not mean enforceable"
+        },
+        {
+          "type": "paragraph",
+          "text": "The announcement described the agreement as morally binding rather than a regulation or statute. The public reporting available at the cutoff did not establish legal penalties, a mandatory disclosure schedule, rules for choosing auditors or a final oversight body. Those missing details limit what can be inferred about compliance."
+        },
+        {
+          "type": "paragraph",
+          "text": "The accord is therefore a concrete governance commitment, but not a substitute for evidence that audits are independent, technically demanding and followed by corrective action. Its practical significance will depend on the final text, participating companies, reporting requirements and whether commitments survive competitive pressure."
+        }
+      ],
+      "sources": [
+        {
+          "label": "Reuters — Trump and AI CEOs announce voluntary safety pact, September 29",
+          "url": "https://www.reuters.com/legal/government/trump-host-zuckerberg-anthropics-amodei-other-ai-titans-tuesday-2026-09-29/"
+        },
+        {
+          "label": "Associated Press — Trump says top tech firms signed AI accord, September 29",
+          "url": "https://apnews.com/article/trump-ai-anthropic-musk-595796511f110fc006cca0d01329733e"
+        },
+        {
+          "label": "PBS NewsHour — Video of the accord announcement, September 29",
+          "url": "https://www.pbs.org/newshour/politics/watch-trump-announces-accord-signed-by-top-ai-companies-to-self-police-development"
+        }
+      ]
+    },
+    {
+      "slug": "anthropic-ipo-prospectus-compute-commitments",
+      "category": "Business · AI Infrastructure",
+      "sortDate": "2026-09-29",
+      "dateLabel": "September 29, 2026",
+      "title": "Anthropic's confidential IPO prospectus points to $518 billion in long-term compute commitments",
+      "summary": "Reuters reporting on Anthropic's confidential prospectus describes at least $518 billion of planned infrastructure spending over roughly a decade, much of it non-cancelable, alongside fast revenue growth and deep reliance on cloud partners. Because the filing is still confidential, the figures have not yet been tested against a public SEC document.",
+      "image": {
+        "src": "ai-news/2026-09/images/anthropic-ipo-compute-commitments.svg",
+        "alt": "Factual graphic summarizing reported Anthropic compute commitments to Google, Amazon, Microsoft, Broadcom and other partners",
+        "caption": "Reported long-term Anthropic infrastructure commitments total at least $518 billion. UGA LLM Lab factual graphic based on Reuters reporting from the confidential prospectus; values await a public SEC filing."
+      },
+      "content": [
+        {
+          "type": "paragraph",
+          "text": "Anthropic expects to commit at least $518 billion to AI infrastructure over approximately the next decade, according to Reuters reporting based on a confidential IPO prospectus. About 80% of the total is described as non-cancelable or payable regardless of actual usage, making compute access both a strategic asset and a substantial fixed obligation."
+        },
+        {
+          "type": "heading",
+          "text": "Compute agreements now look like balance-sheet structure"
+        },
+        {
+          "type": "paragraph",
+          "text": "The reported obligations include $111.1 billion with Google, $110 billion with Amazon, $31.4 billion with Microsoft and $161.2 billion in largely non-cancelable Broadcom-related equipment leases. A separate arrangement with xAI could add as much as $84.5 billion of NVIDIA-based capacity, but Reuters says much of that agreement can be canceled with notice."
+        },
+        {
+          "type": "paragraph",
+          "text": "The same prospectus reportedly shows how distribution and infrastructure are intertwined. Reuters says 47% of Anthropic's 2025 revenue flowed through Amazon and Google cloud marketplaces, even as those companies serve as investors, computing suppliers and AI competitors."
+        },
+        {
+          "type": "heading",
+          "text": "Growth, losses and disclosure risk travel together"
+        },
+        {
+          "type": "paragraph",
+          "text": "Anthropic reportedly generated about $4.6 billion in 2025 revenue, roughly twelve times the prior year, while operating losses exceeded $8 billion. The prospectus also devotes unusually extensive attention to model risks, including the possibility that advanced systems could resist shutdown or manipulate information."
+        },
+        {
+          "type": "paragraph",
+          "text": "Anthropic officially confirmed in June that it confidentially submitted a draft S-1, but the detailed prospectus has not been published by the SEC. The figures in this article should therefore be read as attributed reporting, not as independently verified public-filing data."
+        }
+      ],
+      "sources": [
+        {
+          "label": "Anthropic — Confidential draft S-1 announcement, June 1",
+          "url": "https://www.anthropic.com/news/confidential-draft-s1-sec"
+        },
+        {
+          "label": "Reuters — Anthropic's $518 billion AI buildout, September 29",
+          "url": "https://www.reuters.com/business/anthropics-518-billion-ai-buildout-hinges-largely-deals-that-cannot-be-canceled-2026-09-29/"
+        },
+        {
+          "label": "Reuters — Anthropic dependence on cloud partners, September 29",
+          "url": "https://www.reuters.com/world/anthropic-ipo-prospectus-lays-bare-deep-dependence-big-tech-partners-2026-09-29/"
+        },
+        {
+          "label": "Reuters — Anthropic risk disclosures, September 29",
+          "url": "https://www.reuters.com/business/finance/anthropic-warns-ai-may-pose-existential-risks-humanity-ipo-filing-2026-09-29/"
+        }
+      ]
+    },
+    {
+      "slug": "pwc-workforce-hopes-fears-2026-ai-divide",
+      "category": "Employment · AI Workforce",
+      "sortDate": "2026-09-29",
+      "dateLabel": "September 29, 2026",
+      "title": "PwC finds workplace AI use rising while benefits remain concentrated",
+      "summary": "PwC's survey of 49,364 workers across 48 countries and regions finds that 64% used AI at work in the prior year and daily generative-AI use rose from 14% to 22%. The results describe a widening experience gap, but they measure worker reports rather than audited productivity or realized hiring outcomes.",
+      "image": {
+        "src": "ai-news/2026-09/images/pwc-workforce-2026.svg",
+        "alt": "Graphic summarizing key findings from PwC's 2026 global workforce survey",
+        "caption": "Headline results from PwC's September 29 survey of 49,364 workers across 48 countries and regions. Source: PwC."
+      },
+      "content": [
+        {
+          "type": "paragraph",
+          "text": "PwC's 2026 Global Workforce Hopes and Fears Survey reports that 64% of workers used AI at work during the previous 12 months, up ten percentage points year over year. Daily generative-AI use rose from 14% to 22%, while 59% of respondents expected their use to increase during the next year."
+        },
+        {
+          "type": "heading",
+          "text": "Use is not evenly translating into advantage"
+        },
+        {
+          "type": "paragraph",
+          "text": "PwC groups 14% of respondents into an AI-enabled, high-demand front-runner cohort and 56% into a core workforce with less access to AI, learning and opportunity. Daily generative-AI use reaches 51% among front-runners but only 11% among the core group. The comparison suggests uneven access and organizational support, not a universal productivity gain."
+        },
+        {
+          "type": "paragraph",
+          "text": "The divide extends beyond tool access. Only 51% of workers say they have access to learning and development resources, down from 59% the previous year, and trust in top management fell seven percentage points. PwC also reports that 31% of daily AI users identify accuracy or quality as their leading barrier."
+        },
+        {
+          "type": "heading",
+          "text": "The survey captures perceptions across a broad global sample"
+        },
+        {
+          "type": "paragraph",
+          "text": "PwC collected 49,364 responses across 48 countries and regions and 29 sectors during May and June 2026. The results were weighted to each geography's working population by age and gender. This scale makes the survey a useful view of worker experience, but it does not measure company-level productivity, verified AI usage or actual hiring."
+        },
+        {
+          "type": "paragraph",
+          "text": "The practical conclusion is narrower than a claim that AI is improving work everywhere: adoption is growing, while benefits, confidence and learning access remain uneven. Whether that gap persists will depend on workflow redesign, role-specific training, trustworthy systems and access for the majority workforce rather than only early adopters."
+        }
+      ],
+      "sources": [
+        {
+          "label": "PwC — Global Workforce Hopes and Fears Survey 2026, September 29",
+          "url": "https://www.pwc.com/gx/en/1/issues/workforce/hopes-and-fears.html"
+        }
+      ]
+    },
+    {
+      "slug": "mckinsey-workforce-in-motion-ai-pathways-2035",
+      "category": "Employment · Future of Work",
+      "sortDate": "2026-09-29",
+      "dateLabel": "September 29, 2026",
+      "title": "McKinsey models 11 million U.S. workers needing occupational transitions by 2035",
+      "summary": "A new McKinsey Global Institute model estimates that automation could reduce U.S. labor demand by the equivalent of about 36 million jobs while economic and AI-related growth creates more than 40 million. Its central warning is a skills-and-pathways mismatch, not a forecast of net job collapse.",
+      "image": {
+        "src": "ai-news/2026-09/images/mckinsey-workforce-pathways.svg",
+        "alt": "Graphic summarizing McKinsey's modeled U.S. workforce transitions through 2035",
+        "caption": "Key figures from McKinsey Global Institute's September 29 directional model of U.S. workforce transitions through 2035. Source: McKinsey & Company."
+      },
+      "content": [
+        {
+          "type": "paragraph",
+          "text": "McKinsey Global Institute estimates that automation could reduce U.S. labor demand by the equivalent of roughly 36 million jobs between 2025 and 2035, while growth in the AI value chain and the broader economy could create demand for more than 40 million. Those are modeled labor-demand equivalents, not observed layoffs or guaranteed job creation."
+        },
+        {
+          "type": "heading",
+          "text": "A positive aggregate can still hide difficult transitions"
+        },
+        {
+          "type": "paragraph",
+          "text": "The report estimates that about 11 million workers, or roughly 7% of current U.S. employees, may need to move to different occupations. Only one in seven workers is modeled as having a direct pathway into new work with a strong skill match, limited retraining and no wage loss."
+        },
+        {
+          "type": "paragraph",
+          "text": "The burden is uneven. McKinsey estimates that lower-wage workers are 7.6 times more likely than higher-wage workers to need an occupational transition, while workers without a college degree are about 1.8 times as likely as those with at least a bachelor's degree. The model identifies healthcare, professional and technical services, and construction as important growth areas."
+        },
+        {
+          "type": "heading",
+          "text": "AI fluency is spreading across occupations"
+        },
+        {
+          "type": "paragraph",
+          "text": "Using Lightcast posting data, McKinsey says the number of occupations requesting AI fluency increased about elevenfold from 2022 to 2026. Demand for adaptability increased about fivefold, while willingness to learn, resilience and curiosity roughly tripled. The pattern points to broader skill diffusion rather than demand confined to specialist AI roles."
+        },
+        {
+          "type": "paragraph",
+          "text": "The study combines BLS data, millions of job postings, an input-output model and assumptions about automation adoption. McKinsey explicitly describes the outputs as directional rather than deterministic. Actual outcomes will depend on adoption speed, demographics, regulation, business investment and whether training pathways become accessible in time."
+        }
+      ],
+      "sources": [
+        {
+          "label": "McKinsey Global Institute — Workforce in motion, September 29",
+          "url": "https://www.mckinsey.com/mgi/our-research/Workforce-in-motion-Skills-and-pathways-to-future-jobs-in-the-United-States"
+        }
+      ]
+    },
+    {
       "slug": "meta-enterprise-platform-muse-ai-stack",
       "category": "Industry · Enterprise AI",
       "sortDate": "2026-09-28",
