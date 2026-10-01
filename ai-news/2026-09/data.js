@@ -8,6 +8,387 @@ window.AI_NEWS_MONTH_DATA["2026-09"] = {
   "label": "September 2026",
   "articles": [
     {
+      "slug": "google-gemini-4-argon-frontier-model",
+      "category": "Industry · Foundation Models",
+      "sortDate": "2026-09-30",
+      "dateLabel": "September 30, 2026",
+      "title": "Google unveils Gemini 4 Argon with a phased rollout for long-horizon professional work",
+      "summary": "Google announced Gemini 4 Argon as a new frontier model for long-horizon software engineering, enterprise knowledge work and defensive cybersecurity. Access is initially limited to trusted cyber defenders while Google participates in a U.S. pre-release access process and gathers safety feedback before broader availability.",
+      "image": {
+        "src": "ai-news/2026-09/images/gemini-4-argon-key-art.png",
+        "alt": "Google's official Gemini 4 Argon launch artwork, with the model name and a large numeral four",
+        "caption": "Official key art for Google's Gemini 4 Argon announcement. Source: Google."
+      },
+      "content": [
+        {
+          "type": "paragraph",
+          "text": "Google announced Gemini 4 Argon on September 30, presenting the model as a system for extended software engineering, professional knowledge work and defensive cybersecurity. The immediate release is restricted: trusted cyber defenders are receiving access through Google's Fairwind Program while the company gathers testing feedback and participates in the US government's voluntary pre-release access process. A general developer or consumer launch has not been completed."
+        },
+        {
+          "type": "paragraph",
+          "text": "That distinction matters for interpreting the announcement. Google has described the model's intended uses and commercial terms, but most prospective customers cannot yet assess it in their own workflows. Broader access is planned to begin with paid API customers and Google AI Ultra subscribers after further safeguards work. Google did not give a firm date for that expansion in the announcement."
+        },
+        {
+          "type": "heading",
+          "text": "Longer generation, with a concrete engineering example"
+        },
+        {
+          "type": "paragraph",
+          "text": "The disclosed maximum output rises from 64,000 tokens to one million. This is a generation allowance: it gives an agent more room to continue reasoning and producing work during a long task. It should not be read as a separate claim about the model's input context window, or as a guarantee that every long response will remain accurate. Longer runs still require checks on intermediate work and final results."
+        },
+        {
+          "type": "paragraph",
+          "text": "Google's internal examples explain the intended workflow more concretely. In one video-decoder project, agents optimized an existing Rust port of libgav1 through repeated profiling and experiments, studying compiler output and replacing 32,000 lines of SIMD code. Google reports a 2.7-fold speedup over that Rust port with identical decoded video output. The comparison is with the previous Rust implementation, rather than a claim that the new code is 2.7 times faster than the optimized C++ original."
+        },
+        {
+          "type": "paragraph",
+          "text": "The company also reports memory optimizations that freed more than 300 TiB after deployment, with larger total savings estimated, and ongoing C/C++-to-Rust migrations. These are company-reported deployments and projects. They help illustrate what multi-step agents are being asked to do, while leaving open how well the results transfer to other organizations, codebases and review processes."
+        },
+        {
+          "type": "heading",
+          "text": "Why cyber defenders receive access first"
+        },
+        {
+          "type": "paragraph",
+          "text": "Fairwind is Google's controlled-access program for organizations protecting important systems. Its published governance rules restrict permitted dual-use work to defensive or academic purposes, require authentication and access controls, and prohibit partners from redistributing model access. Selected partners can use Argon alongside CodeMender, Google's code-security agent, for vulnerability research and remediation."
+        },
+        {
+          "type": "paragraph",
+          "text": "Those requirements address the same capability from two directions. A system that finds and repairs a vulnerability may also reveal information useful to an attacker. Restricted early access therefore allows defensive testing before a broad release, but program membership alone does not prove that a model is safe. Google's announcement describes continuing work on misuse prevention, prompt-injection resistance, misalignment monitoring and isolated testing environments."
+        },
+        {
+          "type": "heading",
+          "text": "Pricing is introductory, and availability remains phased"
+        },
+        {
+          "type": "paragraph",
+          "text": "Google lists introductory API rates of $2 per million input tokens and $10 per million output tokens, with cached input discounted by 95%. The announcement's footnote specifies subsequent rates of $4 and $20 after the introductory period. It does not state when that period ends. The lower launch rate should therefore not be treated as a permanent price."
+        },
+        {
+          "type": "paragraph",
+          "text": "The practical change is a proposed expansion in how much work an agent can carry through one trajectory, accompanied by controlled access and reported internal use. Google's evaluations and deployment examples support a serious new model announcement. Independent testing, actual customer access and evidence from other production environments will be needed to establish its broader reliability and economics."
+        }
+      ],
+      "sources": [
+        {
+          "label": "Google — Gemini 4 Argon announcement, September 30",
+          "url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-4-argon/"
+        },
+        {
+          "label": "Reuters — Google announces Gemini 4 flagship AI model, September 30",
+          "url": "https://www.reuters.com/legal/litigation/google-announces-gemini-4-flagship-ai-model-after-months-delays-2026-09-30/"
+        },
+        {
+          "label": "Google DeepMind - Fairwind Program: access and governance",
+          "url": "https://deepmind.google/fairwind-program/"
+        }
+      ]
+    },
+    {
+      "slug": "openai-synopsys-gpt-synopsys-chip-design",
+      "category": "Industry · Semiconductors",
+      "sortDate": "2026-09-30",
+      "dateLabel": "September 30, 2026",
+      "title": "OpenAI and Synopsys plan GPT-Synopsys, a specialized model that operates chip-design tools",
+      "summary": "OpenAI and Synopsys signed a multi-year agreement to develop GPT-Synopsys, a specialized model intended to reason over semiconductor design and verification while directly operating Synopsys EDA tools. The partnership includes tool licensing, joint go-to-market work and a revenue-sharing framework.",
+      "image": {
+        "src": "ai-news/2026-09/images/synopsys-openai-chip-design.jpg",
+        "alt": "Synopsys and OpenAI names on a dark purple announcement graphic",
+        "caption": "Official announcement graphic for the OpenAI and Synopsys partnership. Source: Synopsys / PR Newswire."
+      },
+      "content": [
+        {
+          "type": "paragraph",
+          "text": "OpenAI and Synopsys signed a multi-year agreement on September 30 to develop GPT-Synopsys, a specialized model intended to operate electronic design automation tools. OpenAI will license Synopsys software for development, and the companies will collaborate on research, sales and a shared-revenue framework. The announcement describes a product under development, with early semiconductor-customer engagements underway; it does not announce general availability."
+        },
+        {
+          "type": "paragraph",
+          "text": "The proposal connects a frontier model to the software engineers already use to design and verify chips. Instead of ending at a suggested design or a written explanation, an agent would execute engineering tools, inspect their outputs and make another pass. The companies say the model will learn to use those tools with the expertise needed for semiconductor workflows."
+        },
+        {
+          "type": "heading",
+          "text": "From an engineering objective to a checked result"
+        },
+        {
+          "type": "paragraph",
+          "text": "An engineer would delegate a specific objective, such as improving power, performance and area, resolving timing constraints or completing verification. The agent would run the relevant tools, interpret the resulting measurements or failures, implement changes and iterate. The intended endpoint is a result supported by engineering checks and returned to the engineer for review."
+        },
+        {
+          "type": "paragraph",
+          "text": "This makes the tool feedback central to the product. Power, performance and area are competing design goals, so a change that improves one measure can create a new problem elsewhere. A useful agent must track those trade-offs across successive runs. The proposed workflow gives it access to measured outputs rather than relying solely on whether its generated explanation sounds plausible."
+        },
+        {
+          "type": "paragraph",
+          "text": "Timing and verification also set different conditions for success. Meeting a timing target addresses whether signals arrive within required constraints; verification addresses whether the design behaves as intended under the checks performed. Neither is established by a model saying that a change should work. The companies' emphasis on verified outcomes and engineer review recognizes that the evidence has to come from the engineering process."
+        },
+        {
+          "type": "heading",
+          "text": "A bundled service built around existing platforms"
+        },
+        {
+          "type": "paragraph",
+          "text": "GPT-Synopsys is planned to run on OpenAI-hosted infrastructure and integrate with Synopsys.ai and the Synopsys Autopilot agent platform. The service would bundle model access, compute and tool licenses. The companies also describe interoperability with customers' own agent harnesses, allowing the specialized model to fit into a broader engineering environment."
+        },
+        {
+          "type": "paragraph",
+          "text": "For customers, that architecture would place several dependencies inside one offering: the model, the authorized tools and the computing resources needed to run them. It could reduce the work of connecting those pieces separately. It also means deployment decisions would involve workflow integration and security review, alongside evaluation of the model's design suggestions. The announcement does not specify service pricing or the final range of supported customer environments."
+        },
+        {
+          "type": "heading",
+          "text": "Design-data protections and the evidence still needed"
+        },
+        {
+          "type": "paragraph",
+          "text": "The companies say customer-specific design data will not be used to train the model. They also promise encryption in transit and at rest, access controls, configurable retention and audit controls. These commitments are relevant because chip designs and associated tool outputs can contain commercially sensitive information. They are stated product requirements, rather than evidence that every integration has already been deployed and independently assessed."
+        },
+        {
+          "type": "paragraph",
+          "text": "The next substantive test is whether the proposed loop improves real engineering outcomes. Relevant evidence would include reproducible reductions in tool iterations or design time, the quality of verified results and performance on unfamiliar customer designs. No independent tape-out results or generally applicable design-cycle improvement were disclosed in this release. GPT-Synopsys therefore represents a specific partnership and product direction, with its practical benefits still to be demonstrated."
+        }
+      ],
+      "sources": [
+        {
+          "label": "Synopsys — OpenAI and Synopsys announce GPT-Synopsys, September 30",
+          "url": "https://news.synopsys.com/2026-09-30-OpenAI-and-Synopsys-Announce-GPT-Synopsys-Frontier-Intelligence-to-Revolutionize-Chip-Design"
+        },
+        {
+          "label": "Reuters — Synopsys and OpenAI strike chip-design model deal",
+          "url": "https://www.reuters.com/business/synopsys-openai-strike-deal-develop-ai-model-chip-design-work-2026-09-30/"
+        }
+      ]
+    },
+    {
+      "slug": "deepmind-synthid-bio-protein-watermarking",
+      "category": "Research · AI for Biology",
+      "sortDate": "2026-09-30",
+      "dateLabel": "September 30, 2026",
+      "title": "DeepMind tests SynthID Bio watermarks that survive from AI-designed proteins to physical samples",
+      "summary": "Google DeepMind introduced SynthID Bio, a proof-of-concept family of methods for embedding detectable signatures into AI-generated protein sequences and predicted structures. Wet-lab tests across three protein targets found similar hit rates, binding affinity and sequence diversity for watermarked and unwatermarked designs.",
+      "image": {
+        "src": "ai-news/2026-09/images/synthid-bio-protein-visualization.png",
+        "alt": "Blue protein structures passing through a glass scanning apparatus in a Google DeepMind illustration",
+        "caption": "Google DeepMind's illustration for SynthID Bio and protein watermarking. Source: Google DeepMind."
+      },
+      "content": [
+        {
+          "type": "paragraph",
+          "text": "Google DeepMind introduced SynthID Bio on September 30 as a proof of concept for attaching detectable provenance signals to AI-designed proteins and predicted protein structures. The aim is to preserve a signature inside the biological design, including after a designed protein is physically synthesized. DeepMind's announcement describes laboratory testing of watermarked binders, alongside a separate method for marking predicted three-dimensional structures."
+        },
+        {
+          "type": "paragraph",
+          "text": "Provenance is the central claim. A watermark could help identify that a design came from a particular model or model developer, even when accompanying metadata has been removed. It would not by itself establish that the protein is safe, useful or appropriate for a particular experiment. Those questions still require biological assessment and the other screening steps in a research or synthesis workflow."
+        },
+        {
+          "type": "heading",
+          "text": "Two methods for two different kinds of output"
+        },
+        {
+          "type": "paragraph",
+          "text": "For sequences, the method influences the amino-acid choices made during generation so that the resulting sequence carries a detectable pattern. DeepMind tested a SynthID Bio-enabled version of ProteinMPNN in a binder-design workflow with AlphaProteo. A binder is a protein designed to attach to a target protein; the study therefore needs to preserve that interaction while adding the watermark."
+        },
+        {
+          "type": "paragraph",
+          "text": "For structures, the method changes predicted atomic coordinates through a fine-tuned part of AlphaFold 3's diffusion network. DeepMind reports high detectability while retaining prediction accuracy and robustness to small coordinate changes. This is a distinct evidence claim from the sequence experiments: maintaining a predicted structure's quality is different from demonstrating biological function in a synthesized protein."
+        },
+        {
+          "type": "heading",
+          "text": "What the laboratory comparison actually tested"
+        },
+        {
+          "type": "paragraph",
+          "text": "The sequence experiments used binders against three targets: VEGF-A, the receptor-binding domain of the SARS-CoV-2 spike protein, and PD-L1. DeepMind reports comparable hit rates, binding affinity and natural sequence diversity between watermarked and unwatermarked designs. The relevant comparison is therefore whether adding the signature disrupted the binder-design workflow or the measured binding behavior."
+        },
+        {
+          "type": "paragraph",
+          "text": "These measures cover different parts of that question. Hit rate concerns how often tested designs produced a successful binder. Binding affinity concerns the strength of the interaction with the target. Sequence diversity checks whether watermarking unduly narrows the range of generated designs. Similar results across these measures support the reported proof of concept, but they do not establish performance across every protein class or biological application."
+        },
+        {
+          "type": "paragraph",
+          "text": "DeepMind links a Nature methods paper, titled Function-preserving watermarking of AI-generated proteins, and announces plans to make code, in vitro data and weights available to researchers. The technical contribution should be assessed against those experiments and released artifacts. The company announcement alone does not establish an independently reproduced result or a broadly deployed synthesis-screening service."
+        },
+        {
+          "type": "heading",
+          "text": "A signal that fits inside a larger screening system"
+        },
+        {
+          "type": "paragraph",
+          "text": "DNA-synthesis providers and biological databases are two proposed users. A synthesis provider could treat a recognized watermark as one provenance signal while continuing to examine the customer's request and the biological design. A database could use it to distinguish synthetic submissions from entries presented as naturally occurring or experimentally established material."
+        },
+        {
+          "type": "paragraph",
+          "text": "The limitations are consequential. DeepMind identifies deliberate tampering as a remaining research challenge. A missing watermark cannot prove that a sequence is natural: it may come from another model, an unmarked workflow or an altered design. Likewise, a detected signature does not replace customer vetting, hazard screening or model safeguards. SynthID Bio is a concrete attempt to make provenance travel with a biological object, with laboratory evidence for selected designs and further work needed on robustness and wider use."
+        }
+      ],
+      "sources": [
+        {
+          "label": "Google DeepMind — Introducing SynthID Bio, September 30",
+          "url": "https://deepmind.google/blog/introducing-synthid-bio/"
+        },
+        {
+          "label": "Nature - Function-preserving watermarking of AI-generated proteins, September 30 (linked methods paper)",
+          "url": "https://www.nature.com/articles/s41586-026-10965-y"
+        }
+      ]
+    },
+    {
+      "slug": "anthropic-robot-exposure-us-work",
+      "category": "Employment · Robotics",
+      "sortDate": "2026-09-30",
+      "dateLabel": "September 30, 2026",
+      "title": "Anthropic estimates robots can perform 74% of physical U.S. job tasks, but cost blocks most adoption",
+      "summary": "Anthropic estimates that existing robots can perform 74% of physical US tasks in at least some settings, representing 34% of all working time. Its cost model finds robots competitive for work accounting for only about 0.3% of total working time, with deployment costs, workplace conditions and other barriers limiting adoption.",
+      "image": {
+        "src": "ai-news/2026-09/images/anthropic-robot-exposure-figure3.png",
+        "alt": "Anthropic chart grouping U.S. job tasks by robot exposure, from work no robot can do to work in unstructured environments",
+        "caption": "Figure 3 from Anthropic's report, showing job tasks by robot exposure. Source: Anthropic."
+      },
+      "content": [
+        {
+          "type": "paragraph",
+          "text": "Anthropic published a robot-exposure index on September 30 that separates demonstrated technical capability from the economics of adopting a machine. The study estimates that existing robots can perform 74% of physical US job tasks in at least some settings, representing 34% of all working time. Its economic estimate is much smaller: robots are cost-competitive for work accounting for about 0.3% of total working time."
+        },
+        {
+          "type": "paragraph",
+          "text": "The denominators matter. The 74% figure concerns physical tasks, whereas the 34% and 0.3% figures concern time across the wider workforce. None is a count of jobs already eliminated or an estimate that every activity inside an exposed occupation can be automated. A task can be technically feasible in a specially designed workplace while remaining impractical at an ordinary employer."
+        },
+        {
+          "type": "figure",
+          "src": "ai-news/2026-09/images/anthropic-robot-exposure-rubric.png",
+          "alt": "Anthropic original table showing four robot task-exposure levels from inability to unstructured environments",
+          "caption": "Anthropic’s original exposure rubric. E1 requires a purpose-built robotic environment; E2 a structured human workplace; E3 an unstructured environment. Source: Anthropic, September 30, 2026."
+        },
+        {
+          "type": "heading",
+          "text": "The environment is part of the capability test"
+        },
+        {
+          "type": "paragraph",
+          "text": "The authors, Russell Legate-Yang and Maxim Massenkoff, use O*NET descriptions covering roughly 900 occupations and 19,000 tasks. Claude helps classify tasks, search for demonstrated robots and assess the environments in which those robots operate. Exposure rises from inability to perform a task, through purpose-built robotic facilities and structured human workplaces, to unstructured environments."
+        },
+        {
+          "type": "paragraph",
+          "text": "This framework distinguishes a robot that performs one operation on an engineered assembly line from a machine that can do comparable work amid changing objects, people and locations. The study counts demonstrated capabilities, with attention to reliability and speed. Driving and warehouse occupations consequently look different from nursing and general repair, where interpersonal work, dexterity and unpredictable conditions remain major constraints."
+        },
+        {
+          "type": "paragraph",
+          "text": "The judgments are not direct measurements of every workplace. Brief occupational descriptions can omit important requirements, and model-assisted classification introduces uncertainty. The index is best read as an organized assessment of current task exposure, using cited examples, rather than a census of installed robots or a universal deployment checklist."
+        },
+        {
+          "type": "heading",
+          "text": "Why the economic estimate is much smaller"
+        },
+        {
+          "type": "paragraph",
+          "text": "The cost calculation includes purchase and installation costs, annualized hardware costs, maintenance, energy and human supervision. These estimates are compared with worker compensation for the relevant work. The authors also account for overlapping robot functions when estimating occupation-level costs; simply adding every task's equipment cost would risk counting the same machine more than once."
+        },
+        {
+          "type": "paragraph",
+          "text": "Packing and packaging provides a concrete example. The report describes a collection of robots for moving goods, erecting boxes, inspecting items, labeling and sealing packages. It estimates annual costs of roughly $45,000 per replaced worker, close to the corresponding human labor cost. Other physical occupations can require more expensive combinations of machines, even when individual operations are technically demonstrated. These are modeled costs, with financing and coordination assumptions, rather than quoted prices for every employer."
+        },
+        {
+          "type": "paragraph",
+          "text": "Under a scenario continuing historical robot-price declines, the authors estimate approximately 40 years for cost-competitive exposure to reach 10% of working time. That scenario holds a particular trajectory for costs; it is not a prediction that capability, regulation or business demand will remain unchanged for four decades. Faster technical progress or different operating economics could alter the result."
+        },
+        {
+          "type": "heading",
+          "text": "Exposure is a useful signal with substantial limits"
+        },
+        {
+          "type": "paragraph",
+          "text": "The study backtests exposure against about 50 years of US wage and employment history and reports worse subsequent outcomes in more exposed occupations. Historical association does not establish a single causal mechanism or a fixed displacement timetable. The current contribution is a way to examine which work robots can do, where they can do it and whether deployment appears economical. Those three questions give a more concrete account of potential labor change than treating physical capability as immediate adoption."
+        }
+      ],
+      "sources": [
+        {
+          "label": "Anthropic — What work can robots do?, September 30",
+          "url": "https://www.anthropic.com/research/what-work-can-robots-do"
+        },
+        {
+          "label": "Anthropic - What work can robots do? Full report, September 30",
+          "url": "https://cdn.sanity.io/files/4zrzovbb/website/401a473469db99fd39bba1ca6d9a5653a70e2f12.pdf"
+        }
+      ]
+    },
+    {
+      "slug": "fed-ai-manufacturing-job-postings",
+      "category": "Employment · AI Workforce",
+      "sortDate": "2026-09-30",
+      "dateLabel": "September 30, 2026",
+      "title": "Federal Reserve finds AI skills in 11% of manufacturing job postings",
+      "summary": "A Federal Reserve analysis of Lightcast job postings through July 2026 finds AI-related skills in 11% of manufacturing ads, compared with 8% across all sectors. Generative AI remains under 1% of postings, while advertised wage gaps are volatile and do not show actual worker pay or hiring outcomes.",
+      "image": {
+        "src": "ai-news/2026-09/images/fed-manufacturing-ai-skills-figure4.png",
+        "alt": "Federal Reserve line charts tracking broad AI, machine-learning and generative-AI skills in manufacturing job postings and production roles",
+        "caption": "Figure 4 from the Federal Reserve note, tracking AI skills in manufacturing job postings. Source: Federal Reserve."
+      },
+      "content": [
+        {
+          "type": "paragraph",
+          "text": "A Federal Reserve FEDS Notes analysis published on September 30 finds AI-related skills in 11% of manufacturing job postings, compared with 8% across the overall economy. The underlying Lightcast skill series runs through July 2026. The authors examine what employers request in online advertisements, providing evidence of changing recruitment requirements rather than a direct measurement of actual worker skills, filled jobs or factory productivity."
+        },
+        {
+          "type": "paragraph",
+          "text": "Manufacturing is an informative case because many production tasks are physical, while AI exposure measures often emphasize cognitive work. Hiring data can reveal a different dimension: a manufacturer may seek machine-learning or other AI capabilities for its operations even when much of its existing workforce performs tasks that a language model cannot complete on its own."
+        },
+        {
+          "type": "figure",
+          "src": "ai-news/2026-09/images/fed-ai-skills-source.png",
+          "alt": "Federal Reserve original two-panel chart comparing AI and computer skill requirements in manufacturing and all job postings",
+          "caption": "Original Federal Reserve Figure 3, using Lightcast postings through July 2026. Blue AI-skill series uses the left axis; green computer-skill series uses the right axis. Panels show manufacturing and all postings."
+        },
+        {
+          "type": "heading",
+          "text": "A recruitment measure, with a separate comparison to vacancies"
+        },
+        {
+          "type": "paragraph",
+          "text": "Lightcast aggregates advertisements from company career pages, recruitment websites and job boards. The note compares its series with the Bureau of Labor Statistics' Job Openings and Labor Turnover Survey, which measures employer-reported vacant positions. Recent movements are similar, but the concepts remain different. An online posting records recruitment activity; a vacancy records a position an employer reports as open."
+        },
+        {
+          "type": "paragraph",
+          "text": "That distinction prevents several overly strong readings. A posting can be renewed, distributed through multiple channels or remain advertised while hiring is delayed. Conversely, recruitment through internal promotion or other offline channels may not appear in the online data. The study uses postings to examine stated skill demand, rather than equating every advertisement with one newly created job."
+        },
+        {
+          "type": "heading",
+          "text": "The increase is broader than generative AI"
+        },
+        {
+          "type": "paragraph",
+          "text": "The authors distinguish general AI-related skills, machine learning, generative AI and broader computer skills. Manufacturing's AI share rose particularly after mid-2025. Generative-AI requirements remain below 1% of manufacturing postings overall and were essentially absent from production-role postings through the first half of 2026. Production occupations include roles such as assemblers, machinists and welders."
+        },
+        {
+          "type": "paragraph",
+          "text": "This makes the headline more specific than a story about factories hiring ChatGPT users. The observed increase includes broader AI and machine-learning requirements, while production roles show lower prevalence than the sector as a whole. Computer skills provide another reference point: they are already much more common and represent a more mature set of workplace technologies. Their presence should not be confused with the narrower AI categories."
+        },
+        {
+          "type": "heading",
+          "text": "Advertised wages show an association, not a guaranteed premium"
+        },
+        {
+          "type": "paragraph",
+          "text": "Across the sample, manufacturing advertisements requesting AI skills list wages averaging about 70% above the sector's posting average. Within production occupations, the corresponding gap has averaged around 30% since 2023. These are comparisons between sets of advertisements, with a relatively small and changing AI-skilled sample. They do not mean that adding an AI skill raises an otherwise identical worker's pay by those percentages."
+        },
+        {
+          "type": "paragraph",
+          "text": "The composition of roles is particularly relevant. Technical responsibilities, seniority, location and the mix of jobs requesting AI can change the average, and advertised compensation is not necessarily the wage ultimately accepted by a hire. The note describes considerable volatility in the AI-skilled group, so the percentages should be interpreted with the sample and comparison in view."
+        },
+        {
+          "type": "paragraph",
+          "text": "The result is evidence that manufacturers are increasingly mentioning AI capabilities when recruiting, including beyond occupations usually considered highly exposed to language models. Establishing whether that translates into new hiring, changed production practices or sustained pay differences requires other measurements. The report's contribution is an early view of employers' stated requirements, with the limits of online recruitment data kept explicit."
+        }
+      ],
+      "sources": [
+        {
+          "label": "Federal Reserve — AI on the Factory Floor: Evidence from Manufacturing Job Postings, September 30",
+          "url": "https://www.federalreserve.gov/econres/notes/feds-notes/ai-on-the-factory-floor-evidence-from-manufacturing-job-postings-20260930.html"
+        },
+        {
+          "label": "Federal Reserve Board - Eccles Building photograph and history",
+          "url": "https://www.federalreserve.gov/aboutthefed/aroundtheboard/history-buildings.htm"
+        }
+      ]
+    },
+    {
       "slug": "openai-devday-dots-gpt-61-sol",
       "category": "Industry · AI Agents",
       "sortDate": "2026-09-29",
@@ -22,27 +403,51 @@ window.AI_NEWS_MONTH_DATA["2026-09"] = {
       "content": [
         {
           "type": "paragraph",
-          "text": "OpenAI introduced Dots at its annual developer conference, describing them as always-on agents that can keep working toward a user's objectives across applications. Reuters reported that Dots can update evolving projects, communicate through Slack and Microsoft Teams, and combine ChatGPT Work and Codex capabilities for research, analysis, documents and software."
+          "text": "OpenAI introduced Dots at its September 29 developer conference, alongside GPT-6.1 Sol and a wider set of cloud-development and workplace collaboration features. Dots are intended to take responsibility for ongoing projects across applications, rather than complete only the next conversational request. OpenAI says each dot has its own cloud computer, can learn from feedback and can continue work between conversations."
+        },
+        {
+          "type": "paragraph",
+          "text": "The launch also separates two model roles. The Dots announcement identifies GPT-6 Astra as the model powering the agents. GPT-6.1 Sol is a separate release aimed at lower-cost coding, computer use and professional work; the appearance of both at DevDay does not mean every dot runs on the new Sol model. Product availability and enterprise administration also vary across the announced features."
         },
         {
           "type": "heading",
-          "text": "The launch extends beyond one agent product"
+          "text": "Ongoing work brings a new operational model"
         },
         {
           "type": "paragraph",
-          "text": "The same release cycle added GPT-6.1 Sol, which OpenAI positions below Astra on price while targeting complex coding, computer-use and professional work. The API documentation lists a 1.05-million-token context window, up to 128,000 output tokens, and prices of $2 per million input tokens and $10 per million output tokens. OpenAI also announced Codex Cloud, team tasks, shared Pages and Spaces, and broader workplace integrations."
+          "text": "OpenAI's examples include following customer feedback, investigating a bug, preparing tested code changes and updating a project's materials as requirements change. These examples describe a loop of observing new information, doing work and returning results for review. The user can inspect the cloud computer and redirect the agent, while connected applications determine what information and actions it can reach."
         },
         {
           "type": "paragraph",
-          "text": "OpenAI says Dots run on isolated cloud computers and can be governed with custom rules. Sensitive actions such as password changes and permanent deletion require explicit user consent, while business data is not used for training by default. Those safeguards address known failure modes, but they do not establish that long-running agents will be reliable across every connected system."
+          "text": "The company distinguishes background discovery from actions that change external systems. Its proactive research uses connected-app tools restricted to reading. Work that affects an account, changes content or shares information is checked against instructions, permissions and safety requirements. This distinction is important because finding a useful next task does not automatically authorize every step needed to carry it out."
         },
         {
           "type": "heading",
-          "text": "A launch with scale claims and visible limits"
+          "text": "A separate action check, with limits that still remain"
         },
         {
           "type": "paragraph",
-          "text": "The company said Codex and ChatGPT Work together have more than 35 million weekly users and ChatGPT has more than 1.2 billion weekly users. Reuters also observed failed voice updates during live Dots demonstrations. The evidence therefore supports a major product expansion and broad distribution, not yet a conclusion that autonomous workplace agents are dependable at scale."
+          "text": "Custom Rules let users specify allowed, approval-required and blocked actions. OpenAI says an additional action-review process evaluates consequential steps, and some sensitive operations, such as changing a password, stay with the user. The cloud workspace is separated from the user's computer unless the user connects it. The company also describes defenses against prompt injection and monitoring that can pause work when a safety concern is detected."
+        },
+        {
+          "type": "paragraph",
+          "text": "These are safeguards around an agent that can act over time, not evidence that mistakes have been eliminated. A misunderstood goal, an incorrect intermediate result or a permission mismatch can affect later work. OpenAI explicitly says users should review consequential results. Business, Enterprise and Edu content is not used to improve models by default; personal-plan data controls differ."
+        },
+        {
+          "type": "heading",
+          "text": "GPT-6.1 Sol and the surrounding work tools"
+        },
+        {
+          "type": "paragraph",
+          "text": "Sol's API documentation lists a 1.05-million-token context window, a maximum of 128,000 output tokens and standard rates of $2 per million input tokens, $0.10 for cached input and $10 for output. OpenAI positions the model as approaching Astra on several professional evaluations at lower cost. The disclosed results are evaluation-specific and do not establish equal performance on every task or at every reasoning setting."
+        },
+        {
+          "type": "paragraph",
+          "text": "Codex Cloud adds reusable development environments and an isolated workspace for each task, allowing coding work to continue while the user's computer is asleep. The Business release notes also describe shared Pages and Spaces, team tasks and approved application connections. Team membership and a shared plugin do not automatically grant access to another person's connected account; administrators and connection permissions still determine the available scope."
+        },
+        {
+          "type": "paragraph",
+          "text": "Taken together, the releases extend OpenAI's product offering from chat and individual coding sessions toward persistent work and team-managed workflows. The concrete change is the combination of continuing agents, lower-cost model access and reusable cloud environments. Whether that produces dependable completed work will depend on task boundaries, integrations, review and evidence from actual deployments beyond the launch examples."
         }
       ],
       "sources": [
@@ -61,6 +466,22 @@ window.AI_NEWS_MONTH_DATA["2026-09"] = {
         {
           "label": "Associated Press — OpenAI DevDay and Dots, September 29",
           "url": "https://apnews.com/article/77b6b8888145869206996d7509d24256"
+        },
+        {
+          "label": "OpenAI - Introducing dots, September 29",
+          "url": "https://openai.com/index/introducing-dots/"
+        },
+        {
+          "label": "OpenAI - How we build safety, security, and privacy into dots, September 29",
+          "url": "https://openai.com/index/how-we-build-safety-security-and-privacy-into-dots/"
+        },
+        {
+          "label": "OpenAI - Introducing GPT-6.1 Sol, September 29",
+          "url": "https://openai.com/index/introducing-gpt-6-1-sol/"
+        },
+        {
+          "label": "OpenAI - DevDay 2026 Recap, September 29",
+          "url": "https://openai.com/index/devday-2026-recap/"
         }
       ]
     },
@@ -79,31 +500,51 @@ window.AI_NEWS_MONTH_DATA["2026-09"] = {
       "content": [
         {
           "type": "paragraph",
-          "text": "President Donald Trump said leading AI companies agreed to a voluntary safety framework after a White House meeting with technology executives. Reporting by Reuters and the Associated Press says the participants included leaders from OpenAI, Anthropic, Meta, Google, NVIDIA and other large technology companies."
+          "text": "President Donald Trump and leaders of major AI companies announced a voluntary safety accord after a White House meeting on September 29. Associated Press reporting identifies the participants as Anthropic's Dario Amodei, Google's Sundar Pichai, Meta's Mark Zuckerberg, OpenAI's Greg Brockman, NVIDIA's Jensen Huang and xAI founder Elon Musk. The agreement centers on company controls, outside assessment and oversight by corporate boards."
+        },
+        {
+          "type": "paragraph",
+          "text": "The immediate event is the adoption of a shared set of commitments. It is not the enactment of a new statute or a completed federal regulatory system. Trump described the agreement as morally binding, and the reported text leaves open the possibility that some steps could later be written into law. Implementation therefore needs to be distinguished from the announcement itself."
         },
         {
           "type": "heading",
-          "text": "The accord focuses on audits and technical control"
+          "text": "How the proposed oversight chain works"
         },
         {
           "type": "paragraph",
-          "text": "The reported commitments call for robust internal controls, dedicated internal oversight teams, independent external reviewers and board-level supervision. They also ask developers to assess whether systems behave as intended and to reduce the risk that agents access or compromise technical systems outside their authorization."
+          "text": "The accord calls for internal controls and internal oversight, an independent external auditor to assess those controls, and a committee within each company's board to review the resulting reports. The practical idea is to connect day-to-day technical safeguards with an outside check and a senior body responsible for responding to the findings."
         },
         {
           "type": "paragraph",
-          "text": "That design responds to recent incidents involving autonomous agents and to concern that company safety programs may lack independent verification. It could create a common minimum process across competing labs if the signatories publish comparable audit scopes, findings and remediation practices."
+          "text": "Those stages have different functions. An internal team can examine development processes and deployed systems continuously. An external reviewer can test whether the company's own account is supported. A board committee can ask management to explain problems and follow through on changes. The presence of three stages, however, does not by itself specify their authority, the information they receive or the consequences when a review finds a serious deficiency."
+        },
+        {
+          "type": "paragraph",
+          "text": "The reported commitments also focus on whether advanced systems behave as intended and remain within their authorization. That makes agent behavior relevant to the accord: a system pursuing a goal across tools can cause harm through an unauthorized action even when the original user request is ordinary. Effective assessment would need to examine the working system, its permissions and its responses to problematic situations, alongside the underlying model."
         },
         {
           "type": "heading",
-          "text": "Voluntary does not mean enforceable"
+          "text": "A voluntary framework with unresolved implementation questions"
         },
         {
           "type": "paragraph",
-          "text": "The announcement described the agreement as morally binding rather than a regulation or statute. The public reporting available at the cutoff did not establish legal penalties, a mandatory disclosure schedule, rules for choosing auditors or a final oversight body. Those missing details limit what can be inferred about compliance."
+          "text": "AP reports that Trump discussed naming an oversight group and a person to supervise the agreement. Those comments describe intended next steps, rather than a fully established institution with a published mandate. At the announcement, public reporting did not establish a binding timetable, standardized audit disclosures or penalties for failing to meet the commitments."
         },
         {
           "type": "paragraph",
-          "text": "The accord is therefore a concrete governance commitment, but not a substitute for evidence that audits are independent, technically demanding and followed by corrective action. Its practical significance will depend on the final text, participating companies, reporting requirements and whether commitments survive competitive pressure."
+          "text": "Several implementation choices will determine what outsiders can verify. Auditors need a defined scope and access to relevant evidence; board review needs a way to track remediation; public communication needs to distinguish a completed assessment from a company simply committing to one. Without those details, the accord cannot yet be read as proof that participating systems have passed comparable independent safety tests."
+        },
+        {
+          "type": "heading",
+          "text": "The business setting is broader than model testing"
+        },
+        {
+          "type": "paragraph",
+          "text": "The White House meeting also addressed the expansion of data centers and local opposition to new infrastructure. AP reports discussion of company support for communities and energy costs. Those issues concern the physical buildout surrounding AI and sit alongside, rather than replace, the accord's technical-governance commitments."
+        },
+        {
+          "type": "paragraph",
+          "text": "The near-term significance is that competing developers have agreed publicly to a common oversight structure. The next observable developments are the final implementation arrangements, named reviewers or supervisory bodies, completed audits and documented responses to findings. Until those exist, the strongest supported conclusion is a voluntary governance commitment whose practical force remains to be established through follow-through."
         }
       ],
       "sources": [
@@ -118,6 +559,10 @@ window.AI_NEWS_MONTH_DATA["2026-09"] = {
         {
           "label": "PBS NewsHour — Video of the accord announcement, September 29",
           "url": "https://www.pbs.org/newshour/politics/watch-trump-announces-accord-signed-by-top-ai-companies-to-self-police-development"
+        },
+        {
+          "label": "Associated Press via Boston.com - White House voluntary AI accord, September 29",
+          "url": "https://www.boston.com/news/politics/2026/09/29/trump-says-top-tech-firms-have-signed-accord-to-self-police-ai-development/"
         }
       ]
     },
@@ -136,31 +581,51 @@ window.AI_NEWS_MONTH_DATA["2026-09"] = {
       "content": [
         {
           "type": "paragraph",
-          "text": "Anthropic expects to commit at least $518 billion to AI infrastructure over approximately the next decade, according to Reuters reporting based on a confidential IPO prospectus. About 80% of the total is described as non-cancelable or payable regardless of actual usage, making compute access both a strategic asset and a substantial fixed obligation."
+          "text": "Anthropic's confidential IPO prospectus describes at least $518 billion in AI infrastructure spending over roughly a decade, according to Reuters reporting published on September 29. Reuters says about 80% is non-cancelable or payable regardless of usage. The figures describe commitments and planned obligations across multiple years, rather than cash already spent or a single year's infrastructure bill."
+        },
+        {
+          "type": "paragraph",
+          "text": "Anthropic publicly confirmed in June that it had submitted a confidential draft S-1 to the Securities and Exchange Commission. The detailed prospectus discussed by Reuters has not been publicly disclosed. Its figures must therefore remain attributed to that reporting, with the distinction between an official confirmation of a filing and independent access to the filing's contents preserved."
         },
         {
           "type": "heading",
-          "text": "Compute agreements now look like balance-sheet structure"
+          "text": "The agreements put computing capacity inside long-term finances"
         },
         {
           "type": "paragraph",
-          "text": "The reported obligations include $111.1 billion with Google, $110 billion with Amazon, $31.4 billion with Microsoft and $161.2 billion in largely non-cancelable Broadcom-related equipment leases. A separate arrangement with xAI could add as much as $84.5 billion of NVIDIA-based capacity, but Reuters says much of that agreement can be canceled with notice."
+          "text": "Reuters identifies obligations of at least $111.1 billion with Google, $110 billion with Amazon and $31.4 billion with Microsoft, together with approximately $161.2 billion in largely non-cancelable Broadcom-related equipment leases. The commitments run over different periods. They combine infrastructure services and equipment arrangements rather than a single contract for an interchangeable pool of chips."
         },
         {
           "type": "paragraph",
-          "text": "The same prospectus reportedly shows how distribution and infrastructure are intertwined. Reuters says 47% of Anthropic's 2025 revenue flowed through Amazon and Google cloud marketplaces, even as those companies serve as investors, computing suppliers and AI competitors."
+          "text": "The payment structure is the central business issue. A usage-independent minimum can secure capacity ahead of demand, but it can also leave a company paying for resources that its future revenue does not fully support. Conversely, demand exceeding available capacity could constrain service growth or model development. The prospectus, as reported, presents access to compute as a bottleneck; that is the company's view of the constraint, not a guarantee about future market demand."
         },
         {
           "type": "heading",
-          "text": "Growth, losses and disclosure risk travel together"
+          "text": "Cancelable capacity is a different exposure"
         },
         {
           "type": "paragraph",
-          "text": "Anthropic reportedly generated about $4.6 billion in 2025 revenue, roughly twelve times the prior year, while operating losses exceeded $8 billion. The prospectus also devotes unusually extensive attention to model risks, including the possibility that advanced systems could resist shutdown or manipulate information."
+          "text": "Reuters describes a separate xAI arrangement that could reach $84.5 billion for NVIDIA-based capacity through 2029 and is largely cancelable on 90 days' notice. That differs materially from the usage-independent agreements. The maximum potential amount should not be described as having the same fixed payment characteristics as every other obligation in the headline total."
         },
         {
           "type": "paragraph",
-          "text": "Anthropic officially confirmed in June that it confidentially submitted a draft S-1, but the detailed prospectus has not been published by the SEC. The figures in this article should therefore be read as attributed reporting, not as independently verified public-filing data."
+          "text": "The report also describes a move toward dedicated data centers and directly leased chips, extending beyond a cloud-only infrastructure model. For an AI company, that changes the combination of operating dependencies, financing needs and deployment responsibilities. It does not by itself establish that the company will own every site, build all the infrastructure directly or realize every proposed capacity expansion on schedule."
+        },
+        {
+          "type": "heading",
+          "text": "Cloud partners occupy several roles at once"
+        },
+        {
+          "type": "paragraph",
+          "text": "Amazon, Google and Microsoft are infrastructure suppliers, but they also have other commercial relationships with Anthropic and develop competing AI products. Separate Reuters reporting says 47% of Anthropic's 2025 revenue came through Amazon and Google marketplaces. Distribution can help reach customers, while reliance on the same companies for capacity can create exposure to changes in terms or access."
+        },
+        {
+          "type": "paragraph",
+          "text": "Reuters also reports approximately $4.6 billion in 2025 revenue and more than $8 billion in operating losses. Those measures have different accounting meanings, and operating loss should not be silently replaced with another reported loss figure. Rapid revenue growth does not show that a company can already fund a decade of contracted infrastructure from operating cash flow."
+        },
+        {
+          "type": "paragraph",
+          "text": "The disclosure is therefore news about the scale and structure of Anthropic's computing obligations, rather than evidence that half a trillion dollars has already been invested. Public filing details, the timing of capacity delivery and actual utilization will be important for evaluating those obligations. Until then, the reported amounts and contract terms remain Reuters-attributed information from a confidential document."
         }
       ],
       "sources": [
@@ -179,6 +644,10 @@ window.AI_NEWS_MONTH_DATA["2026-09"] = {
         {
           "label": "Reuters — Anthropic risk disclosures, September 29",
           "url": "https://www.reuters.com/business/finance/anthropic-warns-ai-may-pose-existential-risks-humanity-ipo-filing-2026-09-29/"
+        },
+        {
+          "label": "Reuters via The Express Tribune - Anthropic compute commitments, September 29",
+          "url": "https://tribune.com.pk/story/2632108/anthropics-518b-ai-buildout-hinges-largely-on-deals-that-cannot-be-canceled-filing-shows"
         }
       ]
     },
@@ -197,31 +666,55 @@ window.AI_NEWS_MONTH_DATA["2026-09"] = {
       "content": [
         {
           "type": "paragraph",
-          "text": "PwC's 2026 Global Workforce Hopes and Fears Survey reports that 64% of workers used AI at work during the previous 12 months, up ten percentage points year over year. Daily generative-AI use rose from 14% to 22%, while 59% of respondents expected their use to increase during the next year."
+          "text": "PwC's Global Workforce Hopes and Fears Survey, released on September 29, reports increasing workplace AI use alongside uneven benefits and access to learning. In its global sample, 64% of workers say they used AI at work during the previous 12 months, ten percentage points above the prior year. Daily generative-AI use rose from 14% to 22%, and 59% expect their use to increase during the following year."
+        },
+        {
+          "type": "paragraph",
+          "text": "These are different measures of adoption. Having used an AI tool at least once during a year is a much broader category than using generative AI every day. Neither measure establishes that an entire workflow has been redesigned or that a company has achieved a verified productivity gain. The survey records workers' experiences and expectations."
         },
         {
           "type": "heading",
-          "text": "Use is not evenly translating into advantage"
+          "text": "Why PwC divides the sample into four groups"
         },
         {
           "type": "paragraph",
-          "text": "PwC groups 14% of respondents into an AI-enabled, high-demand front-runner cohort and 56% into a core workforce with less access to AI, learning and opportunity. Daily generative-AI use reaches 51% among front-runners but only 11% among the core group. The comparison suggests uneven access and organizational support, not a universal productivity gain."
+          "text": "PwC combines two survey-based dimensions: the advantage workers report gaining from AI and their perception of demand for their skills. The resulting groups describe different combinations of tool benefits and labor-market position. The front-runner cohort accounts for 14% of respondents; the larger core-workforce group accounts for 56%."
         },
         {
           "type": "paragraph",
-          "text": "The divide extends beyond tool access. Only 51% of workers say they have access to learning and development resources, down from 59% the previous year, and trust in top management fell seven percentage points. PwC also reports that 31% of daily AI users identify accuracy or quality as their leading barrier."
+          "text": "Daily generative-AI use reaches 51% among front-runners but only 11% in the core group. That comparison identifies a substantial difference in reported use. It should not be interpreted as proof that the technology alone caused the stronger group to become more valuable. Job characteristics, employer investment, access to tools and pre-existing demand for skills may all shape the groups' experiences."
+        },
+        {
+          "type": "paragraph",
+          "text": "The classification also matters for comparisons between years. These cohorts are constructed from this survey's indexes, rather than following the same people as they move from one group to another. The findings describe the distribution of respondents and reported advantages at a particular time, not an observed transition rate into an AI-enabled career."
         },
         {
           "type": "heading",
-          "text": "The survey captures perceptions across a broad global sample"
+          "text": "Training access is falling while tool use rises"
         },
         {
           "type": "paragraph",
-          "text": "PwC collected 49,364 responses across 48 countries and regions and 29 sectors during May and June 2026. The results were weighted to each geography's working population by age and gender. This scale makes the survey a useful view of worker experience, but it does not measure company-level productivity, verified AI usage or actual hiring."
+          "text": "Only 51% of workers report access to learning and development resources, down from 59% in the prior survey. Less than 40% of the core group reports such access, compared with nearly 80% of front-runners. The results suggest that organizations' support for skill development is uneven at the same time that many workers are adopting new tools."
         },
         {
           "type": "paragraph",
-          "text": "The practical conclusion is narrower than a claim that AI is improving work everywhere: adoption is growing, while benefits, confidence and learning access remain uneven. Whether that gap persists will depend on workflow redesign, role-specific training, trustworthy systems and access for the majority workforce rather than only early adopters."
+          "text": "Trust in top management fell seven percentage points across the sample. PwC also reports that 31% of daily AI users identify accuracy or quality as their leading barrier to use. Frequent users can therefore be optimistic about the technology while remaining aware of its errors. Greater use should not be treated as equivalent to unquestioning trust or unrestricted delegation."
+        },
+        {
+          "type": "paragraph",
+          "text": "For employers, the actionable issue raised by the survey is how access, training and job design fit together. Providing an AI tool does not automatically give an employee time to learn it, an appropriate use case or confidence that management will support changed responsibilities. These are interpretations of the reported divide, rather than measured causal effects of a particular training program."
+        },
+        {
+          "type": "heading",
+          "text": "A broad global survey, with a defined measurement period"
+        },
+        {
+          "type": "paragraph",
+          "text": "PwC gathered 49,364 responses across 48 countries and regions and 29 sectors in May and June 2026. Results are weighted to each geography's working population by age and gender. The September publication date should not be confused with the period in which respondents answered the questions, and a global average should not be presented as a result for every country or occupation."
+        },
+        {
+          "type": "paragraph",
+          "text": "The report supports a clear account of rising self-reported adoption and unequal workplace experiences. It does not directly measure actual wages, hiring, company output or the return on an employer's AI spending. Its value is in identifying where workers report benefits, constraints and weakened support, which other operational and labor-market data can then test more directly."
         }
       ],
       "sources": [
@@ -246,31 +739,51 @@ window.AI_NEWS_MONTH_DATA["2026-09"] = {
       "content": [
         {
           "type": "paragraph",
-          "text": "McKinsey Global Institute estimates that automation could reduce U.S. labor demand by the equivalent of roughly 36 million jobs between 2025 and 2035, while growth in the AI value chain and the broader economy could create demand for more than 40 million. Those are modeled labor-demand equivalents, not observed layoffs or guaranteed job creation."
+          "text": "McKinsey Global Institute's September 29 report models a substantial reshaping of US work between 2025 and 2035. Its central scenario estimates automation-related reductions in labor demand equivalent to approximately 36 million full-time jobs, while broader economic change and AI-related activity generate demand equivalent to about 41 million. The report also estimates that roughly 11 million workers may need to change occupations."
+        },
+        {
+          "type": "paragraph",
+          "text": "These quantities describe different parts of the model. The 36 million figure is gross labor demand potentially reduced by automation, not a forecast of 36 million layoffs. Growth can offset reduced demand within the same occupation, and new demand can arise elsewhere. The roughly 11 million transition estimate concerns workers whose current occupations may not absorb enough growth to offset the change."
         },
         {
           "type": "heading",
-          "text": "A positive aggregate can still hide difficult transitions"
+          "text": "More jobs overall can coexist with difficult moves"
         },
         {
           "type": "paragraph",
-          "text": "The report estimates that about 11 million workers, or roughly 7% of current U.S. employees, may need to move to different occupations. Only one in seven workers is modeled as having a direct pathway into new work with a strong skill match, limited retraining and no wage loss."
+          "text": "The model indicates that about 25 million of the workers associated with reduced labor demand could remain within their occupations as demand grows. The others face a matching problem. A new job may require a different credential, be in another location or pay less, even when aggregate employment demand is positive. Workers cannot move between those positions as interchangeable units."
         },
         {
           "type": "paragraph",
-          "text": "The burden is uneven. McKinsey estimates that lower-wage workers are 7.6 times more likely than higher-wage workers to need an occupational transition, while workers without a college degree are about 1.8 times as likely as those with at least a bachelor's degree. The model identifies healthcare, professional and technical services, and construction as important growth areas."
+          "text": "The report's transition estimate ranges from about six million to 16 million under different assumptions about adoption and its effect on labor demand. That range matters because the pace of actual business deployment is uncertain. Technically feasible automation is only one input; investment, demand, demographics and the way employers reorganize work also affect the outcome."
         },
         {
           "type": "heading",
-          "text": "AI fluency is spreading across occupations"
+          "text": "The quality of a pathway is part of the result"
         },
         {
           "type": "paragraph",
-          "text": "Using Lightcast posting data, McKinsey says the number of occupations requesting AI fluency increased about elevenfold from 2022 to 2026. Demand for adaptability increased about fivefold, while willingness to learn, resilience and curiosity roughly tripled. The pattern points to broader skill diffusion rather than demand confined to specialist AI roles."
+          "text": "McKinsey classifies routes into growing occupations by skill match, wage preservation and retraining or credential requirements. Only about one in seven workers has a direct pathway requiring little retraining and no wage loss in the model. Other routes are more demanding or can be blocked by practical barriers. This measure is about the modeled quality of occupational pathways, rather than a count of people already offered new jobs."
         },
         {
           "type": "paragraph",
-          "text": "The study combines BLS data, millions of job postings, an input-output model and assumptions about automation adoption. McKinsey explicitly describes the outputs as directional rather than deterministic. Actual outcomes will depend on adoption speed, demographics, regulation, business investment and whether training pathways become accessible in time."
+          "text": "The modeled burden is uneven. Lower-wage workers are 7.6 times more likely than higher-wage workers to require an occupational transition, while workers without a college degree are about 1.8 times as likely as those with at least a bachelor's degree. These differences reflect the groups' positions across occupations and the scenario's assumptions; they are not individualized predictions for every worker in those groups."
+        },
+        {
+          "type": "heading",
+          "text": "Skills change even when an occupation survives"
+        },
+        {
+          "type": "paragraph",
+          "text": "The report also describes changes inside jobs that continue to exist. Some automated activities may free time for other work, while employees take on oversight, judgment or new responsibilities. A stable head count can therefore conceal substantial changes in task mix, and a declining occupation can simultaneously demand new skills from the people who remain."
+        },
+        {
+          "type": "paragraph",
+          "text": "Using Lightcast postings, McKinsey reports an elevenfold increase since 2022 in the number of occupations requesting AI fluency. Demand for adaptability increased about fivefold, with willingness to learn, resilience and curiosity also rising. These are patterns in advertised requirements, separate from the modeled number of future jobs and from proof that applicants or existing employees have acquired the skills."
+        },
+        {
+          "type": "paragraph",
+          "text": "The study combines labor statistics, posting data and models of automation, employment demand and occupational pathways. It describes its outputs as directional. The important finding is the scale and unevenness of potential adjustment: aggregate growth does not remove the need for credible retraining routes, wage-preserving opportunities and attention to workers in declining occupations. Actual transitions will depend on how those constraints develop through the decade."
         }
       ],
       "sources": [
