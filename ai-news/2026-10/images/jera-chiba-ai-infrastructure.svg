@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 900" role="img" aria-labelledby="title desc">
+  <title id="title">JERA, Dell and RHAELM plan a 400 megawatt AI infrastructure project in Chiba</title>
+  <desc id="desc">A factual diagram showing the three partners, a behind-the-meter link to JERA's Chiba power station, expected capital above 15 billion US dollars, and operations targeted around 2028.</desc>
+  <rect width="1600" height="900" fill="#f4f7f8"/>
+  <rect x="0" y="0" width="1600" height="122" fill="#153a48"/>
+  <text x="90" y="76" fill="#ffffff" font-family="Arial, Helvetica, sans-serif" font-size="42" font-weight="700">CHIBA AI INFRASTRUCTURE PLAN</text>
+  <text x="1510" y="73" fill="#b9d9df" text-anchor="end" font-family="Arial, Helvetica, sans-serif" font-size="24">MOU · 1 OCTOBER 2026</text>
+  <g font-family="Arial, Helvetica, sans-serif">
+    <rect x="90" y="188" width="420" height="205" rx="24" fill="#ffffff" stroke="#80a7b0" stroke-width="3"/>
+    <text x="130" y="250" fill="#173b49" font-size="35" font-weight="700">JERA</text>
+    <text x="130" y="302" fill="#36545e" font-size="25">Power, land and LNG supply chain</text>
+    <text x="130" y="343" fill="#36545e" font-size="25">Chiba Thermal Power Station</text>
+    <rect x="590" y="188" width="420" height="205" rx="24" fill="#ffffff" stroke="#80a7b0" stroke-width="3"/>
+    <text x="630" y="250" fill="#173b49" font-size="35" font-weight="700">DELL TECHNOLOGIES</text>
+    <text x="630" y="302" fill="#36545e" font-size="25">Pre-integrated rack-scale compute</text>
+    <text x="630" y="343" fill="#36545e" font-size="25">Dell AI Factory standard</text>
+    <rect x="1090" y="188" width="420" height="205" rx="24" fill="#ffffff" stroke="#80a7b0" stroke-width="3"/>
+    <text x="1130" y="250" fill="#173b49" font-size="35" font-weight="700">RHAELM</text>
+    <text x="1130" y="302" fill="#36545e" font-size="25">Development and project delivery</text>
+    <text x="1130" y="343" fill="#36545e" font-size="25">Infrastructure integration</text>
+    <path d="M300 420 V490 H800" fill="none" stroke="#2b8292" stroke-width="8"/>
+    <path d="M800 420 V490" fill="none" stroke="#2b8292" stroke-width="8"/>
+    <path d="M1300 420 V490 H800" fill="none" stroke="#2b8292" stroke-width="8"/>
+    <circle cx="800" cy="490" r="18" fill="#2b8292"/>
+    <rect x="250" y="535" width="1100" height="235" rx="30" fill="#163f4c"/>
+    <text x="800" y="614" fill="#ffffff" text-anchor="middle" font-size="46" font-weight="700">UP TO 400 MW · MORE THAN US$15 BILLION</text>
+    <text x="800" y="670" fill="#d8eef1" text-anchor="middle" font-size="30">Behind-the-meter project at JERA's Chiba site</text>
+    <text x="800" y="718" fill="#d8eef1" text-anchor="middle" font-size="30">Operations targeted to begin around 2028</text>
+    <text x="90" y="840" fill="#5b6f75" font-size="22">Status: memorandum of understanding and development plan; capital and timing are expectations, not completed deployment.</text>
+  </g>
+</svg>

@@ -1,0 +1,229 @@
+{
+    "articles":  [
+                     {
+                         "slug":  "anthropic-accenture-embedded-evaluation",
+                         "category":  "Industry · AI Safety",
+                         "sortDate":  "2026-09-18",
+                         "dateLabel":  "September 18, 2026",
+                         "title":  "Anthropic and Accenture commit at least $1 billion each to put evaluators inside frontier-model development",
+                         "summary":  "Faculty, Accenture\u0027s specialist AI business, will evaluate and red-team Anthropic models with access comparable to an employee\u0027s. The arrangement is non-exclusive, directly funded by Anthropic at first and still missing shared standards for access and reporting.",
+                         "monthId":  "2026-09",
+                         "monthLabel":  "September 2026",
+                         "image":  {
+                                       "src":  "ai-news/2026-09/images/embedded-evaluation-model.svg",
+                                       "alt":  "Diagram showing an embedded evaluator between frontier model development and public reporting",
+                                       "caption":  "UGA LLM Lab graphic based on Anthropic\u0027s September 18 partnership announcement."
+                                   }
+                     },
+                     {
+                         "slug":  "huawei-peerium-ascend-960",
+                         "category":  "Infrastructure · AI Chips",
+                         "sortDate":  "2026-09-17",
+                         "dateLabel":  "September 17, 2026",
+                         "title":  "Huawei pulls Ascend 960 forward and pitches one million processors as one computer",
+                         "summary":  "Huawei’s new Peerium architecture ties processors, memory, storage and networking together through UnifiedBus. The company also moved the Ascend 960DT chip to the first quarter of 2027 as domestic demand outruns supply.",
+                         "monthId":  "2026-09",
+                         "monthLabel":  "September 2026",
+                         "image":  {
+                                       "src":  "ai-news/2026-09/images/huawei-peerium.jpg",
+                                       "alt":  "Huawei campus building in Shenzhen",
+                                       "caption":  "Huawei’s Shenzhen campus. Official press image supplied with the Peerium announcement. Source: Huawei."
+                                   }
+                     },
+                     {
+                         "slug":  "lucid-bolt-robotaxi-plan",
+                         "category":  "Industry · Autonomous Vehicles",
+                         "sortDate":  "2026-09-17",
+                         "dateLabel":  "September 17, 2026",
+                         "title":  "Lucid and Bolt set a 25,000-vehicle target for European robotaxis",
+                         "summary":  "Bolt plans to own and operate a fleet built on Lucid’s coming midsize platform, with NVIDIA Hyperion hardware underneath. It is a large target, but the announcement includes no purchase order, investment amount or deployment timetable.",
+                         "monthId":  "2026-09",
+                         "monthLabel":  "September 2026",
+                         "image":  {
+                                       "src":  "ai-news/2026-09/images/lucid-bolt-robotaxi.jpg",
+                                       "alt":  "Lucid and Bolt partnership image showing a future autonomous vehicle",
+                                       "caption":  "Lucid and Bolt’s official image for their European autonomous-mobility partnership. Source: Lucid Group."
+                                   }
+                     },
+                     {
+                         "slug":  "gemini-38-live-rollout",
+                         "category":  "Products · Multimodal AI",
+                         "sortDate":  "2026-09-17",
+                         "dateLabel":  "September 17, 2026",
+                         "title":  "Google starts rolling out Gemini 3.8 Live, with a second model that reasons while it talks",
+                         "summary":  "Google’s two new live-audio models can keep a conversation moving while they inspect visual input, call tools and work through longer tasks. The September 17 rollout reaches the Gemini API, Search Live, the Gemini app and parts of Workspace.",
+                         "monthId":  "2026-09",
+                         "monthLabel":  "September 2026",
+                         "image":  {
+                                       "src":  "ai-news/2026-09/images/gemini-38-live.png",
+                                       "alt":  "Google artwork announcing Gemini 3.8 Live and Gemini 3.8 Live Extended Thinking",
+                                       "caption":  "Google’s announcement artwork for Gemini 3.8 Live and Gemini 3.8 Live Extended Thinking. Source: Google."
+                                   }
+                     },
+                     {
+                         "slug":  "crusoe-series-f-ai-infrastructure",
+                         "category":  "Industry · AI Infrastructure",
+                         "sortDate":  "2026-09-17",
+                         "dateLabel":  "September 17, 2026",
+                         "title":  "Crusoe closes the first part of a $3.9 billion Series F at a $30.9 billion valuation",
+                         "summary":  "The AI-infrastructure company says it has more than $140 billion in contracted value and over six gigawatts of contracted capacity. The funding round is described as an initial closing, so the anticipated total and the cash already closed should not be treated as identical.",
+                         "monthId":  "2026-09",
+                         "monthLabel":  "September 2026",
+                         "image":  {
+                                       "src":  "ai-news/2026-09/images/crusoe-series-f-scale.svg",
+                                       "alt":  "Graphic showing Crusoe\u0027s Series F size, valuation and contracted capacity",
+                                       "caption":  "UGA LLM Lab graphic based on Crusoe\u0027s September 17 funding announcement; operating figures are company-reported."
+                                   }
+                     },
+                     {
+                         "slug":  "figure-helix-25-unseen-homes",
+                         "category":  "Research · Robotics",
+                         "sortDate":  "2026-09-17",
+                         "dateLabel":  "September 17, 2026",
+                         "title":  "Figure takes Helix 2.5 into 30 unfamiliar homes — and reports a sixfold jump from human-video pretraining",
+                         "summary":  "Figure says its humanoid completed bed-making, towel-folding and room-tidying trials in homes it had never seen, without collecting data or adapting the model there. In a controlled comparison, pretraining on the company’s Index dataset raised full-task success from 9% to 56%.",
+                         "monthId":  "2026-09",
+                         "monthLabel":  "September 2026",
+                         "image":  {
+                                       "src":  "ai-news/2026-09/images/figure-helix-25.jpg",
+                                       "alt":  "Figure humanoid robot performing household tasks in an unfamiliar home",
+                                       "caption":  "Figure evaluated Helix 2.5 on three whole-body household tasks across 30 Bay Area homes. Image: Figure."
+                                   }
+                     },
+                     {
+                         "slug":  "nvidia-lambda-power",
+                         "category":  "AI Infrastructure · Energy",
+                         "sortDate":  "2026-09-16",
+                         "dateLabel":  "September 16, 2026",
+                         "title":  "Same power budget, 24% more throughput: Lambda tests NVIDIA’s power controls",
+                         "summary":  "Getting more work out of an AI cluster does not always start with a bigger electricity connection.",
+                         "monthId":  "2026-09",
+                         "monthLabel":  "September 2026",
+                         "image":  {
+                                       "src":  "ai-news/2026-09/images/lambda-throughput-comparison.svg",
+                                       "alt":  "Lambda’s official throughput comparison under a 129 kW power budget.",
+                                       "caption":  "Lambda’s published throughput comparison under a 129 kW power budget. Source: NVIDIA’s Lambda case study."
+                                   }
+                     },
+                     {
+                         "slug":  "openai-misalignment-reports",
+                         "category":  "AI Safety · Model Behavior",
+                         "sortDate":  "2026-09-16",
+                         "dateLabel":  "September 16, 2026",
+                         "title":  "OpenAI publishes six model-misalignment reports—and a process for the next ones",
+                         "summary":  "OpenAI has turned six troubling training and evaluation episodes into the first test of a standing disclosure process for model behavior that crosses a line.",
+                         "monthId":  "2026-09",
+                         "monthLabel":  "September 2026",
+                         "image":  {
+                                       "src":  "ai-news/2026-09/images/openai-misalignment-framework.png",
+                                       "alt":  "OpenAI artwork reading Our framework for reporting model misalignment on a pink and purple background",
+                                       "caption":  "OpenAI’s feature artwork for its voluntary model-misalignment reporting framework. Source: OpenAI."
+                                   }
+                     },
+                     {
+                         "slug":  "limix-structured-data-model",
+                         "category":  "Research · Models",
+                         "sortDate":  "2026-09-16",
+                         "dateLabel":  "September 16, 2026",
+                         "title":  "LimiX-2 releases a 400-million-parameter model for the data that lives in tables",
+                         "summary":  "Stable AI and Tsinghua researchers introduce a model that predicts labels, estimates numbers, and fills missing entries without task-specific weight updates. Its weights and inference code are available under a non-commercial license.",
+                         "monthId":  "2026-09",
+                         "monthLabel":  "September 2026",
+                         "image":  {
+                                       "src":  "ai-news/2026-09/images/limix-architecture.png",
+                                       "alt":  "LimiX-2 architecture showing contextual data, masked entries, and feature and sample attention",
+                                       "caption":  "The LimiX team’s architecture diagram. Source: the official LimiX repository and LimiX-2 technical report."
+                                   }
+                     },
+                     {
+                         "slug":  "claude-cowork-docs-slides",
+                         "category":  "Products · AI Agents",
+                         "sortDate":  "2026-09-16",
+                         "dateLabel":  "September 16, 2026",
+                         "title":  "Claude drops the Chat–Cowork split and adds Docs and Slides",
+                         "summary":  "Anthropic is putting conversation, longer-running tasks, documents, and presentations in the same workspace. The merged experience starts rolling out to Pro and Max users, while the new creation tools arrive in beta.",
+                         "monthId":  "2026-09",
+                         "monthLabel":  "September 2026",
+                         "image":  {
+                                       "src":  "ai-news/2026-09/images/claude-unified-workspace.svg",
+                                       "alt":  "Diagram showing a Claude conversation connected to Docs, Slides, and Design",
+                                       "caption":  "Editorial diagram of the capabilities announced on September 16. Based on Anthropic’s launch announcement and help documentation; not a product screenshot."
+                                   }
+                     },
+                     {
+                         "slug":  "claude-small-business",
+                         "category":  "AI Applications · Small Business",
+                         "sortDate":  "2026-09-16",
+                         "dateLabel":  "September 16, 2026",
+                         "title":  "Claude expands its small-business toolkit to 43 workflows",
+                         "summary":  "Claude’s small-business job list now includes chasing invoices, planning stock orders, finding customers and preparing advertising changes.",
+                         "monthId":  "2026-09",
+                         "monthLabel":  "September 2026",
+                         "image":  {
+                                       "src":  "ai-news/2026-09/images/claude-small-business-workflows.svg",
+                                       "alt":  "Four documented small business workflows",
+                                       "caption":  "Editorial diagram of four documented Claude small-business workflows, based on Claude’s official guides; not a product screenshot."
+                                   }
+                     },
+                     {
+                         "slug":  "apxinf-robot-runtime",
+                         "category":  "Robotics · Open Source",
+                         "sortDate":  "2026-09-15",
+                         "dateLabel":  "September 15, 2026",
+                         "title":  "APXInf puts robot inference on the clock: π0.5 at 41 milliseconds on Thor",
+                         "summary":  "Infinigence, Tsinghua, and Shanghai Jiao Tong introduce an edge runtime that packages model execution and the steps needed to connect it to a robot.",
+                         "monthId":  "2026-09",
+                         "monthLabel":  "September 2026",
+                         "image":  {
+                                       "src":  "ai-news/2026-09/images/apxinf-logo.png",
+                                       "alt":  "APXInf project logo",
+                                       "caption":  "APXInf project logo. Source: official project repository."
+                                   }
+                     },
+                     {
+                         "slug":  "modalens-xray-swap",
+                         "category":  "Frontier Research · Medical AI",
+                         "sortDate":  "2026-09-14",
+                         "dateLabel":  "September 14, 2026",
+                         "title":  "The X-ray was swapped. Why did the AI stick with its answer?",
+                         "summary":  "ModaLens holds the question and report fixed while changing the image. Removing the report makes the model substantially more likely to change its answer.",
+                         "monthId":  "2026-09",
+                         "monthLabel":  "September 2026",
+                         "image":  {
+                                       "src":  "ai-news/2026-09/images/modalens-paper-excerpt.png",
+                                       "alt":  "Excerpt from the ModaLens paper describing the image-swap analysis",
+                                       "caption":  "Excerpt from ModaLens section 4.1, reflowed from the paper\u0027s HTML. Cajas Ordóñez et al., CC BY 4.0."
+                                   }
+                     },
+                     {
+                         "slug":  "claude-financial-advisors",
+                         "category":  "AI Applications · Financial Services",
+                         "sortDate":  "2026-09-14",
+                         "dateLabel":  "September 14, 2026",
+                         "title":  "Claude gets another job: gathering the files for financial advisors",
+                         "summary":  "Schwab, BlackRock, and other partners connect client records and investment information to a new bundle of advisor tools, from meeting briefs to follow-up drafts.",
+                         "monthId":  "2026-09",
+                         "monthLabel":  "September 2026",
+                         "image":  {
+                                       "src":  "ai-news/2026-09/images/claude-financial-advisors.jpg",
+                                       "alt":  "Official Claude for Financial Advisors announcement artwork",
+                                       "caption":  "Official Claude for Financial Advisors announcement artwork. Source: Anthropic."
+                                   }
+                     },
+                     {
+                         "slug":  "weekly-ai-september-07-13",
+                         "category":  "AI Weekly · September 7–13",
+                         "sortDate":  "2026-09-13",
+                         "dateLabel":  "September 7–13, 2026",
+                         "title":  "AI Weekly: DeepSeek\u0027s new architecture, OpenAI\u0027s talking API, and Z.AI\u0027s HK$39 billion plan",
+                         "summary":  "A week of model releases, voice tools, coding agents, music deals, and major financing — plus a 7B research team opening its training recipe.",
+                         "monthId":  "2026-09",
+                         "monthLabel":  "September 2026",
+                         "image":  {
+                                       "src":  "ai-news/2026-09/images/deepseek-architecture.png",
+                                       "alt":  "DeepSeek chart comparing KV cache sizes across model generations",
+                                       "caption":  "DeepSeek\u0027s published comparison of KV cache sizes across model generations. Source: DeepSeek."
+                                   }
+                     }
+                 ]
+}

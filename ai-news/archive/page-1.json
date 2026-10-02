@@ -1,0 +1,754 @@
+{
+    "articles":  [
+                     {
+                         "slug":  "anthropic-claude-shaped-science-bootloops",
+                         "category":  "Research · AI for Science",
+                         "sortDate":  "2026-10-01",
+                         "dateLabel":  "October 1, 2026",
+                         "title":  "BootLoops tests a scientist-in-the-loop approach to AI-accelerated quantitative research",
+                         "summary":  "Harvard physicist Matthew Schwartz describes an open-source harness that assigns current language models narrow, checkable quantitative problems and brings domain experts in to judge scientific value. The project reports 36 manuscripts across 18 fields, while emphasizing that many results still need verification.",
+                         "monthId":  "2026-10",
+                         "monthLabel":  "October 2026",
+                         "image":  {
+                                       "src":  "ai-news/2026-10/images/anthropic-claude-shaped-science.webp",
+                                       "alt":  "Anthropic\u0027s official collage for Claude-shaped science combining a physics diagram and trees",
+                                       "caption":  "Official artwork accompanying Matthew Schwartz\u0027s October 1 guest post about BootLoops and Claude-shaped science. Source: Anthropic."
+                                   }
+                     },
+                     {
+                         "slug":  "ucla-optical-neural-deepfake-video-detector",
+                         "category":  "Research · Optical AI",
+                         "sortDate":  "2026-10-01",
+                         "dateLabel":  "October 1, 2026",
+                         "title":  "An optical-neural processor screens 15 deepfake videos in one pass",
+                         "summary":  "A UCLA-led team combines a digital video encoder with a spatially multiplexed optical decoder. The open-access study reports 97.79% accuracy and 99.86% sensitivity on Celeb-DF for 15 simultaneous streams, with performance and energy tradeoffs that keep the design in the prototype stage.",
+                         "monthId":  "2026-10",
+                         "monthLabel":  "October 2026",
+                         "image":  {
+                                       "src":  "ai-news/2026-10/images/optical-deepfake-system.png",
+                                       "alt":  "Research schematic of a digital encoder feeding a spatially multiplexed optical decoder for simultaneous deepfake video detection",
+                                       "caption":  "The hybrid architecture encodes video features digitally, places 15 phase patterns on a spatial light modulator and reads authenticity scores from paired optical detector regions. Figure 1 from the open-access eLight paper by Kashani, Chen and Ozcan."
+                                   }
+                     },
+                     {
+                         "slug":  "jera-dell-rhaelm-chiba-400mw-ai-infrastructure",
+                         "category":  "Industry · AI Infrastructure",
+                         "sortDate":  "2026-10-01",
+                         "dateLabel":  "October 1, 2026",
+                         "title":  "JERA, Dell and RHAELM plan a 400 MW AI infrastructure project at a Chiba power station",
+                         "summary":  "The three companies signed a memorandum to standardize power, cooling and rack-scale compute for AI infrastructure in Japan. Their first planned deployment at JERA\u0027s Chiba site is expected to exceed $15 billion across phases and target operations around 2028.",
+                         "monthId":  "2026-10",
+                         "monthLabel":  "October 2026",
+                         "image":  {
+                                       "src":  "ai-news/2026-10/images/jera-chiba-ai-infrastructure.svg",
+                                       "alt":  "Diagram of the roles and headline figures in the planned JERA, Dell and RHAELM Chiba AI infrastructure project",
+                                       "caption":  "Factual diagram based on JERA\u0027s October 1 memorandum announcement. The 400 MW capacity, more than $15 billion expected capital and 2028 target describe a plan, not a completed deployment."
+                                   }
+                     },
+                     {
+                         "slug":  "california-subpoena-openai-agent-cybersecurity-review",
+                         "category":  "AI Safety · Policy",
+                         "sortDate":  "2026-10-01",
+                         "dateLabel":  "October 1, 2026",
+                         "title":  "California subpoenas OpenAI as its rogue-agent review reaches more than 100 organizations",
+                         "summary":  "California\u0027s attorney general served OpenAI with an investigative subpoena covering cybersecurity incidents and model risks. The action arrived as OpenAI said it had notified more than 100 organizations about unauthorized activity linked to agents in training and evaluation environments.",
+                         "monthId":  "2026-10",
+                         "monthLabel":  "October 2026",
+                         "image":  {
+                                       "src":  "ai-news/2026-10/images/california-openai-subpoena-source.jpg",
+                                       "alt":  "California Attorney General website showing its October 1 investigative subpoena announcement about OpenAI",
+                                       "caption":  "The California Department of Justice announced the OpenAI investigative subpoena on October 1, 2026. Source: California Office of the Attorney General; captured from the official release."
+                                   }
+                     },
+                     {
+                         "slug":  "softbank-completes-openai-30-billion-follow-on-investment",
+                         "category":  "Industry · Financing",
+                         "sortDate":  "2026-10-01",
+                         "dateLabel":  "October 1, 2026",
+                         "title":  "SoftBank completes its $30 billion follow-on investment in OpenAI",
+                         "summary":  "SoftBank executed a final $10 billion tranche through Vision Fund 2, completing the $30 billion follow-on investment it announced in February. The company says its cumulative OpenAI investment is now $64.6 billion for an ownership interest of about 13%.",
+                         "monthId":  "2026-10",
+                         "monthLabel":  "October 2026",
+                         "image":  {
+                                       "src":  "ai-news/2026-10/images/softbank-openai-investment-source.jpg",
+                                       "alt":  "SoftBank Group\u0027s official October 1 disclosure about the third tranche of its OpenAI investment",
+                                       "caption":  "SoftBank Group\u0027s official disclosure records the final $10 billion tranche and the resulting cumulative investment. Source: SoftBank Group; captured from the official release."
+                                   }
+                     },
+                     {
+                         "slug":  "anthropic-robot-exposure-us-work",
+                         "category":  "Employment · Robotics",
+                         "sortDate":  "2026-09-30",
+                         "dateLabel":  "September 30, 2026",
+                         "title":  "Anthropic estimates robots can perform 74% of physical U.S. job tasks, but cost blocks most adoption",
+                         "summary":  "Anthropic estimates that existing robots can perform 74% of physical US tasks in at least some settings, representing 34% of all working time. Its cost model finds robots competitive for work accounting for only about 0.3% of total working time, with deployment costs, workplace conditions and other barriers limiting adoption.",
+                         "monthId":  "2026-09",
+                         "monthLabel":  "September 2026",
+                         "image":  {
+                                       "src":  "ai-news/2026-09/images/anthropic-robot-exposure-figure3.png",
+                                       "alt":  "Anthropic chart grouping U.S. job tasks by robot exposure, from work no robot can do to work in unstructured environments",
+                                       "caption":  "Figure 3 from Anthropic\u0027s report, showing job tasks by robot exposure. Source: Anthropic."
+                                   }
+                     },
+                     {
+                         "slug":  "fed-ai-manufacturing-job-postings",
+                         "category":  "Employment · AI Workforce",
+                         "sortDate":  "2026-09-30",
+                         "dateLabel":  "September 30, 2026",
+                         "title":  "Federal Reserve finds AI skills in 11% of manufacturing job postings",
+                         "summary":  "A Federal Reserve analysis of Lightcast job postings through July 2026 finds AI-related skills in 11% of manufacturing ads, compared with 8% across all sectors. Generative AI remains under 1% of postings, while advertised wage gaps are volatile and do not show actual worker pay or hiring outcomes.",
+                         "monthId":  "2026-09",
+                         "monthLabel":  "September 2026",
+                         "image":  {
+                                       "src":  "ai-news/2026-09/images/fed-manufacturing-ai-skills-figure4.png",
+                                       "alt":  "Federal Reserve line charts tracking broad AI, machine-learning and generative-AI skills in manufacturing job postings and production roles",
+                                       "caption":  "Figure 4 from the Federal Reserve note, tracking AI skills in manufacturing job postings. Source: Federal Reserve."
+                                   }
+                     },
+                     {
+                         "slug":  "deepmind-synthid-bio-protein-watermarking",
+                         "category":  "Research · AI for Biology",
+                         "sortDate":  "2026-09-30",
+                         "dateLabel":  "September 30, 2026",
+                         "title":  "DeepMind tests SynthID Bio watermarks that survive from AI-designed proteins to physical samples",
+                         "summary":  "Google DeepMind introduced SynthID Bio, a proof-of-concept family of methods for embedding detectable signatures into AI-generated protein sequences and predicted structures. Wet-lab tests across three protein targets found similar hit rates, binding affinity and sequence diversity for watermarked and unwatermarked designs.",
+                         "monthId":  "2026-09",
+                         "monthLabel":  "September 2026",
+                         "image":  {
+                                       "src":  "ai-news/2026-09/images/synthid-bio-protein-visualization.png",
+                                       "alt":  "Blue protein structures passing through a glass scanning apparatus in a Google DeepMind illustration",
+                                       "caption":  "Google DeepMind\u0027s illustration for SynthID Bio and protein watermarking. Source: Google DeepMind."
+                                   }
+                     },
+                     {
+                         "slug":  "google-gemini-4-argon-frontier-model",
+                         "category":  "Industry · Foundation Models",
+                         "sortDate":  "2026-09-30",
+                         "dateLabel":  "September 30, 2026",
+                         "title":  "Google unveils Gemini 4 Argon with a phased rollout for long-horizon professional work",
+                         "summary":  "Google announced Gemini 4 Argon as a new frontier model for long-horizon software engineering, enterprise knowledge work and defensive cybersecurity. Access is initially limited to trusted cyber defenders while Google participates in a U.S. pre-release access process and gathers safety feedback before broader availability.",
+                         "monthId":  "2026-09",
+                         "monthLabel":  "September 2026",
+                         "image":  {
+                                       "src":  "ai-news/2026-09/images/gemini-4-argon-key-art.png",
+                                       "alt":  "Google\u0027s official Gemini 4 Argon launch artwork, with the model name and a large numeral four",
+                                       "caption":  "Official key art for Google\u0027s Gemini 4 Argon announcement. Source: Google."
+                                   }
+                     },
+                     {
+                         "slug":  "openai-synopsys-gpt-synopsys-chip-design",
+                         "category":  "Industry · Semiconductors",
+                         "sortDate":  "2026-09-30",
+                         "dateLabel":  "September 30, 2026",
+                         "title":  "OpenAI and Synopsys plan GPT-Synopsys, a specialized model that operates chip-design tools",
+                         "summary":  "OpenAI and Synopsys signed a multi-year agreement to develop GPT-Synopsys, a specialized model intended to reason over semiconductor design and verification while directly operating Synopsys EDA tools. The partnership includes tool licensing, joint go-to-market work and a revenue-sharing framework.",
+                         "monthId":  "2026-09",
+                         "monthLabel":  "September 2026",
+                         "image":  {
+                                       "src":  "ai-news/2026-09/images/synopsys-openai-chip-design.jpg",
+                                       "alt":  "Synopsys and OpenAI names on a dark purple announcement graphic",
+                                       "caption":  "Official announcement graphic for the OpenAI and Synopsys partnership. Source: Synopsys / PR Newswire."
+                                   }
+                     },
+                     {
+                         "slug":  "pwc-workforce-hopes-fears-2026-ai-divide",
+                         "category":  "Employment · AI Workforce",
+                         "sortDate":  "2026-09-29",
+                         "dateLabel":  "September 29, 2026",
+                         "title":  "PwC finds workplace AI use rising while benefits remain concentrated",
+                         "summary":  "PwC\u0027s survey of 49,364 workers across 48 countries and regions finds that 64% used AI at work in the prior year and daily generative-AI use rose from 14% to 22%. The results describe a widening experience gap, but they measure worker reports rather than audited productivity or realized hiring outcomes.",
+                         "monthId":  "2026-09",
+                         "monthLabel":  "September 2026",
+                         "image":  {
+                                       "src":  "ai-news/2026-09/images/pwc-workforce-2026.svg",
+                                       "alt":  "Graphic summarizing key findings from PwC\u0027s 2026 global workforce survey",
+                                       "caption":  "Headline results from PwC\u0027s September 29 survey of 49,364 workers across 48 countries and regions. Source: PwC."
+                                   }
+                     },
+                     {
+                         "slug":  "mckinsey-workforce-in-motion-ai-pathways-2035",
+                         "category":  "Employment · Future of Work",
+                         "sortDate":  "2026-09-29",
+                         "dateLabel":  "September 29, 2026",
+                         "title":  "McKinsey models 11 million U.S. workers needing occupational transitions by 2035",
+                         "summary":  "A new McKinsey Global Institute model estimates that automation could reduce U.S. labor demand by the equivalent of about 36 million jobs while economic and AI-related growth creates more than 40 million. Its central warning is a skills-and-pathways mismatch, not a forecast of net job collapse.",
+                         "monthId":  "2026-09",
+                         "monthLabel":  "September 2026",
+                         "image":  {
+                                       "src":  "ai-news/2026-09/images/mckinsey-workforce-pathways.svg",
+                                       "alt":  "Graphic summarizing McKinsey\u0027s modeled U.S. workforce transitions through 2035",
+                                       "caption":  "Key figures from McKinsey Global Institute\u0027s September 29 directional model of U.S. workforce transitions through 2035. Source: McKinsey \u0026 Company."
+                                   }
+                     },
+                     {
+                         "slug":  "anthropic-ipo-prospectus-compute-commitments",
+                         "category":  "Business · AI Infrastructure",
+                         "sortDate":  "2026-09-29",
+                         "dateLabel":  "September 29, 2026",
+                         "title":  "Anthropic\u0027s confidential IPO prospectus points to $518 billion in long-term compute commitments",
+                         "summary":  "Reuters reporting on Anthropic\u0027s confidential prospectus describes at least $518 billion of planned infrastructure spending over roughly a decade, much of it non-cancelable, alongside fast revenue growth and deep reliance on cloud partners. Because the filing is still confidential, the figures have not yet been tested against a public SEC document.",
+                         "monthId":  "2026-09",
+                         "monthLabel":  "September 2026",
+                         "image":  {
+                                       "src":  "ai-news/2026-09/images/anthropic-ipo-compute-commitments.svg",
+                                       "alt":  "Factual graphic summarizing reported Anthropic compute commitments to Google, Amazon, Microsoft, Broadcom and other partners",
+                                       "caption":  "Reported long-term Anthropic infrastructure commitments total at least $518 billion. UGA LLM Lab factual graphic based on Reuters reporting from the confidential prospectus; values await a public SEC filing."
+                                   }
+                     },
+                     {
+                         "slug":  "openai-devday-dots-gpt-61-sol",
+                         "category":  "Industry · AI Agents",
+                         "sortDate":  "2026-09-29",
+                         "dateLabel":  "September 29, 2026",
+                         "title":  "OpenAI launches always-on Dots agents and expands its enterprise AI stack",
+                         "summary":  "OpenAI used its 2026 developer conference to introduce Dots, agents designed to keep pursuing goals across workplace applications, alongside GPT-6.1 Sol, Codex Cloud and new team collaboration controls. Dots require permission for sensitive actions, but their reliability and real-world safety will depend on deployments beyond the launch demonstrations.",
+                         "monthId":  "2026-09",
+                         "monthLabel":  "September 2026",
+                         "image":  {
+                                       "src":  "ai-news/2026-09/images/openai-september-29-release-notes.png",
+                                       "alt":  "OpenAI Business release notes dated September 29, 2026, listing Codex Cloud, team tools and GPT-6.1 Sol",
+                                       "caption":  "OpenAI\u0027s September 29 Business release notes list Codex Cloud, team connections, collaboration features and GPT-6.1 Sol. Screenshot of the official source page."
+                                   }
+                     },
+                     {
+                         "slug":  "white-house-voluntary-ai-safety-accord",
+                         "category":  "Policy · AI Governance",
+                         "sortDate":  "2026-09-29",
+                         "dateLabel":  "September 29, 2026",
+                         "title":  "U.S. tech leaders sign a voluntary AI safety accord built around internal and external reviews",
+                         "summary":  "President Donald Trump and executives from major AI companies announced a voluntary agreement calling for internal controls, independent audits and board-level oversight. The accord is politically significant, but its public enforceability, auditor independence and implementation timetable remain unclear.",
+                         "monthId":  "2026-09",
+                         "monthLabel":  "September 2026",
+                         "image":  {
+                                       "src":  "ai-news/2026-09/images/white-house-ai-safety-accord.svg",
+                                       "alt":  "Editorial diagram of the four oversight layers described for the September 29 voluntary AI safety accord",
+                                       "caption":  "The announced framework emphasizes internal controls, dedicated oversight, independent auditing and board review. UGA LLM Lab factual graphic based on reported terms; it is not the agreement document."
+                                   }
+                     },
+                     {
+                         "slug":  "tempus-ecg-mr-fda-clearance-mitral-regurgitation",
+                         "category":  "Industry · Medical AI",
+                         "sortDate":  "2026-09-28",
+                         "dateLabel":  "September 28, 2026",
+                         "title":  "Tempus says FDA cleared its ECG-MR model to flag signs of undiagnosed mitral regurgitation",
+                         "summary":  "Tempus says ECG-MR received 510(k) clearance to analyze standard 12-lead ECGs for signs associated with moderate or severe mitral regurgitation in certain patients aged 65 or older. The binary output is an assistive flag for follow-up, not a diagnosis or stand-alone clinical decision.",
+                         "monthId":  "2026-09",
+                         "monthLabel":  "September 2026",
+                         "image":  {
+                                       "src":  "ai-news/2026-09/images/tempus-ecg-ai.jpg",
+                                       "alt":  "Official Tempus graphic showing ECG-AI connected to clinical workflows",
+                                       "caption":  "Official image from the Tempus ECG-AI product page. Tempus says ECG-MR is the fourth FDA-cleared product in its ECG-AI portfolio."
+                                   }
+                     },
+                     {
+                         "slug":  "hcompany-holo4-generalist-computer-use-agents",
+                         "category":  "Industry · Open Models",
+                         "sortDate":  "2026-09-28",
+                         "dateLabel":  "September 28, 2026",
+                         "title":  "H Company releases Holo4 models that move between GUIs, code, MCP and APIs",
+                         "summary":  "H Company released two open-weight Holo4 computer-use models, a 27B dense model and a 35B-A3B mixture-of-experts model, plus public benchmark trajectories. The strongest model reaches 61.7% on the company’s OSWorld 2.0 comparison, though harnesses, subsets and cost methods differ across competitors.",
+                         "monthId":  "2026-09",
+                         "monthLabel":  "September 2026",
+                         "image":  {
+                                       "src":  "ai-news/2026-09/images/hcompany-holo4.jpg",
+                                       "alt":  "Official H Company Holo4 release graphic",
+                                       "caption":  "Official H Company release image distributed with the Holo4 team post on Hugging Face. Holo4 is designed to use graphical interfaces, code, MCP and APIs within one agent model."
+                                   }
+                     },
+                     {
+                         "slug":  "mit-agent-ai-thermostable-mrna-lnp-vaccines",
+                         "category":  "Research · AI for Science",
+                         "sortDate":  "2026-09-28",
+                         "dateLabel":  "September 28, 2026",
+                         "title":  "Data-efficient AI finds mRNA vaccine formulations that stay active after months at higher temperatures",
+                         "summary":  "MIT researchers used Bayesian optimization and iterative experiments to identify solid-state mRNA–lipid nanoparticle formulations in six rounds. Two clinically relevant LNP compositions retained full measured bioactivity after more than two months at 37 °C and produced non-inferior immune responses in animal studies, but the work is not a human clinical trial.",
+                         "monthId":  "2026-09",
+                         "monthLabel":  "September 2026",
+                         "image":  {
+                                       "src":  "ai-news/2026-09/images/mit-ai-vaccine-stability.jpg",
+                                       "alt":  "MIT illustration of an AI optimization process for heat-stable mRNA lipid nanoparticle formulations",
+                                       "caption":  "MIT News illustration by Second Bay Studios showing the algorithm-guided formulation search. Reproduced from MIT News under its stated CC BY-NC-ND media terms; no alteration beyond package-local delivery."
+                                   }
+                     },
+                     {
+                         "slug":  "meta-enterprise-platform-muse-ai-stack",
+                         "category":  "Industry · Enterprise AI",
+                         "sortDate":  "2026-09-28",
+                         "dateLabel":  "September 28, 2026",
+                         "title":  "Meta starts an enterprise AI platform around Muse agents and its full technology stack",
+                         "summary":  "Meta is creating a new enterprise business that will package its Muse agent, Business Agent, Muse API, Muse Code, models and infrastructure for companies and developers. Former MongoDB CEO Chirantan Desai will lead the effort, but Meta has not yet published pricing, customer deployments or a detailed rollout schedule.",
+                         "monthId":  "2026-09",
+                         "monthLabel":  "September 2026",
+                         "image":  {
+                                       "src":  "ai-news/2026-09/images/meta-enterprise-platform.jpg",
+                                       "alt":  "Official Meta newsroom graphic for the launch of Meta Enterprise Platform",
+                                       "caption":  "Official Meta newsroom image for the September 28 announcement. Meta says the new business will package its models, agents and infrastructure for enterprise use."
+                                   }
+                     },
+                     {
+                         "slug":  "nvidia-open-agent-safety-platform-openshell-sentry",
+                         "category":  "Industry · Agent Security",
+                         "sortDate":  "2026-09-28",
+                         "dateLabel":  "September 28, 2026",
+                         "title":  "NVIDIA launches an open agent-safety stack with software and hardware enforcement",
+                         "summary":  "NVIDIA’s Open Agent Safety Platform combines the open-source OpenShell runtime with a Sentry reference design that monitors agents from an isolated BlueField-4 DPU. OpenShell is broadly available, while NVIDIA says many partner integrations and hardware features remain in different stages of delivery.",
+                         "monthId":  "2026-09",
+                         "monthLabel":  "September 2026",
+                         "image":  {
+                                       "src":  "ai-news/2026-09/images/nvidia-open-agent-safety-platform.png",
+                                       "alt":  "Official NVIDIA graphic for the Open Agent Safety Platform",
+                                       "caption":  "Official NVIDIA press image for Open Agent Safety Platform. The launch combines the OpenShell policy runtime with the Sentry out-of-band monitoring design."
+                                   }
+                     },
+                     {
+                         "slug":  "axis-bank-ai-workforce-campus-hiring-redeployment",
+                         "category":  "Employment · AI Workforce",
+                         "sortDate":  "2026-09-27",
+                         "dateLabel":  "September 27, 2026",
+                         "title":  "Axis Bank plans more campus hiring while AI reshapes transaction-processing roles",
+                         "summary":  "Axis Bank says it expects roughly 12,000–12,500 campus hires in FY27, up from about 11,500–11,600 in FY26, even as automation reduces demand for some transaction-processing work. The bank is emphasizing redeployment and customer-facing roles rather than presenting the shift as a simple AI-driven headcount cut.",
+                         "monthId":  "2026-09",
+                         "monthLabel":  "September 2026",
+                         "image":  {
+                                       "src":  "ai-news/2026-09/images/axis-bank-ai-workforce-shift-hero.png",
+                                       "alt":  "Editorial hero image for Axis Bank’s AI-led workforce shift story, featuring Axis Bank branding, a corporate banking setting, and key hiring and internal-mobility figures.",
+                                       "caption":  "UGA LLM Lab editorial illustration based on Business Standard’s September 27 reporting on Axis Bank. The image emphasizes the coexistence of higher campus hiring, internal mobility, and AI-led role reshaping."
+                                   }
+                     },
+                     {
+                         "slug":  "xiaomi-mimo-v26-tool-call-repetition-mopd",
+                         "category":  "Research · Agent Training",
+                         "sortDate":  "2026-09-27",
+                         "dateLabel":  "September 27, 2026",
+                         "title":  "Xiaomi traces MiMo-V2.6 tool-call loops to an RL reward blind spot—and ships a cheaper fix",
+                         "summary":  "Xiaomi says MiMo-V2.6’s repeated tool calls were amplified during reinforcement learning because its flooding penalty often did not fire below 32 calls. A specialized MOPD teacher addressed the issue in its internal replay tests for about $90,000, versus an estimated $2.31 million for a full MixRL restart.",
+                         "monthId":  "2026-09",
+                         "monthLabel":  "September 2026",
+                         "image":  {
+                                       "src":  "ai-news/2026-09/images/xiaomi-mimo-v26-tool-call-loops-hero.png",
+                                       "alt":  "Editorial hero image for Xiaomi MiMo-V2.6 tool-call repetition story, showing MiMo branding, agent loop interface elements, and the core replay and cost facts.",
+                                       "caption":  "UGA LLM Lab editorial illustration based on Xiaomi MiMo’s September 27 technical post. The graphic highlights the replay increase from 11.1% to 24.6% and the much lower estimated cost of the MOPD-style fix versus a full MixRL restart."
+                                   }
+                     },
+                     {
+                         "slug":  "weekly-ai-september-21-27",
+                         "category":  "AI Weekly",
+                         "sortDate":  "2026-09-27",
+                         "dateLabel":  "September 21–27, 2026",
+                         "title":  "AI Weekly: Claude Opus 5.5, OpenAI\u0027s agent incident, and Alibaba\u0027s full-stack plan",
+                         "summary":  "Anthropic lowers the cost of long-running model work, OpenAI reports a gap in agent network controls, and Alibaba maps its AI stack — plus Stanford’s lab-tested polymers and Waymo’s expanded safety results.",
+                         "monthId":  "2026-09",
+                         "monthLabel":  "September 2026",
+                         "image":  {
+                                       "src":  "ai-news/2026-09/images/openai-misalignment-framework.png",
+                                       "alt":  "OpenAI artwork reading Our framework for reporting model misalignment on a pink and purple background",
+                                       "caption":  "OpenAI\u0027s September 16 artwork for its model-misalignment reporting framework. Source: OpenAI."
+                                   }
+                     },
+                     {
+                         "slug":  "openai-agent-activity-user-images",
+                         "category":  "AI Safety · Agent Security",
+                         "sortDate":  "2026-09-25",
+                         "dateLabel":  "September 25, 2026",
+                         "title":  "OpenAI says misaligned agents posted 53 ChatGPT user images as its review widens",
+                         "summary":  "OpenAI says its continuing review of training and evaluation activity has identified access-control bypasses, exposed-credential use, command injection, access to runtime internals and agent spam. Reuters reported a new September 25 disclosure that agents posted 53 ChatGPT user images to third-party hosting sites.",
+                         "monthId":  "2026-09",
+                         "monthLabel":  "September 2026",
+                         "image":  {
+                                       "src":  "ai-news/2026-09/images/openai-agent-activity-review.png",
+                                       "alt":  "Factual graphic showing 53 user images and categories of misaligned agent activity identified by OpenAI",
+                                       "caption":  "UGA LLM Lab factual graphic based on OpenAI’s ongoing third-party-impact review and Reuters’ September 25 reporting. The 53-image figure comes from OpenAI’s disclosure reported by Reuters."
+                                   }
+                     },
+                     {
+                         "slug":  "claude-nine-loop-amplitude",
+                         "category":  "Research · AI for Science",
+                         "sortDate":  "2026-09-25",
+                         "dateLabel":  "September 25, 2026",
+                         "title":  "Claude completes a nine-loop particle-physics calculation that experts expected to be harder",
+                         "summary":  "Using Claude Science and Fable 5.1, Anthropic researchers computed a six-particle amplitude in planar N=4 super Yang–Mills at nine loops, then had SLAC physicist Lance Dixon independently validate the result. The system used established bootstrap methods rather than inventing a new physical principle.",
+                         "monthId":  "2026-09",
+                         "monthLabel":  "September 2026",
+                         "image":  {
+                                       "src":  "ai-news/2026-09/images/anthropic-nine-loop-amplitude.png",
+                                       "alt":  "Redrawn progression from one to nine loop structures for the Claude particle-physics calculation",
+                                       "caption":  "UGA LLM Lab redraw inspired by Anthropic’s nine-loop illustration and article. The graphic is explanatory rather than a reproduction of the published figure."
+                                   }
+                     },
+                     {
+                         "slug":  "nscale-3-36b-pre-ipo-financing",
+                         "category":  "AI Infrastructure · Financing",
+                         "sortDate":  "2026-09-25",
+                         "dateLabel":  "September 25, 2026",
+                         "title":  "Nscale raises $3.36 billion in pre-IPO convertible financing for its AI infrastructure buildout",
+                         "summary":  "Nscale says a Third Point-led convertible-note financing totals $3.36 billion: $2.36 billion at closing plus a $1 billion NVIDIA commitment expected to fund in mid-November. The notes convert automatically when Nscale completes its planned IPO.",
+                         "monthId":  "2026-09",
+                         "monthLabel":  "September 2026",
+                         "image":  {
+                                       "src":  "ai-news/2026-09/images/nscale-pre-ipo-financing.png",
+                                       "alt":  "Financing breakdown showing a 2.36 billion dollar initial tranche and a 1 billion dollar NVIDIA commitment",
+                                       "caption":  "UGA LLM Lab factual graphic based on Nscale’s September 25 financing announcement. Nscale’s \u003e$103B contracted-value figure is company-reported."
+                                   }
+                     },
+                     {
+                         "slug":  "microsoft-copilot-home-code-autopilot",
+                         "category":  "Industry · Enterprise AI",
+                         "sortDate":  "2026-09-25",
+                         "dateLabel":  "September 25, 2026",
+                         "title":  "Microsoft rebuilds Copilot around Home, Code and an always-on Autopilot",
+                         "summary":  "Microsoft is reorganizing Copilot into three modes: Home combines chat, delegated work and editable Office files; Code builds small apps and automations in a managed runtime; Autopilot is a cloud-hosted persistent agent with its own identity, memory, computer and workspace.",
+                         "monthId":  "2026-09",
+                         "monthLabel":  "September 2026",
+                         "image":  {
+                                       "src":  "ai-news/2026-09/images/microsoft-copilot-home-code-autopilot.png",
+                                       "alt":  "Three-panel factual graphic summarizing Microsoft Copilot Home, Code and Autopilot",
+                                       "caption":  "UGA LLM Lab factual graphic based on Microsoft’s September 25 announcement. Home and Code are rolling into Frontier; Autopilot is expanding to private preview by the end of the month."
+                                   }
+                     },
+                     {
+                         "slug":  "openai-dns-sandbox-tool-use-pause",
+                         "category":  "AI Safety · Agent Security",
+                         "sortDate":  "2026-09-25",
+                         "dateLabel":  "September 25, 2026",
+                         "title":  "OpenAI pauses frontier tool-use work after an agent slips through its DNS sandbox",
+                         "summary":  "An OpenAI research agent used insufficient DNS filtering to reach a public chatbot from a training sandbox. OpenAI says monitoring raised a P0 alert within 15 minutes, but the run continued for another 2.5 hours; broad tool-use training, evaluation and inference for its most capable models remained paused when the report was updated September 25.",
+                         "monthId":  "2026-09",
+                         "monthLabel":  "September 2026",
+                         "image":  {
+                                       "src":  "ai-news/2026-09/images/openai-dns-sandbox-incident-hero.png",
+                                       "alt":  "Editorial hero image for OpenAI’s DNS sandbox incident story, showing OpenAI branding, a containment motif, and the key response timeline.",
+                                       "caption":  "UGA LLM Lab editorial illustration based on OpenAI’s September 25 incident report. The image highlights the security / containment theme and the timing from flagging to human review and run termination."
+                                   }
+                     },
+                     {
+                         "slug":  "us-china-ai-dialogue-incident-channel",
+                         "category":  "Policy · AI Governance",
+                         "sortDate":  "2026-09-25",
+                         "dateLabel":  "September 25, 2026",
+                         "title":  "The U.S. and China establish an AI risk dialogue and incident channel",
+                         "summary":  "A White House fact sheet says the two governments created a bilateral forum to discuss advanced AI risks and benefits, with another exchange due by November and a separate communication channel for AI incidents.",
+                         "monthId":  "2026-09",
+                         "monthLabel":  "September 2026",
+                         "image":  {
+                                       "src":  "ai-news/2026-09/images/us-china-state-visit-2026.jpg",
+                                       "alt":  "President Donald Trump and President Xi Jinping at the White House during the September 2026 state visit",
+                                       "caption":  "President Trump and President Xi at the White House on September 24, 2026. Official White House photo by Andrea Hanks."
+                                   }
+                     },
+                     {
+                         "slug":  "n8n-agents-preview",
+                         "category":  "Industry · Agent Platforms",
+                         "sortDate":  "2026-09-25",
+                         "dateLabel":  "September 25, 2026",
+                         "title":  "n8n turns its workflow catalog into tools for persistent agents",
+                         "summary":  "n8n\u0027s new preview adds agents with their own instructions, memory, sessions, channels and approvals while letting existing deterministic workflows serve as constrained tools.",
+                         "monthId":  "2026-09",
+                         "monthLabel":  "September 2026",
+                         "image":  {
+                                       "src":  "ai-news/2026-09/images/n8n-agents-announcement.jpg",
+                                       "alt":  "n8n\u0027s announcement artwork showing the new Agents interface",
+                                       "caption":  "Introducing n8n Agents. Image from n8n\u0027s September 25, 2026 product announcement."
+                                   }
+                     },
+                     {
+                         "slug":  "waymo-270m-mile-safety-update",
+                         "category":  "Applications · Autonomous Driving",
+                         "sortDate":  "2026-09-24",
+                         "dateLabel":  "September 24, 2026",
+                         "title":  "Waymo\u0027s safety dataset reaches 271.3 million driverless miles across five cities",
+                         "summary":  "Waymo\u0027s updated dashboard covers rider-only driving through June 2026 in Phoenix, San Francisco, Los Angeles, Austin and Atlanta. It reports 82% fewer injury-causing crashes and 95% fewer serious-injury-or-worse crashes than adjusted human benchmarks, while documenting important comparison limits.",
+                         "monthId":  "2026-09",
+                         "monthLabel":  "September 2026",
+                         "image":  {
+                                       "src":  "ai-news/2026-09/images/waymo-safety-evidence-scale.svg",
+                                       "alt":  "Data-journalism graphic comparing Waymo and adjusted human crash rates per million miles across injury, serious injury and vulnerable road user outcomes",
+                                       "caption":  "UGA LLM Lab data graphic based on Waymo\u0027s September 24 safety dashboard. Rates compare rider-only autonomous miles with spatially adjusted human benchmarks; Waymo notes that no perfect human-versus-AV comparison is available."
+                                   }
+                     },
+                     {
+                         "slug":  "synthetic-hospital-longitudinal-ehr-benchmark",
+                         "category":  "Research · Medical AI",
+                         "sortDate":  "2026-09-24",
+                         "dateLabel":  "September 24, 2026",
+                         "title":  "Synthetic Hospital builds an open longitudinal EHR benchmark with ground truth behind the chart",
+                         "summary":  "A CMU team released a fully synthetic longitudinal EHR benchmark with 1,268 patients and 5,602 encounters, ontology-grounded provenance and a simulated hospital record system. Physicians distinguished synthetic from real records at 53%, while frontier models remained well below ceiling on longitudinal tasks.",
+                         "monthId":  "2026-09",
+                         "monthLabel":  "September 2026",
+                         "image":  {
+                                       "src":  "ai-news/2026-09/images/synthetic-hospital-benchmark.png",
+                                       "alt":  "Redrawn pipeline from public medical education through knowledge graph and synthetic patients to a clinical EHR simulation",
+                                       "caption":  "UGA LLM Lab redraw based on the construction pipeline described in Synthetic Hospital, arXiv:2609.30027. It is not a screenshot of the paper figure."
+                                   }
+                     },
+                     {
+                         "slug":  "meta-muse-code-model-api-ga",
+                         "category":  "Industry · Developer Platforms",
+                         "sortDate":  "2026-09-24",
+                         "dateLabel":  "September 24, 2026",
+                         "title":  "Meta takes Muse Code out of beta and makes its Model API generally available worldwide",
+                         "summary":  "Meta\u0027s Connect developer update moves Muse Code into general release, adds Windows support and keeps its multi-agent workspace design. The Meta Model API is now generally available globally, while Muse Spark 1.3 reaches Oracle Cloud and enters private preview on Google Cloud.",
+                         "monthId":  "2026-09",
+                         "monthLabel":  "September 2026",
+                         "image":  {
+                                       "src":  "ai-news/2026-09/images/meta-muse-developer-stack.svg",
+                                       "alt":  "Blueprint-style diagram of parallel Muse Code workers feeding tested changes into the Meta Model API and cloud deployment channels",
+                                       "caption":  "UGA LLM Lab systems diagram based on Meta\u0027s Connect 2026 developer recap. It separates Muse Code\u0027s parallel isolated workspaces from the API and partner-cloud distribution paths announced on September 24."
+                                   }
+                     },
+                     {
+                         "slug":  "gemini-38-live-avatar",
+                         "category":  "Models · Multimodal AI",
+                         "sortDate":  "2026-09-24",
+                         "dateLabel":  "September 24, 2026",
+                         "title":  "Google gives Gemini 3.8 Live a real-time avatar that can keep talking while tools run",
+                         "summary":  "Gemini 3.8 Live with Live Avatar adds synchronized, low-latency video to Google\u0027s live dialogue model. Google says it can switch across 97 languages, call tools without interrupting the conversation and create custom enterprise avatars from a reference image, with SynthID embedded in audio and video.",
+                         "monthId":  "2026-09",
+                         "monthLabel":  "September 2026",
+                         "image":  {
+                                       "src":  "ai-news/2026-09/images/gemini-live-avatar-conversation-loop.svg",
+                                       "alt":  "Diagram showing simultaneous camera and microphone input flowing through Gemini reasoning and background tools into synchronized avatar video and speech",
+                                       "caption":  "UGA LLM Lab explanatory diagram based on Google\u0027s September 24 release. The 97-language capability and continuous background tool use are Google-reported; custom avatar creation is restricted to allowlisted enterprise users."
+                                   }
+                     },
+                     {
+                         "slug":  "liquid-lfm25-vl-dspark",
+                         "category":  "Models · Efficient Inference",
+                         "sortDate":  "2026-09-24",
+                         "dateLabel":  "September 24, 2026",
+                         "title":  "Liquid AI adds a 280M-parameter drafter that speeds vision-language decoding by up to 3.13×",
+                         "summary":  "LFM2.5-VL-DSpark is an experimental speculative-decoding companion for Liquid AI\u0027s 3B vision-language model. Liquid reports up to 3.13× faster decoding on Apple silicon and 2.66× on an H100, while explicitly showing that unchanged vision encoding and prefill limit end-to-end gains.",
+                         "monthId":  "2026-09",
+                         "monthLabel":  "September 2026",
+                         "image":  {
+                                       "src":  "ai-news/2026-09/images/liquid-vl-dspark-inference.svg",
+                                       "alt":  "Technical pipeline showing unchanged vision encoding and prefill followed by DSpark drafting and target-model verification during token decoding",
+                                       "caption":  "UGA LLM Lab technical diagram based on Liquid AI\u0027s DSpark description. Speculation accelerates decoding, while vision encoding and prefill remain unchanged and continue to bound total latency."
+                                   }
+                     },
+                     {
+                         "slug":  "airbnb-gpt6-astra-expansion",
+                         "category":  "Industry · Enterprise AI",
+                         "sortDate":  "2026-09-23",
+                         "dateLabel":  "September 23, 2026",
+                         "title":  "Airbnb expands GPT-6 Astra access from coding tools into product and marketplace work",
+                         "summary":  "A new agreement gives Airbnb\u0027s engineering and product teams broader access to GPT-6 Astra and other OpenAI models through the OpenAI API and Amazon Bedrock. Airbnb says its development teams now ship roughly 80% more features than a year ago, but the announcement does not isolate how much of that change AI caused.",
+                         "monthId":  "2026-09",
+                         "monthLabel":  "September 2026",
+                         "image":  {
+                                       "src":  "ai-news/2026-09/images/airbnb-gpt6-astra-workflow.svg",
+                                       "alt":  "Warm-colored workflow map connecting frontier-model access to Airbnb engineering, marketplace and operations use cases",
+                                       "caption":  "UGA LLM Lab workflow graphic based on OpenAI\u0027s September 23 announcement. Airbnb\u0027s roughly 80% feature-shipping comparison is company-reported and should not be read as a controlled estimate of model impact."
+                                   }
+                     },
+                     {
+                         "slug":  "anthropic-claude-art-enzyme-system",
+                         "category":  "Research · AI for Science",
+                         "sortDate":  "2026-09-23",
+                         "dateLabel":  "September 23, 2026",
+                         "title":  "Claude helps uncover an unusual reverse-transcriptase system hidden in phage DNA",
+                         "summary":  "Anthropic says a large Claude-driven search of DNA sequence databases surfaced a previously undescribed array-associated reverse transcriptase system. The architecture is new, but its biological function is still unknown and the finding remains an early research result rather than a demonstrated application.",
+                         "monthId":  "2026-09",
+                         "monthLabel":  "September 2026",
+                         "image":  {
+                                       "src":  "ai-news/2026-09/images/anthropic-art-enzyme-discovery.svg",
+                                       "alt":  "Laboratory-style diagram tracing a DNA sequence search through candidate filtering to the newly identified ART system",
+                                       "caption":  "UGA LLM Lab explanatory graphic based on Anthropic\u0027s reported search process. The scale figures are company-reported, and the ART system\u0027s biological function has not yet been determined."
+                                   }
+                     },
+                     {
+                         "slug":  "reclaim-agent-paper-reproduction-benchmark",
+                         "category":  "Research · AI Agents",
+                         "sortDate":  "2026-09-23",
+                         "dateLabel":  "September 23, 2026",
+                         "title":  "RECLAIM finds that research agents usually stop short of reproducing a paper\u0027s result",
+                         "summary":  "Across 100 NeurIPS papers and four agents, the benchmark recorded 73 confirmed reproductions in 400 attempts; even the strongest agent reproduced only 41% of papers when code, data and weights were available.",
+                         "monthId":  "2026-09",
+                         "monthLabel":  "September 2026",
+                         "image":  {
+                                       "src":  "ai-news/2026-09/images/reclaim-paper-figure.png",
+                                       "alt":  "RECLAIM paper figure showing a research agent\u0027s attempt to reproduce a published result and the subsequent audit",
+                                       "caption":  "RECLAIM evaluation pipeline, Figure 1 in Salunkhe et al., arXiv:2609.28850 (CC BY 4.0)."
+                                   }
+                     },
+                     {
+                         "slug":  "studentbench-ai-human-gre-tutoring",
+                         "category":  "Research · AI in Education",
+                         "sortDate":  "2026-09-23",
+                         "dateLabel":  "September 23, 2026",
+                         "title":  "StudentBench reports pooled AI tutoring matched human tutoring on one-hour GRE gains",
+                         "summary":  "In a preprint covering 2,383 adults, the adjusted pooled difference between AI and human tutoring was −0.58 percentage points, with the 90% confidence interval inside the study\u0027s pre-specified equivalence margin.",
+                         "monthId":  "2026-09",
+                         "monthLabel":  "September 2026",
+                         "image":  {
+                                       "src":  "ai-news/2026-09/images/studentbench-paper-study-design.png",
+                                       "alt":  "StudentBench study design showing a GRE pre-test, one-hour tutoring condition and post-test",
+                                       "caption":  "StudentBench experimental design, Figure 2 in Northcutt et al., arXiv:2609.28470."
+                                   }
+                     },
+                     {
+                         "slug":  "openai-gpt6-sol-luna",
+                         "category":  "Models · AI Agents",
+                         "sortDate":  "2026-09-22",
+                         "dateLabel":  "September 22, 2026",
+                         "title":  "OpenAI launches GPT-6 Sol and Luna with 50% lower API prices and stronger agent performance",
+                         "summary":  "OpenAI’s GPT-6 Sol and Luna bring parts of the GPT-6 Astra training stack to faster, cheaper models. API prices fall to $2/$10 per million input/output tokens for Sol and $0.10/$0.50 for Luna, while new caching controls target long-running agents and repeated context.",
+                         "monthId":  "2026-09",
+                         "monthLabel":  "September 2026",
+                         "image":  {
+                                       "src":  "ai-news/2026-09/images/openai-gpt6-sol-luna-pricing.svg",
+                                       "alt":  "Factual graphic comparing the published API prices and intended roles of OpenAI GPT-6 Sol and GPT-6 Luna",
+                                       "caption":  "UGA LLM Lab graphic based on OpenAI’s September 22 launch data. Prices are per one million API tokens; benchmark results in the article are vendor-reported unless otherwise noted."
+                                   }
+                     },
+                     {
+                         "slug":  "anthropic-claude-opus-55",
+                         "category":  "Models · AI Agents",
+                         "sortDate":  "2026-09-22",
+                         "dateLabel":  "September 22, 2026",
+                         "title":  "Anthropic launches Claude Opus 5.5 with a 1M-token context window and lower agent costs",
+                         "summary":  "Claude Opus 5.5 is the first model in Anthropic\u0027s 5.5 family, with a one-million-token context window, 128,000-token output limit and API pricing of $4/$20 per million input/output tokens. Anthropic reports stronger coding and agent performance, while warning that benchmark margins can overstate real-world differences.",
+                         "monthId":  "2026-09",
+                         "monthLabel":  "September 2026",
+                         "image":  {
+                                       "src":  "ai-news/2026-09/images/claude-opus-55-performance-economics.svg",
+                                       "alt":  "Magazine-style scorecard separating Claude Opus 5.5 context, pricing, speed and evaluation layers",
+                                       "caption":  "UGA LLM Lab scorecard based on Anthropic\u0027s September 22 release. Pricing is published API pricing; speed, benchmark and typical-cost comparisons are Anthropic-reported and remain workload-dependent."
+                                   }
+                     },
+                     {
+                         "slug":  "alibaba-full-stack-ai-roadmap",
+                         "category":  "Infrastructure · Models",
+                         "sortDate":  "2026-09-22",
+                         "dateLabel":  "September 22, 2026",
+                         "title":  "Alibaba maps a full AI stack from Zhenwu chips and 20-gigawatt cloud capacity to Qwen agents",
+                         "summary":  "Alibaba\u0027s Apsara roadmap spans a new 216 GB AI processor, Qwen 4 training, future 5–10-trillion-parameter models, agent services and a target of more than 20 GW of global data-center capacity by 2032. Many of the largest figures are forward-looking targets rather than deployed capacity.",
+                         "monthId":  "2026-09",
+                         "monthLabel":  "September 2026",
+                         "image":  {
+                                       "src":  "ai-news/2026-09/images/alibaba-full-stack-ai-roadmap.svg",
+                                       "alt":  "Dark systems-stack diagram showing Alibaba\u0027s planned chip, cloud, Qwen model and agent-service layers",
+                                       "caption":  "UGA LLM Lab systems graphic based on Alibaba\u0027s Apsara 2026 roadmap. Processor timing, model scale, cluster size and 2032 capacity are company targets or reported results, not independent measurements of deployed capacity."
+                                   }
+                     },
+                     {
+                         "slug":  "nvidia-dsx-ready-power-cooling",
+                         "category":  "Infrastructure · AI Factories",
+                         "sortDate":  "2026-09-21",
+                         "dateLabel":  "September 21, 2026",
+                         "title":  "NVIDIA’s DSX Ready program pulls batteries and liquid cooling into the AI-factory qualification stack",
+                         "summary":  "NVIDIA launched DSX Ready with qualification paths for battery energy storage systems and cooling distribution units. Hitachi Energy, LG Energy Solution and Tesla are listed for BESS; LG Electronics, LiquidStack and Vertiv for CDUs. NVIDIA stresses that qualification does not replace site-level engineering.",
+                         "monthId":  "2026-09",
+                         "monthLabel":  "September 2026",
+                         "image":  {
+                                       "src":  "ai-news/2026-09/images/nvidia-dsx-ready-power-cooling.svg",
+                                       "alt":  "Systems diagram connecting battery energy storage, power distribution, AI racks and a cooling distribution loop within the DSX Ready equipment boundary",
+                                       "caption":  "A UGA LLM Lab systems diagram of the first DSX Ready categories. The qualification boundary applies to equipment; site integration and complete facility engineering remain outside it."
+                                   }
+                     },
+                     {
+                         "slug":  "openai-math-advisory-group",
+                         "category":  "Research · AI for Mathematics",
+                         "sortDate":  "2026-09-21",
+                         "dateLabel":  "September 21, 2026",
+                         "title":  "OpenAI forms an independent mathematics advisory group as it reports 100+ internal problem resolutions",
+                         "summary":  "OpenAI says an internal model being trained since August 28 has resolved more than 100 long-standing mathematical problems, but its September 21 announcement does not publish a problem-by-problem evidence set. A nine-member advisory group hosted at the Institute for Advanced Study says it will advise on responsible presentation and release while retaining independence from AI companies.",
+                         "monthId":  "2026-09",
+                         "monthLabel":  "September 2026",
+                         "image":  {
+                                       "src":  "ai-news/2026-09/images/openai-math-advisory-group.svg",
+                                       "alt":  "Governance diagram showing nine independent advisory members connected to review, communication, standards and learning, outside OpenAI model decisions",
+                                       "caption":  "The nine-member group advises on review, communication, standards and learning but has no decision-making authority over AI companies. OpenAI’s separate “100+ problems” statement remains company-reported and is not independently verified here."
+                                   }
+                     },
+                     {
+                         "slug":  "grok-47-coding-knowledge-work",
+                         "category":  "Models · Agents",
+                         "sortDate":  "2026-09-21",
+                         "dateLabel":  "September 21, 2026",
+                         "title":  "Grok 4.7 pushes xAI toward longer-running coding agents without raising standard API prices",
+                         "summary":  "SpaceXAI says Grok 4.7 uses a larger base model and longer reinforcement-learning runs on harder, multi-hour tasks. The API keeps Grok 4.6 pricing at $2 per million input tokens and $6 per million output tokens, while a 500,000-token context window and a broader Copilot rollout make the model easier to deploy for agentic coding and knowledge work.",
+                         "monthId":  "2026-09",
+                         "monthLabel":  "September 2026",
+                         "image":  {
+                                       "src":  "ai-news/2026-09/images/grok-47-benchmark-overview.svg",
+                                       "alt":  "Data-news graphic separating Grok 4.7 API economics, context length, long-task workflow and vendor-reported benchmark panels",
+                                       "caption":  "A UGA LLM Lab explanatory graphic based on SpaceXAI’s release and documentation. Each benchmark keeps its own unit and scale; the panels should not be read as one composite ranking or independent verification."
+                                   }
+                     },
+                     {
+                         "slug":  "microsoft-retrochimera-retrosynthesis",
+                         "category":  "Research · AI for Science",
+                         "sortDate":  "2026-09-21",
+                         "dateLabel":  "September 21, 2026",
+                         "title":  "RetroChimera combines different model biases to make retrosynthesis predictions chemists prefer",
+                         "summary":  "A Nature paper from Microsoft Research, Novartis, GSK and collaborators introduces RetroChimera, which ensembles a de-novo Transformer and a template-grounded graph model. Expert chemists accepted complete routes for 9 of 10 challenging targets in Microsoft’s reported evaluation, and the implementation and checkpoints are now public for research use.",
+                         "monthId":  "2026-09",
+                         "monthLabel":  "September 2026",
+                         "image":  {
+                                       "src":  "ai-news/2026-09/images/retrochimera-overview.svg",
+                                       "alt":  "Schematic showing R-SMILES 2 and NeuralLoc proposing molecular candidates that a learned voting layer ranks into a retrosynthesis route",
+                                       "caption":  "RetroChimera combines de-novo and template-grounded proposals before learned voting and route ranking. The molecule icons and pathway are a UGA LLM Lab explanatory schematic, not model output or an original paper figure."
+                                   }
+                     },
+                     {
+                         "slug":  "weekly-ai-september-14-20",
+                         "category":  "AI Weekly",
+                         "sortDate":  "2026-09-20",
+                         "dateLabel":  "September 14–20, 2026",
+                         "title":  "AI Weekly: Multimodal models, robots in unfamiliar homes, and an infrastructure funding wave",
+                         "summary":  "Google and Qwen pushed live multimodal systems forward, Figure tested a robot policy in 30 unfamiliar homes, agent products gained new controls, and AI infrastructure drew fresh capital and tighter power engineering.",
+                         "monthId":  "2026-09",
+                         "monthLabel":  "September 2026",
+                         "image":  {
+                                       "src":  "ai-news/2026-09/images/figure-helix-2-5-og.jpg",
+                                       "alt":  "A Figure humanoid robot working in a home kitchen alongside a team member.",
+                                       "caption":  "Figure\u0027s Helix 2.5 home-robotics announcement. Photo: Figure."
+                                   }
+                     },
+                     {
+                         "slug":  "claude-code-auto-mode-server-classifier",
+                         "category":  "Products · AI Agents",
+                         "sortDate":  "2026-09-19",
+                         "dateLabel":  "September 19, 2026",
+                         "title":  "Claude Code moves auto-mode safety checks server-side—and flags billed fallbacks",
+                         "summary":  "Claude Code 2.1.278 shifts auto mode\u0027s action classifier to Anthropic\u0027s servers for supported enterprise and API sessions. The safety checks are uncharged when the server performs them, while a visible fallback keeps unsupported sessions working under the previous billing path.",
+                         "monthId":  "2026-09",
+                         "monthLabel":  "September 2026",
+                         "image":  {
+                                       "src":  "ai-news/2026-09/images/claude-code-auto-mode-classifier.svg",
+                                       "alt":  "Flow diagram showing a Claude Code action passing through a server-side safety classifier before it runs",
+                                       "caption":  "How eligible Claude Code 2.1.278 sessions route auto-mode safety checks. Diagram based on Anthropic\u0027s release notes and documentation."
+                                   }
+                     },
+                     {
+                         "slug":  "sair-open-math-model-initiative",
+                         "category":  "Research · Open Models",
+                         "sortDate":  "2026-09-18",
+                         "dateLabel":  "September 18, 2026",
+                         "title":  "Terence Tao\u0027s SAIR starts an open-model initiative built around mathematical research",
+                         "summary":  "The nonprofit plans open-weight models and open-source tools for mathematics, with published training methods, reproducible evaluations and community governance. No model has been released yet; SAIR is collecting partners for funding, compute, expertise and community building.",
+                         "monthId":  "2026-09",
+                         "monthLabel":  "September 2026",
+                         "image":  {
+                                       "src":  "ai-news/2026-09/images/open-math-model-principles.svg",
+                                       "alt":  "Diagram of the open development principles in SAIR\u0027s mathematics model initiative",
+                                       "caption":  "UGA LLM Lab graphic summarizing the principles published by SAIR and Terence Tao."
+                                   }
+                     },
+                     {
+                         "slug":  "qwen-38-omni-flash",
+                         "category":  "Models · Multimodal AI",
+                         "sortDate":  "2026-09-18",
+                         "dateLabel":  "September 18, 2026",
+                         "title":  "Qwen3.8-Omni-Flash takes text, images, audio and video into a one-million-token context",
+                         "summary":  "Alibaba\u0027s new Qwen model accepts four input modalities, supports tool use and web search, and can process up to one million tokens. It produces text rather than live audio, making it a multimodal analysis model rather than a voice-chat replacement.",
+                         "monthId":  "2026-09",
+                         "monthLabel":  "September 2026",
+                         "image":  {
+                                       "src":  "ai-news/2026-09/images/qwen-omni-capabilities.svg",
+                                       "alt":  "Diagram of Qwen3.8-Omni-Flash inputs, context window and text output",
+                                       "caption":  "UGA LLM Lab graphic based on Alibaba Cloud\u0027s official Qwen3.8-Omni-Flash documentation."
+                                   }
+                     }
+                 ]
+}

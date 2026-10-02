@@ -111,7 +111,7 @@
 
         <footer class="weekly-analysis__footer">
           <p>${escapeHtml(analysis.methodology_note || "Internal monitoring and the cited sources support this week's analysis.")}</p>
-          <a href="ai-news.html">Return to AI News <span aria-hidden="true">→</span></a>
+          <a href="ai-news.html">Return to AI/SI News <span aria-hidden="true">→</span></a>
         </footer>
       </article>`;
 

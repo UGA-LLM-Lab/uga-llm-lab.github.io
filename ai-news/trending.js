@@ -1,5 +1,5 @@
 /**
- * AI News attention panel
+ * AI/SI News attention panel
  *
  * An index of 100 means that a topic's share of sampled Hugging Face
  * Daily Papers recommendations was unchanged from the previous week.
