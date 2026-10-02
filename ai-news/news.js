@@ -256,8 +256,7 @@
     mount.innerHTML = `
       <header class="page-heading ai-news-heading">
         <h1>AI/SI News</h1>
-        <p>Selected developments in artificial intelligence, from timely reporting to in-depth analysis.</p>
-        <p class="ai-news-si-note">SI stands for Super Intelligence, the terminology adopted for AI in U.S. executive-branch communications under a September 2026 executive order. <a href="https://www.whitehouse.gov/fact-sheets/2026/09/fact-sheet-president-donald-j-trump-inaugurates-the-era-of-super-intelligence/" target="_blank" rel="noopener noreferrer">White House fact sheet <span aria-hidden="true">↗</span></a></p>
+        <p>Selected developments in artificial intelligence, from timely reporting to in-depth analysis. SI stands for Super Intelligence, the terminology adopted for AI in U.S. executive-branch communications under a September 2026 executive order. <a href="https://www.whitehouse.gov/fact-sheets/2026/09/fact-sheet-president-donald-j-trump-inaugurates-the-era-of-super-intelligence/" target="_blank" rel="noopener noreferrer">White House fact sheet <span aria-hidden="true">↗</span></a></p>
       </header>
 
       <details class="ai-news-search">

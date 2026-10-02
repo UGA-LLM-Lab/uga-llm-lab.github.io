@@ -461,7 +461,7 @@ a:focus-visible {
 }
 
 .page-heading > p:last-child {
-  max-width: 780px;
+  /* Introductions use their container width; avoid fixed text-width caps. */
   margin-bottom: 0;
   color: var(--ink-soft);
   font-size: 0.98rem;
@@ -1194,10 +1194,6 @@ a:focus-visible {
   width: 100%;
   max-width: none;
   padding: 20px 0 24px;
-}
-
-.opportunity-page .page-heading > p:last-child {
-  max-width: none;
 }
 
 .opportunity-card + .opportunity-card {
@@ -2432,17 +2428,7 @@ a:focus-visible {
   color: var(--ink-soft);
 }
 
-.ai-news-heading > p {
-  max-width: none;
-}
-
-.ai-news-heading .ai-news-si-note {
-  margin-top: 10px;
-  font-size: 0.8rem;
-  color: var(--ink-soft);
-}
-
-.ai-news-si-note a {
+.ai-news-heading > p a {
   border-bottom: 1px solid var(--line);
 }
 
