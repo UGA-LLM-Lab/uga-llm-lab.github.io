@@ -1,48 +1,63 @@
 {
     "articles":  [
                      {
-                         "slug":  "anthropic-claude-shaped-science-bootloops",
-                         "category":  "Research · AI for Science",
-                         "sortDate":  "2026-10-01",
-                         "dateLabel":  "October 1, 2026",
-                         "title":  "BootLoops tests a scientist-in-the-loop approach to AI-accelerated quantitative research",
-                         "summary":  "Harvard physicist Matthew Schwartz describes an open-source harness that assigns current language models narrow, checkable quantitative problems and brings domain experts in to judge scientific value. The project reports 36 manuscripts across 18 fields, while emphasizing that many results still need verification.",
+                         "slug":  "kyndryl-luxembourg-ai-innovation-lab",
+                         "category":  "Employment · AI Talent",
+                         "sortDate":  "2026-10-02",
+                         "dateLabel":  "October 2, 2026",
+                         "title":  "Kyndryl opens its first EU AI Innovation Lab in Luxembourg",
+                         "summary":  "The agentic-AI lab will co-develop prototypes with customers in regulated industries and names Banque Internationale à Luxembourg as its founding collaborator. Kyndryl projects that the operation could scale to 250 skilled jobs by 2030.",
                          "monthId":  "2026-10",
                          "monthLabel":  "October 2026",
                          "image":  {
-                                       "src":  "ai-news/2026-10/images/anthropic-claude-shaped-science.webp",
-                                       "alt":  "Anthropic\u0027s official collage for Claude-shaped science combining a physics diagram and trees",
-                                       "caption":  "Official artwork accompanying Matthew Schwartz\u0027s October 1 guest post about BootLoops and Claude-shaped science. Source: Anthropic."
+                                       "src":  "ai-news/2026-10/images/kyndryl-luxembourg-ai-lab-source.jpg",
+                                       "alt":  "A person standing inside an immersive financial-technology exhibition in Luxembourg",
+                                       "caption":  "Official image for Kyndryl\u0027s Luxembourg AI Innovation Lab announcement. Source: Kyndryl."
                                    }
                      },
                      {
-                         "slug":  "ucla-optical-neural-deepfake-video-detector",
-                         "category":  "Research · Optical AI",
-                         "sortDate":  "2026-10-01",
-                         "dateLabel":  "October 1, 2026",
-                         "title":  "An optical-neural processor screens 15 deepfake videos in one pass",
-                         "summary":  "A UCLA-led team combines a digital video encoder with a spatially multiplexed optical decoder. The open-access study reports 97.79% accuracy and 99.86% sensitivity on Celeb-DF for 15 simultaneous streams, with performance and energy tradeoffs that keep the design in the prototype stage.",
+                         "slug":  "cloudflare-web-search-api-ai-gateway",
+                         "category":  "Industry · Developer Tools",
+                         "sortDate":  "2026-10-02",
+                         "dateLabel":  "October 2, 2026",
+                         "title":  "Cloudflare adds a multi-provider Web Search API to AI Gateway",
+                         "summary":  "Cloudflare is routing web search from Ceramic.ai, Exa and Linkup through AI Gateway, with REST and Workers interfaces, shared observability and access controls. Partner crawlers must meet Cloudflare\u0027s verified-bot and attribution requirements.",
                          "monthId":  "2026-10",
                          "monthLabel":  "October 2026",
                          "image":  {
-                                       "src":  "ai-news/2026-10/images/optical-deepfake-system.png",
-                                       "alt":  "Research schematic of a digital encoder feeding a spatially multiplexed optical decoder for simultaneous deepfake video detection",
-                                       "caption":  "The hybrid architecture encodes video features digitally, places 15 phase patterns on a spatial light modulator and reads authenticity scores from paired optical detector regions. Figure 1 from the open-access eLight paper by Kashani, Chen and Ozcan."
+                                       "src":  "ai-news/2026-10/images/cloudflare-web-search-api-source.webp",
+                                       "alt":  "Cloudflare AI Gateway interface showing web search request logs and provider activity",
+                                       "caption":  "Cloudflare\u0027s official AI Gateway illustration for Web Search API. Source: Cloudflare\u0027s October 2 announcement."
                                    }
                      },
                      {
-                         "slug":  "jera-dell-rhaelm-chiba-400mw-ai-infrastructure",
+                         "slug":  "applied-digital-polaris-forge-adds-75mw",
                          "category":  "Industry · AI Infrastructure",
-                         "sortDate":  "2026-10-01",
-                         "dateLabel":  "October 1, 2026",
-                         "title":  "JERA, Dell and RHAELM plan a 400 MW AI infrastructure project at a Chiba power station",
-                         "summary":  "The three companies signed a memorandum to standardize power, cooling and rack-scale compute for AI infrastructure in Japan. Their first planned deployment at JERA\u0027s Chiba site is expected to exceed $15 billion across phases and target operations around 2028.",
+                         "sortDate":  "2026-10-02",
+                         "dateLabel":  "October 2, 2026",
+                         "title":  "Applied Digital brings another 75 MW online at Polaris Forge 1",
+                         "summary":  "Three newly ready 25 MW data halls complete the second building at Applied Digital\u0027s North Dakota AI campus. The milestone raises operational critical IT load to 250 MW, while the fully leased campus remains contracted for 400 MW at full buildout.",
                          "monthId":  "2026-10",
                          "monthLabel":  "October 2026",
                          "image":  {
-                                       "src":  "ai-news/2026-10/images/jera-chiba-ai-infrastructure.svg",
-                                       "alt":  "Diagram of the roles and headline figures in the planned JERA, Dell and RHAELM Chiba AI infrastructure project",
-                                       "caption":  "Factual diagram based on JERA\u0027s October 1 memorandum announcement. The 400 MW capacity, more than $15 billion expected capital and 2028 target describe a plan, not a completed deployment."
+                                       "src":  "ai-news/2026-10/images/applied-digital-polaris-forge-source.jpg",
+                                       "alt":  "Official aerial photograph of the Polaris Forge 1 construction site in Ellendale, North Dakota",
+                                       "caption":  "Polaris Forge 1 in Ellendale, North Dakota. Cropped from Applied Digital\u0027s official AI Factories page; the October 2 release reports that operational critical IT load has reached 250 MW."
+                                   }
+                     },
+                     {
+                         "slug":  "servicenow-autosynthdata-enterprise-agents",
+                         "category":  "Research · Enterprise Agents",
+                         "sortDate":  "2026-10-02",
+                         "dateLabel":  "October 2, 2026",
+                         "title":  "ServiceNow CoreAI turns agent failures into synthetic training tasks",
+                         "summary":  "AutoSynthData builds executable tasks from a target model\u0027s weak spots, validates their environments and verifiers, and retrains on accepted examples. ServiceNow reports gains on two EnterpriseOps Gym domains, with important limits on scope and independent replication.",
+                         "monthId":  "2026-10",
+                         "monthLabel":  "October 2026",
+                         "image":  {
+                                       "src":  "ai-news/2026-10/images/servicenow-autosynthdata-source.png",
+                                       "alt":  "AutoSynthData illustration showing synthetic training data for enterprise agents",
+                                       "caption":  "Official AutoSynthData artwork from ServiceNow CoreAI\u0027s October 2 technical article. Source: ServiceNow CoreAI on Hugging Face."
                                    }
                      },
                      {
@@ -61,6 +76,36 @@
                                    }
                      },
                      {
+                         "slug":  "microsoft-transcribe-streaming-voice-2-1",
+                         "category":  "Industry · Voice AI",
+                         "sortDate":  "2026-10-01",
+                         "dateLabel":  "October 1, 2026",
+                         "title":  "Microsoft launches streaming transcription and two multilingual voice models",
+                         "summary":  "MAI-Transcribe-2-Streaming returns partial text in just over 100 milliseconds across 60 languages, while MAI-Voice-2.1 and a lower-latency Flash variant expand Microsoft\u0027s speech-generation lineup. The models are available through Microsoft Foundry with usage-based pricing.",
+                         "monthId":  "2026-10",
+                         "monthLabel":  "October 2026",
+                         "image":  {
+                                       "src":  "ai-news/2026-10/images/microsoft-streaming-voice-models-source.webp",
+                                       "alt":  "Microsoft AI artwork of pink quotation marks forming a swirling sound pattern on blue",
+                                       "caption":  "Official artwork accompanying Microsoft\u0027s MAI-Transcribe-2-Streaming and MAI-Voice-2.1 announcement. Source: Microsoft AI."
+                                   }
+                     },
+                     {
+                         "slug":  "jera-dell-rhaelm-chiba-400mw-ai-infrastructure",
+                         "category":  "Industry · AI Infrastructure",
+                         "sortDate":  "2026-10-01",
+                         "dateLabel":  "October 1, 2026",
+                         "title":  "JERA, Dell and RHAELM plan a 400 MW AI infrastructure project at a Chiba power station",
+                         "summary":  "The three companies signed a memorandum to standardize power, cooling and rack-scale compute for AI infrastructure in Japan. Their first planned deployment at JERA\u0027s Chiba site is expected to exceed $15 billion across phases and target operations around 2028.",
+                         "monthId":  "2026-10",
+                         "monthLabel":  "October 2026",
+                         "image":  {
+                                       "src":  "ai-news/2026-10/images/jera-chiba-ai-infrastructure.svg",
+                                       "alt":  "Diagram of the roles and headline figures in the planned JERA, Dell and RHAELM Chiba AI infrastructure project",
+                                       "caption":  "Factual diagram based on JERA\u0027s October 1 memorandum announcement. The 400 MW capacity, more than $15 billion expected capital and 2028 target describe a plan, not a completed deployment."
+                                   }
+                     },
+                     {
                          "slug":  "softbank-completes-openai-30-billion-follow-on-investment",
                          "category":  "Industry · Financing",
                          "sortDate":  "2026-10-01",
@@ -73,6 +118,36 @@
                                        "src":  "ai-news/2026-10/images/softbank-openai-investment-source.jpg",
                                        "alt":  "SoftBank Group\u0027s official October 1 disclosure about the third tranche of its OpenAI investment",
                                        "caption":  "SoftBank Group\u0027s official disclosure records the final $10 billion tranche and the resulting cumulative investment. Source: SoftBank Group; captured from the official release."
+                                   }
+                     },
+                     {
+                         "slug":  "ucla-optical-neural-deepfake-video-detector",
+                         "category":  "Research · Optical AI",
+                         "sortDate":  "2026-10-01",
+                         "dateLabel":  "October 1, 2026",
+                         "title":  "An optical-neural processor screens 15 deepfake videos in one pass",
+                         "summary":  "A UCLA-led team combines a digital video encoder with a spatially multiplexed optical decoder. The open-access study reports 97.79% accuracy and 99.86% sensitivity on Celeb-DF for 15 simultaneous streams, with performance and energy tradeoffs that keep the design in the prototype stage.",
+                         "monthId":  "2026-10",
+                         "monthLabel":  "October 2026",
+                         "image":  {
+                                       "src":  "ai-news/2026-10/images/optical-deepfake-system.png",
+                                       "alt":  "Research schematic of a digital encoder feeding a spatially multiplexed optical decoder for simultaneous deepfake video detection",
+                                       "caption":  "The hybrid architecture encodes video features digitally, places 15 phase patterns on a spatial light modulator and reads authenticity scores from paired optical detector regions. Figure 1 from the open-access eLight paper by Kashani, Chen and Ozcan."
+                                   }
+                     },
+                     {
+                         "slug":  "anthropic-claude-shaped-science-bootloops",
+                         "category":  "Research · AI for Science",
+                         "sortDate":  "2026-10-01",
+                         "dateLabel":  "October 1, 2026",
+                         "title":  "BootLoops tests a scientist-in-the-loop approach to AI-accelerated quantitative research",
+                         "summary":  "Harvard physicist Matthew Schwartz describes an open-source harness that assigns current language models narrow, checkable quantitative problems and brings domain experts in to judge scientific value. The project reports 36 manuscripts across 18 fields, while emphasizing that many results still need verification.",
+                         "monthId":  "2026-10",
+                         "monthLabel":  "October 2026",
+                         "image":  {
+                                       "src":  "ai-news/2026-10/images/anthropic-claude-shaped-science.webp",
+                                       "alt":  "Anthropic\u0027s official collage for Claude-shaped science combining a physics diagram and trees",
+                                       "caption":  "Official artwork accompanying Matthew Schwartz\u0027s October 1 guest post about BootLoops and Claude-shaped science. Source: Anthropic."
                                    }
                      },
                      {
@@ -673,81 +748,6 @@
                                        "src":  "ai-news/2026-09/images/grok-47-benchmark-overview.svg",
                                        "alt":  "Data-news graphic separating Grok 4.7 API economics, context length, long-task workflow and vendor-reported benchmark panels",
                                        "caption":  "A UGA LLM Lab explanatory graphic based on SpaceXAI’s release and documentation. Each benchmark keeps its own unit and scale; the panels should not be read as one composite ranking or independent verification."
-                                   }
-                     },
-                     {
-                         "slug":  "microsoft-retrochimera-retrosynthesis",
-                         "category":  "Research · AI for Science",
-                         "sortDate":  "2026-09-21",
-                         "dateLabel":  "September 21, 2026",
-                         "title":  "RetroChimera combines different model biases to make retrosynthesis predictions chemists prefer",
-                         "summary":  "A Nature paper from Microsoft Research, Novartis, GSK and collaborators introduces RetroChimera, which ensembles a de-novo Transformer and a template-grounded graph model. Expert chemists accepted complete routes for 9 of 10 challenging targets in Microsoft’s reported evaluation, and the implementation and checkpoints are now public for research use.",
-                         "monthId":  "2026-09",
-                         "monthLabel":  "September 2026",
-                         "image":  {
-                                       "src":  "ai-news/2026-09/images/retrochimera-overview.svg",
-                                       "alt":  "Schematic showing R-SMILES 2 and NeuralLoc proposing molecular candidates that a learned voting layer ranks into a retrosynthesis route",
-                                       "caption":  "RetroChimera combines de-novo and template-grounded proposals before learned voting and route ranking. The molecule icons and pathway are a UGA LLM Lab explanatory schematic, not model output or an original paper figure."
-                                   }
-                     },
-                     {
-                         "slug":  "weekly-ai-september-14-20",
-                         "category":  "AI Weekly",
-                         "sortDate":  "2026-09-20",
-                         "dateLabel":  "September 14–20, 2026",
-                         "title":  "AI Weekly: Multimodal models, robots in unfamiliar homes, and an infrastructure funding wave",
-                         "summary":  "Google and Qwen pushed live multimodal systems forward, Figure tested a robot policy in 30 unfamiliar homes, agent products gained new controls, and AI infrastructure drew fresh capital and tighter power engineering.",
-                         "monthId":  "2026-09",
-                         "monthLabel":  "September 2026",
-                         "image":  {
-                                       "src":  "ai-news/2026-09/images/figure-helix-2-5-og.jpg",
-                                       "alt":  "A Figure humanoid robot working in a home kitchen alongside a team member.",
-                                       "caption":  "Figure\u0027s Helix 2.5 home-robotics announcement. Photo: Figure."
-                                   }
-                     },
-                     {
-                         "slug":  "claude-code-auto-mode-server-classifier",
-                         "category":  "Products · AI Agents",
-                         "sortDate":  "2026-09-19",
-                         "dateLabel":  "September 19, 2026",
-                         "title":  "Claude Code moves auto-mode safety checks server-side—and flags billed fallbacks",
-                         "summary":  "Claude Code 2.1.278 shifts auto mode\u0027s action classifier to Anthropic\u0027s servers for supported enterprise and API sessions. The safety checks are uncharged when the server performs them, while a visible fallback keeps unsupported sessions working under the previous billing path.",
-                         "monthId":  "2026-09",
-                         "monthLabel":  "September 2026",
-                         "image":  {
-                                       "src":  "ai-news/2026-09/images/claude-code-auto-mode-classifier.svg",
-                                       "alt":  "Flow diagram showing a Claude Code action passing through a server-side safety classifier before it runs",
-                                       "caption":  "How eligible Claude Code 2.1.278 sessions route auto-mode safety checks. Diagram based on Anthropic\u0027s release notes and documentation."
-                                   }
-                     },
-                     {
-                         "slug":  "sair-open-math-model-initiative",
-                         "category":  "Research · Open Models",
-                         "sortDate":  "2026-09-18",
-                         "dateLabel":  "September 18, 2026",
-                         "title":  "Terence Tao\u0027s SAIR starts an open-model initiative built around mathematical research",
-                         "summary":  "The nonprofit plans open-weight models and open-source tools for mathematics, with published training methods, reproducible evaluations and community governance. No model has been released yet; SAIR is collecting partners for funding, compute, expertise and community building.",
-                         "monthId":  "2026-09",
-                         "monthLabel":  "September 2026",
-                         "image":  {
-                                       "src":  "ai-news/2026-09/images/open-math-model-principles.svg",
-                                       "alt":  "Diagram of the open development principles in SAIR\u0027s mathematics model initiative",
-                                       "caption":  "UGA LLM Lab graphic summarizing the principles published by SAIR and Terence Tao."
-                                   }
-                     },
-                     {
-                         "slug":  "qwen-38-omni-flash",
-                         "category":  "Models · Multimodal AI",
-                         "sortDate":  "2026-09-18",
-                         "dateLabel":  "September 18, 2026",
-                         "title":  "Qwen3.8-Omni-Flash takes text, images, audio and video into a one-million-token context",
-                         "summary":  "Alibaba\u0027s new Qwen model accepts four input modalities, supports tool use and web search, and can process up to one million tokens. It produces text rather than live audio, making it a multimodal analysis model rather than a voice-chat replacement.",
-                         "monthId":  "2026-09",
-                         "monthLabel":  "September 2026",
-                         "image":  {
-                                       "src":  "ai-news/2026-09/images/qwen-omni-capabilities.svg",
-                                       "alt":  "Diagram of Qwen3.8-Omni-Flash inputs, context window and text output",
-                                       "caption":  "UGA LLM Lab graphic based on Alibaba Cloud\u0027s official Qwen3.8-Omni-Flash documentation."
                                    }
                      }
                  ]
