@@ -885,11 +885,13 @@ a:focus-visible {
   width: 100%;
   height: 100%;
   object-fit: cover;
+  transform: scale(var(--member-photo-zoom, 1));
+  transform-origin: 50% 28%;
   transition: transform 220ms ease;
 }
 
 .member-card:hover .member-photo img {
-  transform: scale(1.025);
+  transform: scale(calc(var(--member-photo-zoom, 1) + 0.025));
 }
 
 .member-copy {

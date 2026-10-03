@@ -230,7 +230,11 @@
               const links = member.links?.length
                 ? `<div class="member-links">${member.links.map((link) => `<a href="${escapeHtml(link.url)}"${externalAttributes(link.url)} aria-label="${escapeHtml(link.label)}" title="${escapeHtml(link.label)}">${iconForLink(link.label)}</a>`).join("")}</div>`
                 : "";
-              const photo = `<img src="${escapeHtml(member.photo || "assets/images/member-placeholder.svg")}" alt="${member.photo ? escapeHtml(member.name) : "Portrait placeholder"}" data-member-photo>`;
+              const photoZoom = Number(member.photoZoom);
+              const photoStyle = Number.isFinite(photoZoom) && photoZoom > 1 && photoZoom <= 2
+                ? ` style="--member-photo-zoom: ${photoZoom}"`
+                : "";
+              const photo = `<img src="${escapeHtml(member.photo || "assets/images/member-placeholder.svg")}" alt="${member.photo ? escapeHtml(member.name) : "Portrait placeholder"}"${photoStyle} data-member-photo>`;
               const photoElement = photoDestination
                 ? `<a class="member-photo" href="${escapeHtml(photoDestination)}"${externalAttributes(photoDestination)} aria-label="View ${escapeHtml(member.name)} profile">${photo}</a>`
                 : `<div class="member-photo">${photo}</div>`;

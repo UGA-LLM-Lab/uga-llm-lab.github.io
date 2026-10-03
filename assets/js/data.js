@@ -452,18 +452,51 @@ window.LLM_LAB_DATA = {
         }
       ]
     },
-    // {
-    //   id: "undergraduate-students",
-    //   title: "Undergraduate Students",
-    //   members: [
-    //     {
-    //       name: "Example Undergraduate Student",
-    //       role: "Undergraduate Researcher",
-    //       bio: "Replace this record in assets/js/data.js when a new member joins.",
-    //       isPlaceholder: true
-    //     }
-    //   ]
-    // },
+    {
+      id: "undergraduate-students",
+      title: "Undergraduate Students",
+      members: [
+        {
+          name: "Vivek Venigalla",
+          role: "Undergrad · Math & CS",
+          bio: "Interested in applying graph theory and topological data analysis to real-world problems across disciplines.",
+          photo: "assets/images/members-vivek-venigalla.png",
+          photoZoom: 1.24,
+          website: "https://vivekvenigalla.github.io/",
+          links: [
+            { label: "Website", url: "https://vivekvenigalla.github.io/" },
+            { label: "LinkedIn", url: "https://linkedin.com/in/vivekvenigalla/" },
+            { label: "GitHub", url: "https://github.com/VivekVenigalla" },
+            { label: "Email", url: "mailto:Vivek.Venigalla@uga.edu" }
+          ]
+        },
+        {
+          name: "Rohan Singh",
+          role: "Undergrad · CS",
+          bio: "Works on artificial intelligence, agentic systems, knowledge graphs, and data-driven applications.",
+          photo: "assets/images/members-rohan-singh.png",
+          website: "https://rohans-portfolio-uga.vercel.app/",
+          links: [
+            { label: "Website", url: "https://rohans-portfolio-uga.vercel.app/" },
+            { label: "LinkedIn", url: "https://www.linkedin.com/in/rsinghatl/" },
+            { label: "GitHub", url: "https://github.com/rohan-s-atl" },
+            { label: "Email", url: "mailto:Rohan.Singh2@uga.edu" }
+          ]
+        },
+        {
+          name: "Kushagra Garg",
+          role: "Undergrad · CS",
+          bio: "Builds accessible AI tools and software, including speech-to-text and degree-planning applications. Interested in LLM applications, systems programming, and STEM education.",
+          photo: "assets/images/members-kushagra-garg.png",
+          photoZoom: 1.32,
+          website: "https://kushagra0514.github.io/Persona_Portfolio/",
+          links: [
+            { label: "Website", url: "https://kushagra0514.github.io/Persona_Portfolio/" },
+            { label: "Email", url: "mailto:kg89867@uga.edu" }
+          ]
+        }
+      ]
+    },
   ],
 
   recentGraduateAlumniNames: ["Zihao Wu", "Zhengliang Liu"],
