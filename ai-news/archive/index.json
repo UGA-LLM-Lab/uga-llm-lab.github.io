@@ -1,6 +1,6 @@
 {
     "pageSize":  50,
-    "total":  70,
+    "total":  75,
     "pages":  [
                   "ai-news/archive/page-1.json",
                   "ai-news/archive/page-2.json"

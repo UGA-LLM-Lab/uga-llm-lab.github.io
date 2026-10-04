@@ -646,6 +646,381 @@ window.AI_NEWS_MONTH_DATA["2026-10"] = {
           "url": "https://microsoft.ai/models/mai-voice-2-1/"
         }
       ]
+    },
+    {
+      "slug": "aleph-alpha-kolibri-open-weight-model",
+      "category": "AI Models · Open Weights",
+      "sortDate": "2026-10-03",
+      "dateLabel": "October 3, 2026",
+      "title": "Aleph Alpha releases Kolibri, an open-weight model built for German and English",
+      "summary": "Kolibri combines 78.1 billion total parameters with 3.46 billion active parameters per token. The Apache-licensed weights support reasoning and tool use, but their full memory footprint and the conditions behind company benchmarks matter for deployment.",
+      "image": {
+        "src": "ai-news/2026-10/images/aleph-alpha-kolibri-release.webp",
+        "alt": "Aleph Alpha’s official green Kolibri release artwork with its hummingbird mark",
+        "caption": "Official artwork for the October 3 Kolibri release. Source: Aleph Alpha."
+      },
+      "content": [
+        {
+          "type": "paragraph",
+          "text": "Aleph Alpha released Kolibri on October 3, making a German–English mixture-of-experts model available as open weights. The company positions it for organizations that want to operate and adapt a language model under their own control, including public administration and regulated industries. The release includes a model card, a detailed technical report and an inference plugin, giving potential users evidence to examine alongside the launch claims."
+        },
+        {
+          "type": "paragraph",
+          "text": "Kolibri has approximately 78.1 billion parameters in total, while about 3.46 billion participate in processing each token. That sparse activation is intended to reduce computation per token without giving up the capacity of a much larger model. The weights and associated model configuration are offered under Apache 2.0. This is an open-weight release; it does not mean the company has published every training dataset or every component used to build the model."
+        },
+        {
+          "type": "heading",
+          "text": "The deployment trade-offs"
+        },
+        {
+          "type": "paragraph",
+          "text": "The active-parameter count does not determine the amount of GPU memory needed to load the model. The model card puts the FP8 weight footprint at roughly 78 GB and says the full model must remain in memory. Its listed minimum configurations include two 80 GB A100 GPUs, two H100 SXM5 GPUs, or one H200, B200 or B300. Teams also need room for runtime overhead and the key-value cache, whose size depends on workload and context length."
+        },
+        {
+          "type": "paragraph",
+          "text": "The model was trained to a native context length of 262,144 tokens, with reported validation up to 1,048,576. Aleph Alpha nevertheless recommends staying at or below 262,144 for efficient serving and complex tasks. The larger supported window should not be treated as an assurance of identical latency, cost or task quality at every length."
+        },
+        {
+          "type": "paragraph",
+          "text": "The official inference repository supplies a vLLM plugin with dedicated reasoning and tool-call parsers. It can expose an OpenAI-compatible chat-completions endpoint, allowing an existing application to connect to a locally operated server. Requests can choose low, medium or high reasoning effort, or disable thinking. This gives implementers control over response behavior, although the appropriate setting still depends on task-level evaluation."
+        },
+        {
+          "type": "heading",
+          "text": "What the evaluations establish"
+        },
+        {
+          "type": "paragraph",
+          "text": "The technical report describes roughly 24 trillion training tokens across pre-training, mid-training and context extension. German makes up more than one-fifth of the data mix. The architecture combines mostly sliding-window attention with a smaller set of full-context layers, a design intended to contain long-context serving costs. Post-training covers reasoning, coding, instruction following, retrieval and tool use rather than conversational fluency alone."
+        },
+        {
+          "type": "paragraph",
+          "text": "Aleph Alpha’s headline comparison places model quality against decoded text throughput per GPU. The report’s figure uses eight B200 GPUs, with different sequence lengths for base and post-trained models; its methodology also specifies precision and serving configurations. These are company-run comparisons under defined conditions. They do not establish that Kolibri will beat every alternative on a particular organization’s hardware, concurrent workload or latency target."
+        },
+        {
+          "type": "figure",
+          "src": "ai-news/2026-10/images/kolibri-original-benchmark-figure.png",
+          "alt": "Original Kolibri technical-report figure comparing English and German benchmark averages against decoded bytes per second per GPU",
+          "caption": "Figure 1 from Aleph Alpha’s technical report, extracted with its original axes, legend and methodological caption. The vendor evaluation uses eight B200 GPUs and 4k-token base or 16k-token post-training sequences; it is not an independent deployment benchmark."
+        },
+        {
+          "type": "paragraph",
+          "text": "The launch announcement also emphasizes knowing when the model lacks sufficient information to answer. That is relevant to document-grounded systems, where a fluent unsupported answer can be more damaging than a refusal. The supporting evaluations should be read by task and metric: better performance on a selected abstention test is not a general guarantee against hallucination."
+        },
+        {
+          "type": "paragraph",
+          "text": "For a buyer or engineering team, Kolibri’s immediate value is a testable option for controlled German–English deployment. A useful pilot would measure its handling of the organization’s own documents, unsupported questions and tool calls, while recording memory use and response times at the intended context lengths. The public artifacts make that comparison possible; production suitability remains an empirical question for each system."
+        }
+      ],
+      "sources": [
+        {
+          "label": "Aleph Alpha — October 3 release announcement",
+          "url": "https://aleph-alpha.com/en/blog/kolibri-has-landed-a-sovereign-open-weight-model/"
+        },
+        {
+          "label": "Aleph Alpha — Kolibri model card and weights",
+          "url": "https://huggingface.co/Aleph-Alpha/Kolibri-1"
+        },
+        {
+          "label": "Aleph Alpha — technical report",
+          "url": "https://aleph-alpha.com/downloads/tech-report.pdf"
+        },
+        {
+          "label": "Aleph Alpha — official inference plugin",
+          "url": "https://github.com/Aleph-Alpha/aleph-alpha-inference"
+        }
+      ]
+    },
+    {
+      "slug": "claude-code-2-1-289-permission-fixes",
+      "category": "Developer Tools · AI Security",
+      "sortDate": "2026-10-03",
+      "dateLabel": "October 3, 2026",
+      "title": "Claude Code 2.1.289 fixes permission checks around shell commands, symlinks and plugins",
+      "summary": "The October 3 release repairs skipped deny and ask checks, alongside plugin fixes and teammate controls. It matters for teams combining sandboxed execution with managed policies.",
+      "image": {
+        "src": "ai-news/2026-10/images/claude-code-permission-source.png",
+        "alt": "Official Claude Code screenshot showing an approval prompt for the Bash command npm test",
+        "caption": "A Bash permission prompt from the official Claude Code documentation. This illustrates the approval interface; it is not a capture of a 2.1.289-specific test. Source: Anthropic."
+      },
+      "content": [
+        {
+          "type": "paragraph",
+          "text": "Anthropic published Claude Code 2.1.289 on October 3, at 20:12 UTC or 4:12 p.m. Eastern, according to npm. Its permission fixes are particularly relevant to managed deployments using sandboxing and user-installed extensions."
+        },
+        {
+          "type": "paragraph",
+          "text": "The release fixes deny or ask checks overridden by a mod’s approval in nested compound commands. It also repairs checks skipped behind expanded environment-variable prefixes or bare assignments under sandbox auto-approval. Read deny rules now apply to IDE-referenced files reached through symlinks."
+        },
+        {
+          "type": "heading",
+          "text": "Why command interpretation matters"
+        },
+        {
+          "type": "paragraph",
+          "text": "Claude Code’s permissions documentation describes rules that can allow an action, require confirmation or deny it. Rules operate on the action a tool is being asked to perform, and their precedence is part of the policy. A command’s superficial shape can change when it contains assignments, chained operations or a nested shell expression. The fixes concern whether the intended restriction survives those forms."
+        },
+        {
+          "type": "paragraph",
+          "text": "The symlink issue affects a different boundary: a file can be reached through a path that points somewhere else. A developer may prohibit reading sensitive material while still working with an IDE selection or file mention. A check that misses the redirected path can undermine that expectation. Applying the restriction to those access routes helps make the file policy consistent with the workflow people actually use."
+        },
+        {
+          "type": "paragraph",
+          "text": "Sandboxing and permission approval serve related but distinct purposes. Anthropic’s sandbox documentation describes operating-system controls for filesystem and network access. Permissions determine which tool actions may proceed and when a person must approve them. Automatic approval inside a sandbox therefore does not remove the need to honor explicit deny and ask rules. The release notes identify fixes at that intersection rather than claiming that any sandbox makes all commands harmless."
+        },
+        {
+          "type": "heading",
+          "text": "Extensions and teammate sessions"
+        },
+        {
+          "type": "paragraph",
+          "text": "A further fix prevents user-installed plugins from rewriting managed MCP sign-in tool descriptions. Plugin changes address stale local copies, reloads and interface failures. New teammate controls include agent.spawn, consistent hook identifiers, and idle and waiting states. A VS Code authentication change from 2.1.288 was reverted because it may have increased sign-outs."
+        },
+        {
+          "type": "paragraph",
+          "text": "For teams that combine local plugins with centrally administered controls, these changes connect two everyday concerns: the reliability of the interface and the reliability of the policy applied underneath it. A plugin failure should be evaluated separately from a command’s authorization, and managed restrictions need to retain their meaning even when an extension participates in the session."
+        },
+        {
+          "type": "paragraph",
+          "text": "The changelog does not describe these entries as proof of exploitation, a new model release or a complete security certification. A practical upgrade check is narrower: confirm the installed version, then exercise representative restricted shell and file-access workflows in a disposable test environment. Results should show the expected denial or approval request under the organization’s actual settings. That verifies the behavior the release changes without assuming that an update validates every integration."
+        }
+      ],
+      "sources": [
+        {
+          "label": "Anthropic — Claude Code 2.1.289 changelog",
+          "url": "https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md#21289"
+        },
+        {
+          "label": "npm — official package publication timestamps",
+          "url": "https://registry.npmjs.org/@anthropic-ai/claude-code"
+        },
+        {
+          "label": "Anthropic — Claude Code permissions",
+          "url": "https://code.claude.com/docs/en/permissions"
+        },
+        {
+          "label": "Anthropic — Claude Code sandboxing",
+          "url": "https://code.claude.com/docs/en/sandboxing"
+        }
+      ]
+    },
+    {
+      "slug": "aap-pediatric-generative-ai-clinical-policy",
+      "category": "Healthcare AI · Research Policy",
+      "sortDate": "2026-10-03",
+      "dateLabel": "October 3, 2026",
+      "title": "AAP calls for pediatric validation and human oversight of clinical generative AI",
+      "summary": "An October 3 policy statement sets out how developers, hospitals and regulators should evaluate generative AI for children’s clinical care. It emphasizes pediatric evidence, privacy, monitoring and clinician accountability rather than treating adult-model performance as sufficient.",
+      "image": {
+        "src": "ai-news/2026-10/images/aap-suresh-2024-source.jpg",
+        "alt": "Pediatrician Srinivasan Suresh presenting about artificial intelligence at the 2024 AAP National Conference",
+        "caption": "Policy co-author Srinivasan Suresh speaking at the 2024 AAP National Conference. This is an archival photograph, not an image from the 2026 announcement. Source: AAP News."
+      },
+      "content": [
+        {
+          "type": "paragraph",
+          "text": "The American Academy of Pediatrics published a policy statement on October 3 addressing generative AI used by pediatricians in clinical care. Its accompanying release was scheduled for 6 a.m. Pacific time and connects the guidance to the Academy’s national conference in San Diego. The statement appears in Pediatrics and asks developers and healthcare institutions to evaluate these systems specifically for children, adolescents and young adults."
+        },
+        {
+          "type": "paragraph",
+          "text": "The Academy’s central concern is that the speed of adoption can exceed the available evidence. Its release says children are underrepresented in much of the data used to train generative AI tools and that relatively few tools have been rigorously evaluated in pediatric settings. It identifies potential uses in documentation, education, workflow and clinical decision support while stressing that those opportunities require oversight and accountability."
+        },
+        {
+          "type": "heading",
+          "text": "Pediatric evidence across the lifecycle"
+        },
+        {
+          "type": "paragraph",
+          "text": "The policy recommends validation across diverse pediatric populations, including developmental stages and underrepresented groups. It asks institutions to examine how a product protects patient data, limits collection and communicates data use. Procurement should also consider continuous performance monitoring and error reporting. These are recommendations for evaluating and operating a clinical tool, rather than a finding that a particular product has passed those tests."
+        },
+        {
+          "type": "paragraph",
+          "text": "For clinical integration, the statement calls for explicit human oversight, accessible disclosure and mechanisms to detect and report errors. It places responsibility for medical decisions with the pediatrician caring for the patient. It also asks oversight bodies to require pediatric safety and efficacy evidence and to consider both premarket evaluation and monitoring after deployment, including changes in performance as models are updated."
+        },
+        {
+          "type": "paragraph",
+          "text": "An illustrative procurement question is whether a documentation assistant preserves a child’s age, developmental context and clinically important details across the cases a hospital actually sees. A plausible-looking note is not the same measurement as a note that accurately reflects the encounter. Comparing outputs with clinician review can expose the particular errors an implementation needs to address; the policy does not supply a universal passing score for such a comparison."
+        },
+        {
+          "type": "heading",
+          "text": "The scope of the guidance"
+        },
+        {
+          "type": "paragraph",
+          "text": "The statement covers clinician use of generative AI to support pediatric care. It does not cover children or families using chatbots directly, an area the Academy says it is addressing separately. The accompanying announcement describes a collaboration between its clinical information technology council and its innovation section, with the Academy’s policy review and approval process."
+        },
+        {
+          "type": "paragraph",
+          "text": "This is a professional policy statement informed by a literature review, not a clinical trial reporting a treatment effect or a regulatory approval of an AI product. Its practical contribution is to organize the questions that arise between a promising demonstration and a clinical implementation: whose data informed the tool, which patients were represented in validation, how errors reach a responsible person and what happens after the underlying model changes."
+        },
+        {
+          "type": "paragraph",
+          "text": "For developers, the implication is that evidence must follow the intended pediatric use rather than stop at a general language-model benchmark. For institutions, the guidance makes evaluation an ongoing activity tied to a specific workflow and accountable clinical team. It offers a framework for considering adoption while leaving product-specific safety and effectiveness to be established with appropriate evidence."
+        }
+      ],
+      "sources": [
+        {
+          "label": "AAP — Pediatrics policy statement, DOI 10.1542/peds.2026-079037",
+          "url": "https://publications.aap.org/pediatrics/article/doi/10.1542/peds.2026-079037/210626/Recommendations-for-the-Development-and"
+        },
+        {
+          "label": "AAP — October 3 public announcement in the conference media kit",
+          "url": "https://www.aap.org/en/news-room/media-access-to-aap-conferences/national-conference-exhibition-media-kit/"
+        },
+        {
+          "label": "AAP News — archival photograph of co-author Srinivasan Suresh",
+          "url": "https://publications.aap.org/aapnews/news/30322/Plenary-speaker-Pediatricians-should-embrace-AI"
+        }
+      ]
+    },
+    {
+      "slug": "openai-david-robinson-safety-resignation",
+      "category": "AI Safety · Talent",
+      "sortDate": "2026-10-03",
+      "dateLabel": "October 3, 2026",
+      "title": "Former OpenAI safety leader David Robinson publicly challenges the company’s release culture",
+      "summary": "In an October 3 essay, Robinson argues that increasingly capable AI requires stronger safety practices before deployment. OpenAI says it can pause training or hold back models when needed. The debate concerns whether formal safeguards can keep pace with release pressure.",
+      "image": {
+        "src": "ai-news/2026-10/images/david-robinson-yale-source.jpg",
+        "alt": "Portrait of David Robinson wearing glasses",
+        "caption": "David Robinson in a portrait published by Yale Law School. Source: Yale Law School; archival image."
+      },
+      "content": [
+        {
+          "type": "paragraph",
+          "text": "David Robinson, a former senior member of OpenAI’s safety team, published an essay on October 3 criticizing the pace and culture of frontier AI development. The essay says he resigned during the week; it does not establish October 3 as his final day at the company. The new event is his public account of why he left and what he believes the industry needs to change."
+        },
+        {
+          "type": "paragraph",
+          "text": "Reuters reported that Robinson spent three and a half years at OpenAI, helped draft its Preparedness Framework and oversaw safety reports for 12 frontier-model launches. He argues that reliance on iterative deployment—releasing systems and improving safeguards as problems appear—becomes more dangerous as capabilities grow. His criticism is an assessment by a former employee with relevant responsibilities, rather than an independent audit of every safeguard."
+        },
+        {
+          "type": "heading",
+          "text": "A disagreement about prevention"
+        },
+        {
+          "type": "paragraph",
+          "text": "Robinson’s essay calls for expertise from industries accustomed to managing severe hazards, including aviation and nuclear power, and for more progress on alignment before substantially more capable systems are developed. His argument is that redundancy and careful preparation need to become routine organizational practices, rather than depend on people recovering after a failure. These are his proposed changes, not evidence that AI risk can be quantified by directly borrowing accident rates from another industry."
+        },
+        {
+          "type": "paragraph",
+          "text": "OpenAI disputed the implication that it proceeds regardless of whether a model can be controlled. In a statement reported by Reuters, a spokesperson said the company works to keep capabilities within what it can safely manage and secure, and can pause training or hold models back when it needs to slow down. That response describes the company’s position; it does not resolve the disagreement over how consistently those commitments operate under release pressure."
+        },
+        {
+          "type": "heading",
+          "text": "How the published frameworks fit"
+        },
+        {
+          "type": "paragraph",
+          "text": "OpenAI’s April 2025 Preparedness Framework update describes evaluations of capabilities that could create severe harm, safeguards for covered systems and review by a Safety Advisory Group. The group assesses risk and recommends whether deployment should proceed, require further evaluation or need stronger protections; leadership makes the final decision. The framework also calls for reassessment as evidence changes. This is earlier policy background to Robinson’s critique, not an October 3 policy announcement."
+        },
+        {
+          "type": "paragraph",
+          "text": "The company’s May 2026 Frontier Governance Framework applies relevant elements of that approach to its public regulatory commitments. Its stated scope includes risk assessment, mitigation, security management, incident response and external expert input. The two documents show that written processes exist. Robinson’s criticism raises a separate operational question: whether staffing, incentives and time for deliberation make those processes effective as launches become more frequent."
+        },
+        {
+          "type": "paragraph",
+          "text": "One way to assess that question is to examine concrete decisions rather than infer safety from either a framework’s existence or one employee’s departure. Evidence could include occasions when evaluations changed a release plan, safeguards were strengthened before deployment, or new findings triggered restrictions. The essay does not provide a complete record of those decisions, and the company’s response is not an independent evaluation of them."
+        },
+        {
+          "type": "paragraph",
+          "text": "The significance of Robinson’s public departure is therefore both organizational and technical. A person involved in communicating model risks is questioning whether the development environment supports the degree of caution those risks demand. Readers can evaluate that argument alongside OpenAI’s published commitments while keeping allegations, stated policy and demonstrated outcomes distinct."
+        }
+      ],
+      "sources": [
+        {
+          "label": "David Robinson — October 3 essay in The Atlantic",
+          "url": "https://www.theatlantic.com/technology/2026/10/openai-safety-team-resignation/688881/"
+        },
+        {
+          "label": "Reuters via Investing.com — Robinson’s critique and OpenAI’s response",
+          "url": "https://www.investing.com/news/economy-news/openai-safety-employee-quits-says-time-for-trial-and-error-is-over-4930874"
+        },
+        {
+          "label": "OpenAI — April 2025 Preparedness Framework update",
+          "url": "https://openai.com/index/updating-our-preparedness-framework/"
+        },
+        {
+          "label": "OpenAI — May 2026 Frontier Governance Framework",
+          "url": "https://openai.com/index/openai-frontier-governance-framework/"
+        },
+        {
+          "label": "Yale Law School — David Robinson profile and photograph",
+          "url": "https://law.yale.edu/david-robinson-0"
+        }
+      ]
+    },
+    {
+      "slug": "white-house-super-intelligence-force-jay-clayton",
+      "category": "AI Governance · Policy",
+      "sortDate": "2026-10-03",
+      "dateLabel": "October 3, 2026",
+      "title": "Report: Jay Clayton to lead a 120-day White House review of AI risks and opportunities",
+      "summary": "Reuters, citing the Wall Street Journal, reported a White House task force led by the director of national intelligence. Its proposed review of the federal role is separate from an earlier executive order changing the administration’s AI terminology.",
+      "image": {
+        "src": "ai-news/2026-10/images/jay-clayton-official-source.jpg",
+        "alt": "Official portrait of Director of National Intelligence Jay Clayton in front of United States and intelligence-community flags",
+        "caption": "Jay Clayton, Director of National Intelligence. Official portrait published by the White House."
+      },
+      "content": [
+        {
+          "type": "paragraph",
+          "text": "The White House has created a task force to examine artificial intelligence’s risks and opportunities and recommend the federal government’s role in overseeing the technology, Reuters reported on October 3, citing the Wall Street Journal. The report said Director of National Intelligence Jay Clayton would lead the group, with findings due within 120 days. It referred to the group as the “Super Intelligence Force.”"
+        },
+        {
+          "type": "paragraph",
+          "text": "The reporting attributes the details to the Journal and Clayton. Its central news is the reported formation, leadership and review timetable; the dispatch does not itself publish the task force’s charter or establish that the panel has acquired new statutory authority. The group’s eventual recommendations would be a further step beyond its creation."
+        },
+        {
+          "type": "heading",
+          "text": "The reported federal review"
+        },
+        {
+          "type": "paragraph",
+          "text": "Clayton already has a substantial government role. The White House’s official cabinet biography identifies him as the ninth director of national intelligence, sworn in on August 3, 2026, and describes that office as leading the intelligence community and advising the president on intelligence matters. A cross-government AI review would add a technology-policy remit to the responsibilities of an existing senior official."
+        },
+        {
+          "type": "paragraph",
+          "text": "A report deadline sets a period for analysis and recommendations. It does not by itself tell developers what a future regulatory requirement will be, or show that agencies have implemented a common supervision system. The next concrete documents to watch are the panel’s published mandate, its recommendations and any subsequent executive, legislative or agency action. The distinction matters for organizations planning compliance: a reported review is an early policy signal, rather than a finished rulebook."
+        },
+        {
+          "type": "heading",
+          "text": "The separate terminology order"
+        },
+        {
+          "type": "paragraph",
+          "text": "There is an earlier executive action that helps explain the task force’s name. Executive Order 14434, signed September 29 and published in the Federal Register on October 2, directs executive departments and agencies to use “Super Intelligence” and “SI” in place of “Artificial Intelligence” and “AI” in specified non-statutory communications and documents, to the extent permitted by law."
+        },
+        {
+          "type": "paragraph",
+          "text": "The order initially ties the renamed term to the existing statutory definition of artificial intelligence. It also gives the assistant to the president for science and technology 60 days to submit proposed legislative language for a federal definition, in consultation with other agencies. It says previously issued regulations, presidential actions, contracts, grants and historical documents do not have to be altered."
+        },
+        {
+          "type": "paragraph",
+          "text": "Those provisions concern terminology and a proposal for a definition. The order does not appoint Clayton to this task force or create the reported 120-day review. The two timelines and responsibilities should therefore be kept separate when interpreting the administration’s agenda. Renaming a category in executive communications does not establish that every system in that category has acquired a new technical capability."
+        },
+        {
+          "type": "paragraph",
+          "text": "For the AI sector, the October 3 report points to another channel through which the administration may formulate its approach to advanced systems. Its effect will depend on the substance of the review and the decisions that follow. Until those are public, claims about new legal powers, funding or product-specific obligations would go beyond what the reported announcement establishes."
+        }
+      ],
+      "sources": [
+        {
+          "label": "Reuters via 104.1 KSGF — original October 3 task-force dispatch",
+          "url": "https://www.ksgf.com/2026/10/03/jay-clayton-to-lead-trumps-ai-task-force-deliver-report-in-120-days-wsj-reports/"
+        },
+        {
+          "label": "Reuters via AOL — original dispatch timestamp",
+          "url": "https://www.aol.com/articles/jay-clayton-lead-trumps-ai-224548000.html"
+        },
+        {
+          "label": "White House — official cabinet biography",
+          "url": "https://www.whitehouse.gov/administration/cabinet/"
+        },
+        {
+          "label": "White House — Executive Order 14434, September 29",
+          "url": "https://www.whitehouse.gov/wp-content/uploads/2026/09/eo-14434.pdf"
+        }
+      ]
     }
   ]
 };

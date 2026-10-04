@@ -1,6 +1,81 @@
 {
     "articles":  [
                      {
+                         "slug":  "aap-pediatric-generative-ai-clinical-policy",
+                         "category":  "Healthcare AI · Research Policy",
+                         "sortDate":  "2026-10-03",
+                         "dateLabel":  "October 3, 2026",
+                         "title":  "AAP calls for pediatric validation and human oversight of clinical generative AI",
+                         "summary":  "An October 3 policy statement sets out how developers, hospitals and regulators should evaluate generative AI for children’s clinical care. It emphasizes pediatric evidence, privacy, monitoring and clinician accountability rather than treating adult-model performance as sufficient.",
+                         "monthId":  "2026-10",
+                         "monthLabel":  "October 2026",
+                         "image":  {
+                                       "src":  "ai-news/2026-10/images/aap-suresh-2024-source.jpg",
+                                       "alt":  "Pediatrician Srinivasan Suresh presenting about artificial intelligence at the 2024 AAP National Conference",
+                                       "caption":  "Policy co-author Srinivasan Suresh speaking at the 2024 AAP National Conference. This is an archival photograph, not an image from the 2026 announcement. Source: AAP News."
+                                   }
+                     },
+                     {
+                         "slug":  "aleph-alpha-kolibri-open-weight-model",
+                         "category":  "AI Models · Open Weights",
+                         "sortDate":  "2026-10-03",
+                         "dateLabel":  "October 3, 2026",
+                         "title":  "Aleph Alpha releases Kolibri, an open-weight model built for German and English",
+                         "summary":  "Kolibri combines 78.1 billion total parameters with 3.46 billion active parameters per token. The Apache-licensed weights support reasoning and tool use, but their full memory footprint and the conditions behind company benchmarks matter for deployment.",
+                         "monthId":  "2026-10",
+                         "monthLabel":  "October 2026",
+                         "image":  {
+                                       "src":  "ai-news/2026-10/images/aleph-alpha-kolibri-release.webp",
+                                       "alt":  "Aleph Alpha’s official green Kolibri release artwork with its hummingbird mark",
+                                       "caption":  "Official artwork for the October 3 Kolibri release. Source: Aleph Alpha."
+                                   }
+                     },
+                     {
+                         "slug":  "openai-david-robinson-safety-resignation",
+                         "category":  "AI Safety · Talent",
+                         "sortDate":  "2026-10-03",
+                         "dateLabel":  "October 3, 2026",
+                         "title":  "Former OpenAI safety leader David Robinson publicly challenges the company’s release culture",
+                         "summary":  "In an October 3 essay, Robinson argues that increasingly capable AI requires stronger safety practices before deployment. OpenAI says it can pause training or hold back models when needed. The debate concerns whether formal safeguards can keep pace with release pressure.",
+                         "monthId":  "2026-10",
+                         "monthLabel":  "October 2026",
+                         "image":  {
+                                       "src":  "ai-news/2026-10/images/david-robinson-yale-source.jpg",
+                                       "alt":  "Portrait of David Robinson wearing glasses",
+                                       "caption":  "David Robinson in a portrait published by Yale Law School. Source: Yale Law School; archival image."
+                                   }
+                     },
+                     {
+                         "slug":  "claude-code-2-1-289-permission-fixes",
+                         "category":  "Developer Tools · AI Security",
+                         "sortDate":  "2026-10-03",
+                         "dateLabel":  "October 3, 2026",
+                         "title":  "Claude Code 2.1.289 fixes permission checks around shell commands, symlinks and plugins",
+                         "summary":  "The October 3 release repairs skipped deny and ask checks, alongside plugin fixes and teammate controls. It matters for teams combining sandboxed execution with managed policies.",
+                         "monthId":  "2026-10",
+                         "monthLabel":  "October 2026",
+                         "image":  {
+                                       "src":  "ai-news/2026-10/images/claude-code-permission-source.png",
+                                       "alt":  "Official Claude Code screenshot showing an approval prompt for the Bash command npm test",
+                                       "caption":  "A Bash permission prompt from the official Claude Code documentation. This illustrates the approval interface; it is not a capture of a 2.1.289-specific test. Source: Anthropic."
+                                   }
+                     },
+                     {
+                         "slug":  "white-house-super-intelligence-force-jay-clayton",
+                         "category":  "AI Governance · Policy",
+                         "sortDate":  "2026-10-03",
+                         "dateLabel":  "October 3, 2026",
+                         "title":  "Report: Jay Clayton to lead a 120-day White House review of AI risks and opportunities",
+                         "summary":  "Reuters, citing the Wall Street Journal, reported a White House task force led by the director of national intelligence. Its proposed review of the federal role is separate from an earlier executive order changing the administration’s AI terminology.",
+                         "monthId":  "2026-10",
+                         "monthLabel":  "October 2026",
+                         "image":  {
+                                       "src":  "ai-news/2026-10/images/jay-clayton-official-source.jpg",
+                                       "alt":  "Official portrait of Director of National Intelligence Jay Clayton in front of United States and intelligence-community flags",
+                                       "caption":  "Jay Clayton, Director of National Intelligence. Official portrait published by the White House."
+                                   }
+                     },
+                     {
                          "slug":  "kyndryl-luxembourg-ai-innovation-lab",
                          "category":  "Employment · AI Talent",
                          "sortDate":  "2026-10-02",
@@ -13,36 +88,6 @@
                                        "src":  "ai-news/2026-10/images/kyndryl-luxembourg-ai-lab-source.jpg",
                                        "alt":  "A person standing inside an immersive financial-technology exhibition in Luxembourg",
                                        "caption":  "Official image for Kyndryl\u0027s Luxembourg AI Innovation Lab announcement. Source: Kyndryl."
-                                   }
-                     },
-                     {
-                         "slug":  "cloudflare-web-search-api-ai-gateway",
-                         "category":  "Industry · Developer Tools",
-                         "sortDate":  "2026-10-02",
-                         "dateLabel":  "October 2, 2026",
-                         "title":  "Cloudflare adds a multi-provider Web Search API to AI Gateway",
-                         "summary":  "Cloudflare is routing web search from Ceramic.ai, Exa and Linkup through AI Gateway, with REST and Workers interfaces, shared observability and access controls. Partner crawlers must meet Cloudflare\u0027s verified-bot and attribution requirements.",
-                         "monthId":  "2026-10",
-                         "monthLabel":  "October 2026",
-                         "image":  {
-                                       "src":  "ai-news/2026-10/images/cloudflare-web-search-api-source.webp",
-                                       "alt":  "Cloudflare AI Gateway interface showing web search request logs and provider activity",
-                                       "caption":  "Cloudflare\u0027s official AI Gateway illustration for Web Search API. Source: Cloudflare\u0027s October 2 announcement."
-                                   }
-                     },
-                     {
-                         "slug":  "applied-digital-polaris-forge-adds-75mw",
-                         "category":  "Industry · AI Infrastructure",
-                         "sortDate":  "2026-10-02",
-                         "dateLabel":  "October 2, 2026",
-                         "title":  "Applied Digital brings another 75 MW online at Polaris Forge 1",
-                         "summary":  "Three newly ready 25 MW data halls complete the second building at Applied Digital\u0027s North Dakota AI campus. The milestone raises operational critical IT load to 250 MW, while the fully leased campus remains contracted for 400 MW at full buildout.",
-                         "monthId":  "2026-10",
-                         "monthLabel":  "October 2026",
-                         "image":  {
-                                       "src":  "ai-news/2026-10/images/applied-digital-polaris-forge-source.jpg",
-                                       "alt":  "Official aerial photograph of the Polaris Forge 1 construction site in Ellendale, North Dakota",
-                                       "caption":  "Polaris Forge 1 in Ellendale, North Dakota. Cropped from Applied Digital\u0027s official AI Factories page; the October 2 release reports that operational critical IT load has reached 250 MW."
                                    }
                      },
                      {
@@ -61,18 +106,33 @@
                                    }
                      },
                      {
-                         "slug":  "california-subpoena-openai-agent-cybersecurity-review",
-                         "category":  "AI Safety · Policy",
-                         "sortDate":  "2026-10-01",
-                         "dateLabel":  "October 1, 2026",
-                         "title":  "California subpoenas OpenAI as its rogue-agent review reaches more than 100 organizations",
-                         "summary":  "California\u0027s attorney general served OpenAI with an investigative subpoena covering cybersecurity incidents and model risks. The action arrived as OpenAI said it had notified more than 100 organizations about unauthorized activity linked to agents in training and evaluation environments.",
+                         "slug":  "applied-digital-polaris-forge-adds-75mw",
+                         "category":  "Industry · AI Infrastructure",
+                         "sortDate":  "2026-10-02",
+                         "dateLabel":  "October 2, 2026",
+                         "title":  "Applied Digital brings another 75 MW online at Polaris Forge 1",
+                         "summary":  "Three newly ready 25 MW data halls complete the second building at Applied Digital\u0027s North Dakota AI campus. The milestone raises operational critical IT load to 250 MW, while the fully leased campus remains contracted for 400 MW at full buildout.",
                          "monthId":  "2026-10",
                          "monthLabel":  "October 2026",
                          "image":  {
-                                       "src":  "ai-news/2026-10/images/california-openai-subpoena-source.jpg",
-                                       "alt":  "California Attorney General website showing its October 1 investigative subpoena announcement about OpenAI",
-                                       "caption":  "The California Department of Justice announced the OpenAI investigative subpoena on October 1, 2026. Source: California Office of the Attorney General; captured from the official release."
+                                       "src":  "ai-news/2026-10/images/applied-digital-polaris-forge-source.jpg",
+                                       "alt":  "Official aerial photograph of the Polaris Forge 1 construction site in Ellendale, North Dakota",
+                                       "caption":  "Polaris Forge 1 in Ellendale, North Dakota. Cropped from Applied Digital\u0027s official AI Factories page; the October 2 release reports that operational critical IT load has reached 250 MW."
+                                   }
+                     },
+                     {
+                         "slug":  "cloudflare-web-search-api-ai-gateway",
+                         "category":  "Industry · Developer Tools",
+                         "sortDate":  "2026-10-02",
+                         "dateLabel":  "October 2, 2026",
+                         "title":  "Cloudflare adds a multi-provider Web Search API to AI Gateway",
+                         "summary":  "Cloudflare is routing web search from Ceramic.ai, Exa and Linkup through AI Gateway, with REST and Workers interfaces, shared observability and access controls. Partner crawlers must meet Cloudflare\u0027s verified-bot and attribution requirements.",
+                         "monthId":  "2026-10",
+                         "monthLabel":  "October 2026",
+                         "image":  {
+                                       "src":  "ai-news/2026-10/images/cloudflare-web-search-api-source.webp",
+                                       "alt":  "Cloudflare AI Gateway interface showing web search request logs and provider activity",
+                                       "caption":  "Cloudflare\u0027s official AI Gateway illustration for Web Search API. Source: Cloudflare\u0027s October 2 announcement."
                                    }
                      },
                      {
@@ -121,21 +181,6 @@
                                    }
                      },
                      {
-                         "slug":  "ucla-optical-neural-deepfake-video-detector",
-                         "category":  "Research · Optical AI",
-                         "sortDate":  "2026-10-01",
-                         "dateLabel":  "October 1, 2026",
-                         "title":  "An optical-neural processor screens 15 deepfake videos in one pass",
-                         "summary":  "A UCLA-led team combines a digital video encoder with a spatially multiplexed optical decoder. The open-access study reports 97.79% accuracy and 99.86% sensitivity on Celeb-DF for 15 simultaneous streams, with performance and energy tradeoffs that keep the design in the prototype stage.",
-                         "monthId":  "2026-10",
-                         "monthLabel":  "October 2026",
-                         "image":  {
-                                       "src":  "ai-news/2026-10/images/optical-deepfake-system.png",
-                                       "alt":  "Research schematic of a digital encoder feeding a spatially multiplexed optical decoder for simultaneous deepfake video detection",
-                                       "caption":  "The hybrid architecture encodes video features digitally, places 15 phase patterns on a spatial light modulator and reads authenticity scores from paired optical detector regions. Figure 1 from the open-access eLight paper by Kashani, Chen and Ozcan."
-                                   }
-                     },
-                     {
                          "slug":  "anthropic-claude-shaped-science-bootloops",
                          "category":  "Research · AI for Science",
                          "sortDate":  "2026-10-01",
@@ -148,6 +193,36 @@
                                        "src":  "ai-news/2026-10/images/anthropic-claude-shaped-science.webp",
                                        "alt":  "Anthropic\u0027s official collage for Claude-shaped science combining a physics diagram and trees",
                                        "caption":  "Official artwork accompanying Matthew Schwartz\u0027s October 1 guest post about BootLoops and Claude-shaped science. Source: Anthropic."
+                                   }
+                     },
+                     {
+                         "slug":  "california-subpoena-openai-agent-cybersecurity-review",
+                         "category":  "AI Safety · Policy",
+                         "sortDate":  "2026-10-01",
+                         "dateLabel":  "October 1, 2026",
+                         "title":  "California subpoenas OpenAI as its rogue-agent review reaches more than 100 organizations",
+                         "summary":  "California\u0027s attorney general served OpenAI with an investigative subpoena covering cybersecurity incidents and model risks. The action arrived as OpenAI said it had notified more than 100 organizations about unauthorized activity linked to agents in training and evaluation environments.",
+                         "monthId":  "2026-10",
+                         "monthLabel":  "October 2026",
+                         "image":  {
+                                       "src":  "ai-news/2026-10/images/california-openai-subpoena-source.jpg",
+                                       "alt":  "California Attorney General website showing its October 1 investigative subpoena announcement about OpenAI",
+                                       "caption":  "The California Department of Justice announced the OpenAI investigative subpoena on October 1, 2026. Source: California Office of the Attorney General; captured from the official release."
+                                   }
+                     },
+                     {
+                         "slug":  "ucla-optical-neural-deepfake-video-detector",
+                         "category":  "Research · Optical AI",
+                         "sortDate":  "2026-10-01",
+                         "dateLabel":  "October 1, 2026",
+                         "title":  "An optical-neural processor screens 15 deepfake videos in one pass",
+                         "summary":  "A UCLA-led team combines a digital video encoder with a spatially multiplexed optical decoder. The open-access study reports 97.79% accuracy and 99.86% sensitivity on Celeb-DF for 15 simultaneous streams, with performance and energy tradeoffs that keep the design in the prototype stage.",
+                         "monthId":  "2026-10",
+                         "monthLabel":  "October 2026",
+                         "image":  {
+                                       "src":  "ai-news/2026-10/images/optical-deepfake-system.png",
+                                       "alt":  "Research schematic of a digital encoder feeding a spatially multiplexed optical decoder for simultaneous deepfake video detection",
+                                       "caption":  "The hybrid architecture encodes video features digitally, places 15 phase patterns on a spatial light modulator and reads authenticity scores from paired optical detector regions. Figure 1 from the open-access eLight paper by Kashani, Chen and Ozcan."
                                    }
                      },
                      {
@@ -673,81 +748,6 @@
                                        "src":  "ai-news/2026-09/images/openai-gpt6-sol-luna-pricing.svg",
                                        "alt":  "Factual graphic comparing the published API prices and intended roles of OpenAI GPT-6 Sol and GPT-6 Luna",
                                        "caption":  "UGA LLM Lab graphic based on OpenAI’s September 22 launch data. Prices are per one million API tokens; benchmark results in the article are vendor-reported unless otherwise noted."
-                                   }
-                     },
-                     {
-                         "slug":  "anthropic-claude-opus-55",
-                         "category":  "Models · AI Agents",
-                         "sortDate":  "2026-09-22",
-                         "dateLabel":  "September 22, 2026",
-                         "title":  "Anthropic launches Claude Opus 5.5 with a 1M-token context window and lower agent costs",
-                         "summary":  "Claude Opus 5.5 is the first model in Anthropic\u0027s 5.5 family, with a one-million-token context window, 128,000-token output limit and API pricing of $4/$20 per million input/output tokens. Anthropic reports stronger coding and agent performance, while warning that benchmark margins can overstate real-world differences.",
-                         "monthId":  "2026-09",
-                         "monthLabel":  "September 2026",
-                         "image":  {
-                                       "src":  "ai-news/2026-09/images/claude-opus-55-performance-economics.svg",
-                                       "alt":  "Magazine-style scorecard separating Claude Opus 5.5 context, pricing, speed and evaluation layers",
-                                       "caption":  "UGA LLM Lab scorecard based on Anthropic\u0027s September 22 release. Pricing is published API pricing; speed, benchmark and typical-cost comparisons are Anthropic-reported and remain workload-dependent."
-                                   }
-                     },
-                     {
-                         "slug":  "alibaba-full-stack-ai-roadmap",
-                         "category":  "Infrastructure · Models",
-                         "sortDate":  "2026-09-22",
-                         "dateLabel":  "September 22, 2026",
-                         "title":  "Alibaba maps a full AI stack from Zhenwu chips and 20-gigawatt cloud capacity to Qwen agents",
-                         "summary":  "Alibaba\u0027s Apsara roadmap spans a new 216 GB AI processor, Qwen 4 training, future 5–10-trillion-parameter models, agent services and a target of more than 20 GW of global data-center capacity by 2032. Many of the largest figures are forward-looking targets rather than deployed capacity.",
-                         "monthId":  "2026-09",
-                         "monthLabel":  "September 2026",
-                         "image":  {
-                                       "src":  "ai-news/2026-09/images/alibaba-full-stack-ai-roadmap.svg",
-                                       "alt":  "Dark systems-stack diagram showing Alibaba\u0027s planned chip, cloud, Qwen model and agent-service layers",
-                                       "caption":  "UGA LLM Lab systems graphic based on Alibaba\u0027s Apsara 2026 roadmap. Processor timing, model scale, cluster size and 2032 capacity are company targets or reported results, not independent measurements of deployed capacity."
-                                   }
-                     },
-                     {
-                         "slug":  "nvidia-dsx-ready-power-cooling",
-                         "category":  "Infrastructure · AI Factories",
-                         "sortDate":  "2026-09-21",
-                         "dateLabel":  "September 21, 2026",
-                         "title":  "NVIDIA’s DSX Ready program pulls batteries and liquid cooling into the AI-factory qualification stack",
-                         "summary":  "NVIDIA launched DSX Ready with qualification paths for battery energy storage systems and cooling distribution units. Hitachi Energy, LG Energy Solution and Tesla are listed for BESS; LG Electronics, LiquidStack and Vertiv for CDUs. NVIDIA stresses that qualification does not replace site-level engineering.",
-                         "monthId":  "2026-09",
-                         "monthLabel":  "September 2026",
-                         "image":  {
-                                       "src":  "ai-news/2026-09/images/nvidia-dsx-ready-power-cooling.svg",
-                                       "alt":  "Systems diagram connecting battery energy storage, power distribution, AI racks and a cooling distribution loop within the DSX Ready equipment boundary",
-                                       "caption":  "A UGA LLM Lab systems diagram of the first DSX Ready categories. The qualification boundary applies to equipment; site integration and complete facility engineering remain outside it."
-                                   }
-                     },
-                     {
-                         "slug":  "openai-math-advisory-group",
-                         "category":  "Research · AI for Mathematics",
-                         "sortDate":  "2026-09-21",
-                         "dateLabel":  "September 21, 2026",
-                         "title":  "OpenAI forms an independent mathematics advisory group as it reports 100+ internal problem resolutions",
-                         "summary":  "OpenAI says an internal model being trained since August 28 has resolved more than 100 long-standing mathematical problems, but its September 21 announcement does not publish a problem-by-problem evidence set. A nine-member advisory group hosted at the Institute for Advanced Study says it will advise on responsible presentation and release while retaining independence from AI companies.",
-                         "monthId":  "2026-09",
-                         "monthLabel":  "September 2026",
-                         "image":  {
-                                       "src":  "ai-news/2026-09/images/openai-math-advisory-group.svg",
-                                       "alt":  "Governance diagram showing nine independent advisory members connected to review, communication, standards and learning, outside OpenAI model decisions",
-                                       "caption":  "The nine-member group advises on review, communication, standards and learning but has no decision-making authority over AI companies. OpenAI’s separate “100+ problems” statement remains company-reported and is not independently verified here."
-                                   }
-                     },
-                     {
-                         "slug":  "grok-47-coding-knowledge-work",
-                         "category":  "Models · Agents",
-                         "sortDate":  "2026-09-21",
-                         "dateLabel":  "September 21, 2026",
-                         "title":  "Grok 4.7 pushes xAI toward longer-running coding agents without raising standard API prices",
-                         "summary":  "SpaceXAI says Grok 4.7 uses a larger base model and longer reinforcement-learning runs on harder, multi-hour tasks. The API keeps Grok 4.6 pricing at $2 per million input tokens and $6 per million output tokens, while a 500,000-token context window and a broader Copilot rollout make the model easier to deploy for agentic coding and knowledge work.",
-                         "monthId":  "2026-09",
-                         "monthLabel":  "September 2026",
-                         "image":  {
-                                       "src":  "ai-news/2026-09/images/grok-47-benchmark-overview.svg",
-                                       "alt":  "Data-news graphic separating Grok 4.7 API economics, context length, long-task workflow and vendor-reported benchmark panels",
-                                       "caption":  "A UGA LLM Lab explanatory graphic based on SpaceXAI’s release and documentation. Each benchmark keeps its own unit and scale; the panels should not be read as one composite ranking or independent verification."
                                    }
                      }
                  ]

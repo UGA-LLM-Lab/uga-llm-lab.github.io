@@ -1,6 +1,81 @@
 {
     "articles":  [
                      {
+                         "slug":  "anthropic-claude-opus-55",
+                         "category":  "Models · AI Agents",
+                         "sortDate":  "2026-09-22",
+                         "dateLabel":  "September 22, 2026",
+                         "title":  "Anthropic launches Claude Opus 5.5 with a 1M-token context window and lower agent costs",
+                         "summary":  "Claude Opus 5.5 is the first model in Anthropic\u0027s 5.5 family, with a one-million-token context window, 128,000-token output limit and API pricing of $4/$20 per million input/output tokens. Anthropic reports stronger coding and agent performance, while warning that benchmark margins can overstate real-world differences.",
+                         "monthId":  "2026-09",
+                         "monthLabel":  "September 2026",
+                         "image":  {
+                                       "src":  "ai-news/2026-09/images/claude-opus-55-performance-economics.svg",
+                                       "alt":  "Magazine-style scorecard separating Claude Opus 5.5 context, pricing, speed and evaluation layers",
+                                       "caption":  "UGA LLM Lab scorecard based on Anthropic\u0027s September 22 release. Pricing is published API pricing; speed, benchmark and typical-cost comparisons are Anthropic-reported and remain workload-dependent."
+                                   }
+                     },
+                     {
+                         "slug":  "alibaba-full-stack-ai-roadmap",
+                         "category":  "Infrastructure · Models",
+                         "sortDate":  "2026-09-22",
+                         "dateLabel":  "September 22, 2026",
+                         "title":  "Alibaba maps a full AI stack from Zhenwu chips and 20-gigawatt cloud capacity to Qwen agents",
+                         "summary":  "Alibaba\u0027s Apsara roadmap spans a new 216 GB AI processor, Qwen 4 training, future 5–10-trillion-parameter models, agent services and a target of more than 20 GW of global data-center capacity by 2032. Many of the largest figures are forward-looking targets rather than deployed capacity.",
+                         "monthId":  "2026-09",
+                         "monthLabel":  "September 2026",
+                         "image":  {
+                                       "src":  "ai-news/2026-09/images/alibaba-full-stack-ai-roadmap.svg",
+                                       "alt":  "Dark systems-stack diagram showing Alibaba\u0027s planned chip, cloud, Qwen model and agent-service layers",
+                                       "caption":  "UGA LLM Lab systems graphic based on Alibaba\u0027s Apsara 2026 roadmap. Processor timing, model scale, cluster size and 2032 capacity are company targets or reported results, not independent measurements of deployed capacity."
+                                   }
+                     },
+                     {
+                         "slug":  "nvidia-dsx-ready-power-cooling",
+                         "category":  "Infrastructure · AI Factories",
+                         "sortDate":  "2026-09-21",
+                         "dateLabel":  "September 21, 2026",
+                         "title":  "NVIDIA’s DSX Ready program pulls batteries and liquid cooling into the AI-factory qualification stack",
+                         "summary":  "NVIDIA launched DSX Ready with qualification paths for battery energy storage systems and cooling distribution units. Hitachi Energy, LG Energy Solution and Tesla are listed for BESS; LG Electronics, LiquidStack and Vertiv for CDUs. NVIDIA stresses that qualification does not replace site-level engineering.",
+                         "monthId":  "2026-09",
+                         "monthLabel":  "September 2026",
+                         "image":  {
+                                       "src":  "ai-news/2026-09/images/nvidia-dsx-ready-power-cooling.svg",
+                                       "alt":  "Systems diagram connecting battery energy storage, power distribution, AI racks and a cooling distribution loop within the DSX Ready equipment boundary",
+                                       "caption":  "A UGA LLM Lab systems diagram of the first DSX Ready categories. The qualification boundary applies to equipment; site integration and complete facility engineering remain outside it."
+                                   }
+                     },
+                     {
+                         "slug":  "openai-math-advisory-group",
+                         "category":  "Research · AI for Mathematics",
+                         "sortDate":  "2026-09-21",
+                         "dateLabel":  "September 21, 2026",
+                         "title":  "OpenAI forms an independent mathematics advisory group as it reports 100+ internal problem resolutions",
+                         "summary":  "OpenAI says an internal model being trained since August 28 has resolved more than 100 long-standing mathematical problems, but its September 21 announcement does not publish a problem-by-problem evidence set. A nine-member advisory group hosted at the Institute for Advanced Study says it will advise on responsible presentation and release while retaining independence from AI companies.",
+                         "monthId":  "2026-09",
+                         "monthLabel":  "September 2026",
+                         "image":  {
+                                       "src":  "ai-news/2026-09/images/openai-math-advisory-group.svg",
+                                       "alt":  "Governance diagram showing nine independent advisory members connected to review, communication, standards and learning, outside OpenAI model decisions",
+                                       "caption":  "The nine-member group advises on review, communication, standards and learning but has no decision-making authority over AI companies. OpenAI’s separate “100+ problems” statement remains company-reported and is not independently verified here."
+                                   }
+                     },
+                     {
+                         "slug":  "grok-47-coding-knowledge-work",
+                         "category":  "Models · Agents",
+                         "sortDate":  "2026-09-21",
+                         "dateLabel":  "September 21, 2026",
+                         "title":  "Grok 4.7 pushes xAI toward longer-running coding agents without raising standard API prices",
+                         "summary":  "SpaceXAI says Grok 4.7 uses a larger base model and longer reinforcement-learning runs on harder, multi-hour tasks. The API keeps Grok 4.6 pricing at $2 per million input tokens and $6 per million output tokens, while a 500,000-token context window and a broader Copilot rollout make the model easier to deploy for agentic coding and knowledge work.",
+                         "monthId":  "2026-09",
+                         "monthLabel":  "September 2026",
+                         "image":  {
+                                       "src":  "ai-news/2026-09/images/grok-47-benchmark-overview.svg",
+                                       "alt":  "Data-news graphic separating Grok 4.7 API economics, context length, long-task workflow and vendor-reported benchmark panels",
+                                       "caption":  "A UGA LLM Lab explanatory graphic based on SpaceXAI’s release and documentation. Each benchmark keeps its own unit and scale; the panels should not be read as one composite ranking or independent verification."
+                                   }
+                     },
+                     {
                          "slug":  "microsoft-retrochimera-retrosynthesis",
                          "category":  "Research · AI for Science",
                          "sortDate":  "2026-09-21",
