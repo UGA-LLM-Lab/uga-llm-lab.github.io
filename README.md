@@ -10,7 +10,7 @@ AI/SI News uses a separate monthly archive so that articles do not require indiv
 
 - Add each month's stories to `ai-news/YYYY-MM/data.js` and place their images in that month's `images` folder.
 - Register a new month once in `ai-news/catalog.js`.
-- After editing articles, run `powershell -File ai-news/build-index.ps1` and include the generated `ai-news/archive/` files in your PR. The archive downloads 50 article summaries at a time; keep editing monthly `data.js` files rather than the generated index.
+- The archive reads months on demand and displays 50 articles at a time. Article counts and pagination are calculated automatically, with no generated index or page files to update.
 - Update the heat and research-attention panel in `ai-news/trending.js`.
 - Daily reports and weekly news use the shared article schema; weekly in-depth analysis is rendered from its separate JSON dataset.
 - A copyable generation specification for future AI-produced news packages is available in `ai-news/IMPORT_GUIDE.md`.

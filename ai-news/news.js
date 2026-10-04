@@ -2,15 +2,10 @@
   "use strict";
 
   const catalog = window.AI_NEWS_CATALOG || { months: [] };
+  const months = [...catalog.months].sort((a, b) => b.id.localeCompare(a.id));
   const monthStore = window.AI_NEWS_MONTH_DATA = window.AI_NEWS_MONTH_DATA || {};
   const PAGE_SIZE = 50;
   const monthRequests = new Map();
-
-  const fetchJson = async (url) => {
-    const response = await fetch(url);
-    if (!response.ok) throw new Error(`Unable to load ${url}`);
-    return response.json();
-  };
 
   const escapeHtml = (value = "") => String(value)
     .replaceAll("&", "&amp;")
@@ -30,20 +25,24 @@
   };
 
   const loadMonth = (month) => {
-    if (monthStore[month.id]) return Promise.resolve();
+    if (Array.isArray(monthStore[month.id]?.articles)) return Promise.resolve();
     if (monthRequests.has(month.id)) return monthRequests.get(month.id);
 
     const request = new Promise((resolve, reject) => {
       const script = document.createElement("script");
       script.src = month.data;
       script.onload = () => {
-        if (!monthStore[month.id]?.articles) {
+        script.remove();
+        if (!Array.isArray(monthStore[month.id]?.articles)) {
           reject(new Error(`No articles found in ${month.data}`));
           return;
         }
         resolve();
       };
-      script.onerror = () => reject(new Error(`Unable to load ${month.data}`));
+      script.onerror = () => {
+        script.remove();
+        reject(new Error(`Unable to load ${month.data}`));
+      };
       document.head.appendChild(script);
     }).catch((error) => {
       monthRequests.delete(month.id);
@@ -58,15 +57,45 @@
     return pinnedDifference || b.sortDate.localeCompare(a.sortDate);
   };
 
-  const getArticles = () => catalog.months.flatMap((month) => {
+  const getMonthArticles = (month) => {
     const monthData = monthStore[month.id];
     if (!monthData?.articles) return [];
     return monthData.articles.filter((article) => !article.hidden).map((article) => ({
       ...article,
       monthId: month.id,
       monthLabel: month.label
-    }));
-  }).sort(compareArticles);
+    })).sort(compareArticles);
+  };
+
+  const getArticles = () => months.flatMap(getMonthArticles).sort(compareArticles);
+
+  // A month is the download unit; page boundaries are computed from its records.
+  // Search may cache older months without expanding the visible archive.
+  const createArchivePager = () => {
+    const articles = [];
+    let nextMonth = 0;
+    let visibleCount = 0;
+
+    return {
+      async loadMore() {
+        const target = visibleCount + PAGE_SIZE;
+        while (articles.length < target && nextMonth < months.length) {
+          const month = months[nextMonth];
+          await loadMonth(month);
+          articles.push(...getMonthArticles(month));
+          nextMonth += 1;
+        }
+        visibleCount = Math.min(target, articles.length);
+      },
+      getState() {
+        return {
+          articles: articles.slice(0, visibleCount),
+          total: nextMonth === months.length ? articles.length : null,
+          more: visibleCount < articles.length || nextMonth < months.length
+        };
+      }
+    };
+  };
 
   const articleMeta = (article) => `
     <div class="ai-news-meta">
@@ -97,10 +126,15 @@
     if (!feature || !entry) return "";
 
     const analysisHref = `ai-weekly-analysis.html?week=${encodeURIComponent(entry.id)}`;
-    const review = articles.find((article) => article.slug === entry.reviewSlug);
-    const previous = articles
+    const review = articles.find((article) => article.slug === entry.reviewSlug)
+      || (entry.reviewSlug ? { monthId: entry.id.slice(0, 7), slug: entry.reviewSlug } : null);
+    const loadedPrevious = articles
       .filter((article) => article.category.startsWith("AI Weekly") && article.slug !== entry.reviewSlug)
       .slice(0, 2);
+    const previous = loadedPrevious.length ? loadedPrevious : (catalog.weeklyAnalyses || [])
+      .filter((item) => item.id !== entry.id && item.reviewSlug)
+      .slice(0, 2)
+      .map((item) => ({ monthId: item.id.slice(0, 7), slug: item.reviewSlug, dateLabel: item.label }));
 
     return `
       <section class="ai-news-weekly" data-ai-news-weekly aria-labelledby="ai-news-weekly-title">
@@ -158,7 +192,7 @@
     const content = normalizeSearchValue([
       article.summary,
       article.category,
-      ...article.content.map((block) => block.text || block.caption || "")
+      ...(article.content || []).map((block) => block.text || block.caption || "")
     ].join(" "));
 
     if (title === normalizedQuery) return 0;
@@ -211,10 +245,16 @@
   };
 
   const renderArchive = (mount, articles, {
-    query = "", total = articles.length, more = false, loading = false, error = ""
+    query = "", total = null, more = false, loading = false, error = ""
   } = {}) => {
     const normalizedQuery = normalizeSearchValue(query);
-    const archiveByMonth = catalog.months.map((month) => ({
+    const countLabel = total === null
+      ? `${articles.length} articles shown`
+      : `${total} ${total === 1 ? "article" : "articles"}`;
+    const progressLabel = total === null
+      ? `Showing ${articles.length} articles`
+      : `Showing ${articles.length} of ${total} ${total === 1 ? "article" : "articles"}`;
+    const archiveByMonth = months.map((month) => ({
       ...month,
       articles: articles.filter((article) => article.monthId === month.id)
     })).filter((month) => month.articles.length);
@@ -222,7 +262,7 @@
       <section class="ai-news-archive" aria-labelledby="ai-news-archive-title">
         <div class="section-bar">
           <h2 id="ai-news-archive-title">${normalizedQuery ? "Search results" : "Archive"}</h2>
-          <span>${total} ${total === 1 ? "article" : "articles"}</span>
+          <span>${countLabel}</span>
         </div>
         ${normalizedQuery ? (articles.length
           ? `<div class="ai-news-list ai-news-search-results">${articles.map(articleCard).join("")}</div>`
@@ -234,18 +274,20 @@
           </section>`).join("")}
         <div class="ai-news-pagination">
           ${more ? `<button class="button button--outline" type="button" data-ai-news-more${loading ? " disabled" : ""}>${loading ? "Loading..." : "Load more"}</button>` : ""}
-          <p role="status">Showing ${articles.length} of ${total} ${total === 1 ? "article" : "articles"}</p>
+          <p role="status" tabindex="-1">${progressLabel}</p>
           ${error ? `<p role="alert">${escapeHtml(error)}</p>` : ""}
         </div>
       </section>`;
   };
 
-  const renderIndex = (index, firstPage) => {
+  const renderIndex = (pager) => {
     const mount = document.querySelector("[data-ai-news-index]");
     if (!mount) return;
 
-    const archiveArticles = [...firstPage.articles];
-    let nextPage = 1;
+    const archiveCountLabel = () => {
+      const state = pager.getState();
+      return state.total === null ? `${state.articles.length} articles shown` : `${state.total} articles`;
+    };
     let loadingPage = false;
     let pageError = "";
     let searchResults = [];
@@ -265,12 +307,12 @@
           <label class="sr-only" for="ai-news-search-input">Search titles and article content</label>
           <div class="ai-news-search__control">
             <input id="ai-news-search-input" type="search" placeholder="Search titles and article content" autocomplete="off">
-            <span data-ai-news-search-status aria-live="polite">${index.total} articles</span>
+            <span data-ai-news-search-status aria-live="polite">${archiveCountLabel()}</span>
           </div>
         </form>
       </details>
 
-      ${renderWeeklyAnalysis(index.weekly || [])}
+      ${renderWeeklyAnalysis(getArticles())}
 
       <div class="ai-news-index-layout">
         <div data-ai-news-archive></div>
@@ -284,12 +326,14 @@
     const searchStatus = mount.querySelector("[data-ai-news-search-status]");
     const weeklySection = mount.querySelector("[data-ai-news-weekly]");
 
-    const showArchive = () => renderArchive(archiveMount, archiveArticles, {
-      total: index.total,
-      more: nextPage < index.pages.length,
-      loading: loadingPage,
-      error: pageError
-    });
+    const showArchive = () => {
+      const { articles, ...state } = pager.getState();
+      renderArchive(archiveMount, articles, {
+        ...state,
+        loading: loadingPage,
+        error: pageError
+      });
+    };
 
     const showSearch = () => renderArchive(archiveMount, searchResults.slice(0, searchLimit), {
       query: searchInput.value,
@@ -299,8 +343,8 @@
 
     const runSearch = async (query, version) => {
       try {
-        // Download article bodies only when a reader searches the full archive.
-        await Promise.all(catalog.months.map(loadMonth));
+        // Load any remaining months for full-archive title and content search.
+        await Promise.all(months.map(loadMonth));
         if (version !== searchVersion) return;
         searchResults = searchArticles(getArticles(), query);
         searchLimit = PAGE_SIZE;
@@ -322,7 +366,7 @@
       if (weeklySection) weeklySection.hidden = hasQuery;
       if (!hasQuery) {
         showArchive();
-        searchStatus.textContent = `${index.total} articles`;
+        searchStatus.textContent = archiveCountLabel();
         return;
       }
       searchStatus.textContent = "Searching...";
@@ -347,22 +391,25 @@
         showSearch();
         return;
       }
-      if (loadingPage || nextPage >= index.pages.length) return;
+      if (loadingPage || !pager.getState().more) return;
 
       loadingPage = true;
       pageError = "";
       showArchive();
       try {
-        // Each request contains at most 50 summaries; later pages are not prefetched.
-        const page = await fetchJson(index.pages[nextPage]);
-        archiveArticles.push(...page.articles);
-        nextPage += 1;
+        await pager.loadMore();
       } catch (error) {
         console.error(error);
         pageError = "More news could not be loaded. Click Load more to retry.";
       } finally {
         loadingPage = false;
-        if (!normalizeSearchValue(searchInput.value)) showArchive();
+        if (!normalizeSearchValue(searchInput.value)) {
+          showArchive();
+          searchStatus.textContent = archiveCountLabel();
+          const focusTarget = archiveMount.querySelector("[data-ai-news-more]")
+            || archiveMount.querySelector('.ai-news-pagination [role="status"]');
+          focusTarget?.focus({ preventScroll: true });
+        }
       }
     });
     searchDetails.addEventListener("toggle", () => {
@@ -464,11 +511,9 @@
 
     try {
       if (indexMount) {
-        const index = await fetchJson(catalog.archive);
-        const firstPage = index.pages.length
-          ? await fetchJson(index.pages[0])
-          : { articles: [] };
-        renderIndex(index, firstPage);
+        const pager = createArchivePager();
+        await pager.loadMore();
+        renderIndex(pager);
       }
       if (articleMount) {
         const monthId = new URLSearchParams(window.location.search).get("month");

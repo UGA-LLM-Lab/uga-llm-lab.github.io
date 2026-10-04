@@ -2,10 +2,9 @@
  * AI/SI News month registry
  *
  * Add each new month here after creating ai-news/YYYY-MM/data.js.
- * Run build-index.ps1 after changing articles to refresh the paginated archive.
+ * The archive reads these month files on demand, 50 visible articles at a time.
  */
 window.AI_NEWS_CATALOG = {
-  archive: "ai-news/archive/index.json",
   weeklyAnalyses: [
     {
       id: "2026-09-21-to-2026-09-27",
