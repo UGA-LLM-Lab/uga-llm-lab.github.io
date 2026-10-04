@@ -494,6 +494,17 @@ window.LLM_LAB_DATA = {
             { label: "Website", url: "https://kushagra0514.github.io/Persona_Portfolio/" },
             { label: "Email", url: "mailto:kg89867@uga.edu" }
           ]
+        },
+        {
+          name: "Shakthi Karthik",
+          role: "Undergrad · CS",
+          bio: "Interested in AI and machine learning, data analytics, full-stack development, data-driven systems, and emerging LLM applications.",
+          photo: "assets/images/shakthi-karthik.png",
+          website: "https://skarthikb-tech.github.io/",
+          links: [
+            { label: "Website", url: "https://skarthikb-tech.github.io/" },
+            { label: "Email", url: "mailto:sk73064@uga.edu" }
+          ]
         }
       ]
     },
