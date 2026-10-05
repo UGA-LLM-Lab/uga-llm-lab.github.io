@@ -486,7 +486,7 @@ window.LLM_LAB_DATA = {
         {
           name: "Kushagra Garg",
           role: "Undergrad · CS",
-          bio: "Builds accessible AI tools and software, including speech-to-text and degree-planning applications. Interested in LLM applications, systems programming, and STEM education.",
+          bio: "Builds speech-to-text and degree-planning tools; interested in LLMs, systems, and STEM education.",
           photo: "assets/images/members-kushagra-garg.png",
           photoZoom: 1.32,
           website: "https://kushagra0514.github.io/Persona_Portfolio/",
@@ -504,6 +504,16 @@ window.LLM_LAB_DATA = {
           links: [
             { label: "Website", url: "https://skarthikb-tech.github.io/" },
             { label: "Email", url: "mailto:sk73064@uga.edu" }
+          ]
+        },
+        {
+          name: "Ronit Parikh",
+          role: "Undergrad · CS",
+          bio: "Works on LLMs, AI applications, and full-stack development. Interested in RAG, tool-calling, AI agents, and LLM evaluation.",
+          photo: "assets/images/ronit-parikh.png",
+          links: [
+            { label: "GitHub", url: "https://github.com/rrp02136" },
+            { label: "LinkedIn", url: "https://www.linkedin.com/in/ronitparikh01/" }
           ]
         }
       ]
