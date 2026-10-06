@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="900" viewBox="0 0 1600 900" role="img" aria-labelledby="title desc">
+  <title id="title">OpenAI textGrain detection rates at a one percent false-positive target</title>
+  <desc id="desc">Line chart reproducing OpenAI's October 5 results: math detection rises from 36.5 percent at 200 tokens to 60.79 percent at 400 tokens; psychology rises from 78.5 percent to 94.31 percent.</desc>
+  <rect width="1600" height="900" fill="#f7f7f5"/>
+  <text x="120" y="110" font-family="Arial,Helvetica,sans-serif" font-size="48" font-weight="700" fill="#171717">textGrain detection improves with longer samples</text>
+  <text x="120" y="160" font-family="Arial,Helvetica,sans-serif" font-size="25" fill="#555">Detection rate at a fixed 1% false-positive target · source: OpenAI, October 5, 2026</text>
+  <g stroke="#d4d4d0" stroke-width="2">
+    <line x1="180" y1="700" x2="1450" y2="700"/>
+    <line x1="180" y1="590" x2="1450" y2="590"/>
+    <line x1="180" y1="480" x2="1450" y2="480"/>
+    <line x1="180" y1="370" x2="1450" y2="370"/>
+    <line x1="180" y1="260" x2="1450" y2="260"/>
+  </g>
+  <g font-family="Arial,Helvetica,sans-serif" font-size="22" fill="#656565" text-anchor="end">
+    <text x="160" y="707">0%</text><text x="160" y="597">25%</text><text x="160" y="487">50%</text><text x="160" y="377">75%</text><text x="160" y="267">100%</text>
+  </g>
+  <g font-family="Arial,Helvetica,sans-serif" font-size="24" fill="#3f3f3f" text-anchor="middle">
+    <text x="360" y="755">200 tokens</text><text x="815" y="755">300 tokens</text><text x="1270" y="755">400 tokens</text>
+  </g>
+  <polyline points="360,539.4 815,471.2 1270,432.5" fill="none" stroke="#1769aa" stroke-width="10" stroke-linecap="round" stroke-linejoin="round"/>
+  <polyline points="360,354.6 815,305.3 1270,285.0" fill="none" stroke="#d05a2a" stroke-width="10" stroke-linecap="round" stroke-linejoin="round"/>
+  <g fill="#1769aa"><circle cx="360" cy="539.4" r="13"/><circle cx="815" cy="471.2" r="13"/><circle cx="1270" cy="432.5" r="13"/></g>
+  <g fill="#d05a2a"><circle cx="360" cy="354.6" r="13"/><circle cx="815" cy="305.3" r="13"/><circle cx="1270" cy="285" r="13"/></g>
+  <g font-family="Arial,Helvetica,sans-serif" font-size="23" font-weight="700">
+    <text x="360" y="578" fill="#1769aa" text-anchor="middle">36.5%</text><text x="815" y="510" fill="#1769aa" text-anchor="middle">52.01%</text><text x="1270" y="471" fill="#1769aa" text-anchor="middle">60.79%</text>
+    <text x="360" y="323" fill="#d05a2a" text-anchor="middle">78.5%</text><text x="815" y="274" fill="#d05a2a" text-anchor="middle">89.7%</text><text x="1270" y="254" fill="#d05a2a" text-anchor="middle">94.31%</text>
+  </g>
+  <g font-family="Arial,Helvetica,sans-serif" font-size="25" font-weight="700">
+    <line x1="1080" y1="825" x2="1140" y2="825" stroke="#1769aa" stroke-width="9"/><text x="1160" y="833" fill="#333">Math</text>
+    <line x1="1275" y1="825" x2="1335" y2="825" stroke="#d05a2a" stroke-width="9"/><text x="1355" y="833" fill="#333">Psychology</text>
+  </g>
+</svg>
