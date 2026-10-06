@@ -453,6 +453,22 @@ window.LLM_LAB_DATA = {
       ]
     },
     {
+      id: "masters-students",
+      title: "Master's Students",
+      members: [
+        {
+          name: "Krishna Mohan",
+          role: "M.S. Student in AI",
+          bio: "Co-founded Alavon AI and is interested in machine learning, multi-agent systems, embedded systems, and entrepreneurship.",
+          photo: "assets/images/members-krishna-mohan.jpg",
+          links: [
+            { label: "LinkedIn", url: "https://www.linkedin.com/in/krishmo118/" },
+            { label: "Email", url: "mailto:km49142@uga.edu" }
+          ]
+        }
+      ]
+    },
+    {
       id: "undergraduate-students",
       title: "Undergraduate Students",
       members: [
