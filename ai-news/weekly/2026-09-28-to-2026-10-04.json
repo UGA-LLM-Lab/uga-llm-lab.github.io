@@ -1,0 +1,304 @@
+{
+  "title": "This week in AI",
+  "week": [
+    "2026-09-28",
+    "2026-10-04"
+  ],
+  "previous_week": [
+    "2026-09-21",
+    "2026-09-27"
+  ],
+  "structural_context": "This week strengthened the case that AI capability is becoming easier to put into workflows. It did not establish that deployment, productivity or hiring are advancing at the same speed. Product releases are immediate observations; organizational surveys and labor statistics describe earlier measurement periods. The clearest disagreement is between a rapid supply of new tools and slower, uneven evidence of broad economic gains.",
+  "scope_note": "The research-attention comparison uses two complete Hugging Face recommendation samples. Company and academic observations are independently sourced. Employer observations do not yet establish a verified, stable two-week hiring panel, so no internal hiring-growth rate is reported. Source retrieval remains incomplete; missing observations are not inactivity.",
+  "parts": [
+    {
+      "id": "research",
+      "label": "Research / Academia",
+      "findings": [
+        {
+          "title": "A larger recommendation sample does not mean every research direction is accelerating",
+          "confidence": "High",
+          "interpretation": "The defined recommendation sample grew from 140 to 233 unique papers. Efficiency and inference rose from 18 to 42 matches, with a share-adjusted index of 140; vision and multimodality rose from 31 to 69, index 134. Agents rose in raw count from 39 to 57 but fell in share, giving an index of 88. These are compatible observations, not contradictory scores.",
+          "horizons": {
+            "Immediate": "September 28–October 4 versus September 21–27: efficiency 12.9% to 18.0%; vision 22.1% to 29.6%; agents 27.9% to 24.5% of the recommendation population.",
+            "1–3 months": "Two comparable weeks cannot establish persistence. No synthetic four-week curve is shown.",
+            "6–24 months": "This sample cannot measure field-wide research growth. Broader bibliometric evidence must use a stable publication population and account for classification and indexing delay.",
+            "2–5 years": "No long-run estimate is inferred from recommendations. A persistent research direction may become routine infrastructure and attract fewer recommendations without becoming less useful."
+          },
+          "counterevidence": "Topics overlap and titles can understate a paper’s methods. Recommendation choices, release cycles, dominant labs and a larger denominator can change shares. Safety and self-improvement remain Watching because one of the weeks has fewer than five matches.",
+          "change_condition": "Four or more comparable observed weeks, stable classifications and independent publication or adoption evidence would support a more durable interpretation.",
+          "sources": [
+            "hf"
+          ]
+        },
+        {
+          "title": "Measured human outcomes remain a stronger deployment test than a model leaderboard",
+          "confidence": "Medium",
+          "interpretation": "The Swiss refugee-matching trial provides a concrete counterexample to judging AI value only through frontier-model scores. Its randomized design tests an operational decision, while retaining human authority. The result is useful precisely because its population, comparison and limitations can be specified.",
+          "horizons": {
+            "Immediate": "A September 28 preprint reports a 2,000-case trial, with a +2.19-percentage-point effect on the share of months employed over three years. It is not a general employment-rate or economy-wide productivity estimate.",
+            "1–3 months": "Independent scrutiny of the preprint and implementation details matters more than extrapolating the result to unrelated agent products.",
+            "6–24 months": "The result reinforces the value of evaluating complete decision workflows, including their constraints and human overrides. It does not establish that recent language-model deployments deliver comparable gains.",
+            "2–5 years": "The trial’s multi-year follow-up illustrates the lag between introducing a tool and observing durable outcomes. Short product cycles cannot replace that evidence."
+          },
+          "counterevidence": "The confidence interval is close to zero at its lower bound, and effects vary across pandemic-era cohorts. Swiss placement rules constrain external validity. The pre-analysis plan was registered after launch but before linked outcome data were received.",
+          "change_condition": "Replication across different placement systems, stable results under distribution shift and independently evaluated outcomes would increase confidence in transferability.",
+          "sources": [
+            "refugee"
+          ]
+        },
+        {
+          "title": "Scientific AI is broadening, while autonomous science remains an open problem",
+          "confidence": "Medium",
+          "interpretation": "Stanford’s 2026 AI Index estimates about 80,150 AI-related natural-science publications in 2025, 26% more than in 2024. Depending on field, AI accounts for 5.8%–8.8% of output, versus below 1% in 2010. That is evidence of diffusion into scientific work, not a count of important discoveries.",
+          "horizons": {
+            "Immediate": "The attention sample’s biomedical topic has only one matching title in each week. Watching here does not contradict the much broader scientific-publication evidence.",
+            "1–3 months": "A short sample can miss research published in journals, domain repositories and institutional channels. Conference and indexing cycles must be checked before declaring a slowdown.",
+            "6–24 months": "The Index also reports weak end-to-end research performance: PaperArena’s best agent reaches 38.8% versus an 83.5% PhD-expert baseline. Answering scientific questions and completing scientific research remain different tasks.",
+            "2–5 years": "Longer publication history supports broader use of AI methods. Academic and government contributions to scientific models and datasets remain substantial even as industry dominates notable general-purpose model releases."
+          },
+          "counterevidence": "The long-run quantities here come from one report family, with different underlying populations. They are not independent confirmations, and neither publication volume nor benchmark scores prove experimental discovery or reproducibility.",
+          "change_condition": "Independent bibliometric replication, multi-lab validated discoveries and stronger performance on reproducible end-to-end tasks would support a broader claim about autonomous research.",
+          "sources": [
+            "hai_science",
+            "hai_research"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "industry",
+      "label": "Industry",
+      "findings": [
+        {
+          "title": "The relevant price is cost per successful task, not just tokens",
+          "confidence": "Early signal",
+          "interpretation": "OpenAI’s Sol release and Anthropic’s Sonnet 5.5 update sharpen competition around usable work at lower cost. Anthropic reports faster output and fewer tokens per task, while keeping Sonnet’s listed token rates unchanged. Google’s Argon release adds a different constraint: capability may be available only to selected users initially.",
+          "horizons": {
+            "Immediate": "These are three organizations’ release observations. Sonnet 5.5’s claimed savings of up to 30% per task are company-test results, not a universal discount or an independent cross-model ranking.",
+            "1–3 months": "Comparable customer workflows should measure completion quality, retries, human review, latency and total spend. A cheaper attempt can be more expensive if it fails more often.",
+            "6–24 months": "McKinsey’s latest survey identifies AI operating cost as a constraint for about one-fifth of respondents. Better model economics could ease that constraint, but cannot remove integration or governance costs.",
+            "2–5 years": "Commoditization is a hypothesis to test through sustained competition and switching costs. A single launch week does not show that model capabilities or vendor margins have become commodities."
+          },
+          "counterevidence": "Vendor benchmarks differ in harnesses and effort settings. Anthropic still positions its higher-tier model as stronger on complex open-ended work; restricted access also limits what customers can verify.",
+          "change_condition": "Independent, repeated measurements of the same production tasks across providers would turn this early signal into stronger evidence of falling quality-adjusted cost.",
+          "sources": [
+            "sonnet",
+            "sol",
+            "argon",
+            "mckinsey"
+          ]
+        },
+        {
+          "title": "Workflow integration is advancing faster than proof of organization-wide returns",
+          "confidence": "Medium",
+          "interpretation": "Muse’s business connectors are an example of bringing tools into a working process rather than merely offering another chat interface. But access to business data is a capability, not evidence of widespread successful use. Larger enterprises and smaller organizations should be assessed separately.",
+          "horizons": {
+            "Immediate": "Meta’s September 29 expansion connects Muse to business applications, with approval required before consequential actions. Launch coverage does not supply a representative adoption or profit sample.",
+            "1–3 months": "Track actual repeat use, completed tasks, error handling and permission failures rather than sign-ups or announced integrations.",
+            "6–24 months": "McKinsey’s 2026 survey reports agent scaling at 40% of large organizations, up from 27% a year earlier; smaller organizations remain around 22%. Only 37% report any enterprise-level EBIT impact, roughly unchanged. These are respondent reports, not audited causal estimates.",
+            "2–5 years": "The recurring issue is organizational redesign. Deloitte’s leading-edge sample emphasizes productivity more than wholesale business reinvention; its expectation of more production projects is a plan, not a realized result."
+          },
+          "counterevidence": "McKinsey surveyed 1,719 participants in 97 countries in May–June 2026, with GDP weighting. Deloitte surveyed 3,235 senior leaders in 24 countries in August–September 2025. Their populations and field periods differ and neither represents every business.",
+          "change_condition": "Repeated, independently measured gains across small firms and large enterprises, including failed implementations and total costs, would strengthen the case for broad realized value.",
+          "sources": [
+            "muse",
+            "mckinsey",
+            "deloitte"
+          ]
+        },
+        {
+          "title": "Software portability is part of the infrastructure contest",
+          "confidence": "Medium",
+          "interpretation": "DeepSeek’s Ascend port makes a specific layer of AI computation available through familiar APIs on Huawei hardware. This is an engineering development with potential ecosystem significance. It is not proof that an entire model stack, supply chain or production workload has become interchangeable.",
+          "horizons": {
+            "Immediate": "The September 30 release targets Ascend 950, with explicit toolkit dependencies and a different scaling-factor format. Its published performance is a maintainer benchmark on specified workloads.",
+            "1–3 months": "The meaningful follow-up is reproducible performance across shapes and real deployments, plus maintenance activity and compatibility testing.",
+            "6–24 months": "The AI Index estimates that global AI compute capacity grew 3.3-fold annually from 2022 to 2025, reaching 17.1 million H100-equivalents. Such estimates describe aggregate capacity, not this port’s adoption or realized output.",
+            "2–5 years": "Hardware concentration, foundry exposure, power availability and software support can constrain competition even when interfaces are open. Ports can lower one switching barrier while leaving others intact."
+          },
+          "counterevidence": "Hardware-equivalent estimates depend on conversion assumptions. Repository availability and stars do not measure production use. Company announcements, planned spending and commissioned capacity are separate quantities.",
+          "change_condition": "Independent end-to-end deployment evidence across multiple organizations and hardware configurations, with disclosed cost and reliability, would support a stronger portability claim.",
+          "sources": [
+            "deepgemm",
+            "hai_research"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "talent",
+      "label": "Hiring / Talent",
+      "findings": [
+        {
+          "title": "AI-related demand can grow inside a weak overall hiring market",
+          "confidence": "Medium",
+          "interpretation": "LinkedIn’s September report, measuring August, reports US hiring 6.5% below a year earlier despite a 1.9% monthly increase. Its August AI update reports entry-level AI-engineer hiring up 62% year on year in the US during April–June. These observations describe different role populations and periods; both can be true.",
+          "horizons": {
+            "Immediate": "Current employer observations are not a verified stable two-week panel. No internal week-on-week growth, closure rate or shortage estimate is presented.",
+            "1–3 months": "The latest LinkedIn measures suggest broad weakness alongside specialized demand. Profile-reported starts are a hiring-rate proxy, not a census of all hires or current vacancies.",
+            "6–24 months": "OECD’s August assessment says the deterioration in young people’s labor-market position predates large language models and does not establish AI as its cause. Cyclical weakness and technological change require separate tests.",
+            "2–5 years": "A changing task mix may alter entry routes without eliminating whole occupations. Long-run forecasts and posting trends cannot demonstrate realized displacement."
+          },
+          "counterevidence": "LinkedIn membership and self-reporting differ from the full labor force. Entry-level hiring in several relatively AI-insulated occupations also weakened. Missing employer access remains missing observation, not a closed role.",
+          "change_condition": "A stable employer panel, official labor outcomes and occupation-level evidence controlling for the economic cycle would support a stronger account of AI’s contribution.",
+          "sources": [
+            "linkedin_sept",
+            "linkedin_ai",
+            "oecd"
+          ]
+        },
+        {
+          "title": "Skill requirements are changing; a talent shortage is not established",
+          "confidence": "Early signal",
+          "interpretation": "PwC’s 2026 Jobs Barometer examines more than a billion advertisements across 27 countries and territories and highlights changing task and skill combinations. This helps identify employer demand. It does not show that advertised roles were filled, that every worker earns a premium, or that an AI skill caused a wage difference.",
+          "horizons": {
+            "Immediate": "Newly recovered boards establish observable listings. First observation is not publication date, and duplicate employer/ATS surfaces are not separate employers.",
+            "1–3 months": "Compare persistent roles, seniority, skill requirements and disclosed compensation within a stable employer intersection before describing demand as a surge.",
+            "6–24 months": "Skills studies and organizational surveys point toward integration, judgment and domain knowledge, but source overlap matters: reports reusing the same job-ad dataset do not independently corroborate one another.",
+            "2–5 years": "WEF’s 2025–2030 job expectations and BLS’s 2025–2035 occupational projections are forward-looking, use different populations and cover multiple economic drivers. They are not current AI hiring counts."
+          },
+          "counterevidence": "A shortage claim would require evidence about supply, vacancy duration, hiring outcomes and comparable pay, not raw posting totals. Employer intentions can change with budgets, financing and the business cycle.",
+          "change_condition": "Consistent vacancy-to-hire friction, persistent demand across independent employers and comparable compensation/supply evidence would justify moving beyond an early signal.",
+          "sources": [
+            "pwc",
+            "wef",
+            "bls"
+          ]
+        },
+        {
+          "title": "Worker access and occupational mobility deserve separate measures",
+          "confidence": "Medium",
+          "interpretation": "PwC’s new worker survey shows that access to learning and development fell from 59% to 51% of respondents, even as AI use spread. This is evidence about reported workplace experience, not an estimate of AI’s causal effect on pay or employment. The comparison strengthens the case for measuring training access alongside tool deployment.",
+          "horizons": {
+            "Immediate": "Released September 29, the survey reflects May–June interviews. It therefore cannot measure the effects of this week’s agent launches. August US JOLTS separately reports 7.1 million openings and 5.2 million hires; these have different stock/flow definitions and cover the whole nonfarm economy.",
+            "1–3 months": "Follow whether reported access to training improves and whether new tools reach the same worker groups. A fresh employer-board snapshot cannot provide that longitudinal answer.",
+            "6–24 months": "Compare repeated surveys with stable questions, geography and weighting. Shifts in workforce composition or macroeconomic conditions could explain changing confidence and access.",
+            "2–5 years": "The direction of occupational mobility is more defensible than an exact number of future job losses. MGI’s September 29 US scenario estimates 11 million transitions by 2035, with a 6–16 million sensitivity range; its 5–10-year assumptions extend beyond this horizon and include non-AI forces."
+          },
+          "counterevidence": "The survey is self-reported and its worker cohorts partly reflect perceived advantage. MGI uses modeled adoption and demand assumptions; wage and skill inputs partly overlap with other Lightcast-based reports, so these are not fully independent datasets. BLS measures actual aggregate flows but does not identify AI causation.",
+          "change_condition": "Comparable repeated worker surveys, observed training participation, and verified occupation-to-occupation transitions would distinguish improved access from optimistic plans.",
+          "sources": [
+            "pwc_workers",
+            "jolts",
+            "mgi_paths"
+          ]
+        }
+      ]
+    }
+  ],
+  "sources": {
+    "hf": {
+      "label": "Hugging Face Daily Papers · comparable recommendation records",
+      "url": "https://huggingface.co/papers",
+      "measurement": "September 21–27 and September 28–October 4, 2026; 140 and 233 unique paper IDs"
+    },
+    "refugee": {
+      "label": "Bansak et al. · AI-based matching improves refugee employment · v1",
+      "url": "https://arxiv.org/abs/2609.35448v1",
+      "release": "2026-09-28",
+      "measurement": "Swiss randomized trial, January 2020–June 2023 enrollment, three-year outcomes, 2,000 cases; preprint"
+    },
+    "hai_science": {
+      "label": "Stanford AI Index 2026 · Science",
+      "url": "https://hai.stanford.edu/ai-index/2026-ai-index-report/science",
+      "measurement": "Global bibliometric and benchmark synthesis; historical series through 2025, heterogeneous underlying datasets"
+    },
+    "hai_research": {
+      "label": "Stanford AI Index 2026 · Research and Development",
+      "url": "https://hai.stanford.edu/ai-index/2026-ai-index-report/research-and-development",
+      "measurement": "Notable-model and infrastructure estimates, principally through 2025; not all models or all research"
+    },
+    "sonnet": {
+      "label": "Anthropic · Claude Sonnet 5.5",
+      "url": "https://www.anthropic.com/claude-sonnet-5-5",
+      "release": "2026-09-28",
+      "measurement": "Vendor evaluations; cost per task depends on workload and effort"
+    },
+    "sol": {
+      "label": "OpenAI · GPT-6.1 Sol",
+      "url": "https://openai.com/index/introducing-gpt-6-1-sol/",
+      "release": "2026-09-29",
+      "measurement": "Vendor evaluations and launch availability"
+    },
+    "argon": {
+      "label": "Google · Gemini 4 Argon",
+      "url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-4-argon/",
+      "release": "2026-09-30",
+      "measurement": "Vendor evaluations; phased access, not general availability"
+    },
+    "muse": {
+      "label": "Meta · Muse for Small Business",
+      "url": "https://about.fb.com/news/2026/09/introducing-muse-small-business/",
+      "release": "2026-09-29",
+      "measurement": "Product expansion, US and Canada; not representative adoption data"
+    },
+    "deepgemm": {
+      "label": "DeepSeek · DeepGEMM-Ascend README",
+      "url": "https://github.com/deepseek-ai/DeepGEMM-Ascend",
+      "release": "2026-09-30",
+      "measurement": "Maintainer tests on Ascend 950DT, CANN 9.20; specified matrix workloads"
+    },
+    "mckinsey": {
+      "label": "McKinsey · The state of AI in 2026",
+      "url": "https://www.mckinsey.com/capabilities/quantumblack/our-insights/the-state-of-ai",
+      "release": "2026-08-25",
+      "measurement": "Online survey May 4–June 8, 2026; 1,719 participants, 97 nations; GDP-weighted; 36% at organizations above $1B revenue"
+    },
+    "deloitte": {
+      "label": "Deloitte · State of AI in the Enterprise 2026",
+      "url": "https://www.deloitte.com/us/en/what-we-do/capabilities/applied-artificial-intelligence/content/state-of-ai-in-the-enterprise.html",
+      "measurement": "3,235 senior leaders, 24 countries, August–September 2025; leading-edge organizations; half IT, half business"
+    },
+    "linkedin_sept": {
+      "label": "LinkedIn Workforce Report · September 2026",
+      "url": "https://economicgraph.linkedin.com/workforce-data/reports/linkedin-workforce-report-september-2026",
+      "release": "2026-09-18",
+      "measurement": "US membership-based hiring rate, August 2026; profile-reported new-job starts; seasonally adjusted monthly comparison"
+    },
+    "linkedin_ai": {
+      "label": "LinkedIn AI Labor Market Update · August 2026",
+      "url": "https://delivery-p143253-e1476319.adobeaemcloud.com/adobe/assets/urn:aaid:aem:ef153078-1061-4817-82e7-a1c027d7a7d7/original/as/AI-Labor-Market-Update-August-2026-v2.pdf",
+      "measurement": "April–June 2026 profile-based hiring comparisons in US, UK, France, Germany and India; membership-based rates"
+    },
+    "oecd": {
+      "label": "OECD · Young people, labour markets and AI",
+      "url": "https://www.oecd.org/en/blogs/2026/08/young-people-labour-markets-and-ai-what-oecd-evidence-shows.html",
+      "release": "2026-08-15",
+      "measurement": "Cross-country labor assessment; causal limits explicitly stated"
+    },
+    "pwc": {
+      "label": "PwC · 2026 Global AI Jobs Barometer",
+      "url": "https://www.pwc.com/gx/en/news-room/press-releases/2026/pwc-2026-ai-jobs-barometer.html",
+      "measurement": "Over one billion job advertisements, 27 countries/territories, linked occupational and company analysis; observational"
+    },
+    "wef": {
+      "label": "WEF · Future of Jobs Report 2025",
+      "url": "https://www.weforum.org/publications/the-future-of-jobs-report-2025/in-full/2-jobs-outlook/",
+      "measurement": "Employer expectations for 2025–2030 across multiple structural drivers; forecasts, not realized changes"
+    },
+    "bls": {
+      "label": "BLS · Occupational projections 2025–2035",
+      "url": "https://www.bls.gov/emp/tables/occupational-projections-and-characteristics.htm",
+      "measurement": "US occupational employment projections; decade horizon, not current postings or AI-attributable hires"
+    },
+    "pwc_workers": {
+      "label": "PwC · Global Workforce Hopes and Fears Survey 2026",
+      "url": "https://www.pwc.com/gx/en/issues/workforce/hopes-and-fears.html",
+      "release": "2026-09-29",
+      "measurement": "49,364 workers in 48 countries/regions and 29 sectors; May–June 2026; weighted to working-population age and gender within geography; self-reports"
+    },
+    "jolts": {
+      "label": "BLS · August 2026 Job Openings and Labor Turnover",
+      "url": "https://www.bls.gov/news.release/jolts.nr0.htm",
+      "release": "2026-09-29",
+      "measurement": "US nonfarm establishments; openings are an end-of-month stock, hires a monthly flow; seasonally adjusted; all occupations, not AI-specific"
+    },
+    "mgi_paths": {
+      "label": "McKinsey Global Institute · Workforce in motion",
+      "url": "https://www.mckinsey.com/mgi/our-research/Workforce-in-motion-Skills-and-pathways-to-future-jobs-in-the-United-States",
+      "release": "2026-09-29",
+      "measurement": "US 2025–2035 modeled scenarios combining automation, demographics and other demand drivers; Lightcast skill/wage inputs; assumptions, not observed transitions"
+    }
+  }
+}

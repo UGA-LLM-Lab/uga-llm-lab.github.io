@@ -7,30 +7,31 @@
  */
 window.AI_NEWS_TRENDS = {
   title: "Research Attention",
-  period: "September 21–27, 2026",
-  comparison: "Compared with September 14–20",
-  updated: "September 28, 2026",
-  note: "Relative topic attention across 140 unique Hugging Face Daily Papers recommendations. Baseline = 100; topics may overlap.",
+  period: "September 28–October 4, 2026",
+  comparison: "Compared with September 21–27",
+  updated: "October 5, 2026",
+  note: "Relative topic attention across 233 unique Hugging Face Daily Papers recommendations. Baseline = 100; topics may overlap.",
   items: [
-    { label: "Robotics & world models", index: 172, share: 15.7, direction: "up" },
-    { label: "Evaluation & verification", index: 144, share: 14.3, direction: "up" },
-    { label: "Speech & audio", index: 131, share: 5.0, direction: "up" },
-    { label: "Memory & context", index: 129, share: 7.9, direction: "up" },
-    { label: "Agents & tool use", index: 122, share: 27.9, direction: "up" },
-    { label: "Vision & multimodality", index: 116, share: 22.1, direction: "up" },
-    { label: "Efficiency & inference systems", index: 94, share: 12.9, direction: "down" },
-    { label: "Reasoning & mathematics", index: 68, share: 5.7, direction: "down" }
+    { label: "Efficiency & inference systems", index: 140, share: 18.0, direction: "up" },
+    { label: "Vision & multimodality", index: 134, share: 29.6, direction: "up" },
+    { label: "Reasoning & mathematics", index: 113, share: 6.4, direction: "up" },
+    { label: "Agents & tool use", index: 88, share: 24.5, direction: "down" },
+    { label: "Memory & context", index: 76, share: 6.0, direction: "down" },
+    { label: "Evaluation & verification", index: 69, share: 9.9, direction: "down" },
+    { label: "Robotics & embodied AI", index: 63, share: 9.9, direction: "down" },
+    { label: "Coding & software", index: 60, share: 3.9, direction: "down" },
+    { label: "Speech & audio", index: 52, share: 2.6, direction: "down" }
   ]
 };
 
 window.AI_NEWS_WEEKLY_FEATURE = {
-  analysisId: "2026-09-21-to-2026-09-27",
-  title: "Agents, Infrastructure, and Reliability",
-  summary: "Agents moved into persistent workflows, but product incidents exposed reliability gaps. Research attention shifted toward robotics and evaluation, while infrastructure announcements focused on power, cooling, and capacity.",
-  coverAlt: "UGA LLM Lab weekly graphic summarizing developments in agents, infrastructure, scientific AI, and robotics",
+  analysisId: "2026-09-28-to-2026-10-04",
+  title: "New tools arrive; real-world evidence takes longer",
+  summary: "Persistent agents, stronger models and new deployment controls reached users. A randomized field trial offered rare outcome evidence, while broad productivity and hiring effects remain unsettled.",
+  coverAlt: "OpenAI’s official dots artwork, illustrating the week’s reporting on persistent AI agents",
   metrics: [
-    { value: "140", label: "papers sampled" },
-    { value: "172", label: "robotics attention index" },
-    { value: "144", label: "evaluation attention index" }
+    { value: "233", label: "papers sampled" },
+    { value: "140", label: "efficiency attention index" },
+    { value: "134", label: "vision attention index" }
   ]
 };

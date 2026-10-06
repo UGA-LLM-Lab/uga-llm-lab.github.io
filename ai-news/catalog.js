@@ -7,6 +7,13 @@
 window.AI_NEWS_CATALOG = {
   weeklyAnalyses: [
     {
+      id: "2026-09-28-to-2026-10-04",
+      label: "September 28–October 4, 2026",
+      data: "ai-news/weekly/2026-09-28-to-2026-10-04.json",
+      reviewSlug: "weekly-ai-september-28-october-4",
+      cover: "ai-news/2026-10/images/openai-dots-official-release-20260929.png"
+    },
+    {
       id: "2026-09-21-to-2026-09-27",
       label: "September 21–27, 2026",
       data: "ai-news/weekly/2026-09-21-to-2026-09-27.json",

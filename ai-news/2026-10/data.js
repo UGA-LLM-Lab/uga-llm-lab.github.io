@@ -1267,6 +1267,121 @@ window.AI_NEWS_MONTH_DATA["2026-10"] = {
           "url": "https://www.theverge.com/ai-artificial-intelligence/1004543/openai-gpt-cheat-starcraft"
         }
       ]
+    },
+    {
+      "slug": "weekly-ai-september-28-october-4",
+      "category": "Weekly News",
+      "sortDate": "2026-10-05",
+      "dateLabel": "September 28–October 4, 2026",
+      "title": "Weekly AI: persistent agents, deployment controls and a field test",
+      "summary": "OpenAI dots, Google Gemini 4 Argon, NVIDIA agent-safety controls, Meta Muse for small businesses and a Swiss randomized matching trial define five developments from the completed week.",
+      "image": {
+        "src": "ai-news/2026-10/images/openai-dots-official-release-20260929.png",
+        "alt": "OpenAI’s official dots release artwork showing four colorful characters below the dots name",
+        "caption": "Official promotional artwork from OpenAI’s September 29 dots announcement. Source: OpenAI; reproduced for editorial context, unchanged."
+      },
+      "content": [
+        {
+          "type": "paragraph",
+          "text": "Five developments from September 28–October 4, 2026 connect persistent agents, longer model workflows and deployment controls with evidence from a real-world allocation trial. The accounts below distinguish what was released, how it works and what the available evidence can establish."
+        },
+        {
+          "type": "figure",
+          "src": "ai-news/2026-10/images/ai-weekly-september-28-october-4.png",
+          "alt": "UGA LLM Lab five-story AI news poster for September 28–October 4, 2026",
+          "caption": "The same five developments, in the same order. Entire poster generated as editorial artwork; illustrations are not documentary photographs."
+        },
+        {
+          "type": "heading",
+          "text": "1. OpenAI introduces dots for ongoing work"
+        },
+        {
+          "type": "paragraph",
+          "text": "OpenAI introduced dots on September 29 as persistent agents powered by GPT-6 Astra, with their own cloud computer, browser and connected applications. Instead of completing only the current conversation, a dot can continue assigned projects and bring back work for review. The initial rollout covers Pro and Business Premium users in eligible markets; Enterprise, Edu and Healthcare workspaces need administrator-enabled beta access. OpenAI also previewed specialist organizational dots with separate identities and credentials, but those are focused enterprise pilots. They should not be confused with broadly available autonomous staff."
+        },
+        {
+          "type": "paragraph",
+          "text": "The release distinguishes background discovery from actions taken on a user’s behalf. Proactive research uses read-only tools in connected apps; actions affecting accounts or sharing information are checked against instructions, custom rules and safety requirements. Users can inspect Activity View and redirect work. The first dot is included in eligible personal and business plans, while deeper work has an allowance; tasks it starts in Codex or ChatGPT Work still count toward those products’ usual limits. These permissions and usage terms define what the ongoing-work promise means in practice, and OpenAI advises reviewing consequential output."
+        },
+        {
+          "type": "heading",
+          "text": "2. Google starts a phased Gemini 4 Argon rollout"
+        },
+        {
+          "type": "paragraph",
+          "text": "Google announced Gemini 4 Argon on September 30 for extended software-engineering, enterprise and defensive-cybersecurity workflows. Initial access goes to trusted cyber defenders through its Fairwind Program, with wider developer, enterprise and consumer availability planned after further testing. This is a phased release rather than general availability. Google announced introductory pricing of $2 per million input tokens and $10 per million output tokens, with a 95% discount on cached input. Those are token charges; total workflow cost also depends on how much work is attempted and how often it needs correction."
+        },
+        {
+          "type": "paragraph",
+          "text": "Argon’s one-million-token limit applies to output, expanded from 64,000 tokens, rather than describing its context window. Google says the extra headroom supports longer reasoning and execution trajectories. It also reports internal engineering results, including agents identifying data-center memory optimizations that freed more than 300 TiB after rollout. Such examples add concrete deployment context, but remain company-reported outcomes. Google describes automated and manual audits for critical code migrations before production release. The relevant follow-up is whether external users reproduce useful, reliable results under their own workloads and access controls, once they can obtain the model."
+        },
+        {
+          "type": "heading",
+          "text": "3. NVIDIA puts agent controls outside the model"
+        },
+        {
+          "type": "paragraph",
+          "text": "NVIDIA announced its Open Agent Safety Platform on September 28, combining OpenShell secure runtime software with the Sentry reference system design. OpenShell traces agent actions and enforces policy at a runtime boundary outside the model and agent harness. NVIDIA says the open-source software is broadly available and can be extended to third-party computing platforms. Sentry adds an isolated watchdog on BlueField-4 data-processing units, intended to monitor behavior and stop agents that cross their permitted boundaries. The architecture gives the enforcement system a separate trust domain from the agent doing the work."
+        },
+        {
+          "type": "paragraph",
+          "text": "The hardware layer uses NVIDIA DOCA software to inspect requests and responses, verify agent identity and enforce access policies for data, tools, APIs and services. NVIDIA also describes work with Anthropic in which the agent loop runs separately from the sandboxes where tasks execute, allowing controls to operate around those sandboxes. These are specific governance mechanisms, rather than a claim that a model will always follow instructions. Sentry’s millisecond containment remains a vendor claim, and NVIDIA cautions that products and partner features have different delivery stages. Available OpenShell software and a hardware reference design therefore carry different deployment commitments."
+        },
+        {
+          "type": "heading",
+          "text": "4. Meta connects Muse to small-business workflows"
+        },
+        {
+          "type": "paragraph",
+          "text": "Meta expanded Muse for Small Business on September 29, adding skills and connections to tools used for commerce, accounting, marketing and collaboration. Its personal agent was introduced earlier that month in the United States and Canada; this announcement concerns the business-workflow expansion. Named connectors include Shopify, Stripe, Intuit QuickBooks, Canva, Asana and Slack, alongside Instagram professional-account analytics, Facebook Pages and Meta advertising accounts. A business owner can bring storefront, financial and campaign information into the same task instead of repeatedly assembling that context across separate applications."
+        },
+        {
+          "type": "paragraph",
+          "text": "Meta’s examples include reviewing monthly financial performance for unusual expenses, combining sales and campaign data into a growth plan, and analyzing advertising results before drafting a new campaign. Muse can prepare work proactively, but Meta says publishing, sending messages and spending require approval. The available connector list is visible in app settings, and custom connectors support other services. Meta describes most common use as free, with subscriptions for additional needs. The announcement supplies capabilities and early testimonials, rather than controlled evidence of business returns; account connection and a prepared campaign alone do not establish higher revenue or reduced operating costs."
+        },
+        {
+          "type": "heading",
+          "text": "5. A Swiss randomized trial measures AI matching in practice"
+        },
+        {
+          "type": "paragraph",
+          "text": "A September 28 preprint by researchers including Stanford and ETH Zurich reports a Swiss trial of GeoMatch, an employment-oriented refugee-placement tool. From January 2020 through June 2023, 2,000 cases—not 2,000 individual people—were randomized to algorithmic or status-quo canton recommendations. Gradient-boosted models predicted employment across cantons, and constrained optimization respected placement quotas. Officers retained final authority. Separate, matching quota systems held the overall distribution of canton and origin-group placements constant between arms, helping isolate better matching rather than simply sending more treatment cases to stronger labor markets."
+        },
+        {
+          "type": "paragraph",
+          "text": "The primary outcome was the average share of months employed during three years, aggregated across adult members of each case. The intention-to-treat estimate was +2.19 percentage points against a 22.3% control mean, with a 95% confidence interval of +0.05 to +4.33 points. This is distinct from employment at a single follow-up date. Pandemic-era labor-market changes complicated prediction, and subgroup comparisons were not prespecified. The analysis plan was registered after launch but before linked employment outcomes arrived. The result remains a preprint about a constrained allocation system; it does not establish comparable benefits for general-purpose language-model agents."
+        }
+      ],
+      "sources": [
+        {
+          "label": "OpenAI · Introducing dots, September 29",
+          "url": "https://openai.com/index/introducing-dots/"
+        },
+        {
+          "label": "Google · Gemini 4 Argon, September 30",
+          "url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-4-argon/"
+        },
+        {
+          "label": "NVIDIA · Open Agent Safety Platform, September 28",
+          "url": "https://nvidianews.nvidia.com/news/open-agent-safety-platform"
+        },
+        {
+          "label": "Meta · Muse for Small Business, September 29",
+          "url": "https://about.fb.com/news/2026/09/introducing-muse-small-business/"
+        },
+        {
+          "label": "Bansak and colleagues · AI-based matching improves refugee employment, v1",
+          "url": "https://arxiv.org/abs/2609.35448v1"
+        },
+        {
+          "label": "Bansak and colleagues · GeoMatch trial methods, results and limitations · v1",
+          "url": "https://arxiv.org/html/2609.35448v1"
+        },
+        {
+          "label": "Bansak and colleagues · full paper, Table 1 and supporting analyses · v1",
+          "url": "https://arxiv.org/pdf/2609.35448v1"
+        }
+      ]
     }
   ]
 };

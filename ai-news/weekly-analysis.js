@@ -19,10 +19,25 @@
     const start = new Date(`${dates[0]}T12:00:00`);
     const end = new Date(`${dates[1]}T12:00:00`);
     const month = new Intl.DateTimeFormat("en-US", { month: "long" }).format(start);
-    return `${month} ${start.getDate()}–${end.getDate()}, ${end.getFullYear()}`;
+    const endMonth = new Intl.DateTimeFormat("en-US", { month: "long" }).format(end);
+    if (start.getFullYear() !== end.getFullYear()) {
+      return `${month} ${start.getDate()}, ${start.getFullYear()}–${endMonth} ${end.getDate()}, ${end.getFullYear()}`;
+    }
+    return month === endMonth
+      ? `${month} ${start.getDate()}–${end.getDate()}, ${end.getFullYear()}`
+      : `${month} ${start.getDate()}–${endMonth} ${end.getDate()}, ${end.getFullYear()}`;
   };
 
-  const sourceMap = (analysis) => new Map((analysis.sources || []).map((source) => [source.id, source]));
+  const sourceMap = (analysis) => {
+    const sources = Array.isArray(analysis.sources)
+      ? analysis.sources
+      : Object.entries(analysis.sources || {}).map(([id, source]) => ({
+        ...source,
+        id,
+        name: source.name || source.label
+      }));
+    return new Map(sources.map((source) => [source.id, source]));
+  };
 
   const renderSources = (ids, sources) => {
     const items = (ids || []).map((id) => sources.get(id)).filter(Boolean);
@@ -32,38 +47,37 @@
         <summary>Sources</summary>
         <ul>
           ${items.map((source) => `
-            <li><a href="${escapeHtml(source.url)}" target="_blank" rel="noopener noreferrer">${escapeHtml(source.name)} <span aria-hidden="true">↗</span></a></li>`).join("")}
+            <li><a href="${escapeHtml(source.url)}" target="_blank" rel="noopener noreferrer">${escapeHtml(source.name)} <span aria-hidden="true">↗</span></a>${source.measurement ? `<p>${escapeHtml(source.measurement)}</p>` : ""}</li>`).join("")}
         </ul>
       </details>`;
   };
 
-  const renderClaim = (claim, sources) => `
+  const renderClaim = (claim, sources) => {
+    const horizons = Array.isArray(claim.horizons)
+      ? claim.horizons
+      : [
+        { label: "This week", text: claim.this_week },
+        { label: "Short term", text: claim.near_term },
+        { label: "Structural context", text: claim.structural },
+        { label: "Medium to long term", text: claim.long_run }
+      ].filter((horizon) => horizon.text);
+
+    return `
     <article class="weekly-claim">
       <div class="weekly-claim__heading">
         <div>
           <h2>${escapeHtml(claim.claim)}</h2>
-          <p class="weekly-claim__scope">${escapeHtml(claim.scope)}</p>
+          ${claim.scope ? `<p class="weekly-claim__scope">${escapeHtml(claim.scope)}</p>` : ""}
         </div>
         <span class="weekly-claim__confidence">${escapeHtml(claim.confidence)}</span>
       </div>
 
       <div class="weekly-horizons" aria-label="Evidence by time horizon">
-        <section>
-          <h3>This week</h3>
-          <p>${escapeHtml(claim.this_week)}</p>
-        </section>
-        <section>
-          <h3>Short term</h3>
-          <p>${escapeHtml(claim.near_term)}</p>
-        </section>
-        <section>
-          <h3>Structural context</h3>
-          <p>${escapeHtml(claim.structural)}</p>
-        </section>
-        <section>
-          <h3>Medium to long term</h3>
-          <p>${escapeHtml(claim.long_run)}</p>
-        </section>
+        ${horizons.map((horizon) => `
+          <section>
+            <h3>${escapeHtml(horizon.label)}</h3>
+            <p>${escapeHtml(horizon.text)}</p>
+          </section>`).join("")}
       </div>
 
       <div class="weekly-claim__review">
@@ -82,8 +96,39 @@
         ${renderSources(claim.evidence, sources)}
       </div>
     </article>`;
+  };
+
+  const normalizeAnalysis = (analysis) => {
+    if (Array.isArray(analysis.tabs) || !Array.isArray(analysis.parts)) return analysis;
+
+    return {
+      ...analysis,
+      period: { current: analysis.week, previous: analysis.previous_week },
+      synthesis: "New AI tools are reaching more workflows, while evidence of broader productivity and hiring effects remains mixed.",
+      methodology_note: analysis.scope_note,
+      sources: Object.entries(analysis.sources || {}).map(([id, source]) => ({
+        ...source,
+        id,
+        name: source.name || source.label
+      })),
+      tabs: analysis.parts.map((part) => ({
+        id: part.id,
+        label: part.label,
+        claims: (part.findings || []).map((finding) => ({
+          claim: finding.title,
+          confidence: finding.confidence,
+          interpretation: finding.interpretation,
+          horizons: Object.entries(finding.horizons || {}).map(([label, text]) => ({ label, text })),
+          counterevidence: finding.counterevidence,
+          what_would_change: finding.change_condition,
+          evidence: finding.sources
+        }))
+      }))
+    };
+  };
 
   const renderAnalysis = (analysis) => {
+    analysis = normalizeAnalysis(analysis);
     const sources = sourceMap(analysis);
     const currentPeriod = periodLabel(analysis.period?.current);
     const visibleTabs = analysis.tabs || [];
