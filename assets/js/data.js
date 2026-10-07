@@ -531,7 +531,8 @@ window.LLM_LAB_DATA = {
           photo: "assets/images/ronit-parikh.png",
           links: [
             { label: "GitHub", url: "https://github.com/rrp02136" },
-            { label: "LinkedIn", url: "https://www.linkedin.com/in/ronitparikh01/" }
+            { label: "LinkedIn", url: "https://www.linkedin.com/in/ronitparikh01/" },
+            { label: "Email", url: "mailto:parikh.ronit@uga.edu" }
           ]
         },
         {
@@ -543,6 +544,36 @@ window.LLM_LAB_DATA = {
             { label: "GitHub", url: "https://github.com/RyanTowns14" },
             { label: "LinkedIn", url: "https://www.linkedin.com/in/ryan-towns-401147377" },
             { label: "Email", url: "mailto:rwt64620@uga.edu" }
+          ]
+        },
+        {
+          name: "Pranavi Eshwar Kedari",
+          role: "Undergrad · CS",
+          bio: "Honors student focused on software engineering, applied AI, and scalable data systems, with experience in enterprise software and startup product development.",
+          photo: "assets/images/members-pranavi-kedari.png",
+          links: [
+            { label: "Email", url: "mailto:pek03680@uga.edu" }
+          ]
+        },
+        {
+          name: "Trishika Movva",
+          role: "Undergrad · CS",
+          bio: "Studies applied data science and co-founded Alavon AI; interested in AI, machine learning, LLMs, and data-driven applications.",
+          photo: "assets/images/members-trishika-movva.png",
+          links: [
+            { label: "LinkedIn", url: "https://www.linkedin.com/in/trishika-movva-143009226" },
+            { label: "Email", url: "mailto:tm09723@uga.edu" }
+          ]
+        },
+        {
+          name: "Vedant Vinit Naik",
+          role: "Undergrad · CS",
+          bio: "Works across software engineering, AI agent workflows, robotics, and manufacturing systems.",
+          photo: "assets/images/members-vedant-naik.png",
+          links: [
+            { label: "LinkedIn", url: "https://www.linkedin.com/in/vedna" },
+            { label: "GitHub", url: "https://github.com/naikv0889" },
+            { label: "Email", url: "mailto:vvn77894@uga.edu" }
           ]
         }
       ]
