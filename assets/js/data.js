@@ -461,6 +461,8 @@ window.LLM_LAB_DATA = {
           role: "M.S. Student in AI",
           bio: "Co-founded Alavon AI and is interested in machine learning, multi-agent systems, embedded systems, and entrepreneurship.",
           photo: "assets/images/members-krishna-mohan.jpg",
+          photoZoom: 1.12,
+          photoPosition: "left",
           links: [
             { label: "LinkedIn", url: "https://www.linkedin.com/in/krishmo118/" },
             { label: "Email", url: "mailto:km49142@uga.edu" }
