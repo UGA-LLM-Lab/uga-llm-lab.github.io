@@ -533,6 +533,17 @@ window.LLM_LAB_DATA = {
             { label: "GitHub", url: "https://github.com/rrp02136" },
             { label: "LinkedIn", url: "https://www.linkedin.com/in/ronitparikh01/" }
           ]
+        },
+        {
+          name: "Ryan Towns",
+          role: "Undergrad · CS",
+          bio: "Interested in cybersecurity, machine learning, AI, and LLMs.",
+          photo: "assets/images/members-ryan-towns.png",
+          links: [
+            { label: "GitHub", url: "https://github.com/RyanTowns14" },
+            { label: "LinkedIn", url: "https://www.linkedin.com/in/ryan-towns-401147377" },
+            { label: "Email", url: "mailto:rwt64620@uga.edu" }
+          ]
         }
       ]
     },
