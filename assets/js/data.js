@@ -575,6 +575,26 @@ window.LLM_LAB_DATA = {
             { label: "GitHub", url: "https://github.com/naikv0889" },
             { label: "Email", url: "mailto:vvn77894@uga.edu" }
           ]
+        },
+        {
+          name: "Noor Khan",
+          role: "Undergrad · CS",
+          bio: "Interested in AI, robotics, software development, and human-centered technology.",
+          photo: "assets/images/members-noor-khan.jpg",
+          photoZoom: 1.35,
+          links: [
+            { label: "LinkedIn", url: "https://www.linkedin.com/in/noorrkhann" },
+            { label: "Email", url: "mailto:nzk80145@uga.edu" }
+          ]
+        },
+        {
+          name: "Alan Bartlett",
+          role: "Undergrad · CS",
+          bio: "Interested in leveraging agentic and multimodal LLMs to automate workflows.",
+          photo: "assets/images/members-alan-bartlett.jpg",
+          links: [
+            { label: "Email", url: "mailto:amb56005@uga.edu" }
+          ]
         }
       ]
     },
