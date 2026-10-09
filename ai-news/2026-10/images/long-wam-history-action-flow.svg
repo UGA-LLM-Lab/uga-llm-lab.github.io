@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="1100" viewBox="0 0 960 1100" role="img" aria-labelledby="title desc">
+<title id="title">Visual history guides robot actions</title><desc id="desc">Past observations and the current frame feed causal visual memory. Predicted visual latents inform the next action chunk. Simplified visual information path; language and proprioception omitted.</desc>
+<defs><marker id="arrow" markerWidth="8" markerHeight="8" refX="6" refY="4" orient="auto"><path d="M0 0 L8 4 L0 8 Z" fill="#31534c"/></marker></defs>
+<rect width="960" height="1100" fill="#f4f4eb"/>
+<g font-family="Arial, sans-serif" fill="#193b34">
+<text x="480" y="87" text-anchor="middle" font-size="53" font-weight="700">Visual history guides actions</text>
+<text x="480" y="143" text-anchor="middle" font-size="35">Long-WAM • simplified visual information path</text>
+<rect x="70" y="207" width="380" height="180" rx="20" fill="#dae8e1"/>
+<text x="260" y="271" text-anchor="middle" font-size="49" font-weight="700">Past frames</text>
+<g fill="#8eaaa1"><rect x="114" y="301" width="69" height="52" rx="8"/><rect x="220" y="301" width="69" height="52" rx="8"/><rect x="326" y="301" width="69" height="52" rx="8"/></g>
+<rect x="510" y="207" width="380" height="180" rx="20" fill="#31534c"/>
+<text x="700" y="284" text-anchor="middle" font-size="49" fill="white" font-weight="700">Current</text><text x="700" y="346" text-anchor="middle" font-size="49" fill="white">frame</text>
+<path d="M260 393 V423 H480 V455 M700 393 V423 H490" fill="none" stroke="#31534c" stroke-width="6" marker-end="url(#arrow)"/>
+<rect x="70" y="475" width="820" height="147" rx="20" fill="#c3d8cc"/>
+<text x="480" y="538" text-anchor="middle" font-size="51" font-weight="700">Causal visual memory</text><text x="480" y="589" text-anchor="middle" font-size="36">Streaming context + cached representations</text>
+<path d="M480 628 V674" stroke="#31534c" stroke-width="6" marker-end="url(#arrow)"/>
+<rect x="70" y="697" width="820" height="134" rx="20" fill="#e5d7bd"/>
+<text x="480" y="775" text-anchor="middle" font-size="51" font-weight="700">Predicted visual latents</text>
+<path d="M480 838 V884" stroke="#31534c" stroke-width="6" marker-end="url(#arrow)"/>
+<rect x="70" y="907" width="820" height="134" rx="20" fill="#31534c"/>
+<text x="480" y="968" text-anchor="middle" font-size="51" font-weight="700" fill="white">Next actions</text><text x="480" y="1015" text-anchor="middle" font-size="36" fill="white">Robot control chunk</text>
+</g></svg>

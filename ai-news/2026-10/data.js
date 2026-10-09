@@ -2,6 +2,363 @@ window.AI_NEWS_MONTH_DATA["2026-10"] = {
   "label": "October 2026",
   "articles": [
     {
+      "slug": "anthropic-cyber-mission-oss-scanner",
+      "category": "Industry",
+      "sortDate": "2026-10-08",
+      "dateLabel": "October 8, 2026",
+      "title": "Anthropic launches a Cyber Mission linking infrastructure defense with opt-in open-source scanning",
+      "summary": "The October 8 initiative brings engineers and frontier models to infrastructure providers while opening a free scanner for critical open-source projects. Its automated reports still require maintainer judgment.",
+      "image": {
+        "src": "ai-news/2026-10/images/anthropic-official-wordmark.png",
+        "alt": "Anthropic wordmark from its official Python SDK repository",
+        "caption": "Official Anthropic wordmark. It identifies the publisher; it is not a photograph of an infrastructure deployment."
+      },
+      "content": [
+        {
+          "type": "paragraph",
+          "text": "Anthropic announced its Cyber Mission on October 8, combining a Critical Infrastructure Defense Program with a free, opt-in vulnerability scanner for important open-source software. The initiative addresses two different defensive settings: industrial systems whose operators must preserve continuous service, and shared software whose maintainers need to decide which findings deserve a fix. The company describes this as a long-term effort, rather than a completed demonstration that AI has reduced cyber risk."
+        },
+        {
+          "type": "paragraph",
+          "text": "The infrastructure program begins with eleven partners, including industrial-equipment makers, cybersecurity vendors and consulting firms. Anthropic plans to contribute frontier Claude models, on-site engineers and threat research. Its announcement emphasizes the constraints of operational technology: equipment can remain in service for decades, and taking it offline or applying a faulty change can interrupt essential operations. A discovered weakness therefore does not automatically translate into an immediately deployable patch."
+        },
+        {
+          "type": "heading",
+          "text": "Faster findings, a separate validation burden"
+        },
+        {
+          "type": "paragraph",
+          "text": "OSS Scanner offers eligible projects periodic scans without charge. Anthropic says its reports are entirely model-generated, without human triage. They include a reproducer, an explanation and, where available, a proposed patch. In a pilot, external penetration testers checked 97 high- or critical-severity findings across 48 projects. Eighty-five met the company’s coordinated-disclosure standard. Eleven others were genuine but duplicated known issues or other findings; one was invalid. The reported 88% acceptance rate is consequently different from a false-positive rate."
+        },
+        {
+          "type": "paragraph",
+          "text": "Those pilot findings establish a bounded observation about one early pipeline and selected severity levels. They do not demonstrate how many previously unknown vulnerabilities exist in every participating project, how quickly maintainers can remediate them, or whether a suggested repair is safe in production. Anthropic also reports feedback that severity can be overstated or a project’s threat model misunderstood. For an understaffed maintainer, the cost of reproducing, prioritizing and reviewing patches remains part of the service’s practical value."
+        },
+        {
+          "type": "heading",
+          "text": "What maintainers actually enroll"
+        },
+        {
+          "type": "paragraph",
+          "text": "The official repository makes enrollment concrete. A maintainer opens a pull request with project configuration, a Dockerfile describing the build, and an optional threat-model document. The build initially has network access to obtain dependencies; the subsequent audit runs in an isolated virtual machine without internet access. Findings go to the configured security contact. Contact addresses in the enrollment configuration are public, and projects can pause reports or withdraw their registration."
+        },
+        {
+          "type": "paragraph",
+          "text": "The repository also distinguishes these automated reports from Anthropic’s human-reviewed disclosure process. Scanner findings are not subject to its usual 90-day publication period, and the service says it will not make them public. A threat-model document can explain what the project considers exploitable, which components matter and how severity should be interpreted. These instructions give the scanner context; they do not certify that its interpretation will be correct."
+        },
+        {
+          "type": "paragraph",
+          "text": "The operational question is whether a project can turn additional reports into verified repairs. A useful local evaluation would track reproducible findings, duplicates, review time and accepted patches separately. That is an editorial implication of the service design, not a measured outcome of the launch. For critical infrastructure, an equivalent evaluation must also account for maintenance windows, equipment compatibility and the consequences of a change. The announcement creates new support channels; evidence of sustained risk reduction will require observing what defenders can safely fix."
+        }
+      ],
+      "sources": [
+        {
+          "label": "Anthropic — Cyber Mission announcement, October 8",
+          "url": "https://www.anthropic.com/news/anthropic-cyber-mission"
+        },
+        {
+          "label": "Anthropic Frontier Red Team — OSS Scanner and pilot findings, October 8",
+          "url": "https://www.anthropic.com/research/launching-opt-in-vuln-finding-service-for-open-source"
+        },
+        {
+          "label": "Official OSS Scanner repository — enrollment and report handling",
+          "url": "https://github.com/anthropics/oss-scanner"
+        }
+      ]
+    },
+    {
+      "slug": "google-ml-drift-edge-gpu-inference",
+      "category": "Industry",
+      "sortDate": "2026-10-08",
+      "dateLabel": "October 8, 2026",
+      "title": "Google releases ML Drift as a shared GPU engine for on-device inference",
+      "summary": "The Apache 2.0 release serves LiteRT and standalone applications across several GPU APIs. Google reports gains in particular production workloads, while developers still need to validate their own devices and models.",
+      "image": {
+        "src": "ai-news/2026-10/images/ml-drift-official-logo.png",
+        "alt": "ML Drift project wordmark from Google AI Edge’s official repository",
+        "caption": "Original project image from Google AI Edge’s ML Drift repository."
+      },
+      "content": [
+        {
+          "type": "paragraph",
+          "text": "Google AI Edge announced the open-source release of ML Drift on October 8. The engine accelerates machine-learning inference on device GPUs and is available both inside LiteRT and as a standalone library. Released under Apache 2.0, it spans OpenGL ES, OpenCL, Metal and WebGPU. The goal is to give applications a common execution foundation despite differences in operating systems, GPU architectures and drivers."
+        },
+        {
+          "type": "paragraph",
+          "text": "The repository describes the central model representation as GpuModel, a graph that can be optimized before backend execution. Individual GpuOperation objects hold shader code and data references. A Unified Compute Language abstracts the shading languages used by different platforms. Tensor virtualization separates a tensor’s logical view from its physical storage, allowing generated code to map coordinates to buffers or textures. This moves some platform-specific work into code generation rather than requiring developers to maintain entirely separate kernels for every backend."
+        },
+        {
+          "type": "heading",
+          "text": "Different workloads need different optimizations"
+        },
+        {
+          "type": "paragraph",
+          "text": "The engine includes graph transformations, operator fusion, weight-layout changes, memory reuse and hardware-specific workgroup tuning. The README also describes support for reduced-precision computation and stage-aware execution for large generative models. These are implementation mechanisms, not a guarantee that every model will become faster by the same factor. A model’s operators, tensor shapes and memory requirements determine which paths it can actually use."
+        },
+        {
+          "type": "paragraph",
+          "text": "Google’s release explanation highlights five-dimensional tensor support and distinct optimization strategies for language-model prefill and decoding. Prefill processes an input sequence, while decoding repeatedly produces the next token. Optimizing these stages together under a single headline throughput number can obscure different compute and memory pressures. A developer evaluating a conversational feature therefore needs both measurements, together with the context length and numerical precision used in the test."
+        },
+        {
+          "type": "heading",
+          "text": "Production examples have specific boundaries"
+        },
+        {
+          "type": "paragraph",
+          "text": "Google says YouTube Shorts’ segmentation effects achieved up to a 40% reduction in average frame latency after migration across Android and iOS. It also describes faster Google Photos editing and deployments in other applications. These are Google’s reports about particular features and integrations, rather than an independent, device-wide benchmark. They should not be read as a promise of a 40% reduction for an unrelated application or a different model."
+        },
+        {
+          "type": "paragraph",
+          "text": "The release positions ML Drift as the successor to the TensorFlow Lite GPU delegate. The official repository remains actively developed and provides OpenCL and WebGPU examples for developers who want to use the engine directly. That distinction matters for adoption: an application using LiteRT and one constructing its own GPU graph face different integration work. A successful example verifies a starting path, but does not establish complete operator coverage or compatibility across an application’s supported hardware."
+        },
+        {
+          "type": "paragraph",
+          "text": "For a migration decision, a practical comparison would hold the model, inputs, precision and device constant, then measure latency, peak memory and output differences. Camera features also need sustained frame behavior; interactive generation needs separate time-to-first-token and decoding measurements. This is an editorial evaluation proposal, not a test conducted for this release. It connects the engine’s stated mechanisms to user-visible behavior and avoids substituting a best-case vendor number for an application’s own acceptance criteria."
+        },
+        {
+          "type": "paragraph",
+          "text": "The concrete change is public access to a GPU engine already used within Google’s ecosystem, with a shared architecture that external developers can inspect and extend. Whether that produces a worthwhile migration depends on the workload and supported devices. The release gives developers implementation code and examples with which to answer that question; the launch announcement alone cannot answer it for them."
+        }
+      ],
+      "sources": [
+        {
+          "label": "Google Developers Blog — dated release and production examples, October 8",
+          "url": "https://developers.googleblog.com/ml-drift-next-gen-gpu-aiml-inference-at-the-edge/"
+        },
+        {
+          "label": "Google AI Edge — ML Drift architecture and implementation",
+          "url": "https://github.com/google-ai-edge/ml-drift"
+        },
+        {
+          "label": "Official OpenCL example — Android build and kernel checks",
+          "url": "https://github.com/google-ai-edge/ml-drift/blob/main/docs/hello_world_cl.md"
+        }
+      ]
+    },
+    {
+      "slug": "openai-false-front-influence-operations-report",
+      "category": "Industry",
+      "sortDate": "2026-10-08",
+      "dateLabel": "October 8, 2026",
+      "title": "OpenAI reports two influence operations that used AI behind deceptive organizations and bylines",
+      "summary": "The October 8 report traces Russia- and Iran-origin activity into real publications. Its reach assessments concern observable distribution, rather than a measurement of persuasion or proof that every item was AI-generated.",
+      "image": {
+        "src": "ai-news/2026-10/images/openai-official-logo-on-dark.svg",
+        "alt": "Official OpenAI symbol on a dark background",
+        "caption": "OpenAI’s official SDK documentation logo, displayed on a dark background for contrast."
+      },
+      "content": [
+        {
+          "type": "paragraph",
+          "text": "OpenAI published an October 8 investigation into two influence operations whose accounts it recently banned. The Russia-origin activity, called Dark Clark, appears to have directed a research organization using a false identity and unwitting local workers. The Iran-origin activity, called Bogus Bylines, used seven purported journalists to pitch articles. OpenAI says it identified nearly 100 articles associated with those bylines. In both cases, AI assisted workflows behind a seemingly legitimate public identity."
+        },
+        {
+          "type": "paragraph",
+          "text": "The report attributes the Russian operation’s most frequent model use to internal reporting, and describes AI-assisted article editing and pitching in the Iranian case. It does not establish that all the campaigns’ public content came from OpenAI models. The company rates the Russian operation at Category 5 on the Breakout Scale and the Iranian article-placement work at Category 4. These are assessments of observable spread, not measured changes in readers’ beliefs."
+        },
+        {
+          "type": "heading",
+          "text": "What a breakout rating measures"
+        },
+        {
+          "type": "paragraph",
+          "text": "The Breakout Scale was proposed by researcher Ben Nimmo in a September 2020 Brookings report. It organizes operations by whether material stays within one community or platform, travels among communities, reaches mainstream media, or attracts high-profile amplification. Category 4 describes amplification through mainstream media. Category 5 describes amplification by prominent individuals, such as celebrities or political candidates. Category 6 involves a policy response, another concrete action or a call for violence."
+        },
+        {
+          "type": "paragraph",
+          "text": "The framework is designed for evidence that researchers can observe and compare while an operation is unfolding. It does not require them to know an operator’s private goals or to demonstrate that an audience was persuaded. A publication and a prominent person’s reaction are observable events; the psychological effect on readers is a different research question. This makes the scale useful for comparing distribution pathways, while placing a clear boundary around what its categories can establish."
+        },
+        {
+          "type": "heading",
+          "text": "The use of real contributors predates generative AI"
+        },
+        {
+          "type": "paragraph",
+          "text": "Facebook’s September 2020 account of the PeaceData investigation supplies a documented earlier example. The company removed a small network linked to individuals associated with past Internet Research Agency activity after receiving information from the FBI about off-platform behavior. Its report said the campaign had limited success on Facebook but had tricked freelance journalists into writing on its behalf. It also described campaigns using purported news organizations and seeking amplification through traditional media."
+        },
+        {
+          "type": "paragraph",
+          "text": "That earlier case shows why an authentic contributor does not establish an authentic commissioning organization. A person can write an original article in good faith while being misled about who pays for, directs or distributes the work. This is a historical comparison with the October investigation, not evidence that PeaceData and the newly reported campaigns share the same personnel. The current report adds AI-assisted workflows to a form of organizational deception already documented before today’s systems."
+        },
+        {
+          "type": "paragraph",
+          "text": "An editorial implication is that a newsroom’s verification process needs to examine contributor identity, affiliations and commissioning relationships alongside the accuracy of the submitted text. A detector aimed only at identifying machine-written sentences would not resolve whether a supposed expert or institution actually exists. Nor would a technically accurate article settle whether its author disclosed a relevant relationship. These are separate checks with different evidence requirements."
+        },
+        {
+          "type": "paragraph",
+          "text": "Readers should also distinguish an operator’s claim of influence from a corroborated public event. Distribution, audience exposure and persuasion are successive questions, each needing its own evidence. The October report contributes an account of how deceptive fronts entered publishing workflows; it is not a complete audit of every platform or a causal estimate of political impact. Its practical value is in making those identities and distribution methods available for further investigation."
+        }
+      ],
+      "sources": [
+        {
+          "label": "OpenAI — investigation and case-specific limits, October 8",
+          "url": "https://openai.com/index/disrupting-ai-enabled-false-front-operations/"
+        },
+        {
+          "label": "Brookings / Ben Nimmo — original Breakout Scale, September 2020",
+          "url": "https://www.brookings.edu/articles/the-breakout-scale-measuring-the-impact-of-influence-operations/"
+        },
+        {
+          "label": "Facebook — August 2020 CIB report, published September 1, 2020",
+          "url": "https://about.fb.com/news/2020/09/august-2020-cib-report/"
+        }
+      ]
+    },
+    {
+      "slug": "long-wam-long-context-world-action-model",
+      "category": "Research & Academia",
+      "sortDate": "2026-10-08",
+      "dateLabel": "October 8, 2026",
+      "title": "Long-WAM studies how longer visual history changes robot action prediction",
+      "summary": "The preprint in arXiv’s October 8 announcement batch connects streaming video memory with action learning. Reported gains depend on the task and history length, and the longest context has a different latency cost.",
+      "image": {
+        "src": "ai-news/2026-10/images/long-wam-history-action-flow.svg",
+        "alt": "Editorial diagram showing past observations and a current frame feeding a causal memory and predicted actions",
+        "caption": "Explanatory diagram based on the Long-WAM paper. It shows information flow, not a measured robot trajectory."
+      },
+      "content": [
+        {
+          "type": "paragraph",
+          "text": "ArXiv’s October 8 robotics announcement batch includes Long-WAM: Scaling the Context of World-Action Models, a preprint by researchers affiliated with NVIDIA, MIT, the University of Hong Kong and UC San Diego. The manuscript was submitted on October 7; the October 8 date here refers to the repository’s public announcement batch. It studies whether a robot policy can benefit from a longer visual history instead of deciding principally from the latest observation."
+        },
+        {
+          "type": "paragraph",
+          "text": "The method first learns an autoregressive robot-video model, then connects its representations to action learning. A causal attention mechanism and cached representations retain prior observations while new frames arrive. Future visual latents are predicted before actions are inferred; the policy need not decode those latents into viewable pixels at every step. The architectural question is whether that retained history contains useful motion or task information that is absent from a single frame."
+        },
+        {
+          "type": "heading",
+          "text": "Context gains and inference costs are separate results"
+        },
+        {
+          "type": "paragraph",
+          "text": "The authors report RoboCasa GR1 success increasing from 63.3% with no past context to 78.7% with 19.2 seconds of history. Their project page also reports LIBERO-Long success increasing from 94.5% to 99.5% when adding 2.4 seconds of context. These are results on different evaluations; the history durations and denominators should not be combined into one universal performance claim."
+        },
+        {
+          "type": "paragraph",
+          "text": "In a dynamic cup-stacking experiment, the project describes success in 19 of 20 trials for Long-WAM, against zero of 20 for each of two compared policies. The result illustrates a task where past observations can help interpret movement. It is a small, task-specific experiment, not evidence that the model can handle arbitrary changing environments. The authors’ released demonstrations are useful illustrations of the workload, but do not replace the evaluation protocol or trial counts."
+        },
+        {
+          "type": "figure",
+          "src": "ai-news/2026-10/images/longwam-official-g1-speed-still.png",
+          "alt": "Still frame with four panels from the authors’ G1 demonstration at different object-motion speeds",
+          "caption": "Still extracted from the official Long-WAM demo in NVIDIA’s repository, shown at its native 384-pixel width. It illustrates the motion conditions; it is not a complete benchmark record or an independent replication."
+        },
+        {
+          "type": "paragraph",
+          "text": "The paper’s reported 107.4-millisecond inference figure on an RTX 5090 uses a 2.4-second history configuration. The 19.2-second configuration takes approximately 341 milliseconds in the reported table. Thus the highest history-based success figure and the shorter latency figure describe different configurations. Longer context introduces an engineering tradeoff even when it improves a particular success measure. The preprint also evaluates separately trained history variants, rather than demonstrating one policy that adapts freely among all history lengths."
+        },
+        {
+          "type": "heading",
+          "text": "A public implementation is not a reproduced benchmark"
+        },
+        {
+          "type": "paragraph",
+          "text": "The official code repository provides benchmark training and evaluation configurations, downloadable policy references and robot-integration interfaces. It separates video pretraining from world-action learning and documents both inverse-dynamics and co-denoising inference paths. Its verification notes distinguish CPU regression checks and limited runtime checks from full reproduction of the published benchmark results. The notes leave target-device compilation, complete simulator evaluation and physical-robot validation as separate tasks."
+        },
+        {
+          "type": "paragraph",
+          "text": "For a research team examining the release, that distinction suggests two different goals. One is to reproduce an aggregate score with the matching checkpoint, context configuration and full task inventory. Another is to determine whether a deployment interface works on its own hardware. Passing a configuration check cannot establish either a new success rate or safe robot behavior. Those are editorial implications of the documented release boundaries, rather than additional results reported by the authors."
+        },
+        {
+          "type": "paragraph",
+          "text": "Long-WAM provides a concrete study of temporal information in robot policies, with code and task-specific evidence to inspect. The current record is a preprint, and its reported gains remain tied to the evaluated environments and configurations. The next useful comparison is not simply a longer memory window, but whether the additional history improves the tasks that need it at an acceptable inference cost."
+        }
+      ],
+      "sources": [
+        {
+          "label": "arXiv — canonical preprint and full methods, 2610.10528",
+          "url": "https://arxiv.org/html/2610.10528v1"
+        },
+        {
+          "label": "Official project page — experiments and demonstrations",
+          "url": "https://nvlabs.github.io/LongLive/Long-WAM/"
+        },
+        {
+          "label": "NVIDIA — official implementation and verification scope",
+          "url": "https://github.com/NVlabs/LongLive/tree/main/Long-WAM"
+        },
+        {
+          "label": "arXiv robotics — October 8 public announcement batch",
+          "url": "https://arxiv.org/list/cs.RO/recent"
+        }
+      ]
+    },
+    {
+      "slug": "ultratext-bench-dense-bilingual-image-text",
+      "category": "Research & Academia",
+      "sortDate": "2026-10-08",
+      "dateLabel": "October 8, 2026",
+      "title": "UltraText Bench tests whether image generators preserve dense text across an entire scene",
+      "summary": "The English–Chinese benchmark in arXiv’s October 8 batch evaluates text content, readability and placement separately. Its model-judge ratings reveal workload differences but do not certify perfect transcription.",
+      "image": {
+        "src": "ai-news/2026-10/images/ultratext-bakery-example-source.png",
+        "alt": "Generated bakery illustration from the authors’ evaluation diagram, with four annotated text regions",
+        "caption": "Illustrative generated scene extracted from the authors’ evaluation figure. It is not a photograph or a human correctness label; the complete diagram appears below."
+      },
+      "content": [
+        {
+          "type": "paragraph",
+          "text": "UltraText Bench appears in arXiv’s October 8 computer-vision announcement batch, following an October 7 manuscript submission. The preprint by Deyuan Liu and collaborators asks a more demanding question than whether an image generator can spell a short headline: can it reproduce many requested strings, including small supporting text, in the appropriate parts of a complete scene? The release combines bilingual task records with a model-based evaluation pipeline."
+        },
+        {
+          "type": "paragraph",
+          "text": "The official repository contains 432 prompts across 24 scene categories and three difficulty levels, with 216 prompts in each language. Its records describe 2,926 text regions, including content, position, relative size and role. Each generation prompt supplies the requested strings. The fuller structured reference is reserved for evaluation, rather than given to the image generator. Difficulty groups represent different prompts and workloads, not controlled modifications of an otherwise identical scene."
+        },
+        {
+          "type": "heading",
+          "text": "Readable text can still be the wrong text"
+        },
+        {
+          "type": "paragraph",
+          "text": "The paper’s evaluator, Q-Judger, produces six ratings that are grouped into fidelity, clarity, spatial quality and scene quality. The composite weights fidelity at 60%, clarity at 30%, and the remaining dimensions at 5% each. This explicitly separates whether characters look readable from whether the requested material is accurate and complete. A polished sign with invented wording can therefore perform differently on those two dimensions."
+        },
+        {
+          "type": "figure",
+          "src": "ai-news/2026-10/images/ultratext-official-evaluation.png",
+          "alt": "Original pipeline diagram contrasting the generation prompt with the complete evaluation reference",
+          "caption": "Authors’ full evaluation diagram. The evaluator sees the complete structured reference; the generator receives a text prompt containing the target strings. Invalid judge responses remain unscored failures."
+        },
+        {
+          "type": "paragraph",
+          "text": "Across 24 model configurations, the paper reports Qwen-Image-2512’s English composite decreasing from 86.50 at the first difficulty level to 42.86 at the third. It also reports higher clarity but lower fidelity for Z-Image-Turbo than Z-Image-Base under the tested settings. These are rubric scores, not percentages of characters transcribed correctly. The configurations have differing generation settings, so that comparison does not isolate acceleration as the cause of the difference."
+        },
+        {
+          "type": "heading",
+          "text": "Coverage and evaluator identity affect comparisons"
+        },
+        {
+          "type": "paragraph",
+          "text": "The released evaluation client checks artifacts and validates the judge’s response format. Missing images, invalid artifacts and failed judge calls receive null scores, while summaries report coverage separately. The repository distinguishes averages conditional on successfully scored images from averages over represented prompts. It also recommends comparing models on common successful prompt IDs. Dropping failures silently would change the evidence behind a ranking."
+        },
+        {
+          "type": "paragraph",
+          "text": "The repository supplies a client, not the Q-Judger checkpoint or a server image. Using a different model behind the endpoint creates a different evaluator. The manuscript reports ten participants in a human evaluation, but the current release provides no quantitative human–judge or inter-rater agreement. Its dataset audit records are distinct from that human study. Passing a response-format check consequently does not establish that every text region was assessed correctly."
+        },
+        {
+          "type": "paragraph",
+          "text": "For someone choosing an image generator for a poster, menu or interface mockup, the methodological implication is to inspect content preservation alongside appearance. A high composite can conceal a weaker dimension, and an attractive selected example cannot establish average performance. A useful comparison would retain the exact prompt, generation settings, evaluator identity and failure coverage, then check whether the task resembles the intended workload. This is an editorial reading of the benchmark design, not a production evaluation performed by the authors."
+        },
+        {
+          "type": "paragraph",
+          "text": "UltraText Bench makes dense bilingual text a more explicit evaluation target and releases material that other researchers can inspect. Its evidence remains a preprint evaluation with a model judge and bounded human assessment. The benchmark helps expose the difference between plausible typography and faithful content; it does not eliminate the need to verify the final text in an image intended for real use."
+        }
+      ],
+      "sources": [
+        {
+          "label": "arXiv — canonical preprint and full evaluation, 2610.09823",
+          "url": "https://arxiv.org/html/2610.09823v1"
+        },
+        {
+          "label": "Official UltraText Bench repository — dataset, client and limitations",
+          "url": "https://github.com/LINs-lab/UltraText_Bench"
+        },
+        {
+          "label": "arXiv computer vision — October 8 public announcement batch",
+          "url": "https://arxiv.org/list/cs.CV/recent?show=2000&skip=0"
+        }
+      ]
+    },
+    {
       "slug": "google-patent-lawyer-ai-skill-field-study",
       "category": "Employment & Talent",
       "sortDate": "2026-10-07",
