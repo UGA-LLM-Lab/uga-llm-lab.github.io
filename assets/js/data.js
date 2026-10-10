@@ -1066,6 +1066,18 @@ window.LLM_LAB_DATA = {
       summary: "Prospective Ph.D. students should apply through the University of Georgia and explain how their research goals connect with the lab's active directions.",
       tracks: [
         {
+          title: "Fall 2027 Ph.D. Opening: Superintelligence + Robotics for Quantum Physics",
+          points: [
+            "Open for Fall 2027",
+            "Interdisciplinary research across AI, robotics, and quantum physics, with co-mentorship across computer science, physics, and engineering",
+            "Work with the UGA Quantum Science and Engineering Program, an NSF-funded training effort involving the University of Tennessee and Oak Ridge National Laboratory",
+            "Access to experimental quantum facilities and national-lab partners",
+            "Applicants from computer science, AI/ML, robotics, physics, electrical engineering, or related fields are welcome; experience with deep learning, LLMs/agents, robotic control, or quantum information is helpful"
+          ],
+          descriptionHtml: "The UGA LLM Lab and UGA Quantum Science and Engineering Program invite applications for a fully funded Ph.D. position developing AI-driven discovery systems for quantum physics. The project brings large language models and AI agents together with robotic lab platforms so systems can form hypotheses, design and run experiments, analyze results, and accelerate discovery in quantum materials, devices, and networks.<br><br>To apply, email your CV to <a href=\"mailto:tliu@uga.edu\">Tianming Liu (tliu@uga.edu)</a> and <a href=\"mailto:YOHANNES.ABATE@uga.edu\">Yohannes Abate (YOHANNES.ABATE@uga.edu)</a>, and copy <a href=\"mailto:Siyuan.Li1@uga.edu\">Siyuan Li (Siyuan.Li1@uga.edu)</a>. Use the subject line: PhD - AI + Robotics for Quantum.",
+          action: { label: "Apply by email", url: "mailto:tliu@uga.edu,YOHANNES.ABATE@uga.edu?cc=Siyuan.Li1@uga.edu&subject=PhD%20%E2%80%93%20AI%20%2B%20Robotics%20for%20Quantum" }
+        },
+        {
           title: "Research Fit",
           description: "We are interested in students who want to develop foundational methods while remaining attentive to evaluation, scientific rigor, and real-world impact. Ph.D. students also participate in the lab's startup projects as part of translating research into practice.",
           points: ["Large language models and agent systems", "Quantum and hybrid quantum-classical AI", "Brain-inspired learning and neuroimaging", "AI for medicine, science, and education"]
