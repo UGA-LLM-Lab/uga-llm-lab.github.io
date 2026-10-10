@@ -459,7 +459,7 @@ window.LLM_LAB_DATA = {
         {
           name: "Krishna Mohan",
           role: "M.S. Student in AI",
-          bio: "Co-founded Alavon AI and is interested in machine learning, multi-agent systems, embedded systems, and entrepreneurship.",
+          bio: "Co-founded Alavon AI, a community for sharing AI prompts; interests include machine learning, multi-agent systems, embedded systems, and entrepreneurship.",
           photo: "assets/images/members-krishna-mohan.jpg",
           photoZoom: 1.12,
           photoPosition: "left",
@@ -477,7 +477,7 @@ window.LLM_LAB_DATA = {
         {
           name: "Vivek Venigalla",
           role: "Undergrad · Math & CS",
-          bio: "Interested in applying graph theory and topological data analysis to real-world problems across disciplines.",
+          bio: "Builds software projects in quantitative finance, physics simulation, and applied mathematics.",
           photo: "assets/images/members-vivek-venigalla.png",
           photoZoom: 1.24,
           website: "https://vivekvenigalla.github.io/",
@@ -491,7 +491,7 @@ window.LLM_LAB_DATA = {
         {
           name: "Rohan Singh",
           role: "Undergrad · CS",
-          bio: "Works on artificial intelligence, agentic systems, knowledge graphs, and data-driven applications.",
+          bio: "Builds software and AI systems across backend engineering, applied AI, and data platforms.",
           photo: "assets/images/members-rohan-singh.png",
           website: "https://rohans-portfolio-uga.vercel.app/",
           links: [
@@ -504,7 +504,7 @@ window.LLM_LAB_DATA = {
         {
           name: "Kushagra Garg",
           role: "Undergrad · CS",
-          bio: "Builds speech-to-text and degree-planning tools; interested in LLMs, systems, and STEM education.",
+          bio: "Builds AI and open-source tools for document search, degree planning, and speech-to-text.",
           photo: "assets/images/members-kushagra-garg.png",
           photoZoom: 1.32,
           website: "https://kushagra0514.github.io/Persona_Portfolio/",
@@ -516,7 +516,7 @@ window.LLM_LAB_DATA = {
         {
           name: "Shakthi Karthik",
           role: "Undergrad · CS",
-          bio: "Interested in AI and machine learning, data analytics, full-stack development, data-driven systems, and emerging LLM applications.",
+          bio: "Focuses on AI security and red-teaming, mobile development, and software engineering.",
           photo: "assets/images/shakthi-karthik.png",
           website: "https://skarthikb-tech.github.io/",
           links: [
@@ -527,7 +527,7 @@ window.LLM_LAB_DATA = {
         {
           name: "Ronit Parikh",
           role: "Undergrad · CS",
-          bio: "Works on LLMs, AI applications, and full-stack development. Interested in RAG, tool-calling, AI agents, and LLM evaluation.",
+          bio: "Builds LLM-powered applications and full-stack software, with interests in RAG, AI agents, and model evaluation.",
           photo: "assets/images/ronit-parikh.png",
           links: [
             { label: "GitHub", url: "https://github.com/rrp02136" },
@@ -549,7 +549,7 @@ window.LLM_LAB_DATA = {
         {
           name: "Pranavi Eshwar Kedari",
           role: "Undergrad · CS",
-          bio: "Honors student focused on software engineering, applied AI, and scalable data systems, with experience in enterprise software and startup product development.",
+          bio: "Focuses on software engineering, applied AI, and scalable data systems, with experience in enterprise software and startup development.",
           photo: "assets/images/members-pranavi-kedari.png",
           links: [
             { label: "Email", url: "mailto:pek03680@uga.edu" }
@@ -558,7 +558,7 @@ window.LLM_LAB_DATA = {
         {
           name: "Trishika Movva",
           role: "Undergrad · CS",
-          bio: "Studies applied data science and co-founded Alavon AI; interested in AI, machine learning, LLMs, and data-driven applications.",
+          bio: "Studies applied data science and co-founded Alavon AI; interests include AI, machine learning, and LLMs.",
           photo: "assets/images/members-trishika-movva.png",
           links: [
             { label: "LinkedIn", url: "https://www.linkedin.com/in/trishika-movva-143009226" },
@@ -590,10 +590,29 @@ window.LLM_LAB_DATA = {
         {
           name: "Alan Bartlett",
           role: "Undergrad · CS",
-          bio: "Interested in leveraging agentic and multimodal LLMs to automate workflows.",
+          bio: "Interested in using agentic and multimodal LLMs to automate workflows.",
           photo: "assets/images/members-alan-bartlett.jpg",
           links: [
             { label: "Email", url: "mailto:amb56005@uga.edu" }
+          ]
+        },
+        {
+          name: "Danylo Pynzenyk",
+          role: "Undergrad",
+          bio: "Has experience in information technology and is interested in security, AI, and cloud engineering.",
+          photo: "assets/images/members-danylo-pynzenyk.png",
+          links: [
+            { label: "Email", url: "mailto:dvp86267@uga.edu" }
+          ]
+        },
+        {
+          name: "Jagad Krishnan",
+          role: "Undergrad · CS",
+          bio: "Explores AI/LLM security and is developing an adaptive learning AI model.",
+          photo: "assets/images/members-jagad-krishnan-cropped.png",
+          links: [
+            { label: "LinkedIn", url: "https://www.linkedin.com/in/jagad-krishnan-b00931374/?isSelfProfile=true" },
+            { label: "Email", url: "mailto:jk02067@uga.edu" }
           ]
         }
       ]
