@@ -3002,6 +3002,233 @@ window.AI_NEWS_MONTH_DATA["2026-10"] = {
           "url": "https://github.com/MirroS-Lab/AgentGarten/blob/main/LICENSE"
         }
       ]
+    },
+    {
+      "slug": "fireworks-october-security-bulletin-evaluation-secrets",
+      "category": "Industry",
+      "sortDate": "2026-10-10",
+      "dateLabel": "October 10, 2026",
+      "title": "Fireworks discloses credential exposure in customer evaluation jobs",
+      "summary": "The bulletin covers evaluation secrets in limited accounts; its investigation and credential review remain ongoing.",
+      "image": {
+        "src": "ai-news/2026-10/images/fireworks-official-wordmark.svg",
+        "alt": "Official Fireworks company wordmark",
+        "caption": "Official company wordmark from the security bulletin."
+      },
+      "content": [
+        {
+          "type": "paragraph",
+          "text": "Fireworks published a security bulletin on October 9 at 10 p.m. Pacific, covering an incident detected on October 6. It says an unauthorized party used internal credentials to access evaluation-job environment variables in a limited number of customer accounts. The bulletin was updated on October 10."
+        },
+        {
+          "type": "paragraph",
+          "text": "The company believes secrets, including API keys and tokens, were captured. It reports no evidence of unauthorized access to models, datasets, training data, personal information or inference traffic within its perimeter. Investigation continues. Identified customers were notified directly; additional user keys were revoked and service-account tokens rotated on October 10."
+        },
+        {
+          "type": "paragraph",
+          "text": "Affected customers should replace revoked Fireworks keys and rotate identified third-party credentials with their issuers. Deleting a stored secret does not revoke the credential. The bulletin does not quantify affected accounts or establish the full extent of access."
+        },
+        {
+          "type": "heading",
+          "text": "Why the credential boundary matters"
+        },
+        {
+          "type": "paragraph",
+          "text": "Fireworks’ service-account documentation explains why this distinction matters for applications built around AI infrastructure. Automated systems authenticate through API keys rather than a human login. A service account can create deployments, run models or create datasets, and receives an assigned role. Audit records identify these accounts separately from human users. Consequently, a credential review needs to establish which identity and permissions belonged to a key; the mere presence of an API key does not describe every action it could authorize."
+        },
+        {
+          "type": "paragraph",
+          "text": "The company’s account-management guide makes those permissions concrete. An inference user can view resources and run inference, while a contributor can create and manage its own resources. The default user role can also manage resources owned by others. Administrators control users and access settings. All four roles can manage their own API keys, but creating service-account keys and deleting another identity’s keys require administrator privileges. These are documented platform capabilities, rather than evidence that the incident exercised any particular permission."
+        },
+        {
+          "type": "heading",
+          "text": "Retention policies and investigation evidence"
+        },
+        {
+          "type": "paragraph",
+          "text": "Fireworks’ data-retention documentation says open-model prompts and generations are not persistently logged without an explicit opt-in. It also describes exceptions and separate settings: request metadata is retained to operate the service, prompt caching can hold information briefly in volatile memory, and the Responses API stores conversations by default for 30 days unless storage is disabled. Those product policies explain what different workflows can retain. They are not independent proof of what an attacker accessed, and they should not turn the bulletin’s bounded findings into a platform-wide guarantee."
+        },
+        {
+          "type": "paragraph",
+          "text": "For enterprise customers, the audit-log documentation describes records of storage reads, writes and deletions, with account context. Customers can filter records by identities, resources and key identifiers. It also cautions that an empty result page can still carry a continuation token; reaching the end requires completing pagination. That detail matters when using logs to investigate an exposure, because a partial retrieval cannot establish that no relevant activity occurred."
+        },
+        {
+          "type": "paragraph",
+          "text": "The disclosed event therefore leaves two separate questions: whether exposed credentials still authorize access, and what they authorized while exposed. The documentation provides identity and logging context for that review. It does not resolve the incident’s remaining scope questions, which require evidence from the continuing investigation."
+        }
+      ],
+      "sources": [
+        {
+          "label": "Fireworks — security bulletin and response timeline",
+          "url": "https://fireworks.ai/security/bulletins/october-2026-security-incident"
+        },
+        {
+          "label": "Fireworks documentation — service accounts",
+          "url": "https://docs.fireworks.ai/accounts/service-accounts"
+        },
+        {
+          "label": "Fireworks documentation — user roles and API-key permissions",
+          "url": "https://docs.fireworks.ai/accounts/users"
+        },
+        {
+          "label": "Fireworks documentation — data-retention policy and exceptions",
+          "url": "https://docs.fireworks.ai/guides/security_compliance/data_handling"
+        },
+        {
+          "label": "Fireworks documentation — enterprise audit-log retrieval",
+          "url": "https://docs.fireworks.ai/guides/security_compliance/audit_logs"
+        }
+      ]
+    },
+    {
+      "slug": "onlyoffice-docs-10-ai-modular-apps",
+      "category": "Industry",
+      "sortDate": "2026-10-10",
+      "dateLabel": "October 10, 2026",
+      "title": "ONLYOFFICE Docs 10.0 adds contextual AI and optional modular apps",
+      "summary": "The October 10 release expands AI across document formats, with separate installation for open-source editions and model choices that depend on deployment.",
+      "image": {
+        "src": "ai-news/2026-10/images/onlyoffice-docs-10-official-release.png",
+        "alt": "Official ONLYOFFICE Docs 10.0 promotional artwork with gold and blue waves",
+        "caption": "Official release artwork supplied on the ONLYOFFICE announcement page."
+      },
+      "content": [
+        {
+          "type": "paragraph",
+          "text": "ONLYOFFICE announced Docs 10.0 on October 10, expanding contextual AI tools across its document, spreadsheet, presentation and PDF editors. The release offers a dedicated AI tab and reusable prompts. Quick actions and assistants that respond as a document changes are currently limited to the document editor."
+        },
+        {
+          "type": "paragraph",
+          "text": "The advertised tasks include questioning and summarizing PDFs, rewriting documents, explaining spreadsheet formulas and preparing slide outlines. Cloud users enable the company’s AI service through a prepaid wallet; server installations can connect external or local models. The announcement says open-source editions require a separate AI installation following user feedback, an important distinction for anyone planning an upgrade."
+        },
+        {
+          "type": "heading",
+          "text": "A modular workspace around the editors"
+        },
+        {
+          "type": "paragraph",
+          "text": "The accompanying company release describes four free apps under the AGPLv3 license: AI agents, Forms, Rooms and Files. The agent app combines search, a personal knowledge base and reasoning through Model Context Protocol servers. Forms handles response collection and analysis, Files provides storage and access controls, and Rooms supports collaboration, including virtual data rooms. The editors and these apps can therefore be assembled around a particular workflow, rather than requiring every organization to activate the same set of services."
+        },
+        {
+          "type": "paragraph",
+          "text": "That release also describes changes beyond the browser editors. Desktop software gets a revised home page, template access and Odoo integration, while mobile applications add AI-assisted form completion, voice input and support for Grok and DeepSeek. These are the issuer’s descriptions of the release; they do not establish measured time savings or comparative model quality."
+        },
+        {
+          "type": "paragraph",
+          "text": "The launch blog reports more than 1,000 bug fixes and approximately 35 vulnerability fixes, alongside roughly 50 new features. It promises a separate security explanation."
+        },
+        {
+          "type": "heading",
+          "text": "Model access is part of the deployment decision"
+        },
+        {
+          "type": "paragraph",
+          "text": "ONLYOFFICE’s current AI overview lists services such as OpenAI, Anthropic, Gemini and DeepSeek alongside local providers including Ollama and LM Studio. Its configuration supports assigning models to different tasks. This existing provider layer helps explain the release’s flexibility: an editor supplies the workflow, while the connected model supplies the inference. Choosing a provider is therefore a separate operational decision from installing the office suite."
+        },
+        {
+          "type": "paragraph",
+          "text": "The company’s March 2025 FAQ gives useful background on that separation. AI support began with a ChatGPT plugin in 2023, then expanded to multiple providers. Provider credentials and commercial terms vary, so an available integration does not imply free model usage. The FAQ also states that the company does not assume responsibility for the accuracy of connected assistants. Outputs still need review before they become a formula, translation or shared document."
+        },
+        {
+          "type": "paragraph",
+          "text": "The wider Docs product remains an office-editor platform that can be self-hosted or embedded into another application. Its product overview lists ready-made integrations with systems including Nextcloud, Moodle, Box and WordPress, alongside desktop and mobile clients. Those existing distribution options give the new features several routes to users, with different administration and infrastructure requirements."
+        },
+        {
+          "type": "paragraph",
+          "text": "For deployment, the practical distinction is between enabling a feature and validating its results. Teams can select a model and installation arrangement, then check whether summaries preserve key information and suggested spreadsheet changes produce the expected calculations. That is an implication of the configurable design and the stated accuracy limits, rather than an outcome demonstrated by this launch."
+        }
+      ],
+      "sources": [
+        {
+          "label": "ONLYOFFICE — Docs 10.0 announcement, October 10",
+          "url": "https://www.onlyoffice.com/blog/2026/10/onlyoffice-docs-10"
+        },
+        {
+          "label": "ONLYOFFICE — issuer release distributed by EQS, October 10",
+          "url": "https://www.eqs-news.com/news/corporate/onlyoffice-10-0-brings-ai-tools-modular-apps-and-stronger-security-to-its-open-source-office-suite/18cfd622-0483-4185-b152-7300f03ea6e4_en"
+        },
+        {
+          "label": "ONLYOFFICE — current AI providers and task configuration",
+          "url": "https://www.onlyoffice.com/ai-assistants"
+        },
+        {
+          "label": "ONLYOFFICE — AI usage FAQ, March 19, 2025",
+          "url": "https://www.onlyoffice.com/blog/2025/03/faq-how-to-use-ai-in-onlyoffice"
+        },
+        {
+          "label": "ONLYOFFICE — Docs deployment and integration overview",
+          "url": "https://www.onlyoffice.com/docs"
+        }
+      ]
+    },
+    {
+      "slug": "china-ai-workforce-training-october-briefing",
+      "category": "Employment & Talent",
+      "sortDate": "2026-10-10",
+      "dateLabel": "October 10, 2026",
+      "title": "China outlines AI training and occupational standards for workforce adaptation",
+      "summary": "An October 10 briefing describes general AI education, specialist training and a standards pipeline, building on an employment plan published in June.",
+      "image": {
+        "src": "ai-news/2026-10/images/china-ai-training-audiences.svg",
+        "alt": "Three audiences and AI training types described in China’s October 10 briefing",
+        "caption": "Training audiences described at the October 10 briefing. Independent factual graphic based on Xinhua’s original report; it depicts announced training types."
+      },
+      "content": [
+        {
+          "type": "paragraph",
+          "text": "China’s human-resources ministry outlined workforce adaptation to AI at an October 10 State Council Information Office briefing. Vice Minister Li Zhong listed an AI employment initiative alongside programs for skills training, migrant-worker employment, public employment services and integration of human-resources services. The policy emphasis puts AI adaptation within a broader employment agenda, rather than limiting it to recruitment at technology companies."
+        },
+        {
+          "type": "paragraph",
+          "text": "Xinhua’s fuller Chinese report describes three training audiences: general AI education for all workers, digital-engineer development for specialized positions and AI-related training for students. Vocational-capacity official Wu Liduo said occupational standards would follow changing industry roles. They would be accompanied by courses, practice resources and evaluation rules, with new occupations brought into skills assessment. The stated aim connects learning, skill grades, suitable positions and compensation."
+        },
+        {
+          "type": "heading",
+          "text": "An implementation briefing on an existing policy"
+        },
+        {
+          "type": "paragraph",
+          "text": "The underlying employment-first plan was issued by the State Council on June 11 and published on June 17. Its official text already called for AI application and commercialization projects, new forms of human-machine collaboration and AI support for employment policies and services. October’s briefing should therefore be understood as an implementation update, with more detail on training and occupational infrastructure, rather than the first appearance of AI in the national employment strategy."
+        },
+        {
+          "type": "paragraph",
+          "text": "That June text also connects workforce adaptation to employment monitoring. It calls for examining AI’s impact on employment, strengthening warning systems and coordinating responses to related labor-relations risks. Separately, it directs investment toward lifelong vocational training, with enterprises central to delivery and government-subsidized courses as a supplement. The policy’s scope consequently extends beyond recruiting specialists into technology companies; it also addresses workers learning new skills or moving between roles."
+        },
+        {
+          "type": "paragraph",
+          "text": "The English Xinhua account carried on the central-government website reports a planned regular mechanism for identifying occupations in AI, the digital economy, green development and modern services. More than 200 national occupational standards would be developed or revised over the 2026–2030 plan period. That total spans the broader occupational system and should not be read as a count of AI occupations."
+        },
+        {
+          "type": "heading",
+          "text": "What the announced measures establish"
+        },
+        {
+          "type": "paragraph",
+          "text": "Neither announcement measures whether participants obtain jobs, retain employment or earn more after completing a course. The briefing also provides no specified AI-training enrollment total or implementation budget in these reports. Assessing results will require separating the number of courses and credentials from employment outcomes, and distinguishing broad AI literacy from preparation for a specialized engineering position."
+        },
+        {
+          "type": "paragraph",
+          "text": "For employers and training providers, the development is the proposed connection between changing job requirements, formal standards and course resources. For workers, it is a policy commitment to types of learning rather than a published catalog of guaranteed places. That distinction matters when interpreting the announcement’s reach: a national framework can guide provision, while actual access and results depend on how its programs are implemented."
+        }
+      ],
+      "sources": [
+        {
+          "label": "Xinhua — original October 10 briefing report",
+          "url": "https://www.xinhuanet.com/20261010/5bfccc0e51274fa784bb3d88d95034cf/c.html"
+        },
+        {
+          "label": "State Council — June 17 plan, official ministry reproduction",
+          "url": "https://www.mct.gov.cn/preview/whhlyqyzcxxfw/zhgl/202607/t20260720_966614.html"
+        },
+        {
+          "label": "Xinhua via gov.cn — occupational standards and AI employment initiative",
+          "url": "https://english.www.gov.cn/news/202610/10/content_WS6aca1ad2c6d00ca5f9a0d9a1.html"
+        },
+        {
+          "label": "Xinhua — AI initiative within five employment actions, October 10",
+          "url": "https://www.xinhuanet.com/20261010/36344abebaa24413b19c0b8d40f80dc8/c.html"
+        }
+      ]
     }
   ]
 };

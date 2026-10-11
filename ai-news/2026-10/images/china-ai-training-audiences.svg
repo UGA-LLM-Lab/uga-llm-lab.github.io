@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="760" viewBox="0 0 900 760" role="img" aria-labelledby="title desc">
+<title id="title">AI training audiences</title>
+<desc id="desc">Training audience-to-type mapping.</desc>
+<rect width="900" height="760" fill="#f5f8fa"/>
+<rect x="0" y="0" width="900" height="12" fill="#146f74"/>
+<g font-family="DejaVu Sans, Arial, sans-serif" fill="#162e3b">
+<text x="44" y="77" font-size="48" font-weight="700">Three AI training audiences</text>
+<text x="44" y="121" font-size="30">China’s October 10, 2026 briefing</text>
+<text x="66" y="167" font-size="25" font-weight="700" fill="#4b6571">AUDIENCE</text>
+<text x="454" y="167" font-size="25" font-weight="700" fill="#4b6571">TRAINING TYPE</text>
+<rect x="44" y="186" width="812" height="145" rx="16" fill="#fff" stroke="#d0dee5" stroke-width="2"/>
+<rect x="44" y="351" width="812" height="145" rx="16" fill="#fff" stroke="#d0dee5" stroke-width="2"/>
+<rect x="44" y="516" width="812" height="145" rx="16" fill="#fff" stroke="#d0dee5" stroke-width="2"/>
+<text x="68" y="269" font-size="40" font-weight="700">All workers</text>
+<path d="M380 258h44m-12-12 12 12-12 12" fill="none" stroke="#146f74" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="454" y="245" font-size="40">General AI</text><text x="454" y="292" font-size="40">literacy</text>
+<text x="68" y="410" font-size="34" font-weight="700">Workers in</text><text x="68" y="455" font-size="34" font-weight="700">specialist roles</text>
+<path d="M380 423h44m-12-12 12 12-12 12" fill="none" stroke="#146f74" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="454" y="410" font-size="40">Digital engineer</text><text x="454" y="457" font-size="40">training</text>
+<text x="68" y="575" font-size="40" font-weight="700">Students</text><text x="68" y="617" font-size="26" fill="#4b6571">Schools and colleges</text>
+<path d="M380 588h44m-12-12 12 12-12 12" fill="none" stroke="#146f74" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="454" y="575" font-size="40">AI-related</text><text x="454" y="622" font-size="40">training</text>
+<text x="44" y="704" font-size="26" fill="#4b6571">Source: Xinhua’s October 10 briefing report</text>
+<text x="44" y="740" font-size="24" fill="#4b6571">Announced training types; no participation or jobs measured.</text>
+</g>
+</svg>
