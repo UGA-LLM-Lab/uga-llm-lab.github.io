@@ -2,6 +2,328 @@ window.AI_NEWS_MONTH_DATA["2026-10"] = {
   "label": "October 2026",
   "articles": [
     {
+      "slug": "meta-muse-wonder-agent-models",
+      "category": "Industry · Models",
+      "sortDate": "2026-10-12",
+      "dateLabel": "October 12, 2026",
+      "title": "Meta releases Muse Wonder for agent workflows; Wonder Full starts in Muse Code",
+      "summary": "Muse Wonder reaches the Meta Model API and coding agent, while the larger Full model is available to Muse Code subscribers. Meta emphasizes persistent memory and sustained task execution.",
+      "image": {
+        "src": "ai-news/2026-10/images/meta-muse-wonder-official.webp",
+        "alt": "Meta’s official Muse Wonder release artwork",
+        "caption": "Official Muse Wonder release artwork. Source: Meta AI Research, October 12, 2026."
+      },
+      "content": [
+        {
+          "type": "paragraph",
+          "text": "Meta introduced Muse Wonder and Muse Wonder Full on October 12, expanding its model family for software development and personal and professional agents. The standard Wonder model is available through the Meta Model API and Muse Code. Full starts with Muse Code subscribers. Meta also plans to bring Wonder into more of its consumer Muse experience, initially for subscribers; that future rollout should be distinguished from the developer access available at launch."
+        },
+        {
+          "type": "heading",
+          "text": "Remembering context and continuing a task"
+        },
+        {
+          "type": "paragraph",
+          "text": "Meta describes two central capabilities. Active Memory retrieves information from earlier conversations when it becomes relevant to a current task. Active Focus concerns continuing toward a goal, trying another approach when an attempt fails and adapting to new information. Those behaviors target a familiar difficulty with agents: an answer can be convincing while the overall job remains unfinished. The company says the models were trained on long-running tasks, including repeated cycles of editing, testing and revision in software projects."
+        },
+        {
+          "type": "paragraph",
+          "text": "The launch includes examples involving source documents in law, finance and health, alongside coding. Meta points to Harvey’s Legal Agent Benchmark for document-based legal work, FocusBench for sustained focus and SWE-Marathon for longer software tasks. These are named evaluation settings, rather than evidence that the models can autonomously handle every professional decision. A demonstration of navigating a lease or financial information also does not replace qualified judgment about the underlying subject."
+        },
+        {
+          "type": "heading",
+          "text": "Two access routes, with different availability"
+        },
+        {
+          "type": "paragraph",
+          "text": "For developers, the immediate change is a new model option within Meta’s existing API and coding tools. A team can compare it on its own applications rather than relying only on a leaderboard: whether requirements survive multiple revisions, whether tests expose mistakes, and whether the agent completes the requested workflow. Access to the larger Full model is narrower at launch. The announcement does not say that Full is generally available through the same pay-as-you-go API route as Wonder."
+        },
+        {
+          "type": "paragraph",
+          "text": "Meta’s developer model page lists a one-million-token context window for both models. Standard Wonder API pricing is $4 per million input tokens, $0.20 per million cached input tokens and $20 per million output tokens. Full is offered through Muse Code’s $50-per-month Power Usage and $200-per-month Maximum Usage subscriptions, with different usage allowances. API usage and subscription access are separate billing arrangements; the developer page does not list a pay-as-you-go tariff for Full."
+        },
+        {
+          "type": "heading",
+          "text": "Performance claims still need workload checks"
+        },
+        {
+          "type": "paragraph",
+          "text": "Meta attributes broader capability to stronger base models and additional training. Its research post compares performance on tasks targeted during training with tasks not specifically targeted, across reasoning effort levels. That is a useful distinction: improving a score on a familiar benchmark is different from generalizing to an unfamiliar workflow. The results are company-reported, however, and the launch alone cannot establish a universal advantage across models, tools and deployment settings."
+        },
+        {
+          "type": "paragraph",
+          "text": "The company also says the models were trained to resist adversarial instructions and handle private information carefully. A fuller safety evaluation report is still forthcoming. For agents that touch calendars, documents or other applications, permission checks and integration behavior remain part of the assessment. The concrete October 12 milestone is the release of the Wonder family through specified products, with additional consumer availability planned rather than already completed."
+        }
+      ],
+      "sources": [
+        {"label": "Meta for Developers — Muse Wonder context, API pricing and Full access", "url": "https://developer.meta.com/ai/models/muse-wonder/"},
+        {
+          "label": "Meta — Muse Wonder research release",
+          "url": "https://research.meta.ai/blog/muse-wonder"
+        },
+        {
+          "label": "Meta — launch announcement",
+          "url": "https://about.fb.com/news/2026/10/introducing-muse-wonder-models/"
+        },
+        {
+          "label": "Meta for Developers — Muse Code access and subscriptions",
+          "url": "https://developer.meta.com/ai/products/muse-code"
+        }
+      ]
+    },
+    {
+      "slug": "microsoft-maia-300-inference-expansion",
+      "category": "Industry · Infrastructure",
+      "sortDate": "2026-10-12",
+      "dateLabel": "October 12, 2026",
+      "title": "Microsoft plans multi-gigawatt Maia deployments in 2027 as Maia 200 enters production",
+      "summary": "Maia 300 targets long-context and agent inference with 96 accelerators per rack. Microsoft separates current Maia 200 service from the next generation’s planned rollout.",
+      "image": {
+        "src": "ai-news/2026-10/images/microsoft-maia-300-official.png",
+        "alt": "Microsoft’s official artwork showing the Azure Maia 300 accelerator",
+        "caption": "Official Azure Maia 300 product artwork. Source: Microsoft, October 12, 2026."
+      },
+      "content": [
+        {
+          "type": "paragraph",
+          "text": "Microsoft announced on October 12 that it plans to expand its Azure Maia accelerator family to multi-gigawatt deployments beginning in 2027. Maia 200 is already serving production workloads, including Microsoft Copilot and work by Microsoft’s MAI team. Maia 300, the next generation, is scheduled to begin production deployment in 2027. The distinction matters: today’s announcement combines a report of existing service with a future infrastructure commitment."
+        },
+        {
+          "type": "heading",
+          "text": "An inference system built around data movement"
+        },
+        {
+          "type": "paragraph",
+          "text": "The design targets inference: running trained models to produce responses. Microsoft identifies long-context reasoning, conversational latency and sustained agent tasks as important workloads. These uses put pressure on memory and communication as well as arithmetic. The company’s architecture therefore coordinates software, accelerator design, networking and the physical rack, rather than treating the chip’s nominal compute throughput as the whole system."
+        },
+        {
+          "type": "paragraph",
+          "text": "Maia 300 separates compute, memory-controller and input/output functions across chiplets, with compute manufactured on TSMC’s N2P process. Each accelerator has eight HBM4 stacks, 288 GB of high-bandwidth memory and a stated peak bandwidth of 18 TB/s. The stated thermal design power is 950 watts. Software-managed on-chip memory and low-precision formats are intended to reduce the amount of data moved for computation and the cached state used during generation."
+        },
+        {
+          "type": "heading",
+          "text": "Scaling a rack and the network around it"
+        },
+        {
+          "type": "paragraph",
+          "text": "A full rack brings together 96 accelerators within a 167-kilowatt power envelope. Microsoft gives aggregate figures of 27.6 TB of HBM capacity and roughly 1.7 PB/s of memory bandwidth. Those are rack totals, not the capacity and bandwidth of one chip. The architecture describes a two-tier scale-up network extending from a rack to a superpod, with electrical connections inside racks and optical links between them."
+        },
+        {
+          "type": "paragraph",
+          "text": "The technical account also describes separating the work of processing an input context from generating subsequent output tokens. Both phases remain on the scale-up fabric, with cached model state passed to the selected generation workers. Flexible placement and spare capacity across racks are intended to improve utilization when workload sizes or failures do not fit the boundaries of a single rack. These are design capabilities; their benefit depends on the actual workload and operating conditions."
+        },
+        {
+          "type": "heading",
+          "text": "Reported efficiency and the deployment timetable"
+        },
+        {
+          "type": "paragraph",
+          "text": "Microsoft expects Maia 300 to deliver 40% more tokens per megawatt than leading GPU-based systems and up to seven times Maia 200’s rack-scale token throughput in a full 96-accelerator configuration. Its architecture account separately reports more than 2.5 times Maia 200’s performance per watt. These comparisons use different denominators and should not be combined into one generalized speedup. They are Microsoft’s claims, not an independent measurement of every model or cloud service."
+        },
+        {
+          "type": "paragraph",
+          "text": "For the current generation, Microsoft says Maia 200 is deploying in the United States, Europe and Australia, with GitHub Copilot and Microsoft Foundry support to follow by the end of the year. The immediate user-facing effect is through services Microsoft operates; this is not an announcement that customers can buy a Maia 300 rack today. Microsoft’s planned scale suggests a larger role for its own silicon in inference, while capacity commissioned, workload coverage and delivered efficiency will determine how that commitment translates into operation."
+        }
+      ],
+      "sources": [
+        {
+          "label": "Microsoft — deployment announcement",
+          "url": "https://blogs.microsoft.com/blog/2026/10/12/microsoft-to-expand-azure-maia-system-to-multi-gigawatt-deployments/"
+        },
+        {
+          "label": "Microsoft Azure — Maia 300 architecture",
+          "url": "https://azure.microsoft.com/en-us/blog/deep-dive-into-azure-maia-300-architecture/"
+        },
+        {
+          "label": "Microsoft — Maia 300 product and media resources",
+          "url": "https://news.microsoft.com/maia-2026/"
+        }
+      ]
+    },
+    {
+      "slug": "michigan-nvidia-kareus-training-energy",
+      "category": "Research · Systems",
+      "sortDate": "2026-10-12",
+      "dateLabel": "October 12, 2026",
+      "title": "Michigan and NVIDIA test energy-saving software for Megatron-LM training",
+      "summary": "Kareus coordinates GPU kernel schedules and frequency with Perseus. The new integration work builds on July results, whose measured savings depend on the workload and comparison.",
+      "image": {
+        "src": "ai-news/2026-10/images/michigan-energy-lab-official.jpg",
+        "alt": "University of Michigan researchers in a high-performance computing facility",
+        "caption": "University of Michigan energy-efficiency researchers. Photo: Marcin Szczepanski, Michigan Engineering; published October 12, 2026."
+      },
+      "content": [
+        {
+          "type": "paragraph",
+          "text": "University of Michigan Engineering reported on October 12 that its researchers are working with NVIDIA to integrate energy-saving training software into Megatron-LM. The effort combines Perseus, which adjusts GPU frequency, with Kareus, which coordinates computation and communication schedules. The university says combined savings could approach 40–50% for large-scale model training. That is an integration goal and workload-dependent estimate, rather than a claim that every Megatron-LM job already uses half the energy."
+        },
+        {
+          "type": "heading",
+          "text": "Matching processor speed to the work"
+        },
+        {
+          "type": "paragraph",
+          "text": "Parallel training divides a model and its data across processors that must exchange information and finish coordinated stages. Running every processor at maximum speed can waste energy when some finish early and wait for slower work. Perseus reduces unnecessary speed on work outside the critical path. Kareus adds another layer: it searches how GPU resources should be assigned to communication, when communication kernels should start and which frequency should be used."
+        },
+        {
+          "type": "paragraph",
+          "text": "Those decisions interact. Slowing computation changes how it competes with communication for resources; overlapping work can reduce idle time but also raise instantaneous power. Kareus therefore treats frequency and scheduling as one optimization problem. Its implementation builds on Megatron-LM, profiles portions of a training iteration, constructs time–energy tradeoffs and selects an execution schedule for a specified timing target."
+        },
+        {
+          "type": "heading",
+          "text": "What the published experiment actually measured"
+        },
+        {
+          "type": "paragraph",
+          "text": "Kareus was presented at USENIX OSDI in July, before this week’s integration announcement. The paper evaluates 14 workloads. Its physical testbed uses 16 NVIDIA A100 40 GB GPUs across two AWS instances, running Llama 3.2 3B and Qwen 3 1.7B. A separate larger-scale evaluation of Llama 3.3 70B uses emulation. The real-GPU results and emulated results should remain distinct when describing the evidence."
+        },
+        {
+          "type": "paragraph",
+          "text": "Against Megatron-LM plus Perseus, the paper reports up to 28.3% lower training energy at the same time budget, or up to 27.5% lower time at the same energy budget. These are alternative comparisons along the time–energy frontier, not simultaneous maximum gains. In its maximum-throughput comparison against unmodified Megatron-LM, the reported maxima are 14.9% lower iteration time and 22.1% lower energy. A different baseline produces a different number."
+        },
+        {
+          "type": "heading",
+          "text": "From a research system to a training platform"
+        },
+        {
+          "type": "paragraph",
+          "text": "The experiments also show why a single savings figure is insufficient. Benefits vary with parallelism, microbatch size, sequence length and the relative communication load. Some configurations exceed available GPU memory. Energy profiling itself requires care: the researchers use repeated measurement windows and thermal cooldown to avoid comparing a warm device with a cold one. Optimization also carries profiling and search overhead, whose relevance depends on the length of the training job."
+        },
+        {
+          "type": "paragraph",
+          "text": "The October 12 development is work toward bringing these ideas into NVIDIA’s open-source training stack, rather than publication of a new paper claiming a universal 50% reduction. The university describes NVIDIA as evaluating how to add the tools. It does not announce a completed general rollout or a measured reduction in total data-center electricity. The result gives training-system builders a concrete technique to test: optimize scheduling and frequency together, then measure energy and timing under the same workload and baseline."
+        }
+      ],
+      "sources": [
+        {
+          "label": "Michigan Engineering — NVIDIA integration work, October 12",
+          "url": "https://news.engin.umich.edu/2026/10/ai-training-energy-reduced-up-to-50-with-u-m-software/"
+        },
+        {
+          "label": "USENIX — Kareus paper and OSDI record, July 2026",
+          "url": "https://www.usenix.org/conference/osdi26/presentation/wu-ruofan"
+        },
+        {
+          "label": "USENIX — full Kareus paper",
+          "url": "https://www.usenix.org/system/files/osdi26-wu-ruofan.pdf"
+        }
+      ]
+    },
+    {
+      "slug": "openai-dublin-applied-ai-lab-hiring",
+      "category": "Employment · Expansion",
+      "sortDate": "2026-10-12",
+      "dateLabel": "October 12, 2026",
+      "title": "OpenAI pledges 200 additional Ireland jobs and a Dublin Applied AI Lab",
+      "summary": "The announcement adds to July’s 250-role commitment. Engineering and operational hiring will support customer deployment, while a separate programme will train 150 founders.",
+      "image": {
+        "src": "ai-news/2026-10/images/openai-dublin-ida-official.jpg",
+        "alt": "Micheál Martin, Sarah Friar and Michael Lohan at OpenAI’s Ireland announcement",
+        "caption": "Taoiseach Micheál Martin, OpenAI CFO Sarah Friar and IDA Ireland CEO Michael Lohan. Source: IDA Ireland, October 12, 2026."
+      },
+      "content": [
+        {
+          "type": "paragraph",
+          "text": "OpenAI announced plans on October 12 to create 200 additional jobs in Ireland, including roles supporting a new Applied AI Lab at its European Union headquarters in Dublin. IDA Ireland is supporting the investment. The new commitment adds to 250 roles announced in July, taking the combined pledge to at least 450 new local roles. That is a hiring commitment, distinct from OpenAI’s current Irish workforce of more than 120 people."
+        },
+        {
+          "type": "heading",
+          "text": "Engineering tied to customer deployment"
+        },
+        {
+          "type": "paragraph",
+          "text": "The lab’s technical hiring includes forward deployed engineers, who work directly with customers to build and deploy AI applications, as well as solutions and privacy engineers. The announcement also identifies hiring in sales and user operations. It does not give a breakdown of the 200 positions by role, pay bands or a schedule for filling every job. The figures therefore should not be presented as 200 completed hires or 200 research-scientist vacancies."
+        },
+        {
+          "type": "paragraph",
+          "text": "The roles will be based at OpenAI’s new EU headquarters in the Tropical Fruit Warehouse, which the company plans to occupy from December 2026. The stated purpose is to strengthen local technical and operational expertise and help European businesses deploy AI. This places the expansion around applied implementation and support as well as engineering. The release does not describe a separate frontier-model training facility or announce a new model from the Dublin lab."
+        },
+        {
+          "type": "heading",
+          "text": "A separate programme for founders and smaller businesses"
+        },
+        {
+          "type": "paragraph",
+          "text": "Alongside hiring, OpenAI is expanding its OpenAI for Ireland programme with Dogpatch Labs. A Founder Cafe initiative will provide about 150 Ireland-based founders with advanced training in ChatGPT, Codex and the API, aimed at helping them prototype and develop businesses. Those founders are programme participants, not another 150 employees. OpenAI also plans further SME Academy events, starting in Cork in November, and continued support for the Patch programme for builders aged 16–21."
+        },
+        {
+          "type": "paragraph",
+          "text": "The announcement combines several different commitments: additional employment, a new applied lab, a headquarters move and training opportunities. Keeping them separate makes its scale easier to assess. The 450-role pledge does not describe the number of people already working at the company, and neither a training place nor a prototype demonstrates that a business has successfully deployed AI. The next concrete milestones are recruitment, the December move and delivery of the announced programmes."
+        }
+      ],
+      "sources": [
+        {
+          "label": "IDA Ireland — additional jobs and Applied AI Lab",
+          "url": "https://www.idaireland.com/latest-news/press-release/openai-announces-200-additional-jobs"
+        }
+      ]
+    },
+    {
+      "slug": "dmatrix-squadron-inference-clusters",
+      "category": "Industry · Inference",
+      "sortDate": "2026-10-12",
+      "dateLabel": "October 12, 2026",
+      "title": "d-Matrix ships Squadron inference clusters to priority customers",
+      "summary": "The new multi-rack platform scales to 1,024 Corsair XPUs. Servers and SquadRacks are generally available, while the company reports a GPU–XPU disaggregation demonstration.",
+      "image": {
+        "src": "ai-news/2026-10/images/dmatrix-squadron-official.webp",
+        "alt": "d-Matrix’s official illustration of its Squadron inference cluster",
+        "caption": "Official Squadron system artwork. Source: d-Matrix, October 12, 2026."
+      },
+      "content": [
+        {
+          "type": "paragraph",
+          "text": "d-Matrix announced Squadron at the OCP Global Summit on October 12, extending its Corsair inference platform from servers and racks to multi-rack clusters. The company says Squadron is shipping to priority customers and has already been deployed in its Arizona data center for internal research and development. Individual Corsair servers and SquadRack systems are generally available. Those access distinctions are more precise than treating every cluster configuration as an unrestricted off-the-shelf product."
+        },
+        {
+          "type": "heading",
+          "text": "A deployment built from servers, racks and software"
+        },
+        {
+          "type": "paragraph",
+          "text": "Squadron was developed with Arista, Broadcom and Supermicro. Its largest stated configuration connects 16 SquadRacks and up to 1,024 Corsair XPUs. Each SquadRack contains eight servers. JetStream network interfaces link the system, and Aviator software supports deployment. Customers can begin with a server, move to a full rack or use a multi-rack cluster, keeping the same platform components across those scales."
+        },
+        {
+          "type": "paragraph",
+          "text": "The company describes the architecture as air-cooled and based on industry standards, with the aim of fitting existing data centers without requiring liquid cooling. That is a deployment characteristic, not proof that any facility can accept a megawatt-scale installation without power, space or networking work. The release gives no public cluster price, named external customer deployment or independently measured total operating cost."
+        },
+        {
+          "type": "heading",
+          "text": "Splitting model work across GPUs and XPUs"
+        },
+        {
+          "type": "paragraph",
+          "text": "The release also reports an Attention–FFN Disaggregation demonstration using Squadron with GPU servers. In this arrangement, parts of the model associated with expert or feed-forward computation are moved to Corsair racks, while other work remains on GPUs. The purpose is to match different pieces of inference to hardware with different memory and compute characteristics. d-Matrix says the platform can also run full models solely on Corsair XPUs."
+        },
+        {
+          "type": "paragraph",
+          "text": "For the heterogeneous demonstration, d-Matrix reports 845 output tokens per second per user and total throughput of 20,415 tokens per second with 64 concurrent users. The single-user and aggregate figures describe different operating conditions; multiplying 845 by 64 would not reproduce the published result. The announcement does not provide enough benchmark detail to establish a matched comparison across every model, context length, precision and latency target."
+        },
+        {
+          "type": "heading",
+          "text": "Shipping status is clearer than comparative performance"
+        },
+        {
+          "type": "paragraph",
+          "text": "The company plans live demonstrations at OCP on October 14 and 15. Those sessions are future events relative to the announcement. Its assertion that this is the first such disaggregation running on available silicon is a company claim, not an independently established survey of competing systems. The useful verified change is that d-Matrix has moved its platform into shipping cluster configurations and made the underlying server and rack products generally available."
+        },
+        {
+          "type": "paragraph",
+          "text": "For a prospective deployment, memory placement, software support and the network between devices are part of the system being evaluated. A high generation rate in one demonstration does not by itself show better performance at a fixed answer quality, energy budget or cost. Squadron offers another concrete architecture for serving models, including heterogeneous operation with GPUs; customer-level measurements will determine where that architecture delivers an advantage."
+        }
+      ],
+      "sources": [
+        {
+          "label": "d-Matrix — Squadron announcement and availability",
+          "url": "https://www.d-matrix.ai/announcements/squadron-compute-clusters/"
+        },
+        {
+          "label": "d-Matrix — company-issued release distributed by PR Newswire",
+          "url": "https://www.prnewswire.com/news-releases/d-matrix-announces-squadron-compute-clusters-for-ai-inference-at-data-center-scale-302906041.html"
+        }
+      ]
+    },
+    {
       "slug": "weekly-ai-october-5-11",
       "category": "AI Weekly",
       "sortDate": "2026-10-12",
