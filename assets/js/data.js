@@ -467,6 +467,16 @@ window.LLM_LAB_DATA = {
             { label: "LinkedIn", url: "https://www.linkedin.com/in/krishmo118/" },
             { label: "Email", url: "mailto:km49142@uga.edu" }
           ]
+        },
+        {
+          name: "Kristian (Kris) Pitshugin",
+          role: "M.S. Student in AI",
+          bio: "Studies machine learning optimization and multimodal AI, including multi-objective optimization for operating-room staffing. A competitive swimmer, he has competed in World and European Championships, NCAA meets, and Olympic Trials.",
+          photo: "assets/images/members-kristian-pitshugin.png",
+          links: [
+            { label: "Website", url: "https://krispitshugin.com" },
+            { label: "Email", url: "mailto:kp39596@uga.edu" }
+          ]
         }
       ]
     },
@@ -613,6 +623,17 @@ window.LLM_LAB_DATA = {
           links: [
             { label: "LinkedIn", url: "https://www.linkedin.com/in/jagad-krishnan-b00931374/?isSelfProfile=true" },
             { label: "Email", url: "mailto:jk02067@uga.edu" }
+          ]
+        },
+        {
+          name: "Anto Francis",
+          role: "Undergrad · CS",
+          bio: "Builds full-stack applications integrating machine learning and deep learning; interested in LLM evaluation, reinforcement learning, and object detection.",
+          photo: "assets/images/members-anto-francis.png",
+          links: [
+            { label: "LinkedIn", url: "https://www.linkedin.com/in/anto-francis-csmajor/" },
+            { label: "GitHub", url: "https://github.com/DevFrancisA" },
+            { label: "Email", url: "mailto:ajf46428@uga.edu" }
           ]
         }
       ]
