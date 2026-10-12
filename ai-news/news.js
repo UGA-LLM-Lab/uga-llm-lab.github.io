@@ -152,7 +152,7 @@
           </a>
 
           <div class="ai-news-weekly__body">
-            <p class="ai-news-weekly__kicker">Analysis · Research · Industry</p>
+            <p class="ai-news-weekly__kicker">Analysis · ${(feature.sections || ["Research", "Industry"]).map(escapeHtml).join(" · ")}</p>
             <h2><a href="${analysisHref}">${escapeHtml(feature.title)}</a></h2>
             <p>${escapeHtml(feature.summary)}</p>
             <dl class="ai-news-weekly__metrics">
@@ -223,19 +223,22 @@
         </div>
         <ol class="ai-news-attention__list">
           ${trends.items.map((item) => {
-            const width = Math.max(4, Math.min(100, (Number(item.index) / 160) * 100));
+            const hasIndex = Number.isFinite(item.index);
+            const width = hasIndex
+              ? Math.max(4, Math.min(100, (item.index / 160) * 100))
+              : Math.max(0, Math.min(100, item.share));
             const direction = item.direction === "up" ? "↑" : item.direction === "down" ? "↓" : "→";
             return `
               <li>
                 <div class="ai-news-attention__label">
                   <span>${escapeHtml(item.label)}</span>
-                  <strong class="is-${escapeHtml(item.direction)}">${escapeHtml(item.index)} ${direction}</strong>
+                  <strong class="is-${escapeHtml(item.direction)}">${hasIndex ? `${escapeHtml(item.index)} ${direction}` : `${escapeHtml(item.share.toFixed(1))}%`}</strong>
                 </div>
                 <div class="ai-news-attention__track" aria-hidden="true">
                   <span style="width: ${width.toFixed(1)}%"></span>
-                  <i></i>
+                  ${hasIndex ? "<i></i>" : ""}
                 </div>
-                <small>${escapeHtml(item.share.toFixed(1))}% of sampled papers</small>
+                <small>${hasIndex ? `${escapeHtml(item.share.toFixed(1))}% of sampled papers` : `${escapeHtml(item.count)} sampled papers · ${escapeHtml(item.state || "Watching")}`}</small>
               </li>`;
           }).join("")}
         </ol>

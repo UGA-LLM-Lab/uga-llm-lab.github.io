@@ -1,37 +1,132 @@
 /**
- * AI/SI News attention panel
- *
- * An index of 100 means that a topic's share of sampled Hugging Face
- * Daily Papers recommendations was unchanged from the previous week.
- * Topics without enough observations for a stable comparison are omitted.
+ * AI/SI News research attention and featured weekly analysis.
+ * Topic shares describe the current recommendation sample. Comparative indices
+ * are withheld until the current and previous collection scopes are aligned.
  */
 window.AI_NEWS_TRENDS = {
-  title: "Research Attention",
-  period: "September 28–October 4, 2026",
-  comparison: "Compared with September 21–27",
-  updated: "October 5, 2026",
-  note: "Relative topic attention across 233 unique Hugging Face Daily Papers recommendations. Baseline = 100; topics may overlap.",
-  items: [
-    { label: "Efficiency & inference systems", index: 140, share: 18.0, direction: "up" },
-    { label: "Vision & multimodality", index: 134, share: 29.6, direction: "up" },
-    { label: "Reasoning & mathematics", index: 113, share: 6.4, direction: "up" },
-    { label: "Agents & tool use", index: 88, share: 24.5, direction: "down" },
-    { label: "Memory & context", index: 76, share: 6.0, direction: "down" },
-    { label: "Evaluation & verification", index: 69, share: 9.9, direction: "down" },
-    { label: "Robotics & embodied AI", index: 63, share: 9.9, direction: "down" },
-    { label: "Coding & software", index: 60, share: 3.9, direction: "down" },
-    { label: "Speech & audio", index: 52, share: 2.6, direction: "down" }
+  "title": "Research Attention",
+  "period": "October 5–11, 2026",
+  "comparison": "Week-over-week comparison withheld",
+  "updated": "October 12, 2026",
+  "note": "Current topic shares across 349 unique Hugging Face Daily Papers recommendations; topics may overlap. The previous sample used an unresolved collection scope, so comparative indices and directions are withheld.",
+  "items": [
+    {
+      "label": "Vision & multimodality",
+      "index": null,
+      "share": 24.4,
+      "count": 85,
+      "direction": "watch",
+      "state": "Watching"
+    },
+    {
+      "label": "Agents & tool use",
+      "index": null,
+      "share": 22.1,
+      "count": 77,
+      "direction": "watch",
+      "state": "Watching"
+    },
+    {
+      "label": "Efficiency & inference",
+      "index": null,
+      "share": 15.5,
+      "count": 54,
+      "direction": "watch",
+      "state": "Watching"
+    },
+    {
+      "label": "Robotics & embodied AI",
+      "index": null,
+      "share": 10.6,
+      "count": 37,
+      "direction": "watch",
+      "state": "Watching"
+    },
+    {
+      "label": "Evaluation & verification",
+      "index": null,
+      "share": 9.5,
+      "count": 33,
+      "direction": "watch",
+      "state": "Watching"
+    },
+    {
+      "label": "Memory & context",
+      "index": null,
+      "share": 6.3,
+      "count": 22,
+      "direction": "watch",
+      "state": "Watching"
+    },
+    {
+      "label": "Reasoning & mathematics",
+      "index": null,
+      "share": 6,
+      "count": 21,
+      "direction": "watch",
+      "state": "Watching"
+    },
+    {
+      "label": "Self-improvement & evolution",
+      "index": null,
+      "share": 4.9,
+      "count": 17,
+      "direction": "watch",
+      "state": "Watching"
+    },
+    {
+      "label": "Safety & reliability",
+      "index": null,
+      "share": 3.7,
+      "count": 13,
+      "direction": "watch",
+      "state": "Watching"
+    },
+    {
+      "label": "Speech & audio",
+      "index": null,
+      "share": 2.9,
+      "count": 10,
+      "direction": "watch",
+      "state": "Watching"
+    },
+    {
+      "label": "Coding & software",
+      "index": null,
+      "share": 2.6,
+      "count": 9,
+      "direction": "watch",
+      "state": "Watching"
+    },
+    {
+      "label": "Biomedicine & life sciences",
+      "index": null,
+      "share": 2.3,
+      "count": 8,
+      "direction": "watch",
+      "state": "Watching"
+    }
   ]
 };
 
 window.AI_NEWS_WEEKLY_FEATURE = {
-  analysisId: "2026-09-28-to-2026-10-04",
-  title: "New tools arrive; real-world evidence takes longer",
-  summary: "Persistent agents, stronger models and new deployment controls reached users. A randomized field trial offered rare outcome evidence, while broad productivity and hiring effects remain unsettled.",
-  coverAlt: "OpenAI’s official dots artwork, illustrating the week’s reporting on persistent AI agents",
-  metrics: [
-    { value: "233", label: "papers sampled" },
-    { value: "140", label: "efficiency attention index" },
-    { value: "134", label: "vision attention index" }
+  "analysisId": "2026-10-05-to-2026-10-11",
+  "sections": ["Research", "Industry", "Hiring / Talent"],
+  "title": "Interactive answers, scientific data, and deployment controls",
+  "summary": "ChatGPT added interactive answers, Mistral opened an API preview, and Biohub expanded its biological-data program. Anthropic's incident review highlights the permissions and monitoring needed when models use tools.",
+  "coverAlt": "OpenAI release artwork showing interactive answers in ChatGPT",
+  "metrics": [
+    {
+      "value": "349",
+      "label": "papers sampled"
+    },
+    {
+      "value": "85",
+      "label": "vision & multimodality papers"
+    },
+    {
+      "value": "77",
+      "label": "agent & tool-use papers"
+    }
   ]
 };

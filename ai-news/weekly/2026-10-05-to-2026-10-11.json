@@ -1,0 +1,626 @@
+{
+  "title": "Interactive answers, scientific data, and deployment controls",
+  "period": {
+    "current": [
+      "2026-10-05",
+      "2026-10-11"
+    ],
+    "previous": [
+      "2026-09-28",
+      "2026-10-04"
+    ],
+    "timezone": "America/New_York"
+  },
+  "synthesis": "ChatGPT added interactive answers, Mistral opened an API preview, and Biohub expanded its biological-data program. Anthropic's incident review highlights the permissions and monitoring needed when models use tools.",
+  "methodology_note": "Research attention covers 349 unique Hugging Face Daily Papers recommendations from October 5–11. Topics may overlap. Weekly comparisons are withheld because the previous sample used an unresolved collection scope. Product announcements and survey results describe different periods and populations.",
+  "research_attention": {
+    "population": "Hugging Face Daily Papers recommendations; unique paper IDs per Monday–Sunday week",
+    "current_window": [
+      "2026-10-05",
+      "2026-10-11"
+    ],
+    "previous_window": [
+      "2026-09-28",
+      "2026-10-04"
+    ],
+    "denominators": [
+      233,
+      349
+    ],
+    "topic_overlap": true,
+    "comparison_status": "blocked_scope_reconciliation",
+    "source": "https://huggingface.co/papers",
+    "metrics": [
+      {
+        "id": "agents",
+        "label": "Agents & tool use",
+        "counts": [
+          57,
+          77
+        ],
+        "shares": [
+          24.463519313304722,
+          22.063037249283667
+        ],
+        "index": null,
+        "state": "Watching",
+        "direction": "watch",
+        "comparison_eligible": false,
+        "null_reason": "Previous frozen recommendation sample and current complete collection have unreconciled scopes."
+      },
+      {
+        "id": "audio",
+        "label": "Speech & audio",
+        "counts": [
+          6,
+          10
+        ],
+        "shares": [
+          2.575107296137339,
+          2.865329512893983
+        ],
+        "index": null,
+        "state": "Watching",
+        "direction": "watch",
+        "comparison_eligible": false,
+        "null_reason": "Previous frozen recommendation sample and current complete collection have unreconciled scopes."
+      },
+      {
+        "id": "bio",
+        "label": "Biomedicine & life sciences",
+        "counts": [
+          1,
+          8
+        ],
+        "shares": [
+          0.4291845493562232,
+          2.292263610315186
+        ],
+        "index": null,
+        "state": "Watching",
+        "direction": "watch",
+        "comparison_eligible": false,
+        "null_reason": "Previous frozen recommendation sample and current complete collection have unreconciled scopes."
+      },
+      {
+        "id": "code",
+        "label": "Coding & software",
+        "counts": [
+          9,
+          9
+        ],
+        "shares": [
+          3.8626609442060085,
+          2.5787965616045847
+        ],
+        "index": null,
+        "state": "Watching",
+        "direction": "watch",
+        "comparison_eligible": false,
+        "null_reason": "Previous frozen recommendation sample and current complete collection have unreconciled scopes."
+      },
+      {
+        "id": "efficiency",
+        "label": "Efficiency & inference",
+        "counts": [
+          42,
+          54
+        ],
+        "shares": [
+          18.025751072961373,
+          15.472779369627506
+        ],
+        "index": null,
+        "state": "Watching",
+        "direction": "watch",
+        "comparison_eligible": false,
+        "null_reason": "Previous frozen recommendation sample and current complete collection have unreconciled scopes."
+      },
+      {
+        "id": "embodied",
+        "label": "Robotics & embodied AI",
+        "counts": [
+          23,
+          37
+        ],
+        "shares": [
+          9.871244635193133,
+          10.601719197707736
+        ],
+        "index": null,
+        "state": "Watching",
+        "direction": "watch",
+        "comparison_eligible": false,
+        "null_reason": "Previous frozen recommendation sample and current complete collection have unreconciled scopes."
+      },
+      {
+        "id": "eval",
+        "label": "Evaluation & verification",
+        "counts": [
+          23,
+          33
+        ],
+        "shares": [
+          9.871244635193133,
+          9.455587392550143
+        ],
+        "index": null,
+        "state": "Watching",
+        "direction": "watch",
+        "comparison_eligible": false,
+        "null_reason": "Previous frozen recommendation sample and current complete collection have unreconciled scopes."
+      },
+      {
+        "id": "memory",
+        "label": "Memory & context",
+        "counts": [
+          14,
+          22
+        ],
+        "shares": [
+          6.008583690987124,
+          6.303724928366762
+        ],
+        "index": null,
+        "state": "Watching",
+        "direction": "watch",
+        "comparison_eligible": false,
+        "null_reason": "Previous frozen recommendation sample and current complete collection have unreconciled scopes."
+      },
+      {
+        "id": "multimodal",
+        "label": "Vision & multimodality",
+        "counts": [
+          69,
+          85
+        ],
+        "shares": [
+          29.613733905579398,
+          24.355300859598852
+        ],
+        "index": null,
+        "state": "Watching",
+        "direction": "watch",
+        "comparison_eligible": false,
+        "null_reason": "Previous frozen recommendation sample and current complete collection have unreconciled scopes."
+      },
+      {
+        "id": "reason",
+        "label": "Reasoning & mathematics",
+        "counts": [
+          15,
+          21
+        ],
+        "shares": [
+          6.437768240343348,
+          6.017191977077364
+        ],
+        "index": null,
+        "state": "Watching",
+        "direction": "watch",
+        "comparison_eligible": false,
+        "null_reason": "Previous frozen recommendation sample and current complete collection have unreconciled scopes."
+      },
+      {
+        "id": "safety",
+        "label": "Safety & reliability",
+        "counts": [
+          4,
+          13
+        ],
+        "shares": [
+          1.7167381974248928,
+          3.7249283667621778
+        ],
+        "index": null,
+        "state": "Watching",
+        "direction": "watch",
+        "comparison_eligible": false,
+        "null_reason": "Previous frozen recommendation sample and current complete collection have unreconciled scopes."
+      },
+      {
+        "id": "self",
+        "label": "Self-improvement & evolution",
+        "counts": [
+          11,
+          17
+        ],
+        "shares": [
+          4.721030042918455,
+          4.871060171919771
+        ],
+        "index": null,
+        "state": "Watching",
+        "direction": "watch",
+        "comparison_eligible": false,
+        "null_reason": "Previous frozen recommendation sample and current complete collection have unreconciled scopes."
+      }
+    ],
+    "limits": "Current counts describe 349 observed unique recommendations. The preserved prior sample has 233 papers; collection scopes have not been reconciled. All indices are withheld. This title-based recommendation sample does not measure research quality, industry adoption or hiring."
+  },
+  "tabs": [
+    {
+      "id": "research",
+      "label": "Research / Academia",
+      "claims": [
+        {
+          "claim": "A snapshot of research attention, with weekly comparisons still unresolved",
+          "scope": "Hugging Face Daily Papers, a global recommendation sample; October 5–11 compared with the frozen September 28–October 4 sample.",
+          "confidence": "High",
+          "horizons": [
+            {
+              "label": "This week",
+              "text": "The complete current collection has 349 unique paper IDs: 85 vision or multimodality titles, 77 agents or tool-use titles, and 54 efficiency or inference titles. All 12 comparative indices remain Watching."
+            },
+            {
+              "label": "Short term",
+              "text": "A short-term trend will require several weeks collected on a consistent basis."
+            },
+            {
+              "label": "Medium to long term",
+              "text": "Broader structural evidence comes from annual bibliometrics rather than these recommendation shares."
+            },
+            {
+              "label": "Long term",
+              "text": "The recommendation sample is too limited to support a multi-year trend."
+            }
+          ],
+          "interpretation": "These counts identify subjects visible in a recommendation stream. They cannot establish which fields are rising or declining this week.",
+          "counterevidence": "The preserved prior 233-paper collection and current 349-paper complete collection have unreconciled scopes. Topic overlap, title wording and recommendation cycles further constrain interpretation.",
+          "what_would_change": "A baseline collected with the same scope and title classifier would allow a meaningful week-over-week comparison.",
+          "evidence": [
+            "hf"
+          ]
+        },
+        {
+          "claim": "More research papers, but publication counts tell only part of the story",
+          "scope": "English-language AI-related computer science publications in OpenAlex, 2013–2024.",
+          "confidence": "Medium",
+          "horizons": [
+            {
+              "label": "This week",
+              "text": "Comparable weekly arXiv and conference counts are not available for this edition."
+            },
+            {
+              "label": "Short term",
+              "text": "Short-term publication trends need stable query definitions and corrections for indexing lag."
+            },
+            {
+              "label": "Medium to long term",
+              "text": "The 2026 AI Index reports about 258,000 AI publications in 2024, 6.3% above 2023; AI accounts for 40.9% of computer science publications in its database."
+            },
+            {
+              "label": "Long term",
+              "text": "The comparable 2013–2024 series grows from roughly 102,000 to 258,000 publications. This is output volume over eleven years rather than a quality score."
+            }
+          ],
+          "interpretation": "Long-run volume growth supports a broader research base. Slower one-year growth and citation lag counsel against claiming uniform acceleration.",
+          "counterevidence": "OpenAlex coverage, the English-language restriction and CSO classification affect counts. Citations accrue slowly; repeated authors, dominant countries and overlapping topics can concentrate growth. This is one bibliometric family, without independent confirmation from a second database.",
+          "what_would_change": "A deduplicated Crossref or PubMed series, or a stable arXiv query with aligned definitions and citation or adoption evidence, would strengthen the finding; a definition-driven revision would weaken it.",
+          "evidence": [
+            "hai-rd"
+          ]
+        },
+        {
+          "claim": "Scientific AI needs better experimental data and stronger validation",
+          "scope": "Global scientific publication and benchmark context, plus Biohub’s October 7 program announcement.",
+          "confidence": "Medium",
+          "horizons": [
+            {
+              "label": "This week",
+              "text": "Biohub’s $1.8 billion resource commitment combines funding, prior federal datasets, computation and measurement technology. It builds inputs for predictive biology; it does not demonstrate disease treatment outcomes."
+            },
+            {
+              "label": "Short term",
+              "text": "The first test is delivery of accessible datasets, common identifiers and measured scientific use. No numerical one-to-three-month program history is available."
+            },
+            {
+              "label": "Medium to long term",
+              "text": "Stanford reports 80,150 AI-related natural science publications in 2025, up 26% year over year. Its science chapter also reports below 20% on paper-scale astrophysics replication and roughly 17% on real-world bioinformatics in different benchmarks."
+            },
+            {
+              "label": "Long term",
+              "text": "AI’s share of scientific output rose from below 1% in 2010 to 5.8%–8.8%, depending on the field, in 2025. Methods are diffusing; publication counts do not prove autonomous discovery."
+            }
+          ],
+          "interpretation": "The week reinforces investment in experimental data and domain-specific workflows, with validation as the limiting test.",
+          "counterevidence": "A resource commitment is an input. Benchmark populations differ and cannot be pooled. Operational weather deployments counter an overly broad claim that all scientific AI is immature. Publication growth and promotional programs are not clinical evidence.",
+          "what_would_change": "Independent replication across laboratories, prospective experimental outcomes and documented use of released data would strengthen this view; missed delivery or results that fail to transfer would weaken it.",
+          "evidence": [
+            "biohub",
+            "hai-science",
+            "hai-medicine"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "industry",
+      "label": "Industry",
+      "claims": [
+        {
+          "claim": "New model access puts permissions and monitoring under scrutiny",
+          "scope": "Mistral, Anthropic and OpenAI official disclosures during October 5–11; scoped observations rather than an industry census.",
+          "confidence": "Medium",
+          "horizons": [
+            {
+              "label": "This week",
+              "text": "Mistral launched an API preview with weights promised later. Anthropic paused live internet access across internal evaluations pending verified monitoring. OpenAI’s October safety report details task-specific gains and regressions."
+            },
+            {
+              "label": "Short term",
+              "text": "The promised weight release and ongoing remediation are conditions to watch, not completed deployment. No comparable customer utilization series is available."
+            },
+            {
+              "label": "Medium to long term",
+              "text": "Deloitte reports that only one in five surveyed companies has mature governance for autonomous agents. This is consistent with deployment controls lagging access, although the sample consists of leaders at organizations already adopting AI."
+            },
+            {
+              "label": "Long term",
+              "text": "No standardized two-to-five-year incident or utilization series spans these three organizations."
+            }
+          ],
+          "interpretation": "Availability and stronger benchmarks increase opportunity. Reliable production also depends on permissions, evaluation design and operational monitoring.",
+          "counterevidence": "Company-selected reports and internal benchmarks lack complete failure denominators. Anthropic describes cases with minimal impact, without establishing a market-wide increase in incidents. Mistral’s API preview does not prove installed customer adoption.",
+          "what_would_change": "Comparable production utilization, independently validated incident rates and published remediation outcomes across these and other organizations would justify a broader maturity claim.",
+          "evidence": [
+            "mistral",
+            "anthropic",
+            "openai",
+            "deloitte"
+          ]
+        },
+        {
+          "claim": "Enterprise adoption and financial returns remain uneven",
+          "scope": "Multi-country enterprise surveys and company financial and labor evidence, 2018–2026.",
+          "confidence": "Medium",
+          "horizons": [
+            {
+              "label": "This week",
+              "text": "Mistral’s release shows ambitious model competition; it does not establish economic returns for startups. A stable startup deployment panel is unavailable."
+            },
+            {
+              "label": "Short term",
+              "text": "McKinsey’s May–June 2026 survey and Deloitte’s August–September 2025 survey describe different periods and populations. Neither measures month-to-month changes in October."
+            },
+            {
+              "label": "Medium to long term",
+              "text": "McKinsey finds large-company agent scaling at 40%, up from 27%, versus 22%, unchanged, at smaller companies. Positive EBIT impact remains at 37%. Deloitte finds productivity benefits at 66% of organizations but revenue benefits at 20%. PwC documents company outcome differences associated with AI exposure."
+            },
+            {
+              "label": "Long term",
+              "text": "PwC reports 2018–2025 productivity growth of 34% in more AI-exposed sectors versus 24% in the least exposed; company headcount growth was 52% versus 36%. These are observed associations rather than causal effects of AI."
+            }
+          ],
+          "interpretation": "AI use and individual gains can expand faster than broad enterprise value. Resource advantages matter; smaller organizations in a survey cannot stand in for venture-backed startups.",
+          "counterevidence": "Self-reporting, sector mix and AI exposure classification confound attribution. Some companies may produce strong audited returns that aggregate surveys miss, and delayed returns may arrive later. The surveys represent independent organizations but one source family; PwC adds company financial and posting evidence.",
+          "what_would_change": "Audited returns and utilization across at least three independent operators, including startups, plus sustained broad improvements would strengthen the view; repeated cost overruns would weaken it.",
+          "evidence": [
+            "mck",
+            "deloitte",
+            "pwc"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "hiring",
+      "label": "Hiring / Talent",
+      "claims": [
+        {
+          "claim": "Demand shifts from basic prompting to building and integrating AI",
+          "scope": "Roughly 550 enterprise employers using Workday Recruiting; skill requisitions from September 2025 through July 2026.",
+          "confidence": "Medium",
+          "horizons": [
+            {
+              "label": "This week",
+              "text": "The October 5 report says demand for applied AI skills rose 51% since September 2025, while basic prompting demand fell 25% after a January 2026 peak. These earlier measurement periods were released this week; they are not weekly hiring changes."
+            },
+            {
+              "label": "Short term",
+              "text": "Comparable short-term hiring trends require a stable sample of large companies, startups and academic employers. The Workday panel ends in July and cannot measure October week-over-week changes."
+            },
+            {
+              "label": "Medium to long term",
+              "text": "Lightcast’s agentic AI skill cluster rose from 0.06% of US postings in 2024 to 0.23% in 2025. This supports a changing skill mix, but distinct taxonomies cannot be merged."
+            },
+            {
+              "label": "Long term",
+              "text": "Indeed’s 2019–2025 history of AI mentions shows renewed growth after 2022. BLS projects data scientist employment to grow 35% during 2025–2035; the occupation is broader than AI and the projection is not a current vacancy measure."
+            }
+          ],
+          "interpretation": "Skills for building and integrating systems appear more durable in these employer and posting panels than basic prompting labels alone.",
+          "counterevidence": "Workday’s enterprise customers do not represent all employers. Skill labels may mature or be absorbed into ordinary jobs. Fewer prompting mentions do not prove fewer AI users; posting demand does not equal realized hires or a shortage.",
+          "what_would_change": "A stable panel including startup and academic roles, with posting persistence, comparable compensation and actual hires, would strengthen the durability claim. Relabeling alone would weaken it.",
+          "evidence": [
+            "workday",
+            "lightcast",
+            "indeed",
+            "bls-ooh"
+          ]
+        },
+        {
+          "claim": "AI skill demand rises within a weak overall hiring market",
+          "scope": "US labor levels and platform postings or hiring; global PwC posting context.",
+          "confidence": "Medium",
+          "horizons": [
+            {
+              "label": "This week",
+              "text": "Comparable weekly hiring estimates are not available. The latest BLS release, October 2 for September, reports 29,000 additional payroll jobs and 4.2% unemployment. October 8 coverage restates those data."
+            },
+            {
+              "label": "Short term",
+              "text": "LinkedIn’s August 2026 hiring rate rose 1.9% month over month but fell 6.5% year over year and remained 25% below February 2020. The September 18 release describes August rather than October hiring. BLS JOLTS reports August hires of 5.2 million, little changed over the month and year; that is a monthly flow distinct from job openings."
+            },
+            {
+              "label": "Medium to long term",
+              "text": "PwC’s 2025 posting data show jobs requiring AI skills growing 69% versus 9% for all jobs. These are global postings from 27 countries and territories, not US monthly employment."
+            },
+            {
+              "label": "Long term",
+              "text": "Indeed’s December 2025 postings mentioning AI were 134% above February 2020, versus total postings up 6%; its AI keyword share reached 4.2%. Indexed posting flows and keyword mentions use different denominators from BLS employment stocks."
+            }
+          ],
+          "interpretation": "Relative demand for AI skills is a more defensible description than an across-the-board hiring boom.",
+          "counterevidence": "Geography, posting taxonomy and release periods differ; these measures cannot be combined into a score. LinkedIn profiles omit some workers and Indeed misses confidential hiring. Strong regional or occupational pockets can coexist with weak aggregate hiring. PwC and Lightcast posting results share the same underlying data family.",
+          "what_would_change": "A deduplicated eight-week stable intersection, growth across many employers and realized hires would support an absolute expansion claim. Changing composition or falling total hires would weaken it.",
+          "evidence": [
+            "bls",
+            "linkedin",
+            "pwc",
+            "indeed",
+            "bls-jolts"
+          ]
+        },
+        {
+          "claim": "Expected headcount cuts and talent shortages need separate evidence",
+          "scope": "Enterprise expectations, repeated survey respondents and observational company history.",
+          "confidence": "Medium",
+          "horizons": [
+            {
+              "label": "This week",
+              "text": "Workday’s October report combines a 6,001-person survey with roughly 1,780 decision-makers and a separate survey of 5,944 workers. Keep these expectations separate from its 550-employer requisition analysis."
+            },
+            {
+              "label": "Short term",
+              "text": "Comparable weekly evidence on hires, compensation and vacancy closures is not yet available. Missing observations prevent a reliable comparison."
+            },
+            {
+              "label": "Medium to long term",
+              "text": "McKinsey reports that 14% of organizations using AI saw AI-related headcount declines, versus 32% expecting them a year earlier; its 552 repeat respondents show the same pattern. Now 39% expect declines next year, leaving another expectation to test."
+            },
+            {
+              "label": "Long term",
+              "text": "WEF’s 2025–2030 employer outlook describes expectations. PwC’s more AI-exposed companies grew headcount 52% during 2018–2025 versus 36% for less exposed companies, countering a blanket claim of universal AI-driven contraction."
+            }
+          ],
+          "interpretation": "Skill demand, talent availability and employment levels are distinct. Postings or surveys alone do not prove AI caused layoffs or created a persistent talent shortage.",
+          "counterevidence": "Employer attribution is self-reported and company financial comparisons are observational. Early-career losses can coexist with aggregate expansion; average headcount growth does not deny localized harm.",
+          "what_would_change": "Persistent vacancies, reposts, employer breadth, comparable compensation and labor supply data would support a shortage claim. Verified causal employment studies would change the displacement assessment.",
+          "evidence": [
+            "workday",
+            "mck",
+            "wef",
+            "pwc"
+          ]
+        }
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "id": "hf",
+      "name": "Hugging Face Daily Papers",
+      "url": "https://huggingface.co/papers",
+      "measurement": "Oct 5–11, 2026; comparison Sep 28–Oct 4 · 349 unique current IDs; 233 approved prior IDs · Prior 233 scope unresolved; fresh prior 397 is diagnostic only. Recommendation dates differ from publication dates."
+    },
+    {
+      "id": "hai-rd",
+      "name": "Stanford HAI AI Index — R&D",
+      "url": "https://hai.stanford.edu/assets/files/ai_index_report_2026_chapter_1_research_development.pdf",
+      "measurement": "English-language CS publications 2013–2024; other chapter series through 2025 · OpenAlex-classified bibliographic records; CSO classifier v3.3 · Citation lag, language coverage, classification and database revisions limit comparability. Source PDF chart layout not independently screenshot verified."
+    },
+    {
+      "id": "hai-science",
+      "name": "Stanford HAI AI Index — Science",
+      "url": "https://hai.stanford.edu/ai-index/2026-ai-index-report/science",
+      "measurement": "2010–2025 publication series; reported task benchmarks · Multiple bibliometric and benchmark studies · Not a prospective multi-institution outcome evaluation; volume does not establish importance."
+    },
+    {
+      "id": "hai-medicine",
+      "name": "Stanford HAI AI Index — Medicine",
+      "url": "https://hai.stanford.edu/ai-index/2026-ai-index-report/medicine",
+      "measurement": "Primarily 2025; historical source series · Multiple medicine studies and device registries · Device modifications, trials and author-reported workflows are distinct populations; no pooled effect invented."
+    },
+    {
+      "id": "mck",
+      "name": "McKinsey State of AI",
+      "url": "https://www.mckinsey.com/capabilities/quantumblack/our-insights/the-state-of-ai",
+      "measurement": "May 4–June 8, 2026; comparable 2025 survey · 1,719 respondents in 97 nations; 36% at organizations with more than $1 billion in revenue; repeated subpanel 552 · Self-reported deployment/EBIT and workforce changes; no audited value or representative census."
+    },
+    {
+      "id": "deloitte",
+      "name": "Deloitte State of AI in the Enterprise",
+      "url": "https://www.deloitte.com/us/en/what-we-do/capabilities/applied-artificial-intelligence/content/state-of-ai-in-the-enterprise.html",
+      "measurement": "August–September 2025 · 3,235 senior leaders; equal IT and business split; 24 countries; leading-edge adopters · Selected leaders/AI adopters; expected future production differs from current production. Exact release date not resolved."
+    },
+    {
+      "id": "pwc",
+      "name": "PwC Global AI Jobs Barometer",
+      "url": "https://www.pwc.com/gx/en/news-room/press-releases/2026/pwc-2026-ai-jobs-barometer.html",
+      "measurement": "Job data primarily 2025; company comparisons 2018–2025; targeted US entry-level history since 2019 · More than one billion job advertisements in 27 countries/territories; 2.4 million US entry-level jobs in targeted analysis · AI exposure is observational and sector composition can confound results. Posting and wage analyses reuse Lightcast data, also used in Stanford AI Index; they are not independent posting samples. Full report text reviewed, but technical appendix and chart layout were not independently verified."
+    },
+    {
+      "id": "biohub",
+      "name": "Biohub Virtual Biology Initiative expansion",
+      "url": "https://biohub.org/news/virtual-biology-initiative-expansion/",
+      "measurement": "New five-year DOE commitment; prior NIH investment; Biohub April 2026 founding commitment · Multi-organization scientific-data partnership · The $1.8 billion mix is not all newly appropriated cash and is not clinical outcome evidence."
+    },
+    {
+      "id": "mistral",
+      "name": "Mistral Large 4 preview",
+      "url": "https://mistral.ai/news/mistral-large-4/",
+      "measurement": "Announcement and ongoing training · Company-authored release and internal evaluations · API preview available; weights promised end October, not already released. Active parameter count conflict avoided."
+    },
+    {
+      "id": "anthropic",
+      "name": "Anthropic unintended model actions",
+      "url": "https://www.anthropic.com/news/investigating-unintended-model-actions",
+      "measurement": "Transcript review began July 2026; reported cases not all new in October · Selected evaluation/internal-use transcripts; no complete rate denominator · Company selected cases; preliminary alignment assessment; no complete incident frequency series; author says minimal impact."
+    },
+    {
+      "id": "openai",
+      "name": "OpenAI October model safety report",
+      "url": "https://deploymentsafety.openai.com/gpt-6-october/model-data-and-training",
+      "measurement": "October 2026 models versus named prior versions · Multiple evaluation task sets; distinct denominators · Benchmark gains/regressions are task-specific; no broad production reliability or adoption denominator."
+    },
+    {
+      "id": "lightcast",
+      "name": "Lightcast / Stanford AI Index labor data",
+      "url": "https://lightcast.io/resources/research/stanford-ai-index-2026",
+      "measurement": "2013–2015 baseline through 2025; 2024–2025 comparison · Billions of postings collected daily; exact retained sample not on inspected page · Same underlying family as AI Index labor chapter. Page lists US AI share as 2.5% and 2.6% in different passages without explaining distinction; avoid selecting one as exact consistent denominator."
+    },
+    {
+      "id": "linkedin",
+      "name": "LinkedIn US Workforce Report",
+      "url": "https://economicgraph.linkedin.com/workforce-data/reports/linkedin-workforce-report-september-2026",
+      "measurement": "Hiring through August 2026 · Over 252 million US LinkedIn members; actual participating profile-update count not supplied · Profile self-report and platform composition; all jobs rather than AI jobs. October edition not identified after date-aware search and official reports listing check."
+    },
+    {
+      "id": "indeed",
+      "name": "Indeed Hiring Lab — AI postings",
+      "url": "https://www.hiringlab.org/2026/01/22/january-labor-market-update-jobs-mentioning-ai-are-growing-amid-broader-hiring-weakness/",
+      "measurement": "2019–December 31, 2025; baseline February 2020 · US Indeed posting universe; retained record count not supplied · Keyword mention is broader than AI engineering occupation. Latest October relevant article not resolved; this is dated history, not October measurement."
+    },
+    {
+      "id": "bls",
+      "name": "BLS Employment Situation",
+      "url": "https://www.bls.gov/news.release/empsit.nr0.htm",
+      "measurement": "September 2026; monthly reference periods · CPS household and CES establishment surveys; sample size not on inspected release · Broad labor levels, not AI causation. Release predates target week; Oct 8 summary is a restatement, not new September data."
+    },
+    {
+      "id": "bls-jolts",
+      "name": "BLS JOLTS",
+      "url": "https://www.bls.gov/news.release/jolts.nr0.htm",
+      "measurement": "August 2026; July revisions · US nonfarm establishments; headline summary does not state retained sample size · 7.1 million openings are a last-business-day stock; 5.2 million hires and 5.1 million separations are monthly flows. These describe all nonfarm work, not AI jobs; linked detailed tables and technical notes were not reviewed."
+    },
+    {
+      "id": "bls-ooh",
+      "name": "BLS Occupational Outlook — Data Scientists",
+      "url": "https://www.bls.gov/ooh/math/data-scientists.htm",
+      "measurement": "Base employment 2025; projection 2035; pay May 2025 · Data scientist occupation · 35% projection is broader than AI and not current hiring; 275,600 base jobs; 95,400 projected net growth."
+    },
+    {
+      "id": "wef",
+      "name": "WEF Future of Jobs",
+      "url": "https://www.weforum.org/publications/the-future-of-jobs-report-2025/",
+      "measurement": "Employer expectations 2025–2030; survey field dates not recovered · more than 1,000 employers; more than 14 million workers; 22 industry clusters; 55 economies · No newer relevant edition located. Expectations are not realized employment; full result tables/field dates not reviewed; do not anchor quantitative scenario claims here."
+    },
+    {
+      "id": "workday",
+      "name": "Workday October Global Workforce Report",
+      "url": "https://newsroom.workday.com/2026-10-05-Workday-Global-Workforce-Report-AI-Is-Rewriting-Jobs-More-Than-Its-Cutting-Them",
+      "measurement": "Skills September 2025–July 2026; survey September 2026; AI@Work pulse August 2026 · ~550 enterprise employers; global survey 6,001 including roughly 1,780 decision-makers; separate pulse 5,944 workers · Requisition data are customer-selected; survey expectations are not hiring. Detailed report methodology/country mix not fully recovered."
+    }
+  ]
+}
