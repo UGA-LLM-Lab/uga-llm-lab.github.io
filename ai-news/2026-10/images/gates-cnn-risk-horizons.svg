@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="800" viewBox="0 0 1200 800" role="img" aria-labelledby="title desc">
+  <title id="title">Two risk horizons in Bill Gates's October 11 CNN interview</title>
+  <desc id="desc">A qualitative timeline of Gates's assessment. He expected malicious cyberattack use to have its most visible effects over the coming year. He placed major impacts from loss of control years farther out, while calling for work on that risk now. The timeline is not to scale and gives no probabilities.</desc>
+  <defs><marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="5" markerHeight="5" orient="auto"><path d="M0 0L10 5L0 10Z" fill="#59616a"/></marker></defs>
+  <rect width="1200" height="800" fill="#f4f3ef"/>
+  <g font-family="Arial, Helvetica, sans-serif" fill="#172530">
+    <text x="56" y="76" font-size="44" font-weight="700">Gates's two AI risk horizons</text>
+    <text x="56" y="121" font-size="32" fill="#59616a">CNN interview • October 11, 2026</text>
+    <text x="58" y="206" font-size="34" font-weight="700">NOW</text>
+    <path d="M110 223V633" stroke="#9aa5ad" stroke-width="5"/>
+    <circle cx="110" cy="284" r="12" fill="#b4542c"/>
+    <path d="M128 284H388" stroke="#b4542c" stroke-width="6" marker-end="url(#arrow)"/>
+    <text x="170" y="252" font-size="32" font-weight="700" fill="#9c4525">COMING YEAR</text>
+    <rect x="424" y="217" width="718" height="194" rx="18" fill="#fff" stroke="#d5d9dc" stroke-width="2"/>
+    <text x="458" y="269" font-size="41" font-weight="700">Cyberattack misuse</text>
+    <text x="458" y="320" font-size="35">His most visible near-term risk:</text>
+    <text x="458" y="365" font-size="35">AI in the hands of malicious actors.</text>
+    <circle cx="110" cy="499" r="12" fill="#466d82"/>
+    <path d="M128 499H388" stroke="#466d82" stroke-width="6" marker-end="url(#arrow)"/>
+    <text x="154" y="464" font-size="31" font-weight="700" fill="#466d82">YEARS FARTHER</text>
+    <text x="154" y="539" font-size="31" font-weight="700" fill="#466d82">OUT</text>
+    <rect x="424" y="438" width="718" height="194" rx="18" fill="#fff" stroke="#d5d9dc" stroke-width="2"/>
+    <text x="458" y="490" font-size="41" font-weight="700">Loss of control over AI</text>
+    <text x="458" y="541" font-size="35">He placed major impacts later;</text>
+    <text x="458" y="586" font-size="35">work on that risk should start now.</text>
+    <text x="56" y="696" font-size="31" fill="#59616a">Qualitative horizons; not to scale. No probability or attack-rate estimate.</text>
+    <text x="56" y="748" font-size="29" fill="#59616a">Source: CNN State of the Union transcript. Diagram of Gates's assessment.</text>
+  </g>
+</svg>
