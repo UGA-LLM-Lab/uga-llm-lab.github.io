@@ -2,6 +2,357 @@ window.AI_NEWS_MONTH_DATA["2026-10"] = {
   "label": "October 2026",
   "articles": [
     {
+      "slug": "gemini-4-argon-google-cloud-general-availability",
+      "category": "Industry · Models",
+      "sortDate": "2026-10-13",
+      "dateLabel": "October 13, 2026",
+      "title": "Google makes Gemini 4 Argon generally available on Cloud with introductory API pricing",
+      "summary": "Argon reaches enterprise products and developer APIs, with a shared one-million-token input-and-output budget. Its separately approved cyber variant remains restricted to vetted defenders.",
+      "image": {
+        "src": "ai-news/2026-10/images/gemini-4-argon-cloud-official.jpg",
+        "alt": "Google Cloud’s official Gemini 4 Argon release artwork",
+        "caption": "Official product artwork accompanying Google Cloud’s October 13, 2026 availability announcement. Source: Google Cloud."
+      },
+      "content": [
+        {
+          "type": "paragraph",
+          "text": "Google made Gemini 4 Argon generally available on Google Cloud on October 13, turning its frontier-model announcement into a broader enterprise and developer release. The model is accessible in Gemini for business on web, desktop and mobile, through the Gemini platform API under the identifier gemini-4-argon, and in Google AI Studio and Google Antigravity. Google’s model documentation identifies the launch stage as general availability and lists global, U.S. and EU endpoints."
+        },
+        {
+          "type": "heading",
+          "text": "Long tasks share one token budget"
+        },
+        {
+          "type": "paragraph",
+          "text": "Argon accepts text, images, audio and video and returns text. Developers can use structured output, code execution, function calling and supported search-grounding tools to build workflows around documents, software projects and business systems. Google describes a model trained to keep track of multi-step work, report unsuccessful searches or unfinished tasks, and seek confirmation before irreversible actions. Those are stated training objectives; the release does not establish that every integration will observe every boundary correctly."
+        },
+        {
+          "type": "paragraph",
+          "text": "The API has a unified limit of 1,048,576 tokens for input and output together. Output includes thinking, tool calls and the final answer, so a million-token input cannot also produce a million-token response. A synchronous request generates at most 65,536 output tokens, or 32,768 for non-streaming direct HTTP requests. Longer generation requires continuation requests; Google’s documentation says the GenerateContent route supports that mechanism through v1beta1, with its SDK handling continuation automatically."
+        },
+        {
+          "type": "paragraph",
+          "text": "There are other migration details. Argon supports low, medium and high thinking levels, with medium as the default. Older thinking-budget settings and a minimal thinking level produce validation errors, while custom temperature, top-p and top-k values are ignored. Context reuse uses implicit caching, with a 6,144-token minimum; explicit context caching is unsupported. Computer use is supported as a preview feature, while the Gemini Live API and model tuning are not supported."
+        },
+        {
+          "type": "heading",
+          "text": "A launch rate with a stated end date"
+        },
+        {
+          "type": "paragraph",
+          "text": "Google announces introductory API rates of $2 per million input tokens and $10 per million output tokens through November 30, 2026, with cached input discounted by 95%. After that date, the announced standard rates are $4 and $20 respectively. These API terms are separate from access through an enterprise product subscription. Teams evaluating a long-running agent therefore need to account for the tokens used during intermediate reasoning and successive tool interactions, as well as the final response."
+        },
+        {
+          "type": "paragraph",
+          "text": "The release supplies examples rather than a single universal performance claim. Google reports that Argon helped optimize its Python Agent Development Kit, reducing in-memory session preparation time by 40% in long sessions and cold-import time by 21%. It also cites legal, finance and vulnerability-remediation evaluations. Those results come from particular company or partner workloads, and do not establish equal gains for every codebase, document collection or professional task."
+        },
+        {
+          "type": "heading",
+          "text": "Restricted access for broader cyber capabilities"
+        },
+        {
+          "type": "paragraph",
+          "text": "The standard model includes cyber mitigations. A separate Gemini 4 Argon Cyber Permissive variant is generally available behind an allowlist for defensive work such as vulnerability discovery, reverse engineering and patch generation. Applicants must work through their Google team or the Fairwind Program; access to an earlier cyber model does not carry over automatically. The permissive variant also lacks computer-use support and has different regional coverage. October 13’s public release expands practical access to Argon, while that broader cybersecurity access remains a separately governed product."
+        }
+      ],
+      "sources": [
+        {
+          "label": "Google Cloud — October 13 availability and pricing announcement",
+          "url": "https://cloud.google.com/blog/products/ai-machine-learning/gemini-4-argon-available-on-google-cloud"
+        },
+        {
+          "label": "Google Cloud — Argon model specifications, GA status and cyber variant",
+          "url": "https://docs.cloud.google.com/gemini-enterprise-agent-platform/models/gemini/4-argon"
+        }
+      ]
+    },
+    {
+      "slug": "physical-intelligence-pi-api-beta-robot-training",
+      "category": "Industry · Robotics",
+      "sortDate": "2026-10-13",
+      "dateLabel": "October 13, 2026",
+      "title": "Physical Intelligence opens a Pi API beta for robot fine-tuning and hosted inference",
+      "summary": "Developers can upload demonstrations, train on managed infrastructure and test updated policies on their own robots. Early partner examples span heavy machinery, food handling and manufacturing, with cloud connectivity still a constraint.",
+      "image": {
+        "src": "ai-news/2026-10/images/pi-api-actor-wheel-loader-source.jpg",
+        "alt": "Actor wheel loader and dump truck in the demonstration featured by Physical Intelligence",
+        "caption": "Source frame from Actor’s wheel-loader demonstration in Physical Intelligence’s October 13 API release. Source: Physical Intelligence / Actor; the demonstration is company-provided."
+      },
+      "content": [
+        {
+          "type": "paragraph",
+          "text": "Physical Intelligence announced its Pi API beta on October 13, offering developers a managed route to adapt the company’s latest robotic models to their own machines and tasks. The workflow is to upload data, launch fine-tuning on infrastructure operated by Physical Intelligence, then use a hosted gateway for inference. Participation begins with a request describing what the developer wants to build. The announcement is a beta opening, rather than unrestricted general availability or a release of new model weights."
+        },
+        {
+          "type": "heading",
+          "text": "Putting the training loop behind an API"
+        },
+        {
+          "type": "paragraph",
+          "text": "Robotic foundation models combine observations and instructions with learned physical behavior. Physical Intelligence’s previously released π0 and π0.5 models provide a starting point, but deploying a model on a different robot still involves demonstrations, data processing, compute and evaluation. The API is intended to handle that training infrastructure so a robotics team can concentrate on its hardware, task and examples. Physical Intelligence says it can update the models behind the service as new capabilities become available."
+        },
+        {
+          "type": "paragraph",
+          "text": "The company describes a repeated development cycle: collect demonstrations, train a policy, run it on the robot, examine failures and collect better data for the next iteration. Its partner examples show why that loop matters. A garment can turn inside out, an ingredient can fail to stay in a scoop, or a manufacturing part can arrive in an unexpected orientation. Solving one nominal demonstration does not establish reliable operation across those variations; the developer needs a way to improve and retest the policy."
+        },
+        {
+          "type": "heading",
+          "text": "Partner demonstrations across different machines"
+        },
+        {
+          "type": "paragraph",
+          "text": "The launch features companies working in food preparation, agriculture, manufacturing and other settings, rather than a single standardized robot. Actor’s example shows an autonomous wheel loader scooping material and loading a dump truck during what Physical Intelligence describes as a commercial deployment, without an operator inside the machine. The displayed video runs at twice normal speed. It is evidence of a specific partner application, not a published fleet-wide measure of productivity, safety or intervention frequency."
+        },
+        {
+          "type": "paragraph",
+          "text": "A separate example from Almond shows Axol, a dual-arm robot, deburring spacers used in its own assembly after four days of iteration through the API. That duration describes the team’s development process, not the time required to produce each part. Physical Intelligence also names early-access teams across Japan, Switzerland and the United States. The release does not provide a common benchmark, task-success denominator or independent comparison across the partner demonstrations, so their breadth should not be converted into one generalized performance score."
+        },
+        {
+          "type": "heading",
+          "text": "Hosted inference has operating limits"
+        },
+        {
+          "type": "paragraph",
+          "text": "Most applications presented in the announcement used cloud-hosted inference. Physical Intelligence says those deployments exposed areas for improvement, including network connectivity challenges. That is a material operating condition for physical machines: the service’s usefulness depends on how the robot’s application handles communication and interruptions, as well as the model’s actions. The post does not establish a uniform response-time guarantee or describe an offline deployment option for the beta."
+        },
+        {
+          "type": "paragraph",
+          "text": "Pricing and standard service allowances are not disclosed in the launch post. Developers request access and provide their intended use case, then assess the service on their own robot and operating environment. The immediate change is that adapting and testing frontier robotic policies can happen through a managed training-and-inference workflow. The early examples support that workflow’s practical promise, while reliable autonomy still requires application-specific engineering, evaluation and iteration."
+        }
+      ],
+      "sources": [
+        {
+          "label": "Physical Intelligence — October 13 Pi API beta announcement and demonstrations",
+          "url": "https://www.pi.website/blog/api-beta"
+        },
+        {
+          "label": "Physical Intelligence — beta participation form",
+          "url": "https://www.pi.website/waitlist"
+        },
+        {
+          "label": "Physical Intelligence — previously released openpi models and code",
+          "url": "https://github.com/Physical-Intelligence/openpi"
+        }
+      ]
+    },
+    {
+      "slug": "liquid-lfm25-24b-a2b-on-device-agent-model",
+      "category": "Industry · Open Models",
+      "sortDate": "2026-10-13",
+      "dateLabel": "October 13, 2026",
+      "title": "Liquid AI releases a 24B open-weight agent model with 2B active parameters per token",
+      "summary": "LFM2.5-24B-A2B expands context to 131K tokens and targets local tool use. Liquid reports fast device decoding, while its own comparisons show larger rivals retaining advantages on several coding and knowledge tasks.",
+      "image": {
+        "src": "ai-news/2026-10/images/liquid-lfm25-24b-release-official.png",
+        "alt": "Liquid AI’s official LFM2.5-24B-A2B release artwork",
+        "caption": "Official release artwork for LFM2.5-24B-A2B. Source: Liquid AI, October 13, 2026."
+      },
+      "content": [
+        {
+          "type": "paragraph",
+          "text": "Liquid AI released LFM2.5-24B-A2B on October 13, an open-weight reasoning model aimed at agents running on local hardware. It has 24 billion total parameters and activates about two billion for each token. Both the base and post-trained versions are available on Hugging Face, alongside deployment formats for local inference. The release completes Liquid’s LFM2.5 family and expands the largest model’s context window from 32,768 to 131,072 tokens."
+        },
+        {
+          "type": "heading",
+          "text": "Sparse computation with a larger resident model"
+        },
+        {
+          "type": "paragraph",
+          "text": "The architecture combines 30 gated short-convolution layers with 10 grouped-query attention layers. Mixture-of-experts blocks contain 64 experts, with four selected for each token. Activating a subset reduces the computation needed for generation, but the two-billion active-parameter figure does not mean the full model has only two billion parameters to store. Device memory, weight precision and the growing context cache still affect whether a local deployment is practical."
+        },
+        {
+          "type": "paragraph",
+          "text": "Compared with its predecessor, the release doubles the vocabulary to roughly 128,000 tokens and scales pretraining from 17 trillion to 33 trillion tokens. Additional training targets reasoning, tools and multi-turn agent trajectories. The post-training pipeline includes supervised fine-tuning, teacher specialization, on-policy distillation and reinforcement learning inside agent harnesses. Unlike the earlier model, this version always produces a reasoning trace before its final answer, which consumes part of the output allowance and needs to be handled by the application."
+        },
+        {
+          "type": "heading",
+          "text": "Device speed and server throughput measure different things"
+        },
+        {
+          "type": "paragraph",
+          "text": "Liquid reports decoding at 184 tokens per second on an Apple M5 Max and 114 on an AMD Ryzen AI Max+ 395. The model card identifies those device tests as llama.cpp runs with Q4_K_M quantization and a 4K-token input context. Separately, the company reports more than 21,000 output tokens per second on one NVIDIA B300 under sustained high concurrency, using SGLang 0.5.22, BF16 weights, 1,024 input tokens and up to 256 output tokens. That server figure is aggregate throughput across requests, rather than the response speed of one local agent."
+        },
+        {
+          "type": "paragraph",
+          "text": "The benchmark results are also mixed. Liquid reports matching or leading the comparison models on five of eight tool-use and agent evaluations. Against Qwen3.6-35B-A3B, its LiveClaw score is 48.09 versus 38.19, and AutomationBench is 27.69 versus 8.72. Qwen’s scores are higher on WebArena Verified and SWE-bench Verified in the OpenCode harness, among other tasks. These are company-run evaluations with specified settings; they support a targeted efficiency-and-tool-use claim rather than universal superiority over larger models."
+        },
+        {
+          "type": "heading",
+          "text": "Downloadable weights and a paid API route"
+        },
+        {
+          "type": "paragraph",
+          "text": "Liquid lists launch support for llama.cpp, MLX, vLLM, SGLang and ONNX. Its documentation recommends MLX-LM 0.32.0 or newer because earlier versions route the experts incorrectly, a detail that can materially change a local installation’s behavior. Developers can connect a local server to supported agent harnesses and retain control of model inference. Whether the complete workflow remains private also depends on the tools that the agent is allowed to call, including any external search or service APIs."
+        },
+        {
+          "type": "paragraph",
+          "text": "For hosted use, Liquid announces API prices of $0.10 per million input tokens, $0.05 for cached input and $1 per million output tokens. The model license caps free commercial use at $10 million in annual revenue; businesses exceeding that threshold need a separate commercial license. Qualified nonprofit research use is exempt. The company also discloses reward-hacking behavior during development and says it tightened its sandboxes, with reported evaluations run in sealed environments. The release offers a concrete new local-agent option, with compatibility, workload choice and evaluation conditions central to its claimed advantages."
+        }
+      ],
+      "sources": [
+        {
+          "label": "Liquid AI — October 13 release, training and API terms",
+          "url": "https://www.liquid.ai/blog/lfm2-5-24b-a2b"
+        },
+        {
+          "label": "Liquid AI — model card and benchmark conditions",
+          "url": "https://huggingface.co/LiquidAI/LFM2.5-24B-A2B"
+        },
+        {
+          "label": "Liquid AI — local deployment specifications and compatibility",
+          "url": "https://docs.liquid.ai/lfm/models/lfm25-24b-a2b"
+        },
+        {
+          "label": "Liquid AI — model license",
+          "url": "https://www.liquid.ai/lfm-license"
+        }
+      ]
+    },
+    {
+      "slug": "nvidia-runai-full-platform-open-source",
+      "category": "Industry · Infrastructure",
+      "sortDate": "2026-10-13",
+      "dateLabel": "October 13, 2026",
+      "title": "NVIDIA open-sources the full Run:ai platform for shared GPU infrastructure",
+      "summary": "The release adds the integrated orchestration stack to an already open scheduler, with modular resource-management and workload tools. Cloud partners describe integrations at different stages of availability.",
+      "image": {
+        "src": "ai-news/2026-10/images/nvidia-runai-open-source-official.png",
+        "alt": "Official NVIDIA Run:ai repository banner for AI workload and GPU orchestration",
+        "caption": "Official Run:ai repository artwork. Source: NVIDIA’s DSX AI Factory repository, accessed October 13, 2026; this is promotional artwork."
+      },
+      "content": [
+        {
+          "type": "paragraph",
+          "text": "NVIDIA made the full Run:ai platform available as open-source software on October 13, expanding access beyond the KAI scheduling engine that it previously released. The integrated platform manages AI workloads and GPU resources on Kubernetes, from data processing and training through inference. Its source is published in the NVIDIA DSX AI Factory GitHub organization, and an integrated Community Product is available through NVIDIA NGC with a Helm installation chart."
+        },
+        {
+          "type": "heading",
+          "text": "Four components can also be adopted separately"
+        },
+        {
+          "type": "paragraph",
+          "text": "KAI Scheduler handles placement: it coordinates GPU-aware scheduling, team resource shares, topology and all-or-nothing placement for jobs whose workers need to start together. That helps address a common cluster problem in which a large distributed job gets only part of the hardware it needs while other reserved capacity sits unused. KAI remains the upstream scheduling engine for Run:ai; today’s announcement should not be described as the scheduler’s first open-source release."
+        },
+        {
+          "type": "paragraph",
+          "text": "The GPU Fractioning Operator connects Kubernetes workloads to CUDA-native GPU sharing. NVIDIA says the CUDA driver enforces a memory limit for each workload, while the operator exposes GPU fractions and per-pod metrics. This replaces Run:ai’s earlier proprietary fractioning implementation with the native capability in CUDA 13.4. It is intended for workloads that need part of a GPU, such as notebooks, development sessions or smaller-model inference, and remains compatible with schedulers other than KAI."
+        },
+        {
+          "type": "paragraph",
+          "text": "KAI Resource Management supplies the organizational layer: projects, departments, quotas, guaranteed resource shares and node pools. Workload Map provides a consistent description of components and roles across workload types such as PyTorchJob, RayCluster and inference services. It is a Go library that can inspect unstructured objects offline. NVIDIA explicitly distinguishes that descriptive contract from a scheduler: Workload Map itself does not queue jobs, autoscale them or move them across clusters."
+        },
+        {
+          "type": "heading",
+          "text": "Cloud providers add their own operating layer"
+        },
+        {
+          "type": "paragraph",
+          "text": "NVIDIA names eight DSX ecosystem partners building on the release, including Crusoe, Mirantis, Nebius, OpenNebula Systems, Rafay, Saturn Cloud, Spectro Cloud and vCluster. The arrangements vary: some embed components in an infrastructure stack, while others offer application deployment or managed operations. Those announcements establish integration activity, but do not provide a common customer count or measured utilization gain across all eight providers."
+        },
+        {
+          "type": "paragraph",
+          "text": "Lambda separately announced plans to make Run:ai a managed option in Lambda Kubernetes Service. It has supported customer-deployed Run:ai since 2022, and says open access now lets it package, validate and maintain the platform directly. Run:ai would control workload placement and GPU sharing, while Lambda’s existing node monitoring isolates and remediates unhealthy hardware. Lambda describes the integrated managed option as planned, so its current Kubernetes auto-remediation should be distinguished from a Run:ai integration already available to every customer."
+        },
+        {
+          "type": "heading",
+          "text": "Community access has separate support terms"
+        },
+        {
+          "type": "paragraph",
+          "text": "NVIDIA says its Community Product requires no paid Run:ai subscription or NVIDIA support entitlement, and does not include enterprise support. Downloading it from NGC requires acceptance of the applicable NVIDIA software agreement and product-specific terms; the published source code follows its applicable open-source licenses. A team adopting the community stack therefore gains access to orchestration software while retaining responsibility for installation, compatibility and operation unless it chooses a supported partner offering. The release broadens who can inspect and integrate the full platform, with actual throughput and GPU-use improvements dependent on each workload and deployment."
+        }
+      ],
+      "sources": [
+        {
+          "label": "NVIDIA — October 13 full-platform release and component descriptions",
+          "url": "https://developer.nvidia.com/blog/nvidia-runai-is-now-open-source-as-part-of-nvidia-dsx-ai-factory-platform/"
+        },
+        {
+          "label": "NVIDIA — official Run:ai source repository",
+          "url": "https://github.com/dsx-ai-factory/run-ai"
+        },
+        {
+          "label": "Lambda — planned managed Kubernetes integration",
+          "url": "https://lambda.ai/blog/runai-on-lambda-kubernetes-service"
+        }
+      ]
+    },
+    {
+      "slug": "neonatal-radiograph-ai-continual-learning-30-nicus",
+      "category": "Research · Medical AI",
+      "sortDate": "2026-10-13",
+      "dateLabel": "October 13, 2026",
+      "title": "Thirty-NICU study adapts adult X-ray AI to neonatal tube assessment with small local datasets",
+      "summary": "Sequential model adaptation reduced landmark-localization error across most sites in a 20-country retrospective study. The researchers simulated decentralized training centrally; clinical deployment and patient benefits still need prospective testing.",
+      "image": {
+        "src": "ai-news/2026-10/images/neonatal-continual-learning-workflow-source.png",
+        "alt": "Original study diagram comparing sequential model sharing, local fine-tuning and direct adult-model prediction",
+        "caption": "Original Figure 1, showing the proposed model-sharing workflow and the study’s three comparison methods. Source: Rao et al., Nature Biomedical Engineering, October 13, 2026. CC BY 4.0; unchanged."
+      },
+      "content": [
+        {
+          "type": "paragraph",
+          "text": "An international study published in Nature Biomedical Engineering on October 13 reports that sequentially adapting an adult radiology AI model can improve assessment of breathing-tube position in neonatal chest X-rays. The retrospective cohort contains 2,965 radiographs from 2,960 patients across 30 neonatal intensive care units in 20 countries and territories. Each hospital supplied 50 training images, with its remaining eligible images used for testing. The study offers a method for adapting existing AI to a population poorly served by adult training data."
+        },
+        {
+          "type": "heading",
+          "text": "Transferring a model between hospitals"
+        },
+        {
+          "type": "paragraph",
+          "text": "The researchers adapted CarinaNet, an object-detection model previously trained on adult intensive-care radiographs. It locates the endotracheal tube tip and the carina, where the airway divides. Their separation helps flag tubes that extend too deeply and merit clinician or radiologist review. The model uses a RetinaNet architecture with a ResNet-50 backbone; the new contribution is the adaptation and evaluation strategy, rather than a new general-purpose medical foundation model."
+        },
+        {
+          "type": "paragraph",
+          "text": "In the proposed workflow, one hospital retrains the model on its small local dataset, passes the updated weights to the next hospital and retains its patient data locally. For each target hospital in the experiment, the researchers trained on the other 29 sites and evaluated on the unseen target, repeating the sequence across ten randomized hospital orderings. They compared this with using the original adult model directly and with fine-tuning the adult model on the target hospital’s own 50 training images."
+        },
+        {
+          "type": "paragraph",
+          "text": "The distinction between design and execution is important: all study experiments were conducted centrally, with standardized preprocessing, to simulate decentralized weight transfer. The paper therefore demonstrates the learning strategy under controlled conditions. It does not report a live network of hospitals independently exchanging model updates without sharing data. Deployment across different local computing systems and governance arrangements remains future validation work."
+        },
+        {
+          "type": "heading",
+          "text": "Lower errors, with different measures of clinical relevance"
+        },
+        {
+          "type": "paragraph",
+          "text": "The average of site-level median combined tube-tip and carina localization errors was 0.67 centimetres with continual learning, compared with 1.29 centimetres for local fine-tuning and 4.30 centimetres for the unadapted adult model. Localization improved at 29 of 30 sites, with statistically significant improvement at 27. Errors greater than five centimetres occurred in an average 2.6% of cases across hospitals under continual learning, versus 8.2% for fine-tuning and 37.4% for direct prediction."
+        },
+        {
+          "type": "figure",
+          "src": "ai-news/2026-10/images/neonatal-continual-learning-results-source.png",
+          "alt": "Original study plots showing hospital-level localization error and reductions in prediction errors greater than five centimetres",
+          "caption": "Original Figure 3. Panel a compares combined tube-tip and carina error in centimetres; points average each site’s median error across ten simulations, with 95% confidence intervals. Panel b shows reductions in errors above five centimetres. Source: Rao et al., CC BY 4.0; unchanged. Open the image for full-size labels."
+        },
+        {
+          "type": "paragraph",
+          "text": "For ranking the 15 most concerning scans at each hospital, deep-intubation detection improved at 27 of 30 sites relative to fine-tuning; precision and recall improvements were significant at 18. These are retrospective localization and triage outcomes, rather than measurements of faster clinical intervention or better patient survival. The authors also evaluated earlier hospitals after subsequent training steps and found that the sequence generally retained or improved performance instead of simply overwriting earlier learning."
+        },
+        {
+          "type": "heading",
+          "text": "Image quality and real-world prevalence remain constraints"
+        },
+        {
+          "type": "paragraph",
+          "text": "Hospitals deliberately assembled roughly balanced normal and abnormal tube placements, so alert performance may differ under routine clinical prevalence. A separate low-resolution site was excluded from the main experiments, and adding it worsened results. Physical distances also relied on estimated tube width as an internal calibration reference, introducing uncertainty. Prospective trials must test clinical usefulness, particularly for extremely premature infants with narrow positioning margins. The paper and released code support further testing of small-data, multi-site adaptation; they do not establish regulatory clearance or readiness for autonomous clinical decisions."
+        }
+      ],
+      "sources": [
+        {
+          "label": "Nature Biomedical Engineering — full study, methods, figures and limitations",
+          "url": "https://www.nature.com/articles/s41551-026-01812-6"
+        },
+        {
+          "label": "Rajpurkar Lab — study implementation and evaluation code",
+          "url": "https://github.com/rajpurkarlab/MAIDA-NICU-continual-learning"
+        },
+        {
+          "label": "Creative Commons — Attribution 4.0 figure license",
+          "url": "https://creativecommons.org/licenses/by/4.0/"
+        }
+      ]
+    },
+    {
       "slug": "meta-muse-wonder-agent-models",
       "category": "Industry · Models",
       "sortDate": "2026-10-12",
