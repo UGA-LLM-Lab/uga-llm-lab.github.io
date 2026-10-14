@@ -2,6 +2,365 @@ window.AI_NEWS_MONTH_DATA["2026-10"] = {
   "label": "October 2026",
   "articles": [
     {
+      "slug": "google-deep-review-public-document-verification",
+      "category": "Industry · Research Tools",
+      "sortDate": "2026-10-14",
+      "dateLabel": "October 14, 2026",
+      "title": "Google opens Deep Review to the public for technical document checks",
+      "summary": "Google’s manuscript assistant expands beyond conference pilots to public document review. Its verification pipeline offers structured critique, with human judgment still needed to assess the findings.",
+      "image": {
+        "src": "ai-news/2026-10/images/deep-review-google-source.jpg",
+        "alt": "Google Research’s official Deep Review product mark",
+        "caption": "Official Deep Review artwork accompanying Google Research’s October 14, 2026 public launch. Source: Google Research."
+      },
+      "content": [
+        {
+          "type": "paragraph",
+          "text": "Google Research announced the public release of Deep Review on October 14, expanding an AI document-verification system previously offered to authors through conference pilots. The launch supports PDF and plain-text inputs, with multi-file review described as forthcoming. Users receive complimentary reviews and can connect a Gemini API key for higher usage and programmatic access. This is a new access milestone for an existing research effort, whose predecessor was the Paper Assistant Tool, or PAT."
+        },
+        {
+          "type": "heading",
+          "text": "Reviewing a document in several stages"
+        },
+        {
+          "type": "paragraph",
+          "text": "The technical rationale appears in the earlier PAT preprint: a single model call can exhaust its reasoning budget on a long manuscript, while repeated independent calls may revisit the same passages and produce many questionable critiques. The proposed alternative divides a document into logical segments and assigns computation according to their difficulty. Review agents concentrate on individual sections while retaining the complete manuscript as context, and a final agent combines their findings and checks external references."
+        },
+        {
+          "type": "figure",
+          "src": "ai-news/2026-10/images/deep-review-pipeline-source.png",
+          "alt": "Google’s four-stage Deep Review pipeline from document segmentation through global synthesis",
+          "caption": "Google Research’s original pipeline diagram. Section review receives different computation budgets before critiques are combined and grounded. Source: Google Research; unchanged publisher image."
+        },
+        {
+          "type": "paragraph",
+          "text": "That organization matters when an error spans several sections: an experimental claim may depend on a method described earlier, or a theorem may rely on an assumption stated elsewhere. Keeping the whole document available while narrowing each agent’s immediate task is intended to preserve those connections. It does not independently certify the resulting critique. A user still needs to inspect the claimed error, its supporting evidence and any proposed correction."
+        },
+        {
+          "type": "heading",
+          "text": "Earlier evaluations have a specific scope"
+        },
+        {
+          "type": "paragraph",
+          "text": "The PAT preprint evaluated mathematical and computer-science equation or proof errors in a filtered SPOT benchmark comprising 26 papers and 29 errors. It reported 89.7% error detection for PAT with Gemini 3.1 Pro, compared with 55.2% for a single model call. The study used a modified automated grader, with author audits, so its scores are not directly comparable to the original SPOT results. Those are predecessor-system measurements, rather than an evaluation of today’s Deep Review with Gemini 4 Argon."
+        },
+        {
+          "type": "paragraph",
+          "text": "The launch announcement reports more than 16,000 opt-in manuscript reviews across STOC, ICML, NeurIPS and ICLR programs. These author-assistance pilots were separate from official conference decisions. The earlier study also records parsing problems, outdated information and false allegations of proof errors. Its positive author surveys therefore provide evidence of perceived usefulness alongside documented failure modes; they do not establish a general accuracy rate for legal agreements, financial documents or other newly proposed applications."
+        },
+        {
+          "type": "heading",
+          "text": "A critique still needs an accountable reader"
+        },
+        {
+          "type": "paragraph",
+          "text": "Google says public-service uploads are not used to train or improve its models, while documents are retained for one year to display in the interface. That retention policy differs from the pilot programs, where papers were deleted after each program. Researchers considering unpublished material should check the current service terms and their institution’s document-handling rules before uploading."
+        },
+        {
+          "type": "paragraph",
+          "text": "For a lab, the practical opportunity is another pass over a draft before circulating it to colleagues: identify an unstated assumption, test whether evidence supports a conclusion, or flag a reference that needs checking. The useful output is a set of claims to investigate, not an acceptance decision. The public launch makes that workflow available beyond selected conference cohorts while leaving responsibility for the manuscript and its review with people."
+        }
+      ],
+      "sources": [
+        {
+          "label": "Google Research — October 14 public launch and service terms",
+          "url": "https://research.google/blog/analyzing-technical-documents-with-deep-review/"
+        },
+        {
+          "label": "PAT authors — full predecessor-system preprint, methods and limitations",
+          "url": "https://arxiv.org/html/2606.28277v1"
+        },
+        {
+          "label": "Google Research — Deep Review entry point",
+          "url": "https://research.google.com/deepreview/deepreview"
+        }
+      ]
+    },
+    {
+      "slug": "neura-neuron-ai-multisensory-robot-model",
+      "category": "Industry · Robotics",
+      "sortDate": "2026-10-14",
+      "dateLabel": "October 14, 2026",
+      "title": "NEURA introduces Neuron AI, adding touch, sound and memory to robot control",
+      "summary": "NEURA’s new model combines several sensor streams and runs locally on its robots. The company plans a laundry-handling demonstration later this month; independent performance comparisons remain absent.",
+      "image": {
+        "src": "ai-news/2026-10/images/neuron-ai-neura-source.webp",
+        "alt": "A NEURA robot’s hands manipulating a small component in the company’s Neuron AI release image",
+        "caption": "NEURA’s source image of robotic component handling, published with the October 14 announcement. Source: NEURA Robotics; company-provided demonstration image."
+      },
+      "content": [
+        {
+          "type": "paragraph",
+          "text": "NEURA Robotics introduced Neuron AI on October 14, describing a foundation model that combines 3D vision, touch, force, audio, robot state and language with memory. The company calls the architecture Perception-Language-Action, or PLA, and says it was developed and trained in-house in Metzingen, Germany. The announcement extends NEURA’s robot software stack; it does not supply an independently evaluated leaderboard result or announce unrestricted model-weight downloads."
+        },
+        {
+          "type": "heading",
+          "text": "Using signals a camera cannot capture"
+        },
+        {
+          "type": "paragraph",
+          "text": "The accompanying product documentation explains the intended contribution of each input. Depth and point clouds describe geometry; contact and force-torque measurements describe physical interaction; audio captures events such as a latch clicking; and robot state provides joint positions, velocities and end-effector pose. Language supplies the task. NEURA says these inputs are aligned over time in a shared representation and conditioned into one action stream, rather than processed as unrelated sensor readings."
+        },
+        {
+          "type": "paragraph",
+          "text": "A manipulation task can look complete before it is physically complete. A connector may be aligned without engaging, and an object may remain behind an obstruction after leaving the camera’s view. Additional sensing can provide evidence about contact, while memory can retain context from earlier actions. These examples explain the proposed design’s value, but they are not evidence that every task becomes reliable simply by adding modalities. Sensor calibration, timing and the quality of the training examples still matter."
+        },
+        {
+          "type": "heading",
+          "text": "A shared model across NEURA embodiments"
+        },
+        {
+          "type": "paragraph",
+          "text": "NEURA describes three training-data sources: synchronized recordings from robots in its training facilities and real settings; variations produced through its simulation stack; and human demonstrations recorded with sensor-equipped suits. Its product page also identifies industrial data partnerships with Schaeffler and Bosch. The stated deployment scope is five NEURA embodiments, including humanoid variants and two further bimanual platforms with different hands and grippers. That scope should not be read as demonstrated compatibility with arbitrary third-party robots."
+        },
+        {
+          "type": "paragraph",
+          "text": "The product documentation says inference runs on the robot without requiring a cloud connection. NEURA’s training facilities support data collection and benchmarking, while Neuraverse provides customer fine-tuning and deployment of skills across fleets. Customers can keep their skills private or choose to contribute them to the wider ecosystem. Together, those pieces describe a development cycle linking hardware observations, task adaptation and deployment, rather than a general-purpose chatbot attached to a robot."
+        },
+        {
+          "type": "heading",
+          "text": "The announced demonstration is still ahead"
+        },
+        {
+          "type": "paragraph",
+          "text": "At NVIDIA GTC Berlin, scheduled for October 20–22, NEURA plans to show a 4NE1 humanoid carrying out an eleven-minute laundry-handling sequence without human intervention. The described steps include sorting, loading and unloading laundry and transferring it to a dryer. October 14’s release announces that planned demonstration; it does not establish that the sequence has already been performed publicly at the event."
+        },
+        {
+          "type": "paragraph",
+          "text": "NEURA proposes time-to-skill as a central measure of progress, but the announcement does not publish standardized success rates, intervention frequencies, inference latency or comparisons isolating the contribution of memory and each sensor. Those measurements would help a manufacturer judge repeatability and adaptation effort. The new model presents a concrete multisensory approach to robot control, with its practical reliability still requiring task-specific evidence."
+        }
+      ],
+      "sources": [
+        {
+          "label": "NEURA Robotics — October 14 Neuron AI announcement",
+          "url": "https://neura-robotics.com/neura-robotics-introduces-neuron-ai/"
+        },
+        {
+          "label": "NEURA Robotics — model inputs, local inference and embodiment scope",
+          "url": "https://neura-robotics.com/neuron-ai/"
+        }
+      ]
+    },
+    {
+      "slug": "nvidia-cupotential-semiconductor-ai-tools",
+      "category": "Industry · Infrastructure",
+      "sortDate": "2026-10-14",
+      "dateLabel": "October 14, 2026",
+      "title": "NVIDIA introduces cuPotential and expands AI tools for semiconductor engineering",
+      "summary": "The new atomic-simulation library enters early access. Partner examples span process modeling, inspection and chip design, with reported speedups tied to particular workloads and release stages.",
+      "image": {
+        "src": "ai-news/2026-10/images/nvidia-semiconductor-fabs-source.jpg",
+        "alt": "NVIDIA’s labeled illustration of semiconductor processing, inspection and fab operations",
+        "caption": "Official NVIDIA newsroom illustration accompanying the October 14 semiconductor announcement. It depicts an AI-enabled fab concept, rather than a photograph of an operating factory. Source: NVIDIA."
+      },
+      "content": [
+        {
+          "type": "paragraph",
+          "text": "NVIDIA announced cuPotential on October 14 at SEMICON West, adding an early-access atomic-simulation library to its CUDA-X portfolio for semiconductor engineering. The company says specialized GPU functions can accelerate calculations of electrical forces and other interactions among atoms. Synopsys is an early adopter. NVIDIA reports an additional two- to three-fold speedup in early-access testing of workflows that were already GPU-optimized, a claim with a specific starting point rather than a comparison against every simulation package."
+        },
+        {
+          "type": "heading",
+          "text": "Accelerated tools behind engineering agents"
+        },
+        {
+          "type": "paragraph",
+          "text": "The broader announcement connects simulation libraries, inspection software and AI agents across chip design and manufacturing. An agent can choose a simulation, run it, evaluate a result and propose another experiment, while the numerical library performs the underlying calculation. Faster execution can make that iteration less expensive. It does not establish that the agent selects the right experiment or that a simulated improvement will survive manufacturing, where model assumptions and physical measurements must still agree."
+        },
+        {
+          "type": "paragraph",
+          "text": "NanoVDB illustrates how an established software component can gain a new industrial application. NVIDIA’s developer material describes a GPU-friendly approach to volumetric data within the OpenVDB ecosystem, originally prominent in rendering and simulation. The October 14 release says Lam Research intends to integrate it into SEMulator3D for selected wafer-etch modeling. NVIDIA reports a potential speedup of up to 30 times for that capability, with the accelerated release targeted for the end of the year."
+        },
+        {
+          "type": "paragraph",
+          "text": "Other examples involve different tools and baselines. NVIDIA says KLA contributed production-kernel insights to an image-processing operation in NPP, while Teradyne uses accelerated image and dataset processing in testing and probe maintenance. These operations address different bottlenecks. Their individual performance claims cannot be combined into a single factory-wide improvement, and a faster inspection calculation alone does not quantify better yield or shorter production schedules."
+        },
+        {
+          "type": "heading",
+          "text": "Testing the whole chip-design workflow"
+        },
+        {
+          "type": "paragraph",
+          "text": "The announcement also links to Build-A-Chip-Bench, introduced by ChipAgents with NVIDIA’s technical contributions. Its primary methodology starts an agent from a workload specification and follows the design through RTL, verification, synthesis, placement, routing and final layout. The agent works with open-source tools and a process-design kit, while hidden verification and grading run in separate containers. Passing functional and physical checks is required before a design receives a performance, power and area score."
+        },
+        {
+          "type": "paragraph",
+          "text": "That benchmark addresses a gap between producing code that simulates correctly and producing a physically viable design. A late timing or routing failure may require revising an architectural decision made much earlier. The benchmark’s published traces describe agents struggling to make those revisions and to plan around slow tool runs. This offers a more concrete way to evaluate engineering autonomy than treating a successful code-generation example as a completed chip."
+        },
+        {
+          "type": "heading",
+          "text": "Availability differs across the portfolio"
+        },
+        {
+          "type": "paragraph",
+          "text": "cuPotential is in early access; NanoVDB is already open source within OpenVDB; NPP is available through the CUDA Toolkit; and Lam’s specific accelerated integration remains a planned release. The practical development is a wider set of computational tools for semiconductor workflows, coupled with attempts to measure longer agent tasks. Production adoption will still depend on validated models, compatible engineering software and evidence that the complete workflow improves."
+        }
+      ],
+      "sources": [
+        {
+          "label": "NVIDIA — October 14 announcement, workload claims and availability",
+          "url": "https://nvidianews.nvidia.com/news/nvidia-and-semiconductor-leaders-advance-ai-across-chip-design-and-manufacturing-for-ai-defined-labs"
+        },
+        {
+          "label": "NVIDIA Developer — NanoVDB’s existing technical scope",
+          "url": "https://developer.nvidia.com/nanovdb"
+        },
+        {
+          "label": "ChipAgents — Build-A-Chip-Bench methods and failure analysis",
+          "url": "https://chipagents.ai/research/build-a-chip-bench"
+        }
+      ]
+    },
+    {
+      "slug": "nature-probabilistic-bias-correction-weather-forecasts",
+      "category": "Research · Climate AI",
+      "sortDate": "2026-10-14",
+      "dateLabel": "October 14, 2026",
+      "title": "Nature study improves subseasonal weather forecasts by correcting their probabilities",
+      "summary": "Probabilistic bias correction improves existing dynamical and AI forecasts in week-three and week-four evaluations. The study combines historical tests with real-time competition results and releases implementation code.",
+      "image": {
+        "src": "ai-news/2026-10/images/pbc-weather-schematic-source.png",
+        "alt": "Figure 1 from Guan and colleagues, showing probabilistic bias correction of weather-model ensembles",
+        "caption": "Original Figure 1 from Guan et al., Nature, published October 14, 2026. Reproduced unchanged under CC BY-NC-ND 4.0; licence linked below."
+      },
+      "content": [
+        {
+          "type": "paragraph",
+          "text": "A study published in Nature on October 14 introduces probabilistic bias correction, or PBC, a machine-learning framework that improves existing weather forecasts instead of replacing their atmospheric models. Hannah Guan, Soukayna Mouatadid and colleagues focus on subseasonal prediction, a difficult interval between useful short-range weather forecasts and longer seasonal guidance. Their principal evaluations measure weekly temperature, precipitation and sea-level pressure forecasts for days 19–25 and 26–32 ahead."
+        },
+        {
+          "type": "heading",
+          "text": "Correcting the distribution, not just the average"
+        },
+        {
+          "type": "paragraph",
+          "text": "PBC works on forecast probabilities. One component, Debias++, learns corrections associated with location, date and probability threshold; another, Persistence++, combines the model forecast with recent observations and climatology. The outputs are projected into valid cumulative probability distributions and combined. The study updates the correction using information that would have been available at each forecast date, a design choice intended to mimic operational use and avoid training on future observations."
+        },
+        {
+          "type": "figure",
+          "src": "ai-news/2026-10/images/pbc-weather-schematic-source.png",
+          "alt": "Original PBC schematic showing the Debias++ and Persistence++ correction paths",
+          "caption": "Original Figure 1: PBC combines historical forecasts, climatology and lagged observations, then projects and ensembles the corrected distributions. Source: Guan et al., Nature; reproduced unchanged, CC BY-NC-ND 4.0."
+        },
+        {
+          "type": "paragraph",
+          "text": "The authors’ main historical comparisons use a global 1.5-degree grid and ERA5 reanalysis as the reference. Temperature and precipitation evaluations cover land-dominated cells, with arid cells excluded from precipitation scoring. The metric is ranked probability skill score, or RPSS, which measures improvement over a climatological probability baseline. A negative score means the model performs worse than that baseline. These are probability-quality measurements, rather than percentages of individually correct daily forecasts."
+        },
+        {
+          "type": "heading",
+          "text": "Historical tests and a real-time competition"
+        },
+        {
+          "type": "paragraph",
+          "text": "Across 2016–2024, PBC improves the operationally debiased ECMWF forecasts over most evaluated locations. The study also reports that correction roughly doubles the average RPSS of ECMWF’s AIFS-SUBS in its 2025 evaluation, starting from a modest baseline near 0.03. Doubling that skill score should not be interpreted as doubling all forecast accuracy. The relevant comparison concerns the tested variables, lead times, reference data and probability bins."
+        },
+        {
+          "type": "figure",
+          "src": "ai-news/2026-10/images/pbc-weather-quest-results-source.png",
+          "alt": "Figure 4 comparing MicroDuet’s ranked probability skill score with other models for temperature, precipitation and sea-level pressure",
+          "caption": "Original Figure 4: MicroDuet’s week-three and week-four RPSS in the 2025 September–November AI Weather Quest. Positive scores outperform climatology; negative scores underperform it. Source: Guan et al., Nature; unchanged, CC BY-NC-ND 4.0."
+        },
+        {
+          "type": "paragraph",
+          "text": "For real-time evidence, the researchers entered MicroDuet, combining corrected ECMWF and POET forecasts, in the 2025 AI Weather Quest. The paper reports the highest scores for every variable and lead time in the inaugural September–November season, ahead of six operational centers, their multimodel ensemble, ECMWF AI systems and 34 competing teams. The October 14 development is publication of the study and its supporting material; the competition itself took place earlier."
+        },
+        {
+          "type": "heading",
+          "text": "Useful forecasts still need local validation"
+        },
+        {
+          "type": "paragraph",
+          "text": "Microsoft Research’s accompanying account describes work with Kenyan forecasters testing PBC for the rainy season. Better probabilities could help decisions about planting, water allocation and preparations for extreme rain, but that account does not measure a resulting increase in harvests or reduction in losses. A forecast can inform a decision without proving the decision’s eventual benefit, and its usefulness depends on local validation and timely communication."
+        },
+        {
+          "type": "paragraph",
+          "text": "The released repository includes correction code, evaluation scripts and instructions for obtaining forecast and reanalysis data. Open code makes the method easier to investigate, while users still need access to the relevant datasets and appropriate historical coverage. The evidence supports an economical post-processing approach to the tested forecast systems. It does not promise precise weather at every location six weeks ahead or remove the uncertainty that makes this horizon difficult."
+        }
+      ],
+      "sources": [
+        {
+          "label": "Nature — full study, methods, source data and publication date",
+          "url": "https://www.nature.com/articles/s41586-026-11126-x"
+        },
+        {
+          "label": "Microsoft Research — deployment context and Kenyan forecasting work",
+          "url": "https://www.microsoft.com/en-us/research/story/new-ai-framework-bridges-a-critical-gap-in-mid-range-weather-forecasts/"
+        },
+        {
+          "label": "Research authors — PBC implementation and data-access instructions",
+          "url": "https://github.com/mouatadid/pbc"
+        },
+        {
+          "label": "Creative Commons — original figures’ CC BY-NC-ND 4.0 licence",
+          "url": "https://creativecommons.org/licenses/by-nc-nd/4.0/"
+        }
+      ]
+    },
+    {
+      "slug": "draup-hr-skill-genome-ai-job-requirements",
+      "category": "Employment · Skills",
+      "sortDate": "2026-10-14",
+      "dateLabel": "October 14, 2026",
+      "title": "Draup’s new HR skills report finds AI tools appearing inside existing roles",
+      "summary": "The report studies requirements across 18 HR roles, including a 119,429-posting HR Business Partner sample. Named AI tools remain rare in that sample, while analytics and compliance demands extend beyond specialist positions.",
+      "image": {
+        "src": "ai-news/2026-10/images/draup-hr-skill-genome-source.png",
+        "alt": "Draup’s official promotional cover for The New HR Skill Genome report",
+        "caption": "Publisher report artwork accompanying Draup’s October 14, 2026 release. Source: Draup; the report’s observation window ends July 27, 2026."
+      },
+      "content": [
+        {
+          "type": "paragraph",
+          "text": "Draup released The New HR Skill Genome on October 14, examining how analytics, software platforms and named AI tools appear in human-resources job requirements. The 30-page report covers 18 HR roles and combines a broad skills comparison with deeper studies of workforce planning and HR Business Partners. Its evidence comes from the company’s job-description corpus for the twelve months ending July 27, 2026. The release is new today; the observations are not an October hiring snapshot."
+        },
+        {
+          "type": "heading",
+          "text": "An early signal within existing jobs"
+        },
+        {
+          "type": "paragraph",
+          "text": "In the HR Business Partner sample of 119,429 active job descriptions, the report counts 211 postings mentioning GitHub Copilot, 175 mentioning ChatGPT and 87 mentioning Claude. Each represents less than 0.2% of that role’s sample. Postings may name more than one tool, so adding those counts would not establish the number of distinct AI-related openings. The small shares support an early skills signal rather than widespread explicit demand for those particular products."
+        },
+        {
+          "type": "paragraph",
+          "text": "The report also identifies Microsoft Copilot in Workforce Analyst descriptions and GitHub Copilot and Claude in Workforce Manager descriptions. Draup interprets these mentions as expectations for particular workflows, such as summarizing information, preparing planning narratives or developing forecasting scripts. A product name in a requisition tells us what the employer has written down. It does not measure whether employees actually use the tool, how proficient they are or whether it improves their work."
+        },
+        {
+          "type": "heading",
+          "text": "Analytics joins the established HR workload"
+        },
+        {
+          "type": "paragraph",
+          "text": "Draup’s broader finding is that people analytics, workforce analytics and decisions supported by data appear as emerging requirements across twelve of the eighteen roles. The report distinguishes a technology-and-strategy profile from a compliance-and-operations profile, while identifying further differences within workforce planning and the HR Business Partner title. Its practical concern is that a single job description can accumulate requirements for several kinds of work without making clear which capability the employer most needs."
+        },
+        {
+          "type": "paragraph",
+          "text": "The workforce-analytics tables give that argument some detail: SQL appears in 979 Workforce Analyst descriptions, alongside visualization, data-quality and modeling skills. The report recommends auditing current capabilities and designing applied training around the tasks named in each role. Those recommendations are Draup’s interpretation of its corpus. They should be evaluated against an organization’s actual work and data systems, rather than used to make every HR position require the same technical stack."
+        },
+        {
+          "type": "heading",
+          "text": "Requirements are different from employment outcomes"
+        },
+        {
+          "type": "paragraph",
+          "text": "The report defines its counts as distinct active postings explicitly specifying a skill. It describes new, emerging and declining skill categories, but the published material does not provide a reproducible posting-level dataset or sufficient detail to independently audit every classification. The geographic and employer coverage also limits how broadly readers can generalize the results. Draup sells workforce-intelligence services, so the report is vendor research rather than an official employment census."
+        },
+        {
+          "type": "paragraph",
+          "text": "For workers and hiring teams, the useful question is how AI changes the tasks inside a role: what can be assisted, which data must be understood and who checks the resulting decisions. The report supplies examples for that discussion, with traditional advisory and compliance responsibilities still present. It does not establish that AI has eliminated HR jobs, created a measured number of positions or caused a wage premium. Those outcomes require different evidence from the wording of vacancies."
+        }
+      ],
+      "sources": [
+        {
+          "label": "Draup — October 14 release and corpus definitions",
+          "url": "https://draup.com/talent/blogs/hr-is-splitting-in-two-as-analytics-and-ai-reshape-the-function"
+        },
+        {
+          "label": "Draup — full 30-page report and role-level tables",
+          "url": "https://resources.draup.com/hubfs/Research%20Reports/2026/hr-skill-transformation-2026.pdf"
+        }
+      ]
+    },
+    {
       "slug": "gemini-4-argon-google-cloud-general-availability",
       "category": "Industry · Models",
       "sortDate": "2026-10-13",
