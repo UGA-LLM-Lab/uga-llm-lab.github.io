@@ -608,7 +608,7 @@ window.LLM_LAB_DATA = {
         },
         {
           name: "Danylo Pynzenyk",
-          role: "Undergrad",
+          role: "Undergrad · CS & Cybersecurity",
           bio: "Has experience in information technology and is interested in security, AI, and cloud engineering.",
           photo: "assets/images/members-danylo-pynzenyk.png",
           links: [
@@ -634,6 +634,33 @@ window.LLM_LAB_DATA = {
             { label: "LinkedIn", url: "https://www.linkedin.com/in/anto-francis-csmajor/" },
             { label: "GitHub", url: "https://github.com/DevFrancisA" },
             { label: "Email", url: "mailto:ajf46428@uga.edu" }
+          ]
+        },
+        {
+          name: "Zayan Hoodani",
+          role: "Undergrad · CS & Cybersecurity",
+          bio: "Focuses on AI red-teaming, penetration testing, and LLM vulnerability defense across multimodal systems and production pipelines.",
+          photo: "assets/images/members-zayan-hoodani.png",
+          photoZoom: 1.15,
+          website: "https://zayan.hoodani.me/",
+          links: [
+            { label: "Website", url: "https://zayan.hoodani.me/" },
+            { label: "LinkedIn", url: "https://www.linkedin.com/in/zayanh1/" },
+            { label: "GitHub", url: "https://github.com/zayanh1" },
+            { label: "Email", url: "mailto:zayanhoodani@uga.edu" }
+          ]
+        },
+        {
+          name: "Jacob Souder",
+          role: "Undergrad · CS",
+          bio: "Builds full-stack web applications using machine learning and AI agents to improve workflows; interested in security research, design, and software development.",
+          photo: "assets/images/members-jacob-souder.jpg",
+          photoZoom: 1.15,
+          links: [
+            { label: "LinkedIn", url: "https://www.linkedin.com/in/jacob-souder/" },
+            { label: "GitHub", url: "https://github.com/JacobSouder" },
+            { label: "Project", url: "https://urbans.studio" },
+            { label: "Email", url: "mailto:jacob.souder@uga.edu" }
           ]
         }
       ]
