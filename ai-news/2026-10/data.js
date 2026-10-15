@@ -2,6 +2,371 @@ window.AI_NEWS_MONTH_DATA["2026-10"] = {
   "label": "October 2026",
   "articles": [
     {
+      "slug": "meta-muse-spark-open-weights-release",
+      "category": "Industry · Open Models",
+      "sortDate": "2026-10-15",
+      "dateLabel": "October 15, 2026",
+      "title": "Meta releases Muse Spark Open weights for coding and multimodal agents",
+      "summary": "Meta’s 816-billion-parameter model brings a million-token context window and downloadable weights. Local deployment still needs substantial memory, and access carries a model-specific licence.",
+      "image": {
+        "src": "ai-news/2026-10/images/meta-muse-spark-open-source.webp",
+        "alt": "Meta’s Muse Spark Open Weights launch artwork with blue flowing lines",
+        "caption": "Meta’s original October 15 launch artwork. The capability claim printed in the image is the publisher’s assessment. Source: Meta."
+      },
+      "content": [
+        {
+          "type": "paragraph",
+          "text": "Meta released Muse Spark Open on October 15, making a version of its multimodal model available as downloadable weights and through inference partners. The model has 816 billion total parameters, with 42 billion active per token, and supports a context window of one million tokens. Its inputs include text, images, audio and video; its output is text. This is a new distribution milestone for Muse Spark, separate from the earlier hosted model and this week’s Muse Wonder releases."
+        },
+        {
+          "type": "heading",
+          "text": "A large model with several deployment routes"
+        },
+        {
+          "type": "paragraph",
+          "text": "The mixture-of-experts design activates a subset of the model for each token, reducing computation relative to using every parameter. That does not reduce its stored weights to the size of a 42-billion-parameter model. Meta’s model card specifies at least 700 GB of GPU memory for the NVFP4 version and 2 TB for BF16. It also describes an optimized configuration using two Mac Studios with M5 Ultra and MLX. Those are substantial systems, so the local-running announcement should be read with the configuration attached."
+        },
+        {
+          "type": "paragraph",
+          "text": "Developers can obtain weights through Hugging Face and supported cloud model catalogs, or use third-party hosted inference. Meta lists support across serving frameworks including SGLang, vLLM, TensorRT-LLM and llama.cpp, alongside tools for customization. The practical change is greater choice over hosting, adaptation and infrastructure. Availability through an ecosystem partner still depends on that partner’s service terms and rollout; a launch partner list does not establish identical access everywhere."
+        },
+        {
+          "type": "heading",
+          "text": "Benchmarks depend on the surrounding agent"
+        },
+        {
+          "type": "paragraph",
+          "text": "The accompanying evaluation methodology distinguishes model reasoning settings, agent tools and result sources. Meta tests Muse Spark Open at its highest reasoning effort and combines internal evaluations with official benchmark results and other providers’ reports. On coding tasks, the software harness matters: DeepSWE results use different preferred harnesses across models, while the reported Terminal-Bench 2.1 comparison generally uses Terminus 2. A score is evidence about that tested configuration, rather than a prediction of performance in every coding assistant."
+        },
+        {
+          "type": "paragraph",
+          "text": "The release also includes safety post-training intended to make the downloadable checkpoint more resistant to misuse without a hosted service’s surrounding protections. Meta recommends additional safeguards for the application in which it is deployed. Its model card notes that outputs can be inaccurate, that extended agent workflows can fail, and that quantization may introduce quality differences. Teams adapting the weights therefore need to evaluate the resulting system, including its tool permissions and behavior on their own tasks."
+        },
+        {
+          "type": "heading",
+          "text": "Downloadable weights come with specific terms"
+        },
+        {
+          "type": "paragraph",
+          "text": "Muse Spark Open uses the Muse Model License and an accompanying usage policy. The licence allows modification and distribution subject to conditions, including attribution. It also requires a separate agreement for certain model-as-a-service businesses whose aggregate revenue exceeds $20 million over a consecutive twelve-month period. That condition has defined exceptions, so it should not be simplified into a revenue cap on all commercial users."
+        },
+        {
+          "type": "paragraph",
+          "text": "For researchers, the release creates an opportunity to study a large multimodal agent model with control over its weights and deployment. The immediate questions are concrete: whether an available machine can hold it, whether the intended serving stack supports its modalities, and whether performance survives customization. Those checks determine the usefulness of the release more directly than the headline parameter count."
+        }
+      ],
+      "sources": [
+        {
+          "label": "Meta — October 15 Muse Spark Open announcement",
+          "url": "https://research.meta.ai/blog/muse-spark-open"
+        },
+        {
+          "label": "Meta — model card, deployment requirements and Muse Model License",
+          "url": "https://huggingface.co/meta-models/Muse-Spark-Open-816B-A42B"
+        },
+        {
+          "label": "Meta — full evaluation methodology",
+          "url": "https://research.meta.ai/static/muse-spark-open-evaluation-methodology"
+        },
+        {
+          "label": "Meta — developer model documentation",
+          "url": "https://dev.meta.ai/models/muse-spark-open"
+        }
+      ]
+    },
+    {
+      "slug": "nvidia-nemotron-35-super-vl-bolt-release",
+      "category": "Industry · Agent Models",
+      "sortDate": "2026-10-15",
+      "dateLabel": "October 15, 2026",
+      "title": "NVIDIA expands Nemotron with Super VL and a 24 GB Bolt model",
+      "summary": "NVIDIA’s October 15 release pairs a customizable multimodal enterprise model with a compressed model for local agents. Super VL and Bolt 74B are available now; the smaller Bolt E4B is scheduled for October 23.",
+      "image": {
+        "src": "ai-news/2026-10/images/nvidia-nemotron-35-super-bolt-source.jpeg",
+        "alt": "NVIDIA illustration of agent tasks including documents, code, charts and video around a globe",
+        "caption": "Official artwork accompanying NVIDIA’s October 15 Nemotron family announcement. Source: NVIDIA; publisher illustration."
+      },
+      "content": [
+        {
+          "type": "paragraph",
+          "text": "NVIDIA announced Nemotron 3.5 Super VL and Nemotron 3.5 Bolt on October 15, extending its model family across enterprise and local agent workloads. Super VL combines visual understanding, reasoning and tool use in a model with 120 billion total parameters and 12 billion active per token. Bolt 74B-A9B compresses that approach into a package designed around a 24 GB memory footprint. NVIDIA says both are available now, while the smaller Bolt E4B 4GB model is scheduled for October 23."
+        },
+        {
+          "type": "heading",
+          "text": "Documents and tools in one workflow"
+        },
+        {
+          "type": "paragraph",
+          "text": "Super VL targets tasks that mix language with visual evidence: reading a chart, interpreting a receipt, checking a table across several document pages, or using what appears on a webpage to decide a tool call. Combining these capabilities can reduce the need to pass information between separate text and vision models. NVIDIA is releasing model checkpoints, datasets and training resources so organizations can adapt the system to their own terminology, procedures and evaluation criteria."
+        },
+        {
+          "type": "paragraph",
+          "text": "The technical release describes supervised fine-tuning, low-rank adaptation and reinforcement learning through the NeMo ecosystem. That makes customization a central part of the proposition. A finance workflow, for example, needs to extract the correct fields and follow the organization’s policy, rather than merely produce a plausible document summary. The company’s examples include receipt processing, credit workflows and security analysis, with results tied to particular partners and deployments."
+        },
+        {
+          "type": "heading",
+          "text": "Compression changes the local deployment question"
+        },
+        {
+          "type": "paragraph",
+          "text": "Bolt 74B-A9B has 74 billion total parameters and nine billion active per token. Its model card describes a hybrid Mamba-2 and Transformer architecture with a vision encoder, compressed from Super VL and then trained to recover capabilities. Native low-bit quantization is a major part of fitting the model into a smaller memory budget. The published package uses the OpenMDW 1.1 licence and supports text, image and video inputs with text output."
+        },
+        {
+          "type": "paragraph",
+          "text": "The advertised context limit is 256,000 tokens, but the model card explicitly allows deployment recipes to use a shorter window to accommodate memory and concurrency. Its compression search targeted a specific batch size and context budget. Consequently, a 24 GB label does not establish that every supported context length, number of users and software configuration will fit the same device. Developers need the recipe corresponding to their hardware and intended workload."
+        },
+        {
+          "type": "heading",
+          "text": "Performance claims need their configuration"
+        },
+        {
+          "type": "paragraph",
+          "text": "NVIDIA reports throughput and task-completion improvements for Super VL against selected open models, and publishes separate comparisons for local hardware. These are different measurements: output tokens per second, time to a correct task result and benchmark accuracy should not be treated as interchangeable. The technical post also reports partner-specific customization outcomes, some expressed as expected improvements. They provide starting points for evaluation rather than a universal speedup for all agent software."
+        },
+        {
+          "type": "paragraph",
+          "text": "The availability dates are similarly specific. Bolt 74B can be downloaded today; Bolt E4B remains forthcoming. NVIDIA’s related RTX Spark laptops are scheduled to arrive October 16. For a lab choosing a local agent stack, the useful next step is to test the available checkpoint on a representative document-and-tool workflow, measuring successful completion, total memory and latency together. The release expands the options for that experiment without resolving those deployment tradeoffs in advance."
+        }
+      ],
+      "sources": [
+        {
+          "label": "NVIDIA — October 15 announcement and availability dates",
+          "url": "https://blogs.nvidia.com/blog/nemotron-3-5-super-vl/"
+        },
+        {
+          "label": "NVIDIA Developer — architecture, customization and evaluation details",
+          "url": "https://developer.nvidia.com/blog/nvidia-nemotron-3-5-super-vl-powers-specialized-agents-with-multimodal-reasoning/"
+        },
+        {
+          "label": "NVIDIA — Bolt 74B-A9B 24GB model card and deployment constraints",
+          "url": "https://huggingface.co/nvidia/NVIDIA-Nemotron-3.5-Bolt-74B-A9B-24GB"
+        }
+      ]
+    },
+    {
+      "slug": "black-forest-labs-flux-3-image-klein",
+      "category": "Industry · Image Models",
+      "sortDate": "2026-10-15",
+      "dateLabel": "October 15, 2026",
+      "title": "Black Forest Labs releases FLUX 3 Image Klein for generation and editing",
+      "summary": "The new 5.6-billion-parameter image generator supports reference images and layout instructions. Its model card separates small weight files from full pipeline memory, and gives important limits on edits and commercial use.",
+      "image": {
+        "src": "ai-news/2026-10/images/flux-3-image-klein-source.png",
+        "alt": "Black Forest Labs FLUX 3 Image Klein launch collage of generated imagery and typography",
+        "caption": "Black Forest Labs’ original launch artwork, including AI-generated model samples. Source: Black Forest Labs."
+      },
+      "content": [
+        {
+          "type": "paragraph",
+          "text": "Black Forest Labs released FLUX 3 Image Klein on October 15, introducing a downloadable model for text-to-image generation, image editing and compositions using several reference images. The company describes a 5.6-billion-parameter image transformer, with a separate text encoder. It released both a base checkpoint for customization and a distilled checkpoint that uses 16 generation steps. This is the image-model launch, distinct from the earlier FLUX 3 Action announcement."
+        },
+        {
+          "type": "heading",
+          "text": "One model, several kinds of image instruction"
+        },
+        {
+          "type": "paragraph",
+          "text": "The model takes a prompt and up to ten reference images, then returns one image. Its instructions can include bounding boxes to guide the position and scale of requested elements. Those boxes are not hard editing masks: the model card warns that an object can extend outside its box and that an edit can change other content. For users preparing a figure or revising a design, that distinction matters because a visually plausible result may still alter details that were meant to stay fixed."
+        },
+        {
+          "type": "paragraph",
+          "text": "Prompt processing is also part of the system. The reference implementation expands a short request into a detailed scene caption before generation, using a separate prompt upsampler. The model card says the Diffusers pipeline does not perform that step automatically. Running a checkpoint without the corresponding prompt preparation can therefore produce different results from a hosted demonstration. The base checkpoint is intended for fine-tuning and LoRA work; the distilled checkpoint prioritizes generation and editing speed."
+        },
+        {
+          "type": "heading",
+          "text": "Weight size and working memory are different"
+        },
+        {
+          "type": "paragraph",
+          "text": "Black Forest Labs publishes several precision variants and reports fast generation on supported consumer GPUs. Its launch chart shows a 1024-by-1024 image taking 4.1 seconds on an RTX 5090 and 8.9 seconds on an RTX 4070, using the distilled INT8 configuration. These are publisher measurements for one image per run, with named software and hardware choices. Larger images and editing take longer, as the accompanying chart illustrates."
+        },
+        {
+          "type": "figure",
+          "src": "ai-news/2026-10/images/flux-3-image-klein-gpu-source.png",
+          "alt": "Black Forest Labs chart of generation and editing times by GPU for the 16-step distilled FLUX 3 Image Klein model",
+          "caption": "Original publisher timing chart for selected optimized builds, one image per run. Results are configuration-specific. Source: Black Forest Labs; unchanged figure."
+        },
+        {
+          "type": "paragraph",
+          "text": "The model card supplies a separate reference-pipeline measurement: on a B200 at 1024-by-1024 resolution, with the prompt upsampler off, peak GPU memory is 31 GB in BF16, 26 GB in FP8 and 25 GB in NVFP4. The upsampler adds further memory. Those figures describe a different configuration from the optimized consumer-GPU demonstrations. A small transformer weight file alone is therefore insufficient to determine whether the complete application fits a particular graphics card."
+        },
+        {
+          "type": "heading",
+          "text": "Access and licensing shape the practical use"
+        },
+        {
+          "type": "paragraph",
+          "text": "The hosted BFL API and downloadable checkpoints offer different operating arrangements. The weights use the FLUX Kommunity License, whose commercial-output exception applies to qualifying users with less than $5 million in gross annualized revenue, including affiliates, subject to its terms. The model card expressly says this is not blanket permission for commercial fine-tuning or distribution. Larger deployments and other uses require checking the applicable commercial terms."
+        },
+        {
+          "type": "paragraph",
+          "text": "For a university team, the release makes local experimentation with generation, reference-based edits and layout control more accessible. Evaluation should include whether text renders correctly, whether important reference details survive and whether an edit changes unintended regions. The published examples demonstrate intended capabilities, while the model card documents failure modes that remain relevant when turning a promising sample into a dependable workflow."
+        }
+      ],
+      "sources": [
+        {
+          "label": "Black Forest Labs — October 15 launch, variants and timing charts",
+          "url": "https://bfl.ai/blog/flux-3-image-klein"
+        },
+        {
+          "label": "Black Forest Labs — distilled model card, memory measurements and licence",
+          "url": "https://huggingface.co/black-forest-labs/flux-3-image-klein"
+        },
+        {
+          "label": "Black Forest Labs — base checkpoint and customization documentation",
+          "url": "https://huggingface.co/black-forest-labs/flux-3-image-klein-base"
+        }
+      ]
+    },
+    {
+      "slug": "nature-dendritic-sparsela-foundation-models",
+      "category": "Research · Model Architecture",
+      "sortDate": "2026-10-15",
+      "dateLabel": "October 15, 2026",
+      "title": "Dendrite-inspired SparseLA studies how foundation models update memory",
+      "summary": "A Nature Communications paper connects simplified dendritic computation with linear attention. Its sparse-memory design improves selected efficiency measures, while a 50-million-token retrieval result has a narrower scope than general long-context understanding.",
+      "image": {
+        "src": "ai-news/2026-10/images/dendritic-sparsela-overview-source.png",
+        "alt": "Figure 1 connecting simplified dendritic neuron structure with linear attention state updates and foundation models",
+        "caption": "Yao et al., Figure 1: the paper’s biological analogy and architecture motivation. Original author-released figure, unchanged. Source: Nature Communications and BICLab; CC BY-NC-ND 4.0."
+      },
+      "content": [
+        {
+          "type": "paragraph",
+          "text": "A paper published in Nature Communications on October 15 uses the internal structure of neurons to examine memory in foundation models. Man Yao and colleagues connect simplified dendritic computation with linear attention, then develop a sparse update mechanism called SparseLA. The accepted article and accompanying code provide a research framework for comparing memory designs. Its biological connection is a structural and computational analogy, with deliberately simplified dynamics, rather than a reproduction of a living neuron."
+        },
+        {
+          "type": "heading",
+          "text": "Choosing which parts of memory to change"
+        },
+        {
+          "type": "paragraph",
+          "text": "Conventional self-attention retains keys and values from earlier tokens, allowing a new query to revisit them while the stored context grows. Linear attention instead updates a fixed-size internal state. That can make processing long sequences more economical, but it places more responsibility on what the model writes, retains and forgets. The paper relates these state updates to compartments and branches in simplified dendritic neurons, using input-dependent decay in place of more detailed ion-channel behavior."
+        },
+        {
+          "type": "paragraph",
+          "text": "SparseLA selects a subset of state components to update for a given input, preserving other components. A related variant changes how compartments interact. The authors evaluate nine token mixers across static images, neuromorphic speech, event-based vision and associative recall, using matched model budgets within the respective comparisons. The results support task-dependent choices about memory organization; they do not establish that one operator is best for every input or application."
+        },
+        {
+          "type": "heading",
+          "text": "Efficiency and retrieval show different tradeoffs"
+        },
+        {
+          "type": "paragraph",
+          "text": "The language-model experiments train 400-million-, one-billion- and three-billion-parameter systems from scratch on 300 billion tokens, with an initial context length of 8,000 tokens. SparseLA is competitive on the reported commonsense and long-document evaluations. The retrieval plots also show a limitation: the Transformer retains an advantage on the trained range in the needle-in-a-haystack comparison. A smaller recurrent state creates efficiency opportunities while making exact retention a separate challenge."
+        },
+        {
+          "type": "figure",
+          "src": "ai-news/2026-10/images/dendritic-sparsela-results-source.png",
+          "alt": "Figure 6 with language-model scores, needle retrieval heatmaps, GPU efficiency curves and SparseLA-H long-context tests",
+          "caption": "Yao et al., Figure 6: controlled language-model comparisons and separate SparseLA-H retrieval tests. The 50M-token panel is a synthetic retrieval evaluation with reduced sampling resolution at long lengths. Original figure unchanged; CC BY-NC-ND 4.0."
+        },
+        {
+          "type": "paragraph",
+          "text": "In a controlled inference comparison at a sequence length of 256,000 tokens, the authors report 22.9-fold lower inference time and 60-fold lower GPU memory use than the matched Transformer setup. Those ratios belong to that experiment, with specified model sizes, generated-token counts and batching rules. They should not be transferred directly to an unrelated production model, serving system or hardware configuration. The study separately measures training operators on NVIDIA A100 GPUs."
+        },
+        {
+          "type": "heading",
+          "text": "What the 50-million-token result establishes"
+        },
+        {
+          "type": "paragraph",
+          "text": "For longer contexts, the team builds SparseLA-H, a 60-billion-parameter hybrid with nine billion active parameters and periodic self-attention layers. Training progressively extends its context to four million tokens. The reported extrapolation reaches 50 million tokens on a needle-in-a-haystack task, which asks the model to retrieve inserted information. The paper notes reduced sampling resolution at these expensive lengths. Success on that test does not measure comprehensive reasoning across an arbitrary 50-million-token document collection."
+        },
+        {
+          "type": "paragraph",
+          "text": "The contribution is a way to connect memory-update design, biological motivation and measurable computational tradeoffs. The public repository supplies experiment implementations and long-context integration code, allowing researchers to investigate the approach further. Reproducing the relevant accuracy, retrieval and hardware measurements remains necessary before deciding whether the same design offers an advantage for a lab’s own workload."
+        }
+      ],
+      "sources": [
+        {
+          "label": "Nature Communications — October 15 paper and publication record",
+          "url": "https://www.nature.com/articles/s41467-026-77929-8"
+        },
+        {
+          "label": "Yao et al. — complete accepted article, methods and figures (PDF)",
+          "url": "https://www.nature.com/articles/s41467-026-77929-8_reference.pdf"
+        },
+        {
+          "label": "BICLab — official implementation, experiment guides and original figures",
+          "url": "https://github.com/BICLab/Dendritic-Foundation-Model"
+        },
+        {
+          "label": "Creative Commons — Attribution-NonCommercial-NoDerivatives 4.0",
+          "url": "https://creativecommons.org/licenses/by-nc-nd/4.0/"
+        }
+      ]
+    },
+    {
+      "slug": "kpmg-2026-ceo-outlook-ai-workforce-plans",
+      "category": "Employment · Workforce Strategy",
+      "sortDate": "2026-10-15",
+      "dateLabel": "October 15, 2026",
+      "title": "KPMG survey pairs AI hiring plans with role redesign and selective cuts",
+      "summary": "KPMG’s October 15 CEO Outlook finds large-company leaders planning both AI-related hiring and reductions in some areas. The figures describe intentions over several years, rather than measured employment outcomes.",
+      "image": {
+        "src": "ai-news/2026-10/images/kpmg-ceo-outlook-2026-source.jpg",
+        "alt": "KPMG’s illustrative CEO Outlook artwork showing two people seated in a blue setting",
+        "caption": "Official 2026 CEO Outlook illustrative artwork. KPMG’s report credits generative AI in the creation of many images. Source: KPMG."
+      },
+      "content": [
+        {
+          "type": "paragraph",
+          "text": "KPMG released its 2026 U.S. CEO Outlook on October 15, reporting a workforce strategy that combines hiring, retraining and reductions in selected areas. Among the U.S. executives surveyed, 89% expect their organizations’ headcount to increase over the next three years. In a separate question about AI-related workforce strategies over two to five years, 79% report hiring talent with AI and technology capabilities, while 53% report planning reductions in some areas. These are executives’ stated plans, with different scopes and time horizons."
+        },
+        {
+          "type": "heading",
+          "text": "Growth plans can coexist with changing roles"
+        },
+        {
+          "type": "paragraph",
+          "text": "The same workforce-strategy question finds 86% redesigning roles, career paths and team structures around human-AI collaboration, and 83% focusing on retaining and retraining high-potential employees. The responses describe several actions a company may pursue together. They are not mutually exclusive categories to add into a total. Nor does the combination reveal how many people a particular employer will hire, move internally or lay off."
+        },
+        {
+          "type": "paragraph",
+          "text": "The overall headcount expectation is similarly limited. An organization can anticipate growing in total while reducing employment in a particular function, location or task. KPMG’s findings therefore give a view of management priorities across large companies, rather than a single forecast that AI will increase or decrease employment everywhere. They also do not identify which announced plans have already been carried out."
+        },
+        {
+          "type": "heading",
+          "text": "Training and entry-level expectations are shifting"
+        },
+        {
+          "type": "paragraph",
+          "text": "Skills shortages are prominent in the responses: 60% identify workforce skills gaps among their biggest challenges, 55% identify AI upskilling and training, and 49% identify attracting and retaining talent. Eighty-one percent say integrating AI has prompted their organizations to rethink employee training and development. Seventy-five percent say it has changed their thinking about the skills required for entry-level roles. Those responses concern employer expectations; they do not measure graduates’ actual access to jobs."
+        },
+        {
+          "type": "paragraph",
+          "text": "The investment results help explain why workforce design is on the agenda. Eighty-four percent of U.S. respondents identify AI as a top investment priority over the next three years, and 65% say they will devote at least a tenth of their capital budget to it in the next year. Yet only 9% characterize agents as transformational for their organization at present. Another 39% report significant improvements and 43% moderate effects in targeted use cases. Those are self-reported assessments, rather than independently measured productivity gains."
+        },
+        {
+          "type": "heading",
+          "text": "A survey of large-company leadership"
+        },
+        {
+          "type": "paragraph",
+          "text": "The global survey includes more than 1,300 chief executives, with 400 in the United States. The U.S. respondents lead companies with annual revenue above $500 million; more than a third of those companies exceed $10 billion. That sampling scope matters: the results do not represent all employers, small businesses or workers. The public U.S. report describes the sample but does not supply fieldwork dates or a response-rate calculation, limiting precise comparisons with other surveys."
+        },
+        {
+          "type": "paragraph",
+          "text": "For students and university workforce researchers, the report offers specific questions to follow: how employers change entry-level requirements, whether retraining plans receive resources, and which functions experience expansion or contraction. Answering them requires subsequent observations of postings, employment and actual organizational changes. The new release documents what large-company leaders say they intend to do, while leaving those outcomes to be measured over time."
+        }
+      ],
+      "sources": [
+        {
+          "label": "KPMG — October 15 U.S. CEO Outlook release",
+          "url": "https://kpmg.com/us/en/media/news/kpmg-us-ceo-outlook-2026.html"
+        },
+        {
+          "label": "KPMG — report overview and sample description",
+          "url": "https://kpmg.com/us/en/articles/2026/ceo-outlook.html"
+        },
+        {
+          "label": "KPMG — complete 2026 U.S. CEO Outlook report (PDF)",
+          "url": "https://kpmg.com/kpmg-us/content/dam/kpmg/pdf/gated/2026/kpmg-2026-ceo-outlook.pdf"
+        }
+      ]
+    },
+    {
       "slug": "google-deep-review-public-document-verification",
       "category": "Industry · Research Tools",
       "sortDate": "2026-10-14",
