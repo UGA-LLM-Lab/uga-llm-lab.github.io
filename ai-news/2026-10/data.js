@@ -2,6 +2,373 @@ window.AI_NEWS_MONTH_DATA["2026-10"] = {
   "label": "October 2026",
   "articles": [
     {
+      "slug": "reflection-beam-10-open-weights-release",
+      "category": "Industry · Open Models",
+      "sortDate": "2026-10-16",
+      "dateLabel": "October 16, 2026",
+      "title": "Reflection releases Beam weights and a deployment stack for coding agents",
+      "summary": "Beam’s October 16 weight release turns an earlier announcement into a downloadable Apache-licensed model. Its 501B total parameters still require substantial hardware, despite activating about 23B per token.",
+      "image": {
+        "src": "ai-news/2026-10/images/reflection-beam-release-source.jpg",
+        "alt": "Official Hugging Face launch artwork for Reflection’s Beam model",
+        "caption": "Official artwork accompanying Hugging Face’s October 16 Beam launch guide. Source: Hugging Face and Reflection."
+      },
+      "content": [
+        {
+          "type": "paragraph",
+          "text": "Reflection made Beam’s instruction-tuned weights available on October 16, giving developers a downloadable model for coding, reasoning and extended tool use. The release includes BF16, FP8 and NVFP4 checkpoints under Apache 2.0, together with deployment and customization resources. It follows the company’s October 5 announcement, when the weights were still promised for later in the month. The new development is the usable release and its supporting software, rather than another unveiling of the same model."
+        },
+        {
+          "type": "heading",
+          "text": "A sparse model with a large memory footprint"
+        },
+        {
+          "type": "paragraph",
+          "text": "Beam accepts text and produces text, supports a one-million-token context window, and was developed predominantly for English. Its mixture-of-experts architecture has 501.3 billion total parameters and activates 23.4 billion per token. A router selects eight of 256 experts in each expert layer. That reduces the computation used for an individual token, but the full set of experts still needs to be stored and made available during inference."
+        },
+        {
+          "type": "paragraph",
+          "text": "Hugging Face’s launch guide puts the BF16 checkpoint at about one terabyte and the NVFP4 weights at roughly 280 GB. It recommends planning for four NVIDIA B200 GPUs for the latter configuration, leaving room for activations, long contexts and concurrent requests. Two B200s can hold the weights but offer less operating headroom. NVFP4 depends on Blackwell support; teams using other hardware need an appropriate precision and serving recipe. Downloadable weights therefore create deployment control without making this a small-machine model."
+        },
+        {
+          "type": "heading",
+          "text": "Serving, tools and customization"
+        },
+        {
+          "type": "paragraph",
+          "text": "The release has integrations for Transformers, vLLM and SGLang. Reflection’s documentation also provides a TokenSpeed route, deployment checks through Beam Verifier, and production guidance for Kubernetes and NVIDIA Dynamo. Developers can run the model on their own infrastructure or use a provider. These routes have different hardware and operational requirements; the practical starting point is a supported configuration followed by a check that the deployed model behaves and performs as expected."
+        },
+        {
+          "type": "paragraph",
+          "text": "Beam’s conversation format supports tool calls and five reasoning settings, from low to max. It can preserve reasoning context across turns when configured to do so. The release also includes a DFlash2 speculative-decoding drafter and recipes for supervised fine-tuning and reinforcement learning. Those components let teams adapt the surrounding agent and the model itself, rather than relying only on a fixed hosted assistant. Access to a tool remains a decision for the application running the model."
+        },
+        {
+          "type": "heading",
+          "text": "What the evaluations establish"
+        },
+        {
+          "type": "paragraph",
+          "text": "Reflection’s model card reports 81.6% on SWE-bench Verified, 80.1% on Terminal-Bench 2.1 and 90.6% on GPQA Diamond for the BF16 checkpoint. The table distinguishes numerical formats, and results change somewhat across them. These are the developer’s reported evaluations, not measurements from a deployment tested by this publication. Agent harnesses, tools, reasoning settings and precision all affect the resulting system, so the headline scores are a starting point for task-specific evaluation."
+        },
+        {
+          "type": "paragraph",
+          "text": "The Apache licence permits commercial use and modification subject to its terms. Reflection’s model card explicitly says it does not prohibit distillation, fine-tuning, quantization or use of outputs to train other models, and that the card does not add restrictions to the licence. For organizations considering Beam, the immediate work is concrete: choose a serving configuration, test the intended coding or tool workflow, and measure quality and resource use after any customization."
+        }
+      ],
+      "sources": [
+        {
+          "label": "Hugging Face — October 16 Beam release and technical integration guide",
+          "url": "https://huggingface.co/blog/reflection-beam"
+        },
+        {
+          "label": "Reflection — Beam model card, licence and reported evaluations",
+          "url": "https://huggingface.co/reflection/Beam-1.0-501B-A23B"
+        },
+        {
+          "label": "Reflection — deployment overview",
+          "url": "https://developers.reflection.ai/deployment-overview"
+        },
+        {
+          "label": "Reflection — dated weight-release history",
+          "url": "https://huggingface.co/reflection/Beam-1.0-501B-A23B/commits/main"
+        }
+      ]
+    },
+    {
+      "slug": "google-verid-agents-wet-lab-discovery",
+      "category": "Research · AI for Science",
+      "sortDate": "2026-10-16",
+      "dateLabel": "October 16, 2026",
+      "title": "Google connects AI agents to wet-lab checks and repeated molecular experiments",
+      "summary": "VERID tracks laboratory state before robots act. Separate aptamer and protein-design studies show how experimental feedback can improve candidates—and expose misleading apparent successes.",
+      "image": {
+        "src": "ai-news/2026-10/images/google-wet-lab-source.png",
+        "alt": "Google Research’s diagram connecting a model, an agent, a laboratory and a search space",
+        "caption": "A still from Google Research’s source animation illustrating its proposed laboratory feedback loop. This is an explanatory diagram, not a photograph of an autonomous laboratory."
+      },
+      "content": [
+        {
+          "type": "paragraph",
+          "text": "Google Research presented three linked projects on October 16 aimed at connecting AI-generated experimental plans with reliable laboratory work. The new VERID report describes a persistent digital model of a robotic workcell that checks proposed actions against equipment, reagents and current volumes. Companion studies investigate repeated DNA-aptamer experiments and computational protein-binder design. Together they address a practical bottleneck: a plausible molecular idea or valid program can still fail when it reaches physical equipment or a biological assay."
+        },
+        {
+          "type": "heading",
+          "text": "Checking the laboratory before acting"
+        },
+        {
+          "type": "paragraph",
+          "text": "VERID, short for VERified Infrastructure for Discovery Laboratories, builds on PyLabRobot. It tracks the laboratory’s geometry and state, including well contents and pipette-tip inventory, and lets an agent query that state. Proposed protocols run through simulation and checks before hardware execution. The system also preserves synchronized video, instrument readings and action traces, giving researchers a record of what happened when a result differs from the plan."
+        },
+        {
+          "type": "paragraph",
+          "text": "Its demonstrations used aqueous dyes and deionized water to examine basic optical and fluid-handling problems. In one case, state tracking supported recovery from a plate-reader failure without repeating pipetting. In another, simulation rejected an eight-channel operation that would not fit the target trough. These tests establish capabilities in the reported workcell and cases; they do not establish that every biochemical protocol can now run safely without supervision."
+        },
+        {
+          "type": "heading",
+          "text": "Feedback that corrects a misleading result"
+        },
+        {
+          "type": "paragraph",
+          "text": "The aptamer study used three design–test cycles against myoglobin and alpha-thrombin, with roughly 4,400 sequenced constructs overall. Agents proposed sequences, received binding-screen data and revised their designs. Among newly designed candidates, the bead-corrected on-target hit rate for myoglobin fell from 10.2% in round one to 3.7% in round two, then rose to 33.5% in round three. Those percentages use each round’s candidate set, not all constructs combined."
+        },
+        {
+          "type": "paragraph",
+          "text": "The temporary reversal explains the value of physical feedback. Round-two designs favored structures that appeared to bind strongly but also stuck to unintended proteins or magnetic beads. Counter-screening exposed that behavior, and the next designs reduced those motifs. For alpha-thrombin, the reported hit rate rose from zero to 26.0% and then 42.1%; the last figure includes descendants of known motifs. A high pooled-screen hit rate is not itself proof of strong affinity, clinical utility or a wholly novel molecular scaffold."
+        },
+        {
+          "type": "figure",
+          "src": "ai-news/2026-10/images/google-aptamer-results-source.png",
+          "alt": "Google’s two-target chart of specificity and hit rate across three experimental rounds",
+          "caption": "Original Google Research chart. Specificity and hit rate use different denominators and separate axes; the accompanying paper supplies the candidate counts. The figure describes these experimental campaigns."
+        },
+        {
+          "type": "heading",
+          "text": "Protein design remains a separate experiment"
+        },
+        {
+          "type": "paragraph",
+          "text": "The protein study tested an approach that models a local target region rather than repeatedly folding an entire large protein. Across 15 targets and 3,666 designs, the authors evaluated whether the smaller regions preserved the intended interfaces. In a fibroblast activation protein campaign with the same compute-budget cap and hit definition, a human-guided agent reached a 9.33% computational hit rate versus 5.06% for the human baseline. The comparison concerns a computational screening criterion, distinct from wet-lab binding."
+        },
+        {
+          "type": "paragraph",
+          "text": "The reports have different dates: October 16 for VERID, October 12 for aptamers and October 14 for epitope excision. Google’s October 16 presentation brings them together, while describing integration of the automation and discovery workflows as further work. Humans authorize designed sequences, verify protocols and supervise robot runs. The immediate contribution is a set of tested building blocks and recorded failure modes for research teams developing laboratory agents."
+        }
+      ],
+      "sources": [
+        {
+          "label": "Google Research — October 16 wet-lab research announcement",
+          "url": "https://research.google/blog/grounding-ai-agents-in-biological-reality-building-blocks-for-autonomous-wet-labs/"
+        },
+        {
+          "label": "Google — Semantic Representation for Agentic Self-Play in Automated Laboratories",
+          "url": "https://www.gstatic.com/science-ai/verid_semantic_lab.pdf"
+        },
+        {
+          "label": "Google and collaborators — aptamer discovery report",
+          "url": "https://www.gstatic.com/science-ai/agentic_aptamer_sandbox.pdf"
+        },
+        {
+          "label": "Google — agent-guided epitope-excision report",
+          "url": "https://www.gstatic.com/science-ai/epitope_excision.pdf"
+        }
+      ]
+    },
+    {
+      "slug": "anthropic-employment-junior-technical-hiring-study",
+      "category": "Employment · Workforce Research",
+      "sortDate": "2026-10-16",
+      "dateLabel": "October 16, 2026",
+      "title": "Anthropic reports a smaller junior hiring share as AI agents reshape its own workplace",
+      "summary": "Junior staff fell from 27% to 9% of technical hires in Anthropic’s reported series. Its internal study also tracks output and task changes, while leaving the effects on the wider labor market unresolved.",
+      "image": {
+        "src": "ai-news/2026-10/images/anthropic-employment-study-source.jpg",
+        "alt": "Green, blue and cream geometric artwork accompanying Anthropic’s employment study",
+        "caption": "Anthropic’s original artwork for its October 16 employment report. This is publisher illustration, not a documentary photograph."
+      },
+      "content": [
+        {
+          "type": "paragraph",
+          "text": "Anthropic published an internal employment study on October 16 showing that junior workers account for a smaller share of its technical hiring even as the company expands. In the reported series running from 2025 into 2026, juniors’ share of technical hires fell from 27% to 9%, while their share of technical headcount declined from 21% to 14%. The company says absolute technical hiring continued growing. These figures describe hiring composition at one AI developer, rather than a count of jobs lost across the economy."
+        },
+        {
+          "type": "heading",
+          "text": "A company studying its own transformation"
+        },
+        {
+          "type": "paragraph",
+          "text": "Researchers combined internal employment records, AI-use telemetry, output measures, surveys, communication and calendar data, hiring assessments and 17 employee interviews. Different analyses cover different periods. The report describes lower-band technical hiring being deemphasized by April 2026, while an August comparison measures agents’ running time. Anthropic’s unusually intensive AI adoption, rapid business growth and internal access to its own systems make this an informative case with clear limits on generalization."
+        },
+        {
+          "type": "figure",
+          "src": "ai-news/2026-10/images/anthropic-junior-hiring-source.png",
+          "alt": "Anthropic’s original chart showing junior shares of technical and non-technical hires, headcount and open roles",
+          "caption": "Original Anthropic Figure 1. Each line measures the junior share within its own category; hires, headcount and open roles have different denominators. The chart covers company observations from 2025 into 2026, not an October economy-wide hiring rate."
+        },
+        {
+          "type": "paragraph",
+          "text": "By August, employee-directed interactive agents accumulated six times the estimated working hours of their human users. The agent measure includes inference and active tool use, pools subagents and excludes waits longer than 30 minutes. Human hours are calculated from headcount assuming a 40-hour week. Parallel software runtime and assumed employee hours are therefore different quantities: the ratio measures use of agents, not six times the economic output or the replacement of six employees by one system."
+        },
+        {
+          "type": "heading",
+          "text": "Output rose, but adoption was not randomized"
+        },
+        {
+          "type": "paragraph",
+          "text": "To examine productivity, the researchers followed 192 engineers adopting coding agents and compared them with 74 who did not adopt during the study period. Their analysis accounts for individual employees and calendar months, and finds a rise in code added after adoption. A separate comparison examines several quality proxies, including subsequent deletion and reversion. More code is not necessarily more useful software, and these proxies do not cover every dimension of correctness or business value."
+        },
+        {
+          "type": "paragraph",
+          "text": "The report also follows sales representatives as they begin using agents and finds more client deals after adoption. It explicitly acknowledges selection: employees preparing a large project, or salespeople facing more opportunities, may be more likely to adopt. The company’s fast revenue growth is another important backdrop. The evidence supports observed changes associated with adoption within Anthropic; it does not establish an economy-wide causal productivity effect of the same size."
+        },
+        {
+          "type": "heading",
+          "text": "Judgment and oversight take a larger role"
+        },
+        {
+          "type": "paragraph",
+          "text": "Interviews and automated analysis of hiring assessments point to changing job content. Hiring managers increasingly discuss candidates’ autonomy, judgment and creative use of AI tools. Employees also spend more effort writing agent instructions, building dashboards and monitoring automated workflows. Human coordination remains substantial: the report finds increased meeting time, including among technical individual contributors. Those observations complicate a simple picture in which automating implementation removes the need for organizational or interpersonal work."
+        },
+        {
+          "type": "paragraph",
+          "text": "Anthropic says it is setting up an early-warning system to monitor roles affected by AI and prioritizing internal redeployment as tasks change. Such measures concern existing employees; they do not directly resolve a smaller entry-level hiring share. The report leaves that tension visible. For workers and employers, its concrete contribution is a detailed account of how one expanding firm is changing hiring criteria, reallocating work and organizing human oversight around increasingly capable agents."
+        }
+      ],
+      "sources": [
+        {
+          "label": "Anthropic — full October 16 employment study and methods",
+          "url": "https://www.anthropic.com/research/employment-at-anthropic"
+        },
+        {
+          "label": "Anthropic Institute — original employment report PDF",
+          "url": "https://www-cdn.anthropic.com/72628f1863c53432195db83279252dfd2cb53158/Employment%20at%20Anthropic.pdf"
+        }
+      ]
+    },
+    {
+      "slug": "maryland-ai-tutor-randomized-trial-engagement",
+      "category": "Research · Education",
+      "sortDate": "2026-10-16",
+      "dateLabel": "October 16, 2026",
+      "title": "Maryland trial finds lower grades after AI-tutor access in matched courses",
+      "summary": "A Fall 2025 trial covered 2,379 students. Its clearest grade decline appeared in a 1,353-student matched-course subset, while participation in the learning platform fell across both samples.",
+      "image": {
+        "src": "ai-news/2026-10/images/maryland-ai-tutor-source.webp",
+        "alt": "A student uses a stylus and tablet at a desk in a University of Maryland source photograph",
+        "caption": "University of Maryland source photograph accompanying its October 16 report. Photo: Stephanie S. Cordle. The photograph does not identify participants in the trial."
+      },
+      "content": [
+        {
+          "type": "paragraph",
+          "text": "The University of Maryland reported on October 16 that access to a course-integrated AI study assistant was followed by lower grades in a randomized trial’s matched-course analysis. The Fall 2025 experiment included 2,379 undergraduates and 30 instructors across disciplines. In the 1,353-student subset comparing sections of the same courses, the adjusted final-grade estimate was 4.12 points lower on a 100-point scale, about 0.37 standard deviations. The broader sample’s grade evidence was weaker, making that distinction central to the finding."
+        },
+        {
+          "type": "heading",
+          "text": "A course-based assistant, offered under ordinary teaching conditions"
+        },
+        {
+          "type": "paragraph",
+          "text": "The virtual study assistant used GPT-4o and retrieval from instructor-selected course materials inside Maryland’s ELMS-Canvas system. It could consult documents, slides and lecture transcripts, cite sources, and offer either direct explanations or a tutoring mode. Instructors could inspect anonymized interactions and usage summaries. This was an evaluation of introducing a specific tool into normal courses, rather than a short laboratory exercise with students required to complete a prescribed tutoring session."
+        },
+        {
+          "type": "paragraph",
+          "text": "Assignment occurred at the instructor level within groups teaching identical or similar courses. The final sample covered 34 course sections; the exact-match analysis retained 22 instructors and 1,353 students. The authors compared those offered access with controls and adjusted for student characteristics and course blocks. Three assigned instructors who did not activate the assistant were excluded. The report is an October working paper, with a manuscript dated September 30, rather than a newly completed October classroom experiment."
+        },
+        {
+          "type": "heading",
+          "text": "Low use, substantial changes in platform activity"
+        },
+        {
+          "type": "paragraph",
+          "text": "Only 14.63% of students offered the assistant used it at all. In the matched-course sample, access reduced recorded platform participation by about 0.90 standard deviations, alongside fewer page views and active days. Participation also fell substantially in the full sample. Yet the share of homework submitted, or submitted on time, did not change detectably. Those measures describe different activities and should not be combined into a claim that students simply stopped turning in assignments."
+        },
+        {
+          "type": "paragraph",
+          "text": "The estimates measure the effect of offering access under these conditions. They do not isolate what using the chatbot did to an individual student. The authors consider whether its introduction altered study strategies or signaled permission to use other AI tools. That remains a possible explanation: the trial could not observe all outside tools or learning activity. Lower recorded platform engagement and lower grades occurred together, but the analysis does not establish that one caused the other."
+        },
+        {
+          "type": "heading",
+          "text": "Instructional design is part of the result"
+        },
+        {
+          "type": "paragraph",
+          "text": "Instructors received setup information, tutorials and optional communication materials, but no prescribed approach for integrating the assistant into coursework. Most used the default direct-instruction mode. None of the treatment-group instructors who answered the relevant survey reported incorporating it into assignments. Student interactions mainly sought immediate answers, while sustained practice and feedback were less common. This leaves an important difference between making an assistant technically available and organizing a learning activity around it."
+        },
+        {
+          "type": "paragraph",
+          "text": "Course grades were assigned by instructors, rather than measured through a common independent assessment, and platform logs capture only part of studying. The single-university setting, limited number of instructor groups and low uptake constrain broader conclusions. Maryland says current instructors have received the findings and guidance, and that it will study deployment before expanding access generally. The result gives universities concrete evidence to examine when designing tutor modes, student guidance and measures of independent learning."
+        }
+      ],
+      "sources": [
+        {
+          "label": "University of Maryland — October 16 report and institutional response",
+          "url": "https://education.umd.edu/news/10-16-26-study-suggests-more-guidance-needed-use-ai-course-assistants"
+        },
+        {
+          "label": "Liu and colleagues — EdWorkingPaper 26-1598",
+          "url": "https://edworkingpapers.com/ai26-1598"
+        },
+        {
+          "label": "Original working paper — design, results, Table 3 and limitations",
+          "url": "https://edworkingpapers.com/sites/default/files/ai26-1598.pdf"
+        }
+      ]
+    },
+    {
+      "slug": "nvidia-ai4bharat-indic-pretraining-corpus-pipeline",
+      "category": "Research · Open Data",
+      "sortDate": "2026-10-16",
+      "dateLabel": "October 16, 2026",
+      "title": "NVIDIA and IIT Madras outline a 2.8-trillion-token Indic corpus and open its generation pipeline",
+      "summary": "The planned corpus covers 22 Indian languages, with romanized text for twelve. The open recipe preserves source links and technical content; translated volume does not replace locally authored knowledge.",
+      "image": {
+        "src": "ai-news/2026-10/images/nvidia-indic-pretraining-source.png",
+        "alt": "NVIDIA and AI4Bharat’s source graphic describing the Indic corpus’s token and language coverage",
+        "caption": "Original NVIDIA and AI4Bharat corpus graphic. Counts use the Gemma-4 tokenizer and include language and script variants of shared source documents."
+      },
+      "content": [
+        {
+          "type": "paragraph",
+          "text": "NVIDIA and IIT Madras’s AI4Bharat described Nemotron-pretraining-Indic-v1 on October 16: approximately 2.8 trillion tokens spanning 22 Indian languages, with romanized text for twelve. They also made the generation recipe available through an open NeMo Data Designer plugin. The announcement describes the corpus as releasing soon. Developers can inspect and adapt the pipeline now, while the full data release and its eventual dataset-card terms remain a separate availability milestone."
+        },
+        {
+          "type": "heading",
+          "text": "Translated documents, with their origins retained"
+        },
+        {
+          "type": "paragraph",
+          "text": "The corpus starts from curated English material, including technical explanations, mathematics, code and question-answer content. It contains about 2,601 billion native-script tokens and 224.6 billion romanized tokens, measured with the Gemma-4 tokenizer. Native-script means the writing system used for the translated text. It does not mean that the source material was originally written in that language. Romanized records express a subset of the same content using Latin characters."
+        },
+        {
+          "type": "paragraph",
+          "text": "That distinction matters when building training and evaluation splits. A document translated into several languages, and then romanized, produces multiple records without creating independent underlying knowledge. The workflow retains source identifiers so users can trace those relationships. Teams can use them to keep related versions together when separating training from evaluation, inspect the original material, and choose their own balance of languages, scripts and naturally authored text."
+        },
+        {
+          "type": "heading",
+          "text": "Translation, assessment and selective repair"
+        },
+        {
+          "type": "paragraph",
+          "text": "For twelve languages, the pipeline uses Gemma-4-31B-it to translate complete documents, compare outputs with their English sources and repair lower-scoring translations. The instructions preserve equations, code, URLs and document structure. Accepted outputs must meet a rubric threshold of 75 out of 100. That is an assessment score, not a measured 75% accuracy rate. The same model translates and judges, making its possible preference for its own output a relevant limitation."
+        },
+        {
+          "type": "paragraph",
+          "text": "The remaining ten languages use Bodhan AI’s Indic Translate model with separate language-specific handling. Longer Santali documents are translated in overlapping windows; Manipuri takes a Bengali-script translation through conversion to Meitei Mayek. These paths do not use the twelve-language feedback-rewrite loop. The technical report says native-speaker validation of judge scores is not yet established comparably across those languages, so one aggregate corpus size cannot establish uniform quality."
+        },
+        {
+          "type": "figure",
+          "src": "ai-news/2026-10/images/nvidia-indic-pipeline-source.png",
+          "alt": "Original NVIDIA diagram of document translation, quality checks, repair and romanization",
+          "caption": "Publisher’s diagram of the twelve-language pipeline. The other ten languages follow different translation and acceptance paths described in the report."
+        },
+        {
+          "type": "heading",
+          "text": "What the training studies cover"
+        },
+        {
+          "type": "paragraph",
+          "text": "The companion report tests continued pretraining with mixtures of synthetic translations and natural Indic text. Its controlled experiments cover first-pass accepted data for twelve languages, rather than every part of the announced corpus. The 100-billion-token comparisons allocate 45 billion tokens to Indic material; a separate 200-billion-token study varies the Indic share and checks English capability retention. Each configuration has one training run, limiting what small score differences establish about repeatability."
+        },
+        {
+          "type": "paragraph",
+          "text": "This announcement is a data-resource and reproducibility development, separate from yesterday’s Nemotron model release. The recipe exposes prompts, quality checks and repair decisions that other teams can examine or change. Its authors also emphasize that translations complement naturally authored Indic text, which carries local knowledge and cultural context. For a model builder, the useful next step is to test a defined mixture at a fixed training budget and inspect results language by language as the corpus becomes available."
+        }
+      ],
+      "sources": [
+        {
+          "label": "NVIDIA and AI4Bharat — October 16 announcement and availability",
+          "url": "https://huggingface.co/blog/nvidia/scaling-indic-pretraining"
+        },
+        {
+          "label": "NVIDIA — open Indic translation plugin",
+          "url": "https://github.com/NVIDIA-NeMo/DataDesignerPlugins/tree/main/plugins/data-designer-nemotron-indic-translation"
+        },
+        {
+          "label": "NVIDIA and AI4Bharat — full Indic pretraining technical report",
+          "url": "https://huggingface.co/datasets/nvidia/nemotron-indic-pretraining-report/resolve/main/Scaling%20Synthetic%20Pre-training%20Data%20and%20Evaluation%20for%20Indic%20LLMs.pdf"
+        }
+      ]
+    },
+    {
       "slug": "meta-muse-spark-open-weights-release",
       "category": "Industry · Open Models",
       "sortDate": "2026-10-15",
@@ -1131,7 +1498,10 @@ window.AI_NEWS_MONTH_DATA["2026-10"] = {
         }
       ],
       "sources": [
-        {"label": "Meta for Developers — Muse Wonder context, API pricing and Full access", "url": "https://developer.meta.com/ai/models/muse-wonder/"},
+        {
+          "label": "Meta for Developers — Muse Wonder context, API pricing and Full access",
+          "url": "https://developer.meta.com/ai/models/muse-wonder/"
+        },
         {
           "label": "Meta — Muse Wonder research release",
           "url": "https://research.meta.ai/blog/muse-wonder"
