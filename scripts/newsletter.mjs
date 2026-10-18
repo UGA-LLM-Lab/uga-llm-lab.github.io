@@ -125,17 +125,22 @@ ${highlightHtml}
 
 export function campaignPayload(newsletter, env) {
   const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-  if (!emailPattern.test(env.NEWSLETTER_SENDER_EMAIL || "")
-    || !emailPattern.test(env.NEWSLETTER_REPLY_TO || "")) {
-    throw new Error("Set NEWSLETTER_SENDER_EMAIL and NEWSLETTER_REPLY_TO to valid addresses.");
+  // Repository variables can acquire surrounding whitespace when pasted into GitHub.
+  const senderEmail = (env.NEWSLETTER_SENDER_EMAIL || "").trim();
+  const replyTo = (env.NEWSLETTER_REPLY_TO || "").trim();
+  if (!emailPattern.test(senderEmail)) {
+    throw new Error("Set NEWSLETTER_SENDER_EMAIL to a valid email address.");
+  }
+  if (!emailPattern.test(replyTo)) {
+    throw new Error("Set NEWSLETTER_REPLY_TO to a valid email address.");
   }
   const listId = Number(env.BREVO_LIST_ID);
   if (!Number.isSafeInteger(listId) || listId < 1) throw new Error("Set a positive BREVO_LIST_ID.");
   if (!newsletter.config.mailingAddress.trim()) throw new Error("Add the lab’s mailingAddress in newsletter-config.json.");
   return {
     name: newsletter.name, subject: newsletter.subject,
-    sender: { name: newsletter.config.senderName, email: env.NEWSLETTER_SENDER_EMAIL },
-    replyTo: env.NEWSLETTER_REPLY_TO, recipients: { listIds: [listId] },
+    sender: { name: newsletter.config.senderName, email: senderEmail },
+    replyTo, recipients: { listIds: [listId] },
     type: "classic", htmlContent: newsletter.html,
     previewText: "Research highlights and industry developments from UGA LLM Lab.",
     tag: "uga-ai-weekly"

@@ -70,9 +70,27 @@ test("campaigns target one provider list and preserve the unsubscribe placeholde
   assert.ok(payload.htmlContent.includes('href="{{ unsubscribe }}"'));
 });
 
+test("pasted email settings with surrounding whitespace produce valid provider addresses", () => {
+  const payload = campaignPayload(ready, { ...settings,
+    NEWSLETTER_SENDER_EMAIL: ` ${settings.NEWSLETTER_SENDER_EMAIL}\r\n`,
+    NEWSLETTER_REPLY_TO: `\t${settings.NEWSLETTER_REPLY_TO}\n`
+  });
+  assert.equal(payload.sender.email, settings.NEWSLETTER_SENDER_EMAIL);
+  assert.equal(payload.replyTo, settings.NEWSLETTER_REPLY_TO);
+});
+
+test("invalid internal whitespace is rejected and identifies the incorrect setting", () => {
+  assert.throws(() => campaignPayload(ready, { ...settings,
+    NEWSLETTER_SENDER_EMAIL: "news\r\n@example.org"
+  }), /NEWSLETTER_SENDER_EMAIL/);
+  assert.throws(() => campaignPayload(ready, { ...settings,
+    NEWSLETTER_REPLY_TO: "team @example.org"
+  }), /NEWSLETTER_REPLY_TO/);
+});
+
 test("incomplete sender, list, and mailing address settings fail closed", () => {
   assert.throws(() => campaignPayload(ready, { ...settings, BREVO_LIST_ID: "bad" }), /BREVO_LIST_ID/);
-  assert.throws(() => campaignPayload(ready, { ...settings, NEWSLETTER_REPLY_TO: "" }), /valid addresses/);
+  assert.throws(() => campaignPayload(ready, { ...settings, NEWSLETTER_REPLY_TO: "" }), /NEWSLETTER_REPLY_TO/);
   assert.throws(() => campaignPayload({ ...ready, config: { ...ready.config, mailingAddress: "" } }, settings), /mailingAddress/);
 });
 
