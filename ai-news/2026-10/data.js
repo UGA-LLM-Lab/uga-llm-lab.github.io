@@ -2,6 +2,89 @@ window.AI_NEWS_MONTH_DATA["2026-10"] = {
   "label": "October 2026",
   "articles": [
     {
+      "slug": "deepseek-flash-1017-search-fetch-release",
+      "category": "Industry · Open Models",
+      "sortDate": "2026-10-17",
+      "dateLabel": "October 17, 2026",
+      "title": "DeepSeek updates Flash and opens its search engine to developers",
+      "summary": "Flash 1017 brings reported gains in coding and agent tasks at unchanged model rates. New Search and Fetch APIs give applications separate access to web results and page content, with per-request pricing.",
+      "image": {
+        "src": "ai-news/2026-10/images/deepseek-flash-model-source.jpg",
+        "alt": "DeepSeek’s official blue whale logo on a white background",
+        "caption": "DeepSeek’s official profile logo. Source: DeepSeek. The company released Flash 1017 and opened its Search and Fetch APIs on October 17."
+      },
+      "content": [
+        {
+          "type": "paragraph",
+          "text": "DeepSeek released DeepSeek-V4.1-Flash-1017 on October 17, updating its coding and multimodal model while opening its own web-search and page-fetching services to developers. The model is live on DeepSeek’s website, app and API, with downloadable weights also available. Existing API integrations continue using the “deepseek-flash” model name, which now serves the updated version. DeepSeek says the calling method and model pricing remain unchanged."
+        },
+        {
+          "type": "heading",
+          "text": "An update aimed at completing coding tasks"
+        },
+        {
+          "type": "paragraph",
+          "text": "The company describes 1017 as a minor update to V4.1 Flash, with improvements across reasoning, coding, agent and visual evaluations. Its release attributes stronger end-to-end project development to reinforcement learning with self-feedback, and includes demonstrations of game creation and 3D scenes. DeepSeek also reports shorter outputs and faster task completion. Those are developer-reported capabilities; the demonstrations do not establish how reliably an agent will complete an arbitrary production project."
+        },
+        {
+          "type": "paragraph",
+          "text": "The model card reports 77.0 on DeepSWE v1.1, compared with 74.2 for the previous Flash, and 29.1 on ProgramBench, up from 20.3. DeepSWE uses the Mini-SWE-V2 harness; a separate Terminal-Bench 4.0 result uses Claude Code. The release’s quality–cost chart varies reasoning effort on one software-engineering workload. These evaluation settings matter when interpreting the gains, and the figures are DeepSeek’s reported results rather than tests conducted by this publication."
+        },
+        {
+          "type": "figure",
+          "src": "ai-news/2026-10/images/deepseek-flash-task-cost-source.png",
+          "alt": "DeepSeek’s DeepSWE v1.1 chart comparing first-attempt success with average dollar cost per task across models and reasoning settings",
+          "caption": "DeepSeek’s own DeepSWE v1.1 quality–cost comparison using Mini-SWE-V2. The dollar-cost axis is logarithmic and points vary reasoning effort. Other-model baselines follow the sources and September 22 data date cited in the graphic. Source: DeepSeek’s October 17 release."
+        },
+        {
+          "type": "paragraph",
+          "text": "The weights and repository are released under the MIT licence. The model card recommends a one-million-token context window and supplies reference prompt-encoding and local-inference instructions. Local deployment requires the appropriate encoding and inference implementation: the repository does not supply a conventional Jinja chat template. For users of DeepSeek’s own agent software, the company recommends upgrading DeepSeek Harness to v0.2.1-rc.1 or later to get the intended experience with the new model."
+        },
+        {
+          "type": "heading",
+          "text": "Search results and page content as separate services"
+        },
+        {
+          "type": "paragraph",
+          "text": "The Search API accepts a query and returns structured results, including titles, URLs and summaries, with optional page content. Developers can request one to fifty results and use site, language and date filters. The Fetch API retrieves a single URL and returns its content as Markdown, subject to the target site’s availability and access policies. Both use a DeepSeek API key and can support agents or applications that retrieve documents before answering."
+        },
+        {
+          "type": "heading",
+          "text": "Request fees sit alongside model-token charges"
+        },
+        {
+          "type": "paragraph",
+          "text": "Each endpoint is listed at $0.75 per 1,000 successful requests. A thousand searches followed by a thousand page fetches would therefore cost $1.50 at those rates, before any model-token charges. The number of search results returned does not change the request fee. Empty searches, failed requests and timeouts are not billed. Search and Fetch each have an independent account-level limit of five requests per second; Fetch also has a separate per-domain limit."
+        },
+        {
+          "type": "paragraph",
+          "text": "DeepSeek API users currently receive free Search and Fetch calls through server-side tools in supported clients, including DeepSeek Harness, Claude Code and Codex. The announcement says billing for those calls begins October 31 at 16:00 UTC, equivalent to November 1 at midnight in Beijing. This temporary tool-call offer is separate from model usage. For developers evaluating the release, the immediate changes are an updated model behind an existing API name, new open weights, and direct access to the company’s retrieval services."
+        }
+      ],
+      "sources": [
+        {
+          "label": "DeepSeek — October 17 Flash update and Search & Fetch announcement",
+          "url": "https://api-docs.deepseek.com/news/news261017/"
+        },
+        {
+          "label": "DeepSeek — dated API changelog and unchanged calling method",
+          "url": "https://api-docs.deepseek.com/updates/"
+        },
+        {
+          "label": "DeepSeek — Flash 1017 model card, evaluations and MIT licence",
+          "url": "https://huggingface.co/deepseek-ai/DeepSeek-V4.1-Flash-1017"
+        },
+        {
+          "label": "DeepSeek — Search & Fetch guide, billing conditions and limits",
+          "url": "https://api-docs.deepseek.com/guides/search/"
+        },
+        {
+          "label": "DeepSeek — current model and tool pricing",
+          "url": "https://api-docs.deepseek.com/quick_start/pricing/"
+        }
+      ]
+    },
+    {
       "slug": "reflection-beam-10-open-weights-release",
       "category": "Industry · Open Models",
       "sortDate": "2026-10-16",
