@@ -12,6 +12,12 @@ that day are included too. Reading time is estimated at 200 words/minute. The sy
 does not write new articles or generate new summaries; editors keep publishing news
 through the existing monthly archives.
 
+Daily subjects feature the first three article headlines with light emoji accents,
+for example, “DeepSeek upgrades Flash + opens search ✨”. Editors can add an optional
+`newsletterHeadline` to an article in its monthly data file to give it a shorter
+email headline. Otherwise, the existing title is used. Each headline is shortened
+at a word boundary to fit 48 characters; the email still includes every story.
+
 Daily and weekly subscriptions use separate Brevo lists and separate sending
 switches. Existing weekly subscribers are never automatically enrolled in daily mail.
 

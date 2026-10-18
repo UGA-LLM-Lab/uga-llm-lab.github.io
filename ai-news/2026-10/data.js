@@ -7,6 +7,7 @@ window.AI_NEWS_MONTH_DATA["2026-10"] = {
       "sortDate": "2026-10-17",
       "dateLabel": "October 17, 2026",
       "title": "DeepSeek updates Flash and opens its search engine to developers",
+      "newsletterHeadline": "DeepSeek upgrades Flash + opens search",
       "summary": "Flash 1017 brings reported gains in coding and agent tasks at unchanged model rates. New Search and Fetch APIs give applications separate access to web results and page content, with per-request pricing.",
       "image": {
         "src": "ai-news/2026-10/images/deepseek-flash-model-source.jpg",
@@ -90,6 +91,7 @@ window.AI_NEWS_MONTH_DATA["2026-10"] = {
       "sortDate": "2026-10-16",
       "dateLabel": "October 16, 2026",
       "title": "Reflection releases Beam weights and a deployment stack for coding agents",
+      "newsletterHeadline": "Reflection opens Beam weights",
       "summary": "Beam’s October 16 weight release turns an earlier announcement into a downloadable Apache-licensed model. Its 501B total parameters still require substantial hardware, despite activating about 23B per token.",
       "image": {
         "src": "ai-news/2026-10/images/reflection-beam-release-source.jpg",
@@ -163,6 +165,7 @@ window.AI_NEWS_MONTH_DATA["2026-10"] = {
       "sortDate": "2026-10-16",
       "dateLabel": "October 16, 2026",
       "title": "Google connects AI agents to wet-lab checks and repeated molecular experiments",
+      "newsletterHeadline": "Google brings AI into the wet lab",
       "summary": "VERID tracks laboratory state before robots act. Separate aptamer and protein-design studies show how experimental feedback can improve candidates—and expose misleading apparent successes.",
       "image": {
         "src": "ai-news/2026-10/images/google-wet-lab-source.png",
@@ -242,6 +245,7 @@ window.AI_NEWS_MONTH_DATA["2026-10"] = {
       "sortDate": "2026-10-16",
       "dateLabel": "October 16, 2026",
       "title": "Anthropic reports a smaller junior hiring share as AI agents reshape its own workplace",
+      "newsletterHeadline": "Anthropic tracks junior hiring",
       "summary": "Junior staff fell from 27% to 9% of technical hires in Anthropic’s reported series. Its internal study also tracks output and task changes, while leaving the effects on the wider labor market unresolved.",
       "image": {
         "src": "ai-news/2026-10/images/anthropic-employment-study-source.jpg",

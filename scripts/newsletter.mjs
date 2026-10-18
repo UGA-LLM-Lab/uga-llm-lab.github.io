@@ -148,6 +148,19 @@ export function estimatedReadingTime(article) {
   return Math.max(1, Math.ceil(text.split(/\s+/u).length / 200));
 }
 
+function dailySubject(stories) {
+  const emojis = ["✨", "🧠", "💡"];
+  return stories.slice(0, 3).map(({ article }, index) => {
+    let headline = (article.newsletterHeadline?.trim() || article.title).replace(/\s+/gu, " ");
+    // Keep subjects readable even when an article has a long website headline.
+    if ([...headline].length > 48) {
+      const prefix = [...headline].slice(0, 47).join("");
+      headline = `${prefix.replace(/\s+\S*$/u, "").trimEnd()}…`;
+    }
+    return `${headline} ${emojis[index]}`;
+  }).join(", ");
+}
+
 export async function buildDailyNewsletter({ root = ROOT, date, mode = "preview", now = new Date() } = {}) {
   const expected = previousDay(now);
   if (date && (!DATE_ID.test(date) || Number.isNaN(Date.parse(`${date}T12:00:00Z`))
@@ -187,7 +200,7 @@ export async function buildDailyNewsletter({ root = ROOT, date, mode = "preview"
   const label = new Intl.DateTimeFormat("en-US", {
     timeZone: "UTC", year: "numeric", month: "long", day: "numeric"
   }).format(new Date(`${selectedDate}T12:00:00Z`));
-  const subject = `UGA AI Daily · ${label}`;
+  const subject = dailySubject(stories);
   const name = `uga-ai-daily-${selectedDate}`;
   const archiveUrl = absoluteUrl("ai-news.html", config.siteUrl);
   const address = config.mailingAddress || "[Add the lab’s mailing address before sending]";
