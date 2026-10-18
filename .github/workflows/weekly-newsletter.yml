@@ -19,6 +19,7 @@ on:
     paths:
       - 'scripts/newsletter.mjs'
       - 'tests/newsletter.test.mjs'
+      - 'tests/daily-newsletter.test.mjs'
       - 'ai-news/newsletter-config.json'
       - 'assets/js/newsletter.js'
       - '.github/workflows/weekly-newsletter.yml'
@@ -41,7 +42,7 @@ jobs:
         with:
           node-version: '24'
       - name: Test newsletter generation and delivery safeguards
-        run: node --test tests/newsletter.test.mjs
+        run: node --test tests/*.test.mjs
       - name: Build preview without provider credentials
         env:
           NEWSLETTER_MODE: preview

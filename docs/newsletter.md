@@ -1,9 +1,19 @@
-# Weekly AI newsletter
+# Daily and weekly AI newsletters
 
 The existing weekly analysis and review articles supply the email content. Brevo
 hosts the subscription form and stores subscribers, confirmations, and opt-outs.
 GitHub Actions builds the email and submits a marketing campaign. No subscriber
 addresses are stored in this repository, browser storage, or workflow artifacts.
+
+Daily emails contain every visible article published on the selected day: a bold,
+underlined title linking to the full article, an estimated reading time when full
+article text is available, and the existing short summary. Weekly reviews published
+that day are included too. Reading time is estimated at 200 words/minute. The system
+does not write new articles or generate new summaries; editors keep publishing news
+through the existing monthly archives.
+
+Daily and weekly subscriptions use separate Brevo lists and separate sending
+switches. Existing weekly subscribers are never automatically enrolled in daily mail.
 
 ## What works before domain authentication
 
@@ -23,7 +33,9 @@ Use Node.js 24; there are no dependencies to install:
 ```sh
 node scripts/newsletter.mjs
 node scripts/newsletter.mjs --week 2026-09-28-to-2026-10-04
-node --test tests/newsletter.test.mjs
+node scripts/newsletter.mjs --frequency daily
+node scripts/newsletter.mjs --frequency daily --date 2026-10-17
+node --test tests/*.test.mjs
 ```
 
 Open `.newsletter-preview/newsletter.html` in a browser. The same directory contains
@@ -31,6 +43,13 @@ the plain-text review copy and edition metadata. Generated files are ignored by 
 The `{{ unsubscribe }}` placeholder only becomes a working personal link inside a
 Brevo campaign; it intentionally does not work in the local preview. The text file
 is an editorial reference, not an independently sent email.
+
+Daily previews are saved separately at `.newsletter-preview/daily/newsletter.html`.
+By default, daily preview/draft mode selects the latest day with published articles
+up to yesterday in America/New_York. `--date` can inspect another day, including
+today. Live daily mode sends yesterday's articles only and skips days with no stories;
+it never fills a missing day with older news. Article dates use the existing
+`sortDate` publication field, not Git commit timestamps or dates mentioned in a story.
 
 Preview defaults to the latest catalog edition whose reporting week has finished.
 An explicit `--week` allows reviewing any registered edition. Both weekly JSON
@@ -79,6 +98,8 @@ In **GitHub repository → Settings → Secrets and variables → Actions**, con
 | `NEWSLETTER_SENDER_EMAIL` | Variable | Sender registered with Brevo |
 | `NEWSLETTER_REPLY_TO` | Variable | Monitored address for subscriber replies |
 | `NEWSLETTER_SENDING_ENABLED` | Variable | Leave absent or `false` until launch |
+| `BREVO_DAILY_LIST_ID` | Variable | Separate numeric list ID for confirmed daily subscribers |
+| `NEWSLETTER_DAILY_SENDING_ENABLED` | Variable | Leave absent or `false` until daily launch |
 
 Use the dedicated list only for confirmed, opted-in subscribers. Do not manually
 import Professor Liu's contacts without their subscription. Brevo handles campaign
@@ -89,10 +110,46 @@ campaign in Brevo. Repeating draft mode updates an existing draft for that week.
 It does not send a test email or a subscriber email. The default `preview` mode
 never calls Brevo, even when credentials happen to be present.
 
-## Launch after authentication
+## Set up optional daily subscriptions
 
-1. Authenticate the chosen sending domain using Brevo's DNS instructions and verify
-   the registered sender. This is separate from deploying the website.
+1. Create a **UGA AI Daily** list in the same Brevo account. Its ID must differ from
+   the existing **UGA AI Weekly** list (`3`). Do not copy weekly subscribers into it.
+2. Create a separate full-page/embedded form targeting the daily list, with double
+   opt-in. Explain that it delivers article links and short summaries each morning
+   on days with new stories. Use a confirmation template that identifies the daily
+   subscription rather than promising one email per week.
+3. Add the new list ID as `BREVO_DAILY_LIST_ID` in GitHub repository variables. Keep
+   `BREVO_LIST_ID=3` configured too: daily mode checks that the two lists differ.
+4. Put the new form's HTTPS `*.sibforms.com` URL in `dailySignupFormUrl` in
+   `ai-news/newsletter-config.json`. Leave `signupFormUrl` pointing at the weekly
+   form. The daily section appears on the news pages only when a separate valid
+   daily form is configured. Test confirmation and actual daily list membership.
+5. Open **Actions → Daily AI newsletter → Run workflow**. Use `preview` to review
+   the email without credentials, then `draft` to test the daily list integration.
+   The shared sender/reply settings and `BREVO_API_KEY` are reused.
+6. After testing, setting `NEWSLETTER_DAILY_SENDING_ENABLED=true` enables the daily
+   8:17 a.m. America/New_York schedule. Weekly delivery keeps its separate Monday
+   9:17 a.m. schedule and switch. Neither switch enables the other cadence.
+
+Both workflows share a concurrency group to serialize campaign mutations. Provider
+campaign names are `uga-ai-daily-YYYY-MM-DD` and `uga-ai-weekly-<week-id>`, so their
+delivery histories are distinct. Brevo may apply a standard email unsubscribe across
+all email lists in the account; configure and test a profile/preference form if you
+want readers to change frequency instead of opting out of all email.
+
+Daily and weekly campaigns share the account's sending allowance. A paid plan may
+be needed as the lists grow; turning on daily mail does not raise the free daily cap.
+If publishing happens after the daily schedule, run `send` manually later that day
+while yesterday is still the eligible date.
+
+## Launch sending
+
+1. Verify the registered sender. For an organization-controlled sending domain,
+   authenticate it using Brevo's DNS instructions. Brevo can also use its temporary
+   `brevosend.com` replacement for an accepted verified Gmail sender; a Gmail inbox
+   itself cannot be domain-authenticated. The weekly pilot successfully created a
+   campaign and delivered a test using that temporary setup. Authentication does
+   not guarantee inbox placement, so test the actual sender before launch.
 2. Review a generated campaign, then use Brevo to send a test to the lab team.
    Check Gmail/Outlook rendering, links, mailing address, and real unsubscribe flow.
 3. Confirm the plan can deliver to the full list on the same day. Brevo's free plan
@@ -136,6 +193,21 @@ directly in its dashboard.
   campaign history each week. GitHub schedules can be delayed and can be disabled
   after 60 days of inactivity in a public repository. Manual runs remain available.
 - Never expose the API key to browser JavaScript or pull-request previews.
+
+## Handoff status and domain decision
+
+The weekly workflow, subscriber form, and provider integration have been tested:
+Brevo draft campaign #5 was created, and the user received a test email in Gmail.
+Weekly live sending is disabled. The daily workflow and linked-title/summary layout
+have automated and browser coverage, but daily provider delivery still requires a
+separate Brevo list, hosted form, and test campaign. Daily live sending is disabled
+unless its separate repository variable is explicitly set to `true`.
+
+Before purchasing a separate domain, coordinate with the lab's PhD maintainer about
+using a UGA-managed sending domain or subdomain and having its DNS administrator add
+Brevo's records. The website can keep its existing UGA address regardless of which
+email-sending domain is chosen. A separate purchased domain is an alternative when
+the lab wants to manage its own email DNS and annual renewal.
 
 ## Reference documentation
 
