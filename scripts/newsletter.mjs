@@ -110,7 +110,7 @@ export async function buildNewsletter({ root = ROOT, week, date, frequency = "we
   if (!analysis.title || !intro || !highlights.length) throw new Error("Weekly content is incomplete.");
   const analysisUrl = absoluteUrl(`ai-weekly-analysis.html?week=${encodeURIComponent(entry.id)}`, config.siteUrl);
   const reviewUrl = absoluteUrl(`ai-news-article.html?month=${encodeURIComponent(month.id)}&slug=${encodeURIComponent(review.slug)}`, config.siteUrl);
-  const subject = `UGA AI Weekly · ${entry.label}`;
+  const subject = headlineSubject(analysis.newsletterHeadlines ?? highlights.map((item) => item.title));
   const name = `uga-ai-weekly-${entry.id}`;
   const highlightHtml = highlights.map((item) => `<h2 style="font-size:19px;margin:28px 0 8px;color:#171717">${escapeHtml(item.label)}</h2>
 <p style="margin:0 0 8px"><strong>${escapeHtml(item.title)}</strong></p>
@@ -148,10 +148,14 @@ export function estimatedReadingTime(article) {
   return Math.max(1, Math.ceil(text.split(/\s+/u).length / 200));
 }
 
-function dailySubject(stories) {
+function headlineSubject(headlines) {
+  if (!Array.isArray(headlines) || !headlines.length
+    || headlines.some((headline) => typeof headline !== "string" || !headline.trim())) {
+    throw new Error("Newsletter headlines must be a nonempty list of text.");
+  }
   const emojis = ["✨", "🧠", "💡"];
-  return stories.slice(0, 3).map(({ article }, index) => {
-    let headline = (article.newsletterHeadline?.trim() || article.title).replace(/\s+/gu, " ");
+  return headlines.slice(0, 3).map((title, index) => {
+    let headline = title.trim().replace(/\s+/gu, " ");
     // Keep subjects readable even when an article has a long website headline.
     if ([...headline].length > 48) {
       const prefix = [...headline].slice(0, 47).join("");
@@ -200,7 +204,7 @@ export async function buildDailyNewsletter({ root = ROOT, date, mode = "preview"
   const label = new Intl.DateTimeFormat("en-US", {
     timeZone: "UTC", year: "numeric", month: "long", day: "numeric"
   }).format(new Date(`${selectedDate}T12:00:00Z`));
-  const subject = dailySubject(stories);
+  const subject = headlineSubject(stories.map(({ article }) => article.newsletterHeadline?.trim() || article.title));
   const name = `uga-ai-daily-${selectedDate}`;
   const archiveUrl = absoluteUrl("ai-news.html", config.siteUrl);
   const address = config.mailingAddress || "[Add the lab’s mailing address before sending]";

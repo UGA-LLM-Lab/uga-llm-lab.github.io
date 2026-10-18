@@ -1,5 +1,10 @@
 {
   "title": "Interactive answers, scientific data, and deployment controls",
+  "newsletterHeadlines": [
+    "ChatGPT gets interactive",
+    "Mistral opens an API preview",
+    "Biohub expands biology data"
+  ],
   "period": {
     "current": [
       "2026-10-05",

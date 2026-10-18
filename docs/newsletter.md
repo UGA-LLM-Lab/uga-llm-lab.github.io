@@ -18,6 +18,11 @@ for example, “DeepSeek upgrades Flash + opens search ✨”. Editors can add a
 email headline. Otherwise, the existing title is used. Each headline is shortened
 at a word boundary to fit 48 characters; the email still includes every story.
 
+Weekly subjects use the same headline-and-emoji style. Add `newsletterHeadlines`
+(an array of short headlines) to the weekly analysis JSON to choose the topics.
+Without that field, the first finding from each analysis section supplies the
+headlines. Subjects feature at most three topics; the body retains all sections.
+
 Daily and weekly subscriptions use separate Brevo lists and separate sending
 switches. Existing weekly subscribers are never automatically enrolled in daily mail.
 
@@ -202,12 +207,39 @@ directly in its dashboard.
 
 ## Handoff status and domain decision
 
-The weekly workflow, subscriber form, and provider integration have been tested:
-Brevo draft campaign #5 was created, and the user received a test email in Gmail.
-Weekly live sending is disabled. The daily workflow and linked-title/summary layout
-have automated and browser coverage, but daily provider delivery still requires a
-separate Brevo list, hosted form, and test campaign. Daily live sending is disabled
-unless its separate repository variable is explicitly set to `true`.
+Reviewed October 18, 2026:
+
+| Component | Status |
+| --- | --- |
+| Generation and delivery safeguards | All 40 automated tests pass, including separate lists, duplicate suppression, publication checks, date boundaries, and disabled sending |
+| Weekly provider integration | List `3`; draft campaign `5`; test receipt confirmed by the user |
+| Daily provider integration | List `4`; draft campaign `6`; test receipt confirmed by the user |
+| Weekly signup | Already public on the news index, article, and weekly analysis pages; double opt-in tested by the user |
+| Daily signup | Awaiting a separate double-opt-in form URL in `dailySignupFormUrl`; hidden until configured |
+| Sender | Verified `ugallmlabnewsletter@gmail.com`, using Brevo's temporary replacement domain; own sending-domain authentication remains outstanding |
+| Automatic sending | Weekly flag `false`; daily flag absent, which also disables sending |
+| Final subscriber-flow check | Test confirmation and real unsubscribe suppression with a controlled subscriber before launching; a successful test email alone does not verify suppression |
+
+Remaining launch steps:
+
+1. Create/connect the daily form and verify that confirmed signups enter list `4`.
+   Use a daily-specific confirmation template and check the hosted form's privacy
+   notice. The weekly form must continue targeting list `3`.
+2. Authenticate a lab-controlled sending domain, register the address on that
+   domain in Brevo, and update `NEWSLETTER_SENDER_EMAIL`. Update the sender in
+   **both** confirmation templates too; changing GitHub variables does not update
+   Brevo's templates. Keep `NEWSLETTER_REPLY_TO` pointing at a monitored inbox.
+3. Refresh both drafts and check delivery, links, and actual unsubscribe suppression
+   using the final sender. Authentication improves delivery but cannot guarantee
+   inbox placement. Standard account-wide unsubscribe may affect both frequencies.
+4. Confirm the combined daily/weekly volume fits the account's sending allowance.
+5. Explicitly enable each frequency's sending flag when ready. Daily runs at
+   8:17 a.m.; weekly runs Monday at 9:17 a.m., both America/New_York.
+
+Editors still publish the usual daily articles and weekly reports; email automation
+does not create missing news. The next weekly edition must be published and deployed
+before its send window. An edition already prepared as a draft needs review and
+sending in Brevo; future new editions can be submitted automatically after launch.
 
 Before purchasing a separate domain, coordinate with the lab's PhD maintainer about
 using a UGA-managed sending domain or subdomain and having its DNS administrator add
