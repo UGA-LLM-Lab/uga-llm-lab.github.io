@@ -142,8 +142,7 @@ export function campaignPayload(newsletter, env) {
     sender: { name: newsletter.config.senderName, email: senderEmail },
     replyTo, recipients: { listIds: [listId] },
     type: "classic", htmlContent: newsletter.html,
-    previewText: "Research highlights and industry developments from UGA LLM Lab.",
-    tag: "uga-ai-weekly"
+    previewText: "Research highlights and industry developments from UGA LLM Lab."
   };
 }
 

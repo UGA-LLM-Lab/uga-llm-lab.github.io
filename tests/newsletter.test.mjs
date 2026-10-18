@@ -114,6 +114,21 @@ test("draft mode creates a campaign without sending or fetching the public site"
   assert.equal(calls.length, 2);
 });
 
+test("draft creation works on accounts that reject the optional campaign tag", async () => {
+  const request = brevoClient("test-api-key", async (_, options) => {
+    if (options.method === "GET") return Response.json({ campaigns: [] });
+    const payload = JSON.parse(options.body);
+    if (Object.hasOwn(payload, "tag")) {
+      return Response.json({ code: "method_not_allowed",
+        message: "You are not allowed to avail tag option for your campaign"
+      }, { status: 405 });
+    }
+    return Response.json({ id: 42 }, { status: 201 });
+  });
+  const result = await deliver(ready, { mode: "draft", env: settings, request });
+  assert.equal(result.status, "draft-created");
+});
+
 test("existing drafts can be updated in draft mode", async () => {
   const calls = [];
   const result = await deliver(ready, { mode: "draft", env: settings, request: async (endpoint, options) => {
