@@ -2575,18 +2575,6 @@ a:focus-visible {
   background: var(--paper);
 }
 
-.newsletter__daily {
-  margin-top: 32px;
-  padding-top: 24px;
-  border-top: 1px solid var(--line);
-}
-
-.newsletter__daily h3 {
-  margin: 0;
-  font-family: var(--serif);
-  font-size: 1.4rem;
-}
-
 .ai-news-weekly {
   margin-top: 24px;
   overflow: hidden;

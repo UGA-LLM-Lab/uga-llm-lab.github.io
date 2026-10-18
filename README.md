@@ -19,7 +19,8 @@ AI/SI News uses a separate monthly archive so that articles do not require indiv
 
 The newsletters include Brevo signup integration, local email previews, and separate
 daily and weekly GitHub Actions workflows. Daily delivery requires its own opted-in
-subscriber list and sending switch; weekly subscribers stay on the weekly schedule.
+subscriber list and sending switch. One confirmed signup can enroll readers in both;
+existing weekly subscribers are not silently added to daily mail.
 
 Generate an email without an account or credentials (Node.js 24):
 

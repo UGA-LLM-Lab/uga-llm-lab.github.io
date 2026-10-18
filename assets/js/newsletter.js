@@ -28,9 +28,7 @@
     fallback.href = url.href;
     fallback.target = "_blank";
     fallback.rel = "noopener noreferrer";
-    fallback.textContent = frequency === "daily"
-      ? "Open the daily subscription form in a new tab"
-      : "Open the subscription form in a new tab";
+    fallback.textContent = "Open the subscription form in a new tab";
     target.append(form, fallback);
   };
 
@@ -40,28 +38,21 @@
       if (!response.ok) return;
       const config = await response.json();
       const weekly = formUrl(config.signupFormUrl);
+      const combined = config.signupIncludesDaily === true;
       if (weekly) {
-        embedForm(mount.querySelector("[data-newsletter-form]"), weekly, "weekly");
+        if (combined) {
+          mount.querySelector(".newsletter__eyebrow").textContent = "THE DAY AND WEEK IN AI";
+          mount.querySelector("h2").textContent = "Get daily and weekly AI news from UGA LLM Lab";
+          mount.querySelector("[data-newsletter-description]").textContent =
+            "One signup for daily article links and short summaries, plus our weekly AI analysis.";
+        }
+        embedForm(mount.querySelector("[data-newsletter-form]"), weekly, combined ? "daily and weekly" : "weekly");
         mount.querySelector("[data-newsletter-status]").textContent =
-          "Confirm your email after subscribing. One email each week; unsubscribe anytime.";
+          combined
+            ? "Confirm once to receive daily updates on days with new stories and a weekly roundup. Unsubscribe anytime."
+            : "Confirm your email after subscribing. One email each week; unsubscribe anytime.";
       }
 
-      const daily = formUrl(config.dailySignupFormUrl);
-      if (!daily || daily.href === weekly?.href) return;
-      const section = document.createElement("section");
-      section.className = "newsletter__daily";
-      section.setAttribute("aria-labelledby", "daily-newsletter-title");
-      const heading = document.createElement("h3");
-      heading.id = "daily-newsletter-title";
-      heading.textContent = "Prefer daily AI news?";
-      const description = document.createElement("p");
-      description.textContent = "Get article links and short summaries each morning on days with new stories. Subscribe separately below to receive daily updates.";
-      const status = document.createElement("p");
-      status.className = "newsletter__status";
-      status.textContent = "Confirm your email after subscribing. Unsubscribe anytime.";
-      section.append(heading, description, status);
-      embedForm(section, daily, "daily");
-      mount.append(section);
     } catch {
       // Keep the existing availability message if configuration cannot load.
     }

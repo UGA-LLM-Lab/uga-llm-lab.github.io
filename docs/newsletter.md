@@ -23,8 +23,10 @@ Weekly subjects use the same headline-and-emoji style. Add `newsletterHeadlines`
 Without that field, the first finding from each analysis section supplies the
 headlines. Subjects feature at most three topics; the body retains all sections.
 
-Daily and weekly subscriptions use separate Brevo lists and separate sending
-switches. Existing weekly subscribers are never automatically enrolled in daily mail.
+One public signup form enrolls new confirmed subscribers in both daily and weekly
+news. Campaigns still use separate Brevo lists and sending switches. Existing
+weekly subscribers are not automatically added to daily mail; they can submit the
+updated form to opt into both.
 
 ## What works before domain authentication
 
@@ -74,14 +76,17 @@ requests from branches other than the default branch only produce a local previe
 
 ## Configure subscription signup
 
-1. Create a lab-owned Brevo account and a dedicated **UGA AI Weekly** contact list.
-2. Create a full-page/embedded signup form targeting that list. Enable double
-   opt-in and CAPTCHA, and explain the weekly frequency and use of email addresses.
+1. Create a lab-owned Brevo account and dedicated **UGA AI Weekly** and
+   **UGA AI Daily** contact lists.
+2. Create one full-page/embedded signup form targeting **both** lists. Enable double
+   opt-in and CAPTCHA, and explain the daily and weekly frequencies and use of email addresses.
    Add an appropriate privacy notice/link in the hosted form. Ask only for email
    initially; a name can be optional.
 3. Paste the form's HTTPS `*.sibforms.com` URL into `signupFormUrl` in
    `ai-news/newsletter-config.json`. Use the URL from Brevo's iframe embed code,
-   not the Brevo administration URL.
+   not the Brevo administration URL. Once both-list enrollment and confirmation
+   wording are verified, set `signupIncludesDaily` to `true` in that file. Until
+   then, leave it `false` so the site accurately describes the existing weekly form.
 4. The news index, article page, and weekly analysis page will embed this form and
    offer a link to open it separately. Resize `.newsletter__form` in the site CSS
    if your form is taller than the default; scrolling remains available.
@@ -121,20 +126,24 @@ campaign in Brevo. Repeating draft mode updates an existing draft for that week.
 It does not send a test email or a subscriber email. The default `preview` mode
 never calls Brevo, even when credentials happen to be present.
 
-## Set up optional daily subscriptions
+## Set up one signup for daily and weekly news
 
 1. Create a **UGA AI Daily** list in the same Brevo account. Its ID must differ from
    the existing **UGA AI Weekly** list (`3`). Do not copy weekly subscribers into it.
-2. Create a separate full-page/embedded form targeting the daily list, with double
-   opt-in. Explain that it delivers article links and short summaries each morning
-   on days with new stories. Use a confirmation template that identifies the daily
-   subscription rather than promising one email per week.
+2. Edit the existing form in **Marketing → Forms**. At the **Lists** step, select
+   **UGA AI Weekly (`3`)** and **UGA AI Daily (`4`)** together. Keep double opt-in:
+   new subscribers confirm once and join both lists. Update the form and its
+   confirmation template to promise daily article links and summaries on days with
+   new stories, plus a weekly roundup. Suggested copy: “Subscribe to UGA AI News:
+   daily AI news summaries and our weekly analysis. Unsubscribe anytime.” Save the
+   form through the final **Done** step.
 3. Add the new list ID as `BREVO_DAILY_LIST_ID` in GitHub repository variables. Keep
    `BREVO_LIST_ID=3` configured too: daily mode checks that the two lists differ.
-4. Put the new form's HTTPS `*.sibforms.com` URL in `dailySignupFormUrl` in
-   `ai-news/newsletter-config.json`. Leave `signupFormUrl` pointing at the weekly
-   form. The daily section appears on the news pages only when a separate valid
-   daily form is configured. Test confirmation and actual daily list membership.
+4. Keep `signupFormUrl` pointing at that one form (update it if Brevo gives you a
+   different URL). Test a controlled new signup: it should join neither list before
+   confirmation and both lists afterward. Then set `signupIncludesDaily=true`
+   in `ai-news/newsletter-config.json` and deploy. All three news page types will
+   show one form and describe both frequencies.
 5. Open **Actions → Daily AI newsletter → Run workflow**. Use `preview` to review
    the email without credentials, then `draft` to test the daily list integration.
    The shared sender/reply settings and `BREVO_API_KEY` are reused.
@@ -215,20 +224,20 @@ Reviewed October 18, 2026:
 | Weekly provider integration | List `3`; draft campaign `5`; test receipt confirmed by the user |
 | Daily provider integration | List `4`; draft campaign `6`; test receipt confirmed by the user |
 | Weekly signup | Already public on the news index, article, and weekly analysis pages; double opt-in tested by the user |
-| Daily signup | Awaiting a separate double-opt-in form URL in `dailySignupFormUrl`; hidden until configured |
+| Combined signup | Site support ready; awaiting the existing form's update to lists `3` and `4`, revised confirmation wording, and a confirmed both-list signup; `signupIncludesDaily` remains `false` until verified |
 | Sender | Verified `ugallmlabnewsletter@gmail.com`, using Brevo's temporary replacement domain; own sending-domain authentication remains outstanding |
 | Automatic sending | Weekly flag `false`; daily flag absent, which also disables sending |
 | Final subscriber-flow check | Test confirmation and real unsubscribe suppression with a controlled subscriber before launching; a successful test email alone does not verify suppression |
 
 Remaining launch steps:
 
-1. Create/connect the daily form and verify that confirmed signups enter list `4`.
-   Use a daily-specific confirmation template and check the hosted form's privacy
-   notice. The weekly form must continue targeting list `3`.
+1. Update the existing form to target both lists `3` and `4`, with daily-plus-weekly
+   wording in the form and its confirmation template. Verify both-list enrollment,
+   check the hosted form's privacy notice, and set `signupIncludesDaily=true`.
 2. Authenticate a lab-controlled sending domain, register the address on that
    domain in Brevo, and update `NEWSLETTER_SENDER_EMAIL`. Update the sender in
-   **both** confirmation templates too; changing GitHub variables does not update
-   Brevo's templates. Keep `NEWSLETTER_REPLY_TO` pointing at a monitored inbox.
+   the combined form's confirmation template too; changing GitHub variables does
+   not update Brevo's templates. Keep `NEWSLETTER_REPLY_TO` pointing at a monitored inbox.
 3. Refresh both drafts and check delivery, links, and actual unsubscribe suppression
    using the final sender. Authentication improves delivery but cannot guarantee
    inbox placement. Standard account-wide unsubscribe may affect both frequencies.
