@@ -158,6 +158,28 @@ export async function assertPublished(newsletter, fetcher = fetch) {
   }
 }
 
+function providerErrorSummary(details, apiKey) {
+  const codes = new Set([
+    "invalid_parameter", "missing_parameter", "out_of_range", "unauthorized",
+    "document_not_found", "method_not_allowed", "not_enough_credits",
+    "duplicate_parameter", "duplicate_request", "account_under_validation", "permission_denied"
+  ]);
+  const code = codes.has(details?.code) ? details.code : "";
+  let message = typeof details?.message === "string" ? details.message : "";
+  // Retain only the error explanation, never response payloads, credentials, or links.
+  for (const key of [apiKey, apiKey.trim()].filter(Boolean)) {
+    message = message.replaceAll(key, "[redacted key]");
+  }
+  message = message
+    .replace(/(?:xkeysib|xsmtpsib)-[a-z0-9_-]+/gi, "[redacted key]")
+    .replace(/\b(?:Bearer|Basic)\s+[a-z0-9+/=._-]+/gi, "[redacted authorization]")
+    .replace(/https?:\/\/[^\s<>"']+/gi, "[redacted URL]")
+    .replace(/[^\s<>"']+@[^\s<>"']+\.[a-z]{2,}/gi, "[redacted email]")
+    .replace(/[\u0000-\u001f\u007f-\u009f]/g, " ")
+    .trim().slice(0, 600);
+  return [code, message].filter(Boolean).join(": ");
+}
+
 export function brevoClient(apiKey, fetcher = fetch) {
   if (!apiKey) throw new Error("Set BREVO_API_KEY as a secret.");
   return async (endpoint, { method = "GET", body } = {}) => {
@@ -170,8 +192,12 @@ export function brevoClient(apiKey, fetcher = fetch) {
     } catch {
       throw new Error(`Brevo ${method} request did not complete. Inspect campaign status in Brevo before retrying; no automatic retry was attempted.`);
     }
-    // Avoid logging provider responses, which can contain contact data or credentials.
-    if (!response.ok) throw new Error(`Brevo ${method} request failed (HTTP ${response.status}). Inspect the campaign in Brevo.`);
+    if (!response.ok) {
+      const details = await response.json().catch(() => null);
+      const explanation = providerErrorSummary(details, apiKey);
+      const resource = new URL(`${API}${endpoint}`).pathname;
+      throw new Error(`Brevo ${method} ${resource} failed (HTTP ${response.status})${explanation ? `: ${explanation}` : ". No JSON error explanation was returned."}`);
+    }
     return response.status === 204 ? null : response.json();
   };
 }

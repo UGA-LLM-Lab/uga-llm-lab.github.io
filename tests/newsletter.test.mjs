@@ -209,3 +209,43 @@ test("provider errors do not expose the response body", async () => {
     return /HTTP 400/.test(error.message);
   });
 });
+
+test("campaign rejection logs include the provider reason and affected API path", async () => {
+  const request = brevoClient("private-key", async () => Response.json({
+    code: "method_not_allowed", message: "Campaign creation is unavailable for this account."
+  }, { status: 405 }));
+  await assert.rejects(request("/emailCampaigns", { method: "POST" }), (error) => {
+    assert.match(error.message, /POST \/v3\/emailCampaigns failed \(HTTP 405\)/);
+    assert.match(error.message, /method_not_allowed: Campaign creation is unavailable/);
+    return true;
+  });
+});
+
+test("provider error explanations redact credentials, addresses, and personal links", async () => {
+  const privateKey = "xkeysib-PRIVATE_KEY_123456";
+  const request = brevoClient(privateKey, async () => Response.json({
+    code: "unauthorized",
+    message: `IP address not authorized. Key ${privateKey}; other key xsmtpsib-OTHER_KEY; sender private@example.org; https://example.org/confirm?token=PRIVATE_TOKEN\r\nBearer PRIVATE_ACCESS_TOKEN`,
+    contacts: [{ email: "private-response@example.org" }]
+  }, { status: 401 }));
+  await assert.rejects(request("/emailCampaigns?private=query"), (error) => {
+    assert.match(error.message, /IP address not authorized/);
+    for (const value of [privateKey, "OTHER_KEY", "private@example.org", "PRIVATE_TOKEN", "PRIVATE_ACCESS_TOKEN", "private-response@example.org", "private=query"]) {
+      assert.ok(!error.message.includes(value), value);
+    }
+    assert.ok(!/[\r\n]/.test(error.message));
+    return true;
+  });
+});
+
+test("unrecognized error fields and long messages cannot dump response payloads", async () => {
+  const request = brevoClient("private-key", async () => Response.json({
+    code: "private-key", message: "A".repeat(5000), body: { secret: "PRIVATE_PAYLOAD" }
+  }, { status: 400 }));
+  await assert.rejects(request("/emailCampaigns"), (error) => {
+    assert.ok(error.message.length < 700);
+    assert.ok(!error.message.includes("private-key"));
+    assert.ok(!error.message.includes("PRIVATE_PAYLOAD"));
+    return true;
+  });
+});
