@@ -15,6 +15,21 @@ AI/SI News uses a separate monthly archive so that articles do not require indiv
 - Daily reports and weekly news use the shared article schema; weekly in-depth analysis is rendered from its separate JSON dataset.
 - A copyable generation specification for future AI-produced news packages is available in `ai-news/IMPORT_GUIDE.md`.
 
+## Weekly email newsletter
+
+The newsletter includes a Brevo signup integration, a local email preview generator,
+and a weekly GitHub Actions workflow. Signup remains in its coming-soon state until
+a hosted form URL is configured; sending is disabled until explicitly enabled.
+
+Generate an email without an account or credentials (Node.js 24):
+
+```sh
+node scripts/newsletter.mjs
+```
+
+Open `.newsletter-preview/newsletter.html` to review it. See
+[`docs/newsletter.md`](docs/newsletter.md) for configuration, testing, and launch steps.
+
 To propose an update:
 
 1. Create a branch or fork of this repository.

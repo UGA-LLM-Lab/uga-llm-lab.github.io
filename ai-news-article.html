@@ -12,6 +12,7 @@
   <script src="ai-news/catalog.js" defer></script>
   <script src="ai-news/trending.js" defer></script>
   <script src="ai-news/news.js" defer></script>
+  <script src="assets/js/newsletter.js" defer></script>
 </head>
 <body data-page="ai-news">
   <div data-site-header></div>
@@ -19,6 +20,13 @@
     <div class="shell" data-ai-news-article>
       <p class="ai-news-loading" role="status">Loading article...</p>
     </div>
+    <section class="shell newsletter" aria-labelledby="newsletter-title" data-newsletter>
+      <p class="newsletter__eyebrow">THE WEEK IN AI</p>
+      <h2 id="newsletter-title">Get weekly AI news from UGA LLM Lab</h2>
+      <p>Research highlights, industry developments, and our latest weekly analysis, delivered to your inbox.</p>
+      <p class="newsletter__status" data-newsletter-status>Email subscriptions are coming soon. For now, explore our weekly reports above.</p>
+      <div data-newsletter-form></div>
+    </section>
   </main>
   <div data-site-footer></div>
 </body>

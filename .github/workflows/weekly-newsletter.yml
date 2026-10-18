@@ -1,0 +1,72 @@
+name: Weekly AI newsletter
+
+on:
+  workflow_dispatch:
+    inputs:
+      mode:
+        description: Preview, create a Brevo draft, or send after launch
+        type: choice
+        options: [preview, draft, send]
+        default: preview
+      week:
+        description: Optional edition ID (preview/draft only for older editions)
+        type: string
+        required: false
+  schedule:
+    - cron: '17 9 * * 1'
+      timezone: America/New_York
+  pull_request:
+    paths:
+      - 'scripts/newsletter.mjs'
+      - 'tests/newsletter.test.mjs'
+      - 'ai-news/newsletter-config.json'
+      - 'assets/js/newsletter.js'
+      - '.github/workflows/weekly-newsletter.yml'
+
+permissions:
+  contents: read
+
+# Do not cancel an in-flight campaign request or run two senders concurrently.
+concurrency:
+  group: weekly-ai-newsletter
+  cancel-in-progress: false
+
+jobs:
+  newsletter:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+      - name: Test newsletter generation and delivery safeguards
+        run: node --test tests/newsletter.test.mjs
+      - name: Build preview without provider credentials
+        env:
+          NEWSLETTER_MODE: preview
+          NEWSLETTER_WEEK: ${{ inputs.week }}
+        run: node scripts/newsletter.mjs
+      - name: Upload email preview
+        uses: actions/upload-artifact@v4
+        with:
+          name: weekly-newsletter-preview
+          path: .newsletter-preview/
+          include-hidden-files: true
+          retention-days: 14
+          if-no-files-found: error
+      - name: Create draft or submit campaign
+        # Only the default branch can access the provider through this workflow.
+        if: >-
+          github.ref == format('refs/heads/{0}', github.event.repository.default_branch) &&
+          (github.event_name == 'workflow_dispatch' && inputs.mode != 'preview' ||
+           github.event_name == 'schedule' && vars.NEWSLETTER_SENDING_ENABLED == 'true')
+        env:
+          NEWSLETTER_MODE: ${{ github.event_name == 'schedule' && 'send' || inputs.mode }}
+          NEWSLETTER_WEEK: ${{ inputs.week }}
+          NEWSLETTER_SENDING_ENABLED: ${{ vars.NEWSLETTER_SENDING_ENABLED }}
+          BREVO_API_KEY: ${{ secrets.BREVO_API_KEY }}
+          BREVO_LIST_ID: ${{ vars.BREVO_LIST_ID }}
+          NEWSLETTER_SENDER_EMAIL: ${{ vars.NEWSLETTER_SENDER_EMAIL }}
+          NEWSLETTER_REPLY_TO: ${{ vars.NEWSLETTER_REPLY_TO }}
+        run: node scripts/newsletter.mjs

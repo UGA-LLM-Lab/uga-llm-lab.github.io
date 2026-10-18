@@ -2533,6 +2533,48 @@ a:focus-visible {
   white-space: nowrap;
 }
 
+.newsletter {
+  margin-top: 40px;
+  margin-bottom: 48px;
+  padding: clamp(20px, 4vw, 36px);
+  border: 1px solid var(--line);
+  border-top: 3px solid var(--uga-red);
+  background: var(--paper-soft);
+}
+
+.newsletter__eyebrow {
+  margin: 0 0 8px;
+  color: var(--uga-red);
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+}
+
+.newsletter h2 {
+  margin: 0;
+  font-family: var(--serif);
+  font-size: clamp(1.4rem, 3vw, 2rem);
+}
+
+.newsletter > p:not(.newsletter__eyebrow) {
+  max-width: 65ch;
+}
+
+.newsletter__status {
+  color: var(--ink-soft);
+  font-size: 0.9rem;
+}
+
+.newsletter__form {
+  display: block;
+  width: 100%;
+  max-width: 680px;
+  height: 720px;
+  margin: 20px 0 12px;
+  border: 0;
+  background: var(--paper);
+}
+
 .ai-news-weekly {
   margin-top: 24px;
   overflow: hidden;
