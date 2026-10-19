@@ -1,0 +1,13 @@
+topic,previous_count,previous_total,current_count,current_total,previous_share_percent,current_share_percent,index,state
+Agents & tool use,81,361,94,355,22.437673,26.478873,118,Rising
+Speech & audio,10,361,9,355,2.770083,2.535211,92,Falling
+Biology & medicine,8,361,2,355,2.216066,0.56338,,Watching
+Coding & software,9,361,19,355,2.493075,5.352113,215,Rising
+Efficiency & inference,55,361,58,355,15.235457,16.338028,107,Rising
+Robotics & embodied AI,42,361,34,355,11.634349,9.577465,82,Falling
+Evaluation & verification,35,361,57,355,9.695291,16.056338,166,Rising
+Memory & context,23,361,14,355,6.371191,3.943662,62,Falling
+Vision & multimodality,87,361,106,355,24.099723,29.859155,124,Rising
+Reasoning & mathematics,21,361,25,355,5.817175,7.042254,121,Rising
+Safety & reliability,13,361,12,355,3.601108,3.380282,94,Falling
+Self-improvement & evolution,17,361,13,355,4.709141,3.661972,78,Falling

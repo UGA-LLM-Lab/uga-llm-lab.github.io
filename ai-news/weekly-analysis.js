@@ -142,6 +142,15 @@
           <p class="weekly-analysis__dek">${escapeHtml(analysis.synthesis)}</p>
         </header>
 
+        ${analysis.structural_context ? `
+          <section class="weekly-claim" aria-labelledby="weekly-structural-context">
+            <h2 id="weekly-structural-context">Structural Context</h2>
+            <p>${escapeHtml(analysis.structural_context.summary)}</p>
+            ${(analysis.structural_context.points || []).map((point) => `
+              <p>${escapeHtml(point.text)}</p>
+              ${renderSources(point.evidence, sources)}`).join("")}
+          </section>` : ""}
+
         <nav class="weekly-analysis__tabs" role="tablist" aria-label="Weekly in-depth analysis sections">
           ${visibleTabs.map((tab, index) => `
             <button type="button" role="tab" id="weekly-tab-${escapeHtml(tab.id)}" aria-controls="weekly-panel-${escapeHtml(tab.id)}" aria-selected="${index === 0}">${escapeHtml(tab.label)}</button>`).join("")}

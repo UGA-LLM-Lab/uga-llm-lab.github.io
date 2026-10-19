@@ -2,6 +2,145 @@ window.AI_NEWS_MONTH_DATA["2026-10"] = {
   "label": "October 2026",
   "articles": [
     {
+      "slug": "weekly-ai-october-12-18",
+      "category": "Weekly AI",
+      "sortDate": "2026-10-19",
+      "dateLabel": "October 12–18, 2026",
+      "title": "Weekly AI: Muse Wonder, Argon, state lawsuits, and evidence from work and classrooms",
+      "summary": "Meta and Google expand agent-model access, eight states sue OpenAI, and Anthropic and Maryland report findings about AI at work and in courses.",
+      "image": {
+        "src": "ai-news/2026-10/images/meta-muse-wonder-official.webp",
+        "alt": "Meta’s official Muse Wonder release artwork with its name over a pale typographic background",
+        "caption": "Official Muse Wonder release artwork from Meta AI Research, October 12, 2026. This source-made graphic is distinct from the generated Weekly poster."
+      },
+      "content": [
+        {
+          "type": "paragraph",
+          "text": "October 12–18 brought new agent-model access from Meta and Google, eight state lawsuits against OpenAI, and reports examining AI’s effects inside a company and university courses. Here are five developments from the completed week."
+        },
+        {
+          "type": "figure",
+          "src": "ai-news/2026-10/images/weekly-ai-october-12-18-poster.png",
+          "alt": "UGA LLM Lab poster covering October 12–18: Muse Wonder, Gemini 4 Argon, eight state lawsuits against OpenAI, Anthropic’s workplace study and Maryland’s AI tutor guidance.",
+          "caption": "Weekly editorial poster generated with AI. Its illustrations and brand renderings are generated artwork, not documentary photographs or authentic product screenshots."
+        },
+        {
+          "type": "heading",
+          "text": "Meta releases Muse Wonder for coding and agent workflows"
+        },
+        {
+          "type": "paragraph",
+          "text": "Meta introduced Muse Wonder and Muse Wonder Full on October 12, expanding its model lineup for coding, computer use and longer tasks. Muse Wonder became available through the Meta Model API and Muse Code; Wonder Full launched through Muse Code subscriptions. Both have a one-million-token context window, but the Full model’s launch access does not include the same self-service API route. Meta said Wonder would reach its consumer Muse experience later, beginning with subscribers."
+        },
+        {
+          "type": "paragraph",
+          "text": "The company describes Active Memory as retrieving relevant context and Active Focus as sustaining work through obstacles, tool calls and revisions. Those features target projects that require more than a single answer, such as changing and testing a codebase. Meta’s launch evaluations and demonstrations describe the company’s tested configurations; they do not establish that unattended agents can reliably complete every unfamiliar task. The release is distinct from the October 15 publication of Muse Spark Open weights, which uses a separate model and license."
+        },
+        {
+          "type": "heading",
+          "text": "Google makes Gemini 4 Argon generally available on Cloud"
+        },
+        {
+          "type": "paragraph",
+          "text": "Google made Gemini 4 Argon generally available on Google Cloud on October 13, moving beyond the phased access described in September. The model targets long, multi-step work in software, finance, legal analysis and other document-heavy tasks. Its documentation specifies a shared limit of 1,048,576 input and output tokens, rather than a million-token input window plus an additional million-token answer. Text is the output modality; images, audio and video can be inputs."
+        },
+        {
+          "type": "paragraph",
+          "text": "The introductory API rate is $2 per million input tokens and $10 per million output tokens through November 30, after which Google lists standard rates of $4 and $20. General availability of the model does not make every attached feature generally available: computer use and the Interactions API remain preview features. Google also distinguishes ordinary defensive cybersecurity capabilities from a separate variant offered to vetted defenders. Its published task results are evidence about particular evaluations and deployments, rather than a guarantee of accuracy across all enterprise work."
+        },
+        {
+          "type": "heading",
+          "text": "Eight states sue OpenAI over ChatGPT safety representations"
+        },
+        {
+          "type": "paragraph",
+          "text": "Attorneys general in eight states announced separate lawsuits against OpenAI on October 14, alleging that the company misled consumers about ChatGPT’s safety and exposed children and other vulnerable users to harm. Iowa, Arizona, Arkansas, Idaho, Kansas, Montana, Nebraska and West Virginia brought the actions under state consumer-protection laws. The filings also challenge representations about safety testing and the behavior of autonomous AI agents. These are allegations brought by the states, with liability and remedies still to be determined by courts."
+        },
+        {
+          "type": "paragraph",
+          "text": "Iowa’s petition seeks civil penalties, consumer reimbursement, restrictions on data practices and safeguards on advanced-model testing, including third-party verification. Those requests are not orders already in effect. In a response reported by the Associated Press, OpenAI said it has built protections for children into ChatGPT and would continue improving them. The cases put specific product representations and testing practices before state courts; they do not themselves create a new nationwide AI regulation or resolve whether particular safeguards are adequate."
+        },
+        {
+          "type": "heading",
+          "text": "Anthropic reports a shift in junior technical hiring inside its own workforce"
+        },
+        {
+          "type": "paragraph",
+          "text": "Anthropic published an internal employment study on October 16, combining company records, AI-use data, surveys and 17 interviews. It reports that the junior share of technical hires fell from 27% to 9%, while the junior share of technical employees fell from 21% to 14% from early 2025 into 2026. Those figures measure different denominators, and neither means the company eliminated the same percentage of jobs. Technical hiring continued to grow in absolute terms as the company expanded; business functions grew faster."
+        },
+        {
+          "type": "paragraph",
+          "text": "The study also describes more code production and changes in how employees coordinate work with agents. It examines what happened around coding-agent adoption, but adoption was not randomly assigned and company growth changed the workforce at the same time. Agent runtime, code commits and employee hours are different measures, so a larger volume of agent activity is not a direct productivity multiplier. The report gives a detailed view of one unusually AI-intensive employer and raises questions about entry-level pathways, rather than establishing an economy-wide employment effect."
+        },
+        {
+          "type": "heading",
+          "text": "Maryland’s AI tutoring findings prompt a call for stronger teaching guidance"
+        },
+        {
+          "type": "paragraph",
+          "text": "The University of Maryland reported on October 16 that a trial of its course-integrated AI assistant had produced concerning results, and outlined the need for stronger guidance on classroom use. The announcement discusses a Fall 2025 study involving 2,379 students and 30 instructors. October 16 is the institutional announcement date, rather than a claim that the experiment or the working-paper draft first appeared that day. University leaders said instructors using the tool were being informed of the findings; the announcement described access in about 40 courses and further evaluation before broader deployment."
+        },
+        {
+          "type": "paragraph",
+          "text": "In the 1,353-student subset comparing sections of the same courses, assignment to assistant access lowered final grades by an estimated 0.37 standard deviations. Only about 15% of offered students used it, and the full-sample grade estimate was less precise. The working paper cannot isolate the mechanism from other AI use or instructor practices. Its results concern this implementation, predominantly in direct-answer mode, rather than all forms of AI tutoring."
+        }
+      ],
+      "sources": [
+        {
+          "label": "Meta — October 12 Muse Wonder research announcement",
+          "url": "https://research.meta.ai/blog/muse-wonder"
+        },
+        {
+          "label": "Meta — Muse Wonder access, context and pricing",
+          "url": "https://developer.meta.com/ai/models/muse-wonder/"
+        },
+        {
+          "label": "Meta — Muse Wonder launch and planned consumer rollout",
+          "url": "https://about.fb.com/news/2026/10/introducing-muse-wonder-models/"
+        },
+        {
+          "label": "Google Cloud — October 13 availability and introductory pricing",
+          "url": "https://cloud.google.com/blog/products/ai-machine-learning/gemini-4-argon-available-on-google-cloud"
+        },
+        {
+          "label": "Google Cloud — Argon specifications, launch stage and preview features",
+          "url": "https://docs.cloud.google.com/gemini-enterprise-agent-platform/models/gemini/4-argon"
+        },
+        {
+          "label": "Iowa Attorney General — October 14 lawsuit announcement and eight-state list",
+          "url": "https://www.iowaattorneygeneral.gov/newsroom/attorney-general-brenna-bird-announces-lawsuit-against-openai-for-deceiving-iowa-parents-and-iowans"
+        },
+        {
+          "label": "State of Iowa — October 14 petition, allegations and requested relief",
+          "url": "https://www.iowaattorneygeneral.gov/media/cms/261014_Petition_EC459B522F957.pdf"
+        },
+        {
+          "label": "Associated Press via Spectrum News — cases and OpenAI’s response",
+          "url": "https://ny1.com/nyc/all-boroughs/ap-top-news/2026/10/15/states-sue-ai-giant-openai-saying-its-popular-chatbot-is-hurting-children-and-deceiving-adults"
+        },
+        {
+          "label": "Anthropic — October 16 employment study, methods and limitations",
+          "url": "https://www.anthropic.com/research/employment-at-anthropic"
+        },
+        {
+          "label": "Anthropic — complete Employment at Anthropic report",
+          "url": "https://www-cdn.anthropic.com/72628f1863c53432195db83279252dfd2cb53158/Employment%20at%20Anthropic.pdf"
+        },
+        {
+          "label": "Maryland Today — October 16 institutional announcement and teaching response",
+          "url": "https://today.umd.edu/study-suggests-more-guidance-needed-in-use-of-ai-course-assistants"
+        },
+        {
+          "label": "Liu and colleagues — October 2026 working paper 26-1598",
+          "url": "https://edworkingpapers.com/ai26-1598"
+        },
+        {
+          "label": "University of Maryland author copy — methods, results and Table 3",
+          "url": "https://edsi.umd.edu/sites/default/files/ai26-1598.pdf"
+        }
+      ]
+    },
+    {
       "slug": "microsoft-nscale-loughton-contract-reported-cancellation",
       "category": "Industry · Infrastructure",
       "sortDate": "2026-10-18",

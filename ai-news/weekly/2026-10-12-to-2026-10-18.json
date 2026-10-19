@@ -1,0 +1,722 @@
+{
+  "title": "This week in AI",
+  "newsletterHeadlines": [
+    "Muse Wonder reaches developers",
+    "Argon moves to general availability",
+    "Work and classroom evidence needs context"
+  ],
+  "period": {
+    "current": [
+      "2026-10-12",
+      "2026-10-18"
+    ],
+    "previous": [
+      "2026-10-05",
+      "2026-10-11"
+    ],
+    "timezone": "America/New_York"
+  },
+  "synthesis": "Meta and Google expanded access to agent models, state lawsuits challenged OpenAI’s safety representations, and new reports examined AI at work and in university courses. The common question is how access translates into reliable outcomes.",
+  "structural_context": {
+    "summary": "The week reinforces a gap between expanding capabilities and the evidence needed to evaluate their effects. Long-run evidence describes different populations and should not be read as a single AI adoption score.",
+    "points": [
+      {
+        "text": "Access and reproducibility: HAI’s 2026 R&D chapter tracks model-access forms through 2025. Releasing weights can enable local study while leaving training code, data and hardware constraints unresolved.",
+        "evidence": [
+          "hai-rd",
+          "spark",
+          "beam"
+        ]
+      },
+      {
+        "text": "Organizations and outcomes: McKinsey’s 2026 survey finds more enterprise scaling without a corresponding increase in the share reporting EBIT impact. Its historical survey series also appears in HAI, so the two are not independent confirmations.",
+        "evidence": [
+          "mckinsey",
+          "hai-econ"
+        ]
+      },
+      {
+        "text": "Labor and timing: official US employment levels, LinkedIn member-reported hiring, company seniority shares and ten-year projections measure different things. Weaker youth hiring also has pre-AI and macroeconomic explanations.",
+        "evidence": [
+          "bls-now",
+          "linkedin",
+          "anthropic",
+          "oecd",
+          "bls-long"
+        ]
+      }
+    ]
+  },
+  "methodology_note": "Research attention compares 355 with 361 retrospectively collected Hugging Face recommendations using an unchanged classifier; it is not all AI research. Earlier published snapshots remain unchanged. No numerical weekly hiring panel is reported without two comparable complete observations. External reports retain their own measurement periods and populations.",
+  "research_attention": {
+    "policy": "attention-index-v1",
+    "title": "Research Attention",
+    "current_window": [
+      "2026-10-12",
+      "2026-10-18"
+    ],
+    "previous_window": [
+      "2026-10-05",
+      "2026-10-11"
+    ],
+    "timezone": "America/New_York",
+    "population": "Hugging Face Daily Papers recommendations, deduplicated by paper ID within each platform week",
+    "recommendation_date_field": "paper.submittedOnDailyAt; platform listing calendar date",
+    "denominators": [
+      361,
+      355
+    ],
+    "topic_overlap": true,
+    "comparison_status": "comparable_retrospective_platform_samples",
+    "collected_at": "2026-10-19",
+    "source": "https://huggingface.co/papers",
+    "formula": "round_half_up(100 × current topic share / previous topic share)",
+    "eligibility": "At least five topic papers in each week, nonzero previous share and comparable collection. Stable: 95–105; rising: above 105; falling: below 95. Otherwise Watching.",
+    "classifier_field": "paper title, case-insensitive; unchanged frozen attention-index-v1 rules",
+    "baseline_note": "Both historical lists were retrieved on October 19 with the same API pagination and classifier. The October 5–11 comparison contains 361 recommendations; the earlier published report retains its original 349-record snapshot. This is a fresh retrospective comparison, not an edit to that report.",
+    "limits": "Recommendations measure attention within this platform sample, not all publications, quality, adoption or hiring. Topics overlap. Two weeks establish one comparison, not a sustained trend. Paper publication dates are separate from recommendation dates. Records are metadata, not full-text scientific reviews.",
+    "metrics": [
+      {
+        "id": "agents",
+        "label": "Agents & tool use",
+        "counts": [
+          81,
+          94
+        ],
+        "shares": [
+          22.437673130193904,
+          26.478873239436616
+        ],
+        "index": 118,
+        "state": "Rising",
+        "direction": "up",
+        "comparison_eligible": true,
+        "null_reason": null
+      },
+      {
+        "id": "audio",
+        "label": "Speech & audio",
+        "counts": [
+          10,
+          9
+        ],
+        "shares": [
+          2.7700831024930745,
+          2.535211267605634
+        ],
+        "index": 92,
+        "state": "Falling",
+        "direction": "down",
+        "comparison_eligible": true,
+        "null_reason": null
+      },
+      {
+        "id": "bio",
+        "label": "Biology & medicine",
+        "counts": [
+          8,
+          2
+        ],
+        "shares": [
+          2.21606648199446,
+          0.5633802816901409
+        ],
+        "index": null,
+        "state": "Watching",
+        "direction": "watch",
+        "comparison_eligible": false,
+        "null_reason": "Fewer than five topic papers in at least one week."
+      },
+      {
+        "id": "code",
+        "label": "Coding & software",
+        "counts": [
+          9,
+          19
+        ],
+        "shares": [
+          2.4930747922437675,
+          5.352112676056338
+        ],
+        "index": 215,
+        "state": "Rising",
+        "direction": "up",
+        "comparison_eligible": true,
+        "null_reason": null
+      },
+      {
+        "id": "efficiency",
+        "label": "Efficiency & inference",
+        "counts": [
+          55,
+          58
+        ],
+        "shares": [
+          15.23545706371191,
+          16.338028169014084
+        ],
+        "index": 107,
+        "state": "Rising",
+        "direction": "up",
+        "comparison_eligible": true,
+        "null_reason": null
+      },
+      {
+        "id": "embodied",
+        "label": "Robotics & embodied AI",
+        "counts": [
+          42,
+          34
+        ],
+        "shares": [
+          11.634349030470915,
+          9.577464788732394
+        ],
+        "index": 82,
+        "state": "Falling",
+        "direction": "down",
+        "comparison_eligible": true,
+        "null_reason": null
+      },
+      {
+        "id": "eval",
+        "label": "Evaluation & verification",
+        "counts": [
+          35,
+          57
+        ],
+        "shares": [
+          9.695290858725762,
+          16.056338028169016
+        ],
+        "index": 166,
+        "state": "Rising",
+        "direction": "up",
+        "comparison_eligible": true,
+        "null_reason": null
+      },
+      {
+        "id": "memory",
+        "label": "Memory & context",
+        "counts": [
+          23,
+          14
+        ],
+        "shares": [
+          6.3711911357340725,
+          3.943661971830986
+        ],
+        "index": 62,
+        "state": "Falling",
+        "direction": "down",
+        "comparison_eligible": true,
+        "null_reason": null
+      },
+      {
+        "id": "multimodal",
+        "label": "Vision & multimodality",
+        "counts": [
+          87,
+          106
+        ],
+        "shares": [
+          24.099722991689752,
+          29.859154929577464
+        ],
+        "index": 124,
+        "state": "Rising",
+        "direction": "up",
+        "comparison_eligible": true,
+        "null_reason": null
+      },
+      {
+        "id": "reason",
+        "label": "Reasoning & mathematics",
+        "counts": [
+          21,
+          25
+        ],
+        "shares": [
+          5.8171745152354575,
+          7.042253521126761
+        ],
+        "index": 121,
+        "state": "Rising",
+        "direction": "up",
+        "comparison_eligible": true,
+        "null_reason": null
+      },
+      {
+        "id": "safety",
+        "label": "Safety & reliability",
+        "counts": [
+          13,
+          12
+        ],
+        "shares": [
+          3.6011080332409975,
+          3.3802816901408446
+        ],
+        "index": 94,
+        "state": "Falling",
+        "direction": "down",
+        "comparison_eligible": true,
+        "null_reason": null
+      },
+      {
+        "id": "self",
+        "label": "Self-improvement & evolution",
+        "counts": [
+          17,
+          13
+        ],
+        "shares": [
+          4.7091412742382275,
+          3.6619718309859155
+        ],
+        "index": 78,
+        "state": "Falling",
+        "direction": "down",
+        "comparison_eligible": true,
+        "null_reason": null
+      }
+    ]
+  },
+  "tabs": [
+    {
+      "id": "research",
+      "label": "Research / Academia",
+      "claims": [
+        {
+          "claim": "Evaluation and agent papers gained share in this recommendation sample",
+          "scope": "Hugging Face Daily Papers; recommendations, not all research",
+          "confidence": "High",
+          "horizons": [
+            {
+              "label": "This week vs. October 5–11",
+              "text": "Evaluation titles rose from 35/361 to 57/355 recommendations (index 166); agent/tool titles rose from 81/361 to 94/355 (118). Vision/multimodality remained largest at 106/355 (124)."
+            },
+            {
+              "label": "Near term · 1–3 months",
+              "text": "Unavailable: two comparable observations cannot establish a monthly trajectory. Conference deadlines, release clusters and curator choices can move these shares."
+            },
+            {
+              "label": "Structural · 6–24 months",
+              "text": "This title-based platform sample cannot measure scientific progress or publication growth. A representative bibliometric comparison with stable category definitions is needed before extending this pattern."
+            },
+            {
+              "label": "Long run · 2–5 years and beyond",
+              "text": "Unavailable for these topic series. No four-week curve or multi-year trend is inferred from two weeks."
+            }
+          ],
+          "interpretation": "Evaluation received more relative visibility alongside agent development this week. The result supports follow-up reading, not a ranking of scientific importance.",
+          "counterevidence": "Topics overlap and titles omit methods. The coding index is 215, but its counts are only 9 and 19; a small base magnifies movement. Full-text scientific review is separate from counting recommendations.",
+          "what_would_change": "Four or more comparable weekly samples, a check for dominant labs and conference effects, and corroboration in an independently collected paper population.",
+          "evidence": [
+            "hf"
+          ]
+        },
+        {
+          "claim": "Lower memory-title attention does not show that memory is a solved problem",
+          "scope": "One weekly comparison and dated product documentation",
+          "confidence": "Medium",
+          "horizons": [
+            {
+              "label": "This week vs. October 5–11",
+              "text": "Memory/context titles fell from 23/361 to 14/355 (index 62), while Meta introduced Active Memory in Muse Wonder. Paper-title visibility and product functionality moved in different directions."
+            },
+            {
+              "label": "Near term · 1–3 months",
+              "text": "Maturation into retrieval and agent infrastructure is one possible explanation; renaming, curator selection and ordinary weekly variation are others. None is identified by these counts."
+            },
+            {
+              "label": "Structural · 6–24 months",
+              "text": "HAI’s 2026 notable-model series documents persistent limits on development transparency. Released products do not supply a consistent research-outcome series for context reliability."
+            },
+            {
+              "label": "Long run · 2–5 years and beyond",
+              "text": "Unavailable: neither these weekly labels nor launch descriptions establish whether the research problem is expanding, plateauing or declining over years."
+            }
+          ],
+          "interpretation": "Track difficult memory and context failures alongside topic shares. A feature entering a product can increase its practical relevance while reducing its visibility as a standalone paper label.",
+          "counterevidence": "The fixed classifier misses synonyms and includes some attention/computing uses of context. Meta’s feature description does not independently measure retention or reliability.",
+          "what_would_change": "Repeated full-text samples with stable task labels and independent long-horizon evaluations showing persistent improvement or failure rates.",
+          "evidence": [
+            "hf",
+            "muse",
+            "hai-rd"
+          ]
+        },
+        {
+          "claim": "Tutoring outcomes remain sensitive to instructional design and measurement",
+          "scope": "Two US university experiments with different interventions and endpoints",
+          "confidence": "Medium",
+          "horizons": [
+            {
+              "label": "This week vs. October 5–11",
+              "text": "Maryland’s October 16 announcement adds institutional findings to this week’s coverage. It does not represent a trial conducted this week."
+            },
+            {
+              "label": "Near term · 1–3 months",
+              "text": "Its Fall 2025 access experiment used mostly direct-answer mode. Only about 15% used the assistant; the exact-course subset had lower grades. Other AI use and excluded non-activating instructors complicate interpretation."
+            },
+            {
+              "label": "Structural · 6–24 months",
+              "text": "A 2025 Harvard study instead found gains with carefully scaffolded physics tutoring over two lessons. Its immediate quizzes differ from Maryland’s semester course grades."
+            },
+            {
+              "label": "Long run · 2–5 years and beyond",
+              "text": "Long-run retention and cross-institution effects remain unavailable. Neither experiment establishes a lasting effect for all courses or AI tutor designs."
+            }
+          ],
+          "interpretation": "Evaluate the teaching intervention and independent learning outcomes together. Technical integration into a course site is insufficient evidence of an educational benefit.",
+          "counterevidence": "Maryland’s working paper is preliminary, uses course grades and platform logs, and cannot isolate mechanisms. Harvard’s narrower, structured setting supplies a counterexample to universal harm, not a direct replication.",
+          "what_would_change": "Replicated semester trials with independent assessments, transparent attrition, instructional-mode comparisons and delayed retention tests.",
+          "evidence": [
+            "maryland",
+            "umd-paper",
+            "kestin"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "industry",
+      "label": "Industry",
+      "claims": [
+        {
+          "claim": "More access routes are opening, with materially different license and operating costs",
+          "scope": "Large vendors and startups; selected releases, not market-wide commoditization",
+          "confidence": "Medium",
+          "horizons": [
+            {
+              "label": "This week vs. October 5–11",
+              "text": "Meta published Muse Spark Open weights on October 15; Reflection made Beam weights available on October 16; DeepSeek released Flash-1017 on October 17. These are distinct from Muse Wonder’s hosted launch."
+            },
+            {
+              "label": "Near term · 1–3 months",
+              "text": "Beam’s October 5 announcement preceded its weight release. Delivery dates, licenses, hosting and hardware requirements must be tracked separately when comparing options."
+            },
+            {
+              "label": "Structural · 6–24 months",
+              "text": "HAI counts 47 API-access releases among 102 categorized notable models in 2025, and 81 without training code. Access to weights has not removed the reproducibility gap."
+            },
+            {
+              "label": "Long run · 2–5 years and beyond",
+              "text": "The 2014–25 access history shows multiple release forms persisting. It does not establish that inference prices, compute requirements or switching costs will converge."
+            }
+          ],
+          "interpretation": "Large-company releases broaden available model choices; startup Reflection offers a different licensing route. This is evidence of developer choice, not yet of commodity economics or sustained independent adoption.",
+          "counterevidence": "Meta’s Muse Model License has conditions, unlike Beam’s Apache 2.0 release. Large weights still need substantial memory. Company launches, downloads and benchmark claims cannot establish interchangeable quality.",
+          "what_would_change": "Independent task-quality and total-cost comparisons, sustained third-party deployments, and evidence that customers can switch without major integration or safety costs.",
+          "evidence": [
+            "spark",
+            "beam",
+            "deepseek",
+            "hai-rd"
+          ]
+        },
+        {
+          "claim": "Model availability is advancing faster than evidence of enterprise-wide returns",
+          "scope": "Google and Meta release stages; cross-organization survey context",
+          "confidence": "Medium",
+          "horizons": [
+            {
+              "label": "This week vs. October 5–11",
+              "text": "Argon reached GA on October 13, while computer use remains preview. Muse Wonder Full launched through Muse Code subscriptions. Neither status establishes that all tools or customers have equivalent access."
+            },
+            {
+              "label": "Near term · 1–3 months",
+              "text": "The useful next observations are production task success, operating costs and rollback rates. API promotion dates and customer demonstrations alone cannot measure those outcomes."
+            },
+            {
+              "label": "Structural · 6–24 months",
+              "text": "McKinsey’s May–June 2026 survey reports enterprise AI scaling at 44%, up from 38%, while reported enterprise EBIT contribution stayed at 37%. This is self-reported association, not causal impact."
+            },
+            {
+              "label": "Long run · 2–5 years and beyond",
+              "text": "HAI’s historical adoption series reuses McKinsey data and is not independent corroboration. Longer-run economy-wide returns require measured output and cost evidence beyond survey expectations."
+            }
+          ],
+          "interpretation": "The release cycle is expanding deployable options, but deployment stage, tool maturity and financial outcomes need separate measures. Heterogeneous outcomes are more defensible than a claim that agent experimentation has become universal production.",
+          "counterevidence": "The survey’s 1,719 respondents in 97 nations are GDP-weighted, not a census. Large firms and startups have different capacity and budgets. Customer examples select successful use cases; unsuccessful deployments are less visible.",
+          "what_would_change": "Repeated comparable surveys plus audited financial or operational evidence from multiple independent organizations showing durable benefits after inference, integration and supervision costs.",
+          "evidence": [
+            "argon",
+            "argon-doc",
+            "muse",
+            "mckinsey",
+            "hai-econ"
+          ]
+        },
+        {
+          "claim": "Safety representations and test controls are becoming concrete deployment questions",
+          "scope": "October 14 state actions and selected model documentation",
+          "confidence": "Medium",
+          "horizons": [
+            {
+              "label": "This week vs. October 5–11",
+              "text": "The previous Weekly covered Anthropic’s incident review. This week’s eight-state actions move scrutiny into separate consumer-protection cases against OpenAI; allegations remain unadjudicated."
+            },
+            {
+              "label": "Near term · 1–3 months",
+              "text": "Iowa requests safeguards and third-party verification for advanced-model testing. Court decisions and implemented changes, rather than requested remedies, would establish a new operating constraint."
+            },
+            {
+              "label": "Structural · 6–24 months",
+              "text": "Meta recommends system safeguards for its open weights, while Google retains staged access for some capabilities. Controls vary with the system and access route rather than following from a model score alone."
+            },
+            {
+              "label": "Long run · 2–5 years and beyond",
+              "text": "The lasting effect on procurement, liability and release practices is unresolved. These cases do not establish a nationwide regulatory rule or a multi-year decline in model use."
+            }
+          ],
+          "interpretation": "Organizations need evidence for the safety claims they make about complete systems. Legal filings and vendor safeguards identify issues to test, without establishing that current approaches are effective.",
+          "counterevidence": "OpenAI says it has child protections and continues to improve them. A filing expresses a plaintiff’s position; a model card expresses its publisher’s assessment. Neither is independent proof of broad safety performance.",
+          "what_would_change": "Adjudicated findings, reproducible third-party tests, or measured incident reductions following specific controls across multiple deployments.",
+          "evidence": [
+            "iowa",
+            "iowa-release",
+            "ap-response",
+            "spark",
+            "argon-doc"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "hiring",
+      "label": "Hiring / Talent",
+      "claims": [
+        {
+          "claim": "Junior technical pathways face pressure, but the evidence does not isolate an economy-wide AI effect",
+          "scope": "One AI employer, LinkedIn member hiring and OECD labor context",
+          "confidence": "Medium",
+          "horizons": [
+            {
+              "label": "This week vs. October 5–11",
+              "text": "Anthropic’s October 16 report is new evidence about 2025–26 company observations, not a measured change from last week. No comparable weekly employer panel supports a numerical hiring change here."
+            },
+            {
+              "label": "Near term · 1–3 months",
+              "text": "LinkedIn’s August release measures April–June 2026: US entry-level hiring fell 7.6% year over year, versus 6.9% overall. Its AI-augmented occupations showed a larger junior gap."
+            },
+            {
+              "label": "Structural · 6–24 months",
+              "text": "Anthropic’s junior technical hiring share fell while absolute technical hiring grew. OECD notes youth labor weakness predates widespread generative AI, making macro conditions a live alternative explanation."
+            },
+            {
+              "label": "Long run · 2–5 years and beyond",
+              "text": "The available evidence does not establish a lasting collapse in graduate opportunities. Cohort entry, promotion and retention need tracking across economic cycles."
+            }
+          ],
+          "interpretation": "Company-level seniority shifts deserve attention from students and employers, but lower junior shares are not a count of eliminated jobs. AI exposure, company growth and weak aggregate hiring overlap.",
+          "counterevidence": "Anthropic is an unusually AI-intensive employer. LinkedIn uses profile-reported starts and selective membership; occupations differ in AI exposure and business conditions. OECD’s broader geography does not rule out concentrated effects.",
+          "what_would_change": "Repeated employer and administrative cohorts that separate hiring, departures and promotion, with task exposure and macro controls and consistent definitions of junior roles.",
+          "evidence": [
+            "anthropic",
+            "linkedin",
+            "oecd"
+          ]
+        },
+        {
+          "claim": "AI-specialist growth can coexist with a weak overall hiring environment",
+          "scope": "US and selected LinkedIn markets; postings and hires kept separate",
+          "confidence": "Medium",
+          "horizons": [
+            {
+              "label": "This week vs. October 5–11",
+              "text": "Current board observations help establish a future baseline. They are not new hires and do not provide a complete October 12–18 versus October 5–11 comparison."
+            },
+            {
+              "label": "Near term · 1–3 months",
+              "text": "BLS reports September US payroll employment changed little (+29,000) and unemployment was 4.2%. August JOLTS reports 7.1 million month-end openings and 5.2 million monthly hires: a stock and a flow."
+            },
+            {
+              "label": "Structural · 6–24 months",
+              "text": "LinkedIn reports US entry-level AI Engineer hiring up 62% year over year in April–June even as overall hiring weakened. HAI/Lightcast posting data describes demand, not filled jobs."
+            },
+            {
+              "label": "Long run · 2–5 years and beyond",
+              "text": "A rising AI share may reflect growth in specialist roles, shrinkage elsewhere, or both. It does not establish an economy-wide talent shortage."
+            }
+          ],
+          "interpretation": "AI-related opportunity is uneven across roles and markets. Applicants should distinguish specialist growth from a broad improvement in the labor market, and employers should distinguish advertised demand from hiring difficulty.",
+          "counterevidence": "LinkedIn’s occupation results are platform-specific. BLS covers broader US populations and different months; it does not identify AI causation. Duplicate postings, reposting and employer mix can inflate demand indicators.",
+          "what_would_change": "Stable employer-panel histories with vacancy duration, filled roles, compensation and qualified-applicant evidence, corroborated by representative labor statistics.",
+          "evidence": [
+            "linkedin",
+            "bls-now",
+            "bls-jolts",
+            "hai-econ"
+          ]
+        },
+        {
+          "claim": "Long-run demand points to task and occupation shifts, not a uniform job forecast",
+          "scope": "US conditional projections and global survey expectations",
+          "confidence": "Medium",
+          "horizons": [
+            {
+              "label": "This week vs. October 5–11",
+              "text": "This week’s workplace report adds evidence of changing coordination and supervision inside one firm. It does not validate a national forecast."
+            },
+            {
+              "label": "Near term · 1–3 months",
+              "text": "No comparable internal 1–3 month hiring series is available for the complete employer panel. Routine board snapshots remain baseline observations."
+            },
+            {
+              "label": "Structural · 6–24 months",
+              "text": "McKinsey’s survey shows workforce-reduction expectations running ahead of reported reductions. Expectations about next year must not be treated as completed job losses."
+            },
+            {
+              "label": "Long run · 2–5 years and beyond",
+              "text": "BLS projects US employment up 3.5% over 2025–35, with data scientists up 34.6% and office/administrative support down 4.0%. These conditional ten-year occupational projections include demographic and economic forces beyond AI."
+            }
+          ],
+          "interpretation": "Domain judgment, evaluating outputs and coordinating tools are plausible areas of work redesign, not a proven universal skills premium. For education planning, occupation-specific demand and durable foundations are more informative than a single automation percentage.",
+          "counterevidence": "Forecasts can miss technology, policy and macro shocks. Company testimony does not measure whole-market skill returns; projected employment growth is neither actual hires nor a guaranteed career outcome.",
+          "what_would_change": "Revised official projections and repeated occupational outcome data, together with evidence on task content, wages and career progression rather than job-title counts alone.",
+          "evidence": [
+            "anthropic",
+            "mckinsey",
+            "bls-long"
+          ]
+        }
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "id": "hf",
+      "name": "Hugging Face Daily Papers — October 5–18 recommendations",
+      "url": "https://huggingface.co/papers",
+      "measurement": "Two retrospectively collected platform weeks, retrieved October 19; 361 and 355 unique IDs. Recommendation dates, not paper publication dates. Frozen title classifier; overlapping topics; metadata only."
+    },
+    {
+      "id": "muse",
+      "name": "Meta — Muse Wonder, October 12",
+      "url": "https://research.meta.ai/blog/muse-wonder",
+      "measurement": "Product announcement, with company-run evaluations; launch access differs between Wonder and Wonder Full. Developer documentation checked October 19."
+    },
+    {
+      "id": "argon",
+      "name": "Google Cloud — Gemini 4 Argon, October 13",
+      "url": "https://cloud.google.com/blog/products/ai-machine-learning/gemini-4-argon-available-on-google-cloud",
+      "measurement": "General availability announcement and introductory API pricing; customer examples and performance claims are publisher-reported, not a representative adoption survey."
+    },
+    {
+      "id": "argon-doc",
+      "name": "Google Cloud — Argon model documentation",
+      "url": "https://docs.cloud.google.com/gemini-enterprise-agent-platform/models/gemini/4-argon",
+      "measurement": "Checked October 19: model GA, computer use and Interactions API preview; shared input/output token budget."
+    },
+    {
+      "id": "spark",
+      "name": "Meta — Muse Spark Open model card and license",
+      "url": "https://huggingface.co/meta-models/Muse-Spark-Open-816B-A42B",
+      "measurement": "Weights released October 15, 2026. Muse Model License includes conditions; deployment memory requirements vary by precision. This is a separate event from Wonder."
+    },
+    {
+      "id": "beam",
+      "name": "Reflection — Beam weights available, October 16",
+      "url": "https://reflection.ai/blog/beam-is-available",
+      "measurement": "Weights released under Apache 2.0, distinct from October 5 announcement. Model, harness and API availability have separate statuses; API public beta."
+    },
+    {
+      "id": "deepseek",
+      "name": "DeepSeek — Flash-1017 and Search & Fetch, October 17",
+      "url": "https://api-docs.deepseek.com/news/news261017/",
+      "measurement": "Official model/tool release; performance improvements are developer-reported. An additional developer option, not proof of equal reliability or market share."
+    },
+    {
+      "id": "iowa",
+      "name": "Iowa — October 14 consumer-protection petition",
+      "url": "https://www.iowaattorneygeneral.gov/media/cms/261014_Petition_EC459B522F957.pdf",
+      "measurement": "Court pleading, not adjudicated facts. Introduction, causes of action and prayer for relief reviewed; safeguards and third-party verification are requested relief."
+    },
+    {
+      "id": "iowa-release",
+      "name": "Iowa Attorney General — eight-state announcement",
+      "url": "https://www.iowaattorneygeneral.gov/newsroom/attorney-general-brenna-bird-announces-lawsuit-against-openai-for-deceiving-iowa-parents-and-iowans",
+      "measurement": "October 14 government announcement of separate state actions; not a new federal regulation."
+    },
+    {
+      "id": "ap-response",
+      "name": "Associated Press via Spectrum — OpenAI response",
+      "url": "https://ny1.com/nyc/all-boroughs/ap-top-news/2026/10/15/states-sue-ai-giant-openai-saying-its-popular-chatbot-is-hurting-children-and-deceiving-adults",
+      "measurement": "AP reporting, originally October 15 and syndicated October 16. OpenAI says it has child protections and continues improvements; response is not independent safety validation."
+    },
+    {
+      "id": "anthropic",
+      "name": "Anthropic — Employment at Anthropic, October 16",
+      "url": "https://www.anthropic.com/research/employment-at-anthropic",
+      "measurement": "One AI-intensive employer; records from 2025–26, employee surveys and 17 interviews. Adoption is nonrandom; growth and workforce composition confound causal interpretation. Hiring and headcount shares have different denominators."
+    },
+    {
+      "id": "maryland",
+      "name": "University of Maryland — October 16 institutional response",
+      "url": "https://today.umd.edu/study-suggests-more-guidance-needed-in-use-of-ai-course-assistants",
+      "measurement": "Announcement discusses a Fall 2025 trial and an existing October 2026 working paper; October 16 is the announcement date, not the experiment date."
+    },
+    {
+      "id": "umd-paper",
+      "name": "Liu et al. — EdWorkingPaper 26-1598",
+      "url": "https://edsi.umd.edu/sites/default/files/ai26-1598.pdf",
+      "measurement": "Fall 2025 instructor-level blocked randomized access; 2,379 students/30 instructors after excluding three non-activating instructors; exact-course subset 1,353 students/22 instructors. Controls and course-section clustered inference. Mostly direct-answer configuration; low uptake, other AI access, grades and platform activity limit interpretation. Draft title page September 29, 2026; cover October 2026."
+    },
+    {
+      "id": "kestin",
+      "name": "Kestin et al. — structured physics tutoring RCT, 2025",
+      "url": "https://www.nature.com/articles/s41598-025-97652-6",
+      "measurement": "Harvard Fall 2023 physics class; 233 enrolled, 194 eligible. Two-lesson crossover comparing structured AI tutoring and active class instruction; immediate quizzes, not semester grades or long-run retention. Published May 2025."
+    },
+    {
+      "id": "hai-rd",
+      "name": "Stanford HAI — AI Index 2026, R&D chapter",
+      "url": "https://hai.stanford.edu/assets/files/ai_index_report_2026_chapter_1_research_development.pdf",
+      "measurement": "April 2026 report, predominantly 2025 observations; Epoch notable-model sample, not all models or papers. Figures 1.1.8–1.1.9 track access and training-code disclosure from 2014–25; changing inclusion and missing disclosure matter."
+    },
+    {
+      "id": "hai-econ",
+      "name": "Stanford HAI — AI Index 2026, Economy chapter",
+      "url": "https://hai.stanford.edu/assets/files/ai_index_report_2026_chapter_4_economy.pdf",
+      "measurement": "April 2026 report. Historical corporate adoption uses McKinsey surveys; job demand uses Lightcast; these are not independent replications of those providers. Postings, self-reported adoption and payroll employment are different populations."
+    },
+    {
+      "id": "mckinsey",
+      "name": "McKinsey — State of AI 2026",
+      "url": "https://www.mckinsey.com/capabilities/quantumblack/our-insights/the-state-of-ai",
+      "measurement": "Released August 2026; online survey May 4–June 8, 2026, 1,719 respondents in 97 nations, GDP-weighted. Respondents across organizations, not a population census or causal financial study. Enterprise scaling and agent scaling are different questions."
+    },
+    {
+      "id": "linkedin",
+      "name": "LinkedIn — AI Labor Market Update, August 2026",
+      "url": "https://delivery-p143253-e1476319.adobeaemcloud.com/adobe/assets/urn:aaid:aem:ef153078-1061-4817-82e7-a1c027d7a7d7/original/as/AI-Labor-Market-Update-August-2026-v2.pdf",
+      "measurement": "April–June 2026 year-over-year hiring comparisons in US, UK, France, Germany and India. Hiring rate is member-reported new-job starts divided by membership; selective coverage and reporting lags. Skill/profile trends include June observations from 2016–26; AI talent and possessing one AI skill are different definitions."
+    },
+    {
+      "id": "oecd",
+      "name": "OECD — young people, labor markets and AI, August 2026",
+      "url": "https://www.oecd.org/en/blogs/2026/08/young-people-labour-markets-and-ai-what-oecd-evidence-shows.html",
+      "measurement": "August 15 discussion of July 7 Employment Outlook 2026. Across OECD economies, youth weakness predates widespread generative AI; macro conditions and temporary contracts are alternative mechanisms."
+    },
+    {
+      "id": "bls-now",
+      "name": "BLS — September 2026 Employment Situation",
+      "url": "https://www.bls.gov/news.release/empsit.nr0.htm",
+      "measurement": "Released October 2. US household unemployment 4.2%; establishment nonfarm payroll change +29,000, seasonally adjusted. Different surveys, preliminary and revisable; no AI-causation identification."
+    },
+    {
+      "id": "bls-jolts",
+      "name": "BLS — August 2026 JOLTS",
+      "url": "https://www.bls.gov/news.release/jolts.nr0.htm",
+      "measurement": "Released September 29. US nonfarm openings 7.1 million at month-end; hires 5.2 million during month, seasonally adjusted. Stocks and flows are not comparable counts; revised estimates."
+    },
+    {
+      "id": "bls-long",
+      "name": "BLS — employment projections 2025–35",
+      "url": "https://www.bls.gov/news.release/ecopro.nr0.htm",
+      "measurement": "Released August 27, 2026. US model-based ten-year projections: total employment +3.5%; data scientists +34.6%; office/administrative support −4.0%. Conditional occupational demand, not realized hires or an AI-only effect."
+    }
+  ]
+}

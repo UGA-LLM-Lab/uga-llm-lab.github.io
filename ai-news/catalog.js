@@ -7,6 +7,13 @@
 window.AI_NEWS_CATALOG = {
   weeklyAnalyses: [
     {
+      id: "2026-10-12-to-2026-10-18",
+      label: "October 12–18, 2026",
+      data: "ai-news/weekly/2026-10-12-to-2026-10-18.json",
+      reviewSlug: "weekly-ai-october-12-18",
+      cover: "ai-news/2026-10/images/meta-muse-wonder-official.webp"
+    },
+    {
       id: "2026-10-05-to-2026-10-11",
       label: "October 5–11, 2026",
       data: "ai-news/weekly/2026-10-05-to-2026-10-11.json",
