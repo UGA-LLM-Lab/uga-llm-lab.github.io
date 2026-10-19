@@ -2,6 +2,302 @@ window.AI_NEWS_MONTH_DATA["2026-10"] = {
   "label": "October 2026",
   "articles": [
     {
+      "slug": "microsoft-nscale-loughton-contract-reported-cancellation",
+      "category": "Industry · Infrastructure",
+      "sortDate": "2026-10-18",
+      "dateLabel": "October 18, 2026",
+      "title": "Microsoft reportedly exits Nscale’s planned 23,000-GPU UK project",
+      "summary": "Reuters relayed the Telegraph’s report of a terminated Loughton agreement. Nscale says its wider Microsoft contracts remain unaffected and it is exploring alternative power for the site.",
+      "image": {
+        "src": "ai-news/2026-10/images/nscale-loughton-source.jpg",
+        "alt": "Nscale’s official illustration of its planned Loughton data center",
+        "caption": "Nscale’s promotional illustration of the Loughton project. Source: Nscale. It does not establish that the planned site is operating."
+      },
+      "content": [
+        {
+          "type": "paragraph",
+          "text": "Microsoft has exited Nscale’s planned Loughton data-center agreement, the Telegraph reported on October 18, according to Reuters. Microsoft declined to comment. The original plan called for roughly 23,000 NVIDIA GB300 GPUs serving Azure."
+        },
+        {
+          "type": "paragraph",
+          "text": "Nscale told Reuters that the grid issue leaves its other Microsoft contracts unaffected. It remains committed to Loughton and is exploring alternative power. The response supplies neither a replacement customer nor a revised opening date."
+        },
+        {
+          "type": "heading",
+          "text": "A power schedule behind a GPU commitment"
+        },
+        {
+          "type": "paragraph",
+          "text": "The Telegraph described repeated delays and grid officials anticipating electricity only in the 2030s, Reuters reported. It did not specify Microsoft’s reason for withdrawing. A direct causal explanation therefore remains unconfirmed."
+        },
+        {
+          "type": "paragraph",
+          "text": "Nscale’s original October 15, 2025 announcement described Loughton as a 50 MW facility with room to scale to 90 MW. It targeted the roughly 23,000-GPU deployment from the first quarter of 2027. Those figures describe the original plan, rather than capacity now available. They also show why a much later electricity connection would change the practical usefulness of that schedule."
+        },
+        {
+          "type": "paragraph",
+          "text": "Megawatts and GPU counts measure different parts of the project. The former specifies electrical capacity; the latter describes the computing equipment intended for installation. A GPU supply agreement alone does not establish that the buildings, power and cooling needed to operate that equipment are ready. Nscale’s current infrastructure page describes Loughton’s planned high-density design, direct-liquid cooling and fibre connectivity, without supplying a new operating date. For Loughton specifically, the company also describes proximity to London’s financial district and planned reuse of waste heat and water. Those design features identify the intended facility; they do not demonstrate that a grid connection has been secured."
+        },
+        {
+          "type": "heading",
+          "text": "The report concerns one site within a larger agreement"
+        },
+        {
+          "type": "paragraph",
+          "text": "The 2025 announcement covered approximately 200,000 GB300 GPUs across four countries. Alongside Loughton, it set out about 104,000 GPUs in Texas, 12,600 in Portugal and 52,000 in Norway. The Texas plan contemplated an initial roughly 240 MW campus and phased Microsoft services from the third quarter of 2026. These are the company’s previously announced commitments, not a fresh audit of delivery at each location."
+        },
+        {
+          "type": "paragraph",
+          "text": "The original rollout combined Nscale-owned operations with its Aker joint venture and collaboration with Dell Technologies. That structure spans distinct facilities and delivery arrangements. A change at the UK campus cannot, by itself, establish the status of contracts delivered through the other sites or operating entities."
+        },
+        {
+          "type": "paragraph",
+          "text": "Reuters places the report ahead of Nscale’s planned US listing, after a September filing, with Microsoft and Anthropic expected to be major customers. The reported exit concerns one site; its commercial terms and any equipment-reallocation plan remain undisclosed in the cited material."
+        }
+      ],
+      "sources": [
+        {
+          "label": "Reuters updated October 18 report, with Nscale’s response, carried by Schwab",
+          "url": "https://www.schwab.wallst.com/schwab/Prospect/research/stocks/news.asp?doc=3200-nL1N464021-2&symbol=MSFT"
+        },
+        {
+          "label": "Nscale’s original October 15, 2025 Microsoft agreement",
+          "url": "https://www.nscale.com/press-releases/nscale-microsoft-2025"
+        },
+        {
+          "label": "Nscale’s current infrastructure descriptions, including Loughton",
+          "url": "https://www.nscale.com/ai-infrastructure"
+        }
+      ]
+    },
+    {
+      "slug": "vllm-032-structured-decisions-serving-memory",
+      "category": "Industry · Open Source",
+      "sortDate": "2026-10-18",
+      "dateLabel": "October 18, 2026",
+      "title": "vLLM 0.32.0 adds structured decisions and reduces serving memory",
+      "summary": "The open-source serving engine adds a decision API, broader low-precision caching and new model support. Its release also changes Python requirements and browser-access defaults.",
+      "image": {
+        "src": "ai-news/2026-10/images/vllm-official-logo-source.png",
+        "alt": "The vLLM project’s yellow and blue symbol",
+        "caption": "Official vLLM project logo. Source: vLLM’s repository."
+      },
+      "content": [
+        {
+          "type": "paragraph",
+          "text": "The vLLM project released version 0.32.0 on October 18, adding a built-in API for structured decisions and expanding ways to reduce the memory used when serving AI models. The release includes 814 commits from 363 contributors. Published packages and container images make the update available now, alongside changes that operators need to review before upgrading."
+        },
+        {
+          "type": "paragraph",
+          "text": "vLLM is an open-source inference engine: it runs model weights and serves requests from applications. Its work includes batching requests, managing attention memory and scheduling computation. The project began at UC Berkeley’s Sky Computing Lab and is now maintained across companies and academic institutions. This release changes that serving software; it does not introduce a new foundation model."
+        },
+        {
+          "type": "heading",
+          "text": "A direct interface for choosing among alternatives"
+        },
+        {
+          "type": "paragraph",
+          "text": "The new /v1/systemone endpoint lets an application submit a structured state and questions about it. A developer can, for example, ask which department a support message concerns, supplying the permitted labels rather than asking for a free-form response. The implementation returns a selected answer and probabilities for the alternatives. The original implementation notes that these probabilities are uncalibrated, so applications should not assume they measure the real-world chance that an answer is correct."
+        },
+        {
+          "type": "paragraph",
+          "text": "Version 0.32.0 also adds generic tool and reasoning parsers that read a checkpoint’s response_template. Models supplying that template can describe their response format without requiring a separate parser for each model. The release expands support for models including EmbeddingGemma 2, MiniCPM-V 4.7 and Nemotron 3.5 ASR. The ASR integration handles complete audio; native real-time streaming is not yet supported."
+        },
+        {
+          "type": "heading",
+          "text": "Memory savings come with workload-specific tradeoffs"
+        },
+        {
+          "type": "paragraph",
+          "text": "The key-value cache stores attention information from earlier tokens so a model can continue generating efficiently. Quantizing it uses lower-precision numbers to reduce memory consumption, potentially leaving room for more concurrent requests or longer contexts. vLLM’s documentation describes calibration options and different scaling schemes; the appropriate configuration depends on the model and attention backend."
+        },
+        {
+          "type": "paragraph",
+          "text": "One included GLM-5.3 change makes FP8 caching the default on SM100 hardware. Its pull request reports throughput gains of 2.3–5.5% across concurrency levels of one, four and sixteen, using synthetic prompts of 8,000 tokens and outputs of 1,000 tokens. Time to first token increased by roughly 7–11%. At the reported 458,880-token cache budget, memory fell from 40.13 to 20.69 GiB per rank. These are contributor measurements for that configuration, not a general speedup guarantee."
+        },
+        {
+          "type": "heading",
+          "text": "An upgrade with deployment changes"
+        },
+        {
+          "type": "paragraph",
+          "text": "Python 3.10 support is dropped, and cross-origin browser access is restricted by default. The release also includes security fixes and limits untrusted images to raster formats. Teams exposing a browser application through a separate origin should check their access configuration as part of the upgrade."
+        },
+        {
+          "type": "paragraph",
+          "text": "Operators can use the versioned 0.32.0 container images or Python packages, choosing the appropriate hardware build. The installation guide recommends a fresh environment because compiled kernels and PyTorch builds can be incompatible across configurations. For existing deployments, the practical evaluation is both functional and operational: verify required models, request formats, memory use and first-token latency on the workload the service actually runs."
+        }
+      ],
+      "sources": [
+        {
+          "label": "vLLM 0.32.0 release notes and artifacts",
+          "url": "https://github.com/vllm-project/vllm/releases/tag/v0.32.0"
+        },
+        {
+          "label": "vLLM project background and serving features",
+          "url": "https://github.com/vllm-project/vllm"
+        },
+        {
+          "label": "Structured decisions implementation and probability limits",
+          "url": "https://github.com/vllm-project/vllm/pull/59299"
+        },
+        {
+          "label": "GLM-5.3 FP8 cache measurements and tradeoffs",
+          "url": "https://github.com/vllm-project/vllm/pull/60140"
+        },
+        {
+          "label": "Versioned quantized-cache documentation",
+          "url": "https://docs.vllm.ai/en/v0.32.0/features/quantization/quantized_kvcache/"
+        },
+        {
+          "label": "Versioned installation and compatibility guidance",
+          "url": "https://docs.vllm.ai/en/v0.32.0/getting_started/installation/gpu/"
+        },
+        {
+          "label": "Versioned structured-decisions API and limits",
+          "url": "https://docs.vllm.ai/en/v0.32.0/serving/online_serving/structured_decisions/"
+        }
+      ]
+    },
+    {
+      "slug": "anthropic-public-benefit-fund-equity-proposal",
+      "category": "Industry · Governance",
+      "sortDate": "2026-10-18",
+      "dateLabel": "October 18, 2026",
+      "title": "Anthropic proposes a 5% equity stake for a public-benefit fund",
+      "summary": "The proposal requires stockholder approval and allows discretionary increases as the company grows. The new entity would be a wholly owned LLC, with governance details still to come.",
+      "image": {
+        "src": "ai-news/2026-10/images/anthropic-public-benefit-fund-source.jpg",
+        "alt": "Anthropic’s illustration accompanying its Public Benefit Fund announcement",
+        "caption": "Official announcement artwork. Source: Anthropic."
+      },
+      "content": [
+        {
+          "type": "paragraph",
+          "text": "Anthropic announced a Public Benefit Fund on October 18, proposing to commit 5% of its shares subject to stockholder approval. The board could add another two percentage points for each 50% increase in company value above a baseline. Those additions would be discretionary, rather than automatic."
+        },
+        {
+          "type": "paragraph",
+          "text": "The fund would be a wholly owned LLC, with possible uses including nonprofit donations and distributions to particular populations. Anthropic says the LLC’s equity would not support lobbying or political giving. More information about governance and valuation milestones is due in the coming months; the announcement does not identify recipients or a payment timetable."
+        },
+        {
+          "type": "paragraph",
+          "text": "Including earlier founder and employee donation commitments, Anthropic puts the combined public-good share at roughly 20%. That is not the stake assigned to this new fund alone. Nor is an equity commitment the same as cash already distributed: eventual resources depend on how the shares are held, valued and used."
+        },
+        {
+          "type": "heading",
+          "text": "A separate commitment from its economic research program"
+        },
+        {
+          "type": "paragraph",
+          "text": "The announcement points to labor-market disruption as one possible area of work. It builds alongside the $200 million Economic Futures Research Fund announced in July, which finances external research on responses to AI’s economic effects. The October proposal does not describe a new $200 million cash allocation."
+        },
+        {
+          "type": "paragraph",
+          "text": "The July research agenda covers workplace design, worker transitions, income support, worker stakes in AI-driven growth and public investment. It seeks large field experiments, pilots and program evaluations that can test interventions, rather than assuming a particular forecast of job displacement is already established."
+        },
+        {
+          "type": "paragraph",
+          "text": "That existing program primarily targets projects in the $5 million–$30 million range and does not directly fund proposals below $1 million. Universities, independent research institutes, policy organizations and experienced nonprofits can apply through their institutions. These are terms of the earlier research program; they should not be read as application rules for the new equity fund."
+        },
+        {
+          "type": "paragraph",
+          "text": "The distinction matters for prospective partners and workers following the announcement. There is an existing research-funding route with stated eligibility, and a separate proposed equity vehicle whose allocation process remains undisclosed. The new proposal sets out a way to reserve part of the company’s future value for public-benefit uses. It does not yet establish how much support any worker or organization will receive."
+        }
+      ],
+      "sources": [
+        {
+          "label": "Anthropic’s October 18 Public Benefit Fund announcement",
+          "url": "https://www.anthropic.com/news/public-benefit-fund"
+        },
+        {
+          "label": "July 22 Economic Futures Research Fund agenda and eligibility",
+          "url": "https://www.anthropic.com/news/economic-futures-research-fund-agenda"
+        }
+      ]
+    },
+    {
+      "slug": "x-anylabeling-42-pcd-remote-grounding",
+      "category": "Industry · Research Tools",
+      "sortDate": "2026-10-18",
+      "dateLabel": "October 18, 2026",
+      "title": "X-AnyLabeling 4.2 adds PCD files and remote grounding workflows",
+      "summary": "The annotation app adds another point-cloud format and documents eight tasks using GroundingPI and GroundAnything models. GUI grounding returns annotations; it does not operate the computer.",
+      "image": {
+        "src": "ai-news/2026-10/images/x-anylabeling-point-cloud-source.png",
+        "alt": "X-AnyLabeling’s official screenshot of its 3D point-cloud annotation workspace",
+        "caption": "Official workspace screenshot: CVHub/X-AnyLabeling, using KITTI data by Andreas Geiger, Philip Lenz and Raquel Urtasun (CC BY-NC-SA 3.0). This existing interface is extended by version 4.2.0."
+      },
+      "content": [
+        {
+          "type": "paragraph",
+          "text": "CVHub released X-AnyLabeling 4.2.0 on October 18, extending its desktop annotation application with PCD point-cloud files and expanded remote grounding workflows. The update packages support for PCD versions 0.5 and 0.7 and adds setup guides for GroundingPI, GroundAnything and GroundAnything-VLM. It is a software integration release, rather than an announcement of newly trained foundation models."
+        },
+        {
+          "type": "paragraph",
+          "text": "PCD support covers ASCII, binary and binary-compressed files, including optional intensity and packed RGB or RGBA colour values. The release also supports PCD inputs in point-cloud export workflows. A user requested the format on October 16, when the maintainer marked the implementation complete; October 18 is the date of the packaged 4.2.0 release. The broader 3D annotation workspace was announced earlier."
+        },
+        {
+          "type": "heading",
+          "text": "Prompts become boxes and points for review"
+        },
+        {
+          "type": "paragraph",
+          "text": "The grounding integration connects the annotation interface to a configured X-AnyLabeling-Server. Users open an image, choose Remote-Server and select a model. The documented tasks include object detection, referring-expression grounding, pointing, category-based object points, optical character recognition, document layout, GUI grounding and visual prompting. A description can locate a particular object, while category names can request instances of a class."
+        },
+        {
+          "type": "paragraph",
+          "text": "The distinction between annotation and action is explicit for GUI grounding. Given a screenshot and an instruction identifying a control, the adapter returns a point marking that target; it does not click the control. Visual prompting instead uses a reference rectangle to find similar objects. Text-prompt tasks can process image folders, but visual prompting requires reference boxes for each image."
+        },
+        {
+          "type": "heading",
+          "text": "A separate model server and human checks remain necessary"
+        },
+        {
+          "type": "paragraph",
+          "text": "The quick-start guide identifies remote inference as an advanced feature requiring installation from the Git repository and additional server configuration. The server’s model configuration selects the weights and device; users with limited GPU memory are advised to enable one model at a time. A desktop installer alone is therefore not the complete setup for these remote model workflows."
+        },
+        {
+          "type": "paragraph",
+          "text": "The project documents CPU and CUDA installation options and recommends Python 3.12 within its supported 3.11–3.13 range. Packaged desktop builds cover Windows, Linux and macOS, with separate hardware variants. The release notes advise building from source if a precompiled build is incompatible with a particular system. The application is distributed under GPLv3; model deployment has its own dependencies and requirements."
+        },
+        {
+          "type": "paragraph",
+          "text": "For point-cloud work, the existing interface supports semantic classes, individual object instances and camera references, with tools for reviewing and correcting annotations. Those capabilities give the new file format an established editing workflow. The release supplies no comparative measurement showing how much annotation time the added integrations save, so their practical value remains something dataset teams need to assess on their own data."
+        },
+        {
+          "type": "paragraph",
+          "text": "The grounding guide warns that the models can identify targets that are absent, misread text or confuse nearby interface controls. It provides no confidence-score controls for these adapters. Dataset builders still need to inspect predictions before accepting them as labels."
+        }
+      ],
+      "sources": [
+        {
+          "label": "X-AnyLabeling 4.2.0 release and artifacts",
+          "url": "https://github.com/CVHub520/X-AnyLabeling/releases/tag/v4.2.0"
+        },
+        {
+          "label": "PCD feature request and implementation timing",
+          "url": "https://github.com/CVHub520/X-AnyLabeling/issues/1468"
+        },
+        {
+          "label": "Grounding model tasks, workflow and limitations",
+          "url": "https://github.com/CVHub520/X-AnyLabeling/blob/v4.2.0/examples/grounding/groundingpi/README.md"
+        },
+        {
+          "label": "Installation and remote-inference requirements",
+          "url": "https://github.com/CVHub520/X-AnyLabeling/blob/v4.2.0/docs/en/get_started.md"
+        },
+        {
+          "label": "Point-cloud workspace documentation",
+          "url": "https://github.com/CVHub520/X-AnyLabeling/blob/v4.2.0/docs/en/point_cloud.md"
+        },
+        {
+          "label": "Project scope and software licence",
+          "url": "https://github.com/CVHub520/X-AnyLabeling"
+        }
+      ]
+    },
+    {
       "slug": "deepseek-flash-1017-search-fetch-release",
       "category": "Industry · Open Models",
       "sortDate": "2026-10-17",
