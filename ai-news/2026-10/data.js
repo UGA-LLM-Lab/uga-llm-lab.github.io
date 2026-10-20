@@ -2,6 +2,361 @@ window.AI_NEWS_MONTH_DATA["2026-10"] = {
   "label": "October 2026",
   "articles": [
     {
+      "slug": "perplexity-computer-fully-local-mac",
+      "category": "Industry · Local AI",
+      "sortDate": "2026-10-20",
+      "dateLabel": "October 20, 2026",
+      "title": "Perplexity brings fully local Computer tasks to Apple silicon Macs",
+      "summary": "The Mac release can run both the model and the agent directing a task on the device. Users can choose local processing or a hybrid workflow, with 36 GB of unified memory recommended for fully local use.",
+      "image": {
+        "src": "ai-news/2026-10/images/perplexity-computer-fully-local-mac-official.png",
+        "alt": "Perplexity’s release artwork showing a Mac mini against a glowing planetary backdrop",
+        "caption": "Official artwork accompanying the October 20 local Computer announcement. This is promotional imagery, rather than a screenshot of task execution. Source: Perplexity."
+      },
+      "content": [
+        {
+          "type": "paragraph",
+          "text": "Perplexity announced on October 20 that Computer can run fully locally on supported Apple silicon Macs. The change brings the model, the agent directing the work and task execution onto the machine. It is available through the latest Perplexity Mac app for Pro, Max and Enterprise subscribers, with a choice of Qwen3.6 or PPLX Pro, Perplexity’s post-trained Qwen model. The company recommends at least 36 GB of unified memory for the fully local option."
+        },
+        {
+          "type": "heading",
+          "text": "The agent can stay on the device"
+        },
+        {
+          "type": "paragraph",
+          "text": "The location of the coordinating agent matters as much as the location of an individual model call. An agent may inspect a file, decide which tool to use, read the result and plan another action. Perplexity says the fully local setting keeps that planning and execution loop on the Mac, allowing work across private documents and native applications. Its examples include updating a workbook, assembling a presentation and working with Notes, Mail and Messages."
+        },
+        {
+          "type": "paragraph",
+          "text": "The accompanying product page illustrates a portfolio review using files and market data already downloaded to a Mac. The model analyzes those materials, updates a workbook and builds a meeting deck for review. This is a company demonstration of the workflow, with no independent completion-rate or latency measurement provided in the announcement. It shows the intended division of work more clearly than a model’s ability to answer a single prompt."
+        },
+        {
+          "type": "heading",
+          "text": "Local and hybrid use have different boundaries"
+        },
+        {
+          "type": "paragraph",
+          "text": "Users can also select Hybrid Compute, which Perplexity introduced in September. In that arrangement, cloud models handle research and reasoning while the Mac processes private files. An on-device Privacy Gate can keep information local, mask personal details or request approval before sharing. The current product page recommends 32 GB of unified memory for hybrid use. Both memory figures are recommendations; the page says software and memory requirements depend on the selected mode."
+        },
+        {
+          "type": "paragraph",
+          "text": "The October release also allows a locally orchestrated task to request authorized help from cloud models when it needs current information, browser use or connected applications. That makes the selected route important when assessing where information travels. The product page separately explains that sending a message or meeting invitation still uses the relevant application’s service. Local AI processing describes the computation; delivering an email remains a network action."
+        },
+        {
+          "type": "heading",
+          "text": "A practical choice for private-file workflows"
+        },
+        {
+          "type": "paragraph",
+          "text": "For a research group, this creates a concrete way to evaluate an assistant on a folder of local material while keeping the AI processing on a supported machine. The first setup steps are to install the Mac app, download a local model and choose fully local or hybrid execution. File and application permissions determine which material and actions the assistant can reach, while human review remains part of the demonstrated document and presentation workflows."
+        },
+        {
+          "type": "paragraph",
+          "text": "The useful comparison is therefore a complete task performed under the intended data restrictions. A lab can check whether the assistant finds the relevant material, produces an accurate artifact and uses the expected tools without an unexpected cloud step. Hardware capacity, the selected local model and access to external information can each change that result. Today’s release expands the execution options available to subscribers; it supplies a workflow to evaluate rather than a published guarantee of task reliability."
+        }
+      ],
+      "sources": [
+        {
+          "label": "Perplexity — October 20 fully local Computer announcement",
+          "url": "https://www.perplexity.ai/hub/blog/perplexity-computer-now-runs-fully-local-on-mac"
+        },
+        {
+          "label": "Perplexity — local and hybrid modes, setup and memory recommendations",
+          "url": "https://www.perplexity.ai/hub/products/hybrid-compute"
+        },
+        {
+          "label": "Perplexity — September 1 Hybrid Compute background",
+          "url": "https://www.perplexity.ai/hub/blog/introducing-hybrid-compute-on-mac"
+        }
+      ]
+    },
+    {
+      "slug": "openai-acquires-orchestra-bio-rosalind",
+      "category": "Industry · AI for Science",
+      "sortDate": "2026-10-20",
+      "dateLabel": "October 20, 2026",
+      "title": "OpenAI acquires Orchestra Bio to connect Rosalind with drug-program coordination",
+      "summary": "Orchestra’s team and technology are joining OpenAI’s life-sciences effort. The platform tracks studies, dependencies and timelines so scientists and program leaders can decide how to respond when a development program changes.",
+      "image": {
+        "src": "ai-news/2026-10/images/openai-orchestra-bio-official-announcement.png",
+        "alt": "Orchestra Bio’s public announcement page stating that the company is joining OpenAI",
+        "caption": "Unaltered screenshot of Orchestra Bio’s public acquisition announcement, captured October 20. Source: Orchestra Bio."
+      },
+      "content": [
+        {
+          "type": "paragraph",
+          "text": "OpenAI said on October 20 that it has acquired Orchestra Bio, a platform for coordinating drug-development programs. Orchestra’s team and technology are joining Rosalind, OpenAI’s life-sciences models and tools. The announcement connects scientific analysis with the operational work needed to move a potential medicine through development. Neither company’s inspected announcement discloses the acquisition price, transaction economics or a timetable for delivering a combined product."
+        },
+        {
+          "type": "heading",
+          "text": "Connecting findings with the next study"
+        },
+        {
+          "type": "paragraph",
+          "text": "OpenAI describes three complementary roles. GPT-Rosalind helps researchers reason through biology and chemistry questions. Rosalind Workbench connects that capability with scientific tools and data for analyzing results and planning experiments. Orchestra contributes program coordination: keeping track of the studies, decisions and dependencies that determine what can happen next. The acquisition brings these capabilities into the same effort, with the stated goal of supporting the broader process of developing medicines."
+        },
+        {
+          "type": "paragraph",
+          "text": "In its own announcement, Orchestra says it began four years ago to help biotechnology and pharmaceutical teams manage programs spanning discovery, preclinical work, manufacturing and clinical development. Those programs involve many linked decisions across teams. The company presents agents as a way to help with planning, orchestration and analysis, while scientists and program leaders retain responsibility for the decisions. That description identifies the operational problem the team is bringing to OpenAI."
+        },
+        {
+          "type": "heading",
+          "text": "Why dependencies matter"
+        },
+        {
+          "type": "paragraph",
+          "text": "OpenAI gives a manufacturing setback as an example. A failed batch can affect the start of a clinical trial. Orchestra’s agents help identify the activities and timelines touched by the problem, collect relevant information and compare possible responses. People then decide what to do. This example describes the intended workflow; the acquisition announcement does not report a controlled evaluation of how accurately agents trace those dependencies or how much time they save."
+        },
+        {
+          "type": "paragraph",
+          "text": "The practical distinction is between producing an answer about a scientific result and maintaining an accurate view of a changing program. A useful coordination system must connect the result to the relevant study, responsible team and next decision. If an input changes, the consequences need to remain traceable. Combining scientific reasoning with program tracking could make those connections easier to inspect, but the quality of that connection depends on the underlying records and the review process."
+        },
+        {
+          "type": "heading",
+          "text": "The evidence needed for a combined system"
+        },
+        {
+          "type": "paragraph",
+          "text": "OpenAI frames the acquisition as a step toward helping discoveries become treatments sooner. Evidence for that ambition would need to follow actual development work: whether the system identifies consequential changes, reaches the right people and supports better decisions over time. An acquisition and a description of agent capabilities establish the direction of the product effort. They do not establish a shorter development timeline or an improved patient outcome."
+        },
+        {
+          "type": "paragraph",
+          "text": "For researchers following AI for science, Orchestra adds a coordination layer to a story often centered on models and experimental analysis. The immediate news is the completed acquisition and the integration of a team with experience in biotechnology, software and AI. The next concrete milestones to watch are what combined tools become available, which parts of a program they can access and how their recommendations and changes can be checked against the scientific record."
+        }
+      ],
+      "sources": [
+        {
+          "label": "OpenAI — October 20 acquisition announcement",
+          "url": "https://openai.com/index/openai-to-acquire-orchestra-bio/"
+        },
+        {
+          "label": "Orchestra Bio — counterparty announcement and platform scope",
+          "url": "https://orchestra.bio/"
+        }
+      ]
+    },
+    {
+      "slug": "amd-intel-pytorch-onednn-cpu-optimization",
+      "category": "Industry · AI Infrastructure",
+      "sortDate": "2026-10-20",
+      "dateLabel": "October 20, 2026",
+      "title": "AMD and Intel align PyTorch CPU optimization around oneDNN",
+      "summary": "AMD plans to integrate ZenDNN optimizations into the shared library and has joined the UXL Foundation as a steering member. The companies also describe future PyTorch support for their AI Compute Extensions.",
+      "image": {
+        "src": "ai-news/2026-10/images/onednn-official-repository-20261020.png",
+        "alt": "Official GitHub preview for the UXL Foundation’s oneDNN deep learning library",
+        "caption": "The official oneDNN repository preview, retrieved October 20. It identifies the existing project around which AMD and Intel plan to combine their PyTorch CPU optimization work. Source: UXL Foundation / GitHub."
+      },
+      "content": [
+        {
+          "type": "paragraph",
+          "text": "AMD and Intel announced on October 20 that they are combining their x86 CPU optimization work for PyTorch around oneDNN. AMD is integrating its ZenDNN optimizations into the open-source library and has joined the Unified Acceleration Foundation, or UXL, as a steering member. Following a recommendation from the x86 Ecosystem Advisory Group, the companies have aligned on oneDNN as the default open-source library for x86 acceleration within PyTorch."
+        },
+        {
+          "type": "paragraph",
+          "text": "The stated goal is a common software path for applications running across AMD and Intel processors. CPU-specific optimization can otherwise leave developers maintaining separate integration and tuning work for different machines. A shared library gives that engineering a common destination while allowing implementations to specialize for the hardware. The announcement establishes the collaboration and intended direction; it does not identify a PyTorch release that completes the ZenDNN integration."
+        },
+        {
+          "type": "heading",
+          "text": "What oneDNN does"
+        },
+        {
+          "type": "paragraph",
+          "text": "oneDNN supplies optimized building blocks used inside deep learning frameworks, including matrix multiplication, convolution, attention and normalization. Its repository describes runtime detection of processor features and just-in-time generation of kernels specialized for the supported instruction set, core count and cache configuration. Frameworks can use those operations beneath a familiar application interface, so an application can benefit from lower-level improvements without implementing each mathematical kernel itself."
+        },
+        {
+          "type": "paragraph",
+          "text": "The existing project is governed through UXL and is released under Apache License 2.0. Its documentation lists PyTorch, TensorFlow, OpenVINO and other systems among its users. It also documents support beyond x86 CPUs. Those are properties of the current oneDNN project; today’s AMD–Intel announcement specifically concerns bringing the companies’ x86 CPU optimization work together for PyTorch. AMD says it will continue optimizing for its own processors while contributing through the common path."
+        },
+        {
+          "type": "heading",
+          "text": "Future instructions remain a separate milestone"
+        },
+        {
+          "type": "paragraph",
+          "text": "The companies are also collaborating on AI Compute Extensions, or ACE, a planned x86 instruction-set extension designed to accelerate matrix multiplication. Their announcements describe integration with PyTorch through future oneDNN updates. Instruction support, a library implementation and a framework build are connected pieces of that path. The announcements provide no general speedup number and do not show that every existing CPU or PyTorch installation gains ACE capability today."
+        },
+        {
+          "type": "paragraph",
+          "text": "For a lab maintaining CPU inference or other PyTorch workloads across different servers, the most immediate benefit to watch is simpler deployment and maintenance. A common upstream destination can reduce duplicated compatibility work and make improvements easier to carry between supported systems. Actual performance will still depend on the operators a model uses, data types, threading, memory behavior and the installed framework build. The collaboration alone cannot determine those outcomes for a particular workload."
+        },
+        {
+          "type": "heading",
+          "text": "How to assess the change"
+        },
+        {
+          "type": "paragraph",
+          "text": "The practical checkpoints are published library and framework versions, the supported processor features and measurements on representative applications. Comparing the same model and inputs across machines can establish whether an updated build improves elapsed time, throughput or resource use. Keeping the software versions and execution settings with those results makes the comparison useful. Today’s announcement gives developers a clearer shared direction for x86 optimization, with the delivery and performance of individual changes to be assessed as they arrive."
+        }
+      ],
+      "sources": [
+        {
+          "label": "AMD — October 20 collaboration, ZenDNN contribution and ACE plans",
+          "url": "https://newsroom.amd.com/news/amd-intel-collaborate-simplify-ai-development-on-x86-cpus-pytorch/"
+        },
+        {
+          "label": "Intel — common PyTorch software path and future instruction support",
+          "url": "https://www.intel.com/content/www/us/en/newsroom/news/data-center/amd-intel-simplify-x86-ai-development-with-pytorch.html"
+        },
+        {
+          "label": "UXL Foundation — oneDNN operations, hardware dispatch and licensing",
+          "url": "https://github.com/uxlfoundation/oneDNN"
+        }
+      ]
+    },
+    {
+      "slug": "ai2-fairstress-decision-fairness-benchmark",
+      "category": "Research · AI Evaluation",
+      "sortDate": "2026-10-20",
+      "dateLabel": "October 20, 2026",
+      "title": "Ai2 releases FairStress to test how equally models defend their decisions",
+      "summary": "The benchmark varies demographic signals and matched persuasive prompts across 300 synthetic scenarios. Its technical report finds larger differences in resistance to pressure than in baseline answer accuracy, with limits tied to the benchmark’s equality-based definition.",
+      "image": {
+        "src": "ai-news/2026-10/images/fairstress-official-degree-ladder.png",
+        "alt": "FairStress Figure 2 plotting accuracy, robustness and tie-breaking measures across four levels of demographic signaling",
+        "caption": "Original FairStress Figure 2 from the authors’ pinned repository. The pink line summarizes 15 full-corpus models; the green line marks each metric’s equality reference. These are synthetic benchmark results. Source: Zahraei and colleagues / Ai2."
+      },
+      "content": [
+        {
+          "type": "paragraph",
+          "text": "Ai2 introduced FairStress on October 20, releasing a benchmark for examining demographic fairness beyond a model’s final choice. The accompanying technical report, by researchers at Ai2, the University of Illinois Urbana-Champaign and Carnegie Mellon University, tests how models hold and explain decisions when demographic information and persuasive pressure change. The release includes data and code. The findings come from controlled synthetic scenarios, with no measurement of discrimination rates among real applicants or patients."
+        },
+        {
+          "type": "heading",
+          "text": "One decision, several ways to probe it"
+        },
+        {
+          "type": "paragraph",
+          "text": "The benchmark starts with 300 two-candidate scenarios across 29 domains, including hiring, housing and healthcare. Some cases have a stronger candidate under the specified criteria; others contain an intended tie. Identity information ranges from none to a coded name, an implicit background cue or an explicit demographic label. The researchers swap candidate order and identity assignments, then add matched sentences that argue for one candidate or the other."
+        },
+        {
+          "type": "paragraph",
+          "text": "These combinations produce roughly 13 million rendered test items, alongside a smaller Core subset. They remain variants of 300 base scenarios rather than millions of independent human decisions. The report describes model-generated cases followed by validation and human review. In a separate check of 200 scenario pairs, majorities of three annotators agreed with the intended answer on 94% of clear-answer pairs and with the intended tie on 90% of ambiguous pairs."
+        },
+        {
+          "type": "heading",
+          "text": "Pressure exposes a different gap"
+        },
+        {
+          "type": "paragraph",
+          "text": "For minority-versus-majority comparisons with explicit identity labels, the report gives an average baseline accuracy gap of 2.9 percentage points across 15 models evaluated on the full corpus. Its conditional robustness gap is larger, at 9.3 points: among matched cases answered correctly before pressure, a sentence favoring the weaker candidate changes decisions unequally depending on which demographic group benefits. A separate tie-breaking measure reports a 23.9-point difference in directional switching."
+        },
+        {
+          "type": "paragraph",
+          "text": "Those figures describe the authors’ specified prompts, scoring and equality reference. They do not establish a universal direction of model bias. The report also shows that changing the wording and scoring of an existing benchmark can change the measured direction. Its definition asks for equal treatment when decision-relevant facts are held constant; the authors explicitly distinguish that standard from equity-based approaches that can account for historical disadvantage."
+        },
+        {
+          "type": "heading",
+          "text": "Mitigation and reproducibility need care"
+        },
+        {
+          "type": "paragraph",
+          "text": "Nine post-hoc interventions did not consistently remove the asymmetry. Asking a model to reconsider the case with identities swapped came closest to reducing the robustness gap while preserving accuracy on FairStress, although capability costs appeared on other tasks. Some activation-steering approaches narrowed a gap while substantially reducing correct decisions. This makes accuracy, refusals, position preferences and robustness useful to inspect together rather than treating any single small gap as sufficient evidence of improvement."
+        },
+        {
+          "type": "paragraph",
+          "text": "Version details also matter. The October 20 report describes a 50,012-item Core subset, while an older public Core card lists 48,005 items after corrections and says that dataset has since been merged into the main release. The report explains polarity corrections for negative-outcome questions and exclusions for cues that overlap decision criteria. Reproducing its figures requires matching the dataset and scoring versions; this coverage does not independently reproduce the experiments."
+        },
+        {
+          "type": "paragraph",
+          "text": "The study’s reach is bounded by short, synthetic, two-person cases, a single added pressure sentence and US-centric demographic conventions. Its training-data audit concerns OLMo-3 and establishes correlations, while reasoning-style and activation analyses provide indirect views of the decision process. For evaluation research, the useful contribution is an inspectable way to ask whether apparently similar answers remain equally stable when the surrounding prompt changes."
+        }
+      ],
+      "sources": [
+        {
+          "label": "Ai2 — October 20 FairStress announcement",
+          "url": "https://huggingface.co/blog/allenai/fairstress"
+        },
+        {
+          "label": "Zahraei and colleagues — full 70-page technical report",
+          "url": "https://allenai.org/papers/fairstress"
+        },
+        {
+          "label": "FairStress authors — code and figures at reviewed commit",
+          "url": "https://github.com/pardissz/fairstress/tree/ded1b93fc670fd7d7f1757b96fcc89e10d15ce68"
+        },
+        {
+          "label": "Ai2 — released dataset at reviewed revision",
+          "url": "https://huggingface.co/datasets/allenai/fairstress/tree/a5cdf125f8a59d605efd0ea9deefe75083588208"
+        },
+        {
+          "label": "FairStress authors — older Core dataset and correction notes",
+          "url": "https://huggingface.co/datasets/PardisSzah/fairstress-core"
+        }
+      ]
+    },
+    {
+      "slug": "google-hypothesis-ai-workplace-readiness-survey",
+      "category": "Employment · Workplace AI",
+      "sortDate": "2026-10-20",
+      "dateLabel": "October 20, 2026",
+      "title": "Google survey finds a gap between AI ambitions and employees’ experience",
+      "summary": "A Google-commissioned survey of 2,638 decision-makers and knowledge workers finds widespread AI goals alongside less clarity about everyday work and agent governance. The study covers six countries and organizations with at least 300 employees.",
+      "image": {
+        "src": "ai-news/2026-10/images/google-ai-workplace-survey-official.jpg",
+        "alt": "Google Workspace release graphic showing two colleagues at a computer beside the Workspace brand",
+        "caption": "Official Google Workspace artwork accompanying the October 20 survey announcement. The people shown are illustrative and are not identified as survey respondents. Source: Google Workspace."
+      },
+      "content": [
+        {
+          "type": "paragraph",
+          "text": "Google Workspace published new workplace AI survey findings on October 20, describing a gap between organizational ambition and the routines employees experience. The Google-commissioned research, conducted by Hypothesis Group, covered 2,638 decision-makers and knowledge workers across six countries. The report says 91% have an AI-first strategy or goal, while 42% have clear AI-first ways of working. These are survey descriptions of organizational readiness, rather than audited measures of business transformation."
+        },
+        {
+          "type": "heading",
+          "text": "Leaders report more progress than workers"
+        },
+        {
+          "type": "paragraph",
+          "text": "The report, Beyond AI Optimism: Closing the Ambition Gap, compares executives with knowledge workers on their experience of AI. Sixty-five percent of executives said AI had greatly improved how their work is done, compared with 52% of knowledge workers. The difference is 13 percentage points. Executives were also more likely to describe AI adoption as a top strategic priority and to express confidence that their company could adopt it effectively."
+        },
+        {
+          "type": "figure",
+          "src": "ai-news/2026-10/images/google-ai-workplace-survey-report-page-7.png",
+          "alt": "Original report page comparing executives and knowledge workers on AI work improvements, strategic priority and adoption confidence",
+          "caption": "Complete page 7 of the Google Cloud / Hypothesis report. The work-improvement comparison is 65% versus 52%, a 13-percentage-point difference. Source: Google Cloud and Hypothesis Group, October 2026."
+        },
+        {
+          "type": "paragraph",
+          "text": "That divergence gives the findings a workforce focus: access to an AI tool and a leadership strategy can coexist with less visible change in daily work. Training, permissions, responsibilities and handoffs determine whether an employee can use a tool within an actual process. The survey captures how those arrangements are perceived. It cannot by itself establish which arrangement caused an improvement, or how much additional work an employee completed."
+        },
+        {
+          "type": "heading",
+          "text": "Agent interest is ahead of operating rules"
+        },
+        {
+          "type": "paragraph",
+          "text": "The report says 97% are using or planning to use agents, combining current use with future intention. At the same time, 65% are cautious about expanding their use, and only 35% of knowledge workers say there is clear governance for tasks AI can handle independently. These measures ask different questions. An organization can be interested in agents while employees still lack a clear understanding of which actions an agent may take and who reviews the result."
+        },
+        {
+          "type": "paragraph",
+          "text": "Budget planning is another constraint in the findings: 72% say AI goals are expanding faster than their AI budget. The report’s maturity comparison places 27% in a scaling stage in 2026, up from 18% in 2025, while the combined advanced and highly transformed share remains 10%. These categories summarize the study’s assessment of reported adoption. The year-to-year comparison should be read as a survey comparison, without assuming that the same individual organizations were followed over time."
+        },
+        {
+          "type": "heading",
+          "text": "Who the survey represents"
+        },
+        {
+          "type": "paragraph",
+          "text": "Hypothesis fielded a 20-minute online survey in August 2026 in the United States, United Kingdom, France, Brazil, Japan and India. Respondents worked full time at organizations with at least 300 employees, were familiar with AI tools and qualified as technology or business decision-makers or knowledge workers. The sample therefore describes a defined segment of larger workplaces. It does not represent every worker, smaller employer or person outside full-time employment."
+        },
+        {
+          "type": "paragraph",
+          "text": "Google has a commercial interest in workplace AI adoption, and the results rely on respondents’ reports. They provide evidence about confidence, priorities and perceived readiness, with no measured hiring, wage or job-loss effect. For university teams preparing students or staff to work with AI, the practical questions are concrete: what task changes, what training supports it, what information the tool can access and which decisions require a person. Those operating details are the gap the report asks organizations to address."
+        }
+      ],
+      "sources": [
+        {
+          "label": "Google Workspace — October 20 survey announcement",
+          "url": "https://workspace.google.com/blog/product-announcements/bridging-the-gap-between-ai-ambition-and-readiness-new-survey-data"
+        },
+        {
+          "label": "Google Cloud / Hypothesis — full report, charts and methodology",
+          "url": "https://services.google.com/fh/files/misc/closing_the_ambition_gap_2026.pdf"
+        }
+      ]
+    },
+    {
       "slug": "inception-mercury-3-diffusion-model-launch",
       "category": "Industry · Language Models",
       "sortDate": "2026-10-19",
