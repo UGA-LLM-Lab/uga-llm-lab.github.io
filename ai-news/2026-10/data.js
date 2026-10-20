@@ -2,6 +2,385 @@ window.AI_NEWS_MONTH_DATA["2026-10"] = {
   "label": "October 2026",
   "articles": [
     {
+      "slug": "inception-mercury-3-diffusion-model-launch",
+      "category": "Industry · Language Models",
+      "sortDate": "2026-10-19",
+      "dateLabel": "October 19, 2026",
+      "title": "Inception launches Mercury 3 with a million-token context and lower launch pricing",
+      "summary": "The text diffusion model targets fast chat and agent workflows. Inception reports output above 1,000 tokens per second, while its documentation sets out pricing, supported tools and a migration deadline for older models.",
+      "image": {
+        "src": "ai-news/2026-10/images/mercury-3-official-model-documentation.png",
+        "alt": "Inception’s official model documentation showing Mercury 3 and its launch token prices",
+        "caption": "Inception’s public model documentation, captured October 19. Prices shown are per million tokens and include the launch promotion. Source: Inception."
+      },
+      "content": [
+        {
+          "type": "paragraph",
+          "text": "Inception launched Mercury 3 on October 19, bringing its text diffusion approach to a larger model with a one-million-token context window. The company is targeting applications in which an assistant must respond quickly and repeatedly, including customer support, search and software agents. Access is available through Inception’s platform and partners including OpenRouter, Baseten and Vercel. The announcement is a new model release, separate from the company’s earlier Mercury Voice product."
+        },
+        {
+          "type": "heading",
+          "text": "A different way to produce text"
+        },
+        {
+          "type": "paragraph",
+          "text": "Diffusion language models refine groups of tokens through successive steps, creating an alternative to generating every token in a strictly sequential chain. Inception’s streaming documentation describes responses arriving as blocks of refined text. An optional display mode exposes intermediate denoising steps, with each update containing the evolving text. That interface distinction matters for applications that display a response while it is still being produced: software must handle the selected streaming mode correctly."
+        },
+        {
+          "type": "paragraph",
+          "text": "The model documentation lists text input and output, tool calling and structured responses constrained to a schema. Mercury 3 supports up to 131,072 output tokens and four reasoning settings, from instant through high. Its one-million-token context is larger than Mercury 2.5’s documented 260,000-token window. A large context can accommodate more material in one request, but the capacity figure alone does not measure whether the model retrieves every relevant detail or follows every instruction within it."
+        },
+        {
+          "type": "heading",
+          "text": "Launch prices and speed claims"
+        },
+        {
+          "type": "paragraph",
+          "text": "Regular Inception pricing is $0.20 per million input tokens and $0.70 per million output tokens. A 50% launch promotion lowers those rates to $0.10 and $0.35, respectively; cached input is listed at $0.01 during the promotion. Those are token charges, so a workflow’s bill still depends on how much material it sends, how much the model generates and how many attempts it takes. The announcement does not specify a promotion end date."
+        },
+        {
+          "type": "paragraph",
+          "text": "Inception reports generation at 1,068 tokens per second on NVIDIA GPUs and favorable comparisons with other models designed for speed. These are the publisher’s reported measurements. Generation throughput is only one part of an agent’s response time: document retrieval, network delays, tool execution and repeated reasoning steps also contribute. For an interactive application, the useful comparison is the time required to complete the same task successfully under the intended serving conditions."
+        },
+        {
+          "type": "heading",
+          "text": "Existing users face a migration date"
+        },
+        {
+          "type": "paragraph",
+          "text": "Inception’s model page says Mercury 2 and Mercury 2.5 are unavailable to new users. Customers who used those models before October 19 can continue through November 15, with enterprise contractual support handled separately. That gives the launch a concrete operational consequence for existing integrations. A familiar API format can simplify a connection change, while the application’s prompts, response handling and evaluations still determine whether the replacement behaves as expected."
+        },
+        {
+          "type": "paragraph",
+          "text": "For labs building conversational or tool-using systems, Mercury 3 adds another hosted model to evaluate across latency, answer quality and cost together. Its documentation makes the available interface and limits inspectable. The strongest evidence of fit would come from representative tasks with the same documents and tools, measuring successful completion and total elapsed time alongside token usage."
+        }
+      ],
+      "sources": [
+        {
+          "label": "Inception — October 19 Mercury 3 announcement",
+          "url": "https://www.inceptionlabs.ai/blog/introducing-mercury-3"
+        },
+        {
+          "label": "Inception — model capabilities, context limits and pricing",
+          "url": "https://docs.inceptionlabs.ai/get-started/models"
+        },
+        {
+          "label": "Inception — streaming and diffusion response behavior",
+          "url": "https://docs.inceptionlabs.ai/capabilities/streaming"
+        },
+        {
+          "label": "Inception — model access and November 15 migration deadline",
+          "url": "https://www.inceptionlabs.ai/models"
+        }
+      ]
+    },
+    {
+      "slug": "minimax-m31-flash-agent-model-release",
+      "category": "Industry · Agent Models",
+      "sortDate": "2026-10-19",
+      "dateLabel": "October 19, 2026",
+      "title": "MiniMax releases M3.1 Flash for agents, with model weights promised later",
+      "summary": "M3.1 Flash combines a million-token context with adjustable reasoning depth and lower token prices. The launch reports coding and computer-use results, but downloadable weights are still forthcoming.",
+      "image": {
+        "src": "ai-news/2026-10/images/minimax-m31-flash-official-task-cost.png",
+        "alt": "MiniMax’s Automation-Bench chart comparing reported task scores and average task costs",
+        "caption": "MiniMax’s original score-versus-cost graphic from the October 19 release, using comparison data dated October 18. Results and evaluation conditions are publisher-reported. Source: MiniMax."
+      },
+      "content": [
+        {
+          "type": "paragraph",
+          "text": "MiniMax released M3.1 Flash on October 19 for coding, computer operation and other workflows in which a model uses tools over multiple steps. It is available through the MiniMax API, M Plan and MiniMax Code. The company also identified the anonymously served Space Bunny as an early version. Its release explicitly says model weights will arrive later, so today’s service availability should be distinguished from a downloadable checkpoint."
+        },
+        {
+          "type": "heading",
+          "text": "Multimodal context with adjustable reasoning"
+        },
+        {
+          "type": "paragraph",
+          "text": "MiniMax’s API documentation describes a one-million-token context window and support for text, image and video inputs alongside tool interactions. Through its Anthropic-compatible interface, developers can choose among five reasoning-depth settings: low, medium, high, xhigh and max. The default is max. This changes how much reasoning the model performs before completing an answer, creating a practical tradeoff among deliberation, latency and generated tokens."
+        },
+        {
+          "type": "paragraph",
+          "text": "Reasoning cannot be switched off for M3.1 Flash through that interface. The documentation also says the output-token allowance includes thinking tokens, and tool conversations need to preserve the complete model response in subsequent turns. These details affect whether an integration works as intended. Compatibility with another provider’s message format does not establish identical parameter behavior: MiniMax documents several fields that are ignored and specific rules for handling multimodal content."
+        },
+        {
+          "type": "heading",
+          "text": "Token prices are separate from task cost"
+        },
+        {
+          "type": "paragraph",
+          "text": "The published rates are $0.15 per million input tokens, $0.60 per million output tokens and $0.015 per million cached-input tokens. MiniMax presents these as flat M3.1 Flash prices. Its pricing page separately lists context-dependent rates for the older M3 model, making the model identifier consequential when comparing bills. A cached-input rate applies to qualifying reused material; it does not turn every prompt into cached traffic."
+        },
+        {
+          "type": "paragraph",
+          "text": "For scale, one million uncached input tokens plus one million output tokens would cost $0.75 at the stated M3.1 Flash rates, before any other applicable service charges. That calculation is an illustration of the unit prices, rather than a quote for completing a particular project. Agent workflows may make many requests, retry failed steps and consume substantial reasoning output. Measuring cost per correctly finished task therefore answers a different question from comparing the price of a token."
+        },
+        {
+          "type": "heading",
+          "text": "Read the evaluation conditions with the scores"
+        },
+        {
+          "type": "paragraph",
+          "text": "MiniMax reports 73.7% on DeepSWE v1.1 and 61.7 on OSWorld 2.0. Its accompanying table specifies a mini-SWE-agent harness and a 512,000-token context limit for DeepSWE, while the computer-use comparison uses the recommended OSWorld release. These are company-reported results for defined evaluation setups. They provide evidence about those tasks without establishing reliable completion of every repository change or desktop workflow."
+        },
+        {
+          "type": "paragraph",
+          "text": "The release also reports median generation above 170 tokens per second and promotes lower overall agent-task costs. Throughput, benchmark success and task cost should be measured together when assessing those claims. A faster response that needs extra corrections may save less time than its generation speed suggests; a longer reasoning trace may improve success while increasing billed output. The configurable reasoning settings make that comparison particularly relevant."
+        },
+        {
+          "type": "paragraph",
+          "text": "Today’s concrete change is another accessible multimodal agent model with published interface rules and relatively low token charges. Researchers can examine its behavior through the available services, while investigations requiring local weights, self-hosting or weight-level modifications remain dependent on the later release. That availability boundary is more useful than describing the model as already downloadable."
+        }
+      ],
+      "sources": [
+        {
+          "label": "MiniMax — October 19 M3.1 Flash release and evaluation graphic",
+          "url": "https://www.minimax.io/blog/minimax-m31f"
+        },
+        {
+          "label": "MiniMax — current language-model token pricing",
+          "url": "https://platform.minimax.io/docs/pricing/overview"
+        },
+        {
+          "label": "MiniMax — model context and modalities",
+          "url": "https://platform.minimax.io/docs/guides/models-intro"
+        },
+        {
+          "label": "MiniMax — reasoning controls and message-format compatibility",
+          "url": "https://platform.minimax.io/docs/api-reference/text-anthropic-api"
+        }
+      ]
+    },
+    {
+      "slug": "tenstorrent-series-e-ai-compute-manufacturing",
+      "category": "Industry · AI Infrastructure",
+      "sortDate": "2026-10-19",
+      "dateLabel": "October 19, 2026",
+      "title": "Tenstorrent closes $1.5 billion round to expand AI server manufacturing",
+      "summary": "The Series E values Tenstorrent at $6.2 billion after the investment. The company plans to expand Galaxy server production and its commercial reach while continuing to license processor technology.",
+      "image": {
+        "src": "ai-news/2026-10/images/tenstorrent-series-e-official-server.jpg",
+        "alt": "Tenstorrent’s official release image of a Galaxy AI compute server",
+        "caption": "Galaxy server imagery accompanying Tenstorrent’s October 19 Series E announcement. Source: Tenstorrent."
+      },
+      "content": [
+        {
+          "type": "paragraph",
+          "text": "Tenstorrent announced on October 19 that it had closed a $1.5 billion Series E financing at a $6.2 billion post-money valuation. Trace Capital and Innovation X led the round. The company, led by Jim Keller, says the capital will support volume manufacturing of its Galaxy AI servers and global commercial expansion. This is a completed financing announcement; the manufacturing and deployment growth it is intended to support will unfold afterward."
+        },
+        {
+          "type": "paragraph",
+          "text": "The business combines finished compute systems with technology licensed to other chip designers. Tenstorrent sells accelerator cards, workstations and larger systems, while offering Tensix AI cores and TT-Ascalon RISC-V CPU intellectual property for customers developing their own silicon. That gives the funding two connected purposes: increasing the supply of systems customers can buy and advancing components that other companies can incorporate into their designs."
+        },
+        {
+          "type": "heading",
+          "text": "What a Galaxy system contains"
+        },
+        {
+          "type": "paragraph",
+          "text": "Tenstorrent’s current Galaxy product page describes a Blackhole configuration with 32 AI accelerators and one terabyte of GDDR6 memory. Ethernet links connect accelerators and allow systems to scale into larger clusters. A separate AMD host processor runs the surrounding server functions. These are different components with different jobs, so the company’s CPU-licensing activity should not be confused with the complete architecture of a shipping Galaxy server."
+        },
+        {
+          "type": "paragraph",
+          "text": "The product page lists a four-server Blackhole supercluster as one available configuration and describes larger deployments for language-model inference, video generation and private AI infrastructure. Those examples explain why volume manufacturing matters: usable compute requires complete systems, memory, networking, installation and software support. An investment total is a measure of financing, while delivered systems and sustained operation are the relevant measures of expanded capacity."
+        },
+        {
+          "type": "heading",
+          "text": "Software is part of the hardware proposition"
+        },
+        {
+          "type": "paragraph",
+          "text": "The company’s public TT-Metal repository exposes the software layers used to program its processors. TT-Metalium provides a lower-level programming model for custom kernels, while TT-NN supplies neural-network operations through Python and C++ interfaces. The repository also links model implementations, technical reports, profiling tools and serving integrations. This gives developers material to inspect when determining how a workload would run on the hardware."
+        },
+        {
+          "type": "paragraph",
+          "text": "The repository’s performance notes distinguish time to first token, per-user generation speed and total throughput across a batch. They also attach measurements to particular models, software versions, input lengths and hardware configurations. That distinction is essential when comparing an accelerator system with an alternative: a high aggregate throughput figure does not describe the experience of one user, and a result from one serving runtime may not carry over unchanged to another."
+        },
+        {
+          "type": "heading",
+          "text": "Financing expands the opportunity to execute"
+        },
+        {
+          "type": "paragraph",
+          "text": "For organizations studying alternatives in AI compute, the announcement signals substantial backing for a supplier that combines systems, licensed designs and a publicly inspectable software stack. The next evidence will be operational: production volumes, customer deployments, supported models and performance on representative workloads. Those outcomes will determine how much additional usable compute the investment ultimately creates."
+        },
+        {
+          "type": "paragraph",
+          "text": "The round does not itself settle comparisons of reliability, energy consumption or total cost. Those depend on the workload and the complete deployed system, including the effort required to bring models into service. Tenstorrent has more capital to build and support that infrastructure; its product documentation and software repositories provide concrete starting points for assessing what is available today."
+        }
+      ],
+      "sources": [
+        {
+          "label": "Tenstorrent — October 19 Series E announcement",
+          "url": "https://tenstorrent.com/newsroom/tenstorrent-announces-series-e"
+        },
+        {
+          "label": "Tenstorrent — current Galaxy server specifications and configurations",
+          "url": "https://tenstorrent.com/hardware/galaxy"
+        },
+        {
+          "label": "Tenstorrent — TT-Metal software stack and performance measurement notes",
+          "url": "https://github.com/tenstorrent/tt-metal"
+        }
+      ]
+    },
+    {
+      "slug": "openai-multilangbench-legacy-language-coding-evaluation",
+      "category": "Research · Software Evaluation",
+      "sortDate": "2026-10-19",
+      "dateLabel": "October 19, 2026",
+      "title": "OpenAI releases MultiLangBench to test coding across 20 programming languages",
+      "summary": "The SQLite-based benchmark accompanies new results on legacy-language coding and COBOL migration. The released protocol makes its tests inspectable, while the two evaluations measure different kinds of success.",
+      "image": {
+        "src": "ai-news/2026-10/images/openai-multilangbench-official-repository.png",
+        "alt": "Official GitHub preview card for OpenAI’s MultiLangBench evaluation repository",
+        "caption": "The official OpenAI/MultiLangBench repository preview, retrieved October 19. Repository counters are a point-in-time snapshot. Source: OpenAI / GitHub."
+      },
+      "content": [
+        {
+          "type": "paragraph",
+          "text": "OpenAI released MultiLangBench on October 19 alongside results on coding in programming languages with less available training material, including COBOL, Fortran and Visual Basic. The evaluation asks models to build a SQLite-compatible database engine across 20 languages. A separate experiment tests migration of existing COBOL programs while preserving their behavior. The news is the evaluation release and reported findings, rather than the launch of a new model."
+        },
+        {
+          "type": "heading",
+          "text": "A shared task across different languages"
+        },
+        {
+          "type": "paragraph",
+          "text": "MultiLangBench uses database contents as a common interface. A candidate implementation receives an initial database and a SQL query, then produces a modified database. The reference SQLite implementation checks the resulting contents. This lets the evaluation compare programs written in different languages using the same observable task, instead of relying on how convincing their source code appears to a reviewer."
+        },
+        {
+          "type": "paragraph",
+          "text": "The released repository specifies SQLite version 3.40.1. It says roughly 24,000 tests were converted from an original collection of about 51,000 SQLite tests, and recommends a defined 272-test subset when running the full set would be expensive. Runs using the full collection should disclose that choice. The protocol also requires the requested implementation language, an isolated environment without an existing SQLite implementation, and no internet access during the task."
+        },
+        {
+          "type": "paragraph",
+          "text": "Those rules are central to what is being measured. Leaving a usable database engine in the environment could let a program delegate the task to existing software. Using a different language would evade the intended comparison. The released grading instructions treat incorrect results, crashes and timeouts as failures, and provide expected outputs to help check the evaluator itself. Making these conditions public gives outside researchers a clearer basis for inspecting or repeating the test."
+        },
+        {
+          "type": "heading",
+          "text": "Two evaluations, two success measures"
+        },
+        {
+          "type": "paragraph",
+          "text": "On MultiLangBench, OpenAI reports an average test pass rate of 87.4% for GPT-6 Astra at maximum reasoning effort, compared with 26.8% for GPT-5.6 Sol. The separate migration evaluation asks models to translate COBOL into languages such as Java, Python or Rust, requiring all hidden tests to match observable outputs byte for byte. OpenAI reports 86.6% success for GPT-6.1 Sol at low reasoning effort on that task."
+        },
+        {
+          "type": "paragraph",
+          "text": "The distinction prevents a misleading reading of the numbers. Passing a fraction of database tests measures how much tested functionality an implementation supports. Completing a migration requires satisfying every test for that program. Neither percentage is a direct estimate of the share of an organization’s software that can be replaced automatically. The evaluated tasks are narrower than a production system with its accumulated dependencies and operational requirements."
+        },
+        {
+          "type": "heading",
+          "text": "Preserving behavior is the substantive question"
+        },
+        {
+          "type": "paragraph",
+          "text": "Legacy-language work is consequential because a rewrite can execute successfully while changing a result that matters. OpenAI’s publication highlights decimal arithmetic as an example: silently changing truncation to rounding can alter a program’s behavior. An evaluation that checks outputs helps expose such differences. It still only tests the behaviors represented in its cases, making test coverage a key part of interpreting a strong score."
+        },
+        {
+          "type": "paragraph",
+          "text": "For software-engineering researchers, the public benchmark offers an inspectable task and grading protocol for comparing language coverage, successful functionality and cost. The reported model gains remain publisher-run findings. Independent runs with documented environments, test subsets and budgets would help establish how well the results reproduce and where the remaining failures occur."
+        }
+      ],
+      "sources": [
+        {
+          "label": "OpenAI — October 19 publication, methods and reported results",
+          "url": "https://openai.com/index/low-resource-programming-languages/"
+        },
+        {
+          "label": "OpenAI — MultiLangBench README and grading protocol, pinned October 19 commit",
+          "url": "https://github.com/openai/MultiLangBench/tree/995755bffdba3da60ca367448a1606ba0e50573a"
+        },
+        {
+          "label": "OpenAI — released benchmark repository and Apache 2.0 licence",
+          "url": "https://github.com/openai/MultiLangBench"
+        }
+      ]
+    },
+    {
+      "slug": "multimodal-ai-single-aerosol-particle-classification",
+      "category": "Research · Environmental AI",
+      "sortDate": "2026-10-19",
+      "dateLabel": "October 19, 2026",
+      "title": "Multimodal AI study combines images and chemistry to classify fine particles",
+      "summary": "A Scientific Reports study reports 89.6% accuracy across seven particle types using microscopy, size and elemental measurements. Its internal validation is promising, while minority classes and complex mixtures remain important limits.",
+      "image": {
+        "src": "ai-news/2026-10/images/aerosol-fusion-official-figure-7.jpg",
+        "alt": "The paper’s comparison of early, traditional joint and attention-based multimodal fusion architectures",
+        "caption": "Unchanged Figure 7 from Khadgi et al., Scientific Reports (2026), DOI 10.1038/s41598-026-76169-6. © The authors, CC BY-NC-ND 4.0."
+      },
+      "content": [
+        {
+          "type": "paragraph",
+          "text": "A study published in Scientific Reports on October 19 combines microscope images, particle size and elemental composition to classify individual fine particles. Jasmita Khadgi and colleagues report 89.6% accuracy for an attention-based fusion model across seven categories. The publication is an accepted Article in Press, with a permanent DOI; the final edited version is still forthcoming. It addresses laboratory particle characterization, rather than predicting a person’s health or replacing an air-quality monitoring network."
+        },
+        {
+          "type": "heading",
+          "text": "Combining complementary measurements"
+        },
+        {
+          "type": "paragraph",
+          "text": "The final dataset contains 1,622 particles labeled as dust, fly ash, metals, organic-rich material, sea spray, soot or sulfur-rich material. The model combines transmission electron microscopy with energy-dispersive X-ray measurements and particle size. Its attention mechanism lets image and numerical features inform one another. Evaluation used stratified five-fold cross-validation, with one fold reserved for testing in each iteration and training augmentation confined to the training data."
+        },
+        {
+          "type": "figure",
+          "src": "ai-news/2026-10/images/aerosol-particles-official-figure-1.jpg",
+          "alt": "Representative microscopy images, particle sizes and elemental measurements for the seven particle classes",
+          "caption": "Unchanged Figure 1: examples of the seven particle types and their measurements. Khadgi et al., Scientific Reports (2026), DOI 10.1038/s41598-026-76169-6. © The authors, CC BY-NC-ND 4.0."
+        },
+        {
+          "type": "paragraph",
+          "text": "This is a useful application of multimodal learning because two particles can resemble one another in an image while differing chemically. Combining measurements gives a classifier information that shape alone cannot supply. It also preserves a practical dependency: the input still requires microscopy and elemental analysis. Automating the classification stage therefore differs from automating every step between collecting an environmental sample and reporting its composition."
+        },
+        {
+          "type": "heading",
+          "text": "The supporting tables show uneven certainty"
+        },
+        {
+          "type": "paragraph",
+          "text": "The supplementary material documents samples from multiple ambient environments and laboratory emission sources. Its class-level results show sea-spray recall around 94% and soot recall around 84%, illustrating variation beneath the overall score. Fly ash contributes only about 13 test particles per fold on average; its reported 95% confidence interval extends from 77.2% to 93.5%. That wide interval makes the uncertainty more informative than a single rounded percentage."
+        },
+        {
+          "type": "paragraph",
+          "text": "The supplement also provides a hardware-specific timing comparison. Classifying 1,000 particles with the attention-based model took 3 minutes 11 seconds on an NVIDIA GeForce RTX 2080 Ti, versus 12 minutes 4 seconds on the listed AMD Ryzen 7 CPU. These are classification-stage measurements on the authors’ configurations. They exclude the upstream work of collecting samples and obtaining the measurements that become model inputs, so they should not be described as total laboratory turnaround times."
+        },
+        {
+          "type": "heading",
+          "text": "An internal result with a route for further study"
+        },
+        {
+          "type": "paragraph",
+          "text": "The authors identify limited sample diversity, small minority classes and the exclusion of complex internally mixed particles as constraints. Independent environmental datasets remain necessary. Their public implementation supplies an attention-fusion model, dependency information and an example metadata template; the paper says the underlying data can be requested from the corresponding author. Code availability helps inspection, while a template alone does not supply the full experimental dataset."
+        },
+        {
+          "type": "paragraph",
+          "text": "For environmental researchers, the result supports further investigation of combining physical and chemical evidence in automated characterization. A useful next evaluation would test how performance changes across sampling sites, instruments and particle mixtures, retaining class-specific uncertainty. That would address the gap between success within the study’s pooled dataset and reliable use on genuinely new environmental samples."
+        }
+      ],
+      "sources": [
+        {
+          "label": "Khadgi et al. — Scientific Reports article, published October 19",
+          "url": "https://www.nature.com/articles/s41598-026-76169-6"
+        },
+        {
+          "label": "Scientific Reports — full accepted manuscript and original figures",
+          "url": "https://www.nature.com/articles/s41598-026-76169-6_reference.pdf"
+        },
+        {
+          "label": "Authors — supplementary sampling, timing and uncertainty tables",
+          "url": "https://media.springernature.com/original/springer-static/esm/art%3A10.1038%2Fs41598-026-76169-6/MediaObjects/41598_2026_76169_MOESM1_ESM.docx"
+        },
+        {
+          "label": "Authors — public implementation and example metadata template",
+          "url": "https://github.com/Jkhadgi/Particle-Multimodal-Fusion"
+        },
+        {
+          "label": "Creative Commons — attribution, noncommercial and no-derivatives licence",
+          "url": "https://creativecommons.org/licenses/by-nc-nd/4.0/"
+        }
+      ]
+    },
+    {
       "slug": "weekly-ai-october-12-18",
       "category": "Weekly AI",
       "sortDate": "2026-10-19",
