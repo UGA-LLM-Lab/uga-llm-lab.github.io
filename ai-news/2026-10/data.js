@@ -2,6 +2,365 @@ window.AI_NEWS_MONTH_DATA["2026-10"] = {
   "label": "October 2026",
   "articles": [
     {
+      "slug": "patch-the-planet-php-security-fixes",
+      "category": "Industry · AI Security",
+      "sortDate": "2026-10-21",
+      "dateLabel": "October 21, 2026",
+      "title": "PHP ships critical fixes after AI-assisted research and a coordinated response",
+      "summary": "The October 21 releases address two PHP runtime vulnerabilities. OpenAI describes the response as a case for maintainer-led coordination as AI accelerates security research.",
+      "image": {
+        "src": "ai-news/2026-10/images/php-security-hackerone-official.png",
+        "alt": "HackerOne illustration identifying two PHP vulnerabilities on a stylized digital network",
+        "caption": "HackerOne’s illustration for the October 21 PHP disclosure. This is explanatory artwork, not a map of observed attacks. Source: HackerOne."
+      },
+      "content": [
+        {
+          "type": "paragraph",
+          "text": "PHP released fixes for two critical remote-code-execution vulnerabilities on October 21, following a coordinated investigation involving software maintainers, security researchers and AI companies. OpenAI says Calif identified a critical flaw using GPT-5.6 Sol through Patch the Planet, with Wiz independently finding and reporting both vulnerabilities. PHP’s maintainers led the fixes and release. The immediate outcome is a set of runtime updates; the broader question is how to turn faster AI-assisted discovery into protection for widely deployed software."
+        },
+        {
+          "type": "heading",
+          "text": "The affected component is the runtime"
+        },
+        {
+          "type": "paragraph",
+          "text": "The vulnerabilities, CVE-2026-109618 and CVE-2026-109619, affect PHP itself. One concerns corruption during out-of-memory handling; the other concerns internal state that survives after its underlying memory has been freed. PHP’s advisory includes installations serving web requests through PHP-FPM, Apache mod_php, php-cgi, FrankenPHP and LiteSpeed. An application’s login screen therefore does not establish that the underlying runtime is protected."
+        },
+        {
+          "type": "paragraph",
+          "text": "The two issues also have different exploitation conditions. PHP describes a demonstrated unauthenticated path against mod_php that can occur before application code runs. The stale-state issue can involve successive requests handled by the same worker. Treating every affected installation as vulnerable to an identical single-request attack would erase those distinctions. The maintainers’ advisory is the appropriate reference for assessing a particular deployment."
+        },
+        {
+          "type": "heading",
+          "text": "Updates are available across supported branches"
+        },
+        {
+          "type": "paragraph",
+          "text": "The fixed upstream releases are PHP 8.5.12, 8.4.27, 8.3.36 and 8.2.35. Distributions and long-term-support vendors received patches ahead of public disclosure, so a packaged installation may receive an equivalent backport. PHP also supplied minimal source backports for 7.4, 8.0 and 8.1 despite those branches no longer receiving regular upstream updates. That is different from a general extension of their support lifetime."
+        },
+        {
+          "type": "paragraph",
+          "text": "PHP warns that interim mitigations reduce particular attack paths but do not provide a complete solution. For a research group or university service, the practical inventory extends beyond the main website: hosted applications, appliances and services operated by a provider may contain another PHP runtime. The relevant evidence is which party maintains each instance and whether its running software includes the fix, rather than whether a familiar application or plugin has been updated."
+        },
+        {
+          "type": "heading",
+          "text": "Discovery needs a path to remediation"
+        },
+        {
+          "type": "paragraph",
+          "text": "OpenAI’s accompanying proposal describes a response organized around the software maintainer. Participants would receive information needed for their protective role, while the disclosure timeline would be reconsidered if exploitation, a leak or a revealing patch changed the risk. HackerOne, a participant, emphasizes validating and routing reports so that maintainers and customers can distinguish potentially exposed assets from confirmed findings. More submissions alone would not measure a successful defense."
+        },
+        {
+          "type": "paragraph",
+          "text": "This disclosure gives AI security research a concrete operational outcome: maintainers shipped patches that operators can apply. It does not establish that every AI-generated report is useful, that the two bugs share one attack path, or that every downstream system has already been protected. The work after discovery—technical validation, patch review, provider coordination and verification of deployed updates—remains central to whether a finding ultimately reduces risk."
+        }
+      ],
+      "sources": [
+        {
+          "label": "PHP: October 21 security advisory and release archive",
+          "url": "https://www.php.net/archive/2026.php#2026-10-21-5"
+        },
+        {
+          "label": "OpenAI: coordinated disclosure and Patch the Planet",
+          "url": "https://openai.com/index/coordinated-disclosure-of-critical-vulnerabilities/"
+        },
+        {
+          "label": "HackerOne: PHP vulnerabilities and response",
+          "url": "https://www.hackerone.com/blog/critical-php-vulnerabilities-hackerone-response"
+        }
+      ]
+    },
+    {
+      "slug": "cohere-rerank-5-context-focus",
+      "category": "Industry · Retrieval",
+      "sortDate": "2026-10-21",
+      "dateLabel": "October 21, 2026",
+      "title": "Cohere releases Rerank 5 with passage selection for retrieval pipelines",
+      "summary": "Pro and Fast add Context Focus, which selects relevant spans within retrieved documents. Cohere reports ranking and token-efficiency gains under its own disclosed evaluation setups.",
+      "image": {
+        "src": "ai-news/2026-10/images/cohere-rerank-5-official-benchmarks.png",
+        "alt": "Cohere chart comparing seven rerankers across ViDoRe V3, BEIR, BRIGHT and nanoMTEB",
+        "caption": "Cohere’s reported retrieval results use RCP-nDCG@10, its rubric-calibrated evaluation method. These are vendor evaluations, not an independent reproduction. Source: Cohere, October 21."
+      },
+      "content": [
+        {
+          "type": "paragraph",
+          "text": "Cohere released Rerank 5 on October 21 in Pro and Fast versions, adding an optional Context Focus feature that returns relevant passages within documents. The release targets a practical bottleneck in retrieval-augmented AI: selecting a good document is only part of deciding what an answering model should read. A long document can contain useful evidence surrounded by material that adds cost, delays a response or distracts from the question."
+        },
+        {
+          "type": "heading",
+          "text": "Document ranking and evidence selection in one call"
+        },
+        {
+          "type": "paragraph",
+          "text": "A reranker takes a query and an existing candidate set and orders those documents by relevance. It can sit above keyword, vector or hybrid search. Rerank 5 adds scored text spans alongside document-level scores, allowing an application to pass selected evidence onward. Developers can adjust the span threshold to trade the amount of retained context against coverage. The system still depends on the candidate set: reranking cannot recover an important document that the initial search never returned."
+        },
+        {
+          "type": "paragraph",
+          "text": "Cohere reports that Pro leads its comparisons across four headline benchmark groups, including a BRIGHT score of 82.2. These numbers use RCP-nDCG@10, rather than the conventional benchmark scoring procedure. Cohere developed that method to address incomplete relevance labels by combining a shared rubric with calibrated AI judgments. It also optimized its newer search models against the method. The scores are therefore evidence under a particular evaluation design, rather than interchangeable numbers from an independent leaderboard."
+        },
+        {
+          "type": "heading",
+          "text": "Token savings depend on the experiment"
+        },
+        {
+          "type": "paragraph",
+          "text": "The release separates two Context Focus studies. In a 30-dataset question-answering experiment, Qwen3.5-9B answered using selected documents and Qwen3.5-35B graded the responses. Removing half of the retrieved context reduced the average judge score from about 55% to 53%. That is a two-percentage-point change in this setup; it does not establish that every application can discard half its evidence without a consequential loss."
+        },
+        {
+          "type": "paragraph",
+          "text": "A separate search-agent experiment used glm-5-3-flash across 17 datasets, with 50 questions per dataset. The full stack at a Context Focus threshold of 0.4 reached 58.3% average accuracy using about 323,000 total tokens per task, compared with 45.9% and 499,000 for the BM25 baseline. The token count includes input, output, reasoning and cached tokens across calls. Those figures describe the tested agent and tasks, not a universal percentage reduction in a production bill."
+        },
+        {
+          "type": "figure",
+          "src": "ai-news/2026-10/images/cohere-rerank-5-official-agent-results.png",
+          "alt": "Cohere plot of search-agent accuracy against total tokens per task for BM25, reranking and Context Focus",
+          "caption": "Original vendor experiment: averages over 17 datasets and a six-dataset deep-search subset. The two series and their baselines are separate. Source: Cohere."
+        },
+        {
+          "type": "heading",
+          "text": "A relevance score is still an empirical claim"
+        },
+        {
+          "type": "paragraph",
+          "text": "Cohere also says the new relevance scores approximate the probability that a document is useful. Its calibration checks used blind human graders and NIST TREC Deep Learning judgments. For an application builder, that could make threshold-based filtering easier to interpret than a fixed top-k rule. It remains a property measured on those evaluation sets, however. A score should be checked against the application’s own definition of useful evidence, especially where missing one document has a high cost."
+        },
+        {
+          "type": "paragraph",
+          "text": "Pro and Fast are generally available through Cohere’s API and Model Vault, Microsoft Foundry and Amazon SageMaker, with private deployment options also described. The announcement lists API prices of $0.05 per million tokens for Pro and $0.02 for Fast. Fast’s reported throughput advantage was measured on an A100 with a specified batched workload. For a lab choosing a retrieval component, the useful comparison is the complete pipeline: evidence retained, answer quality, latency and total cost on the same questions and corpus."
+        }
+      ],
+      "sources": [
+        {
+          "label": "Cohere: Rerank 5 release and evaluation details",
+          "url": "https://cohere.com/blog/rerank-5"
+        },
+        {
+          "label": "Cohere: RCP-nDCG methodology and human study",
+          "url": "https://cohere.com/blog/rcp-ndcg"
+        },
+        {
+          "label": "Cohere documentation: reranking and supported models",
+          "url": "https://docs.cohere.com/docs/rerank-overview"
+        }
+      ]
+    },
+    {
+      "slug": "bear-robotics-kino-2-kr1",
+      "category": "Industry · Robotics",
+      "sortDate": "2026-10-21",
+      "dateLabel": "October 21, 2026",
+      "title": "Bear launches KINO-2 to connect robot learning with KR1 customer pilots",
+      "summary": "The platform links demonstrations, model evaluation and onboard execution. Bear reports faster inference, while its technical report separates simulation results, GPU timings and physical response measurements.",
+      "image": {
+        "src": "ai-news/2026-10/images/bear-kino-2-official-pilot-scenes.webp",
+        "alt": "Company-provided collage showing KR1 robots handling objects in workspace and retail-style settings",
+        "caption": "Scenes supplied with Bear’s October 21 KINO-2 technical report. These company images illustrate pilot work; they do not establish deployment volumes or task-completion rates. Source: Bear Robotics."
+      },
+      "content": [
+        {
+          "type": "paragraph",
+          "text": "Bear Robotics announced KINO-2 on October 21, a learning and deployment platform for manipulation skills on its KR1 robot. The launch, presented at NVIDIA GTC Berlin, connects demonstrations of a customer’s task with model training, evaluation and execution onboard the robot. Bear describes active proofs of concept involving warehouse crates, supermarket returns and industrial work. Its accompanying technical report provides a closer look at the engineering behind those pilots, alongside limits on what the reported numbers demonstrate."
+        },
+        {
+          "type": "heading",
+          "text": "A learned skill has to fit the whole workflow"
+        },
+        {
+          "type": "paragraph",
+          "text": "The platform supports Bear’s in-house models and post-trained foundation models through common robot interfaces. In a bottle-packing example, a manipulation policy handles picking and placing, while navigation, fleet management and workflow software organize transport and the sequence of work. This matters because completing a useful job involves more than a successful grasp. The model’s observations and actions must remain consistent with the robot’s controllers and the surrounding customer process."
+        },
+        {
+          "type": "paragraph",
+          "text": "Bear starts with synchronized demonstrations containing camera views, robot state and operator actions. Its pipeline also supports visual augmentation using NVIDIA Cosmos and training in Isaac Lab. The technical report describes 1,024 simulated KR1 instances in one pick-task configuration. A reduction from 7.4 to 3.7 seconds per pick occurred during simulated training using simulator-provided states. It is not a measured halving of physical picking time at a customer site."
+        },
+        {
+          "type": "heading",
+          "text": "Different timing numbers answer different questions"
+        },
+        {
+          "type": "paragraph",
+          "text": "The reported onboard improvements use NVIDIA’s Isaac OS runtime, Holoscan SDK 5.0 and TensorRT on Jetson AGX Thor. Bear says its in-house model fell from 72.3 milliseconds under PyTorch eager execution to 17.2 milliseconds in the accelerated pipeline, a 4.2-fold inference speedup. That measures one part of the system. Camera acquisition, observation processing, controller delivery and actual motion also contribute to how quickly a robot responds."
+        },
+        {
+          "type": "paragraph",
+          "text": "The press announcement compares an initial unoptimized GR00T deployment at roughly 500 milliseconds with a later result around 60 milliseconds. The technical report gives a different, narrower comparison for GR00T 1.7: median GPU execution time per action chunk fell from 92.2 to 56.6 milliseconds when moving from a four-engine baseline to an eight-engine build with selective FP8 quantization. These are different baselines, so the approximately eightfold headline should not be applied to the optimized-build comparison."
+        },
+        {
+          "type": "figure",
+          "src": "ai-news/2026-10/images/bear-kino-2-official-gr00t-timings.webp",
+          "alt": "Bear chart comparing median GR00T GPU execution times for four-engine and eight-engine builds",
+          "caption": "Bear’s internal GR00T 1.7 comparison on Jetson AGX Thor: 92.2 versus 56.6 milliseconds for complete GPU inference. Nested component timings are not additive. Source: Bear Robotics."
+        },
+        {
+          "type": "paragraph",
+          "text": "An integrated hardware diagram reports 139.6 milliseconds from camera exposure to joint motion. Another figure compares commanded jerk before and after execution changes, explicitly identifying it as controller output rather than measured physical jerk. Those distinctions make the report more informative than a single model-speed number. They also show why inference improvements cannot be directly converted into a percentage gain in completed warehouse tasks."
+        },
+        {
+          "type": "heading",
+          "text": "Pilot outcomes remain the next test"
+        },
+        {
+          "type": "paragraph",
+          "text": "Bear’s existing fleet exceeds 16,000 robots across more than 5,000 customer locations, according to the company, but it says that fleet is mostly service robots. Those totals are not KR1 manipulation deployment counts. The KINO-2 materials describe pilot workflows and engineering measurements without establishing a common customer task-success rate, intervention rate or sustained uptime result. For researchers following physical AI, the release offers inspectable system details; broader reliability claims will require evidence from complete tasks under varied operating conditions."
+        }
+      ],
+      "sources": [
+        {
+          "label": "Bear Robotics: KINO-2 launch",
+          "url": "https://www.bearrobotics.ai/blog/bear-robotics-launches-kino-2"
+        },
+        {
+          "label": "Bear Robotics: KINO-2 technical report",
+          "url": "https://www.bearrobotics.ai/blog/kino-2-production-ai-for-real-world-manipulation"
+        },
+        {
+          "label": "Company announcement distributed through Business Wire",
+          "url": "https://finance.yahoo.com/technology/ai/articles/bear-robotics-launches-kino-2-113000530.html"
+        }
+      ]
+    },
+    {
+      "slug": "glean-headless-agent-builder",
+      "category": "Industry · Developer Tools",
+      "sortDate": "2026-10-21",
+      "dateLabel": "October 21, 2026",
+      "title": "Glean brings agent authoring into coding environments with a headless builder",
+      "summary": "Developers can define and test Auto mode agents in local files, then publish them to Glean’s managed runtime. Workflow mode remains in the visual builder.",
+      "image": {
+        "src": "ai-news/2026-10/images/glean-headless-official-release.png",
+        "alt": "Glean release illustration showing an agent specification and instructions being published from a coding workspace",
+        "caption": "Glean’s promotional illustration, captured from its public October 21 announcement. It depicts the intended authoring flow, not an independently tested run. Source: Glean."
+      },
+      "content": [
+        {
+          "type": "paragraph",
+          "text": "Glean announced generally available headless agent building on October 21, allowing developers to create, test and publish Glean agents from coding environments including Claude Code, Codex and Cursor. The feature puts an agent’s configuration and instructions in files that can live beside application code. Published agents still run on Glean’s managed infrastructure. The change is therefore about where and how teams author agent behavior, while retaining the enterprise system that supplies data access and execution."
+        },
+        {
+          "type": "heading",
+          "text": "An agent becomes an artifact a team can review"
+        },
+        {
+          "type": "paragraph",
+          "text": "The builder uses the Glean plugin to create a local agent directory. Its main files include spec.yaml for configuration and instructions.md for behavior, with optional folders for skills and subordinate agents. The documentation places these directories under .glean/agents by default. This gives a team a concrete set of files to compare when instructions change, rather than relying on a description of what someone edited in a browser."
+        },
+        {
+          "type": "paragraph",
+          "text": "Glean’s announcement describes running representative inputs and evaluations from the coding environment, inspecting results, refining the files and then publishing the agent. Git can support review and rollback of the authored configuration. That is useful for a support-summary agent, for example: a reviewer can examine which sources it should use, what it should summarize and when it should escalate before colleagues depend on its output."
+        },
+        {
+          "type": "heading",
+          "text": "Local authoring uses an enterprise runtime"
+        },
+        {
+          "type": "paragraph",
+          "text": "Agents created through the plugin use Glean’s knowledge graph, permissioned access across its enterprise connectors and audit trail, according to the company. The announcement says the same foundation serves agents created in its visual builder. Publishing makes the agent available through Glean, where administrators and builders can share, manage or disable it. Keeping files in a repository does not mean that the agent executes locally or that its access is defined solely by those files."
+        },
+        {
+          "type": "paragraph",
+          "text": "There is also a specific product boundary: headless building supports Auto mode agents today. Workflow mode agents still require Glean’s agent builder. The distinction matters for teams that need a predetermined sequence of steps, because a code-oriented authoring interface does not establish that every execution mode can be represented or deployed through it. The current documentation also requires the supported plugin setup and authentication to the organization’s Glean instance."
+        },
+        {
+          "type": "heading",
+          "text": "Review the behavior as well as the files"
+        },
+        {
+          "type": "paragraph",
+          "text": "Glean illustrates the release with an engineer building an agent that summarizes support conversations, testing it and sharing it with the team. The announcement does not supply an independent completion-rate benchmark or a quantified reduction in support workload. Its immediate contribution is a development workflow. Whether an agent reliably catches an urgent issue still depends on the inputs, instructions, permissions and evaluation cases used by the organization."
+        },
+        {
+          "type": "paragraph",
+          "text": "For a lab or engineering team already using Glean, the useful opportunity is to connect agent changes with ordinary software review. Representative tests should include missing context, restricted information, conflicting records and requests outside the intended task. Version control can show how an instruction changed; observing the resulting behavior shows whether the change helped. Both pieces are needed before a reusable agent becomes something a wider team can depend on."
+        }
+      ],
+      "sources": [
+        {
+          "label": "Glean: headless agent building announcement",
+          "url": "https://www.glean.com/blog/glean-headless-agent-builder"
+        },
+        {
+          "label": "Glean documentation: create an agent with the headless builder",
+          "url": "https://docs.glean.com/agents/create-agents/create-agent-via-headless-builder"
+        }
+      ]
+    },
+    {
+      "slug": "charter-ai-pulse-workplace-agency",
+      "category": "Employment · Workplace Research",
+      "sortDate": "2026-10-21",
+      "dateLabel": "October 21, 2026",
+      "title": "Charter AI Pulse links workplace AI benefits with agency and manager support",
+      "summary": "A survey of 5,002 US desk workers who use AI finds uneven benefits and a gap between managers’ reported support and what workers say they see. The results are associations, not causal estimates.",
+      "image": {
+        "src": "ai-news/2026-10/images/charter-ai-pulse-demonstration-chart.png",
+        "alt": "Charter chart comparing managers’ reports of AI support with workers’ reports of seeing those behaviors",
+        "caption": "Original chart from Charter AI Pulse, page 26. These comparisons are between respondent groups, not a matched audit of individual managers. The survey covers AI users. Source: Charter, Fall 2026."
+      },
+      "content": [
+        {
+          "type": "paragraph",
+          "text": "Charter released its first AI Pulse report on October 21, examining whether AI is improving people’s work and personal lives rather than measuring adoption alone. Among surveyed users, 42.7% said both were at least somewhat better, while 10.5% said both were much better. The report associates stronger benefits with having influence over how AI fits a job, frequent use and supportive managers. It also documents uncertainty about how AI will change workers’ roles."
+        },
+        {
+          "type": "heading",
+          "text": "Who was included in the study"
+        },
+        {
+          "type": "paragraph",
+          "text": "The online survey ran August 11–26 and included 5,002 full-time US employees doing office or desk-based work who used AI at work at least occasionally. People who never used AI were excluded. Charter weighted the data using Census workforce information and supplemented the survey with 91 interviews in September, conducted through Dialogue AI’s voice-based interviewer. Charter led the research; the report identifies the NeuroLeadership Institute as sponsor and separately labels its sponsor-contributed material."
+        },
+        {
+          "type": "paragraph",
+          "text": "Those design choices define the population behind the findings. The percentages describe surveyed AI users doing desk-based work, not every US worker and not people who have already left employment. Weighting does not remove that boundary. The research is also a single snapshot, so differences between frequent and occasional users cannot show whether increased use caused a better experience, whether people with better experiences chose to use AI more, or whether another workplace condition influenced both."
+        },
+        {
+          "type": "heading",
+          "text": "Agency and support stand out"
+        },
+        {
+          "type": "paragraph",
+          "text": "The report’s strongest reported association with benefiting was feeling involved in how AI fits one’s work. Its chart shows a 45.9-percentage-point gap in the share benefiting between respondents who agreed and disagreed with that condition. Time to learn, recognition and useful training were also prominent. These comparisons point to organizational conditions worth investigating; they do not estimate what would happen if an employer introduced a specific policy tomorrow."
+        },
+        {
+          "type": "figure",
+          "src": "ai-news/2026-10/images/charter-ai-pulse-management-chart.png",
+          "alt": "Charter chart showing associations between workplace conditions and reporting benefits from AI",
+          "caption": "Original report chart, page 25. The bars show percentage-point differences between respondent groups, not causal treatment effects. Source: Charter AI Pulse, Fall 2026."
+        },
+        {
+          "type": "paragraph",
+          "text": "Managers also reported supportive behavior more often than workers reported seeing it. For sharing lessons about AI, the figures were 61.6% for managers and 31.8% for workers. For giving specific guidance, they were 54.0% and 24.6%. These are comparisons across survey groups, rather than a matched test of the same manager and employee. They nevertheless raise a practical question: whether support is visible and specific enough for the people expected to use the tools."
+        },
+        {
+          "type": "heading",
+          "text": "Training, trust and hidden use"
+        },
+        {
+          "type": "paragraph",
+          "text": "Hands-on training was reported by 39.6% of respondents, while 32.5% named it their most useful resource. Formal policy guidance was more common but less often rated most useful. The report also found that 35.9% had concealed AI use from a manager, colleague or client at least once. Concealment was associated with increased burnout, but the survey cannot establish that hiding use caused burnout or that disclosure would by itself resolve it."
+        },
+        {
+          "type": "paragraph",
+          "text": "The findings also complicate a simple divide between confident leaders and hesitant employees. Executives reported greater trust in AI, while also reporting more fact-checking than other groups. Some respondents described using outputs they doubted. For organizations, that makes verification skills and accountability relevant alongside access and enthusiasm: confidence in a tool is different from evidence that a particular answer is reliable."
+        },
+        {
+          "type": "paragraph",
+          "text": "For research groups and employers, the report offers questions to examine locally: whether people can influence task changes, whether training addresses their actual work and whether saved time leads to different expectations. It does not measure net job creation, displacement or a causal productivity gain. Its useful contribution is a more detailed picture of how current users experience AI, with workplace practices that can be tested through follow-up research rather than assumed to work everywhere."
+        }
+      ],
+      "sources": [
+        {
+          "label": "Charter: AI Pulse release and findings",
+          "url": "https://www.charterworks.com/research/ai-pulse/"
+        },
+        {
+          "label": "Charter AI Pulse: full report and methodology",
+          "url": "https://www.charterworks.com/assets/images/cws/Charter-AI-Pulse.pdf"
+        }
+      ]
+    },
+    {
       "slug": "perplexity-computer-fully-local-mac",
       "category": "Industry · Local AI",
       "sortDate": "2026-10-20",
