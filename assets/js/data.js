@@ -477,6 +477,16 @@ window.LLM_LAB_DATA = {
             { label: "Website", url: "https://krispitshugin.com" },
             { label: "Email", url: "mailto:kp39596@uga.edu" }
           ]
+        },
+        {
+          name: "Thomas Robinson",
+          role: "B.S./M.S. · CS & AI",
+          bio: "Interested in LLM applications and training, domain-specific language models, and agentic AI.",
+          photo: "assets/images/members-thomas-robinson.png",
+          links: [
+            { label: "LinkedIn", url: "https://www.linkedin.com/in/thomas-robinson-18597a387/" },
+            { label: "Email", url: "mailto:tnr85599@uga.edu" }
+          ]
         }
       ]
     },
@@ -661,6 +671,16 @@ window.LLM_LAB_DATA = {
             { label: "GitHub", url: "https://github.com/JacobSouder" },
             { label: "Project", url: "https://urbans.studio" },
             { label: "Email", url: "mailto:jacob.souder@uga.edu" }
+          ]
+        },
+        {
+          name: "Jonah Robbins",
+          role: "Undergrad · CS",
+          bio: "Interested in agentic large language models, computer audio applications, and deep reinforcement learning.",
+          photo: "assets/images/members-jonah-robbins.webp",
+          links: [
+            { label: "GitHub", url: "https://github.com/Vijax0" },
+            { label: "Email", url: "mailto:Jonah.Robbins@uga.edu" }
           ]
         }
       ]
