@@ -76,6 +76,21 @@ window.LLM_LAB_DATA = {
       { label: "Join a Startup Team", url: "teams.html" },
       { label: "Follow us on Instgram", url: "https://www.instagram.com/llmlab.uga/" }
     ],
+    sponsorsTitle: "Program sponsors",
+    sponsors: [
+      {
+        name: "Franklin CREATE!",
+        url: "https://www.franklin.uga.edu/franklin-create",
+        // Official artwork: https://franklin.uga.edu/sites/default/files/inline-images/2-Franklin-CREATE-wordmark.png
+        logo: "assets/images/sponsor-franklin-create.png"
+      },
+      {
+        name: "UGA College of Engineering",
+        url: "https://engineering.uga.edu/",
+        // Official artwork: https://engineering.uga.edu/wp-content/uploads/2023/10/CollegeofEngineering_LOGO.svg
+        logo: "assets/images/sponsor-uga-engineering.svg"
+      }
+    ],
     overviewTitle: "From ideas to responsible ventures",
     overview: [
       "Research and teaching often reveal practical problems that deserve solutions beyond a paper or classroom demonstration. Students interested in pursuing those opportunities can develop the problem definition, identify intended users, test technical assumptions, and build an initial prototype.",
@@ -480,7 +495,7 @@ window.LLM_LAB_DATA = {
         },
         {
           name: "Thomas Robinson",
-          role: "B.S./M.S. · CS & AI",
+          role: "M.S. Student in AI",
           bio: "Interested in LLM applications and training, domain-specific language models, and agentic AI.",
           photo: "assets/images/members-thomas-robinson.png",
           links: [

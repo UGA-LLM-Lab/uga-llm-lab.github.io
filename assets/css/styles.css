@@ -1237,6 +1237,82 @@ a:focus-visible {
 }
 
 /* Entrepreneurship */
+.entrepreneurship-sponsors {
+  padding: 18px 0 4px;
+}
+
+.entrepreneurship-sponsors h2 {
+  margin-bottom: 12px;
+  padding-bottom: 10px;
+  border-bottom: 2px solid var(--ink);
+  font-family: var(--serif);
+  font-size: 1.3rem;
+}
+
+.entrepreneurship-sponsors__grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 12px 32px;
+}
+
+.entrepreneurship-sponsor {
+  min-width: 0;
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 5px 0;
+}
+
+.entrepreneurship-sponsor:hover .entrepreneurship-sponsor__name,
+.entrepreneurship-sponsor:focus-visible .entrepreneurship-sponsor__name {
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.entrepreneurship-sponsor__logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex: 0 0 150px;
+  width: 150px;
+  height: 54px;
+}
+
+.entrepreneurship-sponsor__logo img {
+  width: 100%;
+  max-width: 150px;
+  height: 100%;
+  object-fit: contain;
+}
+
+.entrepreneurship-sponsor__name {
+  display: block;
+  font-size: 0.86rem;
+  font-weight: 600;
+}
+
+.entrepreneurship-sponsor__name > span {
+  margin-left: 4px;
+  color: var(--uga-red);
+}
+
+@media (max-width: 600px) {
+  .entrepreneurship-sponsors__grid {
+    grid-template-columns: 1fr;
+    gap: 8px;
+  }
+
+  .entrepreneurship-sponsor {
+    gap: 12px;
+  }
+
+  .entrepreneurship-sponsor__logo {
+    flex-basis: 120px;
+    width: 120px;
+    height: 46px;
+  }
+}
+
 .entrepreneurship-overview {
   display: grid;
   grid-template-columns: minmax(0, 0.9fr) minmax(360px, 1.1fr);

@@ -388,6 +388,19 @@
           ${page.actions.map((action, index) => `<a class="button${index ? " button--outline" : ""}" href="${escapeHtml(action.url)}">${escapeHtml(action.label)}</a>`).join("")}
         </div>
       </header>
+      ${page.sponsors?.length ? `
+        <section class="entrepreneurship-sponsors" aria-labelledby="entrepreneurship-sponsors-title">
+          <h2 id="entrepreneurship-sponsors-title">${escapeHtml(page.sponsorsTitle)}</h2>
+          <div class="entrepreneurship-sponsors__grid">
+            ${page.sponsors.map((sponsor) => `
+              <a class="entrepreneurship-sponsor" href="${escapeHtml(sponsor.url)}"${externalAttributes(sponsor.url)}>
+                <span class="entrepreneurship-sponsor__logo">
+                  <img src="${escapeHtml(sponsor.logo)}" alt="${escapeHtml(sponsor.name)} logo" width="300" height="100">
+                </span>
+                <span class="entrepreneurship-sponsor__name">${escapeHtml(sponsor.name)} <span aria-hidden="true">↗</span></span>
+              </a>`).join("")}
+          </div>
+        </section>` : ""}
       <section class="entrepreneurship-overview" aria-labelledby="entrepreneurship-overview-title">
         <div class="entrepreneurship-copy" data-reveal>
           <h2 id="entrepreneurship-overview-title">${escapeHtml(page.overviewTitle)}</h2>
