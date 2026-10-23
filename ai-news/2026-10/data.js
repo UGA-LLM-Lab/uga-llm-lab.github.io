@@ -2,6 +2,289 @@ window.AI_NEWS_MONTH_DATA["2026-10"] = {
   "label": "October 2026",
   "articles": [
     {
+      "slug": "anthropic-agent-skills-aaif-donation",
+      "category": "Industry",
+      "sortDate": "2026-10-22",
+      "dateLabel": "October 22, 2026",
+      "title": "Anthropic moves Agent Skills toward foundation governance",
+      "summary": "Anthropic announced the donation of Agent Skills to the Agentic AI Foundation, including its name, logo, GitHub organization and domain. The proposed next steps concern releases, community proposals and security guidance.",
+      "image": {
+        "src": "ai-news/2026-10/images/anthropic-agent-skills-aaif-official.jpg",
+        "alt": "Anthropic wordmark on the company’s official announcement graphic.",
+        "caption": "Source: Anthropic’s October 22 announcement. Official company wordmark; not a depiction of the foundation or a new model."
+      },
+      "content": [
+        {
+          "type": "paragraph",
+          "text": "Anthropic announced on October 22 that it is donating Agent Skills to the Agentic AI Foundation, placing the portable workflow standard under a neutral organization within the Linux Foundation. The donation covers the Agent Skills name and logo, its GitHub organization and the agentskills.io domain. Developers can continue using the standard and contributing to it without becoming foundation members. The news concerns stewardship of an existing format: Anthropic launched skills for Claude in October 2025 and published the open standard in December 2025."
+        },
+        {
+          "type": "paragraph",
+          "text": "A skill packages procedural knowledge that an agent can consult for a particular task. At minimum, it is a folder containing a SKILL.md file with a name, a description and written instructions. Authors can add scripts, reference documents, templates and other assets. This makes a skill useful for work such as following a team’s document format or carrying out a domain-specific analysis. The format supplies instructions and resources to an agent; the agent’s own tools and execution environment still determine what it can actually do."
+        },
+        {
+          "type": "paragraph",
+          "text": "The specification organizes access through progressive disclosure. An agent first loads the small name-and-description records that help it discover relevant skills. When a task calls for one, it reads the full instructions; additional resources are loaded as needed. That structure is intended to make a large collection practical without placing every procedure and reference document into the model’s context at once. The published specification also distinguishes required metadata from optional compatibility information and an experimental field for allowed tools. Support for that experimental field can differ among implementations."
+        },
+        {
+          "type": "paragraph",
+          "text": "Anthropic says more than 70 agent platforms have integrated the format, naming ChatGPT, Cursor, GitHub Copilot and VS Code among them. It also reports one million published skills and nearly 280 million installations. Those are company-reported adoption figures, rather than an independently audited count of active users or successful workflows. Their relevance to the donation is the number of products and authors that may depend on a common format. A change to shared metadata or loading behavior can affect implementations maintained by many different organizations."
+        },
+        {
+          "type": "paragraph",
+          "text": "Engineers from Anthropic, Google, OpenAI and other companies will maintain the standard as individuals, according to the announcement. David Soria Parra and Mahesh Murag are named as lead maintainers. Anthropic has proposed a roadmap that starts with versioned releases, a formal proposal process and security guidance for authors and installers. These are proposed next steps, so the announcement should not be read as a completed security certification or a guarantee that every skill behaves identically across clients. The immediate change is an announced home for governance and community input."
+        },
+        {
+          "type": "paragraph",
+          "text": "For teams maintaining reusable procedures, the practical issue is how those rules will evolve and how changes can be reviewed. A versioned specification and public proposal process could make compatibility decisions easier to follow, while security guidance would address packages that can contain executable code as well as prose. Those benefits depend on the work that follows the transfer. The current format and repository remain available, and the project’s published contribution channels provide a route for developers to discuss specification changes."
+        }
+      ],
+      "sources": [
+        {
+          "label": "Anthropic: donation announcement, October 22",
+          "url": "https://www.anthropic.com/news/donating-agent-skills-to-the-agentic-ai-foundation"
+        },
+        {
+          "label": "Agent Skills: format specification",
+          "url": "https://agentskills.io/specification"
+        },
+        {
+          "label": "Agent Skills: public repository and licensing",
+          "url": "https://github.com/agentskills/agentskills"
+        }
+      ]
+    },
+    {
+      "slug": "openai-decisions-api-general-availability",
+      "category": "Industry",
+      "sortDate": "2026-10-22",
+      "dateLabel": "October 22, 2026",
+      "title": "OpenAI makes its Decisions API generally available",
+      "summary": "The GPT-6 Luna endpoint returns probabilities, fixed choices and rubric scores from text, images and JSON. General availability adds native GPT-Live integration, caching and up to 400 questions per request.",
+      "image": {
+        "src": "ai-news/2026-10/images/openai-decisions-ga-official-documentation.png",
+        "alt": "Official OpenAI documentation showing Decisions API general availability and its new capabilities.",
+        "caption": "Source: OpenAI developer documentation, captured for this edition. The displayed speed comparison is OpenAI’s claim."
+      },
+      "content": [
+        {
+          "type": "paragraph",
+          "text": "OpenAI made the Decisions API generally available on October 22, offering a dedicated endpoint for the small, repeated judgments that sit inside applications and agent workflows. Built with GPT-6 Luna, it evaluates text, images and structured JSON and returns a bounded answer. OpenAI says these decisions can run up to ten times faster than using GPT-6 Luna through the Responses API. That is a provider comparison for this narrower operation, rather than a claim that every application or complete agent task becomes ten times faster."
+        },
+        {
+          "type": "paragraph",
+          "text": "The endpoint supports three answer types. A predicate estimates the probability that a condition is true, such as whether a product image shows damage. A choice selects from options supplied by the developer, while a score evaluates an input against ordered rubric levels. For scores, the returned value is a probability-weighted average of the levels’ numeric indices, so it can fall between them. Choice and score answers also include distributions and confidence information. These outputs give application code a compact signal for routing, filtering or deciding what should happen next."
+        },
+        {
+          "type": "paragraph",
+          "text": "General availability expands the public beta in several concrete ways. Requests can contain native JSON inputs, question-specific images and as many as 400 questions, twice the previous limit. Shared context can benefit from prompt caching, and the release adds native integration with GPT-Live. The documentation says GPT-6 Luna is currently the only supported model at the dedicated Decisions endpoint. It also separates this interface from generating an arbitrary structured object or requesting a tool call: those needs still belong to other application interfaces."
+        },
+        {
+          "type": "paragraph",
+          "text": "The voice integration lets GPT-Live call Decisions directly, avoiding an extra round trip through an application server. Developers can configure decisions around delegation or arriving transcript updates, including reactions while a person speaks. The resulting choice is still a model output. In the documented workflow, application code performs the selected action, checks its actual result and reports that result back. This distinction matters for systems that control tools: selecting an action and confirming that the action succeeded are separate steps, even when the selection arrives quickly."
+        },
+        {
+          "type": "paragraph",
+          "text": "OpenAI lists uncached input at $0.10 per million tokens and cached input at $0.01 per million, with no output-token charge for Decisions. Cache writes and regional-processing or long-context premiums can add charges under the applicable terms. The guide requires at least 1,024 shared-input tokens for reusable prompt-cache prefixes; question content does not count toward that minimum. US and European regional processing are supported, and Zero Data Retention is available to eligible customers. These details make the endpoint’s price and data controls more specific than a blanket low-cost or zero-retention promise."
+        },
+        {
+          "type": "paragraph",
+          "text": "Customer examples illustrate different workloads and baselines. Box reports roughly fivefold faster route selection on 30 insurance-certificate cases with unchanged accuracy, while Sierra reports sub-280-millisecond p95 action selection in parts of live conversations. These are attributed customer evaluations, not a single standardized benchmark or independent replication. OpenAI’s own guide recommends using labeled application examples to choose thresholds based on false-positive and false-negative costs. For developers, the release creates a focused option for frequent bounded judgments, with reliability still determined by the task, evidence and surrounding controls."
+        }
+      ],
+      "sources": [
+        {
+          "label": "OpenAI: Decisions API general availability",
+          "url": "https://openai.com/index/decisions-api/"
+        },
+        {
+          "label": "OpenAI: Decisions guide, limits and pricing",
+          "url": "https://developers.openai.com/api/docs/guides/decisions"
+        },
+        {
+          "label": "OpenAI: native voice integration",
+          "url": "https://developers.openai.com/api/docs/guides/decisions-voice"
+        }
+      ]
+    },
+    {
+      "slug": "google-forty-forest-typology-release",
+      "category": "Research",
+      "sortDate": "2026-10-22",
+      "dateLabel": "October 22, 2026",
+      "title": "Google releases ForTy to distinguish forest types at 10-meter resolution",
+      "summary": "ForTy combines a 2020 forest-type baseline with an early annual series for 2017–2025. Its paper reports strong overall accuracy, alongside substantial differences between classes and important uncertainty limits.",
+      "image": {
+        "src": "ai-news/2026-10/images/google-forty-2020-original-global-map.png",
+        "alt": "ForTy’s original global map with a legend for primary, naturally regenerating, planted and plantation forests, and tree crops.",
+        "caption": "Neumann et al., Scientific Data, Figure 1, CC BY 4.0. Original 2020 map, displayed as the majority class within each square kilometer; underlying data have 10-meter pixels."
+      },
+      "content": [
+        {
+          "type": "paragraph",
+          "text": "Google DeepMind and Google Research, working with the World Resources Institute and the International Institute for Applied Systems Analysis, announced Forest Typology, or ForTy, on October 22. The release pairs a global 2020 baseline with an early time series covering 2017–2025. Its purpose is to distinguish kinds of forest and agricultural tree cover that can look similarly green in satellite images. The associated Scientific Data paper was published on October 21; the 2020 reference year describes the landscape being mapped, not the announcement date."
+        },
+        {
+          "type": "paragraph",
+          "text": "ForTy assigns land to six categories: primary forest, naturally regenerating forest, planted forest, plantation forest, tree crops and agroforestry, and other land. The distinction adds information that a binary tree-cover map cannot supply. A natural forest converted into a timber plantation can regain canopy while changing its ecological character and management. Separating those states can support conservation research and supply-chain monitoring. The map is an evidence layer for those activities, rather than a certificate that a particular property, commodity shipment or business complies with a regulation."
+        },
+        {
+          "type": "paragraph",
+          "text": "The model uses AlphaEarth Foundations satellite embeddings and a three-stage training pipeline. It begins with curated reference annotations, expands through refined pseudo-labels at roughly 1.2 million patch locations, and then incorporates neighboring years to improve temporal consistency. Each stage uses an ensemble of five vision models. Active-learning campaigns added examples from regions and forest classes where experts found systematic mistakes. The distributed baseline supplies relative confidence scores, allowing users to choose thresholds instead of accepting only a single hard label for every pixel."
+        },
+        {
+          "type": "paragraph",
+          "text": "The paper’s validation started with 9,100 globally stratified sites, independently assessed by two trained experts. Accuracy estimates use the 8,190 sites resolved through consensus; 738 were unresolved and 172 were marked uncertain. For the six-class 2020 map, the authors report 90.2% overall accuracy. Collapsing the task to forest versus non-forest raises overall accuracy to 95.5%. Those are different classification problems, so the larger binary result does not mean the model distinguishes every forest subtype equally well."
+        },
+        {
+          "type": "paragraph",
+          "text": "Class-level results give a more informative view of the difficult boundaries. Primary forest has an F1 score of 82.9%, naturally regenerating forest 72.6%, plantation forest 66.7% and planted forest 58.2%. The paper notes that the large other-land class strongly influences overall accuracy. Excluding unresolved sites may also bias estimates because ambiguity is concentrated in managed and transitional landscapes. These limits matter when an application depends on finding plantations or separating planted stands from natural regrowth, rather than broadly identifying where forests occur."
+        },
+        {
+          "type": "figure",
+          "src": "ai-news/2026-10/images/google-forty-original-threshold-results.png",
+          "alt": "Original precision and recall curves for natural forest, all forest and all planted forest at different confidence thresholds.",
+          "caption": "Neumann et al., Scientific Data, Figure 7, CC BY 4.0. Threshold trade-offs for the validated 2020 map; shaded bands are 95% confidence intervals."
+        },
+        {
+          "type": "paragraph",
+          "text": "Several further qualifications follow from how the task is defined. Land-use history and management intent are not directly visible from one year of satellite imagery. A 40-year rotation threshold is an operational proxy for separating planted and plantation forests, and mixed agroforestry remains challenging. The confidence scores have not been calibrated as true posterior probabilities. Users should therefore evaluate local performance and their preferred precision–recall trade-off, especially for rare regional classes."
+        },
+        {
+          "type": "paragraph",
+          "text": "The baseline data and classification layer are available under CC BY 4.0 through Earth Engine and downloadable datasets. The newly announced annual series is described as an early release that the partners plan to improve. The paper’s detailed accuracy evidence concerns the 2020 baseline; it should not be carried over as an established accuracy rate for every year or every detected transition. That separation preserves the release’s value while keeping its most consequential claims tied to the evaluation actually reported."
+        }
+      ],
+      "sources": [
+        {
+          "label": "Google DeepMind: October 22 release",
+          "url": "https://deepmind.google/blog/beyond-tree-cover-mapping-the-worlds-forest-types/"
+        },
+        {
+          "label": "Scientific Data: full paper, methods and validation",
+          "url": "https://www.nature.com/articles/s41597-026-08299-5"
+        },
+        {
+          "label": "Earth Engine: ForTy 2020 dataset",
+          "url": "https://developers.google.com/earth-engine/datasets/catalog/projects_nature-trace_assets_forest_typology_forest_typology_2020_v1_0_collection"
+        },
+        {
+          "label": "Creative Commons Attribution 4.0 license",
+          "url": "https://creativecommons.org/licenses/by/4.0/"
+        }
+      ]
+    },
+    {
+      "slug": "hugging-face-carbon-x-dna-model",
+      "category": "Research",
+      "sortDate": "2026-10-22",
+      "dateLabel": "October 22, 2026",
+      "title": "Carbon-X brings DNA and natural language into one open model",
+      "summary": "The 14.8-billion-parameter model combines DNA tokens and text in a shared decoder. Developer benchmarks show useful specialization, but uneven task performance, unresolved runtime guidance and no clinical validation.",
+      "image": {
+        "src": "ai-news/2026-10/images/carbon-x-original-benchmark-cost-chart.png",
+        "alt": "Carbon-X developer chart comparing average DNA benchmark scores and inference cost per problem.",
+        "caption": "Source: Hugging Face Bio’s pinned Carbon-X repository. Developer-reported comparison; the chart rounds scores and uses a logarithmic relative-cost axis."
+      },
+      "content": [
+        {
+          "type": "paragraph",
+          "text": "Hugging Face Bio released Carbon-X on October 22, an open 14.8-billion-parameter model that reads DNA sequences and natural-language questions in the same conversation. The project brings together researchers at Hugging Face, Zhongguancun Academy and the Telethon Institute of Genetics and Medicine/University of Naples Federico II. The reviewed model repository’s release commit is dated October 22, distinct from its October 21 repository-creation timestamp. Apache 2.0 weights and supporting code make the model available for research and adaptation."
+        },
+        {
+          "type": "paragraph",
+          "text": "Carbon-X starts from Qwen3-14B and extends its vocabulary with DNA tokens. A hybrid tokenizer retains ordinary text tokens while representing DNA as non-overlapping groups of six bases, plus markers and shorter trailing sequences. Both kinds of token feed one decoder; there is no separate DNA encoder. The training recipe combines roughly 302 billion mid-training tokens from genomes, biology text, English and instruction data, followed by supervised fine-tuning and reinforcement learning with verifiable rewards. The aim is to connect sequence patterns with explanations and questions expressed in English."
+        },
+        {
+          "type": "paragraph",
+          "text": "Across five DNA benchmarks, the developers report a 66.7% average with thinking disabled, compared with 67.5% for GPT-6.1 Sol at its selected maximum reasoning setting. The tasks include coding-variant effects, more complex variants, sequence-feature questions, next-base prediction and single-base variant effects. Their metrics are heterogeneous: some use balanced accuracy, others question accuracy or per-base accuracy. The overall average is therefore a compact index of these particular tests, not a universal measure of biological understanding or a clinical diagnostic accuracy rate."
+        },
+        {
+          "type": "paragraph",
+          "text": "The task breakdown also resists a simple winner-takes-all interpretation. Carbon-X scores 74.9 on coding-variant effects and 39.4 on next-base prediction, leading the models tested on those two benchmarks. Other models lead on the remaining tasks. Within GenomeQA, Carbon-X reaches 93.2% on organism-group questions but only 29.8% on splice-site questions and 34.6% on histone marks. The authors report decontamination using DNA overlap, text overlap and homology checks. These remain developer-run evaluations; this edition does not claim an independent reproduction or validation on patient care."
+        },
+        {
+          "type": "paragraph",
+          "text": "The cost comparison is similarly conditional. The developers estimate about $300 in Carbon-X inference to process 2.4 million ClinVar variants of uncertain significance, versus approximately $32,000 to $4 million for the comparison models and settings. Their calculation uses measured H200 throughput at $5 per GPU-hour for Carbon-X and standard API prices for hosted models. It estimates inference expense for a projected workload, rather than the cost of completing clinical interpretation, expert review or laboratory validation. Shorter direct answers and local GPU utilization are part of that comparison."
+        },
+        {
+          "type": "paragraph",
+          "text": "The pinned model card documents Transformers and vLLM deployment and says the bfloat16 weights fit on one 80 GB GPU. It explicitly warns that llama.cpp and GGUF runtimes do not support its custom DNA tokenizer, conflicting with a llama.cpp claim in the launch page. Mac/GGUF support should consequently be treated as unresolved. The nominal context window is 40,960 tokens, but much longer inputs than those used in training have not been evaluated. The card also says exact sequence operations can fail and long DNA generation degrades."
+        },
+        {
+          "type": "paragraph",
+          "text": "Carbon-X has not been clinically validated and should not be used to make medical decisions, according to its authors. It can invent a sequence’s identity or function when context is missing, so benchmark strength does not remove the need for external checks. Its most concrete contribution is an inspectable specialist model and training recipe for studying how DNA and language can share one system. Researchers can examine that approach while keeping the reported task boundaries, deployment constraints and uncertainty visible."
+        }
+      ],
+      "sources": [
+        {
+          "label": "Carbon-X: model card at reviewed release revision",
+          "url": "https://huggingface.co/HuggingFaceBio/Carbon-X/blob/1fac52c1f3e8a437f352a20af30f42f5ff144d7b/README.md"
+        },
+        {
+          "label": "Hugging Face Bio: full technical launch report",
+          "url": "https://huggingface.co/spaces/HuggingFaceBio/Carbon-X-Release"
+        },
+        {
+          "label": "Carbon: public code repository",
+          "url": "https://github.com/huggingface/carbon"
+        }
+      ]
+    },
+    {
+      "slug": "new-york-ai-jobs-institute-launch",
+      "category": "Employment",
+      "sortDate": "2026-10-22",
+      "dateLabel": "October 22, 2026",
+      "title": "New York backs an AI Jobs Institute with a 40,000-person training target",
+      "summary": "The Queens initiative combines a $10 million public investment with employer partnerships and workforce research. Construction is planned for winter, with full occupancy expected in mid-2027.",
+      "image": {
+        "src": "ai-news/2026-10/images/new-york-aiji-official-site.png",
+        "alt": "Pursuit AI Jobs Institute’s official site displaying its workforce-hub identity.",
+        "caption": "Source: the AI Jobs Institute’s public website. Screenshot of the initiative’s own landing page; not a photograph of a completed facility."
+      },
+      "content": [
+        {
+          "type": "paragraph",
+          "text": "New York Governor Kathy Hochul announced the launch of the AI Jobs Institute on October 22, backing a Queens-based workforce hub operated by the nonprofit Pursuit. The initiative aims to train up to 40,000 New Yorkers by 2032 and connect participants with pathways into AI-enabled careers. It is supported by a total public investment of $10 million. The announcement concerns a state-backed launch and development plan; the institute had appeared in earlier Pursuit funding announcements, so it is not the first public mention of the project."
+        },
+        {
+          "type": "paragraph",
+          "text": "Empire State Development is contributing $3.06 million toward Pursuit’s new Long Island City training hub. That amount comprises $1.5 million through the Office of Strategic Workforce Development and $1.56 million through the Regional Economic Development Council initiative. It sits within the announced $10 million public investment, rather than being an additional sum that raises the total to $13.06 million. The governor’s release identifies a broader coalition of philanthropic, civic and industry partners, but does not turn every named partner into a separately quantified funding commitment."
+        },
+        {
+          "type": "paragraph",
+          "text": "The institute’s work is organized around four areas. Workforce training will expand AI-enabled career pathways and immersive programming. An innovation component will incubate pilots and tools, including models for working with small businesses and nonprofits. Policy and research activities are intended to generate real-world evidence for workforce strategies. Convening employers, talent and industry partners in the same hub is the fourth part. Together, those functions make the proposal broader than a short course: it links training, employer relationships and evidence about how work is changing."
+        },
+        {
+          "type": "paragraph",
+          "text": "The institute will also house the New York Global Tech and Innovation Center, an initiative of the Queens Borough President’s Office. That center is intended to connect underrepresented entrepreneurs with capital, corporate partners and networks, with a goal of helping launch more than a dozen high-growth startups over five years. A national advisory council chaired by former US Secretary of Education Miguel Cardona will help guide the institute. Its listed members span workforce organizations, education, finance and technology companies, including representatives of OpenAI and Anthropic."
+        },
+        {
+          "type": "paragraph",
+          "text": "The timetable remains prospective. Construction is scheduled to begin this winter, and full occupancy is expected in mid-2027. The 40,000 figure is a training target through 2032, not a count of people already trained, job offers secured or new positions created. The governor’s release separately describes AI Prep for Jobs, a statewide initiative with a 420-person training goal; that smaller program should not be merged into the institute’s target or treated as an accomplished result. Historical Pursuit participant earnings likewise describe earlier programs rather than outcomes of this new hub."
+        },
+        {
+          "type": "paragraph",
+          "text": "For workers and employers, the next useful evidence will be how these plans translate into accessible programs and durable career pathways. Training participation, completion, placements, wages and job quality measure different things, and the announcement does not yet supply institute outcomes on those measures. The institute’s stated research function could help make those distinctions visible as programs develop. Its near-term significance is the commitment of public resources and an employer-connected institution to workforce preparation, with delivery milestones that can be checked against the announced construction and training schedule."
+        }
+      ],
+      "sources": [
+        {
+          "label": "New York State: October 22 announcement and funding details",
+          "url": "https://www.governor.ny.gov/news/governor-hochul-announces-launch-ai-jobs-institute-prepare-new-yorkers-jobs-future"
+        },
+        {
+          "label": "AI Jobs Institute: official initiative site",
+          "url": "https://aiji.pursuit.org/"
+        },
+        {
+          "label": "Pursuit: earlier 2026 Google.org grant announcement",
+          "url": "https://www.pursuit.org/blog/google-grant-2026"
+        }
+      ]
+    },
+    {
       "slug": "patch-the-planet-php-security-fixes",
       "category": "Industry · AI Security",
       "sortDate": "2026-10-21",
