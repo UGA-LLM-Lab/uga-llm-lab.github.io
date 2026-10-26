@@ -2,6 +2,148 @@ window.AI_NEWS_MONTH_DATA["2026-10"] = {
   "label": "October 2026",
   "articles": [
     {
+      "slug": "uk-ai-funding-biosecurity-cyber-skills-package",
+      "category": "Industry",
+      "sortDate": "2026-10-24",
+      "dateLabel": "October 24, 2026",
+      "title": "UK AI funding package backs biosecurity, cyber defense and chip-design skills",
+      "summary": "A Saturday Treasury statement sets out funding across biosecurity, cyber defense and skills. Company support for the planned biosecurity lab includes model credits and access.",
+      "image": {
+        "src": "ai-news/2026-10/images/uk-treasury-ai-funding-source.jpg",
+        "alt": "HM Treasury plaque on a stone wall.",
+        "caption": "Source: HM Treasury / GOV.UK. Government-supplied photograph of the Treasury; the image predates the October 24 funding statement."
+      },
+      "content": [
+        {
+          "type": "paragraph",
+          "text": "The UK Treasury set out an AI funding package on October 24 that connects defensive research, public-sector security and technical training. Its Saturday statement brings together a planned AI Biosecurity Lab, additional funding for the AI Security Institute and a National Cyber Shield programme. These are commitments to develop capabilities; the announcement does not demonstrate that the resulting systems already prevent biological or cyber attacks."
+        },
+        {
+          "type": "paragraph",
+          "text": "The timing matters for this edition. The Treasury statement appeared at about 1 a.m. Saturday in New York. The lab’s initial announcement carried an October 24 British date but was published shortly after midnight in Britain, still Friday evening in New York. Saturday’s news here is the broader funding statement, with that earlier lab announcement providing detail."
+        },
+        {
+          "type": "heading",
+          "text": "Public funding and company support have different forms"
+        },
+        {
+          "type": "paragraph",
+          "text": "The planned lab receives £100 million in government funding within a £165 million National AI Biosecurity Initiative. The remaining £65 million supports other biosecurity work, including surveillance and countermeasures. Treating the lab’s allocation and the initiative’s total as separate new pots would count the same money twice."
+        },
+        {
+          "type": "paragraph",
+          "text": "OpenAI and Anthropic each describe support worth up to £100 million, bringing potential company commitments to £200 million. Much of that support takes the form of model credits, access and technical assistance. It should not be read as £200 million in additional cash for the lab. OpenAI’s contribution includes compute and model credits through its Rosalind biodefense programme; Anthropic’s includes credits, access and technical support."
+        },
+        {
+          "type": "paragraph",
+          "text": "The government plans an independent nonprofit organisation, supported by a scientific advisory committee. Proposed work involves public-health and animal-health partners, the Defence Science and Technology Laboratory, and medicines regulation. Google DeepMind is expected to contribute scientific expertise and access to relevant models. Those arrangements describe an intended research network rather than a completed deployment or a disclosed number of new jobs."
+        },
+        {
+          "type": "heading",
+          "text": "The wider package addresses institutions and skills"
+        },
+        {
+          "type": "paragraph",
+          "text": "The Treasury also sets out an additional £120 million for the AI Security Institute and £60 million for National Cyber Shield, including a £25 million challenge fund. That challenge fund sits inside the cyber programme’s total. An £18 million advanced chip-design academy adds a training component, while a proposed AI Economics Institute receives £23 million over three years. The different time horizons and funding categories make a single headline sum less informative than the individual programmes."
+        },
+        {
+          "type": "paragraph",
+          "text": "For university researchers, the practical opportunity is the planned connection between model access, specialist public agencies and defensive research questions. Access will still depend on programme rules and project selection. OpenAI’s separate Rosalind programme, for example, uses rolling review for eligible defensive projects; a public description of that programme does not automatically award a team funding or unrestricted access to every model."
+        },
+        {
+          "type": "paragraph",
+          "text": "The next evidence to watch is operational: how the lab selects projects, which resources approved teams can actually use, and what validated results become public. Announced credits can reduce the cost of an experiment, but they do not establish clinical usefulness or preparedness on their own. The package creates a research and skills agenda whose results remain to be tested."
+        }
+      ],
+      "sources": [
+        {
+          "label": "HM Treasury: October 24 funding statement",
+          "url": "https://www.gov.uk/government/news/chancellor-unveils-britains-ambitious-plan-for-ai"
+        },
+        {
+          "label": "UK government: AI Biosecurity Lab announcement",
+          "url": "https://www.gov.uk/government/news/introducing-the-ai-biosecurity-lab"
+        },
+        {
+          "label": "OpenAI: Rosalind biodefense programme eligibility",
+          "url": "https://openai.com/form/rosalind-biodefense-program/"
+        }
+      ]
+    },
+    {
+      "slug": "kaml-esm-protein-electrostatics-publication",
+      "category": "Research",
+      "sortDate": "2026-10-24",
+      "dateLabel": "October 24, 2026",
+      "title": "Protein-language models predict pKa values, with a limit on engineered mutations",
+      "summary": "An October 24 accepted Nature Communications paper tests KaML-ESM on protein electrostatics. Strong results on ordinary proteins weaken on deliberately engineered buried mutations.",
+      "image": {
+        "src": "ai-news/2026-10/images/kaml-esm-original-platform-diagram.jpg",
+        "alt": "Authors’ diagram of the KaML-ESM platform showing sequence input, pKa predictions and protein visualization.",
+        "caption": "Source: Shen, Dayhoff, Kortzak and Shen, Nature Communications, DOI 10.1038/s41467-026-78406-y, Figure 5, CC BY 4.0. Original figure extracted unchanged from the accepted manuscript."
+      },
+      "content": [
+        {
+          "type": "paragraph",
+          "text": "A Nature Communications paper published October 24 tests whether protein-language models can estimate a small chemical property with large biological consequences: pKa, which describes how readily a molecular group gains or loses a proton. The University of Maryland School of Pharmacy team’s KaML-ESM system predicts residue-level values from protein sequences. Its strongest results come with a clear boundary: performance deteriorates on deliberately engineered mutations buried inside a protein."
+        },
+        {
+          "type": "paragraph",
+          "text": "The new milestone is journal publication of the accepted manuscript. Earlier preprints already described the approach. The October 24 document is an accepted, peer-reviewed article in press, and should be distinguished from both those preprints and a final typeset version. The reported results come from the accepted paper rather than earlier benchmark tables."
+        },
+        {
+          "type": "heading",
+          "text": "Learning from scarce experimental labels"
+        },
+        {
+          "type": "paragraph",
+          "text": "KaML-ESM combines frozen representations from ESM2 or ESMC with small prediction networks. It does not retrain the entire large protein-language model. Its GAINES procedure expands the training material by transferring pKa labels between residues with sufficiently similar embeddings, retrieving at most ten matches per query. The final augmented dataset contains 4,220 residues across 2,164 proteins. Those transferred labels are training examples inferred from similarity, rather than thousands of additional physical measurements."
+        },
+        {
+          "type": "paragraph",
+          "text": "The authors evaluate random holdouts and sequence-clustered splits designed to reduce the advantage of closely related sequences appearing in training and testing. Their random-holdout results report root-mean-square errors of 0.48 pKa units for the ESM2 version and 0.53 for ESMC. On an external set of 54 measurements from 16 proteins published after April 2023, the respective errors are 0.42 and 0.39. These are error measurements on specified datasets, not guarantees for an arbitrary protein."
+        },
+        {
+          "type": "paragraph",
+          "text": "The difficult counterexample is a withheld set of 89 engineered, buried mutations in staphylococcal nuclease. Errors rise to 2.76 and 1.98, compared with 1.82 for PROPKA and 1.94 for DeepKa in the reported comparison. A sequence model can capture regularities in naturally occurring proteins while missing unusual structural responses to a designed mutation. The authors also discuss limitations in making comparisons across methods with different training data."
+        },
+        {
+          "type": "heading",
+          "text": "A useful starting point for protein experiments"
+        },
+        {
+          "type": "paragraph",
+          "text": "The project provides a browser interface, a precomputed human-proteome atlas and a command-line implementation. Sequence-only predictions can be made without folding a structure; optional structural views help locate predicted shifts. The atlas contains computational estimates rather than experimental validation of every listed residue, and the ESM2 length limit excludes some longer proteins from that analysis."
+        },
+        {
+          "type": "paragraph",
+          "text": "Practical requirements depend on the route. The repository’s local setup calls for substantial GPU memory, system RAM and storage. Live ESMC requests in the browser require a user’s EvolutionaryScale Forge API key, while browsing the precomputed atlas does not. The code is licensed CC BY-NC 4.0, which matters for commercial reuse; the paper itself uses CC BY 4.0."
+        },
+        {
+          "type": "paragraph",
+          "text": "For a lab, the defensible use is prioritisation: identify residues worth measuring or comparing with a physics-based calculation. The engineered-mutation result is particularly relevant when designing proteins rather than studying common natural sequences. KaML-ESM makes a biochemical hypothesis easier to generate, while the paper’s own tests show why an experimental follow-up remains necessary."
+        }
+      ],
+      "sources": [
+        {
+          "label": "Nature Communications: October 24 article",
+          "url": "https://www.nature.com/articles/s41467-026-78406-y"
+        },
+        {
+          "label": "Accepted manuscript: methods, results and limitations",
+          "url": "https://www.nature.com/articles/s41467-026-78406-y_reference.pdf"
+        },
+        {
+          "label": "Jana Shen Lab: KaML-ESM code, requirements and licence",
+          "url": "https://github.com/JanaShenLab/KaML-ESM"
+        },
+        {
+          "label": "KaML-ESM browser and proteome atlas",
+          "url": "https://kaml.computchem.org"
+        }
+      ]
+    },
+    {
       "slug": "openai-frontier-training-containment-disclosure",
       "category": "Industry",
       "sortDate": "2026-10-23",
