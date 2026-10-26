@@ -213,6 +213,15 @@
   const renderAttention = () => {
     const trends = window.AI_NEWS_TRENDS;
     if (!trends?.items?.length) return "";
+    // Always rank weekly heat topics from highest to lowest attention index; topics without an index follow by share.
+    const rankedItems = [...trends.items].sort((a, b) => {
+      const aHasIndex = Number.isFinite(a.index);
+      const bHasIndex = Number.isFinite(b.index);
+      if (aHasIndex !== bHasIndex) return aHasIndex ? -1 : 1;
+      const aScore = aHasIndex ? a.index : a.share;
+      const bScore = bHasIndex ? b.index : b.share;
+      return bScore - aScore;
+    });
 
     return `
       <aside class="ai-news-attention" aria-labelledby="ai-news-attention-title">
@@ -222,7 +231,7 @@
           <span>${escapeHtml(trends.period)}</span>
         </div>
         <ol class="ai-news-attention__list">
-          ${trends.items.map((item) => {
+          ${rankedItems.map((item) => {
             const hasIndex = Number.isFinite(item.index);
             const width = hasIndex
               ? Math.max(4, Math.min(100, (item.index / 160) * 100))

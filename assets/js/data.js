@@ -1063,15 +1063,6 @@ window.LLM_LAB_DATA = {
       label: "Brain-inspired AI",
       items: [
         {
-          year: 2026,
-          month: "April",
-          monthNumber: 4,
-          title: "Towards a General-purpose Foundation Model for Functional MRI Analysis",
-          authors: "Cheng Wang, Yu Jiang, Zhihao Peng, Chenxin Li, Chang-Bae Bang, Lin Zhao, Wanyi Fu, Jinglei Lv, Jorge Sepulcre, Carl Yang, Lifang He, Tianming Liu, Xue-Jun Kong, Quanzheng Li, Daniel S. Barron, Anqi Qiu, Randy Hirschtick, Byung-Hoon Kim, Hongbin Han, Xiang Li, Yixuan Yuan",
-          venue: "Nature Biomedical Engineering",
-          url: "https://doi.org/10.1038/s41551-026-01666-y"
-        },
-        {
           year: 2023,
           month: "June",
           monthNumber: 6,
