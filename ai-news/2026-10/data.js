@@ -2,6 +2,140 @@ window.AI_NEWS_MONTH_DATA["2026-10"] = {
   "label": "October 2026",
   "articles": [
     {
+      "slug": "bytedance-recycler-hidden-state-reasoning-report",
+      "category": "Research",
+      "sortDate": "2026-10-25",
+      "dateLabel": "October 25, 2026",
+      "title": "ByteDance’s Recycler carries hidden states between tokens to improve reasoning",
+      "summary": "An October 25 technical report adds a continuous information path to autoregressive models. Decoding avoids extra model passes, while training and optional two-pass prefill cost more.",
+      "image": {
+        "src": "ai-news/2026-10/images/recycler-original-architecture-diagram.png",
+        "alt": "Recycler paper’s three-panel comparison of ordinary token prediction, hidden-state recycling and parallelised training, with the complete legend.",
+        "caption": "Source: ByteDance Seed, Recycler technical report, October 25, 2026, Figure 2. Original architecture diagram; all three panels and the legend are retained. This describes a research method."
+      },
+      "content": [
+        {
+          "type": "paragraph",
+          "text": "ByteDance Seed posted an October 25 technical report describing Recycler, a modification that carries information between generated tokens through a model’s hidden states. The approach supplements the usual path in which a model samples a token and feeds that token back into the next step. Its experiments ask whether a continuous information channel can retain useful reasoning information that a single discrete token would otherwise discard."
+        },
+        {
+          "type": "paragraph",
+          "text": "The new event is a research report, dated October 25 on both the official listing and the document. The paper’s title describes latent reasoning as cost-free, but that phrase applies narrowly to the decoding design. Training requires additional computation, and one evaluation option spends more computation on the input prompt. The report does not establish that every end-to-end application becomes faster or cheaper."
+        },
+        {
+          "type": "heading",
+          "text": "A second path between generation steps"
+        },
+        {
+          "type": "paragraph",
+          "text": "Recycler takes the previous token’s top-layer hidden state, normalises it and applies a learned projection before adding it to the next token’s embedding. The ordinary sampled-token path remains. This introduces a trainable connection inside the model; it is not a prompt that can simply be pasted into an unchanged chat service. At generation time, the recycled information comes from a hidden state that the preceding step already computed, avoiding an additional complete model pass for each new token."
+        },
+        {
+          "type": "paragraph",
+          "text": "Training is more complicated because the extra dependency interferes with ordinary parallel processing of a whole sequence. The authors approximate it with two full-sequence passes and occasionally add a third for stability. Their pretraining comparison uses roughly twice the baseline computation. Readers evaluating the efficiency claim therefore need to distinguish training cost, prompt processing and token-by-token decoding rather than treating them as one number."
+        },
+        {
+          "type": "heading",
+          "text": "Measured gains come with visible tradeoffs"
+        },
+        {
+          "type": "paragraph",
+          "text": "In a controlled continued-pretraining experiment using the same backbone and data recipe, the reported average across fourteen datasets rises from 42.97 to 46.21, with the extra training compute still part of the comparison. The supervised-fine-tuning table reports a 22-benchmark average of 62.9 for the baseline, 65.3 for Recycler with one-pass prompt processing and 66.7 with two-pass prompt processing. These are aggregates from the paper’s own experiments, not independently reproduced results."
+        },
+        {
+          "type": "paragraph",
+          "text": "Individual tasks do not all improve. IFEval falls from 86.5 to 83.9 with one-pass prefill and reaches 84.8 with two passes. ArenaHard increases from 71.0 to 77.4 in the one-pass setting but falls to 68.6 with two passes. The stronger overall average therefore does not justify assuming that the more expensive prompt-processing option is best for every workload."
+        },
+        {
+          "type": "paragraph",
+          "text": "The report also explores reinforcement learning and comparisons against a larger baseline, but differences in training trajectories and evolving rollout recipes limit clean conclusions about equal-budget superiority. Those experiments are useful leads for further work. They do not isolate a universal gain from the architecture under identical training expenditure."
+        },
+        {
+          "type": "paragraph",
+          "text": "For researchers, the interesting claim is that the channel between autoregressive steps can be changed without generating additional visible reasoning tokens at each step. Testing that claim in practice would require reproducing the training method and measuring accuracy, prefill latency, decoding latency and memory together. The official report and listing do not establish a released production API or publicly downloadable model weights, so this remains a method to evaluate rather than a shipping feature to enable."
+        }
+      ],
+      "sources": [
+        {
+          "label": "ByteDance Seed: October 25 research listing",
+          "url": "https://seed.bytedance.com/en/public_papers/recycler-cost-free-latent-reasoning-via-hidden-state-recycling"
+        },
+        {
+          "label": "Recycler: complete technical report, methods and evaluation tables",
+          "url": "https://lf3-static.bytednsdoc.com/obj/eden-cn/hyvsmeh7uhobf/recycler_arxiv%20(2).pdf"
+        }
+      ]
+    },
+    {
+      "slug": "nanbeige-43-agent-benchmark-report",
+      "category": "Industry",
+      "sortDate": "2026-10-25",
+      "dateLabel": "October 25, 2026",
+      "title": "Nanbeige details its 33B agent model with benchmarks and deployment guidance",
+      "summary": "Sunday’s substantive model card adds evaluations and serving instructions to weights uploaded Saturday. The reported agent gains vary by benchmark and remain vendor measurements.",
+      "image": {
+        "src": "ai-news/2026-10/images/nanbeige-43-official-logo.png",
+        "alt": "Official green Nanbeige project logo.",
+        "caption": "Source: Nanbeige LLM Lab, official Nanbeige4.3-33B repository. Project identity artwork; no benchmark result is represented by the logo."
+      },
+      "content": [
+        {
+          "type": "paragraph",
+          "text": "Nanbeige published a detailed evaluation and deployment report for Nanbeige4.3-33B on October 25, following the model’s weight upload on October 24. The distinction is visible in the repository history: Saturday’s material contained the weights and a minimal licence-only model card; Sunday’s expanded card added benchmark comparisons, explanations of the chat template and serving examples. The Sunday milestone is that substantive report, rather than a second release of the same weights."
+        },
+        {
+          "type": "paragraph",
+          "text": "The model is a dense, 33-billion-parameter system distributed under Apache 2.0. Its configuration declares a 524,288-token context window. That setting describes what the architecture and serving configuration allow, rather than demonstrating reliable performance on every task at the maximum length. The team positions it for tool use, coding and extended agent workflows, and describes a smaller student model as future work."
+        },
+        {
+          "type": "heading",
+          "text": "Agent improvements depend on the test"
+        },
+        {
+          "type": "paragraph",
+          "text": "The company reports 80.9 on Terminal-Bench 2.1, compared with 73.0 for Qwen3.8-27B, and 65.5 on DeepSWE, compared with 42.5. These results support investigating the model for multi-step tool workflows. They do not establish a universal lead: in the same card, SWE-bench Pro is 60.3 versus Qwen’s 61.7, while GDPval is 84.8 versus 86.4. Selecting only the largest gains would hide that variation."
+        },
+        {
+          "type": "paragraph",
+          "text": "The evaluation setup also matters. The card identifies Terminus 2 for Terminal-Bench 2.1 and mini-SWE-agent v2.4.6 for DeepSWE and Terminal-Bench 4. Other tests use different task subsets, graders or tools. Scores from different benchmark rows therefore should not be averaged casually into a single measure of general competence. The comparisons are reported by the developer, with shared settings within each benchmark, rather than independently reproduced by the lab publishing this article."
+        },
+        {
+          "type": "heading",
+          "text": "The report makes the interaction format explicit"
+        },
+        {
+          "type": "paragraph",
+          "text": "Two chat-template controls govern different parts of a conversation. The enable_thinking setting controls reasoning in the current response. The preserve_thinking option controls whether earlier assistant reasoning remains in the conversation history. Nanbeige recommends different history handling for general chat and agent workflows. Tools must also be supplied through the expected template, with the report recommending its XML representation while supporting a JSON form."
+        },
+        {
+          "type": "paragraph",
+          "text": "Those details are operationally useful because a benchmark harness and an application can present the same weights with different conversation histories and tool formats. Reproducing a result requires preserving the interaction setup as well as the model files. A deployment comparison should record prompts, template options, tool definitions, generation limits and the benchmark version before attributing a difference to model quality."
+        },
+        {
+          "type": "paragraph",
+          "text": "Published vLLM and SGLang examples use four-way tensor parallelism and specify reasoning and tool-call parsers. At two bytes per parameter, 33 billion BF16 parameters imply roughly 66 GB for weights alone, before runtime overhead and the attention cache. That arithmetic is a planning estimate, not a measured hardware requirement. Long contexts increase the memory burden further, so the declared context length should not be confused with an inexpensive default setting."
+        },
+        {
+          "type": "paragraph",
+          "text": "For teams considering a trial, Sunday’s contribution is a more inspectable starting point: identifiable model files, explicit configuration and enough evaluation detail to design a local comparison. The useful next step is to reproduce a relevant workflow under a fixed budget and examine failures, especially where the published results already show tradeoffs."
+        }
+      ],
+      "sources": [
+        {
+          "label": "Nanbeige: complete model card and evaluation notes",
+          "url": "https://huggingface.co/Nanbeige/Nanbeige4.3-33B/blob/c1093c501cc6460427c0ac634db7223d0450c0ee/README.md"
+        },
+        {
+          "label": "Repository history: Saturday weights and Sunday report",
+          "url": "https://huggingface.co/Nanbeige/Nanbeige4.3-33B/commits/main"
+        },
+        {
+          "label": "Nanbeige: model configuration",
+          "url": "https://huggingface.co/Nanbeige/Nanbeige4.3-33B/blob/main/config.json"
+        }
+      ]
+    },
+    {
       "slug": "uk-ai-funding-biosecurity-cyber-skills-package",
       "category": "Industry",
       "sortDate": "2026-10-24",
