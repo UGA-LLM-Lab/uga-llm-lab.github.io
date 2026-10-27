@@ -2,6 +2,319 @@ window.AI_NEWS_MONTH_DATA["2026-10"] = {
   "label": "October 2026",
   "articles": [
     {
+      "slug": "openai-gpt-61-terra-visual-computer-use-release",
+      "category": "Industry",
+      "sortDate": "2026-10-26",
+      "dateLabel": "October 26, 2026",
+      "title": "OpenAI releases GPT-6.1 Terra for visual reasoning and lower-cost computer use",
+      "summary": "The October 26 model reaches the API, ChatGPT Work and Codex, with standard token prices below GPT-6.1 Sol. Tool setup and long-context pricing still matter.",
+      "image": {
+        "src": "ai-news/2026-10/images/terra-official-model-documentation.png",
+        "alt": "OpenAI documentation artwork naming GPT-6.1 Terra Model.",
+        "caption": "Source: OpenAI API documentation, GPT-6.1 Terra model page. Official documentation artwork, reproduced unchanged; availability milestone dated October 26 in the API changelog."
+      },
+      "content": [
+        {
+          "type": "paragraph",
+          "text": "OpenAI’s API changelog dates the GPT-6.1 Terra rollout to October 26, adding a lower-priced option for work that combines reading images, operating software and writing. The model is available through the API as gpt-6.1-terra and in ChatGPT Work and Codex. The launch focuses on tasks such as interpreting technical drawings, checking visual assets and moving information from an invoice into an application, rather than treating image understanding and action as separate steps."
+        },
+        {
+          "type": "heading",
+          "text": "The price depends on the request"
+        },
+        {
+          "type": "paragraph",
+          "text": "Standard API rates are $1 per million input tokens, $0.05 per million cached input tokens and $5 per million output tokens. OpenAI describes the standard prices as 50% below GPT-5.6 Terra and GPT-6.1 Sol. These are token rates, not a fixed price for completing a task: longer outputs, repeated model turns and tool charges can change the total. The model documentation also lists separate cache-write charges."
+        },
+        {
+          "type": "paragraph",
+          "text": "The documented context window is 1,050,000 tokens, with a maximum of 128,000 output tokens. Requests above 272,000 input tokens carry higher rates across the full request: twice the input and cache rates and 1.5 times the output rate. A large context capacity therefore does not mean that every prompt receives the headline standard price. Teams comparing workloads should retain their actual prompt length and tool use alongside the model name."
+        },
+        {
+          "type": "heading",
+          "text": "Computer use needs a configured environment"
+        },
+        {
+          "type": "paragraph",
+          "text": "Terra accepts text and images and returns text. Native audio and video inputs are not supported in the listed API modalities; an agent’s ability to work with a video-editing application should not be confused with a native video-input endpoint. Tool calling requires the Responses API. The model supports reasoning settings from none through max, with medium listed as the default."
+        },
+        {
+          "type": "paragraph",
+          "text": "Official ChatGPT documentation lists Work and Codex access on Plus, Pro, Business, Enterprise and Edu plans. It says Terra is not available in Chat, and enterprise availability remains subject to workspace settings and administrator controls. Browser and computer-use capabilities have their own setup requirements. A model appearing in a selector does not by itself grant access to a user’s accounts or an unrestricted desktop."
+        },
+        {
+          "type": "heading",
+          "text": "The evaluations identify gains and remaining tradeoffs"
+        },
+        {
+          "type": "paragraph",
+          "text": "OpenAI reports that Terra improves on GPT-5.6 Terra in visual reasoning, desktop tasks and coding. On Terminal-Bench 4.0 at maximum reasoning effort, it reports 50.3% solved, compared with the predecessor’s published 21.5%. These are developer-reported benchmark results under specified settings. They do not establish that the same success rate or cost advantage will hold in a different application, and OpenAI continues to position Sol and Astra for the most complex coding work."
+        },
+        {
+          "type": "paragraph",
+          "text": "The release’s safety description says Terra reaches the Critical cybersecurity threshold under OpenAI’s Preparedness Framework and retains protections developed for Astra. That is a company assessment with safeguards attached, rather than a guarantee that every computer action is appropriate. For a deployment trial, the relevant evidence is whether the model completes a defined workflow accurately, respects permissions and delivers the expected cost at the selected reasoning level."
+        }
+      ],
+      "sources": [
+        {
+          "label": "OpenAI: October 26 Terra launch",
+          "url": "https://openai.com/index/introducing-gpt-6-1-terra/"
+        },
+        {
+          "label": "OpenAI API: Terra specifications, modalities and pricing adjustments",
+          "url": "https://developers.openai.com/api/docs/models/gpt-6.1-terra"
+        },
+        {
+          "label": "ChatGPT documentation: October 26–30 availability and limits",
+          "url": "https://learn.chatgpt.com/docs/whats-new/october-26-30-2026"
+        },
+        {
+          "label": "OpenAI API changelog: dated October 26 availability milestone",
+          "url": "https://developers.openai.com/api/docs/changelog"
+        }
+      ]
+    },
+    {
+      "slug": "anthropic-s1-proposed-ipo-nasdaq-ant",
+      "category": "Industry",
+      "sortDate": "2026-10-26",
+      "dateLabel": "October 26, 2026",
+      "title": "Anthropic files for a proposed Nasdaq IPO under the symbol ANT",
+      "summary": "The October 26 S-1 announcement begins a proposed public offering. Share count and pricing remain undetermined, and the registration statement is not yet effective.",
+      "image": {
+        "src": "ai-news/2026-10/images/anthropic-official-wordmark.png",
+        "alt": "Official Anthropic wordmark.",
+        "caption": "Source: Anthropic. Official issuer wordmark, reused unchanged for identification; this is a proposed offering, not a completed IPO."
+      },
+      "content": [
+        {
+          "type": "paragraph",
+          "text": "Anthropic announced on October 26 that it had filed a Form S-1 registration statement with the US Securities and Exchange Commission for a proposed initial public offering of Class A common stock. The company intends to list on the Nasdaq Global Select Market under the symbol ANT. Its announcement leaves the number of shares and the proposed price range undetermined."
+        },
+        {
+          "type": "heading",
+          "text": "A filing precedes an effective offering"
+        },
+        {
+          "type": "paragraph",
+          "text": "The company says the registration statement has been filed but has not yet become effective. Its shares cannot be sold through this proposed offering, and offers to buy cannot be accepted, before that happens. The announcement therefore marks a step toward a public listing, rather than a completed IPO, a first trading day or confirmation that the company has raised a particular sum."
+        },
+        {
+          "type": "paragraph",
+          "text": "Anthropic says the offering will be made through a prospectus and names Goldman Sachs and Morgan Stanley as contacts for obtaining the preliminary document when available. The prospectus is the relevant source for offering terms and the issuer’s detailed disclosures. The company’s short announcement does not establish a final valuation, a trading date or an allocation of shares to any particular investor."
+        },
+        {
+          "type": "heading",
+          "text": "The announcement has a narrower scope than an IPO forecast"
+        },
+        {
+          "type": "paragraph",
+          "text": "The proposed listing concerns Anthropic, PBC as the issuer of the Class A shares. It is distinct from buying access to Claude products, a cloud-computing commitment or a completed investment round. A decision to seek a listing does not itself change the availability, prices or usage limits of Claude’s consumer and enterprise services. No such product changes are announced in this filing notice."
+        },
+        {
+          "type": "paragraph",
+          "text": "For readers following AI companies’ expansion, the concrete development is a public registration process with identified proposed securities and a planned exchange symbol. Final terms remain open. Reports discussing potential proceeds or future trading should be distinguished from the terms Anthropic has actually confirmed. The next milestones to watch are any amended registration statement, the offering’s effectiveness and priced terms, rather than treating today’s notice as the sale itself."
+        }
+      ],
+      "sources": [
+        {
+          "label": "Anthropic: October 26 S-1 announcement and proposed terms",
+          "url": "https://www.anthropic.com/news/s1-sec"
+        },
+        {
+          "label": "SEC: identified registration statement; access may be restricted",
+          "url": "https://www.sec.gov/Archives/edgar/data/2130357/000162828026067168/anthropicpbc-sx1.htm"
+        }
+      ]
+    },
+    {
+      "slug": "microsoft-voluntary-exit-offer-eligible-employees",
+      "category": "Employment / Talent",
+      "sortDate": "2026-10-26",
+      "dateLabel": "October 26, 2026",
+      "title": "Microsoft offers voluntary buyouts to about 60,000 employees",
+      "summary": "The October 26 programme makes roughly a quarter of employees eligible to consider leaving. Eligibility is not a departure count, and Microsoft says AI is not driving the buyouts.",
+      "image": {
+        "src": "ai-news/2026-10/images/microsoft-official-wordmark.png",
+        "alt": "Official Microsoft wordmark with four-colour square.",
+        "caption": "Source: Microsoft About page. Official wordmark identifies the employer; the offer’s eligibility count is not a departure count."
+      },
+      "content": [
+        {
+          "type": "paragraph",
+          "text": "Microsoft introduced a voluntary exit offer on October 26 that makes about 60,000 employees eligible to consider leaving the company. The programme covers roughly a quarter of its global workforce, according to reporting confirmed with the company. That number describes the people who may receive an offer; it is not a count of accepted buyouts or completed job cuts."
+        },
+        {
+          "type": "heading",
+          "text": "Eligibility varies across teams and markets"
+        },
+        {
+          "type": "paragraph",
+          "text": "KUOW reports that the offer applies to selected employees in the United States, United Kingdom, Canada and India at level 70 and below, a range extending to vice presidents. Organisational leaders determined eligibility. Some sales, marketing and engineering groups are outside the programme, so it should not be described as an identical offer to every employee or every technical team."
+        },
+        {
+          "type": "paragraph",
+          "text": "A company spokesperson told KUOW that support would be comparable to Microsoft’s standard severance package, with terms varying by market and tenure. The reported components include base pay, stock-related provisions, health coverage and career-planning services. The details applicable to an individual employee depend on that person’s offer. A global eligibility figure cannot be multiplied by a single assumed payment to establish the programme’s cost."
+        },
+        {
+          "type": "paragraph",
+          "text": "This is a different programme from the voluntary early-retirement offer made earlier in 2026 to employees meeting tenure conditions at level 67 and below. KUOW reports that about 30% of those eligible for that earlier offer accepted. Microsoft expects a lower take-up rate for the broader new offer, whose terms are less generous. That expectation is not a realized departure rate and does not justify applying the earlier percentage to the new eligibility pool."
+        },
+        {
+          "type": "heading",
+          "text": "AI spending supplies context, not a proven cause"
+        },
+        {
+          "type": "paragraph",
+          "text": "The announcement comes while Microsoft continues investing in infrastructure for AI training and inference and reshaping its workforce. However, the company spokesperson explicitly told KUOW that artificial intelligence is not driving the buyout programmes. The evidence supports reporting the programme alongside the company’s wider business changes, while keeping that denial visible. It does not establish that 60,000 people are being replaced by AI."
+        },
+        {
+          "type": "paragraph",
+          "text": "The new offer gives participating organisations another mechanism to adjust staffing, but the final effect will depend on participation, any subsequent hiring and other workforce changes. A voluntary offer, an announced reduction, an accepted exit and a reported period-end employee count measure different stages. Comparing them requires the relevant dates and populations rather than combining them into one layoff total."
+        },
+        {
+          "type": "paragraph",
+          "text": "For a university audience tracking technical careers, the immediate signal is a large employer making an additional exit route available across selected functions and countries. It is not a measure of the whole AI labour market or a causal estimate of automation. Follow-up reporting on actual participation and team-level changes will be needed to assess how much the programme changes the company’s staffing."
+        }
+      ],
+      "sources": [
+        {
+          "label": "Microsoft: October 26 voluntary exit announcement",
+          "url": "https://blogs.microsoft.com/blog/2026/10/26/introducing-a-voluntary-exit-offer/"
+        },
+        {
+          "label": "KUOW: eligibility, programme terms and Microsoft’s statement on AI",
+          "url": "https://www.kuow.org/technology/2026-10-26/microsoft-offers-voluntary-buyouts-to-a-quarter-of-its-workforce"
+        }
+      ]
+    },
+    {
+      "slug": "openai-academic-review-ai-generated-math-physics-results",
+      "category": "Research",
+      "sortDate": "2026-10-26",
+      "dateLabel": "October 26, 2026",
+      "title": "OpenAI asks academic groups to examine AI-generated mathematics and physics results",
+      "summary": "An October 26 announcement pairs public mathematical artifacts with different review arrangements. The claimed results and their earlier generation dates remain separate from independent scientific acceptance.",
+      "image": {
+        "src": "ai-news/2026-10/images/openai-local-smoothing-manuscript-header.png",
+        "alt": "Authentic manuscript title, OpenAI author line and October 25, 2026 artifact date.",
+        "caption": "Source: OpenAI, Local smoothing for the Euclidean wave equation, first-page manuscript header. The artifact is dated October 25; the public announcement and repository publication are October 26. This is raw research material, not independently validated proof."
+      },
+      "content": [
+        {
+          "type": "paragraph",
+          "text": "OpenAI announced a new process for working with academic communities on October 26, describing three sets of AI-generated results in mathematics, computer science and physics. It is releasing mathematical artifacts publicly while asking external researchers to help examine and explain parts of the work. The announcement presents the manuscripts as raw research material. It should be read as the start of a process of scrutiny and interpretation, rather than independent confirmation of every claimed result."
+        },
+        {
+          "type": "heading",
+          "text": "Three fields receive different release arrangements"
+        },
+        {
+          "type": "paragraph",
+          "text": "For mathematics, the company is publishing model-produced material concerning local smoothing for waves and related harmonic-analysis conjectures. For computer science, it describes an argument against the Exponential Time Hypothesis, which concerns how the cost of solving certain satisfiability problems grows with their size. OpenAI says both areas include natural-language writeups and Lean formalizations. Those claims are attributed to the company; this report does not establish the correctness of the formal statements or reproduce the proofs."
+        },
+        {
+          "type": "paragraph",
+          "text": "The computer-science collaboration is led by Russell Impagliazzo and Ramamohan Paturi of UC San Diego and Ryan Williams of MIT. OpenAI says the group requested public access to the underlying material and support for a conference examining its implications. Even if a theoretical result withstands scrutiny, the announcement does not supply a practical faster algorithm for every application connected to it, and it does not establish a resolution of P versus NP."
+        },
+        {
+          "type": "paragraph",
+          "text": "For physics, a group led by David Gross is examining work on the mathematical existence of interacting quantum field theories. The company says that group has chosen to prepare its own explanation before releasing the AI-produced artifacts. That creates a different public-evidence situation from the downloadable mathematical material. The announcement alone is not an accessible complete physics proof or an independently awarded solution to a prize problem."
+        },
+        {
+          "type": "heading",
+          "text": "Publication dates differ from the model’s work dates"
+        },
+        {
+          "type": "paragraph",
+          "text": "The company reports that its system produced the computer-science argument on October 16 and a Lean formalization on October 17. It dates the local-smoothing output to October 18 and formalization to the following day, while parts of the physics effort began in September. Some repository folders carry October 25 dates. Those dates describe different artifacts and stages; the new event on October 26 is the public announcement of the results and their academic-review arrangements."
+        },
+        {
+          "type": "paragraph",
+          "text": "OpenAI sets out conditions for the collaborations: participation is voluntary and unpaid, researchers can discuss and publish their work without nondisclosure agreements, and their conclusions are their own. It says it does not seek academic credit for the model-produced discoveries, while participants should receive recognition for the understanding and explanations they develop. Choosing initial collaborators can still shape who has early access, a tradeoff the announcement acknowledges."
+        },
+        {
+          "type": "paragraph",
+          "text": "For researchers, the immediate opportunity is to inspect the released artifacts and compare the formal statements with the intended mathematical questions. Formal verification and scientific understanding answer related but distinct questions: checking a derivation against definitions does not by itself explain its assumptions, significance or practical consequences. The useful next evidence will be independent examinations and accessible writeups, with corrections or disagreements retained openly."
+        }
+      ],
+      "sources": [
+        {
+          "label": "OpenAI: October 26 academic-community announcement and release arrangements",
+          "url": "https://openai.com/index/building-scientific-understanding-with-academic-communities/"
+        },
+        {
+          "label": "OpenAI: public mathematics repository and artifact documentation",
+          "url": "https://github.com/openai/math"
+        }
+      ]
+    },
+    {
+      "slug": "cadence-maestro-domain-specialized-chip-design-models",
+      "category": "Industry",
+      "sortDate": "2026-10-26",
+      "dateLabel": "October 26, 2026",
+      "title": "Cadence introduces Maestro models for chip-design agents, with early access in Q4",
+      "summary": "Maestro connects specialized models with engineering tools and reinforcement-learning feedback. Cadence reports initial gains, while the first models remain limited to selected customers.",
+      "image": {
+        "src": "ai-news/2026-10/images/cadence-official-newsroom-logo.jpg",
+        "alt": "Official Cadence company wordmark.",
+        "caption": "Source: Cadence official newsroom. Company-supplied wordmark, reproduced unchanged for identification; Maestro models begin with selected early access."
+      },
+      "content": [
+        {
+          "type": "paragraph",
+          "text": "Cadence introduced its Maestro AI Model Portfolio on October 26, connecting domain-specialized models with the company’s chip- and system-design agents. Cadence says the first models are available to selected early-access customers in the fourth quarter of 2026. The announcement expands the software behind Cadence’s existing engineering agents; it does not make a general-purpose model freely downloadable or establish broad customer availability."
+        },
+        {
+          "type": "heading",
+          "text": "Engineering tools provide the feedback"
+        },
+        {
+          "type": "paragraph",
+          "text": "Maestro spans multiple model sizes and architectures, including post-trained language models, decision models and agent skills. Cadence’s AI Super Agents combine those components with frontier and open-weight models, interpret a design objective, break it into tasks and operate electronic-design and system-design software. The intended workflow connects generated design content to tests against engineering constraints, rather than accepting a plausible written answer as a finished design."
+        },
+        {
+          "type": "paragraph",
+          "text": "The reinforcement-learning environment uses Cadence tools and deterministic solvers to evaluate outputs against objectives and constraints. Cadence says this creates feedback for improving the models and the agents that use them. The distinction is consequential in chip design: an agent can propose a change, while simulation, verification and other engineering checks determine whether it meets the required conditions. The announcement describes that integration without demonstrating that every generated design is correct."
+        },
+        {
+          "type": "heading",
+          "text": "Reported efficiency is specific to the workflow"
+        },
+        {
+          "type": "paragraph",
+          "text": "Cadence reports initial results of up to 30% higher quality of results and up to five times greater token efficiency compared with a general-purpose foundation model. The release does not identify a single named comparator or provide enough public task-level detail to reproduce those headline comparisons. Token efficiency also measures something different from elapsed project time, fabrication yield or the cost of an entire chip programme. Those quantities should not be treated as interchangeable."
+        },
+        {
+          "type": "paragraph",
+          "text": "Customer statements cover different stages. Socionext says it is deploying the InnoStack agent into its production design environment and expects productivity gains. Silicon Labs describes acceleration from existing verification and debugging tools while looking forward to additional benefits from Maestro. Neither statement establishes that every projected gain has already been realized from the newly announced models. Separating current tool use from expectations makes the adoption evidence more useful."
+        },
+        {
+          "type": "heading",
+          "text": "Deployment can stay within customer infrastructure"
+        },
+        {
+          "type": "paragraph",
+          "text": "The platform can run on Cadence’s secure cloud, public clouds or customer-controlled on-premises infrastructure. The company says the models can be further post-trained on proprietary designs and workflows. NVIDIA’s contribution includes Nemotron models and collaboration on agent security through OpenShell. These choices address where sensitive design information is processed, but the release does not disclose a public price list or a universal hardware requirement."
+        },
+        {
+          "type": "paragraph",
+          "text": "For engineering teams, Maestro is a proposal to make specialist tools, data and feedback part of the agent’s learning environment. Its practical value will depend on the design tasks supported, the cost of the complete workflow and the results customers can verify. Early access offers a route to evaluate that combination; the public announcement supplies a framework and initial company measurements, with broader reproducibility and deployment evidence still to come."
+        }
+      ],
+      "sources": [
+        {
+          "label": "Cadence: October 26 Maestro announcement",
+          "url": "https://www.cadence.com/en_US/home/company/newsroom/press-releases/pr/2026/cadence-introduces-maestro-a-domain-specialized-ai-model.html"
+        },
+        {
+          "label": "Cadence: accessible official regional copy of the same announcement",
+          "url": "https://www.cadence.com/zh_TW/home/company/newsroom/press-releases/pr/2026/cadence-introduces-maestro-a-domain-specialized-ai-model.html"
+        }
+      ]
+    },
+    {
       "slug": "bytedance-recycler-hidden-state-reasoning-report",
       "category": "Research",
       "sortDate": "2026-10-25",
