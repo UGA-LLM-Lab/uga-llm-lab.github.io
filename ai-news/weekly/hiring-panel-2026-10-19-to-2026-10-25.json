@@ -1,0 +1,122 @@
+{
+  "periods": [
+    [
+      "2026-10-12",
+      "2026-10-18"
+    ],
+    [
+      "2026-10-19",
+      "2026-10-25"
+    ]
+  ],
+  "observation_times_utc": [
+    [
+      "2026-10-19T03:05:12.020646+00:00",
+      "2026-10-19T03:05:12.972880+00:00"
+    ],
+    [
+      "2026-10-26T00:18:17.781123+00:00",
+      "2026-10-26T00:18:19.166847+00:00"
+    ]
+  ],
+  "stable_boards": 13,
+  "stable_employers": 12,
+  "counts": [
+    1888,
+    1945
+  ],
+  "net_change": 57,
+  "percent_change": 3.0190677966101642,
+  "employers": [
+    {
+      "employer": "anthropic",
+      "previous_listed_advertisements": 657,
+      "current_listed_advertisements": 681,
+      "net_change": 24
+    },
+    {
+      "employer": "cognition",
+      "previous_listed_advertisements": 103,
+      "current_listed_advertisements": 105,
+      "net_change": 2
+    },
+    {
+      "employer": "cohere",
+      "previous_listed_advertisements": 116,
+      "current_listed_advertisements": 116,
+      "net_change": 0
+    },
+    {
+      "employer": "cursor",
+      "previous_listed_advertisements": 133,
+      "current_listed_advertisements": 126,
+      "net_change": -7
+    },
+    {
+      "employer": "fireworks_ai",
+      "previous_listed_advertisements": 88,
+      "current_listed_advertisements": 91,
+      "net_change": 3
+    },
+    {
+      "employer": "lambda",
+      "previous_listed_advertisements": 92,
+      "current_listed_advertisements": 99,
+      "net_change": 7
+    },
+    {
+      "employer": "mistral_ai",
+      "previous_listed_advertisements": 217,
+      "current_listed_advertisements": 225,
+      "net_change": 8
+    },
+    {
+      "employer": "perplexity",
+      "previous_listed_advertisements": 134,
+      "current_listed_advertisements": 132,
+      "net_change": -2
+    },
+    {
+      "employer": "runway",
+      "previous_listed_advertisements": 49,
+      "current_listed_advertisements": 48,
+      "net_change": -1
+    },
+    {
+      "employer": "sierra",
+      "previous_listed_advertisements": 196,
+      "current_listed_advertisements": 220,
+      "net_change": 24
+    },
+    {
+      "employer": "skild_ai",
+      "previous_listed_advertisements": 50,
+      "current_listed_advertisements": 50,
+      "net_change": 0
+    },
+    {
+      "employer": "thinking_machines_lab",
+      "previous_listed_advertisements": 53,
+      "current_listed_advertisements": 52,
+      "net_change": -1
+    }
+  ],
+  "deduplication": "Exact employer, official board and stable provider posting ID. Advertisements on regional boards may describe related positions; the count is public ad stock, not unique people or approved headcount. No syndication into third-party aggregators counted.",
+  "scope": "All publicly listed functions at twelve AI employers, not a filtered count of AI-specialist occupations. One current complete snapshot at each week-end; not every change inside either week.",
+  "panels": {
+    "major_ai_employer": "Anthropic: 657 to 681; a single employer, not a diversified large-company panel.",
+    "other_ai_employers": "Eleven employers, reported separately by name; no unverified size classification inferred.",
+    "academic": "No comparable verified academic employer board in this numerical sample; evidence gap, not zero academic hiring."
+  },
+  "constraints": "Only two real comparable weeks: supports this stock comparison, not a sustained 1\u20133 month trend. Recruitment outcomes, salary changes, vacancy duration and causal AI effects are not measured.",
+  "inputs": [
+    {
+      "path": "2026-10-18/hiring/normalized-observations.jsonl",
+      "sha256": "4964d88b25f8555bd2dbdaac9205a81b9c47cf974cf92300457f3653807abf42"
+    },
+    {
+      "path": "2026-10-24_25/hiring/normalized-observations.jsonl",
+      "sha256": "b7b918555d770460a4a4e3c1e0c75710ed130ab9c3adf23ead411f86ef41ddc0"
+    }
+  ]
+}

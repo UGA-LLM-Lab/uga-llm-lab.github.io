@@ -141,7 +141,7 @@
         <div class="ai-news-weekly__heading">
           <div>
             <p>WEEKLY IN-DEPTH ANALYSIS</p>
-            <h2 id="ai-news-weekly-title">A closer view of the week in AI</h2>
+            <h2 id="ai-news-weekly-title">AI Analysis</h2>
           </div>
           <span>${escapeHtml(entry.label)}</span>
         </div>
@@ -163,8 +163,8 @@
                 </div>`).join("")}
             </dl>
             <div class="ai-news-weekly__actions">
-              <a class="button" href="${analysisHref}">Explore Weekly In-Depth Analysis</a>
-              ${review ? `<a href="${articleHref(review)}">Read the week in review <span aria-hidden="true">→</span></a>` : ""}
+              <a class="button" href="${analysisHref}">Explore AI Analysis</a>
+              ${review ? `<a href="${articleHref(review)}">Read AI Weekly <span aria-hidden="true">→</span></a>` : ""}
             </div>
           </div>
         </div>

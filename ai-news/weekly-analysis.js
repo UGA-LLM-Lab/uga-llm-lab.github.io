@@ -139,6 +139,7 @@
         <header class="weekly-analysis__header">
           <p class="weekly-analysis__eyebrow">UGA LLM Lab · WEEKLY IN-DEPTH ANALYSIS</p>
           <h1>${escapeHtml(analysis.title)}</h1>
+          <p class="weekly-analysis__period">${escapeHtml(currentPeriod)}${analysis.updated ? ` · Updated ${escapeHtml(analysis.updated)}` : ""}</p>
           <p class="weekly-analysis__dek">${escapeHtml(analysis.synthesis)}</p>
         </header>
 
@@ -174,16 +175,26 @@
       tabs.forEach((item) => {
         const selected = item === tab;
         item.setAttribute("aria-selected", String(selected));
+        item.tabIndex = selected ? 0 : -1;
         document.getElementById(item.getAttribute("aria-controls")).hidden = !selected;
       });
     }));
 
+    tabs.forEach((tab, index) => {
+      tab.tabIndex = index === 0 ? 0 : -1;
+      tab.addEventListener("keydown", (event) => {
+        const keys = { ArrowRight: (tabs.indexOf(tab) + 1) % tabs.length, ArrowLeft: (tabs.indexOf(tab) + tabs.length - 1) % tabs.length, Home: 0, End: tabs.length - 1 };
+        if (!(event.key in keys)) return;
+        event.preventDefault(); tabs[keys[event.key]].click(); tabs[keys[event.key]].focus();
+      });
+    });
     const requestedTab = new URLSearchParams(window.location.search).get("tab");
     const requestedButton = requestedTab && mount.querySelector(`#weekly-tab-${CSS.escape(requestedTab)}`);
     if (requestedButton) requestedButton.click();
   };
 
   const init = async () => {
+    if (window.AI_WEEKLY_EMBEDDED) { renderAnalysis(window.AI_WEEKLY_EMBEDDED); return; }
     const params = new URLSearchParams(window.location.search);
     const requestedId = params.get("week");
     const entry = analyses.find((item) => item.id === requestedId) || analyses[0];

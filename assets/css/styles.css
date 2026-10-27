@@ -4051,3 +4051,5 @@ a:focus-visible {
     transition-duration: 0.01ms !important;
   }
 }
+
+@media(max-width:600px){.weekly-analysis__tabs button{min-width:0;flex:1 1 0;padding:7px 5px;font-size:.72rem}}

@@ -6,6 +6,8 @@
  */
 window.AI_NEWS_CATALOG = {
   weeklyAnalyses: [
+    {id: "2026-10-19-to-2026-10-25", label: "October 19–25, 2026", data: "ai-news/weekly/2026-10-19-to-2026-10-25.json", reviewSlug: "weekly-ai-october-19-25", cover: "ai-news/2026-10/images/openai-google-cloud-official-hero.png"},
+
     {
       id: "2026-10-12-to-2026-10-18",
       label: "October 12–18, 2026",

@@ -2,6 +2,129 @@ window.AI_NEWS_MONTH_DATA["2026-10"] = {
   "label": "October 2026",
   "articles": [
     {
+      "slug": "weekly-ai-october-19-25",
+      "category": "AI Weekly",
+      "sortDate": "2026-10-26",
+      "dateLabel": "October 19–25, 2026 · Published October 26, 2026",
+      "title": "AI Weekly: Proactive agents, cloud access and the boundaries of AI work",
+      "summary": "October 19–25: Claude Duet enters preview, OpenAI expands to Google Cloud, Kimi K3.1 Pro rolls out, training safeguards receive scrutiny and China sets an AI employment agenda.",
+      "image": {
+        "src": "ai-news/2026-10/images/openai-google-cloud-official-hero.png",
+        "alt": "Official Google Cloud and OpenAI partnership illustration.",
+        "caption": "Source: Google Cloud, October 21 announcement. Original publisher artwork identifies the private-preview enterprise offering; it is separate from the weekly poster."
+      },
+      "content": [
+        {
+          "type": "paragraph",
+          "text": "AI Weekly covers October 19–25, 2026, the last completed Monday–Sunday week. Agents gained new routes into personal and enterprise work, while new disclosures and employment policy put boundaries and accountability alongside capability. Published October 26, this roundup keeps planned availability, historical incidents and policy goals separate from completed outcomes."
+        },
+        {
+          "type": "figure",
+          "src": "ai-news/2026-10/images/ai-weekly-october-19-25-poster.png",
+          "alt": "AI Weekly poster for October 19–25, 2026: Claude Duet, OpenAI on Google Cloud, Kimi K3.1 Pro, OpenAI training safeguards and China’s AI employment plan.",
+          "caption": "UGA LLM Lab · AI Weekly · October 19–25, 2026. Generated from the two required visual references and original lab logo; the five stories and their order match this roundup."
+        },
+        {
+          "type": "heading",
+          "text": "1. Claude Duet starts a proactive-agent research preview"
+        },
+        {
+          "type": "paragraph",
+          "text": "Anthropic introduced Claude Duet on October 21, opening a research-preview waitlist for US Pro and Max subscribers. The assistant works across connected apps, retaining context and checking for useful follow-up work in a cloud environment even when the user’s computer is closed. Duet combines Claude’s model capabilities with persistent access to approved information and tools. The important change is the move from answering an immediate prompt toward finding and preparing work in the background."
+        },
+        {
+          "type": "paragraph",
+          "text": "Access and permissions remain substantial limits. The preview is not universally available: users must join the eligible waitlist, and background work counts against plan limits. Anthropic says Duet asks before sensitive actions such as sending messages, making purchases or deleting files, with some financial activities off limits. Connected-app access can be revoked. These controls define the intended boundary; a research preview still needs testing for mistaken priorities, inappropriate suggestions and attempts by external content to redirect the agent. The announcement establishes a new workflow and trial, rather than a demonstrated guarantee of reliable autonomous work."
+        },
+        {
+          "type": "heading",
+          "text": "2. OpenAI models enter a Google Cloud private preview"
+        },
+        {
+          "type": "paragraph",
+          "text": "OpenAI and Google Cloud announced an enterprise arrangement on October 21 that brings OpenAI models and Codex workflows to Google Cloud customers. Google describes the initial offering as a private preview, with wider availability planned. Customers can use existing Google Cloud commitments and receive consolidated billing, reducing the procurement friction of adding another model supplier. The agreement changes how enterprises can obtain and pay for the models; it does not create a new underlying model or make all announced capabilities generally available."
+        },
+        {
+          "type": "paragraph",
+          "text": "Google identifies GPT-6 Astra, GPT-6.1 Sol and GPT-6 Luna among the initial models, alongside enterprise identity, audit and network controls. Some advertised options, including zero-data-retention and confidential-computing capabilities, are described as coming soon. Integration with additional Google products is also prospective. For buyers, the practical distinction is between a commercial route that now exists for selected customers and features still on the roadmap. The arrangement expands OpenAI’s distribution while Microsoft remains a primary partner; it supplies no independent evidence that changing the billing channel improves a model’s accuracy or an organisation’s financial return."
+        },
+        {
+          "type": "heading",
+          "text": "3. Kimi K3.1 Pro rolls out, with weights still planned"
+        },
+        {
+          "type": "paragraph",
+          "text": "Moonshot’s official product notes date Kimi K3.1 Pro to October 23. The rollout brings the model and a Highspeed variant to Kimi’s apps, work and coding products and API, with a context window of up to one million tokens. The technical account describes a model designed for sustained coding and agent workflows. This is a product-access milestone within the week; it should not be moved to October 24 because a later report appeared in another time zone."
+        },
+        {
+          "type": "paragraph",
+          "text": "Moonshot says model weights are planned by November 4. Product or API access therefore should not be presented as an already completed open-weight release. Availability also differs by plan and enterprise administrator settings. The company reports stronger results on selected agent and coding benchmarks, but those remain developer-run measurements with their own harnesses and effort settings. Its safety discussion acknowledges substantial cybersecurity capabilities even after filtering parts of the post-training data. The immediate opportunity is to evaluate the available service on a defined task; independent reproduction and any later weight release are separate milestones to verify."
+        },
+        {
+          "type": "heading",
+          "text": "4. OpenAI details stronger containment around frontier training"
+        },
+        {
+          "type": "paragraph",
+          "text": "OpenAI published an account of its training-environment safeguards on October 23, following the September 20 DNS-related containment incident. The new event is the public disclosure: training had already resumed on October 1 after an eleven-day pause. The company describes stronger sandboxing, network boundaries, monitoring and tests of possible escape paths. Its cached, indexed web environment supports information access without granting the training environment ordinary unrestricted internet access, while operational connections still require controls."
+        },
+        {
+          "type": "paragraph",
+          "text": "The account is a company assessment of a sensitive research environment, not evidence of a new customer-data breach or a claim that no escape route can exist. A separate October 22 METR post describes an external pilot conducted from July 21 to August 11, before both the incident and the later safeguards. That historical review adds useful evidence about monitoring design and coverage, but cannot independently validate the October configuration. The next useful test is a clearly scoped examination of the changed environment, including which traffic and actions are covered, which remain outside the boundary and how attempts to alter code or settings are detected."
+        },
+        {
+          "type": "heading",
+          "text": "5. China publishes an AI employment and worker-transition plan"
+        },
+        {
+          "type": "paragraph",
+          "text": "China’s State Council General Office published guidelines on October 23 on adapting employment policy to AI. The document itself is dated October 16; the public-release date places this announcement in October 19–25. It sets out eighteen tasks across six policy areas, spanning job creation, employment-friendly adoption, digital skills, employment services, worker protections and monitoring. The plan treats AI as a source of both new opportunities and potential displacement, rather than assuming one uniform labour-market effect."
+        },
+        {
+          "type": "paragraph",
+          "text": "Measures include education and employer cooperation, targeted training, transition assistance and attention to discrimination and privacy in algorithmic human-resources systems. It encourages employers to consider buffers and support when rolling out AI at scale, and calls for employment-risk assessments in specified circumstances. The language is a policy agenda, with provisions that vary by setting; it is not evidence that training places, new jobs or income gains have already materialised. Assessing implementation will require programme dates, participation and completion figures, subsequent employment and the experiences of affected workers. Announcement counts and advertised vacancies alone cannot establish whether transitions succeed."
+        }
+      ],
+      "sources": [
+        {
+          "label": "Claude Duet starts a proactive-agent research preview",
+          "url": "https://claude.com/resources/articles/claude-duet"
+        },
+        {
+          "label": "OpenAI models enter a Google Cloud private preview",
+          "url": "https://cloud.google.com/blog/products/ai-machine-learning/google-cloud-brings-openai-models-to-customers"
+        },
+        {
+          "label": "Kimi K3.1 Pro rolls out, with weights still planned",
+          "url": "https://www.kimi.ai/blog/kimi-k3-1-pro"
+        },
+        {
+          "label": "OpenAI details stronger containment around frontier training",
+          "url": "https://openai.com/index/securing-our-frontier-model-training-environment/"
+        },
+        {
+          "label": "China publishes an AI employment and worker-transition plan",
+          "url": "https://www.gov.cn/zhengce/zhengceku/202610/content_7084108.htm"
+        },
+        {
+          "label": "Claude Duet: safety, privacy and security",
+          "url": "https://claude.com/resources/articles/claude-duet-safety-privacy-and-security"
+        },
+        {
+          "label": "Kimi Code: dated October 23 release notes",
+          "url": "https://www.kimi.com/code/docs/en/kimi-code/whats-new.html"
+        },
+        {
+          "label": "METR: historical training-monitoring pilot, published October 22",
+          "url": "https://metr.org/blog/2026-10-22-red-teaming-openai-agent-monitoring/"
+        },
+        {
+          "label": "China State Council: English summary of October 23 publication",
+          "url": "https://english.www.gov.cn/policies/latestreleases/202610/23/content_WS6adb4e53c6d00ca5f9a0deb7.html"
+        }
+      ]
+    },
+    {
       "slug": "openai-gpt-61-terra-visual-computer-use-release",
       "category": "Industry",
       "sortDate": "2026-10-26",
