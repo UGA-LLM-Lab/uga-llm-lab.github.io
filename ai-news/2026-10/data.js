@@ -2,6 +2,668 @@ window.AI_NEWS_MONTH_DATA["2026-10"] = {
   "label": "October 2026",
   "articles": [
     {
+      "slug": "mistral-large-4-downloadable-weights-custom-license",
+      "category": "Industry",
+      "sortDate": "2026-10-29",
+      "dateLabel": "October 29, 2026",
+      "title": "Mistral releases Large 4 weights, moving beyond its October API preview",
+      "summary": "The October 29 release makes the trillion-parameter model downloadable under a custom licence. Hosted model services require separate terms, and local deployment demands substantial infrastructure.",
+      "image": {
+        "src": "ai-news/2026-10/images/mistral-large-4-weights-cat-signal.svg",
+        "alt": "Pixel-art cat symbol from Mistral’s October 29 release page.",
+        "caption": "Mistral’s official Le Chonk signal artwork for the downloadable-weight release. Source: Mistral; reproduced unchanged."
+      },
+      "content": [
+        {
+          "type": "paragraph",
+          "text": "Mistral released downloadable weights for Mistral Large 4 on October 29, turning an earlier API preview into a model organisations can deploy and customise on their own infrastructure. The public preview began on October 6. The new milestone is access to the weights and supporting software ecosystem, rather than the first announcement of the model. Its release repository identifies a custom Mistral Ecosystem Open-Weight License, not an unrestricted standard MIT or Apache licence."
+        },
+        {
+          "type": "heading",
+          "text": "A large model with a smaller active mixture"
+        },
+        {
+          "type": "paragraph",
+          "text": "Large 4 is a natively multimodal mixture-of-experts model with roughly one trillion total parameters. The model card lists about 49 billion active parameters per token, or 52 billion when embeddings and output layers are included. Those figures describe different portions of the model; the smaller active count is not the size of the complete checkpoint that a deployment must store and manage."
+        },
+        {
+          "type": "paragraph",
+          "text": "The model accepts text and images and produces text, with a context window of up to one million tokens. Its capabilities include tool calls and structured outputs, with low, medium and high reasoning settings. High is the default. Mistral positions it for general work as well as coding, cybersecurity, finance and document or image interpretation. Claims about superiority on particular benchmarks remain dependent on the evaluated tasks and settings."
+        },
+        {
+          "type": "heading",
+          "text": "Downloadable does not mean a lightweight desktop installation"
+        },
+        {
+          "type": "paragraph",
+          "text": "The release includes integration guidance for inference frameworks, alongside a quantised NVFP4 checkpoint aimed at Blackwell GPUs. It also contains a DSpark speculative-decoding draft head intended to accelerate generation. Mistral recommends the hosted API when local serving is inadequate. The availability of weights therefore gives customers more deployment control, while leaving substantial hardware, software and operational requirements."
+        },
+        {
+          "type": "paragraph",
+          "text": "The hosted model continues to be available through Mistral’s API. Users choosing between the API and their own deployment face different responsibilities: a local installation must supply model storage, inference capacity and the surrounding application controls. A million-token context window does not remove those costs or establish the latency of a particular deployment. The repository’s serving examples are configuration guidance, rather than an independently measured cost for every customer."
+        },
+        {
+          "type": "heading",
+          "text": "The licence distinguishes use from running a model service"
+        },
+        {
+          "type": "paragraph",
+          "text": "Mistral describes the licence as a modified MIT licence permitting commercial and non-commercial use, with a separate commercial agreement required for a Model-as-a-Service business. That restriction matters for organisations planning to redistribute hosted model access. It is more precise to describe this as an open-weight release under specified terms than to assume that every use has the permissions of an unmodified permissive open-source licence."
+        },
+        {
+          "type": "paragraph",
+          "text": "The release gives researchers and enterprises a concrete checkpoint to inspect, adapt and evaluate, rather than only a remote preview endpoint. Independent performance tests, the complete deployment configuration and the applicable licence remain part of evaluating it for a real application. The distinction from October 6 is clear: the earlier event introduced the preview; October 29 adds the publicly downloadable artifacts and the conditions attached to operating them."
+        }
+      ],
+      "sources": [
+        {
+          "label": "Mistral: October 29 improved-weight release",
+          "url": "https://mistral.ai/news/mistral-large-4-oss/"
+        },
+        {
+          "label": "Mistral: official downloadable model card and usage guidance",
+          "url": "https://huggingface.co/mistralai/Mistral-Large-4-1T-A52B"
+        },
+        {
+          "label": "Mistral: original October 6 public-preview announcement",
+          "url": "https://mistral.ai/news/mistral-large-4/"
+        },
+        {
+          "label": "Hugging Face: October 29 ecosystem release account",
+          "url": "https://huggingface.co/blog/mistral-large4"
+        },
+        {
+          "label": "Mistral: complete custom model licence",
+          "url": "https://huggingface.co/mistralai/Mistral-Large-4-1T-A52B/blob/main/LICENSE"
+        }
+      ]
+    },
+    {
+      "slug": "openai-model-spec-five-values-october-update",
+      "category": "Industry",
+      "sortDate": "2026-10-29",
+      "dateLabel": "October 29, 2026",
+      "title": "OpenAI reorganises its Model Spec around five values and human intent",
+      "summary": "The October 29 document adds guidance on context, agency and side effects while retiring much detailed style guidance. It describes intended behaviour, rather than certifying that every deployed model already follows it.",
+      "image": {
+        "src": "ai-news/2026-10/images/openai-model-spec-20261029-official-page.png",
+        "alt": "Official Model Spec page showing its October 29, 2026 date and overview.",
+        "caption": "Screenshot of OpenAI’s official October 29 Model Spec. The document describes intended behaviour; it does not certify deployed models."
+      },
+      "content": [
+        {
+          "type": "paragraph",
+          "text": "OpenAI published an updated Model Spec on October 29, reorganising its public description of intended model behaviour around five values: faithfulness to human intent, harm minimisation, honesty and transparency, human agency, and care. The revision explains how models should act when literal instructions do not fully describe a person’s goals. It is a change to the company’s behavioural specification, not the release of a new model or evidence that every existing model already behaves as described."
+        },
+        {
+          "type": "heading",
+          "text": "Values are connected to instructions and oversight"
+        },
+        {
+          "type": "paragraph",
+          "text": "Faithfulness to human intent is the organising principle. OpenAI says its models should understand the purposes behind instructions while remaining within the constraints set by OpenAI, developers and users. The updated chain of command explains which instructions apply and how conflicts should be handled. The company presents this as a framework for human direction and correction, rather than permission for a model to replace a user’s goals with its own preferred outcome."
+        },
+        {
+          "type": "paragraph",
+          "text": "The other values address consequences and the conditions for informed choice. Harm minimisation supplies safety boundaries; honesty and transparency concern what the model knows and does; human agency concerns people’s ability to understand and choose; care concerns the circumstances of people affected by the work. The specification turns these commitments into a mixture of firm boundaries and behavioural defaults. Those categories have different rules for whether and how a user or developer can override them."
+        },
+        {
+          "type": "heading",
+          "text": "Context and side effects receive more explicit treatment"
+        },
+        {
+          "type": "paragraph",
+          "text": "A new context section describes how conversations, memories and other evidence can inform a model’s understanding of preferences. OpenAI’s example is a model helping compare job offers while making assumptions about previously stated priorities visible and easy to correct. This matters for persistent assistants: remembered information can help, but an old preference may no longer apply or may be inappropriate for the present audience."
+        },
+        {
+          "type": "paragraph",
+          "text": "The update adds defaults for supporting human agency and following relevant social norms, and expands guidance on communicating and controlling side effects. These provisions address actions whose consequences extend beyond a response in a chat. A model needs to account for what its work changes and who is affected, while retaining the user’s ability to direct it. The public document supplies the intended rules; evaluating compliance still requires observing particular systems and tasks."
+        },
+        {
+          "type": "heading",
+          "text": "Style guidance is reduced, while testing remains necessary"
+        },
+        {
+          "type": "paragraph",
+          "text": "OpenAI is retiring much of the previous detailed style guidance so that style can respond to user preferences, language, culture and context. Stronger defaults, including an objective approach to questions, remain. The company says a model should not infer a preference for a particular perspective merely from what it thinks the user wants to hear. The revised document also uses “GPT” in place of “the assistant” to reflect more varied deployment settings."
+        },
+        {
+          "type": "paragraph",
+          "text": "OpenAI says it is exploring training methods intended to help models understand the reasons behind the principles, with results to be shared later. It also states that production models do not yet fully reflect the Model Spec. The immediate value of the release is a public, versioned statement against which behaviour can be discussed and tested. It should not be treated as an independently verified guarantee of alignment, a new usage-policy permission or a completed improvement in every product."
+        }
+      ],
+      "sources": [
+        {
+          "label": "OpenAI: October 29 update, changes and deployment caveats",
+          "url": "https://openai.com/index/updated-model-spec/"
+        },
+        {
+          "label": "OpenAI: versioned Model Spec dated October 29, 2026",
+          "url": "https://model-spec.openai.com/2026-10-29.html"
+        }
+      ]
+    },
+    {
+      "slug": "evenet-collider-foundation-model-journal-publication",
+      "category": "Research",
+      "sortDate": "2026-10-29",
+      "dateLabel": "October 29, 2026",
+      "title": "EVENET study tests whether one foundation model can serve several collider analyses",
+      "summary": "Published in Nature Machine Intelligence on October 29, the study combines 500 million simulated training events with downstream tests, including a known resonance in real CMS data. Its original preprint appeared in January.",
+      "image": {
+        "src": "ai-news/2026-10/images/evenet-model-architecture-figure1.png",
+        "alt": "Original three-panel EVENET architecture figure showing encoder, generative decoders and discriminative task heads.",
+        "caption": "EVENET architecture, Figure 1 by Ting-Hsiang Hsu et al., Nature Machine Intelligence (2026), doi:10.1038/s42256-026-01322-9. CC BY 4.0; unchanged. Shared encoder and task heads are shown, not detector measurements."
+      },
+      "content": [
+        {
+          "type": "paragraph",
+          "text": "Nature Machine Intelligence published the EVENET study on October 29, reporting an event-level foundation model for particle-collider analysis. The publication is a new journal milestone for work first posted as a preprint in January 2026. Its central question is whether a substantial, reusable pretraining investment can replace some repeated task-specific model development. The evidence combines simulated physics analyses with a test using real data from the Compact Muon Solenoid experiment at CERN."
+        },
+        {
+          "type": "heading",
+          "text": "One representation, several physics tasks"
+        },
+        {
+          "type": "paragraph",
+          "text": "EVENET represents each collision as an unordered collection of reconstructed physics objects, rather than as a sentence. A shared point–edge transformer encoder feeds several task-specific heads. Those heads classify processes, assign objects to candidate parent particles, segment final states and generate or reconstruct particles with diffusion. The architecture therefore shares representations across related tasks, while retaining different outputs and objectives for each analysis."
+        },
+        {
+          "type": "paragraph",
+          "text": "The researchers retained 500 million simulated Standard Model events for pretraining from a larger generated sample. These are simulated events, not 500 million measured collisions. Training first uses masked self-supervised learning and then combines that objective with physics-informed supervision. The study compares the complete model with self-supervised-only pretraining and training from scratch, helping separate the contribution of the pretraining stages from the choice of architecture."
+        },
+        {
+          "type": "heading",
+          "text": "Tests include a known signal in real detector data"
+        },
+        {
+          "type": "paragraph",
+          "text": "Downstream comparisons include new-physics searches against tabular methods such as XGBoost and TabPFN, and an exotic-Higgs task with SPANet as a specialised baseline. The inputs and task formulations differ across comparisons, so a headline improvement should not be interpreted as a universal advantage over every possible analysis. The paper also investigates adaptation with limited task-specific data and quantum-correlation measurements in simulation."
+        },
+        {
+          "type": "paragraph",
+          "text": "For the real-data test, the team uses a 2016 CMS dimuon dataset to recover the already known Upsilon resonances. Opposite-charge muon pairs provide the signal-bearing sample, while same-charge pairs help check whether the method manufactures an artificial peak. The reported sensitivity gain is evidence about this particular rediscovery task. It is not the discovery of a new particle, and it does not make all the paper’s simulated applications real-world experimental measurements."
+        },
+        {
+          "type": "heading",
+          "text": "Reusable training still has a substantial upfront cost"
+        },
+        {
+          "type": "paragraph",
+          "text": "The pretraining investment is on the order of 100,000 GPU-hours, using a 512-A100-GPU system. That accounting excludes event generation and preprocessing. Downstream adaptation can be much cheaper, but the economic case depends on reuse across enough analyses and on access to suitable computing resources. The authors provide code, pretrained weights and task pipelines so other groups can inspect the approach and test its transfer to their own settings."
+        },
+        {
+          "type": "paragraph",
+          "text": "Important limits remain. The framework is not fully uncertainty-aware, and physics conclusions still need explicit treatment of detector and theoretical uncertainties. Outputs from different task heads are not guaranteed to be mutually consistent. Broader stress tests for simulation-to-data mismodelling also remain future work. The journal publication strengthens the public record of a reusable collider-analysis approach, while its practical reach depends on further validation beyond the tasks and detector conditions studied here."
+        }
+      ],
+      "sources": [
+        {
+          "label": "Nature Machine Intelligence: October 29 journal article, methods and figures",
+          "url": "https://www.nature.com/articles/s42256-026-01322-9"
+        },
+        {
+          "label": "Publisher-hosted complete article PDF",
+          "url": "https://www.nature.com/articles/s42256-026-01322-9.pdf"
+        },
+        {
+          "label": "arXiv: original January 2026 preprint record",
+          "url": "https://arxiv.org/abs/2601.17126"
+        }
+      ]
+    },
+    {
+      "slug": "epoch-ai-open-weight-models-browser-patch-gap",
+      "category": "Research",
+      "sortDate": "2026-10-29",
+      "dateLabel": "October 29, 2026",
+      "title": "Epoch AI tests how an open-weight model can exploit the gap between public fixes and browser updates",
+      "summary": "The October 29 report describes controlled Firefox experiments, substantial research costs and unsuccessful Chrome work. Its disclosed vulnerabilities were patched before publication.",
+      "image": {
+        "src": "ai-news/2026-10/images/epoch-patch-gap-report-official.png",
+        "alt": "Epoch AI report illustration with staggered turquoise bars on a dark background.",
+        "caption": "Original illustration accompanying Epoch AI’s October 29 patch-gap report. Source: Epoch AI, CC BY 4.0; unchanged."
+      },
+      "content": [
+        {
+          "type": "paragraph",
+          "text": "Epoch AI published a security study on October 29 examining whether an open-weight model could turn publicly available information about software fixes into working attacks before those fixes reached browser users. The researchers tested GLM-5.3 against six historical Firefox releases spanning September 17 to October 26. They report successful demonstrations in controlled environments. The work concerns a patch-delivery gap and laboratory experiments, rather than evidence of a campaign compromising ordinary users."
+        },
+        {
+          "type": "heading",
+          "text": "Historical information, controlled targets"
+        },
+        {
+          "type": "paragraph",
+          "text": "For each version, the model received access to public information that would have been available at the relevant release date. Researchers used isolated Ubuntu 26.04 environments running the corresponding Firefox versions. Their success criterion involved demonstrating a chain that could obtain and transmit a local file within the experiment. The report describes model access through first-party and third-party APIs; it does not establish that the same results were reproduced with every possible local deployment of the downloadable weights."
+        },
+        {
+          "type": "paragraph",
+          "text": "The study allowed up to 48 hours per version, with the fastest successful run taking about twelve hours. Those task windows and the surrounding research setup matter when interpreting the result. This was sustained agentic work in a prepared test environment, rather than a single question producing an immediately deployable attack. The report’s purpose is to measure what a capable model can accomplish when given the tools, time and historical public evidence."
+        },
+        {
+          "type": "heading",
+          "text": "The small marginal price excludes extensive preparation"
+        },
+        {
+          "type": "paragraph",
+          "text": "Epoch AI estimates a marginal cost of roughly $1,000 per Firefox version after developing the experimental harness. Its overall Firefox research cost exceeded $100,000. The team also spent roughly $100,000 investigating Chrome without obtaining an equivalent successful result. Presenting only the marginal figure would omit the preparation and unsuccessful work that made the experiment possible. Conversely, the unsuccessful Chrome effort does not prove that browser is immune to other approaches or models."
+        },
+        {
+          "type": "paragraph",
+          "text": "Each successful Firefox chain also depended on a previously unpublished vulnerability. The researchers disclosed those findings to Mozilla, and the report says the vulnerabilities were patched in Firefox 159 on October 27. That sequence limits the publication’s meaning: the October 29 account does not demonstrate that the repaired version remains vulnerable. It also means the results cannot be reduced to the model simply copying an already published, complete exploit."
+        },
+        {
+          "type": "heading",
+          "text": "Faster delivery is the defensive implication"
+        },
+        {
+          "type": "paragraph",
+          "text": "The authors argue that reducing the delay between public fixes and deployed updates can narrow the opportunity they studied. This is an inference from their experiments, rather than a measured guarantee about how much risk a particular update policy removes. Real organisations have different update schedules, configurations and defensive controls. The study does not compare all available models or establish the overall balance between AI-assisted attack and defence."
+        },
+        {
+          "type": "paragraph",
+          "text": "The team reports no model refusals during trials framed as security exercises, but that observation is specific to these runs and access routes. Experiments used isolation, monitoring and human review; they are not observations of unrestricted use against the public internet. The result adds concrete evidence that software-fix information can become useful to an AI-assisted attacker before updates are widely deployed, while preserving the distinction between historical exposure, laboratory success and the state of patched software today."
+        }
+      ],
+      "sources": [
+        {
+          "label": "Epoch AI: October 29 report, experiments, costs and disclosure timeline",
+          "url": "https://epoch.ai/publications/open-weight-models-patch-gap"
+        }
+      ]
+    },
+    {
+      "slug": "pika-h3-flex-six-step-audio-video-release",
+      "category": "Industry",
+      "sortDate": "2026-10-29",
+      "dateLabel": "October 29, 2026",
+      "title": "Pika releases H3 Flex adapters for six-step video and audio generation",
+      "summary": "The October 29 release separates downloadable native 480p/768p inference from hosted upscaling and audio stems. The model licence contains geographic and commercial conditions.",
+      "image": {
+        "src": "ai-news/2026-10/images/pika-h3-flex-pipeline-official.svg",
+        "alt": "Pika H3 Flex technical diagram showing training, six-step generation and supported inputs.",
+        "caption": "Pika Research’s original Figure 1, showing post-training and inference stages. Hosted extensions shown in the diagram are separate from the downloadable adapters."
+      },
+      "content": [
+        {
+          "type": "paragraph",
+          "text": "Pika announced H3 Flex on October 29, releasing model adapters and inference code for generating video with synchronised audio. The system is post-trained from MiniMax H3 and reduces generation from the teacher’s fifty denoising steps to six. Pika’s hosted API is available at launch, while the announcement schedules availability in its creation app for November 2. The downloadable release and the complete hosted service have different capabilities and operating conditions."
+        },
+        {
+          "type": "heading",
+          "text": "References guide a shared video-and-audio workflow"
+        },
+        {
+          "type": "paragraph",
+          "text": "The local package supports native 480p and 768p output with mixed stereo audio, across several aspect ratios and requested durations from five to fifteen seconds. One adapter handles text and endpoint-frame conditioning; another handles multimodal references. The latter accepts up to twelve reference files in total, subject to separate limits on images, videos and standalone audio. Accepting those inputs does not guarantee that every maximum-size combination fits a particular GPU."
+        },
+        {
+          "type": "paragraph",
+          "text": "The public repository includes Pika’s adapters and MiniMax base components, with pinned revisions and sampling schedules. The model card lists representative local requests tested on an H100 with 80 GB of memory, and notes that larger requests may need CPU offload and substantial host memory. This gives developers an inspectable local workflow, but it does not make the release a lightweight installation for any laptop or guarantee identical results to Pika’s creative showcases."
+        },
+        {
+          "type": "heading",
+          "text": "Reported speed depends on what is timed"
+        },
+        {
+          "type": "paragraph",
+          "text": "Pika’s technical account describes supervised fine-tuning on an internally curated audio-video dataset, distribution-matching distillation and preference-based reward learning. Its benchmark examples use eight B300 GPUs for the optimised inference stack. A reported seven-second figure for a fifteen-second, 768p clip concerns transformer denoising computation. It excludes conditioning, decoding and serving overhead, so it should not be presented as a guaranteed end-to-end API response time."
+        },
+        {
+          "type": "paragraph",
+          "text": "The company evaluates output at 768p against MiniMax H3, Fal H3 Max and HeyGen Video using the same prompts. It reports strengths in several quality metrics and human-preference categories, while acknowledging that other systems remain preferred for some physics, multi-scene and reference-control tasks. These are company-run comparisons. The proprietary training dataset and the distinction between released code and hosted acceleration also limit what outsiders can independently reproduce from the public package alone."
+        },
+        {
+          "type": "heading",
+          "text": "Hosted extensions and weight permissions are separate"
+        },
+        {
+          "type": "paragraph",
+          "text": "Pika’s API adds upscaling to 1080p, 2K and 4K, separate editable audio stems and optional prompt enhancement. Those services are not native 4K generation or stem separation included in the local adapters. The repository explicitly distinguishes the downloadable package from the hosted extensions, an important boundary for anyone comparing functionality or estimating a self-hosted workflow."
+        },
+        {
+          "type": "paragraph",
+          "text": "The adapters are distributed under the MiniMax H3 Community License, while example code has separate terms. The standard model agreement excludes the United States, European Union, United Kingdom and Republic of Korea from its applicable territory, with separate authorisation routes, and includes a prior-authorisation requirement for certain commercial users exceeding its revenue threshold. Hosted-service arrangements may have separate permissions. The release therefore provides public artifacts for inspection under specified conditions, rather than unrestricted open-source model rights for every reader or business."
+        }
+      ],
+      "sources": [
+        {
+          "label": "Pika: October 29 announcement and app rollout date",
+          "url": "https://pika.art/blog/pika-h3-flex"
+        },
+        {
+          "label": "Pika Research: methods, evaluations and timing boundaries",
+          "url": "https://pika.art/blog/pika-h3-flex-research"
+        },
+        {
+          "label": "Pika: released model card and local/hosted feature distinction",
+          "url": "https://huggingface.co/Pika-Labs/Pika-H3-Flex"
+        },
+        {
+          "label": "Released model licence: applicable territory and commercial conditions",
+          "url": "https://huggingface.co/Pika-Labs/Pika-H3-Flex/blob/main/LICENSE"
+        }
+      ]
+    },
+    {
+      "slug": "google-gemini-4-carbon-restricted-cyber-preview",
+      "category": "Industry",
+      "sortDate": "2026-10-28",
+      "dateLabel": "October 28, 2026",
+      "title": "Google announces Gemini 4 Carbon, starting with selected cyber defenders",
+      "summary": "The October 28 announcement pairs stronger engineering and security evaluations with restricted access. Introductory API prices are temporary; broad consumer and developer availability is still to come.",
+      "image": {
+        "src": "ai-news/2026-10/images/gemini-4-carbon-official-release.png",
+        "alt": "Google promotional illustration naming Gemini 4 Carbon beside an iridescent crystal.",
+        "caption": "Google’s official Gemini 4 Carbon launch artwork. Initial access is restricted to selected cyber defenders and trusted partners."
+      },
+      "content": [
+        {
+          "type": "paragraph",
+          "text": "Google announced Gemini 4 Carbon on October 28, describing a frontier model intended for sustained software engineering and cybersecurity work. Its initial audience is a subset of cyber defenders, followed gradually by additional trusted partners through the company’s Fairwind Program. Google says broader access for developers, businesses and consumers will follow as it gathers feedback and improves safeguards. The announcement is therefore a restricted rollout, rather than general availability in every Gemini product."
+        },
+        {
+          "type": "heading",
+          "text": "Longer engineering tasks, with a staged rollout"
+        },
+        {
+          "type": "paragraph",
+          "text": "Carbon builds on Gemini 4 Argon and is designed to continue through multi-step work such as locating a difficult software fault, testing possible explanations and developing a patch. Google reports that internal teams have seen it work on tasks for days. That describes company-observed runs, rather than a guarantee that any unattended project will complete successfully. A useful evaluation still needs a defined task, permissions and a way to check the resulting changes."
+        },
+        {
+          "type": "paragraph",
+          "text": "The model’s planned introductory API prices are $2 per million input tokens and $10 per million output tokens. Cached input is priced 95% below the input rate. The launch post’s footnote lists subsequent prices of $4 and $20 per million input and output tokens after the introductory period. It does not specify a universal end date for that period. Those token rates also differ from the complete cost of an agent that repeatedly calls tools or revises its work."
+        },
+        {
+          "type": "heading",
+          "text": "The security results have specific test conditions"
+        },
+        {
+          "type": "paragraph",
+          "text": "Google reports 88.2% on SEC-bench Pro, 54.8% on ExploitGym and 71.0% on CWE-bench, covering vulnerability finding, exploitation and patching. The model-evaluation document explains that SEC-bench Pro uses a 183-task JavaScript-engine split and averages results across three independent attempts per task. ExploitGym uses an isolated environment without internet access, a specified agent harness and task time limits. These details matter when comparing a benchmark score with a real security investigation."
+        },
+        {
+          "type": "paragraph",
+          "text": "The launch post says external cybersecurity evaluations were run without guardrails. The methodology also mixes self-computed Gemini evaluations with results taken from independent leaderboards and other providers’ reports. It is not one independently repeated experiment under an identical setup for every model. Reported performance with testing restrictions removed should not be read as a promise about the permissions or safeguards attached to the released service."
+        },
+        {
+          "type": "heading",
+          "text": "Safety improvements remain bounded measurements"
+        },
+        {
+          "type": "paragraph",
+          "text": "Google describes further training to reduce shortcut-taking, unsupported claims and inappropriate actions, alongside monitoring and misuse defenses inherited from Argon. Its reported improvements concern particular internal or benchmark settings. A zero attack-success result on one prompt-injection benchmark does not establish immunity to every future attempt, and an internal alert reduction does not measure all possible failures in customers’ systems."
+        },
+        {
+          "type": "paragraph",
+          "text": "The immediate development is a more capable model entering a carefully limited deployment channel, with a published methodology and a temporary pricing offer. Early users can assess how it handles their own engineering tasks while Google expands access. Broader product availability, independent replication of the reported gains and the terms after introductory pricing are separate developments to verify as the rollout progresses."
+        }
+      ],
+      "sources": [
+        {
+          "label": "Google: October 28 Carbon announcement, access and pricing",
+          "url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/introducing-gemini-4-carbon/"
+        },
+        {
+          "label": "Google DeepMind: five-page evaluation methodology",
+          "url": "https://deepmind.google/models/evals-methodology/gemini-4-carbon"
+        }
+      ]
+    },
+    {
+      "slug": "anthropic-ai-for-science-institutional-credit-expansion",
+      "category": "Research",
+      "sortDate": "2026-10-28",
+      "dateLabel": "October 28, 2026",
+      "title": "Anthropic expands free Claude credits through 20 scientific partners",
+      "summary": "The October 28 programme update extends support beyond individual researchers to funders, institutions and research projects. It supplies access to computing resources, not proof of new scientific results.",
+      "image": {
+        "src": "ai-news/2026-10/images/anthropic-ai-for-science-official.jpg",
+        "alt": "Anthropic’s science collage combining historical biological drawings, a microscope and a telescope.",
+        "caption": "Original artwork from Anthropic’s October 28 AI for Science update. The scientific imagery illustrates the programme, rather than documenting results from all twenty partners."
+      },
+      "content": [
+        {
+          "type": "paragraph",
+          "text": "Anthropic announced an expansion of its AI for Science programme on October 28, highlighting twenty scientific foundations, institutions and research groups working with it to broaden access to Claude. The support takes the form of free Claude credits for research. Some partners will distribute those resources to scientists, while others will use them within their own institutions or specific projects. The company does not announce a uniform cash grant or an identical allocation for every organisation."
+        },
+        {
+          "type": "heading",
+          "text": "Different partners distribute and use the resources"
+        },
+        {
+          "type": "paragraph",
+          "text": "The funder and society group includes the Alfred P. Sloan Foundation, Simons Foundation, Schmidt Sciences, Renaissance Philanthropy’s Open Source for Science Fund, the US National Science Foundation and CAS, a division of the American Chemical Society. Those organisations work across different disciplines and funding mechanisms. Their role in this expansion is to help direct access to researchers; listing them together does not mean that they share one research question or evaluation process."
+        },
+        {
+          "type": "paragraph",
+          "text": "Institutional partners include the Space Telescope Science Institute, Wellcome Sanger Institute, Francis Crick Institute, Imperial College London’s Department of Life Sciences, the European Molecular Biology Laboratory and Gladstone Institutes. Their research spans astronomy, genomics, basic biology and medicine. Credits used inside an institution are different from resources distributed through a foundation, so the number of named partners is not a count of individual award recipients."
+        },
+        {
+          "type": "heading",
+          "text": "Support also reaches specific research projects"
+        },
+        {
+          "type": "paragraph",
+          "text": "Anthropic identifies projects including Princeton’s FlyWire connectomics effort, Columbia’s LEAP climate-research centre, Johns Hopkins’ AstroPath cancer-imaging work, the Broad Institute’s gnomAD genetic-variation resource, the Tau Ceti mathematics initiative and Australia’s Centre for Population Genomics. These are existing scientific programmes with their own methods and data. The announcement concerns additional AI resources for their work, rather than the original discovery or creation of those projects."
+        },
+        {
+          "type": "paragraph",
+          "text": "The update also describes ongoing work with HHMI’s Janelia Research Campus on the Model Hardware Standard and support for the Allen Institute. The hardware standard is a shared specification for agents operating laboratory instruments and remains in research preview. The Allen Institute is exploring teams of agents for analysing its open datasets. Neither example establishes that every participating laboratory now has a generally available autonomous experimental system."
+        },
+        {
+          "type": "heading",
+          "text": "Access and scientific validation remain separate"
+        },
+        {
+          "type": "paragraph",
+          "text": "AI for Science began in May 2025 by supporting individual scientists. This expansion adds organisational routes to reach researchers across disciplines. Anthropic says many supported efforts will create public resources such as open software, datasets, standards and libraries, but also notes that numerous collaborations are still early. The release does not provide a common dollar total, completed-study count or independently measured productivity effect across the twenty partners."
+        },
+        {
+          "type": "paragraph",
+          "text": "For researchers, the concrete change is another route to obtain model access through scientific organisations and ongoing projects. The scientific questions, experimental decisions and evaluation of findings remain with the researchers. Assessing the expansion’s eventual effect will require evidence about which work receives support, what artifacts become available and whether claimed findings survive the relevant disciplinary checks. Computing credits create capacity to investigate; they are not themselves an experimental result."
+        }
+      ],
+      "sources": [
+        {
+          "label": "Anthropic: October 28 institutional expansion and partner list",
+          "url": "https://www.anthropic.com/news/ai-for-science-expands-foundations-research-institutions"
+        },
+        {
+          "label": "Anthropic: original May 2025 programme launch",
+          "url": "https://www.anthropic.com/news/ai-for-science-program"
+        }
+      ]
+    },
+    {
+      "slug": "uc-san-diego-principled-agentic-intelligence-center",
+      "category": "Research",
+      "sortDate": "2026-10-28",
+      "dateLabel": "October 28, 2026",
+      "title": "UC San Diego launches a centre for agentic AI alignment and independent evaluation",
+      "summary": "The October 28 announcement brings computing and humanities researchers together, backed by three years of support. An open-source evaluation testbed is planned, rather than already demonstrated.",
+      "image": {
+        "src": "ai-news/2026-10/images/ucsd-today-official-wordmark.svg",
+        "alt": "UC San Diego Today official wordmark.",
+        "caption": "Official UC San Diego Today wordmark, used for source identification. It is not a photograph of the new centre."
+      },
+      "content": [
+        {
+          "type": "paragraph",
+          "text": "UC San Diego announced the Center for Principled Agentic Intelligence on October 28, bringing together its Halıcıoğlu School of Data Science and Computing and School of Arts and Humanities. The interdisciplinary centre will study alignment, independent evaluation and human oversight of AI agents. It launches with $1 million in support over three years and $250,000 in shared computing resources. These are the resources identified for the centre, rather than a reported amount already spent or a promise of completed research results."
+        },
+        {
+          "type": "heading",
+          "text": "Two initiatives connect technical and human questions"
+        },
+        {
+          "type": "paragraph",
+          "text": "The first initiative, AI Alignment and Society, is co-led by Mikhail Belkin of the Halıcıoğlu Data Science Institute and philosopher Eddy Keming Chen. It examines how training and evaluation shape a system’s behaviour, and how researchers can test whether increasingly capable models continue to respond to human intentions. A particular challenge is evaluating an AI system whose abilities may exceed those of the people assessing it on some tasks."
+        },
+        {
+          "type": "paragraph",
+          "text": "The university frames this work around alignment, trust and responsibility. Alignment concerns whether behaviour matches the intentions of developers and users. Trust requires evidence that a system works reliably, while responsibility concerns accountability for the actions of people and organisations building and using it. Bringing humanities researchers into the programme makes the underlying goals and the effects on people part of the research agenda, alongside technical performance."
+        },
+        {
+          "type": "heading",
+          "text": "A testbed will examine how agents fail"
+        },
+        {
+          "type": "paragraph",
+          "text": "A second initiative focuses on evaluating agentic systems and is co-led by Tauhidur Rahman, Lily Weng, Haojian Jin and Rose Yu. The team plans an open-source testbed that simulates real-world tasks. Its questions include how and why an agent fails, whether it stays inside defined boundaries, whether its behaviour can be audited and whether it remains reliable across a sequence of actions."
+        },
+        {
+          "type": "paragraph",
+          "text": "That is a different problem from checking whether a model can answer a single question. An agent may need to plan, use tools and act on intermediate results before reaching its goal. The proposed testbed is meant to give researchers a controlled way to examine those processes. The launch announcement does not supply a released benchmark suite, model rankings or a measured reduction in failures; those are prospective outputs to inspect when the work becomes available."
+        },
+        {
+          "type": "heading",
+          "text": "Independent evaluation is a research objective"
+        },
+        {
+          "type": "paragraph",
+          "text": "The centre aims to make evaluation tools available beyond the small group of organisations able to build and test the most capable systems. Open tooling could let other researchers examine tasks, failure categories and assumptions rather than relying entirely on a developer’s headline score. Whether the eventual tools support that goal will depend on their published methods, licensing, access requirements and validation."
+        },
+        {
+          "type": "paragraph",
+          "text": "For a university research community, the immediate news is the formation of a funded collaboration spanning computing and the humanities, with named teams and a concrete testbed agenda. The three-year support window provides a period in which to develop that work; it does not determine when a usable public tool will arrive. Future releases can be assessed against the centre’s stated questions about reliability, oversight and accountability, with evidence from the actual tasks it chooses to test."
+        }
+      ],
+      "sources": [
+        {
+          "label": "UC San Diego: October 28 centre announcement, teams and funding",
+          "url": "https://today.ucsd.edu/story/uc-san-diego-launches-center-for-principled-agentic-intelligence"
+        }
+      ]
+    },
+    {
+      "slug": "sap-india-ai-skilling-programme-expansion-2030",
+      "category": "Employment / Talent",
+      "sortDate": "2026-10-28",
+      "dateLabel": "October 28, 2026",
+      "title": "SAP expands India’s AI-skills programmes toward an existing two-million-person goal",
+      "summary": "The October 28 update adds programmes across education, professional training and community access. The target is for 2030; participation, certification and employment are different outcomes.",
+      "image": {
+        "src": "ai-news/2026-10/images/sap-official-github-avatar.png",
+        "alt": "Official SAP logo.",
+        "caption": "SAP SE’s official GitHub organisation logo, used for identification. Trademark belongs to SAP; no training outcome is depicted."
+      },
+      "content": [
+        {
+          "type": "paragraph",
+          "text": "SAP India announced additional AI-skilling programmes on October 28 as it works toward an existing goal of equipping two million people in India with AI-ready skills by 2030. The India initiative contributes to SAP’s broader twelve-million-person global pledge. The announcement expands the routes through which learners can participate; it is not a claim that two million people have already completed training or obtained jobs."
+        },
+        {
+          "type": "heading",
+          "text": "Training spans vocational learners and working professionals"
+        },
+        {
+          "type": "paragraph",
+          "text": "SAP describes partnerships with state governments, skill-development institutions, universities, industry and community organisations. Through the Future Right Skills Network, it works with partners and India’s Ministry of Skill Development and Entrepreneurship on vocational learning. That route combines introductory AI material with communication skills and industry exposure for students at Industrial Training Institutes, rather than treating familiarity with an AI tool as the whole requirement for workplace readiness."
+        },
+        {
+          "type": "paragraph",
+          "text": "For university students, the programme uses SAP University Alliances, the SAP Learning Hub Student Edition and institutional collaborations to connect coursework with practical work and certification. The company cites the career-readiness programme developed with PwC India and KIIT Bhubaneswar as an example. That programme was launched earlier; its appearance in the October update should not be mistaken for a second new launch or another group of newly counted jobs."
+        },
+        {
+          "type": "paragraph",
+          "text": "Professional and workforce learning includes role-based training, hands-on practice and assessments covering AI-enabled business applications. SAP says performance-based assessments test how learners apply knowledge in scenarios, including work with SAP Joule for Consultants. A certification therefore addresses a particular capability or learning pathway; it does not by itself measure employment, pay progression or the demand for every occupation using the software."
+        },
+        {
+          "type": "heading",
+          "text": "The reported progress is participation"
+        },
+        {
+          "type": "paragraph",
+          "text": "SAP says nearly 13% of the two-million-person target has already participated through certification, student education and community programmes. The groups include customers’ and partners’ employees, SAP employees, students and underserved communities. The company does not present that figure as a single cohort completing an identical course. It also does not report a placement rate or a common assessment outcome for everyone included in the participation total."
+        },
+        {
+          "type": "paragraph",
+          "text": "Inclusive programmes include Code Unnati, Digital Academy and AI Careers for Women, with projects, mentoring and career guidance. SAP says its STEM and community offerings contain more than 1,100 combined curriculum hours across AI, digital and workplace skills. This is the combined content across programmes, not a promise that every participant receives 1,100 hours. The release also points to learners in Tier 2 and Tier 3 locations as part of the intended reach."
+        },
+        {
+          "type": "heading",
+          "text": "The 2030 commitment needs several measures of progress"
+        },
+        {
+          "type": "paragraph",
+          "text": "The concrete development is a broader set of education and training channels tied to an existing long-term target. Following its delivery requires distinguishing how many people are reached, how many participate in substantive training, how many demonstrate skills and what happens in their subsequent work. Those measures can move at different speeds. The October announcement identifies the planned partnerships and reported participation, while the eventual scale and employment effects remain to be measured."
+        }
+      ],
+      "sources": [
+        {
+          "label": "SAP India: October 28 programme expansion, target and participation",
+          "url": "https://news.sap.com/india/2026/10/sap-india-doubles-down-on-ai-skilling-to-prepare-two-million-people-for-the-future-of-work-by-2030/"
+        }
+      ]
+    },
+    {
+      "slug": "openai-servicenow-workflow-partnership-expansion",
+      "category": "Industry",
+      "sortDate": "2026-10-28",
+      "dateLabel": "October 28, 2026",
+      "title": "OpenAI and ServiceNow expand workflows, with most new capabilities planned for 2027",
+      "summary": "The October 28 expansion includes an available MCP plugin, proposed development and security integrations, and access for employees. The announcement gives different availability dates for each part.",
+      "image": {
+        "src": "ai-news/2026-10/images/servicenow-openai-official-partnership.png",
+        "alt": "Official ServiceNow artwork announcing its expanded OpenAI partnership.",
+        "caption": "ServiceNow’s original October 28 partnership artwork. The current plugin and capabilities planned for 2027 have different availability dates."
+      },
+      "content": [
+        {
+          "type": "paragraph",
+          "text": "OpenAI and ServiceNow announced an expanded partnership on October 28 to connect AI models and agents with enterprise workflows. The companies describe applications spanning software development, IT requests and cybersecurity, alongside broader use of ChatGPT Work and Codex by ServiceNow employees. The arrangement builds on their January partnership. Its immediate availability is narrower than the complete roadmap: a ServiceNow MCP plugin is available in OpenAI’s marketplace, while several larger integrations are scheduled for later."
+        },
+        {
+          "type": "heading",
+          "text": "Business context and actions inside ChatGPT"
+        },
+        {
+          "type": "paragraph",
+          "text": "The integration is intended to let a person investigate an issue and act on the result in the same conversation. OpenAI gives the example of an IT team member finding similar incidents, assessing the risk of a proposed change and updating a ServiceNow record. Customers connect their own ServiceNow instance and select which capabilities to expose. ServiceNow’s Action Fabric applies the organisation’s existing business rules and permissions."
+        },
+        {
+          "type": "paragraph",
+          "text": "Interactive experiences are also being previewed. In one proposed workflow, an on-call engineer could review monitoring alerts, recent changes and affected services, then assign a team and work toward a resolution inside ChatGPT. These are descriptions of the planned experience. The announcement does not establish that every customer can already use the complete interface or that a model can bypass the customer’s access rules to resolve an incident."
+        },
+        {
+          "type": "heading",
+          "text": "Development, security and voice have separate timelines"
+        },
+        {
+          "type": "paragraph",
+          "text": "The companies plan to connect Codex with ServiceNow’s AI Workflow Factory to support application building using business context from the platform. OpenAI models are also expected to power Build Agent and Autonomous Engineer for development and modernisation. The Codex integration in AI Workflow Factory is expected in 2027; the release does not give a more precise generally available date for it."
+        },
+        {
+          "type": "paragraph",
+          "text": "A joint cybersecurity offering is intended to combine OpenAI’s security capabilities with ServiceNow’s asset, identity and business information, helping teams prioritise and coordinate remediation. Early access is planned for January 2027, followed by general availability in the second quarter. A separate voice experience in ServiceNow’s Super Intelligence Control Tower is expected in the first quarter of 2027, helping users describe AI use cases and supply information for governance assessments."
+        },
+        {
+          "type": "paragraph",
+          "text": "Enhanced capabilities for the marketplace plugin are expected by the end of 2026. The existing plugin, the richer interactive experience, the joint security solution and the development integration therefore should not be treated as one product released in full on October 28. Each has its own access requirements and stage of delivery."
+        },
+        {
+          "type": "heading",
+          "text": "Employee access is a deployment plan, not an outcome measure"
+        },
+        {
+          "type": "paragraph",
+          "text": "ServiceNow plans to extend ChatGPT Work and Codex access beyond engineering to all employees and to use OpenAI capabilities in its internal security work. OpenAI says it also uses ServiceNow workflows in its operations. These statements identify intended organisational use, rather than a measured productivity gain or a completed rollout to every worker. The partnership’s practical effect will depend on which integrations arrive, how customers configure permissions and what the tools accomplish in actual workflows."
+        }
+      ],
+      "sources": [
+        {
+          "label": "OpenAI: October 28 expansion and feature-by-feature availability",
+          "url": "https://openai.com/index/openai-servicenow-partnership-expansion/"
+        },
+        {
+          "label": "ServiceNow: October 28 counterparty release and roadmap",
+          "url": "https://newsroom.servicenow.com/press-releases/details/2026/ServiceNow-and-OpenAI-accelerate-enterprise-AI-from-models-and-operations-to-cybersecurity-and-agentic-development/default.aspx"
+        }
+      ]
+    },
+    {
       "slug": "google-genie-4-world-simulation-preview",
       "category": "Industry",
       "sortDate": "2026-10-27",
