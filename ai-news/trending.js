@@ -92,14 +92,6 @@ window.AI_NEWS_TRENDS = {
       "count": 8,
       "direction": "down",
       "state": "Falling"
-    },
-    {
-      "label": "Biology & medicine",
-      "index": null,
-      "share": 0.6,
-      "count": 2,
-      "direction": "watch",
-      "state": "Watching"
     }
   ]
 };

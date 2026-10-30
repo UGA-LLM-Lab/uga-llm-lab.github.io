@@ -697,6 +697,15 @@ window.LLM_LAB_DATA = {
             { label: "GitHub", url: "https://github.com/Vijax0" },
             { label: "Email", url: "mailto:Jonah.Robbins@uga.edu" }
           ]
+        },
+        {
+          name: "Dwiti Patel",
+          role: "Undergrad · Microbiology",
+          bio: "Interested in AI for medicine and biomedical data, connecting wet-lab microbiology with computational workflows.",
+          photo: "assets/images/members-dwiti-patel.png",
+          links: [
+            { label: "Email", url: "mailto:dhp06779@uga.edu" }
+          ]
         }
       ]
     },
