@@ -2,6 +2,396 @@ window.AI_NEWS_MONTH_DATA["2026-10"] = {
   "label": "October 2026",
   "articles": [
     {
+      "slug": "cisco-talos-volta-ai-victim-profiling-disclosure",
+      "category": "Research",
+      "sortDate": "2026-10-31",
+      "dateLabel": "October 31, 2026",
+      "title": "Cisco Talos reports an AI profiling layer in the VOLTA infostealer",
+      "summary": "The October 31 analysis describes a malware sample that sends stolen information to language models for victim assessment. The sample was first seen October 11; the report does not establish its prevalence.",
+      "image": {
+        "src": "ai-news/2026-10/images/talos-volta-official-report.jpg",
+        "alt": "Cisco Talos illustration of targets surrounded by icons representing personal and financial data.",
+        "caption": "Original Cisco Talos illustration accompanying its October 31 VOLTA analysis. This is editorial artwork, not an image of an identified victim."
+      },
+      "content": [
+        {
+          "type": "paragraph",
+          "text": "Cisco Talos published an analysis of VOLTA on October 31, describing Windows malware that uses a language model to turn stolen information into a prioritised assessment of a victim. Researcher Ryan Fetterman identifies the AI component as an optional stage after data theft. The new milestone is the public analysis: the sample’s recorded first-seen time is October 11, rather than evidence that the malware first appeared on the publication date."
+        },
+        {
+          "type": "heading",
+          "text": "AI analyses information already taken"
+        },
+        {
+          "type": "paragraph",
+          "text": "According to Talos, VOLTA gathers credentials, session information and other personal records, assembles a structured dossier and sends it through OpenRouter for analysis. The model is asked to assess the value of the victim’s assets and their security practices. This places AI at the sorting and interpretation stage; the report does not describe the model as independently inventing the initial compromise or replacing all of the malware’s conventional collection functions."
+        },
+        {
+          "type": "paragraph",
+          "text": "The analysed sample names Claude Opus 4.6 as its default model and includes alternatives from Moonshot AI and Google when a response is refused. Those configured names show how the software was built. They do not establish how often each provider was successfully used, the accuracy of the resulting assessments or cooperation by any model developer with the operator."
+        },
+        {
+          "type": "heading",
+          "text": "A case study within a broader research effort"
+        },
+        {
+          "type": "paragraph",
+          "text": "VOLTA surfaced through CAIRN, the Cognitive Artifact Intelligence Research Network that Talos introduced in September. CAIRN looks for signs of AI integration in malware metadata, such as references to model providers and embedded prompts. It then helps analysts organise relationships among samples and investigate their use of AI. Its original description distinguishes evidence that an AI-related artifact is present from stronger evidence of a particular operational use."
+        },
+        {
+          "type": "paragraph",
+          "text": "That distinction matters for reading this disclosure. A provider’s name inside a file is weaker evidence than a complete explanation of how information reaches a model and how the response is handled. Talos’s VOLTA analysis supplies that workflow account, while leaving broader questions about deployment and impact open. It is a report on the analysed implementation, rather than a count of all criminals using the technique."
+        },
+        {
+          "type": "heading",
+          "text": "The report leaves scale and outcomes unresolved"
+        },
+        {
+          "type": "paragraph",
+          "text": "Talos does not provide a victim total, a measured increase in criminal revenue or a comparison showing that the AI layer outperforms a human analyst. Its interpretation is that the model replaces some sustained analytical effort. Whether that lowers the skill required to run a criminal operation or substantially increases its scale remains an open question. For readers following AI misuse, the concrete finding is the movement of model assistance into post-theft assessment, with the observation date, disclosure date and unmeasured real-world reach kept distinct."
+        }
+      ],
+      "sources": [
+        {
+          "label": "Cisco Talos: October 31 VOLTA analysis and sample dates",
+          "url": "https://blog.talosintelligence.com/appraisal-by-ai-model-driven-victim-prioritization-in-the-volta-infostealer/"
+        },
+        {
+          "label": "Cisco Talos: September introduction of the CAIRN research methodology",
+          "url": "https://blog.talosintelligence.com/introducing-cairn-frontier-tracking-for-ai-integrated-malware/"
+        }
+      ]
+    },
+    {
+      "slug": "openai-gpt-6-rosalind-restricted-research-rollout",
+      "category": "Industry",
+      "sortDate": "2026-10-30",
+      "dateLabel": "October 30, 2026",
+      "title": "OpenAI rolls out GPT-6 Rosalind Research to approved life-sciences organisations",
+      "summary": "The October 30 release uses GPT-6 Astra’s weights with a research-specific access and safeguards configuration. Access is limited, and Enterprise workspaces begin with an off-by-default Admin Preview.",
+      "image": {
+        "src": "ai-news/2026-10/images/openai-official-logo-on-dark.svg",
+        "alt": "Official OpenAI wordmark.",
+        "caption": "Official OpenAI wordmark, reused from the verified published archive for identification. GPT-6 Rosalind Research access is restricted to approved users."
+      },
+      "content": [
+        {
+          "type": "paragraph",
+          "text": "OpenAI began rolling out GPT-6 Rosalind Research on October 30 to a limited set of approved life-sciences research organisations. The model is available in Work and Codex, and through the API where separately approved, rather than in ChatGPT’s Chat tab. It extends the Rosalind family, but access depends on the organisation’s Research approval, authorised users and product-specific activation. A subscription or approval for the more restricted Discovery tier does not automatically unlock it."
+        },
+        {
+          "type": "heading",
+          "text": "Access changes are as important as the model name"
+        },
+        {
+          "type": "paragraph",
+          "text": "In Enterprise workspaces, the release starts with a two-week Admin Preview and is off by default. Administrators can enable it for approved Research users and configure access after that period. Existing Research approval does not bypass the preview. Customers can continue using GPT-5.5 Rosalind Research, while Rosalind Discovery remains on the 5.5 model with its own safeguards."
+        },
+        {
+          "type": "paragraph",
+          "text": "The API identifier is gpt-6-rosalind. OpenAI’s access documentation limits approved API use to internal research tools, workflows and applications; it does not currently authorise customer-facing products or external commercial applications. API approval is separate from workspace approval. The university-focused Rosalind Academic Plan is also a distinct route and does not include API access or credits."
+        },
+        {
+          "type": "heading",
+          "text": "The system card describes a different deployment configuration"
+        },
+        {
+          "type": "paragraph",
+          "text": "The accompanying system-card addendum says GPT-Rosalind-6 uses the same weights as GPT-6 Astra, with no added training data or additional post-training for this release. Its intended difference includes fewer refusals for legitimate advanced biological research under trusted access, while retaining boundaries against harmful assistance. It should therefore not be described as a newly trained biological model with an independently expanded underlying parameter set."
+        },
+        {
+          "type": "paragraph",
+          "text": "OpenAI compares it with Rosalind 5.5 on three beneficial-research benchmarks using matched task sets. On MedChemBench v7, reported mean rubric scores at the highest tested reasoning budget are 49.6% versus 28.9% across 99 problems. GeneBench Pro v13 uses 129 problems and a benchmark-specific configuration that differs from production. LifeSciBench Gold compares the same 94 retained problems after excluding six with possible task or environment issues. These are company-run evaluations of research tasks, not evidence of improved patient outcomes or a guaranteed result on a laboratory’s own project."
+        },
+        {
+          "type": "heading",
+          "text": "Human review remains part of the approved workflow"
+        },
+        {
+          "type": "paragraph",
+          "text": "The system card places the launch at High biological and chemical capability, below its indicative Critical threshold, while relying on the parent model’s assessments in other risk domains. These are categories within OpenAI’s own Preparedness Framework. The deployment adds organisational checks, controlled user access, monitoring and enforcement; the published evaluation is not a certification that all possible misuse or errors have been eliminated."
+        },
+        {
+          "type": "paragraph",
+          "text": "Approved customers must maintain suitable governance and security, and apply qualified human review before outputs inform experiments, publications or consequential decisions. For researchers, the immediate change is a more capable option inside a restricted, institutionally managed workflow. The relevant questions are which access tier and products are approved, how an administrator enables the model, and how its outputs are checked against the research team’s actual evidence."
+        }
+      ],
+      "sources": [
+        {
+          "label": "OpenAI: October 30 model release notes",
+          "url": "https://help.openai.com/en/articles/9624314-model-release-notes"
+        },
+        {
+          "label": "OpenAI: Rosalind Research access and product boundaries",
+          "url": "https://help.openai.com/en/articles/20001193-gpt-rosalind-for-life-sciences-research"
+        },
+        {
+          "label": "OpenAI: October 30 system-card addendum, methods and limitations",
+          "url": "https://deploymentsafety.openai.com/gpt-rosalind-6"
+        }
+      ]
+    },
+    {
+      "slug": "shared-ai-training-preference-signal-support-plans",
+      "category": "Industry",
+      "sortDate": "2026-10-30",
+      "dateLabel": "October 30, 2026",
+      "title": "Google, Microsoft and OpenAI back a shared AI-training preference signal",
+      "summary": "The October 30 announcements support one robots.txt token, with different implementation schedules. The underlying document is an individual Internet-Draft, and training preferences remain distinct from crawl access and answer-time use.",
+      "image": {
+        "src": "ai-news/2026-10/images/training-preferences-bing-official.png",
+        "alt": "Microsoft illustration linking website preference controls with search and content use.",
+        "caption": "Microsoft’s original illustration for its October 30 publisher-preference announcement. It illustrates the proposed controls rather than an already active configuration screen."
+      },
+      "content": [
+        {
+          "type": "paragraph",
+          "text": "Google, Microsoft and OpenAI announced support plans on October 30 for a shared way for websites to express preferences about generative-AI training. The mechanism uses a policy token, __usage_ai-training, inside robots.txt, allowing one stated preference to reach multiple participating providers. It accompanies a proposal by Anthropic engineer Kevin Kelley. The IETF Datatracker identifies that document as an individual Internet-Draft with no formal standing in the standards process, rather than an approved internet standard."
+        },
+        {
+          "type": "heading",
+          "text": "One training preference, alongside existing crawler controls"
+        },
+        {
+          "type": "paragraph",
+          "text": "The draft reuses robots.txt groups and path rules instead of introducing a separate file format. A website can state a preference against training for its whole site or selected paths, with exceptions where appropriate. The policy token represents a purpose, not the identity of a particular crawler. The draft explicitly separates usage preferences from traffic management: stating a training preference is not the same as blocking a crawler from retrieving a page."
+        },
+        {
+          "type": "paragraph",
+          "text": "The proposal concerns use of content to change a generative model’s learned parameters. It does not, by itself, govern every answer-time use of a page or reverse training that has already happened. It also requires explicit policy-token matching; website operators should not assume an ordinary wildcard crawler group communicates the same preference. Existing provider-specific controls remain relevant alongside the shared signal."
+        },
+        {
+          "type": "heading",
+          "text": "Providers announce different schedules and interpretations"
+        },
+        {
+          "type": "paragraph",
+          "text": "Google says it aims to support the mechanism in 2027. Where a website has not explicitly specified Google-Extended, Google plans to interpret the shared training opt-out as a disallow for Google-Extended. A specific Google-Extended choice can still express the publisher’s preference for Google’s services. That makes the announcement a planned addition to existing controls, rather than a universal change already active at publication."
+        },
+        {
+          "type": "paragraph",
+          "text": "OpenAI similarly says it intends to implement the signal in the coming months and will announce implementation details later. Its current crawler controls continue to apply. The company describes the effort as voluntary. A commitment to read a future preference does not establish that the new rule already governs all historical collections or that every organisation developing models will honour it."
+        },
+        {
+          "type": "heading",
+          "text": "Microsoft adds separate controls for grounding"
+        },
+        {
+          "type": "paragraph",
+          "text": "Microsoft plans to honour the new preferences from February 1, 2027 as it crawls. In addition to the shared site- or path-level training choice, it adds page-level training preferences and a separate grounding preference for content used to inform generated answers. These choices do not change eligibility for traditional Bing search results. The distinction allows a publisher to permit answer-time use while declining training, rather than treating both as one decision."
+        },
+        {
+          "type": "paragraph",
+          "text": "Microsoft also sets out a transition from its NoArchive and NoCache controls, which it says will stop being read as training and grounding preferences after March 1, 2027. Implementation dates, recrawling and provider-specific rules therefore matter as much as the common token. The practical advance is a simpler shared vocabulary supported by several major providers; its effect depends on deployment and adherence, while the standards discussion continues."
+        }
+      ],
+      "sources": [
+        {
+          "label": "IETF: version 00 individual Internet-Draft, dated October 30",
+          "url": "https://datatracker.ietf.org/doc/html/draft-kelley-aipref-training-preference-signal-00"
+        },
+        {
+          "label": "Google: October 30 support plan and Google-Extended interaction",
+          "url": "https://developers.google.com/search/blog/2026/10/ai-training-control"
+        },
+        {
+          "label": "OpenAI: October 30 support announcement and implementation timing",
+          "url": "https://openai.com/index/helping-websites-express-ai-training-preferences/"
+        },
+        {
+          "label": "Microsoft Bing: training, grounding and transition dates",
+          "url": "https://blogs.bing.com/search/2026/10/your-content-your-choice-clearer-preferences-for-training-and-grounding/"
+        }
+      ]
+    },
+    {
+      "slug": "cohere-canada-four-billion-investment-workforce-2031",
+      "category": "Employment / Talent",
+      "sortDate": "2026-10-30",
+      "dateLabel": "October 30, 2026",
+      "title": "Cohere outlines more than C$4 billion in Canadian investment and 1,500 additional roles",
+      "summary": "The October 30 update covers an effort spanning 2024–2031, including technical hiring and paid student positions. The figures are commitments and expected growth, rather than completed spending or hires.",
+      "image": {
+        "src": "ai-news/2026-10/images/cohere-canada-commitment-official.png",
+        "alt": "Official Cohere wordmark over green abstract artwork.",
+        "caption": "Cohere’s original artwork accompanying the Canadian investment and workforce update. The 2031 commitments are plans, not completed hires or spending."
+      },
+      "content": [
+        {
+          "type": "paragraph",
+          "text": "Cohere announced an expansion of its Canadian commitments on October 30, setting out more than C$4 billion in research, development and AI infrastructure investment over 2024–2031. The company expects to grow its Canada-based workforce by more than 1,500 roles by 2031, including approximately 1,000 advanced technical positions. The investment programme began in 2024, so the headline amount spans an existing multi-year effort rather than representing cash newly spent on the announcement date."
+        },
+        {
+          "type": "heading",
+          "text": "Technical hiring and student pathways have different targets"
+        },
+        {
+          "type": "paragraph",
+          "text": "The expected technical roles cover AI research, engineering, product development, infrastructure and deployment. Cohere also commits to more than 250 paid student roles by 2029. The announcement does not provide an annual hiring schedule, a count of offers already accepted or a province-by-province allocation. The student target has its own deadline and should not simply be added to the workforce figure as another independently confirmed group of permanent jobs."
+        },
+        {
+          "type": "paragraph",
+          "text": "The investment plan spans several provinces and connects talent development with computing capacity and commercial deployment. Cohere frames the effort as retaining more of the value from Canadian AI research inside Canada. That is the company’s intended economic effect; measuring it later will require actual spending, sustained employment and deployed services, rather than treating an investment commitment as an observed increase in national productivity."
+        },
+        {
+          "type": "heading",
+          "text": "University partnerships help explain the training component"
+        },
+        {
+          "type": "paragraph",
+          "text": "Cohere points to existing university and research relationships as part of the programme. One is the University of Waterloo’s Future of Work Institute partnership, announced on August 6. Waterloo describes a planned AI Transformation and Change Management certificate combining practical learning, organisational problem-solving and structured co-op experience. Its curriculum extends beyond model development to human-centred design, ethics, change management and business strategy."
+        },
+        {
+          "type": "paragraph",
+          "text": "Waterloo’s account schedules the first cohort for January 2027, with twenty co-op positions supporting guided transformation work in private, public-sector and nonprofit organisations. These are details of that university programme, not the total number of student roles in Cohere’s national commitment. The certificate and co-op arrangements also predate October 30; their relevance is to show one concrete pathway through which the broader talent plan could operate."
+        },
+        {
+          "type": "heading",
+          "text": "Following delivery requires more than counting advertisements"
+        },
+        {
+          "type": "paragraph",
+          "text": "The update brings together long-term R&D and infrastructure spending, technical workforce growth and entry routes for students. Those are related commitments with different measures of progress. A vacancy is an invitation to apply, a filled role is a hiring outcome, and continued employment is a further observation. None can be inferred directly from the headline investment total or from a current snapshot of the company’s careers page."
+        },
+        {
+          "type": "paragraph",
+          "text": "The immediate news is an expanded, publicly quantified plan anchored in Canada, with milestones extending to 2029 and 2031. The company’s future releases can be assessed against the investment period, the types of work it intends to add and the education partnerships it identifies. The distinction between planned capacity and realised outcomes is especially relevant when using the announcement as evidence about the AI labour market."
+        }
+      ],
+      "sources": [
+        {
+          "label": "Cohere: October 30 commitment, investment period and workforce targets",
+          "url": "https://cohere.com/blog/cohere-canada-commitment"
+        },
+        {
+          "label": "University of Waterloo: August 6 partnership, certificate and first-cohort plans",
+          "url": "https://uwaterloo.ca/news/partnering-lead-ai-transformation-across-organizations"
+        }
+      ]
+    },
+    {
+      "slug": "toyota-waymo-bz4x-japan-validation-2027",
+      "category": "Industry",
+      "sortDate": "2026-10-30",
+      "dateLabel": "October 30, 2026",
+      "title": "Toyota and Waymo plan autonomous bZ4X testing in Japan in 2027",
+      "summary": "The October 30 agreement adds a vehicle platform, manufacturing site and planned validation phase to the companies’ earlier partnership. Commercial deployment in additional markets is planned for later years.",
+      "image": {
+        "src": "ai-news/2026-10/images/waymo-toyota-bz4x-official.jpg",
+        "alt": "Official rendering of a Toyota bZ4X fitted with Waymo autonomous-driving hardware.",
+        "caption": "Official rendering accompanying the October 30 Toyota–Waymo announcement. It depicts the proposed bZ4X platform, not a service already operating for passengers."
+      },
+      "content": [
+        {
+          "type": "paragraph",
+          "text": "Toyota and Waymo announced the next phase of their autonomous-driving collaboration on October 30, identifying the Toyota bZ4X as a fleet platform and Japan as the location for initial testing and validation in 2027. The companies plan deployment in the United Kingdom and other Waymo-served markets in subsequent years. This is a development and deployment roadmap; the announcement does not say that a new bZ4X robotaxi service has begun carrying passengers."
+        },
+        {
+          "type": "heading",
+          "text": "Manufacturing and autonomous-driving integration come together"
+        },
+        {
+          "type": "paragraph",
+          "text": "Toyota plans to build the vehicles at its Takaoka plant in Toyota City, Aichi Prefecture. The joint account says the same facility will assemble the base vehicles and integrate Waymo’s autonomous-driving hardware. That identifies the partners’ distinct contributions: Toyota supplies vehicle development and manufacturing, while Waymo provides the autonomous-driving system. Bringing those steps together is intended to support a repeatable production process as the programme develops."
+        },
+        {
+          "type": "paragraph",
+          "text": "The planned vehicles include features aimed at passenger comfort and accessibility, including automatic doors, a power liftgate and additional rear legroom. Those design choices describe the intended ride experience. The announcement does not supply fleet quantities, a manufacturing ramp schedule or a firm date on which a member of the public will be able to book a ride in the new platform."
+        },
+        {
+          "type": "heading",
+          "text": "The collaboration began with a preliminary agreement"
+        },
+        {
+          "type": "paragraph",
+          "text": "The October update follows a preliminary agreement announced on April 29, 2025. At that stage, Toyota and Waymo said they would explore a new autonomous-vehicle platform, with Woven by Toyota contributing software and mobility expertise. They also described a parallel interest in technology for personally owned vehicles. The earlier announcement left the scope open to continuing discussions rather than identifying the bZ4X validation programme now described."
+        },
+        {
+          "type": "paragraph",
+          "text": "The new account retains that distinction between fleet vehicles and private ownership. Toyota and Waymo will continue exploring personally owned vehicles and other safety initiatives with Woven by Toyota. Those exploratory discussions do not establish that a consumer can buy a Toyota with the complete Waymo Driver or that the planned fleet technology will be available across every Toyota model."
+        },
+        {
+          "type": "heading",
+          "text": "Validation is a separate milestone from public deployment"
+        },
+        {
+          "type": "paragraph",
+          "text": "The partnership is aimed at scaling Level 4 autonomous vehicles, but the near-term activity specified for Japan is testing and validation. Later deployment in additional markets remains a plan. Assessing delivery will require evidence about the tested operating conditions, the vehicles’ readiness and the actual service offered to riders. Safety claims about Waymo’s existing operations should not automatically be transferred to a future vehicle in a different environment."
+        },
+        {
+          "type": "paragraph",
+          "text": "For the autonomous-driving industry, the concrete change is a more specific manufacturing and vehicle programme connecting an established automaker with an autonomous-driving developer. The October 30 announcement advances beyond the 2025 exploration stage while leaving important commercial details undisclosed. The next observable step is the planned 2027 validation work, followed by whatever deployment the companies subsequently confirm."
+        }
+      ],
+      "sources": [
+        {
+          "label": "Waymo and Toyota: joint October 30 announcement and planned timing",
+          "url": "https://waymo.com/blog/2026/10/toyota-bz4x-partnership/"
+        },
+        {
+          "label": "Waymo and Toyota: original April 29, 2025 preliminary agreement",
+          "url": "https://waymo.com/blog/2025/04/waymo-and-toyota-outline-strategic-partnership/"
+        }
+      ]
+    },
+    {
+      "slug": "google-suncatcher-first-orbit-tpu-model-response",
+      "category": "Research",
+      "sortDate": "2026-10-30",
+      "dateLabel": "October 30, 2026",
+      "title": "Google reports its first model response from a TPU aboard the Suncatcher prototype",
+      "summary": "The October 30 update describes an in-orbit prompt-and-response test after the satellite’s October 1 launch. Thermal, radiation and interconnected-satellite tests are separate milestones.",
+      "image": {
+        "src": "ai-news/2026-10/images/google-official-aurora-symbol.svg",
+        "alt": "Official multicolour Google symbol.",
+        "caption": "Official Google symbol from its news site, used for source identification. It is not a photograph of the Suncatcher satellite or an orbital data centre."
+      },
+      "content": [
+        {
+          "type": "paragraph",
+          "text": "Google reported on October 30 that its Project Suncatcher prototype satellite had returned a response from a data-centre-class Tensor Processing Unit operating in orbit. During a ground-station pass, the team sent a prompt to an onboard Gemma 4 model asking for a space-themed haiku. The response came down as the satellite passed Svalbard, Norway. The company describes this as the project’s first successful prompt-and-response milestone."
+        },
+        {
+          "type": "heading",
+          "text": "The launch and the inference test happened at different stages"
+        },
+        {
+          "type": "paragraph",
+          "text": "The satellite launched on October 1 aboard SpaceX’s Transporter-18 rideshare mission, following development with Planet. Google’s launch announcement confirmed contact and described the spacecraft as operating as expected. That established a satellite mission, rather than proving its AI payload could carry out the complete workload demonstrated in the later update. October 30 is the date of the public account of that subsequent test."
+        },
+        {
+          "type": "paragraph",
+          "text": "Between launch and the response, the team worked through commissioning, powering the host and TPU trays and carrying out early machine-learning tests. Google says it followed the first output with prompts for limericks and for telemetry describing the payload’s technical status. These are basic checks of an operating inference and communications path. The content of a generated poem is less significant than the fact that a prompt reached the onboard system and a model response returned."
+        },
+        {
+          "type": "heading",
+          "text": "Reliability under orbital conditions is still being tested"
+        },
+        {
+          "type": "paragraph",
+          "text": "The next tests will examine TPU behaviour under thermal stress and radiation exposure. These conditions are part of the project’s original research question about whether space could eventually host scalable machine-learning infrastructure. A successful initial exchange does not establish sustained throughput, energy efficiency or reliable operation over a long mission. The October update does not publish measurements that would allow a cost comparison with a terrestrial data centre."
+        },
+        {
+          "type": "paragraph",
+          "text": "Google identifies twin interconnected satellites in 2027 as its next larger milestone. Communication between spacecraft is a different capability from returning an answer through a ground station. Keeping those stages separate makes the result easier to assess: the prototype has demonstrated a reported onboard inference exchange, while a more extensive orbital computing system remains a research objective."
+        },
+        {
+          "type": "paragraph",
+          "text": "For AI infrastructure, this is a hardware-and-systems experiment rather than a new model release or a commercially available cloud service. The October 1 mission announcement provides the launch context; the October 30 account adds an operational result. Further evidence will come from the stress tests and subsequent missions, including the conditions under which the hardware can remain useful and connected in orbit."
+        }
+      ],
+      "sources": [
+        {
+          "label": "Google: October 30 first-response account",
+          "url": "https://blog.google/innovation-and-ai/models-and-research/google-research/project-suncatcher-satellite-response/"
+        },
+        {
+          "label": "Google: October 1 launch, Planet partnership and research scope",
+          "url": "https://blog.google/innovation-and-ai/models-and-research/google-research/project-suncatcher-prototype/"
+        }
+      ]
+    },
+    {
       "slug": "mistral-large-4-downloadable-weights-custom-license",
       "category": "Industry",
       "sortDate": "2026-10-29",
