@@ -8,9 +8,6 @@
 window.LLM_LAB_DATA = {
   site: {
     name: "UGA LLM Lab",
-    sponsorName: "GyriQAI, Inc",
-    sponsorUrl: "https://ezcollegeapp.com/",
-    forumUrl: "https://forum.ezcollegeapp.com/",
     ugaUrl: "https://www.uga.edu/",
     computingUrl: "https://computing.uga.edu/",
     contactEmail: "tliu@uga.edu",
@@ -40,12 +37,6 @@ window.LLM_LAB_DATA = {
       ]
     },
     { id: "ai-news", label: "AI/SI News", href: "ai-news.html" },
-    {
-      id: "ezcollegeapp",
-      label: "EZCollegeApp",
-      href: "ezcollegeapp.html",
-      logo: "assets/images/ezcollegeapp-wordmark-nav.png"
-    },
     {
       id: "entrepreneurship",
       label: "Entrepreneurship",
@@ -195,16 +186,6 @@ window.LLM_LAB_DATA = {
       url: "https://doi.org/10.1109/ISBI61048.2026.11515966",
       image: "assets/images/news-medqua.png",
       imageAlt: "Figure from the MEDQUA paper showing its quantum adapter architecture"
-    },
-    {
-      date: "January 2026",
-      sortDate: "2026-01",
-      category: "Preprint",
-      title: "EZCollegeApp system paper released",
-      excerpt: "The paper describes a human-supervised, mapping-first system for grounded assistance across American college application workflows.",
-      url: "https://arxiv.org/abs/2602.15850",
-      image: "assets/images/news-ezcollegeapp-architecture.jpg",
-      imageAlt: "Figure from the EZCollegeApp paper showing the platform architecture and workflow"
     },
     {
       date: "November 2025",
@@ -877,7 +858,6 @@ window.LLM_LAB_DATA = {
           name: "Zhengliang Liu",
           role: "Former Ph.D. Student",
           bio: "AI researcher working on adapting LLMs to specialized domains (medicine, education).",
-          bioLink: { text: "GyriQAI, Inc", url: "https://ezcollegeapp.com/" },
           photo: "assets/images/members-zhengliang-liu.jpg",
           website: "https://zl-liu.github.io/",
           links: [
@@ -1087,14 +1067,16 @@ window.LLM_LAB_DATA = {
   opportunities: {
     "high-school": {
       title: "High School Opportunities",
-      summary: "High school students may join the EZCollegeApp Campus Ambassador Program or apply for a carefully scoped research experience when mentoring capacity is available.",
+      summary: "High school students may apply for a carefully scoped research experience when mentoring capacity is available.",
       tracks: [
+        /*
         {
           title: "Campus Ambassador Program",
           description: "Represent EZCollegeApp in your school and community. Ambassadors explain the platform in their own voice, introduce it to students and families who may benefit, organize outreach, and return useful feedback to the team.",
           points: ["Invitation-based, flexible, and remote", "Product, AI, marketing, and entrepreneurship learning", "A unique referral code and tentative 10% commission on paid referrals", "Program certificate and potential pathway to future internships for strong contributors", "Rates and program terms may change; no earnings are guaranteed"],
           action: { label: "View details and apply", url: "https://ezcollegeapp.com/ambassador-program" }
         },
+        */
         {
           title: "Research Exploration",
           description: "A small number of students may join a clearly scoped reading, data, evaluation, or software task with a defined mentor and schedule.",
@@ -1105,8 +1087,9 @@ window.LLM_LAB_DATA = {
     },
     undergraduate: {
       title: "Undergraduate Opportunities",
-      summary: "Undergraduates may participate as campus ambassadors, represent their university and major through the Counselor Program, or contribute to a mentored research project.",
+      summary: "Undergraduates may contribute to a mentored research project.",
       tracks: [
+        /*
         {
           title: "Campus Ambassador Program",
           description: "Represent EZCollegeApp in your campus and community. Ambassadors explain the platform in their own voice, introduce it to students and families who may benefit, organize outreach, and return useful feedback to the team.",
@@ -1119,6 +1102,7 @@ window.LLM_LAB_DATA = {
           points: ["Represent your current university and major accurately", "Answer structured student questions", "Separate personal experience from official admissions advice", "Share recurring questions with the product team"],
           action: { label: "View details and apply", url: "https://ezcollegeapp.com/ambassador-program" }
         },
+        */
         {
           title: "Undergraduate Research",
           description: "Work with a graduate mentor on implementation, evaluation, literature review, data preparation, or reproducibility in one of the lab's research areas.",

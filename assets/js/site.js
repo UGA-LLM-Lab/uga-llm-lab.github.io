@@ -91,7 +91,6 @@
               <img src="assets/images/lab-logo.svg" alt="UGA LLM Lab logo">
               <span class="notranslate" translate="no">${escapeHtml(data.site.name)}</span>
             </a>
-            <span class="sponsor-line">sponsored by <a href="${escapeHtml(data.site.sponsorUrl)}" target="_blank" rel="noopener noreferrer">${escapeHtml(data.site.sponsorName)}</a></span>
           </div>
           <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="primary-navigation">
             <span>Menu</span><i aria-hidden="true"></i>
@@ -176,7 +175,6 @@
     if (mission) mission.innerHTML = data.home.mission.map((item) => `<li>${escapeHtml(item)}</li>`).join("");
     if (focus) focus.innerHTML = data.researchAreas.map((area) => `<li><a href="research.html#${escapeHtml(area.id)}">${escapeHtml(area.title)} <span>→</span></a></li>`).join("");
     if (socials) socials.innerHTML = `
-      <a class="home-forum-link" href="${escapeHtml(data.site.forumUrl)}"${externalAttributes(data.site.forumUrl)}>Visit the Community Forum <span aria-hidden="true">↗</span></a>
       <div class="home-social-row"><span>Follow us</span>${socialLinkMarkup()}</div>`;
   }
 
