@@ -46,6 +46,11 @@ window.AI_NEWS_CATALOG = {
   ],
   months: [
     {
+      id: "2026-11",
+      label: "November 2026",
+      data: "ai-news/2026-11/data.js"
+    },
+    {
       id: "2026-10",
       label: "October 2026",
       data: "ai-news/2026-10/data.js"
