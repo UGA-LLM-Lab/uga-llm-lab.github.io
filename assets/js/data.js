@@ -1067,16 +1067,14 @@ window.LLM_LAB_DATA = {
   opportunities: {
     "high-school": {
       title: "High School Opportunities",
-      summary: "High school students may apply for a carefully scoped research experience when mentoring capacity is available.",
+      summary: "High school students may join the EZCollegeApp Campus Ambassador Program or apply for a carefully scoped research experience when mentoring capacity is available.",
       tracks: [
-        /*
         {
           title: "Campus Ambassador Program",
           description: "Represent EZCollegeApp in your school and community. Ambassadors explain the platform in their own voice, introduce it to students and families who may benefit, organize outreach, and return useful feedback to the team.",
           points: ["Invitation-based, flexible, and remote", "Product, AI, marketing, and entrepreneurship learning", "A unique referral code and tentative 10% commission on paid referrals", "Program certificate and potential pathway to future internships for strong contributors", "Rates and program terms may change; no earnings are guaranteed"],
           action: { label: "View details and apply", url: "https://ezcollegeapp.com/ambassador-program" }
         },
-        */
         {
           title: "Research Exploration",
           description: "A small number of students may join a clearly scoped reading, data, evaluation, or software task with a defined mentor and schedule.",
@@ -1087,9 +1085,8 @@ window.LLM_LAB_DATA = {
     },
     undergraduate: {
       title: "Undergraduate Opportunities",
-      summary: "Undergraduates may contribute to a mentored research project.",
+      summary: "Undergraduates may participate as campus ambassadors, represent their university and major through the Counselor Program, or contribute to a mentored research project.",
       tracks: [
-        /*
         {
           title: "Campus Ambassador Program",
           description: "Represent EZCollegeApp in your campus and community. Ambassadors explain the platform in their own voice, introduce it to students and families who may benefit, organize outreach, and return useful feedback to the team.",
@@ -1102,7 +1099,6 @@ window.LLM_LAB_DATA = {
           points: ["Represent your current university and major accurately", "Answer structured student questions", "Separate personal experience from official admissions advice", "Share recurring questions with the product team"],
           action: { label: "View details and apply", url: "https://ezcollegeapp.com/ambassador-program" }
         },
-        */
         {
           title: "Undergraduate Research",
           description: "Work with a graduate mentor on implementation, evaluation, literature review, data preparation, or reproducibility in one of the lab's research areas.",
