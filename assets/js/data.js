@@ -1137,8 +1137,8 @@ window.LLM_LAB_DATA = {
             "Access to experimental quantum facilities and national-lab partners",
             "Applicants from computer science, AI/ML, robotics, physics, electrical engineering, or related fields are welcome; experience with deep learning, LLMs/agents, robotic control, or quantum information is helpful"
           ],
-          descriptionHtml: "The UGA LLM Lab and UGA Quantum Science and Engineering Program invite applications for a fully funded Ph.D. position developing AI-driven discovery systems for quantum physics. The project brings large language models and AI agents together with robotic lab platforms so systems can form hypotheses, design and run experiments, analyze results, and accelerate discovery in quantum materials, devices, and networks.<br><br>To apply, email your CV to <a href=\"mailto:tliu@uga.edu\">Tianming Liu (tliu@uga.edu)</a> and <a href=\"mailto:YOHANNES.ABATE@uga.edu\">Yohannes Abate (YOHANNES.ABATE@uga.edu)</a>, and copy <a href=\"mailto:Siyuan.Li1@uga.edu\">Siyuan Li (Siyuan.Li1@uga.edu)</a>. Use the subject line: PhD - AI + Robotics for Quantum.",
-          action: { label: "Apply by email", url: "mailto:tliu@uga.edu,YOHANNES.ABATE@uga.edu?cc=Siyuan.Li1@uga.edu&subject=PhD%20%E2%80%93%20AI%20%2B%20Robotics%20for%20Quantum" }
+          descriptionHtml: "The UGA LLM Lab and UGA Quantum Science and Engineering Program invite applications for a fully funded Ph.D. position developing AI-driven discovery systems for quantum physics. The project brings large language models and AI agents together with robotic lab platforms so systems can form hypotheses, design and run experiments, analyze results, and accelerate discovery in quantum materials, devices, and networks.<br><br>To apply, email your CV to <a href=\"mailto:tliu@uga.edu\">Tianming Liu (tliu@uga.edu)</a> and <a href=\"mailto:YOHANNES.ABATE@uga.edu\">Yohannes Abate (YOHANNES.ABATE@uga.edu)</a>, and copy <a href=\"mailto:llmlab@uga.edu\">llmlab@uga.edu</a>. Use the subject line: PhD - AI + Robotics for Quantum.",
+          action: { label: "Apply by email", url: "mailto:tliu@uga.edu,YOHANNES.ABATE@uga.edu?cc=llmlab@uga.edu&subject=PhD%20%E2%80%93%20AI%20%2B%20Robotics%20for%20Quantum" }
         },
         {
           title: "Research Fit",
@@ -1147,9 +1147,9 @@ window.LLM_LAB_DATA = {
         },
         {
           title: "How to Contact Us",
-          descriptionHtml: "In addition to the formal UGA graduate application, email <a href=\"mailto:tliu@uga.edu\">Tianming Liu (tliu@uga.edu)</a> and copy <a href=\"mailto:Siyuan.Li1@uga.edu\">Siyuan Li (Siyuan.Li1@uga.edu)</a> with a concise introduction and your research interests.",
+          descriptionHtml: "In addition to the formal UGA graduate application, email <a href=\"mailto:tliu@uga.edu\">Tianming Liu (tliu@uga.edu)</a> and copy <a href=\"mailto:llmlab@uga.edu\">llmlab@uga.edu</a> with a concise introduction and your research interests.",
           points: ["Attach a CV and summarize your academic background", "Selected publications or technical work (optional)", "Email subject: [PhD application - Current School - Name]"],
-          action: { label: "Apply by email", url: "mailto:tliu@uga.edu?cc=Siyuan.Li1@uga.edu&subject=%5BPhD%20application%20-%20Current%20School%20-%20Name%5D" }
+          action: { label: "Apply by email", url: "mailto:tliu@uga.edu?cc=llmlab@uga.edu&subject=%5BPhD%20application%20-%20Current%20School%20-%20Name%5D" }
         }
       ]
     }
