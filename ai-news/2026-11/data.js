@@ -2,6 +2,339 @@ window.AI_NEWS_MONTH_DATA["2026-11"] = {
   "label": "November 2026",
   "articles": [
     {
+      "slug": "amd-q3-2026-data-center-revenue-97-percent",
+      "category": "Industry",
+      "sortDate": "2026-11-03",
+      "dateLabel": "November 3, 2026",
+      "title": "AMD reports $8.5 billion in quarterly data-center revenue, up 97%",
+      "summary": "AMD’s November 3 results show total third-quarter revenue of $13.4 billion. Its data-center business includes both Instinct accelerators and EPYC processors; the $17 billion fourth-quarter outlook remains a forecast.",
+      "image": {
+        "src": "ai-news/2026-11/images/amd-official-investor-relations-artwork.jpg",
+        "alt": "AMD wordmark over an illustrated circuit board.",
+        "caption": "Official AMD investor-relations artwork. The background is promotional imagery, not a photograph of the specific hardware covered by these results."
+      },
+      "content": [
+        {
+          "type": "paragraph",
+          "text": "AMD reported third-quarter 2026 results on November 3, with data-center revenue reaching $8.5 billion, up 97% from a year earlier. Total company revenue was $13.377 billion, commonly rounded to $13.4 billion, up 45% year over year and 16% from the previous quarter. The results cover the quarter ended September 26; November 3 is their publication date, not the end of the measured sales period."
+        },
+        {
+          "type": "paragraph",
+          "text": "AMD attributed the data-center increase to demand for EPYC processors and the launch of Instinct MI450-series GPUs. The segment combines those businesses, so its $8.5 billion total should not be described as AI-accelerator revenue alone. The release does not break out Instinct revenue within that figure. It is evidence of growth in AMD’s broader server and accelerator business, with an important AI component."
+        },
+        {
+          "type": "heading",
+          "text": "Data center drives a changing business mix"
+        },
+        {
+          "type": "paragraph",
+          "text": "Using the rounded segment figure and exact company revenue, data center accounted for about 64% of quarterly sales. That calculation indicates the segment’s weight within AMD, rather than its share of the worldwide AI-chip market. It also does not reveal how much revenue came from training models, serving them or running other server workloads. Those uses require a different breakdown from the one supplied in the announcement."
+        },
+        {
+          "type": "paragraph",
+          "text": "The rest of AMD’s business moved differently. Client and Gaming revenue was $3.7 billion, down 8% year over year, while Embedded revenue was $1.1 billion, up 29%. Within Client and Gaming, client revenue rose 7% to $2.9 billion and gaming revenue fell 40% to $773 million. The contrast helps explain why a near-doubling in one segment did not translate into a near-doubling of total company sales."
+        },
+        {
+          "type": "paragraph",
+          "text": "AMD reported quarterly GAAP net income of $2.428 billion and diluted earnings of $1.46 a share. Its adjusted, non-GAAP figures were $3.471 billion and $2.09, respectively. GAAP gross margin was 54%, compared with 56% under the company’s adjusted presentation. These are different accounting presentations for the same quarter. They should not be mixed into one profit comparison without considering the adjustments, which the company reconciles in the release."
+        },
+        {
+          "type": "heading",
+          "text": "The next-quarter outlook is a separate claim"
+        },
+        {
+          "type": "paragraph",
+          "text": "For the fourth quarter, AMD projected approximately $17 billion in revenue, plus or minus 3%, and a non-GAAP gross margin of about 55%. The revenue midpoint implies roughly 27% sequential growth; the stated range corresponds to approximately $16.49 billion to $17.51 billion. These are management expectations, not sales already recorded or a guarantee of orders converting into revenue on that schedule."
+        },
+        {
+          "type": "paragraph",
+          "text": "For AI infrastructure readers, the new information is the quarterly financial evidence and the forward outlook. Product announcements and acquisitions summarized among the release’s recent highlights have their own original dates. The results strengthen the evidence that server and accelerator demand is reshaping AMD’s sales mix, while leaving GPU-only revenue, customer deployment outcomes and the eventual fourth-quarter result to separate disclosures."
+        }
+      ],
+      "sources": [
+        {
+          "label": "AMD: November 3 earnings release, segment results and accounting reconciliation",
+          "url": "https://ir.amd.com/news-events/press-releases/detail/1303/amd-reports-third-quarter-2026-financial-results"
+        },
+        {
+          "label": "AMD: official newsroom publication and original timestamp",
+          "url": "https://newsroom.amd.com/news/amd-reports-third-quarter-2026-earnings/"
+        }
+      ]
+    },
+    {
+      "slug": "crowdstrike-fiddler-agreement-guardian-ai-kill-switch",
+      "category": "Industry",
+      "sortDate": "2026-11-03",
+      "dateLabel": "November 3, 2026",
+      "title": "CrowdStrike agrees to acquire Fiddler and adds controls for AI agents",
+      "summary": "The November 3 announcements pair a proposed observability acquisition with new Falcon Guardian controls. The kill switch starts at the gateway; endpoint termination and Falcon Observe remain future capabilities.",
+      "image": {
+        "src": "ai-news/2026-11/images/crowdstrike-fiddler-official-announcement.jpg",
+        "alt": "CrowdStrike and Fiddler wordmarks on an illustrated space background.",
+        "caption": "Fiddler’s original promotional artwork for the November 3 acquisition agreement. The transaction and planned product integration remain subject to completion."
+      },
+      "content": [
+        {
+          "type": "paragraph",
+          "text": "CrowdStrike announced a definitive agreement to acquire Fiddler AI on November 3, alongside new controls for AI agents in Falcon Guardian. The two developments address different problems: stopping unauthorized activity while an agent runs, and understanding whether its behavior matches the task it was given. The acquisition remains subject to closing conditions; announcing it does not make Fiddler an integrated Falcon product today."
+        },
+        {
+          "type": "paragraph",
+          "text": "CrowdStrike plans to sell the acquired capabilities as Falcon Observe, targeting general availability in its fiscal fourth quarter of FY27. The company describes evaluations before deployment, monitoring during production, and traces of tool calls and decisions. It also lists OpenTelemetry instrumentation and support for frameworks including LangGraph, AWS Strands and Google ADK. Those are the intended capabilities of the offering, rather than an independently verified account of a completed rollout."
+        },
+        {
+          "type": "heading",
+          "text": "What is available now"
+        },
+        {
+          "type": "paragraph",
+          "text": "The separate Guardian announcement identifies an AI Kill Switch that initially operates at the gateway, with endpoint termination still to come. It also makes the AI Gateway generally available and includes it with Guardian. That gateway inspects requests and responses and applies policy. Existing Guardian availability since September should therefore be distinguished from these November additions."
+        },
+        {
+          "type": "paragraph",
+          "text": "Other controls include hooks inside supported coding assistants and a Falcon sensor running within the Claude Cowork virtual machine. Endpoint network inspection is generally available on Windows, while Mac support is in early access. The announcement treats agent identity controls and broader cloud coverage separately, so customers should check their particular platform and deployment rather than assume every announced feature has the same availability."
+        },
+        {
+          "type": "paragraph",
+          "text": "Fiddler founder Krishna Gade’s accompanying account explains the behavioral side of the deal. An agent can use legitimate credentials and approved tools yet still exceed its instructions. His illustrative example is an incident-investigation agent changing an access policy after encountering a permissions error. A successful command would not, by itself, show that the change was authorized. Fiddler’s role is to connect the instructions, actions and results so teams can investigate that difference."
+        },
+        {
+          "type": "heading",
+          "text": "Combining prevention with an audit trail"
+        },
+        {
+          "type": "paragraph",
+          "text": "The practical implication is that access control and task correctness need separate evidence. Blocking a dangerous action can limit exposure, but it does not explain how an agent reached that action. Conversely, a detailed trace can support investigation without being a guarantee that the next action will be safe. Connecting the two could help operators turn an observed failure into a test and a control."
+        },
+        {
+          "type": "paragraph",
+          "text": "The announcements provide no independent comparative safety evaluation or assurance that these controls prevent every prompt-injection or policy failure. They also do not publish transaction economics in the cited releases. For an organization evaluating the combined offering, the immediate questions are which agents and operating systems are covered, where enforcement occurs, and which promised observability features depend on a future integration."
+        }
+      ],
+      "sources": [
+        {
+          "label": "CrowdStrike: definitive Fiddler acquisition agreement, November 3",
+          "url": "https://ir.crowdstrike.com/news-releases/news-release-details/crowdstrike-acquire-fiddler-deliver-agent-observability-ai-trust"
+        },
+        {
+          "label": "CrowdStrike: Guardian features and availability, November 3",
+          "url": "https://ir.crowdstrike.com/news-releases/news-release-details/crowdstrike-delivers-ai-security-and-safety-enterprise"
+        },
+        {
+          "label": "Fiddler: founder’s announcement and workflow example",
+          "url": "https://www.fiddler.ai/blog/fiddler-joins-crowdstrike"
+        }
+      ]
+    },
+    {
+      "slug": "ai2-statebench-long-context-state-tracking-benchmark",
+      "category": "Research",
+      "sortDate": "2026-11-03",
+      "dateLabel": "November 3, 2026",
+      "title": "Ai2 releases StateBench to test whether language models can follow changing information",
+      "summary": "The four-level benchmark separates simple retrieval from dependent state updates. Its experiments distinguish specially trained models from pretrained systems, which still struggle on long, difficult sequences.",
+      "image": {
+        "src": "ai-news/2026-11/images/ai2-statebench-official-release-artwork.png",
+        "alt": "Colored paths change position across a diagram illustrating state tracking.",
+        "caption": "Ai2’s original StateBench release illustration. It depicts changing state and is not a chart of measured model performance."
+      },
+      "content": [
+        {
+          "type": "paragraph",
+          "text": "Ai2 introduced StateBench on November 3, an open benchmark for tracking information that changes across a long input. It asks whether a language model can follow updates to variables and recover their final state. The institutional announcement accompanies a paper by Jackson Petty, William Merrill and Ashish Sabharwal whose first arXiv version was submitted on November 2. November 3 marks the institutional benchmark announcement; the preprint appeared a day earlier."
+        },
+        {
+          "type": "heading",
+          "text": "Four kinds of updates"
+        },
+        {
+          "type": "paragraph",
+          "text": "The benchmark distinguishes information that never changes, values that can be overwritten, updates that depend on a variable’s own current value, and updates involving another variable. These are called r-trivial, aperiodic, soluble and general finite state tracking. The progression separates finding a relevant assignment from maintaining a chain of dependencies in which a missed operation changes the answer."
+        },
+        {
+          "type": "paragraph",
+          "text": "The released generator derives easier problems from the same underlying assignment trace, controlling such details as the variables, update positions and values. It also renders tasks in different surface forms. That design lets researchers investigate whether a performance difference comes from the state-tracking operation or simply from the way a question is written. The repository provides generation and dataset-building instructions under an Apache 2.0 code license."
+        },
+        {
+          "type": "heading",
+          "text": "Training on the task changes the comparison"
+        },
+        {
+          "type": "paragraph",
+          "text": "In the paper’s direct-training experiment, six architecture variants used 275-million-parameter models trained on sequences containing up to 256 assignments. Evaluation extended to 64,000 assignments, 250 times that maximum training length. Recurrent Gated DeltaNet and hybrid models generalized much farther than transformers on several levels. Their strongest results on the hardest level nevertheless covered a shorter extension than their results on the easier levels."
+        },
+        {
+          "type": "paragraph",
+          "text": "That experiment should be kept separate from testing models already pretrained for general use. Ai2 reports that open pretrained models struggled more than direct training or theoretical expressivity might suggest. Performance also depended on formatting: a system could perform strongly on one presentation and poorly on another encoding of the same underlying task. The existence of an architecture capable of representing a solution therefore does not show that ordinary pretraining has taught it that solution."
+        },
+        {
+          "type": "paragraph",
+          "text": "The frontier-model experiment tested Gemini 3.8 Flash, Claude Opus 5.5, GPT-6 Sol and GPT-6 Luna by asking them to generate final variable values. All handled the simpler levels relatively well, while results deteriorated as harder sequences grew. These generated-answer results should not be treated as the same scoring setup as the paper’s five-option multiple-choice tests."
+        },
+        {
+          "type": "figure",
+          "src": "ai-news/2026-11/images/ai2-statebench-frontier-model-results.png",
+          "alt": "Original StateBench charts compare frontier-model accuracy across four levels as input token counts increase.",
+          "caption": "Ai2’s unmodified chart of generated final-state answers on StateBench. Input length is in tokens; the results are separate from the paper’s directly trained and multiple-choice experiments. Open the full-size image to read every label."
+        },
+        {
+          "type": "paragraph",
+          "text": "For developers working with long documents or agents, StateBench offers a way to probe a narrower capability than advertised context-window size: retaining the consequences of changes within that window. The study uses synthetic tasks and a fixed number of variables. It does not measure an entire software-engineering workflow, and its framework does not yet cover an unbounded stream of newly introduced entities. Those boundaries make it useful as a diagnostic, while leaving broader real-world reliability to separate evaluation."
+        }
+      ],
+      "sources": [
+        {
+          "label": "Ai2: StateBench announcement, November 3",
+          "url": "https://allenai.org/blog/statebench"
+        },
+        {
+          "label": "Petty, Merrill and Sabharwal: reviewed paper, arXiv 2611.03094v1",
+          "url": "https://arxiv.org/html/2611.03094v1"
+        },
+        {
+          "label": "Ai2: StateBench source code and generation instructions",
+          "url": "https://github.com/allenai/state-bench"
+        },
+        {
+          "label": "Ai2: released StateBench dataset",
+          "url": "https://huggingface.co/datasets/allenai/state-bench"
+        }
+      ]
+    },
+    {
+      "slug": "openai-mazda-physical-engineering-research-collaboration",
+      "category": "Industry",
+      "sortDate": "2026-11-03",
+      "dateLabel": "November 3, 2026",
+      "title": "OpenAI adds Mazda research collaboration and tests AI-assisted hardware design",
+      "summary": "A November 3 engineering update describes work on vehicle simulations, scan-to-CAD workflows and a prototype device. Human review and manufacturing revisions remain central to the reported work.",
+      "image": {
+        "src": "ai-news/2026-10/images/openai-official-logo-on-dark.svg",
+        "alt": "Official OpenAI logo.",
+        "caption": "OpenAI. The November 3 update describes research collaborations and engineering workflows under human review."
+      },
+      "sources": [
+        {
+          "label": "OpenAI: engineering update, November 3",
+          "url": "https://openai.com/index/accelerating-engineering-for-the-physical-world/"
+        },
+        {
+          "label": "OpenAI: background on the existing Chip Ganassi Racing collaboration",
+          "url": "https://openai.com/index/chip-ganassi-racing/"
+        }
+      ],
+      "content": [
+        {
+          "type": "paragraph",
+          "text": "OpenAI announced a research collaboration with Mazda on November 3 and an expansion of its existing work with Chip Ganassi Racing. The engineering update describes models helping with physical design and simulation, alongside an internal prototype-device exercise. It presents early workflows and company-reported results, rather than a new general-purpose engineering product or a vehicle ready for sale."
+        },
+        {
+          "type": "paragraph",
+          "text": "At Mazda, OpenAI researchers and forward deployed engineers are working with aerodynamics and crash-safety specialists on vehicle-design simulations. The stated goal is to explore airflow and structural behavior while respecting styling and cost constraints. With Ganassi, the work includes converting scans of existing parts into editable CAD models and manufacturing drawings, with engineers checking accuracy and manufacturability."
+        },
+        {
+          "type": "heading",
+          "text": "From race data to physical parts"
+        },
+        {
+          "type": "paragraph",
+          "text": "The Ganassi relationship predates this announcement. OpenAI’s background account describes a first-year focus on race, car-sensor and pit-crew data, followed by efforts to connect those inputs for engineers. The newly described scan-to-design workflow extends that relationship into prototyping. It is particularly relevant to parts whose original digital design files are unavailable; it is not evidence that a model has independently designed a race-winning component."
+        },
+        {
+          "type": "paragraph",
+          "text": "The distinction matters because a scan records an object’s observed geometry, while a useful engineering model must also support changes and downstream production work. An editable file can be valuable even when it still needs an engineer’s corrections. The practical test is whether it reduces the effort required to produce an accurate, usable design, rather than whether its first rendering looks convincing."
+        },
+        {
+          "type": "heading",
+          "text": "A prototype still needed manufacturing review"
+        },
+        {
+          "type": "figure",
+          "src": "ai-news/2026-11/images/openai-prototype-device-enclosure-original.png",
+          "alt": "Original OpenAI prototype-enclosure drawing with dimensions and tolerances in millimeters.",
+          "caption": "OpenAI’s original prototype enclosure drawing, reproduced unchanged. Dimensions are in millimeters; this is a prototype design artifact, not evidence of a production-qualified device. Open the full-size drawing for its specifications."
+        },
+        {
+          "type": "paragraph",
+          "text": "OpenAI also reports that two team members used GPT-6 Astra to develop a device for talking to Codex in under a week as a side project. A manufacturer produced a small prototype batch within a month. The model contributed enclosure, circuit-board and software work, but production required repeated review and iteration because it missed manufacturing limits, tolerances and assembly details."
+        },
+        {
+          "type": "paragraph",
+          "text": "OpenAI reports higher engineering-task benchmark scores for a newer internal model and a 23-fold increase in hardware-team token usage since February. Neither measure establishes a matching increase in engineering productivity. Usage measures how much the tools are called; benchmark results cover specified tasks. Neither directly measures production cost, defect rates or the time required for an entire approved design."
+        },
+        {
+          "type": "paragraph",
+          "text": "The company invites engineering firms and software vendors to propose use cases through an interest form, with no general service rollout announced. For engineers, the reported examples suggest a workflow that moves between generation, simulation and review. A promising drawing is an input to that process, while fabrication and testing provide different evidence. The Mazda work is still a research collaboration, and the update gives no controlled comparison of vehicle performance or crash outcomes. Its immediate significance is the range of engineering work being tested and the remaining gap between a model-generated design and a validated physical product."
+        }
+      ]
+    },
+    {
+      "slug": "miro-workforce-survey-ai-productivity-collaboration-gap",
+      "category": "Employment / Talent",
+      "sortDate": "2026-11-03",
+      "dateLabel": "November 3, 2026",
+      "title": "Miro survey finds stronger perceived AI gains in speed than in collaboration",
+      "summary": "A November 3 report draws on 9,502 respondents surveyed in September and October. Its findings describe workers’ perceptions of output, review burdens and organizational practice, rather than measured productivity or job losses.",
+      "image": {
+        "src": "ai-news/2026-11/images/miro-intelligent-collaboration-official-report-cover.png",
+        "alt": "Miro promotional artwork displaying The State of Intelligent Collaboration report.",
+        "caption": "Original Miro report artwork. Its illustrative workplace scene does not document the people surveyed."
+      },
+      "content": [
+        {
+          "type": "paragraph",
+          "text": "Miro released its State of Intelligent Collaboration research on November 3, reporting a gap between perceived individual benefits from AI and improvements in how teams work together. In the survey, 83% agreed that AI made individuals more productive, while 73% reported faster output and 56% reported better output quality. These are respondents’ assessments, not independently measured changes in work completed per hour."
+        },
+        {
+          "type": "paragraph",
+          "text": "The report’s principal charts identify a sample of 9,502 leaders and employees. Miro conducted the online survey during September and October 2026 across North America, Latin America, Europe and Asia-Pacific, offering a small participation incentive. Respondents worked in functions including product development, engineering, IT, operations, design and strategy. The demographic appendix describes approximately equal shares of individual contributors and director-level-or-higher respondents."
+        },
+        {
+          "type": "heading",
+          "text": "No improvement is different from deterioration"
+        },
+        {
+          "type": "paragraph",
+          "text": "The distinction is especially important in the findings on decision-making and collaboration. For decisions, 48% reported improvement, 43% no change and 9% decline. For collaboration, the corresponding shares were 40%, 47% and 13%. Thus the headline finding that most respondents had not seen better collaboration does not mean most said collaboration had worsened. Combining unchanged and declining responses answers a different question from measuring deterioration alone."
+        },
+        {
+          "type": "paragraph",
+          "text": "Miro’s accompanying announcement highlights fragmentation in where AI-assisted work happens. Sixty-nine percent said most such work occurred in private sessions rather than shared spaces. The report also identifies a heavier review burden: 59% reported more AI-generated output to review. These observations describe a potential coordination problem, but the survey does not experimentally establish that private AI sessions caused slower decisions or lower-quality work."
+        },
+        {
+          "type": "paragraph",
+          "text": "Employees’ concerns about roles also require care. The report asks about blurred responsibilities, job security and the possibility of related roles merging. Agreement with those statements measures perceptions and expectations. It is not a count of positions eliminated, occupations merged or workers displaced. Likewise, a respondent describing more output to review does not establish that total working hours increased by a particular amount."
+        },
+        {
+          "type": "heading",
+          "text": "Reading a vendor-sponsored survey"
+        },
+        {
+          "type": "paragraph",
+          "text": "The methods appendix gives geography, functions, company-size groups and broad seniority composition, but does not explain a probability sampling design or publish weighting and uncertainty estimates. The results should therefore be read as findings within this surveyed group, rather than precise estimates for all workers or countries. A large sample does not by itself resolve recruitment or self-selection bias."
+        },
+        {
+          "type": "paragraph",
+          "text": "Miro sells collaboration software and uses the report to argue for shared AI workspaces and stronger governance. That commercial interest is relevant when assessing its recommendations about workplace tools and practices. The evidence supports a more limited conclusion: respondents often saw gains in producing work faster without equally widespread improvements in collective decisions. For employers, measuring review time, handoffs and decision quality alongside individual output would test whether that reported gap also exists in their own workflows."
+        }
+      ],
+      "sources": [
+        {
+          "label": "Miro: original research announcement, November 3",
+          "url": "https://miro.com/blog/state-of-intelligent-collaboration-2026/"
+        },
+        {
+          "label": "Miro: full 12-page report, figures and methodological appendix",
+          "url": "https://go2.miro.com/rs/228-GPV-835/images/The%20State%20of%20Intelligent%20Collaboration%202026.pdf"
+        },
+        {
+          "label": "Miro / Business Wire: original release carried by TT, November 3",
+          "url": "https://via.tt.se/pressmeddelande/4626809/individual-ai-productivity-soars-but-organizational-impact-stalls?lang=en&publisherId=259167"
+        }
+      ]
+    },
+    {
       "slug": "marvell-lumentum-115-billion-all-stock-agreement",
       "category": "Industry",
       "sortDate": "2026-11-02",
