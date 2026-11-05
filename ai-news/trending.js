@@ -111,7 +111,7 @@ window.AI_NEWS_WEEKLY_FEATURE = {
     "Hiring / Talent"
   ],
   "title": "Financing, model access and workforce evidence",
-  "summary": "This week in AI: financing plans, model distribution and scientific evaluation advanced on different timelines. This late Monday edition covers October 26–November 1 only; planned releases and later events retain their actual dates.",
+  "summary": "This week in AI: financing plans, model distribution and scientific evaluation advanced on different timelines. Coverage is October 26–November 1 only; planned releases and later events retain their actual dates.",
   "coverAlt": "Official Google Cloud and OpenAI partnership artwork.",
   "metrics": [
     {

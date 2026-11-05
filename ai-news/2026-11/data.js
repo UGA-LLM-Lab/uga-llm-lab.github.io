@@ -5,7 +5,7 @@ window.AI_NEWS_MONTH_DATA["2026-11"] = {
       "slug": "weekly-ai-october-26-november-1",
       "category": "AI Weekly",
       "sortDate": "2026-11-04",
-      "dateLabel": "October 26–November 1, 2026 · Prepared November 4, 2026",
+      "dateLabel": "October 26–November 1, 2026",
       "title": "AI Weekly: Model access expands as financing and regional rollouts take shape",
       "summary": "October 26–November 1: GPT-6.1 Terra, Anthropic’s proposed IPO, Meta’s priced offerings, Mistral Large 4 weights and Apple’s phased China rollout announcement.",
       "image": {
@@ -16,13 +16,13 @@ window.AI_NEWS_MONTH_DATA["2026-11"] = {
       "content": [
         {
           "type": "paragraph",
-          "text": "AI Weekly covers October 26–November 1, 2026, the completed Monday–Sunday week. Prepared November 4 as the late November 2 edition, it follows new model access, financing routes and regional distribution while keeping planned releases and later events separate."
+          "text": "AI Weekly covers October 26–November 1, 2026, the completed Monday–Sunday week. It follows new model access, financing routes and regional distribution while keeping planned releases and later events separate."
         },
         {
           "type": "figure",
           "src": "ai-news/2026-11/images/ai-weekly-october-26-november-1-poster.png",
           "alt": "AI Weekly poster for October 26–November 1, 2026: GPT-6.1 Terra, Anthropic’s proposed IPO, Meta financing, Mistral Large 4 weights and Apple’s China rollout announcement.",
-          "caption": "UGA LLM Lab · AI Weekly · October 26–November 1, 2026. Entirely generated editorial poster; illustrations are not documentary photographs. Prepared November 4 for the missed November 2 edition."
+          "caption": "UGA LLM Lab · AI Weekly · October 26–November 1, 2026. Entirely generated editorial poster; illustrations are not documentary photographs."
         },
         {
           "type": "heading",

@@ -17,8 +17,8 @@
     ],
     "timezone": "America/New_York"
   },
-  "synthesis": "This week in AI: financing plans, model distribution and scientific evaluation advanced on different timelines. This late Monday edition covers October 26–November 1 only; planned releases and later events retain their actual dates.",
-  "methodology_note": "Prepared November 4 for the missed November 2 edition. Research attention uses unchanged attention-index-v1 and 312 previous/214 current platform recommendations. Hiring compares archived October 25 and October 31 observations, approximately six days apart, not exact seven-day endpoints. Source access gaps remain; recommendations, surveys, advertisements, commitments and realised outcomes have separate populations and dates.",
+  "synthesis": "This week in AI: financing plans, model distribution and scientific evaluation advanced on different timelines. Coverage is October 26–November 1 only; planned releases and later events retain their actual dates.",
+  "methodology_note": "Research attention uses unchanged attention-index-v1 and 312 previous/214 current platform recommendations. Hiring compares archived October 25 and October 31 observations, approximately six days apart, not exact seven-day endpoints. Source access gaps remain; recommendations, surveys, advertisements, commitments and realised outcomes have separate populations and dates.",
   "research_attention": {
     "policy": "attention-index-v1",
     "title": "Research Attention",
