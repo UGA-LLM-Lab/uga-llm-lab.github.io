@@ -6,6 +6,8 @@
  */
 window.AI_NEWS_CATALOG = {
   weeklyAnalyses: [
+    {id: "2026-10-26-to-2026-11-01", label: "October 26–November 1, 2026", data: "ai-news/weekly/2026-10-26-to-2026-11-01.json", reviewSlug: "weekly-ai-october-26-november-1", cover: "ai-news/2026-11/images/apple-intelligence-china-official-announcement.jpg"},
+
     {id: "2026-10-19-to-2026-10-25", label: "October 19–25, 2026", data: "ai-news/weekly/2026-10-19-to-2026-10-25.json", reviewSlug: "weekly-ai-october-19-25", cover: "ai-news/2026-10/images/openai-google-cloud-official-hero.png"},
 
     {

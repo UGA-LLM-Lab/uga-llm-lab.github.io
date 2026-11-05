@@ -1,122 +1,130 @@
 window.AI_NEWS_TRENDS = {
   "title": "Research Attention",
-  "period": "October 19–25, 2026",
-  "comparison": "Compared with October 12–18",
-  "updated": "October 26, 2026",
-  "note": "Topic shares across 312 Hugging Face recommendations, compared with 355 previously. Unchanged attention-index-v1; index 100 means unchanged share. Topics overlap. This measures platform attention, not all research, adoption or hiring.",
+  "period": "October 26–November 1, 2026",
+  "comparison": "Compared with October 19–25",
+  "updated": "November 4, 2026",
+  "note": "Topic shares across 214 Hugging Face recommendations, compared with 312 previously. Unchanged attention-index-v1; index 100 means unchanged share. Topics overlap. This measures platform attention, not all research, adoption or hiring.",
   "items": [
     {
       "label": "Agents & tool use",
-      "index": 122,
-      "share": 32.4,
-      "count": 101,
+      "index": 87,
+      "share": 28.0,
+      "count": 60,
+      "direction": "down",
+      "state": "Falling"
+    },
+    {
+      "label": "Vision & multimodality",
+      "index": 106,
+      "share": 27.1,
+      "count": 58,
       "direction": "up",
       "state": "Rising"
     },
     {
-      "label": "Vision & multimodality",
-      "index": 86,
-      "share": 25.6,
-      "count": 80,
-      "direction": "down",
-      "state": "Falling"
-    },
-    {
       "label": "Evaluation & verification",
-      "index": 90,
-      "share": 14.4,
-      "count": 45,
-      "direction": "down",
-      "state": "Falling"
-    },
-    {
-      "label": "Robotics & embodied AI",
-      "index": 137,
-      "share": 13.1,
+      "index": 133,
+      "share": 19.2,
       "count": 41,
       "direction": "up",
       "state": "Rising"
     },
     {
-      "label": "Efficiency & inference",
-      "index": 67,
-      "share": 10.9,
-      "count": 34,
+      "label": "Robotics & embodied AI",
+      "index": 78,
+      "share": 10.3,
+      "count": 22,
       "direction": "down",
       "state": "Falling"
     },
     {
-      "label": "Memory & context",
-      "index": 138,
-      "share": 5.4,
-      "count": 17,
+      "label": "Efficiency & inference",
+      "index": 77,
+      "share": 8.4,
+      "count": 18,
+      "direction": "down",
+      "state": "Falling"
+    },
+    {
+      "label": "Reasoning & mathematics",
+      "index": 129,
+      "share": 7.0,
+      "count": 15,
       "direction": "up",
       "state": "Rising"
     },
     {
-      "label": "Reasoning & mathematics",
-      "index": 77,
-      "share": 5.4,
-      "count": 17,
-      "direction": "down",
-      "state": "Falling"
-    },
-    {
-      "label": "Coding & software",
-      "index": 90,
-      "share": 4.8,
-      "count": 15,
+      "label": "Memory & context",
+      "index": 86,
+      "share": 4.7,
+      "count": 10,
       "direction": "down",
       "state": "Falling"
     },
     {
       "label": "Self-improvement & evolution",
-      "index": 123,
-      "share": 4.5,
-      "count": 14,
-      "direction": "up",
-      "state": "Rising"
-    },
-    {
-      "label": "Speech & audio",
-      "index": 101,
-      "share": 2.6,
-      "count": 8,
+      "index": 104,
+      "share": 4.7,
+      "count": 10,
       "direction": "flat",
       "state": "Broadly stable"
     },
     {
       "label": "Safety & reliability",
-      "index": 76,
-      "share": 2.6,
+      "index": 146,
+      "share": 3.7,
       "count": 8,
+      "direction": "up",
+      "state": "Rising"
+    },
+    {
+      "label": "Coding & software",
+      "index": 68,
+      "share": 3.3,
+      "count": 7,
       "direction": "down",
       "state": "Falling"
+    },
+    {
+      "label": "Speech & audio",
+      "index": 109,
+      "share": 2.8,
+      "count": 6,
+      "direction": "up",
+      "state": "Rising"
+    },
+    {
+      "label": "Biology & medicine",
+      "index": null,
+      "share": 0.9,
+      "count": 2,
+      "direction": "watch",
+      "state": "Watching"
     }
   ]
 };
 window.AI_NEWS_WEEKLY_FEATURE = {
-  "analysisId": "2026-10-19-to-2026-10-25",
+  "analysisId": "2026-10-26-to-2026-11-01",
   "sections": [
     "Research",
     "Industry",
     "Hiring / Talent"
   ],
-  "title": "Agent access expands; outcomes and work need separate evidence",
-  "summary": "Agents entered more personal and enterprise workflows, but access, reproducibility and reliable outcomes progressed at different speeds. This week’s analysis adds a matched employer-board comparison while keeping advertisements, survey responses and actual employment distinct.",
+  "title": "Financing, model access and workforce evidence",
+  "summary": "This week in AI: financing plans, model distribution and scientific evaluation advanced on different timelines. This late Monday edition covers October 26–November 1 only; planned releases and later events retain their actual dates.",
   "coverAlt": "Official Google Cloud and OpenAI partnership artwork.",
   "metrics": [
     {
-      "value": "312",
+      "value": "214",
       "label": "recommendations sampled"
     },
     {
-      "value": "101",
+      "value": "60",
       "label": "agent & tool-use papers"
     },
     {
-      "value": "+3.0%",
-      "label": "listed ads in matched employer panel"
+      "value": "+0.9%",
+      "label": "listed ads · Oct25–31 snapshots"
     }
   ]
 };

@@ -2,6 +2,121 @@ window.AI_NEWS_MONTH_DATA["2026-11"] = {
   "label": "November 2026",
   "articles": [
     {
+      "slug": "weekly-ai-october-26-november-1",
+      "category": "AI Weekly",
+      "sortDate": "2026-11-04",
+      "dateLabel": "October 26–November 1, 2026 · Prepared November 4, 2026",
+      "title": "AI Weekly: Model access expands as financing and regional rollouts take shape",
+      "summary": "October 26–November 1: GPT-6.1 Terra, Anthropic’s proposed IPO, Meta’s priced offerings, Mistral Large 4 weights and Apple’s phased China rollout announcement.",
+      "image": {
+        "src": "ai-news/2026-11/images/apple-intelligence-china-official-announcement.jpg",
+        "alt": "Apple’s official illustration shows Apple Intelligence features on three iPhones for its China announcement.",
+        "caption": "Source: Apple China, October 31, 2026 announcement. Official product illustration of planned features; separate from the generated weekly poster."
+      },
+      "content": [
+        {
+          "type": "paragraph",
+          "text": "AI Weekly covers October 26–November 1, 2026, the completed Monday–Sunday week. Prepared November 4 as the late November 2 edition, it follows new model access, financing routes and regional distribution while keeping planned releases and later events separate."
+        },
+        {
+          "type": "figure",
+          "src": "ai-news/2026-11/images/ai-weekly-october-26-november-1-poster.png",
+          "alt": "AI Weekly poster for October 26–November 1, 2026: GPT-6.1 Terra, Anthropic’s proposed IPO, Meta financing, Mistral Large 4 weights and Apple’s China rollout announcement.",
+          "caption": "UGA LLM Lab · AI Weekly · October 26–November 1, 2026. Entirely generated editorial poster; illustrations are not documentary photographs. Prepared November 4 for the missed November 2 edition."
+        },
+        {
+          "type": "heading",
+          "text": "1. GPT-6.1 Terra broadens lower-cost computer-use access"
+        },
+        {
+          "type": "paragraph",
+          "text": "OpenAI released GPT-6.1 Terra on October 26 through the API, ChatGPT Work and Codex. The model combines visual understanding, computer use and writing, with standard API prices of $1 per million input tokens, $0.05 per million cached input tokens and $5 per million output tokens. OpenAI positions it as a faster, cheaper option for high-volume work. The availability milestone is distinct from a claim that every consumer ChatGPT mode now uses Terra."
+        },
+        {
+          "type": "paragraph",
+          "text": "The company reports gains on computer-use and coding evaluations, but those measurements use particular harnesses and effort settings. Per-token pricing is only one part of the cost of completing a task: tool access, retries, human corrections and failures also matter. For an organisation automating documents or desktop workflows, the relevant comparison is accepted-task cost under the same conditions. The release expands an available deployment option; it does not independently establish a productivity gain or reliable autonomous operation."
+        },
+        {
+          "type": "heading",
+          "text": "2. Anthropic files for a proposed US public offering"
+        },
+        {
+          "type": "paragraph",
+          "text": "Anthropic announced on October 26 that it had filed an initial Form S-1 registration statement with the US Securities and Exchange Commission for a proposed initial public offering. It intends to list on Nasdaq under ANT. The announcement says the number of shares and proposed price range had not yet been determined. Filing the registration statement is a financing milestone, while an effective registration, priced offering and completed listing are separate events."
+        },
+        {
+          "type": "paragraph",
+          "text": "For the AI sector, the filing opens a route to public-market scrutiny and potential capital access. It does not mean that the company had completed its IPO or received offering proceeds during this week. The announcement also says securities could not be sold before the registration became effective. This roundup retains the initial October 26 milestone; the amended filing and financial updates published on November 2 belong to the following week and are not folded into this retrospective account."
+        },
+        {
+          "type": "heading",
+          "text": "3. Meta prices equity offerings, with forward proceeds still ahead"
+        },
+        {
+          "type": "paragraph",
+          "text": "Meta launched concurrent offerings on October 26 and its pricing page, dated October 27 with an October 26 dateline, increased the common-stock forward offering from $22.5 billion to $25 billion. Alongside the $12.5 billion convertible-preferred offering, that makes $37.5 billion in priced offering size. The financing gives Meta additional options as it plans substantial investment, including AI infrastructure. The amounts describe offering terms, not a report that the full sum was received immediately."
+        },
+        {
+          "type": "paragraph",
+          "text": "The forward structure is a consequential qualifier: Meta says it initially receives no proceeds from the common-stock offering, with settlement expected on or before November 19, 2027. The company also described a prospective $60 billion at-the-market programme whose execution was not assured. Adding that plan to the priced offerings and calling the result cash already raised would misstate the announcement. AMD also said on October 27 that it would invest $1 billion in the offering and that initial Helios systems were installed and being tested at Meta. That is not proof of completed gigawatt-scale deployment or a new Muse model launch."
+        },
+        {
+          "type": "heading",
+          "text": "4. Mistral releases improved Large 4 model weights"
+        },
+        {
+          "type": "paragraph",
+          "text": "Mistral released the weights of an improved Mistral Large 4 on October 29, following the model’s public API preview earlier in October. The company describes a one-trillion-parameter multimodal model with stronger coding and defensive-security performance and three reasoning settings. The weight release is the new event: it gives eligible users a different route to deployment and customisation than access only through a hosted service."
+        },
+        {
+          "type": "paragraph",
+          "text": "The weights are distributed under Mistral’s specified open-weight licence, so availability should not be equated with unrestricted use. The announcement’s benchmark and safety comparisons are developer-reported and depend on evaluation conditions; refusing many harmful test requests does not guarantee safe behaviour in every connected workflow. Organisations considering self-hosting still need suitable infrastructure, permission controls and task-specific tests. A specialised cybersecurity variant for vetted partners is also distinct from general access to that variant."
+        },
+        {
+          "type": "heading",
+          "text": "5. Apple announces a phased China rollout with Qwen integration"
+        },
+        {
+          "type": "paragraph",
+          "text": "Apple announced on October 31 that Apple Intelligence features would come to eligible users in mainland China, including integration with Alibaba’s Qwen through Siri, Writing Tools and visual intelligence. The published timetable called for a developer beta starting November 4 and a public iOS 27.3 release in December. Those are future dates relative to this completed week. The announcement is included for its distribution and partnership milestone, not as proof that all features were already available."
+        },
+        {
+          "type": "paragraph",
+          "text": "The scope is narrower than the entire next-generation Apple AI roadmap. Apple explicitly excludes the new Siri AI and next-generation features introduced at WWDC 2026 from this initial rollout. Device, language and platform eligibility also apply, and additional platforms depend on subsequent approvals. The next milestones are actual beta delivery and public release notes. Keeping the October 31 announcement separate from those later outcomes prevents a planned launch from becoming a completed event merely because its scheduled date has arrived."
+        }
+      ],
+      "sources": [
+        {
+          "label": "GPT-6.1 Terra broadens lower-cost computer-use access",
+          "url": "https://openai.com/index/introducing-gpt-6-1-terra/"
+        },
+        {
+          "label": "Anthropic files for a proposed US public offering",
+          "url": "https://www.anthropic.com/news/s1-sec"
+        },
+        {
+          "label": "Meta prices equity offerings, with forward proceeds still ahead",
+          "url": "https://investor.atmeta.com/investor-news/press-release-details/2026/Meta-Announces-Pricing-of-Offering-of-Depositary-Shares-Representing-Series-A-Mandatory-Convertible-Preferred-Stock-and-Offering-of-Class-A-Common-Stock-in-Connection-with-Forward-Sale-Agreements/default.aspx"
+        },
+        {
+          "label": "Mistral releases improved Large 4 model weights",
+          "url": "https://mistral.ai/news/mistral-large-4-oss/"
+        },
+        {
+          "label": "Apple announces a phased China rollout with Qwen integration",
+          "url": "https://www.apple.com.cn/newsroom/2026/10/apple-intelligence-features-are-coming-to-users-in-china/"
+        },
+        {
+          "label": "AMD: October27 Meta infrastructure and investment milestone",
+          "url": "https://ir.amd.com/news-events/press-releases/detail/1302/amd-and-meta-advance-strategic-partnership-to-power-metas-superintelligence-infrastructure"
+        },
+        {
+          "label": "Mistral Large 4: distributed weight licence",
+          "url": "https://huggingface.co/mistralai/Mistral-Large-4-1T-A52B/blob/main/LICENSE"
+        }
+      ]
+    },
+    {
       "slug": "openai-images-26-flare-sunburst-image-editing",
       "category": "Industry",
       "sortDate": "2026-11-04",

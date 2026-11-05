@@ -1,0 +1,122 @@
+{
+  "periods": [
+    [
+      "2026-10-19",
+      "2026-10-25"
+    ],
+    [
+      "2026-10-26",
+      "2026-11-01"
+    ]
+  ],
+  "observation_times_utc": [
+    [
+      "2026-10-26T00:18:17.781123+00:00",
+      "2026-10-26T00:18:19.166847+00:00"
+    ],
+    [
+      "2026-11-01T02:46:16.715440+00:00",
+      "2026-11-01T02:46:21.131521+00:00"
+    ]
+  ],
+  "stable_boards": 13,
+  "stable_employers": 12,
+  "counts": [
+    1945,
+    1963
+  ],
+  "net_change": 18,
+  "percent_change": 0.9254498714653003,
+  "employers": [
+    {
+      "employer": "anthropic",
+      "previous_listed_advertisements": 681,
+      "current_listed_advertisements": 675,
+      "net_change": -6
+    },
+    {
+      "employer": "cognition",
+      "previous_listed_advertisements": 105,
+      "current_listed_advertisements": 106,
+      "net_change": 1
+    },
+    {
+      "employer": "cohere",
+      "previous_listed_advertisements": 116,
+      "current_listed_advertisements": 122,
+      "net_change": 6
+    },
+    {
+      "employer": "cursor",
+      "previous_listed_advertisements": 126,
+      "current_listed_advertisements": 125,
+      "net_change": -1
+    },
+    {
+      "employer": "fireworks_ai",
+      "previous_listed_advertisements": 91,
+      "current_listed_advertisements": 90,
+      "net_change": -1
+    },
+    {
+      "employer": "lambda",
+      "previous_listed_advertisements": 99,
+      "current_listed_advertisements": 92,
+      "net_change": -7
+    },
+    {
+      "employer": "mistral_ai",
+      "previous_listed_advertisements": 225,
+      "current_listed_advertisements": 229,
+      "net_change": 4
+    },
+    {
+      "employer": "perplexity",
+      "previous_listed_advertisements": 132,
+      "current_listed_advertisements": 138,
+      "net_change": 6
+    },
+    {
+      "employer": "runway",
+      "previous_listed_advertisements": 48,
+      "current_listed_advertisements": 48,
+      "net_change": 0
+    },
+    {
+      "employer": "sierra",
+      "previous_listed_advertisements": 220,
+      "current_listed_advertisements": 230,
+      "net_change": 10
+    },
+    {
+      "employer": "skild_ai",
+      "previous_listed_advertisements": 50,
+      "current_listed_advertisements": 55,
+      "net_change": 5
+    },
+    {
+      "employer": "thinking_machines_lab",
+      "previous_listed_advertisements": 52,
+      "current_listed_advertisements": 53,
+      "net_change": 1
+    }
+  ],
+  "deduplication": "Exact employer, official board and stable provider posting ID. Advertisements on regional boards may describe related positions; the count is public ad stock, not unique people or approved headcount. No syndication into third-party aggregators counted.",
+  "scope": "All publicly listed functions at twelve AI employers, not a filtered count of AI-specialist occupations. Latest saved snapshot within each target week: Sunday October25 versus SaturdayOctober31, six days apart, not matching Sunday cutoffs. Public ad stocks only; changes inside either week may be missed.",
+  "panels": {
+    "major_ai_employer": "Anthropic alone; numerical values appear in the employer rows, not a diversified large-company panel.",
+    "other_ai_employers": "Eleven employers, reported separately by name; no unverified size classification inferred.",
+    "academic": "No comparable verified academic employer board in this numerical sample; evidence gap, not zero academic hiring."
+  },
+  "constraints": "This six-day archived comparison supports a qualified stock difference within the fixed boards, not an exact seven-day flow or a sustained 1\u20133 month trend. Recruitment outcomes, salary changes, vacancy duration and causal AI effects are not measured.",
+  "inputs": [
+    {
+      "path": "2026-10-24_25/hiring/normalized-observations.jsonl",
+      "sha256": "b7b918555d770460a4a4e3c1e0c75710ed130ab9c3adf23ead411f86ef41ddc0"
+    },
+    {
+      "path": "2026-10-30_31/hiring/normalized-observations.jsonl",
+      "sha256": "9f543ad5e038ae2d5b198e18f66f87460d4a74b37ff30e9a13fef06c56749319"
+    }
+  ]
+}
