@@ -2,6 +2,257 @@ window.AI_NEWS_MONTH_DATA["2026-11"] = {
   "label": "November 2026",
   "articles": [
     {
+      "slug": "openai-images-26-flare-sunburst-image-editing",
+      "category": "Industry",
+      "sortDate": "2026-11-04",
+      "dateLabel": "November 4, 2026",
+      "title": "OpenAI releases Images 2.6 with faster generation and more editing controls",
+      "summary": "Images 2.6 reaches ChatGPT, Codex and the API, adding GIF workflows, image markup and separate controls for planning complexity and visual quality.",
+      "image": {
+        "src": "ai-news/2026-11/images/openai-images-26-official-example.webp",
+        "alt": "OpenAI’s official Sunburst example shows a stylised bouquet made of mechanical parts.",
+        "caption": "Source: OpenAI image-generation documentation. Publisher-generated Sunburst example; illustrative product output, not a real bouquet or documentary photograph. No image was generated for this Daily edition."
+      },
+      "content": [
+        {
+          "type": "paragraph",
+          "text": "OpenAI released Images 2.6 on November 4 across ChatGPT, Codex and its API. The update combines faster image generation with more precise editing and animation workflows. OpenAI says it is available globally across subscription tiers on desktop, mobile and web. Developers receive two API variants, GPT-Image-2.6 Flare and Sunburst. Access through a subscription and metered API usage remain different commercial arrangements; inclusion in a product does not imply unlimited generations."
+        },
+        {
+          "type": "paragraph",
+          "text": "The company reports generation that is 50% faster than the previous version. It says Flare can produce an image in as little as six seconds at low quality, while Sunburst targets more detailed work and consistency across edits at medium or high quality. These are company claims, including a best-case timing example, rather than independently measured average latency. A useful evaluation would keep output dimensions, quality, scene difficulty and editing requirements fixed before comparing speed in their own production workflow."
+        },
+        {
+          "type": "paragraph",
+          "text": "The release also supports GIF creation, image markup in the API and SVG exports. A separate complexity parameter controls how much planning goes into a request; quality controls visual detail and fidelity. That distinction matters when a simple correction needs to preserve an existing composition. Increasing every setting is not necessarily the best route to an acceptable result. Teams can compare a narrowly specified edit with a more demanding scene while recording both generation time and whether required details survive."
+        },
+        {
+          "type": "paragraph",
+          "text": "The API pricing page lists standard rates for both 2.6 variants of $8 per million image-input tokens and $30 per million image-output tokens, with cached image input at $2. Text input is $5 per million tokens and cached text input $1.25. These are token rates, not a flat charge for every finished image. The documentation explains that dimensions, fidelity and other settings affect image token consumption. Editing rounds and rejected outputs also matter when calculating the cost of a usable deliverable."
+        },
+        {
+          "type": "paragraph",
+          "text": "The practical opportunity is a shorter cycle between a draft, a targeted correction and a finished asset. For a teaching diagram, product illustration or campaign image, the relevant test is whether labels, spatial relationships and recurring objects remain correct across that cycle. A visually polished result can still contain an error that makes it unsuitable for publication. GIF and export support can remove a handoff step without resolving that underlying review problem."
+        },
+        {
+          "type": "paragraph",
+          "text": "OpenAI's announcement establishes availability and describes new controls; it does not independently establish a productivity gain for a particular organisation. A meaningful comparison would count accepted outputs, correction effort and final file compatibility alongside latency and API charges. The most consequential improvement would be fewer editing rounds for a verified result. That outcome should be measured in the intended workflow rather than inferred from a single attractive demonstration."
+        }
+      ],
+      "sources": [
+        {
+          "label": "OpenAI: Introducing Images 2.6",
+          "url": "https://openai.com/index/introducing-images-2-6/"
+        },
+        {
+          "label": "OpenAI API: image generation guide",
+          "url": "https://developers.openai.com/api/docs/guides/image-generation"
+        },
+        {
+          "label": "OpenAI API: standard pricing",
+          "url": "https://developers.openai.com/api/docs/pricing"
+        }
+      ]
+    },
+    {
+      "slug": "tencent-hy4-visual-computer-use-api-release",
+      "category": "Industry",
+      "sortDate": "2026-11-04",
+      "dateLabel": "November 4, 2026",
+      "title": "Tencent releases Hy4 services, with model weights still to come",
+      "summary": "Hy4 adds visual understanding and computer-use capabilities across Tencent products; the company says weights and system cards will follow in the coming days.",
+      "image": {
+        "src": "ai-news/2026-11/images/tencent-hy4-official-release.png",
+        "alt": "Official Tencent Hy4 announcement illustration.",
+        "caption": "Source: Tencent. Official Hy4 identity artwork linked from its homepage; promotional model artwork, not a benchmark."
+      },
+      "content": [
+        {
+          "type": "paragraph",
+          "text": "Tencent announced Hy4 on November 4, expanding its model services with visual understanding and computer-use capabilities. The company says the model is available through products including Tencent Cloud TokenHub, WorkBuddy, CodeBuddy, Yuanbao, ima and WeCom's AI assistant. The announcement describes access through Tencent services and third-party API platforms. Although its headline calls Hy4 open source, the body says model weights and system cards are planned for the coming days. Service availability and a downloadable model release are separate milestones."
+        },
+        {
+          "type": "paragraph",
+          "text": "Hy4 can interpret images and interact with command-line and graphical interfaces, according to Tencent. The company describes training involving professional software such as Blender and CAD, alongside programming, document and research workflows. Through WorkBuddy's WeCom integration, it can draw on workplace information such as chats, documents, calendars and meetings. A forthcoming Projects feature is still presented as an upcoming addition. These descriptions establish intended functions, rather than proof that a model can safely carry out every action exposed by an application."
+        },
+        {
+          "type": "paragraph",
+          "text": "Tencent reports evaluations of office tasks, financial analysis and other specialist work. One assessment involved 213 financial professionals, including 153 external participants, and 579 tasks. The company also reports improvements in internal measures of hallucinations and unsupported assumptions. These results come from the developer and its evaluation arrangements. Without a complete system card, test materials and comparable independent runs, they should not be treated as a universal ranking across products or as evidence that financial recommendations are reliable."
+        },
+        {
+          "type": "paragraph",
+          "text": "The stated standard API prices are approximately $0.90 per million input tokens, $2.70 per million output tokens and $0.045 per million cached input tokens. Tencent describes a TokenHub promotion at half the standard price through December 31, 2026, and free WorkBuddy and CodeBuddy access from November 4 through 15. Those time-limited offers should be distinguished from ordinary pricing. Hy4 Flash is described in the release's body as scheduled to arrive soon, so this announcement does not establish its completed availability."
+        },
+        {
+          "type": "paragraph",
+          "text": "For an organisation considering the service, integration is as important as the model's headline score. Access to messages or calendars can supply useful context, while access to applications can turn an incorrect interpretation into an action. A meaningful trial would therefore specify which information the assistant may read, which changes it may prepare and which actions require approval. It would also measure unsuccessful attempts and human corrections, rather than counting only attractive completed examples."
+        },
+        {
+          "type": "paragraph",
+          "text": "The next evidence to watch is the promised release of weights, licensing terms and system cards, followed by reproducible tests under disclosed conditions. Those materials will determine what researchers can inspect or run themselves. Until then, Hy4 is a verified new service release with developer-reported capabilities and a prospective weight release. That distinction gives readers a concrete availability milestone without presenting the company's broader open-source positioning as a completed technical fact."
+        }
+      ],
+      "sources": [
+        {
+          "label": "Tencent: Hy4 release and availability",
+          "url": "https://en.prnasia.com/releases/apac/tencent-launches-hy4-joining-the-ranks-of-the-world-s-leading-open-source-ai-models-554689.shtml"
+        }
+      ]
+    },
+    {
+      "slug": "openai-linux-vulnerability-research-948-unique-lpes",
+      "category": "Research",
+      "sortDate": "2026-11-04",
+      "dateLabel": "November 4, 2026",
+      "title": "OpenAI reports 948 distinct Linux privilege-escalation findings from an AI research pipeline",
+      "summary": "A November 4 disclosure describes an October scan, automated validation and candidate patches; the results do not mean that every finding is new or already fixed.",
+      "image": {
+        "src": "ai-news/2026-10/images/openai-official-logo-on-dark.svg",
+        "alt": "OpenAI official logo on a dark background.",
+        "caption": "Source: OpenAI. Reused official identity artwork; not a photograph or diagram of the Linux research."
+      },
+      "content": [
+        {
+          "type": "paragraph",
+          "text": "OpenAI published a Linux security research account on November 4 describing a pipeline built around an upcoming cyber model. The underlying scan took place in mid-October, so the new event is the disclosure rather than a scan conducted today. The company reports 948 distinct local privilege-escalation vulnerabilities after analysis of successful exploits and their corresponding patches. Local privilege escalation begins with an existing low-privilege foothold; these results should not be read as hundreds of unauthenticated remote attacks."
+        },
+        {
+          "type": "paragraph",
+          "text": "The pipeline selected approximately 2.8 million lines of security-relevant code, produced 2,308 candidate findings and dynamically reproduced 1,724. Exploitability testing generated 1,169 working privilege-escalation exploits, which variant analysis reduced to the 948 distinct patch targets. OpenAI also reports 291 information-leak proofs of concept. The different totals describe successive stages and different outcomes, rather than interchangeable counts of unique vulnerabilities. The work proceeds through discovery, validation, assessment, patch generation and human review."
+        },
+        {
+          "type": "paragraph",
+          "text": "OpenAI reports $1,213,430 in API credits for the October campaign. That figure is a model-usage cost for the reported workflow, not a complete accounting of researchers, infrastructure or remediation. Nor does a candidate patch establish that a fix has been accepted upstream. The company says maintainers had already fixed or were discussing some findings while the research was in progress. The disclosure does not establish that all 948 were previously unknown, assigned distinct CVEs or resolved by publication."
+        },
+        {
+          "type": "paragraph",
+          "text": "The useful methodological distinction is between a plausible static report and demonstrated security impact. Producing a crash is different from crossing a permission boundary, and crossing a boundary is different from proving which defect caused it. A pipeline that records those stages separately gives maintainers a better basis for prioritisation. It also creates places where human reviewers can reject duplicates, obsolete findings and patches that do not address the underlying cause."
+        },
+        {
+          "type": "paragraph",
+          "text": "The account illustrates a wider evaluation problem for autonomous research: a successful outcome can conceal an incorrect explanation. A system may reach its target through a different route from the one it was asked to test. Independent checks of the causal path therefore matter alongside a pass/fail result. That lesson extends to software repair and scientific workflows, where a convincing final artifact can otherwise obscure whether the intended hypothesis was actually examined."
+        },
+        {
+          "type": "paragraph",
+          "text": "The findings support taking AI-assisted defensive review seriously, while leaving substantial work between discovery and safer deployed systems. Release versions, configurations, patch acceptance and distribution to users all affect exposure. An upcoming research model is also distinct from a generally available product. The next meaningful evidence would include independently assessed findings, accepted fixes and verification against updated code. Those outcomes would show how much of the reported discovery translates into durable security improvement, without relying on a raw exploit count alone."
+        }
+      ],
+      "sources": [
+        {
+          "label": "OpenAI: A thousand fewer paths to root",
+          "url": "https://openai.com/index/a-thousand-fewer-paths-to-root/"
+        }
+      ]
+    },
+    {
+      "slug": "occ-bank-ai-examiner-supervisory-framework",
+      "category": "Industry",
+      "sortDate": "2026-11-04",
+      "dateLabel": "November 4, 2026",
+      "title": "OCC publishes an AI framework for bank examiners, without new bank requirements",
+      "summary": "The November 4 guide focuses on consequences, autonomy and human oversight, while keeping AI within existing risk categories.",
+      "image": {
+        "src": "ai-news/2026-11/images/occ-ai-supervisory-framework-source.png",
+        "alt": "First substantive page of the OCC supervisory framework.",
+        "caption": "Source: OCC, November 4, 2026. Page 1 of the framework, rendered from the official PDF; guidance for examiners, not a new enforceable standard."
+      },
+      "content": [
+        {
+          "type": "paragraph",
+          "text": "The Office of the Comptroller of the Currency issued a supervisory framework on November 4 to help its examiners evaluate banks' use of AI and agentic systems. The accompanying bulletin explicitly says the document does not create new regulatory expectations, enforceable standards or prescriptive requirements for banks. Banks are not expected to use this examiner guide to assess their own AI risk management. Its significance is the publication of a resource for supervisory judgment, rather than a new compliance rulebook."
+        },
+        {
+          "type": "paragraph",
+          "text": "The document uses the official term Super Intelligence, or SI, under the terminology specified by Executive Order 14434. Its definition encompasses technologies previously described as artificial intelligence; the label is not evidence that the agency has identified a new technical threshold of human-level or superhuman capability. The framework addresses normal banking activities such as credit decisions, payments, fraud detection, customer service and operations, including systems that can act through connected tools."
+        },
+        {
+          "type": "paragraph",
+          "text": "The central principle is proportionality to consequences. A system's permission to move money or change a customer record can matter more than how sophisticated its underlying model is. The framework explains that examiners should not treat SI as a separate risk category, and banks are not required to establish a separate SI risk appetite. Relevant effects instead sit within established areas such as operational, compliance and credit risk. The bulletin also calls for examinations tailored to a bank's size, complexity and risk profile."
+        },
+        {
+          "type": "paragraph",
+          "text": "The 22-page PDF presents sixteen components, six organising pillars and an illustrative risk-tiering approach. Its components include defined purpose, human oversight, governance, data and privacy, third-party dependence, cybersecurity, testing, monitoring and auditability. The examples distinguish review before an action from monitoring with authority to intervene. They also discuss systems that remain online while behaving incorrectly, making containment and recovery a different problem from ordinary service availability."
+        },
+        {
+          "type": "paragraph",
+          "text": "That distinction is especially relevant to agents. A service can answer promptly and still use inappropriate permissions or produce an incorrect customer-facing action. Measuring uptime or a model's average benchmark accuracy would not, by itself, describe that risk. The framework's discussion of inventories, version changes, logs, fallback processes and independent challenge connects the model to the larger operating system around it. These are illustrative supervisory considerations whose application depends on the use case, not a uniform checklist newly imposed on every bank."
+        },
+        {
+          "type": "paragraph",
+          "text": "The OCC describes the framework as a living document that it expects to update as technology and supervisory understanding evolve. Publication therefore establishes a current examiner resource with an explicitly limited regulatory status. It does not certify a vendor, approve autonomous banking activity or displace applicable law. Readers assessing its practical effect should track subsequent revisions and how the concepts are used in supervision, while retaining the distinction between this guide's examples and existing legal obligations."
+        }
+      ],
+      "sources": [
+        {
+          "label": "OCC Bulletin 2026-54: scope and regulatory status",
+          "url": "https://occ.gov/news-issuances/bulletins/2026/bulletin-2026-54.html"
+        },
+        {
+          "label": "OCC: official 22-page supervisory framework",
+          "url": "https://occ.gov/news-issuances/news-releases/2026/nr-occ-2026-97a.pdf"
+        },
+        {
+          "label": "OCC News Release 2026-97",
+          "url": "https://www.occ.gov/news-issuances/news-releases/2026/nr-occ-2026-97.html"
+        }
+      ]
+    },
+    {
+      "slug": "epoch-ai-eci-bayesian-methodology-uncertainty",
+      "category": "Research",
+      "sortDate": "2026-11-04",
+      "dateLabel": "November 4, 2026",
+      "title": "Epoch AI updates its capabilities index to model uncertainty jointly",
+      "summary": "A Bayesian revision changes how ECI estimates and comparisons are calculated; revised scores do not mean the underlying AI models improved overnight.",
+      "image": {
+        "src": "ai-news/2026-11/images/epoch-eci-bayesian-official-figure.png",
+        "alt": "Epoch AI figure comparing capability estimates under its previous and Bayesian methods.",
+        "caption": "Source: Emilia Álvarez and Alexander Barry, Epoch AI, November 4, 2026, Creative Commons Attribution. Original research figure; the change compares estimation methods, not new model training."
+      },
+      "content": [
+        {
+          "type": "paragraph",
+          "text": "Epoch AI announced a Bayesian revision of its Epoch Capabilities Index methodology on November 4. The ECI combines benchmark results into a capability estimate for each AI model. The update changes how those estimates are fitted and how uncertainty is represented, rather than introducing a new language model. It is intended to support direct probability-based comparisons between models while preserving the index's general purpose and scale anchors."
+        },
+        {
+          "type": "paragraph",
+          "text": "The method assumes that benchmark performance can be described using one underlying capability dimension, together with each benchmark's difficulty and slope. Scores are normalised relative to random guessing and the maximum achievable result. The Bayesian version estimates these quantities jointly and samples a distribution of plausible values instead of reporting only a best fit. It uses a beta likelihood for bounded scores and learns benchmark-specific noise. Those choices make uncertainty part of the same model used to estimate capability."
+        },
+        {
+          "type": "paragraph",
+          "text": "The report's main dataset was accessed on October 26 and contains 2,810 scores across 252 models and 59 benchmarks. That is the research dataset, not the number of sources in this newsletter's monitoring registry. Its inputs combine independent evaluations, Epoch's own measurements and some historical developer-reported scores. Selection and preprocessing matter: the report requires sufficient benchmark coverage and retains a model's best score where multiple versions are available. These are modelling decisions, not a census of every deployed AI system."
+        },
+        {
+          "type": "paragraph",
+          "text": "Epoch reports that estimates for models at or above an ECI of 125 remain close to the previous fit, while many older, weaker models move down more substantially. The paper also evaluates predictive accuracy and uncertainty using held-out-score approximations. Its reported 90% predictive ranges cover 89.6% of left-out scores in that evaluation. This is a check of the statistical model against benchmark data, not a 90% guarantee that an assistant will succeed at a user's task."
+        },
+        {
+          "type": "figure",
+          "src": "ai-news/2026-11/images/epoch-eci-top-model-intervals.png",
+          "alt": "Epoch AI compares capability estimates and 90% intervals for twenty top-ranked models under its previous and Bayesian methods.",
+          "caption": "Figure 9: Emilia Álvarez and Alexander Barry / Epoch AI, November 4, 2026, Creative Commons Attribution. These are statistical capability-estimate intervals; they are not probabilities of completing a user task."
+        },
+        {
+          "type": "paragraph",
+          "text": "Joint estimation matters because models' uncertainties are related. Two neighbouring estimates can move together when the fitted scale changes, so overlapping individual intervals do not fully describe uncertainty in their difference. The new method can estimate that difference directly. Conversely, a change in a model's ECI after this revision need not reflect new training, a changed product or newly improved behaviour. Comparing archived scores across methodology versions without accounting for the revision could produce a misleading progress story."
+        },
+        {
+          "type": "paragraph",
+          "text": "The underlying simplification remains consequential: a single dimension cannot describe every difference among coding, language, scientific reasoning or agent workflows. Benchmark selection, source quality and evaluation settings still shape the estimate. This publication provides a clearer statistical account of one index, with documented methods and diagnostics, rather than a universal measure of intelligence. For readers tracking progress, the practical gain is a more explicit treatment of uncertainty and comparability. Task-specific evidence and independent replication remain necessary when choosing a system for actual work."
+        }
+      ],
+      "sources": [
+        {
+          "label": "Emilia Álvarez and Alexander Barry: Bayesian ECI methodology",
+          "url": "https://epoch.ai/publications/eci-bayesian-methodology"
+        },
+        {
+          "label": "Epoch AI: capabilities and benchmarking",
+          "url": "https://epoch.ai/topics/capabilities"
+        }
+      ]
+    },
+    {
       "slug": "amd-q3-2026-data-center-revenue-97-percent",
       "category": "Industry",
       "sortDate": "2026-11-03",
