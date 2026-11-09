@@ -2,6 +2,457 @@ window.AI_NEWS_MONTH_DATA["2026-11"] = {
   "label": "November 2026",
   "articles": [
     {
+      "slug": "rba-ai-labour-market-monitoring-early-signals",
+      "category": "Employment / Talent",
+      "sortDate": "2026-11-08",
+      "dateLabel": "November 8, 2026",
+      "title": "RBA research finds limited AI labour-market disruption, with tentative signs among younger workers",
+      "summary": "New Australian monitoring separates potential task exposure from actual AI adoption. Weaker outcomes in exposed occupations remain descriptive evidence, rather than proof of displacement.",
+      "image": {
+        "src": "ai-news/2026-11/images/rba-sarah-hunter-official.jpg",
+        "alt": "Official portrait of Sarah Hunter, the Reserve Bank of Australia’s Assistant Governor for Economic matters.",
+        "caption": "Source: Reserve Bank of Australia. Official portrait of Sarah Hunter, whose speech introduced the new research programme."
+      },
+      "content": [
+        {
+          "type": "paragraph",
+          "text": "The Reserve Bank of Australia released a new assessment of AI’s economic effects for Sarah Hunter’s November 9 speech in Sydney, scheduled at 9:30 a.m. AEDT. That corresponds to 5:30 p.m. on November 8 in New York. The speech and supporting staff research describe little evidence of large aggregate employment effects so far, alongside tentative signs of weaker outcomes for younger workers in more AI-exposed occupations. The Australian publication date therefore remains November 9 while this edition uses the November 8 New York window."
+        },
+        {
+          "type": "paragraph",
+          "text": "The supporting note, by Mike Major, introduces a descriptive monitoring framework for Australia. It links Jobs and Skills Australia’s occupation-level AI-exposure measures to job advertisements, employment, hours and labour-market flows. November 2022, when ChatGPT reached the public, provides a reference point for comparisons. Occupations are grouped by potential exposure to automation based on their tasks. Exposure measures do not show whether an employer has adopted AI, changed a job or dismissed a worker."
+        },
+        {
+          "type": "heading",
+          "text": "Different measures provide different pieces of the picture"
+        },
+        {
+          "type": "paragraph",
+          "text": "The analysis finds suggestive evidence that new job advertisements slowed somewhat more in highly exposed occupations. Employment growth and hours were also a little weaker in those groups. However, job-finding rates and movements from employment into unemployment show little persistent separation across exposure groups. These indicators cannot be collapsed into a single count of jobs lost: advertisements measure demand for potential recruits, employment measures a stock of workers, and transitions capture movement between labour-market states."
+        },
+        {
+          "type": "figure",
+          "src": "ai-news/2026-11/images/rba-ai-job-ads-original.svg",
+          "alt": "RBA’s original chart compares annual growth in SEEK job advertisements for occupations with low, medium and high AI exposure from 2017 to 2026.",
+          "caption": "Source: RBA, Sarah Hunter’s speech dated November 9 in Sydney, released in the November 8 New York window. Potential exposure is not observed AI adoption; the chart is descriptive and does not identify a causal effect."
+        },
+        {
+          "type": "paragraph",
+          "text": "Data timing is another substantial limit. The note identifies February 2026 as the latest complete occupation data, with partial May data also shown. Changes in the Labour Force Survey and the transition between occupation classifications will require revised exposure mappings for more recent observations. The publication is new, but these employment comparisons do not measure developments through this weekend. Its analysis also distinguishes young workers from older workers rather than assuming aggregate conditions describe every career stage equally well."
+        },
+        {
+          "type": "heading",
+          "text": "Early-career weakness has several possible explanations"
+        },
+        {
+          "type": "paragraph",
+          "text": "Major reports weaker outcomes for younger workers within the most exposed occupations, while stressing volatility and broader cyclical changes. Youth employment was unusually strong in the tight 2022 labour market, so subsequent easing is not automatically evidence of AI displacement. Remote-work changes and shifts across sectors can affect the same groups. Potential automation and potential augmentation are also correlated: a task susceptible to AI assistance may create new demand as well as reduce the labour needed for an existing activity."
+        },
+        {
+          "type": "paragraph",
+          "text": "Hunter’s speech places these findings within a wider question about investment, productivity and demand. Faster completion of individual tasks has not yet established a large aggregate productivity gain, and infrastructure spending can affect the economy before those gains emerge. The staff note expresses its author’s analysis rather than a formal position of the Bank’s boards. Together, the releases provide a monitoring baseline and specific areas for further investigation, while leaving the scale, timing and direction of AI’s eventual employment effects uncertain."
+        }
+      ],
+      "sources": [
+        {
+          "label": "RBA — Sarah Hunter’s speech, dated November 9 in Sydney",
+          "url": "https://www.rba.gov.au/speeches/2026/sp-ag-2026-11-09.html"
+        },
+        {
+          "label": "RBA — official calendar and 9:30 a.m. AEDT timing",
+          "url": "https://www.rba.gov.au/schedules-events/calendar/"
+        },
+        {
+          "label": "Mike Major — Monitoring Early Effects of AI on the Labour Market",
+          "url": "https://www.rba.gov.au/publications/insights/australian-economy/2026/monitoring-early-effects-of-ai-on-the-labour-market.html"
+        }
+      ]
+    },
+    {
+      "slug": "tencent-dspine-qwen38-27b-draft-checkpoint",
+      "category": "Industry",
+      "sortDate": "2026-11-07",
+      "dateLabel": "November 7, 2026",
+      "title": "Tencent releases a DSpine draft model to accelerate Qwen3.8-27B inference",
+      "summary": "The new checkpoint proposes 16-token blocks for verification by the target model. Reported throughput gains come from concurrent replay tests, with specific runtime settings.",
+      "image": {
+        "src": "ai-news/2026-11/images/tencent-official-hf-logo.png",
+        "alt": "Tencent’s official logo from its verified model-publishing account.",
+        "caption": "Source: Tencent’s verified Hugging Face organisation. Official identity artwork; the DSpine method diagram appears below."
+      },
+      "content": [
+        {
+          "type": "paragraph",
+          "text": "Tencent published a DSpine draft checkpoint for Qwen3.8-27B on November 7. Hugging Face history records its initial file upload at 14:33 UTC, or 9:33 a.m. in New York. The Apache 2.0 release adds a roughly two-billion-parameter auxiliary model used alongside the larger target. It is an inference component that proposes tokens for Qwen to verify, rather than a replacement 27-billion-parameter assistant or a new release of Qwen itself."
+        },
+        {
+          "type": "paragraph",
+          "text": "The underlying DSpine paper first appeared on September 28 and was revised on October 10. Its contribution is a way to make parallel draft positions more consistent: at each network layer, each position receives features describing its immediate predecessor’s current prediction. This carries causal information through depth while processing positions in parallel. The new checkpoint has five layers, drafts blocks of 16 tokens and uses an 8,192-token sliding window within the drafter."
+        },
+        {
+          "type": "figure",
+          "src": "ai-news/2026-11/images/dspine-original-overview.jpg",
+          "alt": "The DSpine authors’ architecture figure shows predecessor-feature injection through layers and transition-cached conditional decoding.",
+          "caption": "Source: DSpine authors. Original architecture figure for the method; the November 7 milestone is a new Qwen3.8-27B draft checkpoint, not the initial paper."
+        },
+        {
+          "type": "heading",
+          "text": "Accepted tokens and serving throughput measure different things"
+        },
+        {
+          "type": "paragraph",
+          "text": "Speculative decoding saves work when a target model can verify several proposed tokens together and accept a long prefix. Better acceptance does not automatically mean a faster service: the drafter also takes time, and verification, batching and memory traffic matter. The model card therefore reports both acceptance length and throughput. On greedy GSM8K generations, for example, it reports acceptance length of 7.20 against 5.69 for its DFlash2 comparison. Those figures measure tokens advanced per verification round, including a correction or extra target token, rather than mathematical-answer accuracy."
+        },
+        {
+          "type": "paragraph",
+          "text": "The agent-serving tests use SGLang 0.5.22, BF16, FlashAttention 3 and concurrency eight, with recorded tool-decision prefixes replayed in order and prefix caching enabled. Each subset uses 20 conversations. Across the reported low- and xhigh-effort conditions, DSpine throughput ranges from 2.71 to 3.84 times the autoregressive baseline. The comparison also uses different draft block sizes: 16 for DSpine and eight for DFlash2. Dynamic verification and ReplaySSM are enabled for DSpine."
+        },
+        {
+          "type": "heading",
+          "text": "The benchmark is a deployment configuration, not a universal speed promise"
+        },
+        {
+          "type": "paragraph",
+          "text": "Throughput here means total output tokens divided by the wall time of the concurrent replay. It is not a claim that every individual user receives the listed tokens per second, nor that an entire coding task finishes that many times faster. Replaying known prefixes also differs from a live agent choosing tools, waiting for their results and changing its plan. The release card does not specify the accelerator hardware for this checkpoint’s serving table, which limits comparisons with another team’s infrastructure."
+        },
+        {
+          "type": "paragraph",
+          "text": "Developers can inspect the weights and reproduce the provided serving configuration, then measure latency, throughput and memory use under their own workloads. The target model remains necessary, and gains may change with concurrency, output length, sampling and cache behaviour. The September–October paper supplies the method’s earlier evidence; the November release supplies a new target-specific checkpoint and separate evaluation. Keeping those milestones distinct makes the practical change clear without presenting an older research result as a new discovery."
+        }
+      ],
+      "sources": [
+        {
+          "label": "Tencent — released checkpoint, evaluation and serving configuration",
+          "url": "https://huggingface.co/tencent/Qwen3.8-27B-DSpine-b16"
+        },
+        {
+          "label": "Tencent — file upload and revision history",
+          "url": "https://huggingface.co/tencent/Qwen3.8-27B-DSpine-b16/commits/main"
+        },
+        {
+          "label": "DSpine authors — reviewed October 10 paper version",
+          "url": "https://arxiv.org/html/2609.36173v2"
+        },
+        {
+          "label": "Tencent — source code",
+          "url": "https://github.com/Tencent/DSpine"
+        }
+      ]
+    },
+    {
+      "slug": "openai-ligo-biobasicsbench-raw-wet-lab-evidence",
+      "category": "Research",
+      "sortDate": "2026-11-06",
+      "dateLabel": "November 6, 2026",
+      "title": "OpenAI and Ligo introduce a benchmark for interpreting everyday wet-lab evidence",
+      "summary": "BioBasicsBench tests 100 routine laboratory tasks. The reported gains leave substantial errors in reading controls, images and experimental context.",
+      "image": {
+        "src": "ai-news/2026-10/images/openai-official-logo-on-dark.svg",
+        "alt": "OpenAI’s official logo on a dark background.",
+        "caption": "Source: OpenAI. Official identity artwork; this is not an image of a laboratory experiment."
+      },
+      "content": [
+        {
+          "type": "paragraph",
+          "text": "OpenAI and enzyme-design company Ligo introduced BioBasicsBench on November 6, a benchmark built around 100 routine wet-lab analysis tasks. Its inputs include experimental images, instrument exports and bench videos. The focus is the untidy evidence scientists encounter while doing experiments, including evidence that should prevent a confident conclusion. OpenAI reports that GPT-6 Astra earned 66.7% of the available credit at its xhigh reasoning setting, against 43.8% for GPT-5.6 Sol."
+        },
+        {
+          "type": "paragraph",
+          "text": "That 22.9-percentage-point difference is a gain in average rubric credit. It does not mean Astra completed two-thirds of experiments successfully, or that the remaining third were its only mistakes. A partially correct response can earn credit on some criteria while missing a consequential detail. For a scientist deciding which colonies to grow or whether an assay worked, the location of an error can matter more than the average across unrelated questions."
+        },
+        {
+          "type": "heading",
+          "text": "Raw evidence makes the evaluation harder to shortcut"
+        },
+        {
+          "type": "paragraph",
+          "text": "Scientists supplied tasks from their own experiments across five laboratory domains. Each task received a separate internal Ligo review, an external review by a PhD-level wet-lab scientist, and a final internal review. Agents returned structured conclusions, measurements or recommendations, with supporting reasoning where requested. OpenAI tested seven models across 37 model-and-effort settings, taking five attempts per task: 18,500 results in total. Its confidence intervals resample whole tasks while keeping each task’s five attempts together."
+        },
+        {
+          "type": "paragraph",
+          "text": "Keeping those attempts together is useful because repeating the same question does not create five independent scientific problems. A benchmark built from a small set of easy gels could otherwise look more representative simply by running them repeatedly. Here, the task remains the unit of uncertainty. The reported intervals describe performance on the benchmark’s mixture of tasks; they do not establish the model’s error rate across every laboratory, instrument, organism or unfamiliar protocol."
+        },
+        {
+          "type": "heading",
+          "text": "Correct observations can still lead to the wrong decision"
+        },
+        {
+          "type": "paragraph",
+          "text": "The release illustrates both improvement and failure. Astra noticed a wrongly labelled antibiotic control that an earlier model accepted. In another cloning task, however, it visually separated two groups of PCR bands but reversed their experimental interpretation, selecting the wrong colonies. An additional counting example produced an approximately 12% overcount relative to the reference. These are different failure modes: seeing a feature, connecting it to a control, and making a final experimental decision each require scrutiny."
+        },
+        {
+          "type": "paragraph",
+          "text": "The examples make the benchmark useful as a diagnostic target rather than a licence to delegate unsupervised laboratory judgments. A better average can coexist with a specific, costly mistake. Comparing systems therefore calls for the same inputs, grading rules and effort settings, followed by inspection of the decisions that fail. This release reports an evaluation of data interpretation; it does not demonstrate that an agent can safely plan, execute and validate an entire biological research programme. The results also leave open how reliably improvements transfer to experiments outside the test set."
+        }
+      ],
+      "sources": [
+        {
+          "label": "OpenAI — November 6 benchmark, construction, results and failure examples",
+          "url": "https://openai.com/index/measuring-how-ai-agents-handle-wet-lab-science/"
+        },
+        {
+          "label": "OpenAI — official BioBasicsBench announcement",
+          "url": "https://x.com/OpenAI/status/2118782708767965238"
+        }
+      ]
+    },
+    {
+      "slug": "nous-arete-27b-value-finetune-open-weights",
+      "category": "Industry",
+      "sortDate": "2026-11-06",
+      "dateLabel": "November 6, 2026",
+      "title": "Nous releases Arete-27B, an open-weight Qwen fine-tune with an explicit values objective",
+      "summary": "The Apache 2.0 checkpoint changes answers on a developer-built political-framing evaluation. Its scores depend on the chosen questions, sources and judge.",
+      "image": {
+        "src": "ai-news/2026-11/images/nous-arete-official-ridge.webp",
+        "alt": "Nous Research’s official Arete release artwork depicts a sharp mountain ridge.",
+        "caption": "Source: Nous Research. Official release artwork, used as illustration of the model’s name; not benchmark evidence."
+      },
+      "content": [
+        {
+          "type": "paragraph",
+          "text": "Nous Research released Arete-27B on November 6, publishing a 27-billion-parameter model fine-tuned from Alibaba’s Qwen3.8-27B. The weights are listed under Apache 2.0, alongside a held-out evaluation and training-data release. Nous describes its objective as reinforcing Western values and changing refusals, deflections and Chinese-state framing on sensitive topics. That is an explicit developer preference, rather than evidence that the resulting model has become politically neutral."
+        },
+        {
+          "type": "paragraph",
+          "text": "The project makes a useful distinction between recalling specified facts and adopting a particular framing. Its evaluation contains 803 prompts across seven categories, including freedom of expression, democracy, surveillance and environmental policy. Each prompt pairs a source article with two to four required facts. A Grok 4.7 judge checks whether an answer states, misses or contradicts those facts and whether it adopts the state’s account. The judge is not told which model supplied the answer."
+        },
+        {
+          "type": "heading",
+          "text": "A relatively small post-training intervention"
+        },
+        {
+          "type": "paragraph",
+          "text": "Nous used supervised fine-tuning, with Inkling providing teacher responses, rather than reinforcement learning or preference optimisation. The model card reports about 52.8 million training tokens over two epochs and 1,202 steps, with 64K training context. Language-model weights were trained; the vision encoder stayed frozen because the examples were text-only. Training prompts overlapping the evaluation were removed. These details make the release a concrete experiment in changing model behaviour after pretraining, with downloadable materials for further tests."
+        },
+        {
+          "type": "paragraph",
+          "text": "In the reported thinking-off comparison, the fact score rises from 2.32 to 2.98 out of five, while the share of answers the rubric classifies as containing propaganda falls from 22% to 0.9%. The headline comparison uses temperature zero; the release also discloses results at temperature 0.6 and marks its thinking-on row as provisional. Its separate capability checks report broadly similar results to the starting checkpoint, with inference and harness differences qualifying comparisons with published scores."
+        },
+        {
+          "type": "heading",
+          "text": "The evaluation’s definition matters as much as its score"
+        },
+        {
+          "type": "paragraph",
+          "text": "The fact score is not an ordinary percentage-correct measure. A single fact marked as contradicted gives that answer zero even if other facts are present. The framing measure also rests on the developers’ selection of questions, source material and definitions. Nous calibrated its judge against a 25-prompt human-graded pilot and revised the rubric. Publishing that rubric helps other researchers inspect its judgments, but neither judge agreement nor a large reduction on this test establishes reliability on every political, cultural or historical question."
+        },
+        {
+          "type": "paragraph",
+          "text": "For a team considering the weights, the useful next comparison is whether the changed behaviour matches its own users and requirements while preserving performance on its actual tasks. The released evaluation can expose specific differences; it cannot substitute for broader testing in other languages and viewpoints. Nor does text-only fine-tuning establish how multimodal behaviour changed. Arete’s contribution is a reproducible route for studying how post-training alters a model’s expressed values, together with a clear account of whose preferences the intervention was designed to serve."
+        }
+      ],
+      "sources": [
+        {
+          "label": "Nous Research — training, evaluation design and results",
+          "url": "https://nousresearch.com/arete"
+        },
+        {
+          "label": "Nous Research — Arete-27B model card and Apache 2.0 weights",
+          "url": "https://huggingface.co/NousResearch/Arete-27B"
+        },
+        {
+          "label": "Nous Research — release history",
+          "url": "https://huggingface.co/NousResearch/Arete-27B/commits/main"
+        },
+        {
+          "label": "Nous Research — held-out evaluation",
+          "url": "https://huggingface.co/datasets/NousResearch/Propaganda_Eval"
+        }
+      ]
+    },
+    {
+      "slug": "anthropic-agent-memory-dreaming-evaluation",
+      "category": "Research",
+      "sortDate": "2026-11-06",
+      "dateLabel": "November 6, 2026",
+      "title": "Anthropic tests how agents revise memories between sessions",
+      "summary": "New engineering experiments separate saved notes, linked wikis and injected context. Benefits depend on the model, task and how memories are maintained.",
+      "image": {
+        "src": "ai-news/2026-11/images/anthropic-agent-memory-official-cover.jpg",
+        "alt": "Anthropic’s source illustration shows two patterned half circles facing each other.",
+        "caption": "Source: Anthropic, November 6, 2026. Official illustration for its agent-memory report; not a depiction of a biological memory system."
+      },
+      "content": [
+        {
+          "type": "paragraph",
+          "text": "Anthropic published new agent-memory experiments on November 6, examining how Claude can preserve useful knowledge across sessions and revise it during idle time. The report distinguishes transcripts, saved notes, linked knowledge representations and a small amount of context loaded into each new session. Its term dreaming refers to additional agent work over stored material. It does not describe a change to model weights or demonstrate that an artificial system sleeps or remembers in the biological sense."
+        },
+        {
+          "type": "paragraph",
+          "text": "The central engineering problem is that writing a note makes a prediction about what a future session will need. Saving everything increases retrieval costs and preserves stale details. Saving too little loses lessons that would be expensive to rediscover. Revisiting transcripts gives an agent an opportunity to check whether its earlier summary was accurate, update a plan, or replace scattered notes with a more useful index. The extra processing itself consumes resources, so the relevant question is what it improves."
+        },
+        {
+          "type": "heading",
+          "text": "Memory helps differently across models and tasks"
+        },
+        {
+          "type": "paragraph",
+          "text": "On one CL-Bench 1.0 database task, each question began in a fresh session with access to a persistent memory directory. Anthropic reports mean reward of 0.838 for Opus 5.5 with memory, compared with a stateless baseline of 0.655. Older models were less consistent about reading notes or testing their guesses. The report also examines Pokémon runs, but its comparison of memory-directory organisation uses one run from each of two models. Those examples illustrate behaviour rather than a broad estimate of game-playing reliability."
+        },
+        {
+          "type": "figure",
+          "src": "ai-news/2026-11/images/anthropic-memory-clbench-original.png",
+          "alt": "Anthropic’s original figure compares database-task mean reward with and without memory for six Claude models, alongside reward over sequential questions.",
+          "caption": "Source: Anthropic. Results concern the CL-Bench database task and the report’s agent setup; they are not a general measure of every model’s learning ability."
+        },
+        {
+          "type": "paragraph",
+          "text": "A separate experiment used about 350,000 internal Stainless files and 25 evaluation questions. Opus 5 agents incrementally built a linked wiki over as many as 128 sessions. The combination of search and the larger wiki reached 61% of graded criteria, versus 53% with search alone; wiki-only answers reached 48%. These comparisons distinguish a representation that helps retrieval from one that can replace the underlying documents. The search-plus-wiki setup also used fewer tokens per question, though building and maintaining the wiki has its own upfront cost."
+        },
+        {
+          "type": "heading",
+          "text": "A persistent mistake can become a persistent instruction"
+        },
+        {
+          "type": "paragraph",
+          "text": "The report includes counterexamples. A wiki gave no clear gain on a legal task whose answers were mostly available in one document. Another grew larger than the source corpus. In a shared-writing example, concurrent edits lost contract facts until agents used separate pages and copied the relevant terms precisely. These failures show why compressing or organising information must be evaluated against the source: a tidy memory store can still omit the detail needed for a later decision."
+        },
+        {
+          "type": "paragraph",
+          "text": "For developers, the experiments support testing memory as part of the whole agent workflow. Useful checks include whether a saved claim retains its source, whether corrections replace older versions, and whether simultaneous writers can overwrite each other. Performance should be measured on future tasks as well as the cost of creating the store. Anthropic’s report provides new engineering evidence about these trade-offs; it is not an announcement that one memory configuration is generally reliable across applications or that more offline processing always improves an agent."
+        }
+      ],
+      "sources": [
+        {
+          "label": "Anthropic — November 6 report, methods, figures and limitations",
+          "url": "https://www.anthropic.com/research/components-of-agent-memory"
+        },
+        {
+          "label": "CL-Bench — benchmark context",
+          "url": "https://continual-learning-bench.com/news/cl-bench-1-0/"
+        }
+      ]
+    },
+    {
+      "slug": "john-langford-ai-frontiers-microsoft-reorganisation-account",
+      "category": "Employment / Talent",
+      "sortDate": "2026-11-06",
+      "dateLabel": "November 6, 2026",
+      "title": "John Langford reports leaving Microsoft after AI Frontiers’ reorganisation",
+      "summary": "The researcher’s new account describes a September move into Microsoft AI and a disagreement over research priorities. It does not establish a new round of layoffs.",
+      "image": {
+        "src": "ai-news/2026-10/images/microsoft-official-wordmark.png",
+        "alt": "Microsoft’s official four-colour symbol and wordmark.",
+        "caption": "Source: Microsoft. Official corporate identity artwork; not a photograph of the AI Frontiers team."
+      },
+      "content": [
+        {
+          "type": "paragraph",
+          "text": "Researcher John Langford disclosed on November 6 that he had left Microsoft after the AI Frontiers group he helped organise was moved into Microsoft AI. His post, updated on November 7, places that reorganisation in early September and describes the group as roughly 50 people. The news is his public account of the move and departure. It should not be read as evidence that Microsoft eliminated 50 jobs on the publication date."
+        },
+        {
+          "type": "paragraph",
+          "text": "Langford says the group was created within Microsoft Research in 2023 to support more coordinated AI research. He points to work on agents and model-training methods, and describes shared infrastructure intended to make ideas easier to test and develop. In his account, the move into Microsoft AI brought a disagreement over priorities: he wanted room for fundamental research, while he considered the receiving organisation’s approach too focused on scaling existing methods. That characterisation is his assessment of the experience."
+        },
+        {
+          "type": "heading",
+          "text": "A researcher’s departure and an organisation’s status are different facts"
+        },
+        {
+          "type": "paragraph",
+          "text": "Microsoft’s own AI Frontiers page confirms the earlier organisational transition in an update dated September 14. It says the lab is now part of Microsoft AI and describes a continuing goal of frontier research on models and agents. That statement provides the company’s published account of the move, alongside Langford’s later criticism of how it worked in practice. It is not a dated employment register and cannot resolve the current status of every member of the roughly 50-person group."
+        },
+        {
+          "type": "paragraph",
+          "text": "Langford writes that he tried to place his colleagues appropriately before leaving and believes other founding leaders reached similar conclusions. He also says internships with those researchers will not be available in the coming year. The post does not supply a roster or an aggregate count of employees dismissed. It does not announce a destination for the departing team. Those limits matter to prospective applicants: a warning about one research group’s internship plans should not be expanded into a claim that all Microsoft Research internships have ended."
+        },
+        {
+          "type": "heading",
+          "text": "The account raises a concrete question about research organisation"
+        },
+        {
+          "type": "paragraph",
+          "text": "The disagreement concerns how a company turns exploratory ideas into usable systems. Fundamental changes to architectures or training methods need credible baselines, compute and enough coordinated engineering to demonstrate an advantage. Product organisations also need predictable delivery and operating performance. Langford argues that the reorganisation weakened the route from his research to deployment. His account makes that tension visible, while leaving open how Microsoft’s leadership would describe the same decisions and how the affected research programmes will continue."
+        },
+        {
+          "type": "paragraph",
+          "text": "For researchers tracking talent moves, the useful record therefore keeps three dates and statuses apart: the September organisational change, the subsequently disclosed departure, and the November publication of the account. Further confirmation would come from dated employer announcements, researchers’ own new affiliations, or specific programme changes. Until then, this is a consequential first-person report about the direction of an established AI research group, with a narrower evidentiary scope than a company-confirmed closure or a quantified workforce reduction."
+        }
+      ],
+      "sources": [
+        {
+          "label": "John Langford — first-person account and publication/update dates",
+          "url": "https://hunch.net/?p=13764006"
+        },
+        {
+          "label": "Microsoft Research — AI Frontiers programme and research scope",
+          "url": "https://www.microsoft.com/en-us/research/lab/ai-frontiers/"
+        }
+      ]
+    },
+    {
+      "slug": "ai2-toyblocks-controlled-robot-learning-release",
+      "category": "Research",
+      "sortDate": "2026-11-06",
+      "dateLabel": "November 6, 2026",
+      "title": "Ai2 releases ToyBlocks to study where robot learning succeeds and fails",
+      "summary": "The open tabletop simulation links automatic demonstrations, model training and evaluation. Early physical-robot tests remain limited to a constrained block-manipulation setting.",
+      "image": {
+        "src": "ai-news/2026-11/images/ai2-toyblocks-physical-robot-original.jpg",
+        "alt": "Ai2’s physical ToyBlocks setup shows a robot arm, lettered wooden blocks and cameras on a tabletop.",
+        "caption": "Source: Ai2’s November 6 ToyBlocks release. Original photograph of the physical test setup, distinct from the simulation."
+      },
+      "content": [
+        {
+          "type": "paragraph",
+          "text": "The Allen Institute for AI introduced ToyBlocks on November 6, an open framework for studying robot learning in a controlled tabletop world. Researchers can generate block-manipulation tasks and demonstrations automatically, train models, and test which changes help them generalise. Ai2 calls it the first of its FoundationWorlds: deliberately narrow environments where a team can vary conditions and investigate a failure, rather than rely on a polished demonstration of one successful task."
+        },
+        {
+          "type": "paragraph",
+          "text": "ToyBlocks combines reinforcement-learned short skills with task-and-motion planning. Skills include pushing, rotating and flipping blocks; the planner sequences them into longer demonstrations. During data generation, the simulator can reveal exact positions and orientations. Models evaluated from camera observations must instead solve the perception problem themselves. Keeping those conditions separate prevents a system with access to privileged simulation state from being mistaken for a robot that can infer the same information from an image."
+        },
+        {
+          "type": "heading",
+          "text": "Open tools make controlled comparisons possible"
+        },
+        {
+          "type": "paragraph",
+          "text": "The announced framework provides simulation assets, procedural task and demonstration generators, recorded demonstrations, training and evaluation code, and example trained models. The Molmo checkpoint’s file history predates the announcement, with its main upload on November 5. The announcement reports 85,336 long-horizon demonstrations; the released data card instead totals 83,496 across its listed splits, with about 1,600 hours and 144 million frames. These counts should be kept separate pending clarification. Fully integrated reinforcement-learning training is described as a future addition, so the current package should not be presented as already containing every planned capability. The available tools let other researchers create different mixtures of experiences and hold particular tasks out of training."
+        },
+        {
+          "type": "paragraph",
+          "text": "That control enables sharper tests of spatial generalisation. A researcher can distinguish a new arrangement inside a familiar workspace from a task outside the region seen during training. They can also vary visible letters, block counts or required skill sequences. Reference planners and execution components help isolate whether a failure came from choosing the wrong action or carrying out a reasonable action poorly. These are different engineering problems even when both produce the same failed stack."
+        },
+        {
+          "type": "heading",
+          "text": "The physical trials are a test case, not a general deployment result"
+        },
+        {
+          "type": "paragraph",
+          "text": "Ai2 also tested a hierarchical system using Molmo 2 for high-level decisions and ManiFlow for low-level actions on a Franka FR3 arm with a Robotiq gripper. The block-spelling system succeeded in 15 of 30 physical episodes, compared with 111 of 200 simulated episodes. The comparison used the easiest scene configuration, with characters visible and upright. A safety intervention counted as a failure. These results show a transfer experiment under defined conditions, with more trials needed to establish confidence across tasks."
+        },
+        {
+          "type": "figure",
+          "src": "ai-news/2026-11/images/ai2-toyblocks-sim-real-original.png",
+          "alt": "Ai2’s original figure compares simulation and real-world performance for individual ManiFlow skills and the hierarchical block-spelling system.",
+          "caption": "Source: Ai2. Atomic-skill counts and complete block-spelling episode counts use different denominators. The hierarchical physical test has 30 episodes in the easiest scene setting."
+        },
+        {
+          "type": "paragraph",
+          "text": "The initial success rates leave substantial room for mistakes, and a small tabletop domain cannot establish reliable operation around arbitrary objects or people. Its research value is the ability to reproduce a problem and change one part of the system at a time. A team can test whether extra demonstrations improve an unfamiliar workspace, whether a planner misreads a letter, or whether execution breaks after a correct plan. ToyBlocks makes those questions easier to study with shared tools while keeping the limits of the environment visible."
+        }
+      ],
+      "sources": [
+        {
+          "label": "Ai2 — November 6 release, experiments and release scope",
+          "url": "https://allenai.org/blog/toyblocks"
+        },
+        {
+          "label": "ToyBlocks — project and code",
+          "url": "https://allenai.github.io/ToyBlocks/"
+        },
+        {
+          "label": "Ai2 — released demonstration data",
+          "url": "https://huggingface.co/datasets/allenai/toyblocks-data"
+        },
+        {
+          "label": "Ai2 — Molmo2-4B-tb model card",
+          "url": "https://huggingface.co/allenai/Molmo2-4B-tb"
+        }
+      ]
+    },
+    {
       "slug": "openai-gpt-6-cyber-restricted-daybreak-red-release",
       "category": "Industry",
       "sortDate": "2026-11-05",
