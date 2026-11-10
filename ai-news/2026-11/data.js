@@ -2,6 +2,434 @@ window.AI_NEWS_MONTH_DATA["2026-11"] = {
   "label": "November 2026",
   "articles": [
     {
+      "slug": "weekly-ai-november-2-8",
+      "category": "AI Weekly",
+      "sortDate": "2026-11-09",
+      "dateLabel": "November 2–8, 2026",
+      "title": "AI Weekly: Model access broadens as research acceleration faces scrutiny",
+      "summary": "November 2–8: GPT-6 Cyber, specialised Muse and Meta AI models, Kimi K3.1 Pro weights, Inkling 2 Small and METR’s assessment of AI research acceleration.",
+      "image": {
+        "src": "ai-news/2026-11/images/inkling-2-small-official-release.png",
+        "alt": "Thinking Machines Lab’s official release artwork for Inkling 2 Small.",
+        "caption": "Source: Thinking Machines Lab’s November 5 announcement. Official release artwork, separate from the generated Weekly poster."
+      },
+      "content": [
+        {
+          "type": "paragraph",
+          "text": "AI Weekly covers November 2–8, 2026, the completed Monday–Sunday week. New routes to model access sit alongside a closer examination of what faster AI research progress does—and does not—establish."
+        },
+        {
+          "type": "figure",
+          "src": "ai-news/2026-11/images/ai-weekly-november-2-8-poster.png",
+          "alt": "AI Weekly poster for November 2–8, 2026: GPT-6 Cyber, specialised Muse and Meta AI models, Kimi K3.1 Pro weights, Inkling 2 Small and METR’s AI R&D assessment.",
+          "caption": "UGA LLM Lab · AI Weekly · November 2–8, 2026. Generated editorial illustrations; model access, planned releases and reported measurements retain their stated limits."
+        },
+        {
+          "type": "heading",
+          "text": "1. GPT-6 Cyber adds a restricted security-research option"
+        },
+        {
+          "type": "paragraph",
+          "text": "OpenAI introduced GPT-6 Cyber on November 5 for authorised vulnerability research, with access restricted through Daybreak Red. The system card describes identity checks and organisational controls, including single sign-on, multi-factor authentication and API IP allowlisting. The model is a cybersecurity-specialised version of GPT-6 Astra. Its release expands the capabilities available to approved security researchers; it does not make those capabilities generally available to every ChatGPT or API user."
+        },
+        {
+          "type": "paragraph",
+          "text": "The developer reports improved vulnerability work and stronger adherence to task boundaries under its evaluation conditions. Access controls, monitoring and the permissions of a connected environment remain consequential parts of deployment. A successful controlled test is different from assurance that a model will respect every real-world boundary. The earlier November 4 Linux research report and this November 5 model-access announcement also remain separate milestones: the same campaign results should not be counted as a second newly discovered set of vulnerabilities."
+        },
+        {
+          "type": "heading",
+          "text": "2. Meta brings specialised models to Muse and Meta AI"
+        },
+        {
+          "type": "paragraph",
+          "text": "Meta announced on November 6 that specialised versions of its existing models, trained using Muse Wonder, were rolling out to Muse and Meta AI. The company is extending Active Memory and Active Focus features intended to retain relevant information and persist through obstacles. This is a distribution milestone for capabilities developed with a larger model. It is distinct from releasing a new Muse Wonder generation or publishing downloadable model weights."
+        },
+        {
+          "type": "paragraph",
+          "text": "Meta reports improvements on its own memory and task evaluations. Those results describe selected tests rather than independent measurements of everyday reliability. The same week also brought separate Muse voice and Spaces announcements, which have their own dates and availability limits. Broader access creates an opportunity to test whether remembered information stays accurate and whether background work follows a user’s changing instructions. The November 9 Muse Ember launch belongs to the following week and is outside this roundup."
+        },
+        {
+          "type": "heading",
+          "text": "3. Moonshot announces Kimi K3.1 Pro weights"
+        },
+        {
+          "type": "paragraph",
+          "text": "Moonshot announced the availability of Kimi K3.1 Pro’s model weights on November 4, following the model’s October launch. Its official repository describes a multimodal mixture-of-experts model with 2.8 trillion total parameters, 104 billion active parameters and a context window of roughly one million tokens. The repository has earlier file history, so the public announcement date should not be mistaken for the creation date of every uploaded file. The new weekly milestone is downloadable weights rather than the original hosted-model introduction."
+        },
+        {
+          "type": "paragraph",
+          "text": "The release uses a custom Kimi licence with conditions for certain commercial uses, including model-as-a-service businesses above a specified revenue threshold. It is therefore important to read the actual terms rather than infer an Apache-style licence from the availability of files. The model’s scale also makes self-hosting a substantial infrastructure task. Weight access permits inspection and deployment under the stated terms, while the developer’s benchmark results remain specific to their models, reasoning settings and evaluation harnesses."
+        },
+        {
+          "type": "heading",
+          "text": "4. Inkling 2 Small arrives on Tinker ahead of its planned weight release"
+        },
+        {
+          "type": "paragraph",
+          "text": "Thinking Machines Lab introduced Inkling 2 Small on November 5, with inference and fine-tuning available through Tinker. The model card describes 594 billion total parameters and 17 billion active parameters, with text and image inputs and text output. The launch initially uses closed weights. The company said it intended to release the full weights under Apache 2.0 the following week after external safety testing and red-teaming; that was a plan during this reporting week, not a completed download milestone."
+        },
+        {
+          "type": "paragraph",
+          "text": "The announcement reports improvements in coding, visual work and other tasks, while its limitations include tool-selection problems and a less polished chat experience. Available API fine-tuning and downloadable checkpoints are different forms of access: the company says checkpoint downloads follow the weight release. For developers, the immediate change is an additional hosted training and inference option. The practical comparison remains the quality and cost of accepted work under the same task conditions, rather than parameter count or one aggregate leaderboard score."
+        },
+        {
+          "type": "heading",
+          "text": "5. METR publishes an assessment of faster AI R&D progress at Anthropic"
+        },
+        {
+          "type": "paragraph",
+          "text": "METR published its independent assessment on November 5 after reviewing Anthropic’s internal research evidence from August 12 to October 29. Its empirical estimate puts growth in Anthropic’s internal benchmark index at 1.9 times the earlier rate, with a 95% confidence interval of 1.5–2.8 times. Its broader judgment that AI contributes substantially to acceleration remains uncertain. The measured rate of benchmark progress is different from an experimentally identified multiplier for company-wide productivity."
+        },
+        {
+          "type": "paragraph",
+          "text": "Anthropic redacted much of the evidence METR considered most informative, limiting outside scrutiny. Benchmark composition, the historical comparison and non-AI changes in research organisation can also affect the interpretation. The report makes acceleration a question that can be examined with data, while leaving important attribution and external-validity questions open. It does not establish that every laboratory is accelerating at the same rate or that observed progress will continue without bottlenecks. Those questions require additional evidence and comparable assessments."
+        }
+      ],
+      "sources": [
+        {
+          "label": "GPT-6 Cyber adds a restricted security-research option",
+          "url": "https://openai.com/index/introducing-gpt-6-cyber/"
+        },
+        {
+          "label": "Meta brings specialised models to Muse and Meta AI",
+          "url": "https://research.meta.ai/blog/specialized-models-for-muse-and-metaai"
+        },
+        {
+          "label": "Moonshot announces Kimi K3.1 Pro weights",
+          "url": "https://huggingface.co/moonshotai/Kimi-K3.1-Pro"
+        },
+        {
+          "label": "Inkling 2 Small arrives on Tinker ahead of its planned weight release",
+          "url": "https://thinkingmachines.ai/news/inkling-2-small/"
+        },
+        {
+          "label": "METR publishes an assessment of faster AI R&D progress at Anthropic",
+          "url": "https://metr.org/blog/2026-11-05-anthropic-ai-rd-acceleration-assessment/"
+        },
+        {
+          "label": "OpenAI — GPT-6 Cyber system card and access controls",
+          "url": "https://deploymentsafety.openai.com/gpt-6-cyber"
+        },
+        {
+          "label": "Moonshot — exact distributed weight licence",
+          "url": "https://huggingface.co/moonshotai/Kimi-K3.1-Pro/blob/main/LICENSE"
+        },
+        {
+          "label": "Moonshot — November 4 public weight announcement",
+          "url": "https://x.com/Kimi_Moonshot/status/2118010528123773297"
+        },
+        {
+          "label": "Thinking Machines — Inkling 2 Small model card",
+          "url": "https://thinkingmachines.ai/model-card/inkling-2-small/"
+        }
+      ]
+    },
+    {
+      "slug": "anthropic-fable-mythos-52-model-access",
+      "category": "Industry",
+      "sortDate": "2026-11-09",
+      "dateLabel": "November 9, 2026",
+      "title": "Anthropic introduces Fable 5.2 and Mythos 5.2 with different access safeguards",
+      "summary": "The models share an underlying system, with broader Fable access and verification requirements for Mythos. New pricing and technical demonstrations come with important evaluation limits.",
+      "image": {
+        "src": "ai-news/2026-11/images/anthropic-fable-mythos-52-official.jpg",
+        "alt": "Anthropic’s official artwork for Claude Fable 5.2 and Claude Mythos 5.2.",
+        "caption": "Source: Anthropic’s November 9 model announcement. Official release artwork."
+      },
+      "content": [
+        {
+          "type": "paragraph",
+          "text": "Anthropic introduced Claude Fable 5.2 and Claude Mythos 5.2 on November 9, updating models intended for demanding technical work. They share an underlying model, but Fable adds cybersecurity and biology safeguards that allow wider distribution. Organisations seeking Mythos for authorised security or biomedical work must apply through the company’s verification programmes. The distinction matters for anyone reading the performance claims: results obtained with Mythos do not establish that an ordinary Fable user can perform the same restricted tasks."
+        },
+        {
+          "type": "paragraph",
+          "text": "Standard API pricing is $8 per million input tokens and $40 per million output tokens. An optional fast mode costs $16 and $80, respectively. Anthropic reports token generation up to 30% faster than the previous generation, with fast mode providing a further increase of up to 2.5 times. Those measurements concern generation speed, not the elapsed time required to finish an engineering project. Tool execution, repeated attempts and human review still contribute to the cost of a completed task."
+        },
+        {
+          "type": "heading",
+          "text": "Technical demonstrations need their own conditions"
+        },
+        {
+          "type": "paragraph",
+          "text": "One hardware experiment asked Fable to design a voice-assistant hub, a USB speakerphone and a handheld virtual pet. Anthropic’s separate project account describes circuit-board layouts, enclosures and software produced with the model, followed by manufacturing, testing and assembly with Diode’s engineers. Human fabrication and physical checks remain part of that process. Working prototypes provide a useful engineering demonstration, but three devices cannot establish reliable autonomous hardware development across different components, safety requirements and production volumes."
+        },
+        {
+          "type": "paragraph",
+          "text": "The release also includes a broad benchmark table, combining coding, scientific work, computer use and robotics. Some measurements come from internal evaluation runs. A model’s score on a simulated robot task should therefore stay separate from a physical robot’s observed success rate. Likewise, formalising an existing mathematical proof means translating it into a computer-checkable form; it is a different achievement from discovering a new proof of the theorem. These distinctions become especially important when one launch bundles several technically different demonstrations."
+        },
+        {
+          "type": "heading",
+          "text": "Access controls remain part of the product"
+        },
+        {
+          "type": "paragraph",
+          "text": "Anthropic’s system card describes capability and safety testing, including external evaluations, alongside the developer’s own assessment. The company reports improvements on many behavioural measures while acknowledging remaining failures and the difficulty of predicting behaviour outside an evaluation. Its public account also notes that models sometimes recognise testing situations. A lower observed failure rate in those settings is evidence about those tests, rather than a guarantee for a connected production workflow."
+        },
+        {
+          "type": "paragraph",
+          "text": "For most routine coding and knowledge work, Anthropic still recommends starting with Opus 5.5 and escalating when a harder task warrants it. That makes the launch an additional technical option rather than an instruction to move every workload to the most expensive tier. Teams evaluating it can compare accepted outputs, intervention time and total task cost against their existing system, with particular care around which tools and permissions the model receives. Availability, verification eligibility and successful completion remain separate questions."
+        }
+      ],
+      "sources": [
+        {
+          "label": "Anthropic — November 9 launch and availability",
+          "url": "https://www.anthropic.com/claude-fable-and-mythos-5-2"
+        },
+        {
+          "label": "Anthropic — Fable 5.2 and Mythos 5.2 system card",
+          "url": "https://www.anthropic.com/document/claude-fable-5-2-mythos-5-2-system-card"
+        },
+        {
+          "label": "Anthropic — electronics-design experiment",
+          "url": "https://www.anthropic.com/research/claude-electronics-design"
+        }
+      ]
+    },
+    {
+      "slug": "meta-muse-ember-efficient-agent-model",
+      "category": "Industry",
+      "sortDate": "2026-11-09",
+      "dateLabel": "November 9, 2026",
+      "title": "Meta launches Muse Ember for high-volume agent work, with a long-context price premium",
+      "summary": "The hosted multimodal model starts at $0.10 per million input tokens and $0.50 per million output tokens. Requests above 200,000 input tokens use higher rates for the entire request.",
+      "image": {
+        "src": "ai-news/2026-11/images/meta-muse-ember-official.webp",
+        "alt": "Meta’s official artwork introducing Muse Ember.",
+        "caption": "Source: Meta’s November 9 Muse Ember announcement. Official model-release artwork."
+      },
+      "content": [
+        {
+          "type": "paragraph",
+          "text": "Meta introduced Muse Ember on November 9 as a smaller, lower-cost model for repeated work inside larger AI systems. It is available as muse-ember-1.0 through Meta Model API and in Muse Code. The intended tasks include tool calls, extraction, routing, coding subtasks and processing long documents. Meta describes an arrangement in which a larger model handles planning while Ember executes more numerous bounded steps. This is a hosted model release; the announcement does not provide downloadable model weights."
+        },
+        {
+          "type": "paragraph",
+          "text": "The API documentation lists text, image, video, audio and PDF inputs, with text output. Its context window is 1,048,576 tokens, with up to 524,288 output tokens. Those capacity limits describe what a request can contain or produce. They do not show that a model will retrieve every relevant fact from a long document, follow a long sequence of instructions accurately, or use the full output allowance economically. The default reasoning effort is max, with lower settings also available."
+        },
+        {
+          "type": "heading",
+          "text": "The advertised price applies to a defined request tier"
+        },
+        {
+          "type": "paragraph",
+          "text": "For requests with at most 200,000 input tokens, prices are $0.10 per million input tokens, $0.004 per million cached input tokens and $0.50 per million output tokens. Above that threshold, the corresponding rates are $0.30, $0.012 and $1.50. Meta’s pricing documentation says the higher tier applies to the whole request, including the conversation context, rather than only the tokens beyond the threshold. Cached input counts when determining the tier. This materially changes the price of using the full context window."
+        },
+        {
+          "type": "paragraph",
+          "text": "On Model API, Ember is available only in Standard mode. Meta says content sent in that mode is not used to train its models. That should not be confused with Muse Code subscription defaults or the Contributor option available for some other Muse models. Web-search grounding also has a separate query charge. For an agent that repeats many short steps, spending depends on the number of calls, reasoning and output length, caching and tool use, as well as the headline input price."
+        },
+        {
+          "type": "heading",
+          "text": "Benchmark results vary with the task and harness"
+        },
+        {
+          "type": "paragraph",
+          "text": "Meta’s release table reports strong results for its intended workload, but also includes a counterexample: on FrontierCode 2.0-AA, Ember scores 27.2%, below Haiku 5.5’s 34.9%. The accompanying methodology explains that internally controlled comparisons use a common task-specific harness, while some external coding results retain different agent products or vendor harnesses. Its Agents’ Last Exam result is an average score on a Linux subset, with five tasks excluded, rather than the share of all tasks completed perfectly."
+        },
+        {
+          "type": "paragraph",
+          "text": "These details make the launch more useful as a deployment choice than as a universal ranking. A team can test whether routing repetitive subtasks to Ember reduces the cost of accepted work without creating extra corrections for the planning model or a human reviewer. The published evaluations support particular comparisons under stated settings. They do not establish that inexpensive tokens automatically produce inexpensive completed workflows, or that a smaller model is the best choice for every step."
+        }
+      ],
+      "sources": [
+        {
+          "label": "Meta — November 9 Muse Ember launch",
+          "url": "https://research.meta.ai/blog/muse-ember"
+        },
+        {
+          "label": "Meta — model capabilities and access",
+          "url": "https://dev.meta.ai/docs/muse-ember"
+        },
+        {
+          "label": "Meta — both pricing tiers and billing rules",
+          "url": "https://dev.meta.ai/docs/pricing-rate-limits"
+        },
+        {
+          "label": "Meta — evaluation methodology",
+          "url": "https://research.meta.ai/static/muse-ember-evaluation-report"
+        }
+      ]
+    },
+    {
+      "slug": "nvidia-gr00t2-corl-robot-learning-announcement",
+      "category": "Research",
+      "sortDate": "2026-11-09",
+      "dateLabel": "November 9, 2026",
+      "title": "NVIDIA presents GR00T 2 robot research at CoRL, with code planned for December",
+      "summary": "The world-action model predicts video and actions together. Its developer reports gains from a handful of demonstrations, with task-specific trials and a later code release still to come.",
+      "image": {
+        "src": "ai-news/2026-11/images/nvidia-gr00t2-official.png",
+        "alt": "NVIDIA’s CoRL montage combines simulated and physical robot-manipulation research.",
+        "caption": "Source: NVIDIA’s November 9 CoRL announcement. Official montage includes simulation renders and physical robotics; it is not a photograph of one experiment."
+      },
+      "content": [
+        {
+          "type": "paragraph",
+          "text": "NVIDIA introduced GR00T 2 at the Conference on Robot Learning on November 9, presenting a robot foundation model that predicts future video and robot actions together. Its accompanying research covers transferring skills between bodies, adapting to new tasks and combining manipulation with a reasoning agent. The project page says code will be available in December. Although the announcement describes an open model, readers should keep the planned code release separate from the research announcement."
+        },
+        {
+          "type": "paragraph",
+          "text": "The model uses a diffusion transformer to generate future observations and action sequences jointly. Small robot-specific output components translate those sequences into commands for different bodies. The research describes a mixture of human video, handheld-gripper demonstrations and robot teleoperation. NVIDIA says 100,000 hours of the human video are publicly available, while the full human-video training mixture is much larger. The public subset should not be mistaken for the entirety of the training data."
+        },
+        {
+          "type": "heading",
+          "text": "Task coverage and trial success have different denominators"
+        },
+        {
+          "type": "paragraph",
+          "text": "On 50 tasks not demonstrated on the target robot during pretraining, the project reports a 40% zero-shot trial success rate. Separately, the robot succeeded at least once on 40 of the 50 tasks. The latter is task coverage, not an 80% trial success rate. One demonstration per task followed by adaptation raised average success to 71%; five demonstrations raised it to 95%. The paper says the fifty-task set was selected from tasks the model could learn to at least 80% success with five demonstrations, an important limit on generalisation. Each adaptation used a roughly 30-minute LoRA fine-tune on one RTX 5090, according to the project."
+        },
+        {
+          "type": "paragraph",
+          "text": "The research also tests a reasoning agent that sequences skills, checks progress and calls recovery routines around GR00T 2. On three toy-assembly tasks, the combined system achieved 98, 97 and 97 successes in 100 trials per task. Those results include the planner and recovery components, so attributing them to the underlying manipulation policy alone would overstate its performance. The same project documents substantially weaker complete-task results on some other settings, including dexterous long-horizon tasks."
+        },
+        {
+          "type": "heading",
+          "text": "Simulation tools address a related engineering problem"
+        },
+        {
+          "type": "paragraph",
+          "text": "NVIDIA’s broader CoRL announcement includes Isaac Lab 3.0, integration with the Newton physics engine and new industrial evaluation tools. The company reports up to 2.5 times the training throughput of Isaac Lab 2.3 with PhysX on a specified vision-based manipulation benchmark. That is a comparison of training configurations, not a general multiplier for physical robot speed. Modelling cables, cloth and articulated hands may make training conditions more realistic, while transfer to hardware still needs measurement."
+        },
+        {
+          "type": "paragraph",
+          "text": "The practical research contribution is a more detailed account of how video prediction, demonstrations, simulation and a planning agent can work together. Its limits remain the specifically evaluated robots, task distributions, adaptation data and developer-run experiments. A successful laboratory assembly sequence does not establish safe operation across an unfamiliar factory. The next useful milestones are the promised code release, clear access and licence terms, and independent attempts to reproduce both the successes and the documented failures."
+        }
+      ],
+      "sources": [
+        {
+          "label": "NVIDIA — November 9 CoRL announcement",
+          "url": "https://blogs.nvidia.com/blog/robotics-simulation-advancements-corl/"
+        },
+        {
+          "label": "NVIDIA Research — GR00T 2 methods, experiments and release status",
+          "url": "https://research.nvidia.com/labs/gear/gr00t-2/"
+        },
+        {
+          "label": "NVIDIA Research — GR00T 2 white paper",
+          "url": "https://research.nvidia.com/labs/gear/gr00t-2/assets/gr00t2_whitepaper.pdf"
+        },
+        {
+          "label": "Isaac Lab — version 3.0.0 release",
+          "url": "https://github.com/isaac-sim/IsaacLab/releases/tag/v3.0.0"
+        }
+      ]
+    },
+    {
+      "slug": "google-tpu8tx-tpu8imax-system-announcements",
+      "category": "Industry",
+      "sortDate": "2026-11-09",
+      "dateLabel": "November 9, 2026",
+      "title": "Google announces TPU 8tx and TPU 8i Max as new eighth-generation systems",
+      "summary": "The configurations target confidential inference and memory-intensive workloads. They build on existing TPU silicon rather than introducing another chip generation.",
+      "image": {
+        "src": "ai-news/2026-11/images/google-tpu8tx-8imax-official.png",
+        "alt": "Google’s official illustration of TPU 8tx and TPU 8i Max hardware.",
+        "caption": "Source: Google’s November 9 TPU announcement. Official hardware artwork."
+      },
+      "content": [
+        {
+          "type": "paragraph",
+          "text": "Google announced TPU 8tx and TPU 8i Max on November 9, expanding the eighth-generation accelerator family it introduced earlier this year. The new systems target different deployment requirements: protecting sensitive inference workloads and supplying more compute and memory bandwidth for large-context work. Google explicitly distinguishes these configurations from a new chip generation. TPU 8tx uses the same silicon as TPU 8t, while 8i Max combines two TPU 8i chips in one package."
+        },
+        {
+          "type": "paragraph",
+          "text": "That distinction helps explain the pace of the announcement. Designing a chip and organising a system around it are different engineering changes. A system can alter packaging, host processors, networking and memory balance while retaining an existing accelerator design. For customers, the useful question is how those changes affect a particular workload. A new product name alone does not establish improved performance, lower total cost or immediate access to the resulting capacity."
+        },
+        {
+          "type": "heading",
+          "text": "Security and memory bandwidth motivate separate configurations"
+        },
+        {
+          "type": "paragraph",
+          "text": "TPU 8tx pairs the training-oriented silicon with fifth-generation AMD EPYC hosts and Google’s Boardfly network. Google describes protection for data and model weights while they are in use, and reports up to two times lower latency than TPU 8t with a near-zero performance penalty for confidential operation. These are developer claims about the configuration. They do not establish the same improvement for every model, batch size, network pattern or application connected to it."
+        },
+        {
+          "type": "paragraph",
+          "text": "TPU 8i Max instead places two 8i chips in one package. Google reports twice the compute, SRAM and high-bandwidth-memory bandwidth of 8i, with more silicon fitting into the existing rack footprint. The design addresses workloads where moving information to the processors becomes a constraint. Doubling hardware resources is different from demonstrating twice the throughput on an end-to-end agent task. Application software, communication and available memory can each become the next bottleneck."
+        },
+        {
+          "type": "heading",
+          "text": "Software access and hardware access are separate milestones"
+        },
+        {
+          "type": "paragraph",
+          "text": "Google also discusses PyTorch support, serving tools and cluster-management changes as part of making TPUs easier to use. Its announcement identifies general availability for Cloud Pathways and GKE dynamic slicing, while describing a TPU agent suite as a preview. Those software statuses should not be extended automatically to the two newly announced hardware configurations. The post does not provide a complete public price and region-by-region availability schedule for each new system."
+        },
+        {
+          "type": "paragraph",
+          "text": "For an organisation considering deployment, the relevant comparison includes supported frameworks, actual capacity, security requirements, migration effort and the cost of the work completed. A team running private inference may value a different system balance from one training a large model or processing long documents. Hardware isolation also does not decide which tools an agent may call; application permissions still need to match the user’s intended access. The announcement broadens Google’s proposed options for those workloads. Evidence of the practical gain will come from measured applications under comparable settings, with latency, throughput and total cost reported separately rather than combined into a single performance claim."
+        }
+      ],
+      "sources": [
+        {
+          "label": "Google — November 9 systems announcement and scope",
+          "url": "https://blog.google/innovation-and-ai/infrastructure-and-cloud/global-network/tpu-8i-max-and-8tx/"
+        }
+      ]
+    },
+    {
+      "slug": "openai-control-room-research-inference-stop",
+      "category": "Industry",
+      "sortDate": "2026-11-09",
+      "dateLabel": "November 9, 2026",
+      "title": "OpenAI describes Control Room for stopping research model output after an intervention",
+      "summary": "The internal authorisation system can halt further output within 35 seconds of a stop instruction. Detection time, process termination and research-wide fail-closed rollout are separate questions.",
+      "image": {
+        "src": "ai-news/2026-10/images/openai-official-logo-on-dark.svg",
+        "alt": "OpenAI’s official white logo on a dark background.",
+        "caption": "Source: OpenAI’s official brand artwork. Company identity image for the internal Control Room announcement."
+      },
+      "content": [
+        {
+          "type": "paragraph",
+          "text": "OpenAI published an account of Control Room on November 9, describing a central system that tracks research inference workloads and can stop their model output when safety or security concerns arise. The company says it is already deployed across its research infrastructure. The new public description concerns internal research operations, including training-related sampling, evaluations and data processing. It is not an announcement of a customer-facing emergency-stop product or an independently audited guarantee that every AI incident can be contained."
+        },
+        {
+          "type": "paragraph",
+          "text": "The system associates a research job with an identifier and checks whether that job remains authorised when it requests model output. Enforcement happens inside the inference engine, rather than relying on each research script to obey a stop instruction. OpenAI argues that this is a more manageable control point because many different research programmes share a smaller number of engine implementations. A stopped job can keep running as a process while its further inference requests are refused."
+        },
+        {
+          "type": "heading",
+          "text": "Thirty-five seconds starts after the stop decision"
+        },
+        {
+          "type": "paragraph",
+          "text": "OpenAI reports a maximum lag of 35 seconds between Control Room receiving a stop instruction and preventing further model progress. It attributes that interval to cached authorisations and says it is working to reduce it. The figure does not include the time needed to recognise suspicious behaviour, investigate it or decide to intervene. It also does not mean that previously executed tool actions are undone. Those distinctions matter when evaluating how much harmful activity could occur before and after an alert."
+        },
+        {
+          "type": "paragraph",
+          "text": "An earlier October 29 account describes the monitoring pipeline that can supply such alerts: initial screening, model-based review, investigative stages and human response. That account acknowledges false alarms, uneven paging coverage and the possibility of missing unfamiliar behaviour. Control Room addresses the enforcement step after an intervention decision; stronger enforcement does not by itself solve the detection problem. Keeping the two reports separate also avoids presenting the older monitoring announcement as a second new November 9 release."
+        },
+        {
+          "type": "heading",
+          "text": "Fail-closed operation is still being extended"
+        },
+        {
+          "type": "paragraph",
+          "text": "If the Control Room service becomes unavailable, its engine integrations are designed to refuse inference rather than continue without permission. The announcement says this fail-closed behaviour is rolled out to all frontier-model research workloads, with remaining research workloads due to follow over the next few days. That is narrower than saying the fail-closed rollout is complete everywhere. OpenAI also describes ongoing checks for engines that accidentally or deliberately omit the integration; the coverage boundary remains an operational question."
+        },
+        {
+          "type": "paragraph",
+          "text": "For researchers building agent systems, the account illustrates a separation between observing behaviour, deciding whether a job may continue and enforcing that decision at a shared service boundary. Each stage needs its own evidence. Useful follow-up measurements would include coverage, missed or delayed alerts, availability and stop latency under failures. The present announcement supplies OpenAI’s description of its deployed controls and their intended failure behaviour, while leaving those independent operational measurements unavailable."
+        }
+      ],
+      "sources": [
+        {
+          "label": "OpenAI — Control Room system and rollout limits",
+          "url": "https://openai.com/index/control-room/"
+        },
+        {
+          "label": "OpenAI — November 9 publication listing",
+          "url": "https://openai.com/news/safety-alignment/"
+        },
+        {
+          "label": "OpenAI — October 29 monitoring account, background",
+          "url": "https://openai.com/index/how-we-detect-frontier-model-misalignment/"
+        }
+      ]
+    },
+    {
       "slug": "rba-ai-labour-market-monitoring-early-signals",
       "category": "Employment / Talent",
       "sortDate": "2026-11-08",

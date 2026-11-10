@@ -1,0 +1,134 @@
+{
+  "periods": [
+    [
+      "2026-10-26",
+      "2026-11-01"
+    ],
+    [
+      "2026-11-02",
+      "2026-11-08"
+    ]
+  ],
+  "status": "Watching",
+  "comparison_eligible": false,
+  "counts": [
+    null,
+    1982
+  ],
+  "net_change": null,
+  "percent_change": null,
+  "stable_boards": null,
+  "current_verified_boards": 13,
+  "stable_employers": null,
+  "current_verified_employers": 12,
+  "observation_times_utc": [
+    null,
+    [
+      "2026-11-09T00:33:02.899661+00:00",
+      "2026-11-09T00:33:03.910555+00:00"
+    ]
+  ],
+  "observation_times_local": [
+    null,
+    [
+      "2026-11-08T19:33:02.899661-05:00",
+      "2026-11-08T19:33:03.910555-05:00"
+    ]
+  ],
+  "employers": [
+    {
+      "employer": "anthropic",
+      "current_listed_advertisements": 675,
+      "previous_listed_advertisements": null,
+      "net_change": null
+    },
+    {
+      "employer": "cognition",
+      "current_listed_advertisements": 110,
+      "previous_listed_advertisements": null,
+      "net_change": null
+    },
+    {
+      "employer": "cohere",
+      "current_listed_advertisements": 124,
+      "previous_listed_advertisements": null,
+      "net_change": null
+    },
+    {
+      "employer": "cursor",
+      "current_listed_advertisements": 121,
+      "previous_listed_advertisements": null,
+      "net_change": null
+    },
+    {
+      "employer": "fireworks_ai",
+      "current_listed_advertisements": 91,
+      "previous_listed_advertisements": null,
+      "net_change": null
+    },
+    {
+      "employer": "lambda",
+      "current_listed_advertisements": 97,
+      "previous_listed_advertisements": null,
+      "net_change": null
+    },
+    {
+      "employer": "mistral_ai",
+      "current_listed_advertisements": 235,
+      "previous_listed_advertisements": null,
+      "net_change": null
+    },
+    {
+      "employer": "perplexity",
+      "current_listed_advertisements": 137,
+      "previous_listed_advertisements": null,
+      "net_change": null
+    },
+    {
+      "employer": "runway",
+      "current_listed_advertisements": 49,
+      "previous_listed_advertisements": null,
+      "net_change": null
+    },
+    {
+      "employer": "sierra",
+      "current_listed_advertisements": 227,
+      "previous_listed_advertisements": null,
+      "net_change": null
+    },
+    {
+      "employer": "skild_ai",
+      "current_listed_advertisements": 58,
+      "previous_listed_advertisements": null,
+      "net_change": null
+    },
+    {
+      "employer": "thinking_machines_lab",
+      "current_listed_advertisements": 58,
+      "previous_listed_advertisements": null,
+      "net_change": null
+    }
+  ],
+  "scope": "November 8 Sunday public advertisement stock: all functions at 12 AI employers across 13 verified boards. These are not AI-specialist-only jobs, hires or people.",
+  "null_reason": "No matching November1Sundayboard snapshot was saved. The combined November1–2 run collected on November3local time; that cannot serve as a prior-week endpoint. Earlier October31 snapshot is eight days from November8, not a seven-day comparison.",
+  "deduplication": "Exact employer, verified official board and provider posting ID. Related roles on regional boards may remain separate advertisements. First-seen is not first publication; absence is not a closure.",
+  "panels": {
+    "major_ai_employer": "Anthropic only; not a diversified large-employer panel.",
+    "other_ai_employers": "Eleven other employers, reported by name without unverified size classifications.",
+    "academic": "No comparable verified academic hiring panel; evidence gap, not zero academic demand."
+  },
+  "constraints": "Current-week stock only. No numerical week-over-week index, job-opening flow, hiring rate, salary trend, 1–3month shortage claim or causal AI effect is identified.",
+  "inputs": [
+    {
+      "path": "2026-11-06_08/hiring/normalized-observations.jsonl",
+      "sha256": "aa0a026167fbc318630529738ebb539c4f1e95829f1c03daedbe38ff352e15f2",
+      "used": true
+    },
+    {
+      "path": "2026-11-01_02/hiring/normalized-observations.jsonl",
+      "sha256": "17a985a80c801a08097b857104c2b378e0a088d10fa8d583c97ee381f3f19b37",
+      "used": false,
+      "reason": "Outside the previous week; observed November 3 in New York."
+    }
+  ]
+}
