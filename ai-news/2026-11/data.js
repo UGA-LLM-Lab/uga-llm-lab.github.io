@@ -2,6 +2,977 @@ window.AI_NEWS_MONTH_DATA["2026-11"] = {
   "label": "November 2026",
   "articles": [
     {
+      "slug": "google-gemini-4-hydrogen-release",
+      "category": "Industry · Foundation Models",
+      "sortDate": "2026-11-12",
+      "dateLabel": "November 12, 2026",
+      "title": "Google releases Gemini 4 Hydrogen for faster agent and multimodal workloads",
+      "summary": "Hydrogen brings a one-million-token context and API rates of $1.50 per million input tokens and $7.50 per million output tokens. Access is rolling out across developer and consumer products, with free Gemini use handled through automatic model selection.",
+      "image": {
+        "src": "ai-news/2026-11/images/google-gemini-4-hydrogen-official.jpg",
+        "alt": "Google’s Gemini 4 Hydrogen key art showing a blue translucent sphere",
+        "caption": "Official Gemini 4 Hydrogen release artwork. Source: Google."
+      },
+      "content": [
+        {
+          "type": "paragraph",
+          "text": "Google released Gemini 4 Hydrogen on November 12, positioning the model for fast coding, multimodal work and agent execution. Hydrogen is adapted from Carbon and is intended to handle frequent tasks directly or work alongside a more capable model that plans and delegates. It is a distinct release from the November 10 expansion of Carbon access. The two announcements concern related models, but their availability events, pricing and intended roles should remain separate."
+        },
+        {
+          "type": "paragraph",
+          "text": "Hydrogen accepts text, images, audio and video within a one-million-token context window. Google lists four thinking levels: low, medium, high and xhigh, with high as the default. Those settings give developers a way to trade reasoning effort against response time and cost. A longer context limit expands the material a request can contain, but it does not establish equally reliable use of every detail in every task."
+        },
+        {
+          "type": "heading",
+          "text": "Prices are stated across the full context range"
+        },
+        {
+          "type": "paragraph",
+          "text": "The announced API rates are $1.50 per million input tokens and $7.50 per million output tokens, with flat pricing across the one-million-token context. These are Hydrogen’s rates, rather than Carbon’s separate introductory offer. A total task bill will still depend on generated tokens, thinking behavior, tool use and repeated attempts. A price advantage per token is therefore not sufficient to establish a lower cost for an entire coding project or agent workflow."
+        },
+        {
+          "type": "paragraph",
+          "text": "Google describes Hydrogen as suitable for routine execution while Carbon or Argon handles more demanding orchestration. That is a proposed division of labor, rather than a requirement to use several models together. Teams can test whether a smaller or faster component completes common tasks adequately, and route difficult cases elsewhere. The useful measure is the outcome of the combined workflow, including handoffs and errors, rather than the speed of an isolated model call."
+        },
+        {
+          "type": "paragraph",
+          "text": "The developer release reaches the Gemini API across tiers, Google AI Studio and Gemini for business. Antigravity access includes paid Pro and Ultra plans. Google is also rolling the model into Search and the Gemini app. For free Gemini users, access is through automatic model selection when the system considers Hydrogen appropriate; this should not be described as a promise that every free account receives a manual model-selection option."
+        },
+        {
+          "type": "heading",
+          "text": "The model card adds limits to the launch claims"
+        },
+        {
+          "type": "paragraph",
+          "text": "Google’s evaluations describe performance across coding, reasoning and multimodal tasks, but the results are vendor measurements rather than a guarantee of superiority on every workload. The model card also reports safety tradeoffs, including an increase in over-refusal on one evaluation. That makes a blanket description of the model as safer in every respect inappropriate. The company says a fuller safety report will follow after launch."
+        },
+        {
+          "type": "paragraph",
+          "text": "The documented knowledge cutoff is March 2026, so current factual work still requires appropriate retrieval or tools. More broadly, Hydrogen’s release gives developers another option for balancing capability, latency and cost within the Gemini family. Its practical value depends on whether it can execute the relevant tasks correctly under real constraints. Testing should include difficult inputs and failure recovery, while treating rollout status, context limits and thinking settings as separate parts of the product’s operating conditions."
+        }
+      ],
+      "sources": [
+        {
+          "label": "Google: introducing Gemini 4 Hydrogen",
+          "url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/introducing-gemini-4-hydrogen/"
+        },
+        {
+          "label": "Gemini 4 Hydrogen model card",
+          "url": "https://deepmind.google/models/model-cards/gemini-4-hydrogen/"
+        },
+        {
+          "label": "Gemini API model documentation",
+          "url": "https://ai.google.dev/gemini-api/docs/models/gemini-4-hydrogen"
+        },
+        {
+          "label": "Gemini API pricing",
+          "url": "https://ai.google.dev/gemini-api/docs/pricing"
+        }
+      ]
+    },
+    {
+      "slug": "ibm-granite-llmon-experimental-previews",
+      "category": "Research · Open Models",
+      "sortDate": "2026-11-12",
+      "dateLabel": "November 12, 2026",
+      "title": "IBM releases experimental Granite models trained to distinguish instructions from untrusted data",
+      "summary": "The 3B and 8B LLMON previews use typed markup and explicit execution references to resist prompt injection. IBM reports strong static-test results, while warning that the previews are experimental and the markup is not an enforced security boundary.",
+      "image": {
+        "src": "ai-news/2026-11/images/ibm-llmon-opi-results-official.png",
+        "alt": "IBM’s OPI evaluation chart comparing resistance to 9,000 prompt-injection attacks",
+        "caption": "Original IBM OPI benchmark figure. Results are vendor-reported on a static attack set; they do not establish immunity to adaptive attacks. Source: IBM Granite."
+      },
+      "content": [
+        {
+          "type": "paragraph",
+          "text": "IBM released experimental 3-billion- and 8-billion-parameter Granite LLMON previews on November 12, making trained models and tooling available for an approach to prompt-injection resistance. The new event is the model release. LLMON’s underlying markup proposal appeared earlier, and the associated post-training paper was first submitted in October. The November announcement should not be presented as a newly published paper or a production-ready security product."
+        },
+        {
+          "type": "paragraph",
+          "text": "LLMON gives conversations a more explicit structure. Typed blocks and identifiers separate instructions from material such as documents or tool results, while execution references identify which instruction the model should follow. Training teaches the model to use that structure when deciding what text has authority. The intended benefit is to reduce the chance that malicious instructions embedded in lower-trust data are treated as legitimate commands."
+        },
+        {
+          "type": "heading",
+          "text": "The behavior is learned, rather than mechanically enforced"
+        },
+        {
+          "type": "paragraph",
+          "text": "This design does not create a security boundary equivalent to an operating-system permission check. The model is trained to respect the markup, so its resistance remains a property to evaluate. A hostile input may still expose a failure in the learned behavior. The release therefore complements questions about application permissions, tool access and data handling instead of removing the need to control what an agent can actually do."
+        },
+        {
+          "type": "paragraph",
+          "text": "Using the models also requires the supplied formatting and chat template. Ordinary conversation strings are not automatically equivalent to the structured inputs used during training. The approach uses reserved delimiters and explicit references without changing the underlying model architecture. An application that ignores those conventions cannot assume it will reproduce the reported behavior merely by loading the weight files under the same model name."
+        },
+        {
+          "type": "paragraph",
+          "text": "IBM reports strong results on prompt-injection evaluations, including the static OPI attack set shown in its release figure. The post-training work combines supervised learning and reinforcement learning with examples designed to separate executable instructions from deceptive material. These tests provide evidence for the training method under defined conditions. They do not establish immunity to an attacker who adapts over many interactions, or to every combination of external tools and retrieved documents."
+        },
+        {
+          "type": "heading",
+          "text": "Security improvements do not imply universal capability gains"
+        },
+        {
+          "type": "paragraph",
+          "text": "The 8B model card also shows mixed outcomes on general capability benchmarks. Some scores improve, while others, including GPQA, Minerva and CRUX, are lower than the comparison model. That matters for an application that needs both injection resistance and accurate task execution. An aggregate statement about retaining capability should not be interpreted as an improvement on every benchmark or a guarantee that a particular reasoning workload is unaffected."
+        },
+        {
+          "type": "paragraph",
+          "text": "The model cards identify Apache 2.0 licensing, but IBM explicitly describes these releases as experimental previews rather than production-ready systems. Researchers can inspect and test whether structured instruction handling improves robustness for their own agents. The most informative follow-up will combine adaptive attacks, realistic tool use and ordinary task-quality measurements. The November 12 release supplies models for that investigation while leaving the central security claim conditional on the format, threat model and evaluation procedure."
+        }
+      ],
+      "sources": [
+        {
+          "label": "IBM Granite: LLMON preview release",
+          "url": "https://huggingface.co/blog/ibm-granite/llmon-an-llm-native-markup-language-now-in-granite"
+        },
+        {
+          "label": "Granite 4.1 8B LLMON preview model card",
+          "url": "https://huggingface.co/ibm-granite/granite-4.1-8b-llmon-preview"
+        },
+        {
+          "label": "Granite 4.1 3B LLMON preview model card",
+          "url": "https://huggingface.co/ibm-granite/granite-4.1-3b-llmon-preview"
+        },
+        {
+          "label": "LLMON post-training paper, original version",
+          "url": "https://arxiv.org/abs/2610.38120"
+        }
+      ]
+    },
+    {
+      "slug": "anthropic-self-hosted-managed-agents-private-beta",
+      "category": "Industry · Agent Platforms",
+      "sortDate": "2026-11-12",
+      "dateLabel": "November 12, 2026",
+      "title": "Anthropic brings the Managed Agents service plane into customer infrastructure in a private beta",
+      "summary": "Customers can host the agent server, workers and session database in their own environment. Claude inference still calls a supported provider, and the self-hosted service has documented differences from the hosted product.",
+      "image": {
+        "src": "ai-news/2026-11/images/claude-managed-agents-self-hosted-official.svg",
+        "alt": "Anthropic’s architecture diagram showing a customer-hosted Managed Agents server, sandboxes and database calling an external Claude inference provider",
+        "caption": "Original self-hosted Managed Agents architecture. Model calls still go to a supported inference provider. Source: Anthropic."
+      },
+      "content": [
+        {
+          "type": "paragraph",
+          "text": "Anthropic announced a private beta for self-hosted Claude Managed Agents on November 12, allowing customers to deploy the service’s agent infrastructure in their own cloud or on-premises environment. The deployment includes the server, agent harness, workers, sandboxes and session database. Access requires an Anthropic account team. This is a broader hosting option than the earlier self-hosted sandbox capability, which left more of the surrounding agent service under Anthropic’s management."
+        },
+        {
+          "type": "paragraph",
+          "text": "The change addresses organizations that want to control where agent sessions, credentials and operational history reside. Customer infrastructure can hold the service state and run the tools used during a task. That does not make Claude an offline model running from downloadable weights. The agent still sends model requests to a supported inference provider, including the Claude API, supported cloud platforms or an appropriate model gateway."
+        },
+        {
+          "type": "heading",
+          "text": "Hosting the agent does not eliminate model data flows"
+        },
+        {
+          "type": "paragraph",
+          "text": "The distinction is important for data reviews. Code, logs and session records can remain in the customer’s deployment, while model calls can include conversation content and tool results sent to the selected provider. Existing retention agreements apply where they are in place; self-hosting does not automatically create a new zero-data-retention agreement. An organization needs to examine both its local storage and the material included in inference requests."
+        },
+        {
+          "type": "paragraph",
+          "text": "Anthropic separates the reasoning component from the sandbox that executes work. Credential handling can sit outside that sandbox, and the deployment supports controls such as an external secret manager, network allowlists and OpenTelemetry observability. These provide places to enforce access rules and review behavior. They are configurable controls, rather than an assurance that every customer deployment is secure or compliant merely because it runs on its own infrastructure."
+        },
+        {
+          "type": "paragraph",
+          "text": "The self-hosted server largely follows the hosted Managed Agents API, but the documentation lists material differences. Scheduled deployments and webhooks are unavailable, so customers need their own scheduling or event-handling arrangements. Prebuilt document skills must be supplied as custom skills. The server also has distinct file-handling behavior and does not serve the broader Messages or Models APIs from the same endpoint. Existing applications cannot assume complete feature parity during migration."
+        },
+        {
+          "type": "heading",
+          "text": "Migration involves rebuilding service resources"
+        },
+        {
+          "type": "paragraph",
+          "text": "Anthropic says that agents, skills, credentials, memory stores and session history are not automatically copied from the hosted service. Customers need to recreate the resources they intend to use. Some networked features, including MCP hosts and web tools, also require explicit server settings. The private beta therefore includes operational work beyond changing a client’s base URL, especially for applications that rely on hosted scheduling, file resources or dynamic orchestration."
+        },
+        {
+          "type": "paragraph",
+          "text": "The release offers more control over the agent service plane for organizations with infrastructure and data-location requirements. It also transfers responsibility for operating that plane to the customer, while leaving inference dependent on the selected provider. Pricing and beta access require discussion with Anthropic rather than an assumption that hosted-service rates apply unchanged. The practical decision is whether the additional control justifies the deployment, migration and monitoring work for a specific agent workflow."
+        }
+      ],
+      "sources": [
+        {
+          "label": "Anthropic: self-hosted Claude Managed Agents",
+          "url": "https://claude.com/resources/articles/self-hosted-claude-managed-agents"
+        },
+        {
+          "label": "Self-hosted Managed Agents documentation",
+          "url": "https://platform.claude.com/docs/en/managed-agents/self-hosted"
+        },
+        {
+          "label": "Data and access boundaries",
+          "url": "https://platform.claude.com/docs/en/managed-agents/self-hosted-data-and-access"
+        },
+        {
+          "label": "Differences from the hosted service",
+          "url": "https://platform.claude.com/docs/en/managed-agents/self-hosted/differences"
+        }
+      ]
+    },
+    {
+      "slug": "federal-reserve-ai-economy-current-evidence-review",
+      "category": "Employment · Workforce Research",
+      "sortDate": "2026-11-12",
+      "dateLabel": "November 12, 2026",
+      "title": "Federal Reserve staff review finds clearer AI investment signals than economy-wide labor effects",
+      "summary": "A November 12 working-paper release reviews AI adoption, investment, productivity and employment. Most analysis was completed in June, so the paper is a synthesis of developing evidence rather than a real-time November jobs report or a Federal Reserve policy position.",
+      "image": {
+        "src": "ai-news/2026-11/images/federal-reserve-ai-adoption-figure.png",
+        "alt": "Federal Reserve paper figure comparing worker AI-use surveys and business adoption across sectors",
+        "caption": "Original Figure 4 from FEDS 2026-074. The panels use different survey populations and definitions. Source: Federal Reserve staff working paper."
+      },
+      "content": [
+        {
+          "type": "paragraph",
+          "text": "The Federal Reserve released a staff working paper on November 12 reviewing evidence about artificial intelligence and the U.S. economy. The paper finds visible growth in AI investment, revenue and adoption, while economy-wide effects on employment and productivity remain harder to identify. Written by Nick Carollo, Leland D. Crane, Daniel Garcia Molina and Joseph Nichols, it is preliminary research expressing the authors’ views. It is not a policy statement from the Board or the Federal Open Market Committee."
+        },
+        {
+          "type": "paragraph",
+          "text": "The timing of the evidence requires care. A footnote says most of the analysis was completed in June 2026, although some series include later updates. The November release date therefore does not make every figure a current reading of the economy. The paper is best understood as a structured review of a fast-changing body of evidence, rather than a new November employment estimate or an announcement that the central bank has identified a definitive AI effect."
+        },
+        {
+          "type": "heading",
+          "text": "Adoption estimates measure different populations"
+        },
+        {
+          "type": "paragraph",
+          "text": "The authors compare surveys that produce substantially different estimates of AI use. Business surveys covering a broad population of firms can report lower adoption than surveys focused on larger organizations or using different weights and questions. Worker-use surveys measure another population again. Placing these percentages in chronological order would create a misleading trend if the underlying definitions and samples are not comparable."
+        },
+        {
+          "type": "paragraph",
+          "text": "That distinction matters when interpreting claims that AI has become nearly universal or remains rare. Both impressions can arise from a particular sample. A large company with extensive technology investment is not interchangeable with a small establishment, and occasional employee use differs from formal business deployment. The paper’s comparisons help identify which part of adoption a statistic measures before drawing conclusions about its reach across the economy."
+        },
+        {
+          "type": "paragraph",
+          "text": "The labor evidence also requires separating potential exposure from actual use. A job can contain tasks that a model might perform without the employer having adopted the technology or reduced employment. The review discusses emerging effects in particular occupations and among some entry-level workers, but other changes—including post-pandemic hiring adjustments and interest-rate conditions—complicate causal interpretation. A shift in a highly exposed occupation is not, by itself, a count of workers displaced by AI."
+        },
+        {
+          "type": "heading",
+          "text": "Task gains do not translate automatically into macroeconomic gains"
+        },
+        {
+          "type": "paragraph",
+          "text": "Experiments can show that AI improves performance on a defined activity, while aggregate productivity depends on adoption, complementary investment and changes to entire production processes. The authors note that part of the recent productivity improvement predates widespread generative-AI use. That does not rule out larger future gains. It does mean that the timing and size of the economy-wide contribution remain uncertain rather than established by a collection of task-level results."
+        },
+        {
+          "type": "paragraph",
+          "text": "Investment is more directly visible, but its interpretation also depends on accounting and physical constraints. Equipment imports, domestic construction and the availability of electricity, grid connections and labor affect how spending becomes domestic output and usable capacity. The paper’s contribution is to assemble these distinctions in one research review. Its evidence supports close measurement of adoption and investment while leaving broad claims about mass job loss or a settled productivity transformation ahead of what the available data can establish."
+        }
+      ],
+      "sources": [
+        {
+          "label": "Federal Reserve: Artificial Intelligence and the U.S. Economy — Current Evidence",
+          "url": "https://www.federalreserve.gov/econres/feds/artificial-intelligence-and-the-us-economy-current-evidence.htm"
+        },
+        {
+          "label": "FEDS 2026-074 full working paper",
+          "url": "https://www.federalreserve.gov/econres/feds/files/2026074pap.pdf"
+        },
+        {
+          "label": "Federal Reserve recent postings: release date",
+          "url": "https://www.federalreserve.gov/recentpostings.htm"
+        }
+      ]
+    },
+    {
+      "slug": "perplexity-decider-13-locate-extraction-release",
+      "category": "Industry · Open Models",
+      "sortDate": "2026-11-12",
+      "dateLabel": "November 12, 2026",
+      "title": "Perplexity rolls out Decider 1.3 models with a text-span extraction feature",
+      "summary": "The open-weight decision models add Locate, which returns verbatim spans and character offsets. Locate is text-only, has its own request limits and requires the version 1.3 template; it is not an unrestricted generated-answer mode.",
+      "image": {
+        "src": "ai-news/2026-11/images/perplexity-decider-official-logo.webp",
+        "alt": "Perplexity’s official publisher avatar",
+        "caption": "Perplexity publisher logo from its official model repository. The image is a logo, not a benchmark result."
+      },
+      "content": [
+        {
+          "type": "paragraph",
+          "text": "Perplexity announced the rollout of pplx-decider-v1.3 and pplx-decider-flash-v1.3 on November 12, adding a feature called Locate to its decision-model family. Locate extracts spans from supplied text and returns the selected text with character offsets and confidence information. The company says the update is available through its Decisions API, Hugging Face and OpenRouter. The dated rollout announcement is distinct from earlier repository activity, which does not by itself establish when a public release occurred."
+        },
+        {
+          "type": "paragraph",
+          "text": "The models are designed for constrained decisions rather than ordinary open-ended chat. Existing question types include classification, choices and scoring, with probabilities that an application can use when deciding what to do next. Locate adds a different output: a reference to words already present in the input. That can help an application connect a selected name, clause or other piece of information to its exact position in a source document."
+        },
+        {
+          "type": "heading",
+          "text": "Extraction has specific input and batching limits"
+        },
+        {
+          "type": "paragraph",
+          "text": "The Locate path requires nonempty text input and does not support images. A request can contain at most 128 Locate questions. Those restrictions should be distinguished from the multimodal capabilities of other decision-question types. The update does not mean that the same extraction operation can directly locate material in any image, scanned page or arbitrary nontext input without an earlier conversion step."
+        },
+        {
+          "type": "paragraph",
+          "text": "The reported offsets use an exclusive end position, and the returned text is intended to match the selected input span. This makes the feature different from asking a language model to paraphrase an answer and then trying to identify its source afterward. Applications still need to check that a selected span is relevant to the question. A faithfully copied passage can be the wrong passage, and confidence is not a substitute for testing on representative documents."
+        },
+        {
+          "type": "paragraph",
+          "text": "The version 1.3 format also matters. Perplexity provides a request template for the update, rather than treating older prompt builders as interchangeable. Mixing Locate with classification questions requires separate forward passes and can add latency. A claim that every possible decision and extraction question is answered in one shared pass would therefore overstate the release. Batch design and question type affect the actual performance of an integration."
+        },
+        {
+          "type": "heading",
+          "text": "Open weights support inspection, with deployment work remaining"
+        },
+        {
+          "type": "paragraph",
+          "text": "The larger model is based on a 27B-class backbone, while Flash offers a smaller deployment option. The repositories provide downloadable weights and an Apache 2.0 license. The published configuration has a default sequence limit of 32,768 tokens, with training lengths below that maximum; the capabilities of a larger-context backbone should not be assumed to validate every longer request for this release. Local deployment also requires appropriate memory and serving software."
+        },
+        {
+          "type": "paragraph",
+          "text": "The rollout broadens the set of tasks that can be handled by a specialized decision component, especially where an application needs a source-linked extraction instead of generated prose. It does not establish independent benchmark leadership or eliminate errors in classification and document interpretation. Developers can now evaluate the new models and template directly, measuring extraction accuracy, probability calibration, latency and resource use on their own traffic. Those checks determine whether Locate is useful in a production workflow."
+        }
+      ],
+      "sources": [
+        {
+          "label": "Perplexity: November 12 rollout announcement",
+          "url": "https://community.perplexity.ai/t/were-rolling-out-pplx-decider-v1-3-and-pplx-decider-flash-v1-3-the-latest-version-of-our-open-weight-decision-models/6606"
+        },
+        {
+          "label": "Decider v1.3 model card",
+          "url": "https://huggingface.co/perplexity-ai/pplx-decider-v1.3"
+        },
+        {
+          "label": "Decider Flash v1.3 model card",
+          "url": "https://huggingface.co/perplexity-ai/pplx-decider-flash-v1.3"
+        },
+        {
+          "label": "Published Apache 2.0 license",
+          "url": "https://huggingface.co/perplexity-ai/pplx-decider-v1.3/raw/main/LICENSE"
+        }
+      ]
+    },
+    {
+      "slug": "google-alphagenome-2-cell-specific-genomics",
+      "category": "Research · AI for Biology",
+      "sortDate": "2026-11-11",
+      "dateLabel": "November 11, 2026",
+      "title": "AlphaGenome 2 adds cell-specific context to predictions about DNA regulation",
+      "summary": "DeepMind’s genomics model combines long DNA sequences with cell or tissue information. Its reported improvement on an immune-cell benchmark remains a research result, with noncommercial API access available and weights planned for final publication.",
+      "image": {
+        "src": "ai-news/2026-11/images/alphagenome-2-official.jpg",
+        "alt": "DeepMind’s abstract illustration of differently colored blocks representing cellular and genomic organization",
+        "caption": "Official AlphaGenome 2 research artwork. Source: Google DeepMind."
+      },
+      "content": [
+        {
+          "type": "paragraph",
+          "text": "Google DeepMind announced AlphaGenome 2 on November 11, extending its DNA sequence modeling approach to represent differences among cells, tissues and cellular states. The system combines a DNA sequence of up to one million bases with information about the biological context and species. Its purpose is to predict how that sequence contributes to molecular processes, including gene regulation. The release is a research tool, rather than an approved diagnostic system or a demonstrated treatment for genetic disease."
+        },
+        {
+          "type": "paragraph",
+          "text": "The cell-specific conditioning addresses a basic problem in genomics: the same DNA sequence can behave differently in different biological environments. A model that predicts only a fixed set of bulk-tissue outputs can miss important variation among individual cell types. AlphaGenome 2 introduces condition representations early in the model, and a cell encoder can represent additional states from single-cell RNA data without requiring the entire system to be retrained for each one."
+        },
+        {
+          "type": "heading",
+          "text": "A measured improvement on a specific benchmark"
+        },
+        {
+          "type": "paragraph",
+          "text": "DeepMind reports using 107 million human RNA cell profiles across 68 tissues during post-training. That is a count of cellular profiles, not 107 million people or patients. The model handles human and mouse sequence contexts, but the quoted human profile count should not be relabeled as a combined population of all data used. The scale supports diverse representations while leaving some rare and disease-specific cellular states underrepresented."
+        },
+        {
+          "type": "paragraph",
+          "text": "On the TenK10K evaluation involving 28 immune-cell types, the paper reports 30% recall at 90% precision for identifying causal variants, compared with 16% for an AlphaGenome 1 baseline fine-tuned on single-cell data. The evaluation includes held-out chromosome variant tests. The result is a substantial relative improvement in that setup, but it is not a claim that the model can identify 30% of all genetic diseases or explain all disease-associated variation."
+        },
+        {
+          "type": "paragraph",
+          "text": "The model also adds DNA methylation as a predicted readout and supports combining information across molecular modalities. These capabilities can help researchers prioritize variants or generate hypotheses about how a change in DNA might affect a particular cell. They do not replace experimental confirmation. A predicted association between a sequence, a cell condition and a molecular effect is not automatically evidence that changing that sequence will cause the same outcome in a living person."
+        },
+        {
+          "type": "heading",
+          "text": "Access is available before an eventual weight release"
+        },
+        {
+          "type": "paragraph",
+          "text": "Noncommercial researchers can access AlphaGenome 2 through an API, while commercial access is in private preview. DeepMind says model weights and source code are planned for the final publication. That future commitment should be distinguished from a completed open-weight release on November 11. Researchers who need local execution or a fully reproducible deployment cannot assume that the announced API already supplies those resources."
+        },
+        {
+          "type": "paragraph",
+          "text": "The paper’s limits include incomplete recovery of relevant variants and gaps in the representation of biological states. Those limits matter when moving from a benchmark to a disease study, where the relevant tissue or transient condition may differ from the training data. AlphaGenome 2 strengthens the case for conditioning sequence models on cellular context. Its value for a particular scientific question will depend on validation against appropriate experimental data, rather than the headline benchmark alone."
+        }
+      ],
+      "sources": [
+        {
+          "label": "Google DeepMind: AlphaGenome 2",
+          "url": "https://deepmind.google/blog/alphagenome-2-deciphering-how-cells-read-dna-to-better-understand-disease/"
+        },
+        {
+          "label": "AlphaGenome 2 research paper",
+          "url": "https://storage.googleapis.com/deepmind-media/DeepMind.com/Blog/alphagenome-2-deciphering-how-cells-read-dna-to-better-understand-disease/alphagenome-2.pdf"
+        }
+      ]
+    },
+    {
+      "slug": "runway-praxis-1-open-weight-release",
+      "category": "Research · Robotics",
+      "sortDate": "2026-11-11",
+      "dateLabel": "November 11, 2026",
+      "title": "Runway releases Praxis-1 weights and code for video-based robot control",
+      "summary": "The November 11 release makes the previously announced world-action model available with inference and fine-tuning code under Apache 2.0. Runway reports a 46.2% RoboLab-120 success rate, while documenting object-confusion and long-task limitations.",
+      "image": {
+        "src": "ai-news/2026-11/images/runway-praxis-1-official.webp",
+        "alt": "Runway’s Praxis-1 release image showing two robot arms above a work surface",
+        "caption": "Official Praxis-1 availability image. Source: Runway."
+      },
+      "content": [
+        {
+          "type": "paragraph",
+          "text": "Runway released public weights and code for Praxis-1 on November 11, opening access to a robot-control model that it first announced in September. The new milestone is the availability of downloadable checkpoints, inference software and fine-tuning tools under Apache 2.0. It should be distinguished from the earlier model introduction and partner testing. Researchers can now inspect and adapt the released system, rather than relying only on demonstrations of a model they cannot run."
+        },
+        {
+          "type": "paragraph",
+          "text": "Praxis-1 is a world-action model that predicts video and robot actions together. The approach connects visual expectations about what should happen next with the commands used to move a robot. Runway describes a mixture-of-experts model with about 27 billion total parameters. Only part of that network is active for a given operation, but the full weight files still impose substantial memory and deployment requirements."
+        },
+        {
+          "type": "heading",
+          "text": "Checkpoints support specific robot configurations"
+        },
+        {
+          "type": "paragraph",
+          "text": "The release includes a version fine-tuned on DROID data, a version for the bimanual YAM setup and a base model without the corresponding action specialization. The accompanying repository provides a policy server, simulation support and both full and LoRA fine-tuning code. Those resources make adaptation possible; they do not mean that a checkpoint can control any robot immediately. Different hardware, cameras and action conventions can require additional data, configuration and training."
+        },
+        {
+          "type": "paragraph",
+          "text": "Runway reports a 46.2% success rate across 1,200 episodes on RoboLab-120. Its launch comparison places that result above the other listed systems in the same evaluation. These are vendor-reported results, and their interpretation depends on the tasks, checkpoints and settings used. A percentage from that benchmark should not be presented as a general probability that Praxis-1 will complete an arbitrary factory or household assignment."
+        },
+        {
+          "type": "paragraph",
+          "text": "The technical report also explores transfer to another robot setup through fine-tuning. That is different from zero-shot operation on unfamiliar hardware. Likewise, examples in which the model imagines a successful future are not equivalent to a robot actually completing the task. Runway explicitly describes imagined instruction following as a proxy whose relationship with physical success requires further study. Keeping simulated, predicted and real-robot evidence separate is necessary when assessing the model’s capabilities."
+        },
+        {
+          "type": "heading",
+          "text": "The documented failures remain operationally important"
+        },
+        {
+          "type": "paragraph",
+          "text": "Runway identifies look-alike objects as a common source of real-robot errors. The model can reach for an object resembling the requested target, with the wrong choice already visible in its predicted video. Instructions that specify an object’s color or size perform better than vague requests. Chaining multiple steps from a single instruction also remains difficult, even when the individual steps can work with separate prompts."
+        },
+        {
+          "type": "paragraph",
+          "text": "The public release gives robotics teams a concrete platform for testing whether video pretraining can improve control and adaptation. Its license and code availability can support reproduction and further research, but neither establishes safety certification or production reliability. The most useful next evidence will come from independent tests on clearly described hardware and tasks, including failures. The November 11 announcement makes those investigations more practical without resolving the gap between a promising research policy and dependable operation in an uncontrolled environment."
+        }
+      ],
+      "sources": [
+        {
+          "label": "Runway: Praxis-1 is now available",
+          "url": "https://runway.com/news/company-news/praxis-1-is-now-available"
+        },
+        {
+          "label": "Runway technical report and evaluations",
+          "url": "https://runway.com/research/praxis-1-video-pretraining-to-robot-control"
+        },
+        {
+          "label": "Praxis-1 source code",
+          "url": "https://github.com/runwayml/praxis-1-oss"
+        },
+        {
+          "label": "Praxis-1 DROID model card",
+          "url": "https://huggingface.co/runwayml/praxis-1-droid"
+        }
+      ]
+    },
+    {
+      "slug": "google-gemini-decisions-api-release",
+      "category": "Industry · Developer Tools",
+      "sortDate": "2026-11-11",
+      "dateLabel": "November 11, 2026",
+      "title": "Google launches a Gemini Decisions API for fast classification and scoring",
+      "summary": "The API returns probabilities for constrained decisions rather than open-ended chat. Google’s latency figures apply to a smaller test configuration than the endpoint’s maximum 256,000-token context and 1,000-question limits.",
+      "image": {
+        "src": "ai-news/2026-11/images/gemini-decisions-api-official.png",
+        "alt": "Google’s official Gemini Decisions API title artwork",
+        "caption": "Official Gemini Decisions API announcement artwork. Source: Google."
+      },
+      "content": [
+        {
+          "type": "paragraph",
+          "text": "Google introduced the Gemini Decisions API on November 11, offering a model designed to answer constrained questions with probabilities. The initial model, gemini-decision-1, is aimed at tasks such as classification, routing, evaluation and scoring. Instead of generating a long explanation, it selects among a supplied set of outcomes. This makes it a different tool from a general chat model, even though both can be used inside a larger agent or application."
+        },
+        {
+          "type": "paragraph",
+          "text": "Developers can supply shared context and ask multiple questions about it. Supported forms include yes-or-no decisions, choices among alternatives and ordered rubric scores, with probabilities attached to the outcomes. Inputs can include text, images, audio, video and PDFs. Google states a maximum context of 256,000 tokens and support for up to 1,000 questions in a request, allowing many decisions to refer to the same underlying material."
+        },
+        {
+          "type": "heading",
+          "text": "Published latency figures have a narrower test scope"
+        },
+        {
+          "type": "paragraph",
+          "text": "Google reports end-to-end latency of roughly 150 to 250 milliseconds for contexts of up to 16,000 tokens and between one and 100 questions. The company separately describes model computation taking around 50 to 100 milliseconds. Those figures should not be extended to the endpoint’s largest possible context or question batch. Network conditions, input processing and the configuration of a request can also affect what an application actually experiences."
+        },
+        {
+          "type": "paragraph",
+          "text": "The announced price is $0.10 per million input tokens, with no output-token charge. Shared input is billed once within a request, while question definitions and criteria add to the input. Google also provides a no-cost tier for prototyping. The resulting economics can be attractive for applications that repeatedly classify the same material, but a useful cost comparison still needs to account for the length and number of questions, retries and surrounding application work."
+        },
+        {
+          "type": "paragraph",
+          "text": "A probability distribution can support more explicit routing rules than a free-form answer. For example, a system can use a high-confidence decision for an ordinary case and send an ambiguous one to a person or a more capable model. That is an application design choice, not a guarantee supplied by the probability itself. Confidence needs to be checked on representative data because a model can assign a high probability to an incorrect answer, especially when the deployment differs from the evaluation setting."
+        },
+        {
+          "type": "heading",
+          "text": "Availability begins with the Gemini developer stack"
+        },
+        {
+          "type": "paragraph",
+          "text": "The launch makes the capability available through the Gemini API and Google AI Studio. Google Cloud support is described as coming soon, and integrations across the wider ecosystem are rolling out. Those future components should not be counted as completed releases on November 11. Teams already using another cloud deployment route may therefore face a different availability timeline from developers testing the initial API."
+        },
+        {
+          "type": "paragraph",
+          "text": "The release reflects a growing separation between models that produce open-ended work and models that make frequent, tightly specified decisions. A small decision component can help decide which tool, policy or workflow should handle a request before more expensive processing begins. Google’s announcement supplies an initial price and performance envelope for that approach. Whether it improves a particular system depends on domain accuracy, calibration and fallback behavior, rather than latency or token price alone."
+        }
+      ],
+      "sources": [
+        {
+          "label": "Google: introducing the Gemini Decisions API",
+          "url": "https://blog.google/innovation-and-ai/technology/developers-tools/gemini-decisions-api/"
+        },
+        {
+          "label": "Gemini API pricing",
+          "url": "https://ai.google.dev/gemini-api/docs/pricing"
+        }
+      ]
+    },
+    {
+      "slug": "amazon-aws-emulator-agent-built-release",
+      "category": "Industry · Developer Tools",
+      "sortDate": "2026-11-11",
+      "dateLabel": "November 11, 2026",
+      "title": "Amazon releases an AWS emulator built through an agent-driven testing and repair pipeline",
+      "summary": "Amazon says autonomous agents wrote the emulator’s source code, while people designed its system, guardrails and release gates. The free local tool remains an implementation to test, with documented fidelity gaps rather than a replacement for all AWS integration testing.",
+      "image": {
+        "src": "ai-news/2026-11/images/aws-emulator-workflow-official.jpg",
+        "alt": "Amazon’s diagram showing test-writing, issue-finding and fixing agent teams connected to a shared repository and merge gates",
+        "caption": "Original diagram of the AWS emulator development pipeline. Source: Amazon."
+      },
+      "content": [
+        {
+          "type": "paragraph",
+          "text": "Amazon described the release of AWS Emulator on November 11, presenting both a free local development tool and an example of agent-driven software construction. The emulator implements AWS-style APIs for testing without requiring a live AWS account for ordinary local use. Amazon says autonomous agents wrote its source code without human code writing or review. People nevertheless designed the surrounding system, guardrails, tests and release criteria, so the claim does not describe a project without human engineering."
+        },
+        {
+          "type": "paragraph",
+          "text": "The development process uses three agent teams with separate responsibilities. One writes fidelity tests from Smithy API models and checks their behavior against real AWS. Another looks for mismatches between the emulator and the reference service. A third works on individual issues and attempts fixes. Builds then pass through gates covering review, security and fidelity before changes reach the released code."
+        },
+        {
+          "type": "heading",
+          "text": "Reference tests define what the agents are trying to match"
+        },
+        {
+          "type": "paragraph",
+          "text": "This setup gives agents a target more concrete than a written request to create an AWS-compatible service. A generated implementation can be tested against specific observed behavior, and a failed comparison can become a repair task. Human choices about the tests and acceptance criteria remain influential. Passing a set of tests establishes agreement on those cases; it does not prove that every undocumented behavior or interaction has been reproduced."
+        },
+        {
+          "type": "paragraph",
+          "text": "Amazon discusses 438 API model specifications in the initial testing scope. That should not be interpreted as a declaration that 438 AWS services have complete production fidelity. An API model can describe a surface area without establishing that all combinations of state, permissions, errors and timing behave exactly as they do in the live service. The public project’s known issues and evaluation materials remain important evidence about the implementation’s boundaries."
+        },
+        {
+          "type": "paragraph",
+          "text": "The release is published as a repository mirror after Amazon’s internal CodeCommit pipeline. It is therefore different from an experiment in which every attempted agent change is merged directly into the public project. Automated gates and the decision to expose a particular build still separate ongoing development from the version a user receives. The repository’s CC0 dedication also makes the code available for inspection and reuse, rather than requiring users to assess the development claims solely from a demonstration."
+        },
+        {
+          "type": "heading",
+          "text": "Local testing and production validation serve different purposes"
+        },
+        {
+          "type": "paragraph",
+          "text": "Developers can use an emulator to run repeatable checks, reduce dependence on remote resources and explore application behavior locally. The system used to build and validate this emulator, however, makes reference calls to real AWS. Those are distinct activities: a local user’s test environment need not use a cloud account simply because the fidelity pipeline used one to establish expected behavior."
+        },
+        {
+          "type": "paragraph",
+          "text": "Amazon’s account is evidence of a structured way to organize autonomous coding around tests, issue queues and release gates. It is not independent proof that agent-authored code is universally correct or that a local emulator can replace all integration testing against production services. The practical release gives developers code and an evaluation suite to examine. Its value will depend on whether the APIs and failure cases relevant to their applications are sufficiently faithful, and on retaining live-service checks where that fidelity has not been established."
+        }
+      ],
+      "sources": [
+        {
+          "label": "Amazon: how autonomous agents built AWS Emulator",
+          "url": "https://www.aboutamazon.com/news/aws/how-autonomous-ai-agents-built-aws-emulator"
+        },
+        {
+          "label": "AWS Emulator repository",
+          "url": "https://github.com/aws/aws-emulator"
+        },
+        {
+          "label": "AWS Emulator evaluation suite",
+          "url": "https://github.com/aws/aws-emulator-evaluation-suite"
+        }
+      ]
+    },
+    {
+      "slug": "databricks-genie-always-on-agent-announcement",
+      "category": "Industry · Enterprise AI",
+      "sortDate": "2026-11-11",
+      "dateLabel": "November 11, 2026",
+      "title": "Databricks announces an always-on Genie agent, with its new autonomous mode still headed to preview",
+      "summary": "The expanded Genie is designed for longer-running enterprise tasks, business context and controlled actions. Databricks separates existing generally available components from the newly announced always-on experience, which is not a completed broad rollout.",
+      "image": {
+        "src": "ai-news/2026-11/images/databricks-genie-architecture-official.png",
+        "alt": "Databricks’ architecture diagram connecting Genie, business ontology, search, Unity Catalog and Unity Gateway",
+        "caption": "Original Genie architecture diagram. Source: Databricks. The diagram combines components with different availability states."
+      },
+      "content": [
+        {
+          "type": "paragraph",
+          "text": "Databricks announced a new always-on version of Genie on November 11, extending its enterprise assistant concept toward autonomous work that can continue beyond a single conversation. The company describes tasks triggered by events or schedules, longer-running investigations and results delivered through an inbox or email. The new always-on experience is still headed to preview. The announcement therefore establishes the product direction and intended controls, rather than general availability of every capability shown."
+        },
+        {
+          "type": "paragraph",
+          "text": "The design combines an agent with information about a company’s data, business concepts and permissions. Databricks argues that enterprise work requires more than a model that can generate a plausible answer: an agent needs to know which definition of a metric is authoritative, which systems contain relevant information and what it may access or change. Genie’s expanded architecture brings those context and governance components closer to the execution of a task."
+        },
+        {
+          "type": "heading",
+          "text": "Business context is part of the proposed system"
+        },
+        {
+          "type": "paragraph",
+          "text": "Genie Ontology represents business concepts and their relationships, connecting terminology to the underlying data. Search is intended to help retrieve information across structured sources and documents. Together, these components aim to reduce the amount of company-specific interpretation an agent must infer from a short prompt. A diagram showing the combined architecture does not mean that all of its parts share the same maturity or release date."
+        },
+        {
+          "type": "paragraph",
+          "text": "Unity Catalog and Unity Gateway provide the surrounding access and action controls described in the announcement. Databricks discusses permissions, approval requirements and spending limits as ways to constrain autonomous work. Such controls can make an action reviewable and limit exposure, but their presence is not proof that an agent will always choose the right action. An organization still has to configure permissions and decide which tasks need human review."
+        },
+        {
+          "type": "paragraph",
+          "text": "The availability statements require care. The November 11 press release identifies existing Genie and Ontology as generally available, while placing the new always-on Genie experience and other named additions on a future preview or beta path. November release notes also describe availability for some related components separately. The safe interpretation is component-specific: the new autonomous mode is an announcement awaiting preview, rather than a claim that the full illustrated system is already available to every customer."
+        },
+        {
+          "type": "heading",
+          "text": "Evaluation needs to include the surrounding workflow"
+        },
+        {
+          "type": "paragraph",
+          "text": "Databricks presents performance claims for agents operating with enterprise context. Those claims depend on the company’s evaluation setup and should not be converted into a general productivity estimate for all businesses. Access to a well-organized workspace, useful definitions and appropriate tools can materially change an agent’s task. Comparing only the underlying model names would miss those differences, while comparing only a headline benchmark would hide them."
+        },
+        {
+          "type": "paragraph",
+          "text": "The development is significant because it treats persistent enterprise work as a combination of reasoning, retrieval, business definitions and controlled execution. It does not establish that autonomous agents can already take over an arbitrary business process. Customers assessing the announcement need to identify which components they can use now, which require preview access and which decisions remain subject to approval. Evidence from complete workflows, including failures and the cost of supervision, will be more informative than the launch description alone."
+        }
+      ],
+      "sources": [
+        {
+          "label": "Databricks: the new Genie",
+          "url": "https://www.databricks.com/blog/new-genie-autonomous-ai-complex-enterprise-work"
+        },
+        {
+          "label": "Databricks announcement and availability statement",
+          "url": "https://www.databricks.com/company/newsroom/press-releases/databricks-launches-new-always-genie-autonomous-ai-complex"
+        },
+        {
+          "label": "Databricks November product release notes",
+          "url": "https://docs.databricks.com/aws/en/release-notes/product/2026/november"
+        }
+      ]
+    },
+    {
+      "slug": "google-gemini-4-carbon-expanded-public-access",
+      "category": "Industry · Foundation Models",
+      "sortDate": "2026-11-10",
+      "dateLabel": "November 10, 2026",
+      "title": "Google expands Gemini 4 Carbon access beyond its initial cyber-defender rollout",
+      "summary": "Gemini 4 Carbon is reaching paying developers, enterprise customers and Google AI Ultra subscribers. The November 10 expansion includes introductory API pricing and an Antigravity agent-team preview; enhanced cyber access remains controlled.",
+      "image": {
+        "src": "ai-news/2026-11/images/google-gemini-4-carbon-official.jpg",
+        "alt": "Google’s official Gemini 4 Carbon artwork, showing an iridescent crystal against a blue background",
+        "caption": "Official Gemini 4 Carbon release artwork. Source: Google."
+      },
+      "content": [
+        {
+          "type": "paragraph",
+          "text": "Google expanded access to Gemini 4 Carbon on November 10, moving the model beyond the selected cyber defenders who received the initial release in late October. Paying developers can use Carbon through the Gemini API in Google AI Studio, while enterprise access is expanding through Gemini for business. Google AI Ultra subscribers are also receiving access across the Gemini app, AI Mode and Antigravity. This is an availability milestone for the previously announced model, rather than the introduction of a separate model generation."
+        },
+        {
+          "type": "paragraph",
+          "text": "The expansion puts Carbon into a wider range of software development and professional workflows. Google positions it for difficult reasoning and work that can require multiple steps, tools and checks. That positioning does not mean every request benefits from the most intensive reasoning setting. For teams evaluating the release, the useful comparison is whether Carbon completes their particular tasks reliably within their time and spending limits."
+        },
+        {
+          "type": "heading",
+          "text": "Introductory prices have an end date"
+        },
+        {
+          "type": "paragraph",
+          "text": "Google announced introductory API rates of $2 per million input tokens and $10 per million output tokens through November 30. The stated rates after that promotion are $4 and $20, respectively. Those are token prices, not a fixed price for completing a project. A task that generates more reasoning or requires repeated tool calls can still cost more even when the price of an individual token is lower."
+        },
+        {
+          "type": "paragraph",
+          "text": "That distinction also affects comparisons with other Gemini models. Google says Carbon can use more tokens while reasoning than Argon. An engineering team therefore needs to measure completed work, retries and elapsed time alongside token rates. The introductory offer can make experimentation less expensive, but it does not establish that Carbon will be the cheapest option for every production workload after the promotional period ends."
+        },
+        {
+          "type": "heading",
+          "text": "Agent teams arrive as a preview"
+        },
+        {
+          "type": "paragraph",
+          "text": "The announcement also introduces a /swarm preview in Antigravity. It coordinates agents with different responsibilities, separate workspaces and verification roles. The proposed benefit is to divide a larger software task among workers while retaining checks on their outputs. Because this is a preview, the announcement should be read as an opportunity to test a developing workflow, rather than evidence that unattended teams can already replace an established engineering process."
+        },
+        {
+          "type": "paragraph",
+          "text": "Google is extending Carbon to its AI for Science program as well. The program offers eligible researchers a period of free access, subject to selection and capacity. Adding a model to that program is distinct from making unrestricted research compute available to everyone. Researchers still need to establish whether the model helps with their discipline’s methods, data restrictions and reproducibility requirements."
+        },
+        {
+          "type": "paragraph",
+          "text": "The wider rollout also preserves a separate boundary around enhanced cybersecurity capabilities. Those remain subject to Google’s Fairwind controls; ordinary public access does not grant every capability offered to selected defenders. Google’s performance statements are vendor evaluations, rather than independent guarantees across all applications. The immediate change is that more users can now evaluate Carbon directly, with access conditions, preview status and the November pricing deadline all relevant to an adoption decision."
+        }
+      ],
+      "sources": [
+        {
+          "label": "Google: Gemini 4 Carbon availability and pricing",
+          "url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-4-carbon-now-available/"
+        },
+        {
+          "label": "Google Gemini API pricing",
+          "url": "https://ai.google.dev/gemini-api/docs/pricing"
+        }
+      ]
+    },
+    {
+      "slug": "anthropic-claude-sheets-whiteboards-data-rollout",
+      "category": "Industry · Enterprise AI",
+      "sortDate": "2026-11-10",
+      "dateLabel": "November 10, 2026",
+      "title": "Anthropic adds Sheets and Whiteboards betas as Claude Data reaches general availability",
+      "summary": "Claude’s workplace tools are expanding with collaborative spreadsheets, visual planning and data analysis. Availability differs by feature and plan, including a later November 19 activation date for Enterprise Data.",
+      "image": {
+        "src": "ai-news/2026-10/images/anthropic-official-wordmark.png",
+        "alt": "Anthropic’s official wordmark",
+        "caption": "Anthropic wordmark. Source: Anthropic. The logo identifies the publisher; it is not a product screenshot."
+      },
+      "content": [
+        {
+          "type": "paragraph",
+          "text": "Anthropic announced an expansion of Claude’s workplace tools on November 10, adding Sheets and Whiteboards in beta and moving Data into general availability. The products bring spreadsheets, visual planning and business analysis closer to the conversation in which a user asks Claude to perform work. Their release states differ, however: the announcement does not make every feature generally available or activate every Enterprise workspace immediately."
+        },
+        {
+          "type": "paragraph",
+          "text": "Sheets supports spreadsheet work such as formulas, multiple tabs and collaboration. Whiteboards provides a shared visual space for collecting and organizing ideas. Together, they extend the set of work products that can be developed with Claude beyond a conventional text answer. Their beta status remains relevant for organizations deciding whether to depend on them for recurring operational work, especially where spreadsheet correctness or access to shared material needs additional review."
+        },
+        {
+          "type": "heading",
+          "text": "Data and workspace settings follow different schedules"
+        },
+        {
+          "type": "paragraph",
+          "text": "Data, previously introduced as Dashboards in an October beta, is now generally available. Anthropic describes connections to sources such as warehouses and customer systems, with business definitions and data stories intended to help users interpret results. A general release for the product does not extend automatically to every associated capability: certified queries and live sharing remain in beta. A team should distinguish those developing features from the core Data availability announcement."
+        },
+        {
+          "type": "paragraph",
+          "text": "The tools are offered across paid plans, with Team access turned on by default. Enterprise controls are more selective. Sheets and Whiteboards start disabled for Enterprise, and Data is scheduled to turn on for Enterprise on November 19. Consequently, an employee reading the November 10 announcement may still need an administrator to enable a feature, or may need to wait for the scheduled rollout. The calendar date of the announcement is not the activation date for every customer."
+        },
+        {
+          "type": "paragraph",
+          "text": "Anthropic is also expanding interactive connectors, which can place connected applications inside a Claude workflow through the Model Context Protocol. This can reduce the need to move information manually between a conversation and an application. It also makes the permissions of each connection consequential: a useful interface does not by itself establish that a user should have access to every record or action exposed through a connected service."
+        },
+        {
+          "type": "heading",
+          "text": "More workflow integration, with administrative choices"
+        },
+        {
+          "type": "paragraph",
+          "text": "The connector ecosystem includes community contributions as well as integrations from established vendors. Its size should not be interpreted as a count of tools that Anthropic has independently certified for every enterprise use. Eligible Team and Enterprise workspaces also have a separate auto-connect beta. Administrators still need to decide which applications, accounts and spending permissions fit their organization’s use of Claude."
+        },
+        {
+          "type": "paragraph",
+          "text": "The announcement describes Claude Meetings as coming soon, so meeting capabilities should not be counted as a completed November 10 release. More broadly, the workplace expansion shows Anthropic pursuing a common environment for creating, discussing and analyzing business material. Customer examples can illustrate possible uses, but they do not establish a general productivity increase. The practical change is a broader set of tools to evaluate, with feature maturity, Enterprise activation dates and connector permissions determining what is actually ready in each workspace."
+        }
+      ],
+      "sources": [
+        {
+          "label": "Anthropic: Sheets, Whiteboards and Data",
+          "url": "https://claude.com/resources/articles/sheets-whiteboards-data"
+        },
+        {
+          "label": "Anthropic: workplace rollout and interactive connectors",
+          "url": "https://claude.com/resources/articles/more-ways-to-work-with-claude-sheets-whiteboards-and-interactive-connectors"
+        },
+        {
+          "label": "Claude Artifacts overview",
+          "url": "https://claude.com/features/artifacts"
+        }
+      ]
+    },
+    {
+      "slug": "google-alphaproof-code-signal-verification",
+      "category": "Research · Software Evaluation",
+      "sortDate": "2026-11-10",
+      "dateLabel": "November 10, 2026",
+      "title": "AlphaProof Code verifies security properties of Signal components at the machine-code level",
+      "summary": "Google DeepMind’s system generated Lean proofs for selected Signal cryptographic components compiled for AArch64 Linux. The result depends on human-approved specifications and explicit assumptions; it is not a proof that the entire Signal application has no bugs.",
+      "image": {
+        "src": "ai-news/2026-11/images/alphaproof-code-official-workflow.jpg",
+        "alt": "DeepMind’s workflow diagram showing specification review, executable code, proof agents and a proof-checking gatekeeper",
+        "caption": "Original AlphaProof Code workflow diagram. Source: Google DeepMind."
+      },
+      "content": [
+        {
+          "type": "paragraph",
+          "text": "Google DeepMind introduced AlphaProof Code on November 10, reporting machine-checked security proofs for selected cryptographic components used by Signal. The project analyzes an unmodified Rust implementation compiled into an AArch64 Linux binary. Its scope includes the PQXDH handshake and Triple Ratchet, rather than every part of the Signal application, every operating system or the full messaging service. The distinction is central to understanding what the verification establishes."
+        },
+        {
+          "type": "paragraph",
+          "text": "The system combines AI agents with the Lean proof assistant. Humans help formulate and approve the security specifications, after which proof agents construct arguments that Lean can check. A separate checking process determines whether the proof establishes the requested theorem. This arrangement gives generated reasoning a stricter acceptance test than a plausible natural-language explanation: a proposed proof must satisfy the formal checker against the definitions that were supplied."
+        },
+        {
+          "type": "heading",
+          "text": "Automation depends on an explicit specification"
+        },
+        {
+          "type": "paragraph",
+          "text": "DeepMind reports approximately 6.5 million lines of generated proof. The trusted definitions, specifications and machine semantics total roughly 26,000 lines, including about 18,000 in the project repository and 8,000 for the machine semantics. The large proof count describes the scale of the verification work, rather than a direct measure of security. A proof can establish only the properties expressed in its theorem and the system represented by its assumptions."
+        },
+        {
+          "type": "paragraph",
+          "text": "The project involved five people working over four weeks while agents ran continuously. Human work included specifying desired behavior and reviewing the formal statement of the problem. Describing the result as a system that needs no human security expertise would therefore miss an essential part of the method. The automation is substantial, but expert judgment still determines which claims should be proved and whether their formal versions match the intended protection."
+        },
+        {
+          "type": "paragraph",
+          "text": "The report addresses properties including authentication, forward secrecy, handshake secrecy and post-compromise security within its models. It also tests the method by reintroducing two previously fixed bugs into modified binaries and showing that the corresponding security properties no longer hold. These tests concern deliberately altered software; they are not disclosures of two newly discovered vulnerabilities in the current Signal release."
+        },
+        {
+          "type": "heading",
+          "text": "What remains outside the proof"
+        },
+        {
+          "type": "paragraph",
+          "text": "The trusted base includes Lean’s checker, the approved specification, machine and operating-system semantics, and assumptions or contracts for underlying cryptographic operations. The modeled execution environment also has limits. It does not make an unrestricted statement about every possible interaction with threads, signals, dynamically linked software or an arbitrary deployment platform. Those boundaries should accompany any claim that the system has verified production code."
+        },
+        {
+          "type": "paragraph",
+          "text": "The research offers a concrete example of AI contributing to formal software assurance at a scale that would be difficult to inspect line by line. Its importance is the combination of generated proofs, explicit security claims and independent mechanical checking. For security teams, the next question is whether similarly precise specifications and machine models can be developed for their own software. Successful verification of these Signal components is evidence for that workflow, while leaving application-wide correctness and deployment security as separate questions."
+        }
+      ],
+      "sources": [
+        {
+          "label": "Google DeepMind: introducing AlphaProof Code",
+          "url": "https://deepmind.google/blog/introducing-alphaproof-code/"
+        },
+        {
+          "label": "Research report: formal verification of Signal",
+          "url": "https://deepmind.google/documents/36/Formal_Verification_of_Signal_4.pdf"
+        }
+      ]
+    },
+    {
+      "slug": "openai-upwork-freelance-task-rebundling-report",
+      "category": "Employment · Workforce Research",
+      "sortDate": "2026-11-10",
+      "dateLabel": "November 10, 2026",
+      "title": "OpenAI and Upwork find broader AI freelance projects, with a larger budget premium than hourly-rate premium",
+      "summary": "A new report links AI-related freelance work with higher posted fixed-price budgets and more recorded hours. Its comparisons are descriptive, and a roughly 52% budget difference should not be read as a 52% increase in worker pay.",
+      "image": {
+        "src": "ai-news/2026-11/images/openai-upwork-budget-hours-figure.png",
+        "alt": "Report chart comparing raw and adjusted differences in fixed-price budgets, posted hourly rates and first-90-day hours",
+        "caption": "Original Exhibit 2.4 from the OpenAI–Upwork report. Adjusted differences are 52.4% for fixed-price budgets, 1.5% for posted hourly rates and 40.6% for hours in hired hourly contracts. Source: OpenAI and Upwork."
+      },
+      "content": [
+        {
+          "type": "paragraph",
+          "text": "OpenAI and Upwork released a report on November 10 examining how AI is changing the mix of work sought in the freelance marketplace. The analysis finds that AI-related projects are associated with broader combinations of tasks, larger posted fixed-price budgets and more recorded hours after hiring. Its results describe differences between observed projects. They do not show that adopting AI causes a particular increase in a worker’s wages or that the same pattern applies throughout the labor market."
+        },
+        {
+          "type": "paragraph",
+          "text": "The most striking price comparison concerns fixed-price budgets. After adjustments for work subcategory and posting month, AI-related posts have budgets about 52% higher than other posts. The corresponding difference in posted hourly rates is much smaller, about 1.5%. These are different measures: a client’s total project budget can rise because a project includes more work, while the advertised price of an hour changes little."
+        },
+        {
+          "type": "heading",
+          "text": "Project scope helps explain the comparison"
+        },
+        {
+          "type": "paragraph",
+          "text": "For hired hourly contracts with positive recorded hours, the report finds approximately 41% more hours during the first 90 days. That sample excludes posts that never lead to such a contract and contracts with no recorded hours. The analysis also trims the highest 1% of prices and uses adjustments to make comparisons more meaningful. Those choices improve the description of the data, but they do not turn it into a randomized experiment or a complete measure of realized earnings."
+        },
+        {
+          "type": "paragraph",
+          "text": "The report’s price and hours data extend through April 2026. Its November publication date should therefore not be mistaken for a measurement of this week’s freelance market. Clients, project complexity and the people selecting into AI work can differ in ways that statistical controls do not fully remove. The larger budget and hours figures are consistent with more expansive assignments, rather than proof that an AI label alone generates a premium."
+        },
+        {
+          "type": "paragraph",
+          "text": "The researchers also examine changes in task combinations. Their effective count of task categories in the AI-related market rises from 14.6 in early 2023 to 21.2 in late 2025, an increase of about 45%. This measures the diversity of the market’s task mix. It does not mean that each individual job contains 45% more tasks. At the individual-post level, the reported comparison is much smaller: 3.35 tasks versus 3.19, or roughly 5% more."
+        },
+        {
+          "type": "heading",
+          "text": "A changing bundle of work, rather than a wage forecast"
+        },
+        {
+          "type": "paragraph",
+          "text": "The analysis suggests that AI work often connects activities previously purchased separately, making integration and the coordination of several skills relevant to project scope. Its category comparisons also show substantial variation rather than one universal direction. Changes in a category’s share of marketplace work are not, by themselves, counts of jobs eliminated or created across the economy. Upwork clients and freelancers are a particular population, not a representative sample of all employers and workers."
+        },
+        {
+          "type": "paragraph",
+          "text": "For freelancers, the report is useful evidence about how clients describe and package AI assignments. For employers, it highlights why an advertised hourly rate is an incomplete measure of project cost. The strongest supported conclusion is that AI-related freelance work can involve a different bundle of responsibilities and a larger total engagement. Establishing a causal effect on pay, employment or productivity would require additional evidence beyond the comparisons in this report."
+        }
+      ],
+      "sources": [
+        {
+          "label": "OpenAI: AI’s effect on freelance work",
+          "url": "https://openai.com/index/ai-effect-on-freelance-work/"
+        },
+        {
+          "label": "Full OpenAI–Upwork research report",
+          "url": "https://cdn.openai.com/pdf/openai-upwork-full-report.pdf"
+        }
+      ]
+    },
+    {
+      "slug": "openai-business-hub-business-agents-beta",
+      "category": "Industry · AI Products",
+      "sortDate": "2026-11-10",
+      "dateLabel": "November 10, 2026",
+      "title": "OpenAI opens a Business Hub beta and limits Business Agents to eligible U.S. businesses",
+      "summary": "Businesses can claim and verify their presence in ChatGPT, while a narrower group can create customer-facing Business Agents. Verification alone does not grant agent access, and business representatives remain distinct from ChatGPT’s independent responses.",
+      "image": {
+        "src": "ai-news/2026-10/images/openai-official-logo-on-dark.svg",
+        "alt": "OpenAI’s official logo on a dark background",
+        "caption": "OpenAI logo. Source: OpenAI. The image identifies the publisher; it is not a Business Hub interface."
+      },
+      "content": [
+        {
+          "type": "paragraph",
+          "text": "OpenAI introduced a beta for businesses in ChatGPT on November 10, combining tools for managing business information with a more limited program for customer-facing agents. Through Business Hub, eligible organizations can claim and verify their business presence and provide information that helps ChatGPT represent their offerings. Business Agents have a narrower initial audience: eligible U.S. ecommerce and online-service businesses. Claiming a profile does not automatically make an organization eligible to deploy an agent."
+        },
+        {
+          "type": "paragraph",
+          "text": "The information-management side includes organization details and feeds for information such as prices and availability. OpenAI also describes a Shopify connection that can support verification and the exchange of business information. These mechanisms give a business a more direct way to maintain the material associated with its presence. They do not establish that every answer containing that business will be accurate or that a business can dictate ChatGPT’s independent recommendations."
+        },
+        {
+          "type": "heading",
+          "text": "A business representative has a defined role"
+        },
+        {
+          "type": "paragraph",
+          "text": "Business Agents are designed to represent the participating company when a user chooses to engage with it. OpenAI’s policy requires that role to be clear. An agent speaking on behalf of a merchant has a different purpose from ChatGPT helping a user compare options independently. The policy also treats advertising and sponsorship as material that must be identified, rather than allowing a company’s representative to be presented as a neutral recommendation."
+        },
+        {
+          "type": "paragraph",
+          "text": "That separation matters because a useful sales or support interaction can still involve competing interests. A company may want to explain its own products, while a user may want to compare alternatives or understand a limitation. The new program establishes a channel for the business interaction; it does not provide evidence that an agent’s advice is impartial or that an automated representative will resolve every customer problem correctly."
+        },
+        {
+          "type": "paragraph",
+          "text": "OpenAI says participating businesses receive aggregated information about discovery, including mentions, clicks and topics, subject to minimum thresholds. It does not provide businesses with individual users’ ChatGPT conversations or their agent chats. The distinction between aggregated business analytics and access to a person’s conversation is part of the product’s stated privacy boundary. A business should not interpret a dashboard as permission to inspect the underlying private exchanges."
+        },
+        {
+          "type": "heading",
+          "text": "Beta access and actions remain bounded"
+        },
+        {
+          "type": "paragraph",
+          "text": "The policy places conditions on follow-up and actions performed for a user. Optional follow-up and supported transactional features depend on user authorization and approved capabilities. The release should not be read as blanket permission for an agent to make payments, bookings or other commitments autonomously. Verification establishes aspects of a business’s identity; it does not remove the need for consent or the restrictions attached to an action."
+        },
+        {
+          "type": "paragraph",
+          "text": "The announcement is therefore a product and distribution development, rather than a new foundation-model release. Its immediate significance is that business information and company representatives can become more directly integrated into a ChatGPT journey. The beta does not yet demonstrate an independent increase in conversion, customer satisfaction or revenue. Organizations evaluating it need to distinguish profile access from agent eligibility, and users need to know when they are speaking with a representative whose role is to serve a particular business."
+        }
+      ],
+      "sources": [
+        {
+          "label": "OpenAI: introducing businesses in ChatGPT",
+          "url": "https://openai.com/index/introducing-businesses-chatgpt/"
+        },
+        {
+          "label": "OpenAI Business Agents policy",
+          "url": "https://openai.com/policies/business-agents-policy/"
+        }
+      ]
+    },
+    {
       "slug": "weekly-ai-november-2-8",
       "category": "AI Weekly",
       "sortDate": "2026-11-09",
