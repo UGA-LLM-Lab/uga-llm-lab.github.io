@@ -2,6 +2,319 @@ window.AI_NEWS_MONTH_DATA["2026-11"] = {
   "label": "November 2026",
   "articles": [
     {
+      "slug": "openai-chatgpt-wallet-dots-us-rollout",
+      "category": "Industry · AI Agents",
+      "sortDate": "2026-11-13",
+      "dateLabel": "November 13, 2026",
+      "title": "OpenAI launches ChatGPT Wallet for approved purchases through dots",
+      "summary": "The initial rollout is limited to eligible U.S. ChatGPT Pro subscribers aged 18 and older. Payment tokens replace actual card details, while users review and approve each purchase with a security check; broader advance delegation remains a future plan.",
+      "image": {
+        "src": "ai-news/2026-10/images/openai-official-logo-on-dark.svg",
+        "alt": "OpenAI’s official logo on a dark background",
+        "caption": "OpenAI logo. Source: OpenAI. The logo identifies the publisher and is not a Wallet interface."
+      },
+      "content": [
+        {
+          "type": "paragraph",
+          "text": "OpenAI launched ChatGPT Wallet on November 13, adding a payment mechanism for purchases made through its dots agents. The initial rollout is limited to ChatGPT Pro subscribers aged 18 and older in the United States with eligible U.S.-issued cards. OpenAI developed the service with American Express, Mastercard and Visa. Users must review and approve each agent-initiated purchase, so the launch does not give an agent unrestricted authority to spend money on its own."
+        },
+        {
+          "type": "paragraph",
+          "text": "The workflow separates saving a card from authorizing a transaction. A user adds card details through a secure form, rather than placing them in the conversation. When an agent is ready to check out, the user reviews the items, total and selected card, then approves the purchase with a security check such as Face ID or a fingerprint. Enrolling a card does not constitute approval of every later order. The help documentation separately notes that agreeing to a merchant’s recurring-payment terms can authorize later merchant charges."
+        },
+        {
+          "type": "heading",
+          "text": "Payment tokens replace the actual card details"
+        },
+        {
+          "type": "paragraph",
+          "text": "After approval, the payment network supplies a token with substitute payment details that can be used in a checkout flow. The business and agent receive those substitutes rather than the user’s actual card details. This is a narrower claim than saying that no payment information is stored or processed anywhere: the wallet still needs to manage the enrolled card and connect the authorized transaction to the issuer’s systems."
+        },
+        {
+          "type": "paragraph",
+          "text": "OpenAI says eligible transactions retain existing card rewards and protections for qualifying disputes. Businesses continue to handle their own pricing, fulfillment, returns and customer relationships. The release does not establish that every transaction will succeed or that every dispute will qualify for protection. Card eligibility, merchant systems and the issuer’s handling of a transaction remain part of the purchase process."
+        },
+        {
+          "type": "paragraph",
+          "text": "Wallet initially works in conversations with a dot, rather than ordinary Chat, Work or standalone Codex threads. Approval also requires a supported device with biometric verification. The help documentation distinguishes the product from the payment method used for a ChatGPT subscription and from a stored account balance. These are separate capabilities, even though their names and billing interfaces can appear in the same broader service."
+        },
+        {
+          "type": "heading",
+          "text": "Merchant compatibility remains a deployment constraint"
+        },
+        {
+          "type": "paragraph",
+          "text": "OpenAI is also publishing guidance for businesses about agent access, product information and payment-risk systems. It encourages sites to recognize signed agent requests and work with payment providers on legitimate transactions that might otherwise be declined. Browser-based access does not require a merchant plugin, although a business can provide one for actions such as checking stock or managing a cart. Compatibility with existing checkout systems is an objective of the rollout, rather than a promise that every store already works."
+        },
+        {
+          "type": "paragraph",
+          "text": "The help documentation warns that a conversation error alone does not establish whether an order completed; the merchant’s confirmation or order record remains relevant. OpenAI describes broader advance delegation under spending or category limits as a future direction. The November 13 change is the more bounded ability to let an agent complete an individually approved payment. Its reliability and usefulness will depend on real transactions, merchant acceptance and recovery from failures, rather than the launch description alone."
+        }
+      ],
+      "sources": [
+        {
+          "label": "OpenAI: introducing ChatGPT Wallet",
+          "url": "https://openai.com/index/introducing-chatgpt-wallet/"
+        },
+        {
+          "label": "OpenAI: making purchases with ChatGPT Wallet",
+          "url": "https://help.openai.com/en/articles/20001654-making-purchases-with-chatgpt-wallet"
+        }
+      ]
+    },
+    {
+      "slug": "ggml-llama-cpp-1-library-release",
+      "category": "Industry · Developer Tools",
+      "sortDate": "2026-11-13",
+      "dateLabel": "November 13, 2026",
+      "title": "llama.cpp reaches version 1.0 with explicit rules for API compatibility",
+      "summary": "The November 13 release gives the C/C++ inference libraries formal versioning boundaries and removes deprecated interfaces. It also updates runtime, model and server capabilities; the milestone is a software release, not a new foundation model.",
+      "image": {
+        "src": "ai-news/2026-11/images/llama-cpp-v1-official.png",
+        "alt": "The maintainers’ official llama.cpp version 1.0 release artwork",
+        "caption": "Official llama.cpp v1.0 release artwork. Source: ggml-org."
+      },
+      "content": [
+        {
+          "type": "paragraph",
+          "text": "The ggml-org maintainers released llama.cpp version 1.0.0 on November 13, marking a formal compatibility milestone for an inference project used by local AI applications and other software. The release covers libllama, the C/C++ language-model inference library, alongside version 1.0.0 of its underlying ggml tensor library. It does not introduce a new foundation model or establish a new level of model intelligence. The central change is a clearer contract for developers who depend on the libraries."
+        },
+        {
+          "type": "paragraph",
+          "text": "Under the announced versioning rules, a breaking change to the public C interface triggers a major-version increase. Backward-compatible features, backend updates, model support and interface additions use minor releases; bug fixes without an interface change use patch releases. The maintainers also commit to making API and binary-compatibility boundaries more visible. That gives downstream developers a more explicit signal about which updates may require integration work, while leaving room for future major changes."
+        },
+        {
+          "type": "heading",
+          "text": "Version 1.0 includes interface changes to review"
+        },
+        {
+          "type": "paragraph",
+          "text": "The release removes deprecated public functions and promotes the NextN speculative-decoding interface into the main header. Applications that still use removed functions need to migrate, even though the new version is presented as a stronger foundation for future stability. A version number cannot by itself establish that an existing binding, application or deployment can be upgraded without testing. The relevant question is which public interfaces that application actually calls."
+        },
+        {
+          "type": "paragraph",
+          "text": "The runtime update also includes FP8 key-value caches, a host-memory cache for mixture-of-experts models and support for loading certain external model shards. These changes address different memory and execution constraints. Their practical effects depend on a model’s architecture, the selected backend and available hardware. The release notes do not provide grounds for assigning one universal speedup to every local AI workload."
+        },
+        {
+          "type": "paragraph",
+          "text": "Model coverage expands as well, with additional text, vision and speech architectures listed in the release. The server gains an OpenAI-compatible audio-speech endpoint, and the maintainers describe changes to its web interface. Support in the runtime is distinct from supplying the corresponding model weights: users still need suitable model files and a configuration that supports the desired capability. A shared endpoint format also does not make all models interchangeable in quality or behavior."
+        },
+        {
+          "type": "heading",
+          "text": "Distribution and server controls remain separate concerns"
+        },
+        {
+          "type": "paragraph",
+          "text": "The maintainers describe distribution routes across desktop, server and mobile environments, including pre-release artifacts and platform package channels. Their announcement should not be interpreted as a guarantee that every channel publishes an identical build at the same instant or enables every backend feature. The project’s portable C/C++ implementation and optimized backends are the foundation for that breadth, rather than evidence of equal performance on all devices."
+        },
+        {
+          "type": "paragraph",
+          "text": "The release notes also report server hardening involving network requests, cross-origin behavior and tool cancellation. These are implementation changes to assess within a deployment, rather than a blanket security guarantee. For downstream developers, version 1.0’s importance is the combination of a concrete update and a stated policy for managing later incompatibilities. Reviewing removed interfaces, model requirements and server settings remains necessary when moving an existing product to the new libraries."
+        }
+      ],
+      "sources": [
+        {
+          "label": "ggml-org: llama.cpp v1.0 announcement",
+          "url": "https://huggingface.co/blog/ggml-org/llama-cpp-v1"
+        },
+        {
+          "label": "llama.cpp v1.0.0 release notes",
+          "url": "https://github.com/ggml-org/llama.cpp/releases/tag/v1.0.0"
+        },
+        {
+          "label": "ggml v1.0.0 release",
+          "url": "https://github.com/ggml-org/ggml/releases/tag/v1.0.0"
+        }
+      ]
+    },
+    {
+      "slug": "google-wallet-gemini-read-only-finance-rollout",
+      "category": "Industry · AI Products",
+      "sortDate": "2026-11-13",
+      "dateLabel": "November 13, 2026",
+      "title": "Google connects Wallet to Gemini for optional, read-only spending insights",
+      "summary": "The November 13 rollout lets U.S. Gemini app users connect Wallet and optionally link financial accounts through Plaid. Gemini can analyze the connected information, but this integration cannot move, manage or invest the user’s money.",
+      "image": {
+        "src": "ai-news/2026-11/images/google-wallet-gemini-official.jpg",
+        "alt": "Google’s official illustration for the Wallet connection in Gemini",
+        "caption": "Official artwork for the Google Wallet connection in Gemini. Source: Google."
+      },
+      "content": [
+        {
+          "type": "paragraph",
+          "text": "Google announced a Google Wallet connection for Gemini on November 13, expanding the financial information that users can choose to make available to the assistant. The feature is rolling out to Gemini app users in the United States across web and mobile, including Android and iOS. Its purpose is to help answer questions about spending and budgeting. The connection is read-only: Google says Gemini cannot use it to move, manage or invest a user’s money."
+        },
+        {
+          "type": "paragraph",
+          "text": "The release sits within Personal Intelligence, Google’s system for connecting information from applications to a more personalized Gemini experience. Users choose whether to connect Wallet in the Connected Apps settings. They can also opt to link financial accounts from banks and credit cards to Wallet through Plaid. That additional link can broaden the information available for analysis, but it is an optional step rather than a prerequisite that every Gemini user has already completed."
+        },
+        {
+          "type": "heading",
+          "text": "The feature analyzes information the user connects"
+        },
+        {
+          "type": "paragraph",
+          "text": "Google’s examples include reviewing spending over a previous quarter, finding recurring subscriptions and planning a holiday budget using earlier transactions. Gemini can present dynamic charts covering categories such as cash flow and budgets. The intended workflow is to ask questions in the conversation, including by referring to Google Wallet, rather than manually assembling the same information from several account screens."
+        },
+        {
+          "type": "paragraph",
+          "text": "Those examples describe what the integration is designed to help users examine. They do not establish that every account will supply complete history or that every transaction will be categorized correctly. The usefulness of a comparison depends on which accounts are connected and what information is available. An assistant’s summary of that material should therefore be understood as an analysis of the connected records, rather than a complete view of a person’s financial position by default."
+        },
+        {
+          "type": "paragraph",
+          "text": "The distinction between reading and acting is particularly important for this announcement. Identifying a recurring charge is different from canceling the underlying subscription. Suggesting a budget is different from transferring money between accounts or making an investment. Google explicitly limits the connection to reading information, so those examples should not be presented as evidence that Gemini can autonomously carry out financial actions through Wallet."
+        },
+        {
+          "type": "heading",
+          "text": "Connection controls and remembered preferences are separate"
+        },
+        {
+          "type": "paragraph",
+          "text": "Google says the Wallet connection can be turned on or off at any time. The same announcement describes a Memory Summary interface that lets users inspect and edit saved preferences, interests and ongoing goals where Personal Intelligence is available. Google’s help documentation adds that disconnecting an app does not delete Gemini Apps Activity. Depending on activity settings, processed transaction excerpts and inferences can be used for model improvement and reviewed by people. Google distinguishes that processing from training directly on Wallet’s source data. Connection controls, retained activity and remembered preferences therefore need to be understood separately."
+        },
+        {
+          "type": "paragraph",
+          "text": "The rollout is a consumer-product integration, not a new Gemini model release or an independently validated financial-planning service. Its practical change is to bring selected spending information into the same interface where a user asks questions and explores possible budgets. Availability is initially tied to the U.S. rollout, and access to a particular account still depends on the chosen connection. The release’s value will rest on the accuracy and usefulness of those source-based explanations, within the stated read-only boundary."
+        }
+      ],
+      "sources": [
+        {
+          "label": "Google: connect Wallet to Gemini for personal finance insights",
+          "url": "https://blog.google/innovation-and-ai/products/gemini-app/google-wallet-gemini-app/"
+        },
+        {
+          "label": "Gemini Apps Help: personalization with Connected Apps",
+          "url": "https://support.google.com/gemini/answer/16836988"
+        }
+      ]
+    },
+    {
+      "slug": "suno-bridge-ableton-live-mac-beta",
+      "category": "Industry · Audio AI",
+      "sortDate": "2026-11-13",
+      "dateLabel": "November 13, 2026",
+      "title": "Suno launches Bridge beta for generating new parts inside Ableton Live sessions",
+      "summary": "The standalone Mac app is initially compatible with Ableton Live 12 and included with Premier subscriptions. It uses uploaded session context to generate instrument and vocal parts for the timeline; Windows and other DAW support remain future plans.",
+      "image": {
+        "src": "ai-news/2026-11/images/suno-bridge-official.jpg",
+        "alt": "Suno’s official Bridge artwork showing its music-production interface",
+        "caption": "Official Suno Bridge release artwork. Source: Suno."
+      },
+      "content": [
+        {
+          "type": "paragraph",
+          "text": "Suno introduced Bridge on November 13, launching a beta application that connects its music-generation models with an existing production session. The initial version is a standalone Mac app compatible with Ableton Live 12 and included with Suno Premier subscriptions. It lets a user request new instrument or vocal parts and place the generated audio on the session’s timeline. The release does not extend that support to every digital audio workstation or operating system."
+        },
+        {
+          "type": "paragraph",
+          "text": "Bridge runs alongside Ableton Live, with both applications open. A producer enters a prompt in Bridge, and the system uses the musical context of the session to generate a new part. Suno says the output is designed to fit the track’s tempo, key, harmonic content, style and groove. Those are the company’s descriptions of the intended behavior, rather than independently measured guarantees that every generated part will fit a production without adjustment."
+        },
+        {
+          "type": "heading",
+          "text": "Session synchronization includes a cloud data flow"
+        },
+        {
+          "type": "paragraph",
+          "text": "Suno explains that synchronization involves uploading session files so its service can understand the track’s musical context. Bridge is therefore a local application connected to cloud generation, rather than a release of model weights for fully offline music creation. That data flow is relevant for anyone deciding whether a particular session is suitable for the workflow, especially when the material is unfinished or shared with collaborators."
+        },
+        {
+          "type": "paragraph",
+          "text": "Users define the generation window with loop start and end markers in Ableton’s Arrangement View. For example, the selected bars can determine where an eight-bar part should begin and how long it should run. The output is then placed on the timeline, reducing the manual sequence of exporting, downloading and aligning a file. Defining a useful region and deciding whether the generated material belongs in the song remain creative choices for the producer."
+        },
+        {
+          "type": "paragraph",
+          "text": "The feature creates new material rather than simply extracting an existing instrument from a finished recording. Suno describes uses such as adding instrumentation to an unfinished session, trying a different musical direction or generating a missing vocal part. Once placed in Ableton, the audio can participate in the session’s existing effects, routing and plugin workflow. Bridge itself should not be confused with a universal VST or Audio Unit plugin that runs inside every host."
+        },
+        {
+          "type": "heading",
+          "text": "Initial access is limited to a defined setup"
+        },
+        {
+          "type": "paragraph",
+          "text": "The launch and product pages specify Mac, Ableton Live 12 and a Premier subscription. The help page recommends Live 12 and confirms that Windows is not currently supported. Suno plans to expand to other operating systems and DAWs, but those plans are separate from what is available in this beta. A public download does not mean that a free Suno account or an unrelated production application has the same access."
+        },
+        {
+          "type": "paragraph",
+          "text": "Bridge’s contribution is a closer connection between generative audio and the session a musician is already editing. Suno says conversations with artists, producers and songwriters shaped the product, but it does not report a controlled study of production time, musical quality or professional outcomes. The November 13 release gives eligible users a way to test that workflow directly. Its usefulness will depend on the resulting audio and the amount of editing needed to turn a generated suggestion into an accepted part of the track."
+        }
+      ],
+      "sources": [
+        {
+          "label": "Suno: introducing Bridge",
+          "url": "https://suno.com/blog/introducing-bridge"
+        },
+        {
+          "label": "Suno Bridge product and availability page",
+          "url": "https://suno.com/bridge"
+        },
+        {
+          "label": "Suno: getting started with Bridge",
+          "url": "https://help.suno.com/en/articles/14695169"
+        }
+      ]
+    },
+    {
+      "slug": "eu-dublin-leaders-ai-competitiveness-safety-discussion",
+      "category": "Industry · AI Governance",
+      "sortDate": "2026-11-13",
+      "dateLabel": "November 13, 2026",
+      "title": "EU leaders debate AI competitiveness, safety and jobs at the Dublin summit",
+      "summary": "The November 13 meeting addressed investment, infrastructure, adoption and advanced-AI governance. The Council’s report also identifies AI’s impact on jobs as the planned theme of a 2027 social summit; the discussions do not establish a new funding allocation or a measured employment effect.",
+      "image": {
+        "src": "ai-news/2026-11/images/ireland-eu-flags-official.webp",
+        "alt": "Irish and European Union flags in the presidency’s official stock photograph",
+        "caption": "Official stock photograph used by Ireland’s EU Council presidency for its meeting announcement. Source: Ireland 2026 EU Presidency. This is not a photograph of the November 13 discussions."
+      },
+      "content": [
+        {
+          "type": "paragraph",
+          "text": "European Union leaders met in Dublin on November 13 for an informal European Council summit that placed artificial intelligence at the center of a strategic discussion. The Council’s completed meeting report describes two connected priorities: using AI to strengthen European competitiveness and addressing its wider consequences for society, security and trust. The meeting is a political coordination milestone, rather than evidence that a new AI law or a specified investment program was enacted that day."
+        },
+        {
+          "type": "paragraph",
+          "text": "Ireland’s Taoiseach Micheál Martin hosted the leaders, with European Council President António Costa chairing the meeting. Mistral AI chief executive Arthur Mensch and Nobel laureate Geoffrey Hinton joined the discussions, bringing industry and research perspectives. The gathering followed the November 12 European Political Community summit, a separate event. Keeping those dates distinct matters because the two meetings involved different formats and agendas, even though both took place in Dublin."
+        },
+        {
+          "type": "heading",
+          "text": "Investment and infrastructure were central to the competitiveness discussion"
+        },
+        {
+          "type": "paragraph",
+          "text": "The Council says leaders examined how to mobilize public and private investment, build necessary infrastructure and strengthen European capabilities across the AI value chain. Their discussion also covered critical dependencies and access to clean, affordable energy. These issues link the development of models to practical conditions for running and adopting them. A political commitment to examine those constraints does not, by itself, establish that the required capacity has been financed or built."
+        },
+        {
+          "type": "paragraph",
+          "text": "Leaders also considered faster adoption by European businesses and public administrations. Costa pointed to existing initiatives and the role of the next long-term EU budget, including the proposed European Competitiveness Fund. The meeting report does not supply a new quantified AI funding award. The relevant distinction is between identifying a future financing priority and approving an amount that institutions or companies can already spend."
+        },
+        {
+          "type": "heading",
+          "text": "Safety and labor-market effects remain subjects for further work"
+        },
+        {
+          "type": "paragraph",
+          "text": "With Hinton, the leaders discussed fundamental rights, children’s rights, democratic processes and the effects of AI on Europe’s social model and labor markets. Market concentration and cybersecurity were also on the agenda. These are the issues participants considered, rather than findings that the meeting independently measured. The report does not establish a number of jobs created or displaced, or validate the productivity benefits that policymakers hope to obtain."
+        },
+        {
+          "type": "paragraph",
+          "text": "The leaders exchanged views on international cooperation and safeguards for advanced AI. Costa referred to the existing AI Act as a basis for contributing to global governance. That reference should not be confused with the adoption of a new international agreement or an amendment to the Act at this informal meeting. The stated objective is to connect European experience with broader standards and responsible deployment."
+        },
+        {
+          "type": "paragraph",
+          "text": "The Council’s account also says AI and its impact on jobs will be the central theme of the 2027 social summit, bringing together EU institutions and social partners. That is a future agenda commitment, not an observed labor-market outcome. The November 13 meeting makes the combination of competitiveness, infrastructure and social consequences more prominent at leaders’ level. Concrete follow-through will depend on later budget choices, policy decisions and evidence about how AI is actually adopted across firms and public services."
+        }
+      ],
+      "sources": [
+        {
+          "label": "European Council: November 13 meeting results",
+          "url": "https://www.consilium.europa.eu/en/meetings/european-council/2026/11/13/"
+        },
+        {
+          "label": "Ireland’s presidency: meeting announcement",
+          "url": "https://irish-presidency.consilium.europa.eu/en/news/taoiseach-micheal-martin-hosts-informal-meeting-of-the-european-council/"
+        }
+      ]
+    },
+    {
       "slug": "google-gemini-4-hydrogen-release",
       "category": "Industry · Foundation Models",
       "sortDate": "2026-11-12",
