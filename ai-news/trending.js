@@ -1,125 +1,125 @@
 window.AI_NEWS_TRENDS = {
   "title": "Research Attention",
-  "period": "November 2–8, 2026",
-  "comparison": "Compared with October 26–November 1",
-  "updated": "November 9, 2026",
-  "note": "Topic shares across 206 Hugging Face recommendations, compared with 214 previously. Unchanged attention-index-v1; 100 means unchanged share. Topics overlap. Platform attention is not all research, adoption or hiring.",
+  "period": "November 9–15, 2026",
+  "comparison": "Compared with November 2–8",
+  "updated": "November 16, 2026",
+  "note": "Topic shares across 167 Hugging Face recommendations, compared with 206 previously. Unchanged attention-index-v1; 100 means unchanged share. Topics overlap. Platform attention is not all research, adoption or hiring.",
   "items": [
     {
       "label": "Agents & tool use",
-      "index": 111,
-      "share": 31.1,
-      "count": 64,
-      "direction": "up",
-      "state": "Rising"
+      "index": 75,
+      "share": 23.4,
+      "count": 39,
+      "direction": "down",
+      "state": "Falling"
     },
     {
       "label": "Vision & multimodality",
-      "index": 104,
-      "share": 28.2,
-      "count": 58,
-      "direction": "flat",
-      "state": "Broadly stable"
+      "index": 70,
+      "share": 19.8,
+      "count": 33,
+      "direction": "down",
+      "state": "Falling"
     },
     {
-      "label": "Efficiency & inference",
-      "index": 190,
-      "share": 16.0,
-      "count": 33,
+      "label": "Evaluation & verification",
+      "index": 145,
+      "share": 16.2,
+      "count": 27,
       "direction": "up",
       "state": "Rising"
     },
     {
-      "label": "Evaluation & verification",
-      "index": 58,
-      "share": 11.2,
-      "count": 23,
+      "label": "Efficiency & inference",
+      "index": 90,
+      "share": 14.4,
+      "count": 24,
       "direction": "down",
       "state": "Falling"
     },
     {
       "label": "Robotics & embodied AI",
-      "index": 85,
-      "share": 8.7,
-      "count": 18,
-      "direction": "down",
-      "state": "Falling"
-    },
-    {
-      "label": "Reasoning & mathematics",
-      "index": 83,
-      "share": 5.8,
-      "count": 12,
-      "direction": "down",
-      "state": "Falling"
-    },
-    {
-      "label": "Self-improvement & evolution",
-      "index": 114,
-      "share": 5.3,
-      "count": 11,
-      "direction": "up",
-      "state": "Rising"
-    },
-    {
-      "label": "Speech & audio",
-      "index": 173,
-      "share": 4.9,
-      "count": 10,
+      "index": 110,
+      "share": 9.6,
+      "count": 16,
       "direction": "up",
       "state": "Rising"
     },
     {
       "label": "Coding & software",
-      "index": 119,
-      "share": 3.9,
-      "count": 8,
+      "index": 154,
+      "share": 6.0,
+      "count": 10,
       "direction": "up",
       "state": "Rising"
     },
     {
       "label": "Memory & context",
-      "index": 83,
-      "share": 3.9,
+      "index": 123,
+      "share": 4.8,
       "count": 8,
+      "direction": "up",
+      "state": "Rising"
+    },
+    {
+      "label": "Safety & reliability",
+      "index": null,
+      "share": 3.6,
+      "count": 6,
+      "direction": "watch",
+      "state": "Watching"
+    },
+    {
+      "label": "Reasoning & mathematics",
+      "index": 51,
+      "share": 3.0,
+      "count": 5,
+      "direction": "down",
+      "state": "Falling"
+    },
+    {
+      "label": "Self-improvement & evolution",
+      "index": 56,
+      "share": 3.0,
+      "count": 5,
       "direction": "down",
       "state": "Falling"
     },
     {
       "label": "Biology & medicine",
       "index": null,
-      "share": 1.9,
-      "count": 4,
+      "share": 1.8,
+      "count": 3,
       "direction": "watch",
       "state": "Watching"
     },
     {
-      "label": "Safety & reliability",
+      "label": "Speech & audio",
       "index": null,
-      "share": 1.9,
-      "count": 4,
+      "share": 0.0,
+      "count": 0,
       "direction": "watch",
       "state": "Watching"
     }
   ]
 };
 window.AI_NEWS_WEEKLY_FEATURE = {
-  "analysisId": "2026-11-02-to-2026-11-08",
+  "analysisId": "2026-11-09-to-2026-11-15",
   "sections": [
     "Research",
     "Industry",
     "Hiring / Talent"
   ],
-  "title": "Model access, research acceleration and workforce evidence",
-  "summary": "November 2–8 brought new model-access routes, consumer deployment and closer scrutiny of research acceleration. Workforce evidence remains mixed, with employment, advertisements and announced plans answering different questions.",
-  "coverAlt": "Thinking Machines Lab’s official release artwork for Inkling 2 Small.",
+  "title": "Checked research, model choices and workforce evidence",
+  "summary": "November 9–15 brought new model choices, machine-checked software proofs, cell-specific biological prediction and an interim leadership transition at NVIDIA. Their practical effects depend on access, verification and workflow costs; employment forecasts remain distinct from observed jobs and advertisements.",
+  "coverAlt": "Anthropic’s official artwork for Claude Fable 5.2 and Claude Mythos 5.2",
   "metrics": [
     {
-      "value": "206",
+      "value": "167",
       "label": "recommendations sampled"
     },
     {
-      "value": "64",
+      "value": "39",
       "label": "agent & tool-use papers"
     },
     {

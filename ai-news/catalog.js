@@ -6,6 +6,8 @@
  */
 window.AI_NEWS_CATALOG = {
   weeklyAnalyses: [
+    {id: "2026-11-09-to-2026-11-15", label: "November 9–15, 2026", data: "ai-news/weekly/2026-11-09-to-2026-11-15.json", reviewSlug: "weekly-ai-november-9-15", cover: "ai-news/2026-11/images/anthropic-fable-mythos-52-official.jpg"},
+
     {id: "2026-11-02-to-2026-11-08", label: "November 2–8, 2026", data: "ai-news/weekly/2026-11-02-to-2026-11-08.json", reviewSlug: "weekly-ai-november-2-8", cover: "ai-news/2026-11/images/inkling-2-small-official-release.png"},
 
     {id: "2026-10-26-to-2026-11-01", label: "October 26–November 1, 2026", data: "ai-news/weekly/2026-10-26-to-2026-11-01.json", reviewSlug: "weekly-ai-october-26-november-1", cover: "ai-news/2026-11/images/apple-intelligence-china-official-announcement.jpg"},

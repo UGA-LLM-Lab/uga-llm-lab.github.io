@@ -1,0 +1,54 @@
+{
+  "title": "Employer advertisement panel",
+  "period": [
+    "2026-11-09",
+    "2026-11-15"
+  ],
+  "comparison": [
+    "2026-11-02",
+    "2026-11-08"
+  ],
+  "timezone": "America/New_York",
+  "status": "Watching",
+  "index": null,
+  "comparison_eligible": false,
+  "null_reason": "No verified November15 Sunday endpoint was collected. Current inventory was observed Monday November16 after the reporting week; do not substitute it for Sunday or calculate week-over-week growth.",
+  "current_snapshot": {
+    "observed_at": [
+      "2026-11-17T02:45:15.725962+00:00",
+      "2026-11-17T02:45:17.248605+00:00"
+    ],
+    "editorial_observation_day": "2026-11-16",
+    "after_reporting_window": true,
+    "listed_advertisements": 1959,
+    "boards": 13,
+    "employers": 12,
+    "population": "All publicly listed functions on selected verified AI-employer boards, not AI-specialist-only jobs."
+  },
+  "previous_sunday_snapshot": {
+    "date": "2026-11-08",
+    "listed_advertisements": 1982,
+    "boards": 13,
+    "employers": 12,
+    "source": "ai-news/weekly/hiring-panel-2026-11-02-to-2026-11-08.json"
+  },
+  "no_matched_weekly_change": true,
+  "first_seen_is_posted_date": false,
+  "missing_is_filled_or_closed": false,
+  "advertisements_are_not_hires": true,
+  "academic_panel": "No verified comparable academic hiring panel; no academic hiring direction inferred.",
+  "employer_counts": {
+    "lambda": 96,
+    "mistral_ai": 254,
+    "fireworks_ai": 101,
+    "cohere": 124,
+    "anthropic": 661,
+    "sierra": 207,
+    "skild_ai": 58,
+    "cognition": 112,
+    "thinking_machines_lab": 55,
+    "runway": 49,
+    "cursor": 95,
+    "perplexity": 147
+  }
+}

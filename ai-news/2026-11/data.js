@@ -2,6 +2,554 @@ window.AI_NEWS_MONTH_DATA["2026-11"] = {
   "label": "November 2026",
   "articles": [
     {
+      "slug": "weekly-ai-november-9-15",
+      "category": "AI Weekly",
+      "sortDate": "2026-11-16",
+      "dateLabel": "November 9–15, 2026",
+      "title": "AI Weekly: New models, checked research and an industry leadership transition",
+      "summary": "November 9–15: Claude Fable and Mythos 5.2, AlphaProof Code, AlphaGenome 2, Gemini 4 Hydrogen and NVIDIA’s interim CEO transition.",
+      "image": {
+        "src": "ai-news/2026-11/images/anthropic-fable-mythos-52-official.jpg",
+        "alt": "Anthropic’s official artwork for Claude Fable 5.2 and Claude Mythos 5.2",
+        "caption": "Source: Anthropic’s November 9 release. Official source artwork, separate from the generated Weekly poster."
+      },
+      "content": [
+        {
+          "type": "paragraph",
+          "text": "AI Weekly covers November 9–15, 2026. New model access and research tools put more emphasis on the conditions under which AI work can be trusted, while NVIDIA’s leadership transition adds a governance question for the industry’s computing supply chain."
+        },
+        {
+          "type": "figure",
+          "src": "ai-news/2026-11/images/ai-weekly-november-9-15-2026.png",
+          "alt": "AI Weekly, November 9–15, 2026: Claude Fable and Mythos 5.2, AlphaProof Code, AlphaGenome 2, Gemini 4 Hydrogen and NVIDIA’s CEO transition.",
+          "caption": "UGA LLM Lab · AI Weekly · November 9–15, 2026. Generated conceptual editorial illustrations; access restrictions, research limits and the interim appointment remain explicit."
+        },
+        {
+          "type": "heading",
+          "text": "1. Anthropic releases Fable 5.2 and Mythos 5.2 with different access safeguards"
+        },
+        {
+          "type": "paragraph",
+          "text": "Anthropic introduced Claude Fable 5.2 and Claude Mythos 5.2 on November 9. They are configurations of the same underlying model, with Fable intended for general use and Mythos restricted to vetted users through the company’s cyber and life-sciences verification programs. Anthropic lists standard pricing of $8 per million input tokens and $40 per million output tokens, with a more expensive optional fast mode. The company reports stronger technical-task performance; these are developer evaluations with task, effort and safeguard settings that require separate comparison."
+        },
+        {
+          "type": "paragraph",
+          "text": "The release makes access policy part of the practical model choice. A result obtained with Mythos’s more permissive safeguards is not automatically a result available through Fable. The system card also distinguishes final models from earlier snapshots and tests with safeguards disabled. Its assessment does not find the model close to fully replacing senior research staff, despite improvements on several measures. The immediate milestone is a new model configuration and service offer, rather than independent proof of autonomous scientific or software work."
+        },
+        {
+          "type": "heading",
+          "text": "2. AlphaProof Code connects selected libsignal guarantees to machine code"
+        },
+        {
+          "type": "paragraph",
+          "text": "Google DeepMind published AlphaProof Code on November 10, describing a human-guided framework that generated machine-checked proofs for selected security properties of libsignal. Researchers approved formal specifications, while agents constructed proofs checked by Lean. The report covers a particular AArch64 build and properties of the PQXDH handshake and Triple Ratchet, connecting protocol-level reasoning to compiled implementation behavior. The team reports roughly 6.5 million lines of proof code, produced during a four-week effort by five researchers."
+        },
+        {
+          "type": "paragraph",
+          "text": "The guarantee remains conditional on the specification, cryptographic assumptions, execution model and other trusted components. It does not prove every feature of the Signal applications secure, and the report explicitly excludes a full multi-device setting. Researchers also reintroduced two previously fixed bugs into isolated builds and proved that those builds violated specified properties; this was a validation exercise, not a report of two new live vulnerabilities. The result illustrates a concrete division of work: agents can construct large checked proofs while people remain responsible for deciding what the proofs must establish."
+        },
+        {
+          "type": "heading",
+          "text": "3. AlphaGenome 2 adds cell-specific predictions for regulatory DNA"
+        },
+        {
+          "type": "paragraph",
+          "text": "Google DeepMind announced AlphaGenome 2 on November 11, conditioning predictions on a cell type or state as well as a million-base DNA sequence. The research combines bulk data with single-cell profiles to estimate regulatory activity and variant effects. On the authors’ TenK10K single-cell expression benchmark, recall of fine-mapped causal variants increased from 16% to 30% at 90% precision relative to the fine-tuned AlphaGenome baseline. That is a defined variant-prioritization result, not a diagnostic accuracy rate or a doubling of all genomic predictions."
+        },
+        {
+          "type": "paragraph",
+          "text": "Non-commercial research access is available through the AlphaGenome API, while commercial access begins in private preview. The model can also use new single-cell expression data to form a condition representation without retraining the sequence model. Independent experiments remain necessary to test the biological predictions, and the authors distinguish benchmark splits and datasets rather than treating every evaluation as identical. AlphaGenome 2 is intended for research and has not been validated or approved for diagnosis; its usefulness is in prioritizing mechanisms and experiments for further investigation."
+        },
+        {
+          "type": "heading",
+          "text": "4. Gemini 4 Hydrogen broadens Google’s agentic model rollout"
+        },
+        {
+          "type": "paragraph",
+          "text": "Google introduced Gemini 4 Hydrogen on November 12 as a faster execution-oriented model for coding and agent workflows, distinct from Gemini 4 Carbon’s earlier introduction and November 10 access expansion. The launch describes a million-token context window and API pricing of $1.50 per million input tokens and $7.50 per million output tokens. Google is rolling Hydrogen into developer, enterprise and consumer products, with product-specific access rules. Free Gemini users receive it through automatic selection when appropriate, rather than an unconditional promise of direct model selection."
+        },
+        {
+          "type": "paragraph",
+          "text": "The announcement also describes routing work between models in Antigravity and reports efficiency gains under specified evaluations. Those results do not establish the same time or cost savings for every repository or user. The live announcement was updated on November 16, after this reporting week; the facts used here were checked against the saved November 12 source version and its contemporaneous retrieval receipt. The weekly significance is broader deployment and a more explicit division between planning and execution models, with accepted-task quality and review costs still requiring measurement."
+        },
+        {
+          "type": "heading",
+          "text": "5. NVIDIA announces an interim leadership transition"
+        },
+        {
+          "type": "paragraph",
+          "text": "NVIDIA announced a CEO transition on November 12. Its SEC filing says the board accepted Jensen Huang’s resignation as president, chief executive and a director effective November 11. Colette Kress becomes interim CEO while continuing as executive vice president and chief financial officer. The board appointed Harvey C. Jones as chair and is searching for a permanent chief executive. The announcement date and the effective date are separate, and Kress’s interim appointment is not a permanent succession decision."
+        },
+        {
+          "type": "paragraph",
+          "text": "The transition matters because NVIDIA supplies a central part of the computing infrastructure used by AI developers and research organizations. The board says it expects operations, customer commitments and the product roadmap to continue without interruption; that is the board’s stated expectation, rather than a measured future outcome. The available primary documents establish the appointments and search process, not a new chip roadmap or a change in customer deliveries. Subsequent results and governance disclosures will provide the evidence for assessing continuity beyond this week’s announcement."
+        }
+      ],
+      "sources": [
+        {
+          "label": "Anthropic releases Fable 5.2 and Mythos 5.2 with different access safeguards",
+          "url": "https://www.anthropic.com/claude-fable-and-mythos-5-2"
+        },
+        {
+          "label": "AlphaProof Code connects selected libsignal guarantees to machine code",
+          "url": "https://deepmind.google/blog/introducing-alphaproof-code/"
+        },
+        {
+          "label": "AlphaGenome 2 adds cell-specific predictions for regulatory DNA",
+          "url": "https://deepmind.google/blog/alphagenome-2-deciphering-how-cells-read-dna-to-better-understand-disease/"
+        },
+        {
+          "label": "Gemini 4 Hydrogen broadens Google’s agentic model rollout",
+          "url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/introducing-gemini-4-hydrogen/"
+        },
+        {
+          "label": "NVIDIA announces an interim leadership transition",
+          "url": "https://nvidianews.nvidia.com/news/nvidia-announces-ceo-transition"
+        },
+        {
+          "label": "Anthropic system card: configurations and evaluation limits",
+          "url": "https://www.anthropic.com/document/claude-fable-5-2-mythos-5-2-system-card"
+        },
+        {
+          "label": "AlphaProof Code: formal report and assumptions",
+          "url": "https://deepmind.google/documents/36/Formal_Verification_of_Signal_4.pdf"
+        },
+        {
+          "label": "AlphaGenome 2: original research paper",
+          "url": "https://storage.googleapis.com/deepmind-media/DeepMind.com/Blog/alphagenome-2-deciphering-how-cells-read-dna-to-better-understand-disease/alphagenome-2.pdf"
+        },
+        {
+          "label": "NVIDIA Form 8-K: effective date and interim appointment",
+          "url": "https://www.sec.gov/Archives/edgar/data/1045810/000104581026000082/nvda-20261111.htm"
+        }
+      ]
+    },
+    {
+      "slug": "nvidia-nemotron-for-science-litmusbench-post-training",
+      "category": "Industry · AI for Science",
+      "sortDate": "2026-11-16",
+      "dateLabel": "November 16, 2026",
+      "title": "NVIDIA packages Nemotron for Science with chemistry data and post-training recipes",
+      "summary": "The November 16 release combines Nemotron 3.5 Super VL, LitmusBench v0.2 and tools for adapting scientific agents. Its application results are reported by NVIDIA and collaborators, with task-specific tests rather than proof of general scientific autonomy.",
+      "image": {
+        "src": "ai-news/2026-11/images/nvidia-nemotron-science-official.jpg",
+        "alt": "NVIDIA artwork showing scientific symbols in front of a globe",
+        "caption": "Official Nemotron for Science release artwork. Source: NVIDIA. Promotional illustration, not an experimental result."
+      },
+      "content": [
+        {
+          "type": "paragraph",
+          "text": "NVIDIA introduced Nemotron for Science on November 16, bringing together a multimodal model, chemistry data and post-training recipes for specialized scientific agents. The newly announced package builds on Nemotron 3.5 Super VL rather than announcing an entirely new general-purpose foundation model. Its practical focus is customization: research teams can adapt an open model to a defined scientific task and connect it to computational tools on infrastructure they control."
+        },
+        {
+          "type": "paragraph",
+          "text": "The release includes LitmusBench v0.2, an open chemistry dataset with nearly 50,000 questions for training and evaluation. NVIDIA describes tasks involving molecular properties and experimental drug-discovery information, including solubility and how compounds are processed in the body. A benchmark answer remains a proxy for a scientific outcome. A researcher would need to examine how examples are split, whether related molecules occur across training and evaluation, and whether the score captures the property needed in the intended experiment."
+        },
+        {
+          "type": "heading",
+          "text": "A worked example makes the verification choice visible"
+        },
+        {
+          "type": "paragraph",
+          "text": "An accompanying technical guide starts from experimentally recorded drug-metabolism reactions. The model receives a parent molecule and enzyme information and proposes the resulting metabolite. NeMo Gym supplies an environment that scores a structured molecular submission, while NeMo RL provides the training framework. The example uses a molecular-fingerprint similarity score, making the reward inspectable instead of asking another language model for an unconstrained judgment of scientific quality."
+        },
+        {
+          "type": "paragraph",
+          "text": "The guide also describes an optional teacher-model distillation stage before reinforcement learning. Teams can filter generated examples using the same scoring process, then evaluate the adapted model on held-out material. This provides a concrete route from existing laboratory records to a narrowly defined training task. It also exposes a limitation: optimizing similarity to a recorded structure does not by itself show that a system understands every reaction mechanism or will remain reliable on a different chemical distribution."
+        },
+        {
+          "type": "heading",
+          "text": "Reported applications have different levels of evidence"
+        },
+        {
+          "type": "paragraph",
+          "text": "NVIDIA names life-sciences companies and research institutions using or adapting the model. Its examples include extracting reactions from scientific diagrams, developing laboratory protocols and designing protein or mRNA candidates. Argonne is integrating Nemotron into a multi-agent protein-design system, while RIKEN makes the model available through its research platform. Those are different milestones—availability, integration and evaluated performance—and should not be treated as interchangeable evidence that an autonomous discovery system has been deployed successfully."
+        },
+        {
+          "type": "paragraph",
+          "text": "The release’s numerical gains come from NVIDIA and collaborator evaluations on particular tasks. They are useful leads for replication, rather than independent evidence that a model improves patient outcomes or general research productivity. The model and dataset are available on Hugging Face, and NVIDIA says the model has been optimized for a 128GB DGX Spark system. For research groups, the main new opportunity is to inspect and adapt a specific workflow, then measure its errors and resource costs against an appropriate local baseline before extending it to more consequential experiments."
+        }
+      ],
+      "sources": [
+        {
+          "label": "NVIDIA release and availability",
+          "url": "https://nvidianews.nvidia.com/news/nvidia-introduces-nemotron-for-science-to-accelerate-discoveries-with-agents"
+        },
+        {
+          "label": "Post-training methodology and worked example",
+          "url": "https://developer.nvidia.com/blog/post-training-nvidia-nemotron-to-increase-accuracy-in-your-scientific-domain/"
+        },
+        {
+          "label": "Pinned LitmusBench v0.2 dataset files",
+          "url": "https://huggingface.co/datasets/nvidia/Nemotron-RL-litmus-bench-v0.2/tree/cf18cb1b2392d04a2ac578637462261d62da11d7"
+        }
+      ]
+    },
+    {
+      "slug": "alibaba-qwen4-max-full-release-api",
+      "category": "Industry · Foundation Models",
+      "sortDate": "2026-11-16",
+      "dateLabel": "November 16, 2026",
+      "title": "Alibaba releases Qwen4-Max with a million-token context and expanded API access",
+      "summary": "The full November 16 model is distinct from the November 11 preview. Alibaba adds explicit caching and reasoning summaries, while its efficiency comparisons remain vendor evaluations and smaller open-weight Qwen4 models remain a future plan.",
+      "image": {
+        "src": "ai-news/2026-11/images/alibaba-cloud-official-logo.png",
+        "alt": "Alibaba Cloud official brand artwork",
+        "caption": "Alibaba Cloud brand artwork. Source: Alibaba Cloud. This is not a benchmark chart or product screenshot."
+      },
+      "content": [
+        {
+          "type": "paragraph",
+          "text": "Alibaba released Qwen4-Max on November 16, moving beyond the separately listed Qwen4-Max-Preview introduced on November 11. The full model is available through QwenCloud’s API and Token Plan, as well as Qwen’s work products. The release combines native visual understanding, reasoning and tool use with a one-million-token context window. That window describes supported input capacity; it does not guarantee that every fact in a long document will be retrieved correctly."
+        },
+        {
+          "type": "paragraph",
+          "text": "Alibaba describes a mixture-of-experts architecture with 2.4 trillion total parameters and 71 billion active for each token. These figures refer to different quantities and should not be used interchangeably when discussing model size or inference cost. The company says smaller open-weight models in the Qwen4 family will follow. That future plan does not make the newly released Qwen4-Max weights publicly downloadable today."
+        },
+        {
+          "type": "heading",
+          "text": "The full release adds controls for longer workflows"
+        },
+        {
+          "type": "paragraph",
+          "text": "The official model guide lists function calling, structured output, image and video understanding, web search and other tools. Explicit caching allows applications to mark reusable input prefixes such as reference documents or tool definitions. The documentation distinguishes this from implicit caching, which does not guarantee a cache hit. Cache expiry, the deployment region and the model’s published billing rules remain relevant to the actual cost of a long-running application."
+        },
+        {
+          "type": "paragraph",
+          "text": "A separate reasoning-summary feature can return a readable summary alongside encrypted reasoning history. The guide says that summary is for display: applications must preserve and return the encrypted history unchanged in later turns when the feature is used. This is an implementation constraint for developers building multi-step agents, rather than evidence that the visible summary is a complete account of the model’s internal reasoning. The guide also lists fine-tuning and model deployment as unsupported. It specifies separate limits for non-thinking output and combined thinking plus final output, so the million-token context figure should not be read as an output allowance."
+        },
+        {
+          "type": "heading",
+          "text": "Efficiency claims need matched workload comparisons"
+        },
+        {
+          "type": "paragraph",
+          "text": "Alibaba reports lower token use and task cost than Qwen3.8-Max on its Work360 evaluation, covering 721 professional fields. Its cited reductions—35% fewer tokens in the High setting and about 60% lower cost per task—belong to that vendor evaluation. They do not establish the same savings for every customer or a matched comparison against every competing model. A prominently advertised $0.075 per million tokens is an implicit-cache-hit input rate, not a universal price for ordinary input and output."
+        },
+        {
+          "type": "paragraph",
+          "text": "For teams evaluating the release, access is only the first checkpoint. A useful comparison would hold documents, tool permissions, acceptance criteria and reasoning budgets steady, then measure the cost of obtaining an acceptable final artifact, including correction and review. The full release expands the available interfaces and controls for that work. Its most consequential claims concern extended professional and scientific tasks, where successful demonstrations still need to be separated from repeatable performance on a team’s own workload."
+        }
+      ],
+      "sources": [
+        {
+          "label": "Alibaba’s dated release",
+          "url": "https://www.alibabacloud.com/en/press-room/alibaba-unveils-qwen4-max"
+        },
+        {
+          "label": "Official model changelog: preview and full release",
+          "url": "https://docs.qwencloud.com/changelog/models"
+        },
+        {
+          "label": "Qwen4-Max specifications and usage constraints",
+          "url": "https://docs.qwencloud.com/developer-guides/getting-started/latest-model"
+        }
+      ]
+    },
+    {
+      "slug": "openai-healthcare-computer-use-plugins-clinical-search",
+      "category": "Industry · Healthcare Workflows",
+      "sortDate": "2026-11-16",
+      "dateLabel": "November 16, 2026",
+      "title": "OpenAI adds computer use and clinical tools to ChatGPT for Healthcare",
+      "summary": "The November 16 update connects clinical search, plugins and screen-based administrative work. Demonstrations and vendor evaluations remain distinct from production deployments and evidence of patient benefit.",
+      "image": {
+        "src": "ai-news/2026-10/images/openai-official-logo-on-dark.svg",
+        "alt": "OpenAI’s official logo on a dark background",
+        "caption": "OpenAI logo. Source: OpenAI. Brand artwork, not a demonstration or research result."
+      },
+      "content": [
+        {
+          "type": "paragraph",
+          "text": "OpenAI announced new healthcare capabilities on November 16, combining improved clinical search, more than 20 healthcare plugins and expanded computer use. The intended workflows include gathering information, preparing documentation and moving through systems that lack a convenient direct integration. The announcement concerns tools for healthcare organizations and eligible clinicians; it does not establish that a general consumer chat is authorized to act as an independent medical professional."
+        },
+        {
+          "type": "paragraph",
+          "text": "Computer use lets a model read a screen and interact with buttons, fields and other interface elements. OpenAI illustrates the capability with an MRI-related workflow across clinical and administrative systems. The company’s demonstration uses synthetic patient data and shows drafts and proposed actions that a person reviews. A convincing demonstration is evidence that a workflow can be represented and attempted, rather than proof that it will work reliably in every electronic health record or payer portal."
+        },
+        {
+          "type": "heading",
+          "text": "Search, plugins and screen interaction have different roles"
+        },
+        {
+          "type": "paragraph",
+          "text": "Clinical search supplies cited material for professional review. Plugins connect particular services or workflows, subject to the tools an organization enables. Screen interaction can bridge interfaces that have not been integrated directly, but also creates opportunities to misread a display, place information in the wrong field or advance a workflow at the wrong time. The relevant question is whether the system completes an authorized task correctly under the organization’s actual permissions and review process."
+        },
+        {
+          "type": "paragraph",
+          "text": "OpenAI describes different kinds of partner activity in its announcement. Some organizations report existing use, while other partners are developing integrations or presenting demonstrations. Those stages should remain separate when assessing adoption. The release also distinguishes the organizational Healthcare product from ChatGPT for Clinicians, which is free for eligible verified U.S. clinicians. Availability of a named capability can depend on the product, workspace configuration and enabled tools."
+        },
+        {
+          "type": "heading",
+          "text": "Evaluation denominators limit what the numbers establish"
+        },
+        {
+          "type": "paragraph",
+          "text": "The company reports physician reviews of its search and computer-use systems, including safety and helpfulness judgments. Those assessments concern defined tasks or responses, rather than patient outcomes. In the computer-use account, the reported safety and helpfulness percentages use different sets of tasks and assessments; they should not be collapsed into a single clinical success rate. Likewise, a score on an administrative benchmark is not a measurement of whether an entire hospital workflow has been completed without error."
+        },
+        {
+          "type": "paragraph",
+          "text": "The practical value could come from reducing repetitive navigation and preparation while leaving consequential decisions and actions under professional control. Demonstrating that value requires measurements such as corrected errors, review time, incomplete tasks and the handling of exceptions. OpenAI says organizational data is not used to train its foundation models and describes enterprise controls and eligible services under business associate agreements. Those product terms need to be assessed for the specific deployment; the announcement itself is not a blanket finding that every possible use is compliant or clinically effective."
+        }
+      ],
+      "sources": [
+        {
+          "label": "Healthcare product update",
+          "url": "https://openai.com/index/more-ways-to-move-care-forward-with-chatgpt-for-healthcare/"
+        },
+        {
+          "label": "Computer-use methods, demonstrations and evaluations",
+          "url": "https://openai.com/index/advancing-computer-use-for-healthcare-teams/"
+        }
+      ]
+    },
+    {
+      "slug": "google-gemini-history-model-training-controls",
+      "category": "Industry · AI Privacy",
+      "sortDate": "2026-11-16",
+      "dateLabel": "November 16, 2026",
+      "title": "Google announces separate Gemini history and model-training controls",
+      "summary": "The controls will roll out globally in the coming weeks, allowing saved history without using chat content for generative-model training. Turning history off still leaves around two months of service and safety retention under Google’s stated policy.",
+      "image": {
+        "src": "ai-news/2026-11/images/google-gemini-controls-official.jpg",
+        "alt": "Google’s multicolored G on a white background",
+        "caption": "Official Google brand artwork accompanying the announcement. Source: Google. This is not a screenshot of the new settings."
+      },
+      "content": [
+        {
+          "type": "paragraph",
+          "text": "Google announced updated Gemini controls on November 16 that separate keeping conversation history from allowing chat content to be used to train generative AI models. The company says the changes will roll out globally in the coming weeks. This is an announcement of a staged rollout, rather than evidence that every account already has the new settings. Users who want to retain earlier conversations will be able to do so while choosing not to contribute that content to model training."
+        },
+        {
+          "type": "paragraph",
+          "text": "The distinction matters because conversation storage and model improvement serve different purposes. Saving history makes it possible to return to a conversation; training permission concerns a separate use of the content. Google’s announcement also points to controls for deleting history manually and setting an automatic deletion period. A person or organization assessing the change should look at the settings actually available on the relevant account, rather than assume that the announcement has already changed all existing preferences."
+        },
+        {
+          "type": "heading",
+          "text": "Turning off history does not mean immediate deletion"
+        },
+        {
+          "type": "paragraph",
+          "text": "Google says future chats are still saved for around two months when Gemini History is off. Its stated purposes include responding to the user, processing feedback and protecting Google, users and the public. The privacy documentation also describes human review in connection with these functions. Choosing not to train generative models on chat content therefore does not mean that no processing, temporary storage or review can occur."
+        },
+        {
+          "type": "paragraph",
+          "text": "The Privacy Hub describes an 18-month default automatic deletion period for saved history, with other options including shorter or longer periods and keeping activity indefinitely. It separately says reviewed chats and related information can be retained for up to three years, even after the user deletes history. These are different retention categories, not a promise that pressing delete instantly removes every copy of every associated record. The documentation also identifies legal and security reasons for retaining some information longer."
+        },
+        {
+          "type": "heading",
+          "text": "Connected services retain their own boundaries"
+        },
+        {
+          "type": "paragraph",
+          "text": "The Gemini settings do not automatically change the settings of other Google services. When a conversation interacts with services such as Wallet or YouTube, those services can save and use activity under their own policies. Deleting Gemini history does not necessarily delete those records. Feedback also has its own processing implications, so users should examine the applicable description before assuming that a model-training preference governs every use of information they submit."
+        },
+        {
+          "type": "paragraph",
+          "text": "The new separation gives users a more precise choice than treating history and training as a single decision. Its significance is the ability to preserve a useful conversation archive while limiting a particular secondary use of the content. The limits are equally concrete: the rollout is still forthcoming, service and safety processing continues, and linked products can have separate records. For organizations, evaluating the change will require checking the account type, available controls and applicable product terms rather than inferring a complete data-retention policy from the new toggle alone. The linked History guide concerns personal accounts; work and school retention settings can instead be controlled by a Workspace administrator."
+        }
+      ],
+      "sources": [
+        {
+          "label": "Google’s November 16 announcement",
+          "url": "https://blog.google/innovation-and-ai/products/gemini-app/updated-controls/"
+        },
+        {
+          "label": "Gemini History controls",
+          "url": "https://support.google.com/gemini/answer/13278892"
+        },
+        {
+          "label": "Gemini Apps Privacy Hub",
+          "url": "https://support.google.com/gemini/answer/13594961?hl=en"
+        }
+      ]
+    },
+    {
+      "slug": "sourcegraph-big-code-report-2026-ai-rework-survey",
+      "category": "Employment · Developer Work",
+      "sortDate": "2026-11-16",
+      "dateLabel": "November 16, 2026",
+      "title": "Sourcegraph survey finds AI coding ROI pressure alongside reported rework",
+      "summary": "The November 16 account of the 2026 Big Code Report draws on 1,028 people at large software organizations. Respondents’ estimates describe workflow pressure; they are not an instrumented audit of AI-generated code or a causal estimate of AI’s effect on jobs.",
+      "image": {
+        "src": "ai-news/2026-11/images/sourcegraph-big-code-2026-official.jpg",
+        "alt": "Sourcegraph’s red-and-black 2026 Big Code Report cover",
+        "caption": "Official report cover artwork. Source: Sourcegraph. The image filename predates publication; the issuer’s article is dated November 16."
+      },
+      "content": [
+        {
+          "type": "paragraph",
+          "text": "Sourcegraph published its account of the 2026 Big Code Report on November 16, describing a gap between pressure to show returns from AI coding and the effort needed to make generated work usable. Dimensional Research conducted the September survey of 1,028 people responsible for software development at organizations with more than 250 developers. The sample describes large software organizations; it should not be read as a representative survey of every developer, small business or national labor market."
+        },
+        {
+          "type": "paragraph",
+          "text": "Among respondents whose organizations use AI, 79% reported moderate or intense pressure to demonstrate a return on investment. In a separate question, 54% estimated that more than 60% of AI-generated engineering work needs significant rework before release. These are respondents’ judgments, not direct measurements of every generated change. The results also do not mean that 54% of AI-written code fails, or that the survey established whether a comparable human-written change would have required less correction."
+        },
+        {
+          "type": "heading",
+          "text": "Understanding existing code remains part of the work"
+        },
+        {
+          "type": "paragraph",
+          "text": "The issuer’s public account links the difficulty to the size and complexity of codebases. Respondents describe time spent understanding existing code and problems finding functionality across repositories. Those activities can affect whether a proposed change fits the system, regardless of whether a human or an AI drafted it. Producing a patch quickly is one step; locating relevant behavior, assessing dependencies and validating the change are separate tasks that can determine the final cost."
+        },
+        {
+          "type": "paragraph",
+          "text": "For employers, this suggests that generated-code volume is an incomplete productivity measure. A more useful evaluation would follow a change through review, testing, correction and release, while recording how much work was accepted and whether quality changed. That is an implication for measurement, rather than a causal conclusion from the survey. Organizations that adopted AI may also differ in codebase complexity, development practices or expectations, and a cross-sectional questionnaire cannot isolate those influences."
+        },
+        {
+          "type": "heading",
+          "text": "Survey findings and vendor claims need separate treatment"
+        },
+        {
+          "type": "paragraph",
+          "text": "Sourcegraph sells tools for code search, context retrieval and large-scale code changes. Its commercial interest is relevant to interpreting how the report frames the problem and the products offered as a response. The public survey account does not establish that a particular Sourcegraph product eliminates the reported rework. The full report is offered through a form; this article relies on the issuer’s publicly available methods and findings rather than claiming to have reviewed the gated document or a respondent-level dataset."
+        },
+        {
+          "type": "paragraph",
+          "text": "The findings point to a concrete workplace question without answering the broader jobs debate: are organizations saving effort across the entire delivery process, or shifting effort from drafting toward understanding and review? Resolving that question requires repeated observations and comparable project outcomes. The November release supplies evidence about how this sample perceives its present workflow. It does not measure layoffs caused by AI, prove a general decline in developer demand or show that autonomous agents can safely bypass the people currently checking their work."
+        }
+      ],
+      "sources": [
+        {
+          "label": "Public findings and survey method",
+          "url": "https://sourcegraph.com/blog/big-code-report-2026"
+        },
+        {
+          "label": "Official report landing page",
+          "url": "https://sourcegraph.com/resources/whitepapers/big-code-report-2026"
+        }
+      ]
+    },
+    {
+      "slug": "openai-science-blog-launch-research-workflow",
+      "category": "Research · Scientific Workflows",
+      "sortDate": "2026-11-15",
+      "dateLabel": "November 15, 2026",
+      "title": "OpenAI opens a science blog with a physicist’s account of AI-assisted lattice research",
+      "summary": "The November 15 launch creates a venue for scientists to explain how they use and check AI tools. Its first guest essay discusses a physics preprint first posted in October, so the launch should not be read as a new Sunday physics discovery.",
+      "image": {
+        "src": "ai-news/2026-10/images/openai-official-logo-on-dark.svg",
+        "alt": "OpenAI’s official logo on a dark background",
+        "caption": "OpenAI logo. Source: OpenAI. Brand artwork, not a demonstration or research result."
+      },
+      "content": [
+        {
+          "type": "paragraph",
+          "text": "OpenAI launched a blog for science on November 15, opening with a guest account of AI-assisted theoretical physics. The new venue is intended to let scientists describe research, methods and practical experience with AI. Its first contributor, Nathaniel Craig, discusses work toward defining chiral fermions on a lattice. The date distinction matters: Sunday’s event is the publication program and its account of a research process. The underlying preprint, “A gauge-invariant measure for lattice chiral fermions,” was first posted to arXiv on October 6."
+        },
+        {
+          "type": "paragraph",
+          "text": "Craig leads a particle-theory group at the University of California, Santa Barbara and is also a visiting scientist at OpenAI. That relationship is relevant to reading the essay: it is a researcher’s first-person account hosted by a company whose model he used. It is not an independent evaluation of the model, nor a journal’s certification of the mathematical construction. OpenAI’s introduction presents the venue as a way to share what researchers tried, how they worked and how results were checked."
+        },
+        {
+          "type": "heading",
+          "text": "The account describes a collaborative research process"
+        },
+        {
+          "type": "paragraph",
+          "text": "The featured problem concerns a long-standing obstacle in representing the chiral structure of the Standard Model on a discrete lattice. Craig describes using GPT-6 Astra while developing a candidate mathematical construction, including work on the interpolation of gauge fields and the convergence arguments needed to support it. The human researcher supplies the problem, evaluates possible routes and remains responsible for the argument. The essay also describes questions and exchanges with other specialists rather than treating a fluent model response as sufficient evidence."
+        },
+        {
+          "type": "paragraph",
+          "text": "The account is useful as a description of how an experienced scientist can direct an AI system through a difficult project. It does not establish how often the same workflow succeeds across researchers or disciplines. A successful narrative has no matched control group, and the time spent discarding incorrect suggestions can be difficult to recover from a retrospective essay. Readers should distinguish the scientific claim, the account of the model’s contribution, and any broader inference about research productivity."
+        },
+        {
+          "type": "heading",
+          "text": "Publication creates a venue for scrutiny, not a final verdict"
+        },
+        {
+          "type": "paragraph",
+          "text": "The preprint remains a proposed construction that can be examined by the research community. Questions about its mathematical conditions, physical properties and practical simulation remain separate from the company’s decision to feature it. This report treats the preprint’s identity and original posting date as verified metadata; it does not present an independent proof check of its lengthy mathematical argument. The featured essay is evidence of what the author reports doing, with that boundary made explicit."
+        },
+        {
+          "type": "paragraph",
+          "text": "For the new blog to become a useful research resource, concrete descriptions of verification will matter as much as impressive outcomes. Reproducible intermediate results, explicit assumptions and accounts of failed approaches would let readers assess where an AI tool helped and where expert intervention remained essential. Sunday’s launch provides a channel for that kind of reporting. Whether the channel produces general evidence about scientific acceleration will depend on the methods and independently scrutinized results its future contributions make available."
+        }
+      ],
+      "sources": [
+        {
+          "label": "OpenAI science-blog launch",
+          "url": "https://openai.com/index/our-new-blog-for-science/"
+        },
+        {
+          "label": "Nathaniel Craig’s guest essay",
+          "url": "https://openai.com/index/step-toward-defining-the-standard-model/"
+        },
+        {
+          "label": "October 6 preprint record",
+          "url": "https://arxiv.org/abs/2610.09093v1"
+        }
+      ]
+    },
+    {
+      "slug": "cers-path-cervical-histopathology-multicenter-study",
+      "category": "Research · Medical AI",
+      "sortDate": "2026-11-14",
+      "dateLabel": "November 14, 2026",
+      "title": "CerS-Path study tests cervical-pathology AI across multiple clinical cohorts",
+      "summary": "The accepted Nature Communications paper reports a cervical-specific model trained on pathology images and evaluated on 30 tasks. High screening sensitivity does not establish better patient outcomes, and the clinical cohorts used different tasks and study designs.",
+      "image": {
+        "src": "ai-news/2026-11/images/nature-communications-official-wordmark.svg",
+        "alt": "Nature Communications publisher wordmark",
+        "caption": "Publisher wordmark. Source: Nature Communications. The article is an accepted Article in Press, before final editing."
+      },
+      "content": [
+        {
+          "type": "paragraph",
+          "text": "Nature Communications published an accepted study of CerS-Path on November 14, describing an AI system specialized for cervical histopathology. The work concerns microscopic examination of tissue, such as biopsy and excision specimens, rather than replacing an initial HPV screening test. Its authors trained a cervical-specific representation and evaluated functions ranging from lesion screening to cancer subtyping and report generation. The journal identifies the publication as an Article in Press: the accepted research is citable, but the final edited version is still to follow."
+        },
+        {
+          "type": "paragraph",
+          "text": "The study combines approximately 115,000 whole-slide images for pretraining with roughly 25,000 images for downstream work and clinical enhancement. These are image counts, not numbers of individual patients. Specialization is the central idea: a model exposed extensively to cervical tissue may distinguish patterns that a broader pathology encoder represents less precisely. This creates a useful research comparison, while making it important to examine performance on each task rather than treating the system as a single diagnostic score."
+        },
+        {
+          "type": "figure",
+          "src": "ai-news/2026-11/images/cers-path-study-overview-source.png",
+          "alt": "Complete page 2 of the accepted CerS-Path paper, showing the study architecture and its original Figure 1 caption",
+          "caption": "Study overview, Figure 1 and original caption, reproduced as a complete source page. Wang et al., Nature Communications, DOI: 10.1038/s41467-026-79121-4. CC BY-NC-ND 4.0. Source diagram; not a generated illustration."
+        },
+        {
+          "type": "heading",
+          "text": "Screening performance and other tasks require separate readings"
+        },
+        {
+          "type": "paragraph",
+          "text": "Across the paper’s 30 downstream tasks, CerS-Path improved on the UNI baseline in 26, with an average gain of 3.66 percentage points across the task metrics used. That average does not mean every diagnosis improved by the same amount. The later validation spans five clinical institutions and a separate public French cohort. Several institutional cohorts were prospective, another combined prospective and retrospective material, and the public cohort was retrospective; the same set of tests was not run at every site."
+        },
+        {
+          "type": "paragraph",
+          "text": "For lesion screening, the authors report sensitivity above 99% and specificity above 84.4% across the evaluated screening cohorts. The operating thresholds deliberately favor finding lesions. A service deciding whether to investigate the model would therefore need to consider the accompanying false-positive workload, how slides enter the queue, and how pathologists resolve flagged cases. Results for other functions were less uniformly high, reinforcing that strong screening performance cannot be transferred automatically to grading, prognosis or text generation."
+        },
+        {
+          "type": "heading",
+          "text": "A research system still needs workflow validation"
+        },
+        {
+          "type": "paragraph",
+          "text": "The multimodal branch aligns images and text and adds a language decoder for questions and basic reports. A plausible written explanation is a different kind of output from a validated slide classification. Clinical use would require checking whether each generated statement is supported by the image and whether the report fits the institution’s reporting practice. The authors themselves identify limitations in predictive tasks, report sophistication and fine visual detail, including the fixed patch resolution used to represent tissue."
+        },
+        {
+          "type": "paragraph",
+          "text": "The study offers substantial multicenter evidence for further evaluation, rather than proof of reduced mortality or an unrestricted autonomous diagnosis service. The clinical images and associated patient information are not publicly shareable, which limits independent replication using the original data. Public code can still help researchers inspect the implementation and test it on appropriate local cohorts. The next useful evidence would connect independently tested performance to pathologist review, error patterns and patient-facing decisions under a defined clinical protocol."
+        }
+      ],
+      "sources": [
+        {
+          "label": "Accepted study and publication history",
+          "url": "https://www.nature.com/articles/s41467-026-79121-4"
+        },
+        {
+          "label": "Full accepted paper",
+          "url": "https://www.nature.com/articles/s41467-026-79121-4_reference.pdf"
+        },
+        {
+          "label": "Authors’ CerS-Path implementation",
+          "url": "https://github.com/rainyfog/CerS-Path"
+        }
+      ]
+    },
+    {
       "slug": "openai-chatgpt-wallet-dots-us-rollout",
       "category": "Industry · AI Agents",
       "sortDate": "2026-11-13",
