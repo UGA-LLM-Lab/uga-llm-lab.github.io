@@ -2,6 +2,1312 @@ window.AI_NEWS_MONTH_DATA["2026-11"] = {
   "label": "November 2026",
   "articles": [
     {
+      "slug": "gis-ai-tuberculosis-systematic-review-integration-gap",
+      "category": "Research · Spatial Health AI",
+      "sortDate": "2026-11-22",
+      "dateLabel": "November 22, 2026",
+      "title": "Tuberculosis review finds direct spatial-AI integration in only two of 14 studies",
+      "summary": "The November 22 review distinguishes mapping and sequential pipelines from models that embed spatial structure. Its evidence search ended in July 2025, so the findings describe the included literature rather than all research available in late 2026.",
+      "image": {
+        "src": "ai-news/2026-11/images/tb-gis-ai-review-fig1.jpeg",
+        "alt": "The review’s original flowchart showing screening from 971 records to 14 included studies",
+        "caption": "Source: Mohidem and Syed Ismail, International Journal of Health Geographics, Figure 1, DOI 10.1186/s12942-026-00506-1. Complete original figure. CC BY-NC-ND 4.0."
+      },
+      "content": [
+        {
+          "type": "paragraph",
+          "text": "The International Journal of Health Geographics published an accepted systematic review on November 22 examining how geographic information systems and AI are combined in tuberculosis research. Nur Adibah Mohidem and Sharifah Norkhadijah Syed Ismail, from Malaysian universities, identify 14 included studies. The central finding is methodological: using a map alongside a prediction model is different from building spatial relationships into the model itself. Only two studies met the authors’ definition of direct spatial-AI integration."
+        },
+        {
+          "type": "paragraph",
+          "text": "The review searched Scopus, PubMed, the Cochrane Library, ScienceDirect and Taylor & Francis on July 7, 2025. It identified 971 records, removed duplicates, screened for relevance and applied an adapted quality-appraisal framework before retaining the final set. Included studies were published from 2018 to 2025. The journal publication date is new, but the underlying evidence cutoff is more than a year earlier; this is not a census of every study available in November 2026."
+        },
+        {
+          "type": "heading",
+          "text": "A map can play several roles in an AI workflow"
+        },
+        {
+          "type": "paragraph",
+          "text": "The authors distinguish independent or parallel use, sequential pipelines and spatially integrated models. A study might draw hotspots and train an unrelated predictor on the same data. Another might feed GIS-derived variables into a model or map its output afterward. Direct integration, under the review’s definition, embeds spatial features or dependencies in the modeling structure. These approaches can all be useful, but the label GeoAI alone does not tell a reader which kind of system was evaluated."
+        },
+        {
+          "type": "paragraph",
+          "text": "The included work spans incidence, diagnosis and treatment, mortality, community applications and bacterial strains, with overlapping themes. Different studies used different geographical units, algorithms, datasets and outcomes. The authors therefore did not pool them into a single meta-analytic effect estimate. The number of studies in a category should not be treated as the number of independently demonstrated public-health benefits, and predictive associations do not by themselves establish a cause of disease transmission."
+        },
+        {
+          "type": "heading",
+          "text": "Validation needs to match the spatial question"
+        },
+        {
+          "type": "paragraph",
+          "text": "The review identifies inconsistent case detection, incomplete location data, retrospective analysis and aggregation as recurring limitations. A model can appear accurate while reproducing differences in surveillance or learning patterns that do not transfer to another area. For spatial risk prediction, useful tests need to examine geographical generalization, uncertainty and whether the output is timely enough to inform an intervention. A conventional classification score alone may not capture those requirements."
+        },
+        {
+          "type": "paragraph",
+          "text": "The review itself has limits: one reviewer performed the initial screening, only English-language articles were included, database search syntax differed and the protocol was not registered in PROSPERO. These qualifications make the two-of-14 result a finding about an explicitly selected evidence set. The accepted Article in Press offers a clearer vocabulary for evaluating spatial AI, while leaving prospective surveillance performance and actual effects on tuberculosis control to further research. Its contribution is identifying how integration was implemented and tested, not establishing a new treatment or a proven reduction in disease burden."
+        }
+      ],
+      "sources": [
+        {
+          "label": "Dated journal article and authors",
+          "url": "https://link.springer.com/article/10.1186/s12942-026-00506-1"
+        },
+        {
+          "label": "Full accepted systematic review",
+          "url": "https://link.springer.com/content/pdf/10.1186/s12942-026-00506-1_reference.pdf"
+        },
+        {
+          "label": "Figure reuse license",
+          "url": "https://creativecommons.org/licenses/by-nc-nd/4.0/"
+        }
+      ]
+    },
+    {
+      "slug": "openai-pachocki-perplexity-shared-safety-metric-proposal",
+      "category": "Industry · AI Safety Governance",
+      "sortDate": "2026-11-22",
+      "dateLabel": "November 22, 2026",
+      "title": "OpenAI’s chief scientist proposes perplexity-based transparency and shared development limits",
+      "summary": "Jakub Pachocki’s November 22 essay argues for comparable pretraining measurements and agreed safety milestones. It is a proposal, with acknowledged cross-lab comparison limits, rather than an adopted industry standard or a universal intelligence threshold.",
+      "image": {
+        "src": "ai-news/2026-11/images/openai-perplexity-proposal-official.png",
+        "alt": "OpenAI’s official Perplexity and Intelligence essay card",
+        "caption": "Source: OpenAI. Official article artwork."
+      },
+      "content": [
+        {
+          "type": "paragraph",
+          "text": "OpenAI chief scientist Jakub Pachocki published an essay on November 22 proposing a greater role for perplexity and cross-entropy loss in shared AI safety governance. These measurements describe how well a model predicts held-out data during pretraining. Pachocki argues that tracking this underlying progress could complement rapidly changing task benchmarks and help developers agree on points where further development should wait for stronger understanding and monitoring. The essay is an argument for shared norms, not an announcement that competitors have adopted a binding standard."
+        },
+        {
+          "type": "paragraph",
+          "text": "The essay publishes internal OpenAI measurements on a fixed snapshot of the company’s codebase. Lower loss indicates better prediction on that evaluation data. Pachocki connects historical changes in the measure with the emergence of new capabilities, while emphasizing that the specific capabilities were not predictable in advance. The reported numbers belong to that dataset and evaluation setup; they should not be read as universal levels of intelligence that can be assigned directly to another developer’s models."
+        },
+        {
+          "type": "heading",
+          "text": "Stable measurements can complement changing capability tests"
+        },
+        {
+          "type": "paragraph",
+          "text": "A task benchmark can become less informative when models saturate it or when new forms of work become important. A held-out prediction measure can provide a longer-running reference, provided the data, tokenizer and evaluation procedure remain understood. It asks a different question from whether a system can complete a scientific project, resist a malicious instruction or use a tool safely. Those downstream capabilities still require direct evaluation even if a pretraining trend is clear."
+        },
+        {
+          "type": "paragraph",
+          "text": "Pachocki’s proposal would combine transparency about the measurements with common limits and concrete safety milestones before moving beyond them. The essay does not specify a completed cross-industry measurement protocol or show that a particular loss value certifies a model as safe. A governance mechanism would need both a comparable measurement and agreement about the evidence required to cross a limit. Publishing one company’s series is an opening contribution to that discussion, rather than the full mechanism."
+        },
+        {
+          "type": "heading",
+          "text": "The author identifies important comparison gaps"
+        },
+        {
+          "type": "paragraph",
+          "text": "Different laboratories use different datasets and training mixtures, which makes their reported losses difficult to compare. The essay also notes that improvements outside pretraining, including chain-of-thought reasoning, can raise capability without reducing the underlying pretraining perplexity. The unknown irreducible uncertainty in an evaluation dataset further complicates interpreting small changes near its floor. These are substantive limits on using a single metric as an industry-wide control."
+        },
+        {
+          "type": "paragraph",
+          "text": "The public-policy question is therefore how a shared measurement could support oversight without becoming a substitute for evidence about actual behavior. Comparable reporting would need explicit evaluation data or a robust comparison method, attention to contamination and clarity about post-training changes. The November essay supplies a concrete proposal and company-specific observations for that debate. Its forecasts about future research acceleration remain the author’s expectations, and the proposed development limits remain proposals until other participants and enforceable arrangements are identified."
+        }
+      ],
+      "sources": [
+        {
+          "label": "Pachocki’s dated essay and limitations",
+          "url": "https://openai.com/index/perplexity-and-intelligence/"
+        },
+        {
+          "label": "OpenAI’s dated research archive",
+          "url": "https://openai.com/news/?display=list"
+        }
+      ]
+    },
+    {
+      "slug": "neural-network-autonomous-laser-oscillation-study",
+      "category": "Research · Physical AI",
+      "sortDate": "2026-11-21",
+      "dateLabel": "November 21, 2026",
+      "title": "Neural-network feedback starts a laboratory laser from weak pre-lasing images",
+      "summary": "The November 21 study reports rapid recovery in a controlled laser cavity, including tests after a component was removed and reinstalled. Its held-out conditions stay within the sampled apparatus and do not establish general control of arbitrary lasers.",
+      "image": {
+        "src": "ai-news/2026-11/images/laser-autonomous-control-fig1.jpeg",
+        "alt": "Original Figure 1 showing the laser cavity, camera, programmable mirror and neural-network feedback",
+        "caption": "Source: Ikeya et al., Scientific Reports, Figure 1, DOI 10.1038/s41598-026-81760-y. Complete original figure. CC BY-NC-ND 4.0."
+      },
+      "content": [
+        {
+          "type": "paragraph",
+          "text": "Scientific Reports published an accepted study on November 21 describing a neural-network controller that can initiate oscillation in a solid-state laser. Researchers from the University of Tokyo and Hamamatsu Photonics use camera images of weak amplified spontaneous emission before the laser is operating. The model predicts how to adjust an electronically programmable intracavity mirror. This is a physical feedback experiment in a particular apparatus, rather than a language-model demonstration or a general controller for every kind of laser."
+        },
+        {
+          "type": "paragraph",
+          "text": "The programmable element is a liquid-crystal-on-silicon spatial light modulator. By changing a displayed phase pattern, the system adjusts an effective mirror’s tilt and curvature without mechanically moving conventional mirrors. A convolutional neural network maps a small image to three parameter corrections. The authors collected 14,742 settings in a restricted control space; only 94 settings produced laser oscillation. The model’s task is to infer a direction toward that small operating region from the spatial pattern of otherwise weak light."
+        },
+        {
+          "type": "heading",
+          "text": "Held-out operating conditions and hardware changes test different things"
+        },
+        {
+          "type": "paragraph",
+          "text": "In the original optical configuration, all 100 held-out starting conditions reached oscillation after one feedback update. Those conditions came from the same sampled parameter region as the training data, so the experiment tests interpolation within a known configuration. It does not show that the system can start from any imaginable alignment or infer the behavior of a different cavity without additional data. The paper explicitly preserves that distinction."
+        },
+        {
+          "type": "paragraph",
+          "text": "The team then removed and coarsely reinstalled the modulator in three independent tests, using the same frozen model. After excluding starting states that were already lasing, the tests included 100, 98 and 98 non-lasing conditions. Roughly 84% to 86% succeeded on the first update, and all included conditions succeeded within two. Coarse manual realignment kept the weak emission within the camera’s field of view, an important prerequisite for interpreting this as practical perturbation tolerance rather than alignment from an arbitrary disconnected setup."
+        },
+        {
+          "type": "heading",
+          "text": "Richer feedback is part of the comparison"
+        },
+        {
+          "type": "paragraph",
+          "text": "The paper compares image-based feedback with a Nelder–Mead search using a scalar light-intensity signal. That search succeeded in 18 of 28 starts within its 50-iteration cap. The comparison therefore changes the information available to the controller as well as the algorithm. Separately, a roughly 98.7% neural validation figure measures predictions falling inside parameter tolerances; it is not the physical experiment’s success rate. Keeping these denominators separate avoids overstating the result."
+        },
+        {
+          "type": "paragraph",
+          "text": "The accepted Article in Press points toward reproducible instrument control, but broader validation would need other cavities, disturbances and operating goals. Raw instrument data remain available on request, and the paper describes hardware-specific code dependencies. Several authors disclose employment and a related patent application. The study’s contribution is a well-defined example of using faint visual evidence to guide a physical adjustment, with the apparatus, starting conditions and limits on generalization made explicit."
+        }
+      ],
+      "sources": [
+        {
+          "label": "Dated Scientific Reports article",
+          "url": "https://www.nature.com/articles/s41598-026-81760-y"
+        },
+        {
+          "label": "Full accepted paper and experimental methods",
+          "url": "https://www.nature.com/articles/s41598-026-81760-y_reference.pdf"
+        },
+        {
+          "label": "Figure reuse license",
+          "url": "https://creativecommons.org/licenses/by-nc-nd/4.0/"
+        }
+      ]
+    },
+    {
+      "slug": "anthropic-ipo-closing-concurrent-private-placement",
+      "category": "Industry · AI Financing",
+      "sortDate": "2026-11-20",
+      "dateLabel": "November 20, 2026",
+      "title": "Anthropic closes its IPO and concurrent $26 billion private placement",
+      "summary": "The November 20 closing follows pricing on November 18 and trading on November 19. The $119.5 billion combined gross transaction figure includes selling stockholders’ shares and should not be described as net cash received by Anthropic.",
+      "image": {
+        "src": "ai-news/2026-11/images/anthropic-ipo-close-official.jpg",
+        "alt": "Anthropic’s official black wordmark on a light background",
+        "caption": "Source: Anthropic. Official company artwork accompanying the closing announcement."
+      },
+      "content": [
+        {
+          "type": "paragraph",
+          "text": "Anthropic announced the closing of its initial public offering on November 20, completing a financing milestone that followed registration effectiveness on November 18 and the start of Nasdaq trading on November 19. The Class A shares trade under the symbol ANT. The closing is the event reported here; the pricing, trading debut and settlement should not be presented as three separate new funding rounds or assigned to the same calendar date."
+        },
+        {
+          "type": "paragraph",
+          "text": "The completed offering comprised 1.127 billion Class A shares at $83 each, including the full exercise of a 147-million-share underwriter option. Anthropic sold approximately 1.103 billion shares, while existing selling stockholders sold about 23.65 million. The company reports approximately $93.5 billion in aggregate gross IPO proceeds, of which about $91.6 billion went to Anthropic before underwriting discounts, commissions and other expenses. It received none of the proceeds from stockholders selling their own shares. The option exercise is included in the closing totals; it should not be added a second time to the headline proceeds."
+        },
+        {
+          "type": "heading",
+          "text": "The concurrent placement is a separate component"
+        },
+        {
+          "type": "paragraph",
+          "text": "Anthropic also closed a private placement of about 313.25 million Class N shares at the same $83 price, for approximately $26 billion. The named buyers are AMD, Broadcom, Google, Micron, Microsoft, NVIDIA and TSMC Partners. These are different securities and a distinct transaction component from the publicly offered Class A shares. The announcement says the private-placement shares were not registered under the Securities Act."
+        },
+        {
+          "type": "paragraph",
+          "text": "The combined headline is approximately $119.5 billion in gross proceeds from the IPO and private placement. That total includes the shares sold by existing stockholders and precedes transaction expenses. Calling it $119.5 billion of new company cash would therefore overstate the issuer’s receipts. Similarly, a transaction’s gross proceeds are not its market capitalization, operating revenue or profit. Keeping those quantities separate is necessary to understand the scale and destination of the financing."
+        },
+        {
+          "type": "heading",
+          "text": "Financing capacity and business performance remain different questions"
+        },
+        {
+          "type": "paragraph",
+          "text": "The announcement identifies a large group of technology companies participating in the concurrent placement. Their involvement makes the relationships between AI developers and infrastructure suppliers relevant context, but the share purchase alone does not establish a new exclusive supply agreement, a specific compute deployment or a guaranteed customer revenue stream. Those claims would need their own contractual or operational evidence rather than being inferred from an investor’s name."
+        },
+        {
+          "type": "paragraph",
+          "text": "The closing increases the resources available to the company, while leaving operating performance to be assessed through its disclosures over time. Research expenditure, compute commitments, product revenue and the terms of future infrastructure arrangements are different parts of that assessment. The November 20 announcement is a completed capital-markets event, rather than a forecast that the financing will produce a particular research result or financial return. Its significance is clearest when the three dates, two share classes and distinction between gross proceeds and issuer receipts remain visible."
+        }
+      ],
+      "sources": [
+        {
+          "label": "Anthropic’s November20 closing announcement",
+          "url": "https://www.anthropic.com/news/ipo-close"
+        },
+        {
+          "label": "Final IPO prospectus",
+          "url": "https://d18rn0p25nwr6d.cloudfront.net/CIK-0002130357/1cfdcc36-855a-403f-a139-8d69028d0d5c.pdf"
+        }
+      ]
+    },
+    {
+      "slug": "england-social-care-ai-guidance-practitioner-accountability",
+      "category": "Employment · Social Care Practice",
+      "sortDate": "2026-11-20",
+      "dateLabel": "November 20, 2026",
+      "title": "England publishes social-care AI guidance with professional judgment at its center",
+      "summary": "The November 20 DfE and DHSC guidance covers adults’ and children’s social care in England. It supports approved drafting and administrative uses while retaining practitioner accountability; it is non-statutory guidance, not a new law.",
+      "image": {
+        "src": "ai-news/2026-11/images/dhsc-social-care-guidance-official.jpg",
+        "alt": "Department of Health and Social Care sign mounted on a wall",
+        "caption": "Source: GOV.UK / Department of Health and Social Care. Official departmental photograph."
+      },
+      "content": [
+        {
+          "type": "paragraph",
+          "text": "England’s Department for Education and Department of Health and Social Care published joint AI guidance for social care on November 20. It covers adults’ and children’s services and is accompanied by a practitioner guide. The publication describes how AI can assist with records, summaries, preparation and communication while preserving responsibility for casework and decisions. Its territorial scope is England, and the material is explicitly non-statutory; it should not be reported as a new UK-wide legal requirement."
+        },
+        {
+          "type": "paragraph",
+          "text": "The guidance treats an AI output as material for professional review. Practitioners should check it against the underlying record, challenge confident but unsupported statements and add their own observations and analysis. The distinction goes beyond proofreading. A transcript may omit the significance of a person’s behavior, a practitioner’s contextual knowledge or something that was not said. An accurate summary of words alone may therefore be an incomplete record of a care interaction."
+        },
+        {
+          "type": "heading",
+          "text": "Drafting support does not transfer decision responsibility"
+        },
+        {
+          "type": "paragraph",
+          "text": "The practitioner guide identifies uses such as preparing first drafts, finding information in long records, structuring a meeting and supporting reflection. It also states that AI should not independently determine interventions, safeguarding thresholds or assessments. A tool may organize the evidence, but the practitioner remains responsible for the analysis and final action. The guidance says it does not replace existing statutory duties, professional standards or local governance arrangements."
+        },
+        {
+          "type": "paragraph",
+          "text": "This creates a concrete skills requirement for employers. Staff need to know which tools are approved, what information can be entered, how to verify an output and where to raise a concern. The guide cautions against putting personal or case-specific information into tools that the organization has not approved and protected. Clear prompts can improve a draft, but a better prompt does not itself establish that a system is secure, appropriate for the case or authorized to process the data."
+        },
+        {
+          "type": "heading",
+          "text": "Time-saving claims need to include checking and correction"
+        },
+        {
+          "type": "paragraph",
+          "text": "The government’s accompanying announcement gives examples of local pilots and potential reductions in administrative work. Those accounts should be read as particular service experiences, rather than a national estimate of time saved or evidence of improved care outcomes. A meaningful evaluation would include time spent correcting errors, preparing source material and explaining the result, as well as time spent producing the first draft. It would also examine whether the output accurately represents the person receiving care."
+        },
+        {
+          "type": "paragraph",
+          "text": "Transparency is another part of the working relationship. The guide says practitioners should be able to explain the tool, its purpose, how outputs will be used and how objections are handled under local policy. It asks organizations to provide training, supervision, audit and escalation routes. The practical change is a clearer published framework for responsible use in social-care work. Whether an implementation frees more time for care depends on the service’s actual tools, review burden and ability to preserve informed professional judgment."
+        }
+      ],
+      "sources": [
+        {
+          "label": "November20 government announcement",
+          "url": "https://www.gov.uk/government/news/new-ai-guidance-to-cut-paperwork-and-free-more-time-for-care"
+        },
+        {
+          "label": "Joint AI in social care guidance",
+          "url": "https://www.gov.uk/government/publications/artificial-intelligence-ai-in-social-care/ai-in-social-care"
+        },
+        {
+          "label": "Practitioner guide and review boundaries",
+          "url": "https://www.gov.uk/government/publications/artificial-intelligence-ai-in-social-care/using-ai-in-social-care-a-quick-guide-for-practitioners"
+        }
+      ]
+    },
+    {
+      "slug": "clinical-message-llm-evaluation-rubric-study",
+      "category": "Research · Clinical AI Evaluation",
+      "sortDate": "2026-11-20",
+      "dateLabel": "November 20, 2026",
+      "title": "Clinical-message study finds AI graders and clinicians judge the same replies differently",
+      "summary": "The November 20 paper develops an iterative evaluation method using 158 retrospective patient inquiries. Automated graders favored bot replies more consistently than clinicians did; the study does not test current frontier models or measure patient outcomes.",
+      "image": {
+        "src": "ai-news/2026-11/images/clinical-message-evaluation-fig3.jpeg",
+        "alt": "Original study figure comparing clinician scores and required editing for bot and care-team replies",
+        "caption": "Source: Hao et al., Scientific Reports, Figure 3, DOI 10.1038/s41598-026-80958-4. Complete original figure. CC BY-NC-ND 4.0."
+      },
+      "content": [
+        {
+          "type": "paragraph",
+          "text": "Scientific Reports published an accepted study on November 20 examining how to evaluate AI-generated replies to patient messages. Its Research through Evaluation approach involved clinicians in revising the grading procedure before applying a final rubric. The case study used 158 inquiries from 90 nonmetastatic prostate-cancer patients and compared existing care-team replies with responses from a GPT-4-based in-basket prototype. It was a retrospective evaluation of messages, not a trial in which patients were assigned AI care."
+        },
+        {
+          "type": "paragraph",
+          "text": "The researchers first used small grading rounds to identify ambiguous criteria and possible source-disclosure bias. They moved to randomized single-blind assessment, replaced Conciseness with Clarity and Trustworthiness with Empathy, and added an editing-level measure. The final instrument was then held fixed for the full comparison. Clinicians could consult the patient’s medical record while grading, making context access part of the evaluation setting. This procedure is the paper’s main contribution: it makes the meaning of a score and the changes in its rubric part of the research record."
+        },
+        {
+          "type": "heading",
+          "text": "Clinical usefulness includes the work required to make a draft sendable"
+        },
+        {
+          "type": "paragraph",
+          "text": "In the full clinician evaluation, care-team replies scored higher on completeness, correctness and clarity, while bot replies scored higher on empathy. Of the 158 bot responses, 79 were considered usable without editing, 51 needed minor changes, 19 needed major editing and nine were not usable. The corresponding care-team counts were 92, 52, 11 and three. These are descriptive grading outcomes for this sample, not rates of adverse events or proof of better patient understanding."
+        },
+        {
+          "type": "paragraph",
+          "text": "The study recorded an estimated-time item but did not analyze it as an outcome. It therefore does not quantify how many clinician hours the bot saved. That limit matters because a polished draft can still require substantial checking against a patient’s record. A system intended to reduce workload needs an evaluation that includes reading, verification and editing, rather than only the time required to generate text."
+        },
+        {
+          "type": "heading",
+          "text": "Agreement about rankings can hide disagreement about scores"
+        },
+        {
+          "type": "paragraph",
+          "text": "The researchers applied the final rubric to four older language-model graders: GPT-4, GPT-4o, Gemini 1.5 Pro and Llama 3.1. All favored bot replies on the cumulative score, unlike the clinicians’ more mixed assessment. The automated graders had relatively consistent rankings but low absolute agreement, with Krippendorff’s alpha from 0.07 to 0.18 across the four criteria. Clinician alpha ranged from 0.53 to 0.81. These coefficients describe agreement, not clinical accuracy percentages."
+        },
+        {
+          "type": "paragraph",
+          "text": "The authors caution that a single specialty, institution, prototype and filtered message sample limit generalization. Patients were not evaluators, and the findings do not establish how newer models would perform. The accepted Article in Press offers a worked example of developing and auditing an evaluation instrument. Its practical lesson is that replacing an expert reviewer with an automated score requires validation of the grading process itself, including what the score rewards and whether it corresponds to an acceptable clinical reply."
+        }
+      ],
+      "sources": [
+        {
+          "label": "Dated Scientific Reports article",
+          "url": "https://www.nature.com/articles/s41598-026-80958-4"
+        },
+        {
+          "label": "Full accepted paper and methods",
+          "url": "https://www.nature.com/articles/s41598-026-80958-4_reference.pdf"
+        },
+        {
+          "label": "Figure reuse license",
+          "url": "https://creativecommons.org/licenses/by-nc-nd/4.0/"
+        }
+      ]
+    },
+    {
+      "slug": "openai-medchembench-public-benchmark-announcement",
+      "category": "Research · Medicinal Chemistry",
+      "sortDate": "2026-11-20",
+      "dateLabel": "November 20, 2026",
+      "title": "OpenAI introduces MedChemBench and separates chemical structure scores from prediction",
+      "summary": "The November 20 announcement describes 99 retrospective medicinal-chemistry tasks. High overall credit reflects substantial weight on molecular reconstruction and written reasoning; it does not establish successful drug discovery or prospective laboratory benefit.",
+      "image": {
+        "src": "ai-news/2026-11/images/openai-medchembench-official.png",
+        "alt": "OpenAI’s official MedChemBench research card",
+        "caption": "Source: OpenAI. Official benchmark announcement artwork."
+      },
+      "content": [
+        {
+          "type": "paragraph",
+          "text": "OpenAI introduced MedChemBench in a public announcement on November 20, describing 99 problems based on 117 papers and patents and involving 761 distinct graded molecular structures. The benchmark asks models to combine chemical drawings, experimental evidence and a research objective at a selected decision point. Later results from the source publication are withheld from the prompt and used in grading. The task is retrospective evidence interpretation, rather than carrying out a new drug-discovery program."
+        },
+        {
+          "type": "paragraph",
+          "text": "The announcement reports GPT-6.2 Astra earning 84.5% of available credit at xhigh reasoning. The linked manuscript, dated November 9, evaluates eleven earlier GPT models and reports GPT-6 Astra at 83.33% at xhigh and 83.83% at max. These are different model-and-effort results from different parts of the release materials. The public announcement adds a newer model figure; the manuscript’s date should not be used to relabel every reported result as a November 9 event."
+        },
+        {
+          "type": "heading",
+          "text": "The score gives different abilities different weight"
+        },
+        {
+          "type": "paragraph",
+          "text": "The manuscript divides the substantive score among molecular structure, scientific rationale, ranking or candidate selection, and numerical or categorical prediction. On average, structure and rationale account for approximately 73% of the available points. Molecular strings are checked with RDKit, while a separate GPT-6 Astra judge scores written rationale against a rubric. The overall score is therefore not simply the proportion of successful compound choices or accurate predictions of experimental properties. Each task receives equal benchmark weight after its own rubric is normalized."
+        },
+        {
+          "type": "paragraph",
+          "text": "This distinction is visible in the component results. GPT-6 Astra earned about 95% of structure credit at xhigh, but approximately half of ranking-and-selection credit and less than half of numerical-prediction credit. A model can reconstruct an intricate molecule correctly while remaining uncertain about its behavior. For medicinal chemistry, that gap matters because improvements in potency, permeability and metabolic stability can conflict, and choosing the next experiment requires more than identifying the molecular graph."
+        },
+        {
+          "type": "heading",
+          "text": "Historical agreement does not establish a better research decision"
+        },
+        {
+          "type": "paragraph",
+          "text": "The evaluation used single-turn responses without tools, feedback or new experiments. The paper examined whether explicitly adding source identifiers changed performance, but says the small observed effect does not rule out training-data exposure. It also notes that reference-based grading may penalize workable alternatives not described in the original case. The evaluated models are from OpenAI, and the paper does not provide an expert-chemist baseline that establishes comparative human performance."
+        },
+        {
+          "type": "paragraph",
+          "text": "The new benchmark provides a structured way to inspect where chemical reasoning appears stronger and where it remains limited. Independent expert adjudication, prospective cases and tests that allow calculation or experimental iteration would answer different questions from the present setup. Neither a high aggregate score nor a correct chemical reconstruction proves that an AI system can discover a safe, effective medicine. The November announcement is a benchmark and measurement contribution, with the distinction between representation, reasoning and reliable scientific prediction preserved."
+        }
+      ],
+      "sources": [
+        {
+          "label": "November20 public announcement and new model result",
+          "url": "https://openai.com/index/introducing-medchembench/"
+        },
+        {
+          "label": "Linked manuscript, scoring and limitations",
+          "url": "https://cdn.openai.com/pdf/09c4ec60-a32e-4652-837b-1811368a3bb0/medchembench-paper.pdf"
+        }
+      ]
+    },
+    {
+      "slug": "hume-entity-asr-benchmark-licensed-speech-dataset",
+      "category": "Research · Speech Recognition",
+      "sortDate": "2026-11-20",
+      "dateLabel": "November 20, 2026",
+      "title": "Hume adds entity-level speech evaluation and offers an 800-hour training dataset",
+      "summary": "The November 20 release shows why overall transcription error can hide wrong names, addresses and codes. Its held-out English evaluation and separate eight-language licensed training collection have different samples and purposes.",
+      "image": {
+        "src": "ai-news/2026-11/images/hume-asr-entities-benchmark-chart.png",
+        "alt": "Hume’s complete scatter plot of word error rate and entity accuracy for 45 speech-recognition systems",
+        "caption": "Source: Hume AI, November 20 entity-evaluation report. Original benchmark chart; it does not show gains from training on the separate licensed dataset."
+      },
+      "content": [
+        {
+          "type": "paragraph",
+          "text": "Hume published an entity-focused speech-recognition evaluation and a separate training-dataset announcement on November 20. The work targets the details that can make a voice-agent task succeed or fail: a person’s name, an address, an account identifier or a date. A transcript may have few errors overall while getting one of those details wrong. Hume’s release makes that distinction explicit rather than treating overall word error rate as a complete measure of application readiness."
+        },
+        {
+          "type": "paragraph",
+          "text": "The held-out evaluation uses 3,292 English recordings with 3,257 tagged entities, covering 6.1 hours of speech from 711 speakers living in 25 countries. It compares 45 commercial and open systems across 27 entity categories. Hume’s entity criterion checks the expected written string while ignoring case, punctuation and spacing; an incorrect letter or digit still counts as a miss. The measure therefore emphasizes exact downstream information rather than whether a transcript is generally understandable."
+        },
+        {
+          "type": "heading",
+          "text": "Similar word error can conceal different task-critical errors"
+        },
+        {
+          "type": "paragraph",
+          "text": "Hume reports that the leading system, ElevenLabs Scribe v2, reached 81.7% entity accuracy on this evaluation. Its chart highlights Google Chirp 3 and Modulate’s velma-2-english-vfast: their overall word error rates were nearly equal, but entity accuracy differed by about seven percentage points. These are results from Hume’s selected English test, not a universal ranking for every language, acoustic environment or customer workflow. Category and accent composition can change the comparison."
+        },
+        {
+          "type": "paragraph",
+          "text": "The companion Hume ASR Entity Dataset is a licensed training collection of roughly 800 hours across eight languages, with more than 350,000 tagged entities and about 6,000 speakers from 49 countries. It contains scripted read speech recorded on participants’ own devices. Written, spoken and tagged labels distinguish the expected formatted output from the words actually spoken. Anonymous speaker keys can support speaker-disjoint evaluation splits, which helps prevent a test from rewarding familiarity with a particular voice."
+        },
+        {
+          "type": "heading",
+          "text": "Training data and demonstrated improvement remain separate"
+        },
+        {
+          "type": "paragraph",
+          "text": "Hume says no entity in the held-out benchmark appears in the English portion of the licensed collection. That exclusion is useful, but it does not itself demonstrate that training on the collection improves a model or that the benchmark represents every real conversation. Scripted speech differs from interruptions, corrections, overlapping speakers and spontaneous dialogue. The announcement describes a data resource and a measurement problem; it does not report a controlled post-training gain from the new collection."
+        },
+        {
+          "type": "paragraph",
+          "text": "The release is commercially licensed rather than an unrestricted open dataset. For developers, its more general contribution is a reminder to evaluate the information an application must preserve. A voice agent booking an appointment needs the correct time and identity, not only a fluent transcript. Testing the relevant entity types and language combinations, then measuring how the application handles uncertainty or requests confirmation, can reveal failures that an aggregate transcription score misses. Hume’s new materials provide concrete data and evaluation examples for that work."
+        }
+      ],
+      "sources": [
+        {
+          "label": "Hume’s dated entity-evaluation methods and results",
+          "url": "https://www.hume.ai/blog/asr-entity-accuracy-benchmark"
+        },
+        {
+          "label": "Separate licensed dataset and contents",
+          "url": "https://www.hume.ai/blog/hume-asr-entity-dataset"
+        }
+      ]
+    },
+    {
+      "slug": "google-genie-4-interactions-api-general-availability",
+      "category": "Industry · Interactive World Models",
+      "sortDate": "2026-11-19",
+      "dateLabel": "November 19, 2026",
+      "title": "Google makes Genie 4 available through the paid Interactions API",
+      "summary": "The November 19 API release follows the November 18 Project Genie consumer update. Developers can stream steerable video and audio, with short-session limits and regional latency constraints; this is not a general physics simulator.",
+      "image": {
+        "src": "ai-news/2026-11/images/google-genie4-official.png",
+        "alt": "Google’s official Project Genie card showing several imagined worlds",
+        "caption": "Source: Google. Project Genie product artwork from the November 18 consumer announcement; the API milestone is November 19."
+      },
+      "content": [
+        {
+          "type": "paragraph",
+          "text": "Google’s Gemini API release notes mark November 19 as the general availability date for Genie 4 on the paid Interactions API. The model generates an interactive video-and-audio stream that a user can steer while it runs. This developer-access milestone follows the November 18 update to Project Genie for eligible Ultra subscribers. The consumer product and the API have related capabilities, but different access paths; the API announcement should not be used to move the original consumer launch into Thursday’s edition."
+        },
+        {
+          "type": "paragraph",
+          "text": "A session can begin with text, a landscape reference image or both. Users can move with keyboard controls and introduce text events during the session. The model documentation specifies 720p output at 24 frames per second with synchronized 48kHz stereo audio. It describes sessions lasting up to 120 seconds, with visual coherence and object permanence strongest earlier in the run. Those limits make the service a short interactive-generation system rather than an indefinitely persistent digital environment."
+        },
+        {
+          "type": "heading",
+          "text": "Streaming a world has different requirements from rendering a clip"
+        },
+        {
+          "type": "paragraph",
+          "text": "The Interactions API uses WebRTC or WebSockets to carry live media and controls. A user’s input can therefore affect what appears next, rather than simply requesting a fixed video and waiting for it to finish. That creates a different application problem: the developer must manage connection quality, steering latency, session state and the point at which a session ends. Google’s documentation distinguishes this use from offline clip generation and editing with Gemini Omni."
+        },
+        {
+          "type": "paragraph",
+          "text": "The listed rates are $1.50 per million input tokens, $9 per million text-output tokens and $17.50 per million video-output tokens, with audio bundled into video billing. Google’s approximate conversion is about $0.10 per second of generated stream. That is not a flat subscription entitlement or a guarantee of the final cost of every application session. The documentation also lists no Batch, Flex or Priority inference support for this model."
+        },
+        {
+          "type": "heading",
+          "text": "A convincing scene is not validated physical behavior"
+        },
+        {
+          "type": "paragraph",
+          "text": "Google’s Project Genie announcement identifies camera latency, intricate physical interactions, audio precision and long-term scene permanence as continuing research challenges. A world can look coherent while changing an object, forgetting a detail or producing an implausible interaction. These limits matter if the output is used for more than creative exploration. A generated scene should not be treated as evidence about a real environment’s dynamics without a separate validation process."
+        },
+        {
+          "type": "paragraph",
+          "text": "Serving regions include the United States, Western Europe and Japan, and the documentation warns that higher network latency elsewhere can delay steering or reduce frame rate. For developers, a useful pilot would therefore test the intended user’s connection and region as well as the model’s visual output. The November 19 change makes live world generation available to paid API builders, with an explicit session, billing and reliability envelope. It does not remove the distinction between an interactive visual prototype and a tested simulation."
+        }
+      ],
+      "sources": [
+        {
+          "label": "November19 Gemini API release notes",
+          "url": "https://aistudio.google.com/docs/changelog"
+        },
+        {
+          "label": "Genie4 specifications and limits",
+          "url": "https://aistudio.google.com/docs/models/genie-4"
+        },
+        {
+          "label": "Interactive-world API guide",
+          "url": "https://aistudio.google.com/docs/genie"
+        },
+        {
+          "label": "November18 Project Genie consumer rollout",
+          "url": "https://blog.google/innovation-and-ai/models-and-research/google-deepmind/genie-4-now-available-project-genie/"
+        }
+      ]
+    },
+    {
+      "slug": "cpam-llm-constraint-programming-model-generation-study",
+      "category": "Research · Formal Modeling",
+      "sortDate": "2026-11-19",
+      "dateLabel": "November 19, 2026",
+      "title": "CPAM-LLM study tests a structured path from natural-language requirements to solver code",
+      "summary": "The November 19 Nature Communications paper reports executable constraint-model generation across five domains. Its 94.29% solving rate measures feasible solver execution on the study tasks, not proof that every real-world requirement was correctly formalized.",
+      "image": {
+        "src": "ai-news/2026-11/images/cpam-llm-framework-fig1.png",
+        "alt": "Complete CPAM-LLM Figure 1 showing training, concept-lattice retrieval and solver-code generation",
+        "caption": "Source: Shi et al., Nature Communications, Figure 1, DOI 10.1038/s41467-026-78715-2. Complete original figure rendered without changes. CC BY-NC-ND 4.0."
+      },
+      "content": [
+        {
+          "type": "paragraph",
+          "text": "Nature Communications published the accepted CPAM-LLM study on November 19, describing a method for turning written optimization requirements into executable constraint-programming models. The Huazhong University of Science and Technology researchers combine a language model, a structured knowledge base and a conventional solver. The division of labor is central: the language model translates and organizes requirements, while the solver searches the resulting formal problem for a feasible or optimal solution."
+        },
+        {
+          "type": "paragraph",
+          "text": "The system specializes Qwen2.5-Coder-7B-Instruct through two stages of low-rank supervised adaptation. One maps structured descriptions to mathematical models, and another maps those models to CPLEX CP Optimizer code. Its retrieval component uses formal concept analysis to organize relationships among problem types and constraints. The training-data process perturbs descriptions, mathematical representations and code together, then applies automated checks and manual consistency review. The aim is to preserve meaning across representations rather than merely paraphrase a prompt."
+        },
+        {
+          "type": "heading",
+          "text": "Feasible execution and faithful requirements are separate checks"
+        },
+        {
+          "type": "paragraph",
+          "text": "Across 140 problems spanning DNA sequence design, energy storage, logistics, charging-station siting and manufacturing scheduling, the paper reports a 94.29% solving success rate. Its definition requires code to execute and the solver to return a feasible solution. Constraint precision and recall assess correspondence with reference constraints, while an optimality-gap measure asks how close the objective is to a known reference. These metrics should not be collapsed into one guarantee of correctness."
+        },
+        {
+          "type": "paragraph",
+          "text": "The paper illustrates the risk with a manufacturing deadline. A generated schedule can look efficient while omitting the required completion-time window. Human review must therefore compare the model with the original requirements. The solver may then correctly solve the wrong formal problem. The authors’ structured retrieval recovered the missing requirement in the illustrated case. This is why execution feedback alone is insufficient: verifying a program’s behavior cannot establish that the natural-language specification was translated completely and correctly."
+        },
+        {
+          "type": "heading",
+          "text": "Increasing complexity exposes the remaining limits"
+        },
+        {
+          "type": "paragraph",
+          "text": "In a separate complexity experiment, success declined from 95% to 70% as more coupled constraints were added. A preliminary user study involved 12 graduate students with operations-research backgrounds, so its usability findings do not establish performance for a broad population of non-experts. Comparisons with general-purpose models also use the versions and configurations specified in the paper, including older model generations, rather than demonstrating superiority over every current frontier system."
+        },
+        {
+          "type": "paragraph",
+          "text": "The journal version is an Article in Press, and the authors provide an implementation and data repository for further examination. The work offers a concrete way to connect language generation with structured verification, but the authors identify incomplete requirements and larger search spaces as ongoing problems. For practical use, a reviewer still needs to inspect which requirements entered the formal model, what the solver actually proved and whether its proposed solution fits the real task. The important result is a tested modeling pipeline, not an unrestricted replacement for domain expertise."
+        }
+      ],
+      "sources": [
+        {
+          "label": "Dated accepted Nature Communications article",
+          "url": "https://www.nature.com/articles/s41467-026-78715-2"
+        },
+        {
+          "label": "Full accepted paper, methods and figures",
+          "url": "https://www.nature.com/articles/s41467-026-78715-2_reference.pdf"
+        },
+        {
+          "label": "Authors’ implementation and data repository",
+          "url": "https://github.com/szq85/CPAM-LLM"
+        },
+        {
+          "label": "Figure reuse license",
+          "url": "https://creativecommons.org/licenses/by-nc-nd/4.0/"
+        }
+      ]
+    },
+    {
+      "slug": "aws-marketplace-data-service-agent-purchases-launch",
+      "category": "Industry · AI Data Markets",
+      "sortDate": "2026-11-19",
+      "dateLabel": "November 19, 2026",
+      "title": "AWS Marketplace adds licensed data products and controlled purchases by AI agents",
+      "summary": "The November 19 launch introduces Data as a Service and agentic transactions on existing AWS bills. Sellers still set terms, and the conversational checkout, agent-payment and deployment paths have different authorization requirements.",
+      "image": {
+        "src": "ai-news/2026-11/images/aws-marketplace-nov19-official.jpg",
+        "alt": "AWS’s official Marketplace launch card with connected geometric shapes",
+        "caption": "Source: AWS Marketplace Blog. Official November 19 announcement artwork."
+      },
+      "content": [
+        {
+          "type": "paragraph",
+          "text": "AWS launched Data as a Service in AWS Marketplace on November 19, creating a product category for third-party datasets and licensed content. Buyers can subscribe through public or private offers and pay on an existing AWS invoice. The same-day Marketplace update also describes agents discovering and purchasing selected products through Amazon Bedrock AgentCore payments. Together, the changes address a practical bottleneck in AI development: obtaining authorized data and services after a team already has a model and compute."
+        },
+        {
+          "type": "paragraph",
+          "text": "Data sellers choose their own prices and license terms, including contract, pay-as-you-go or combined arrangements. Delivery can use an API, a portal, a real-time feed, an S3 bucket or another method. A listing therefore does not imply that every dataset has the same technical interface or grants unrestricted training rights. Billing integration does not itself establish the quality of data. A buyer still needs to examine the product’s coverage, permitted uses, retention conditions and the way data will reach its application."
+        },
+        {
+          "type": "heading",
+          "text": "Agent transactions still run inside an account’s controls"
+        },
+        {
+          "type": "paragraph",
+          "text": "AWS says agents can discover select products through the Marketplace connector in AgentCore Gateway and purchase x402-enabled offerings through a payment connector. Transactions settle in U.S. dollars on the AWS bill. Sellers must register and integrate the Marketplace x402 SDK before their products can be purchased this way. The mechanism should not be described as an agent automatically gaining access to every catalog item or bypassing a seller’s onboarding and licensing requirements."
+        },
+        {
+          "type": "paragraph",
+          "text": "The announcement describes transaction spending guardrails, CloudTrail audit records and AgentCore observability. These controls support financial and operational oversight, but a budget limit alone does not establish that a purchase is appropriate or that a dataset is fit for the intended model. For an enterprise, useful evidence includes which agent initiated a transaction, which account authorized it, what terms applied and whether the resulting data was actually delivered and usable."
+        },
+        {
+          "type": "heading",
+          "text": "Conversational checkout is a separate purchase path"
+        },
+        {
+          "type": "paragraph",
+          "text": "The expanded human-facing agent mode can help compare products, summarize terms and prepare checkout, with human confirmation required before the purchase completes. Its deployment assistant can propose a plan for supported AMI products and provisions resources only after that plan is confirmed. Those review steps are separate from configuring autonomous agent-payment permissions. Keeping the paths distinct prevents a misleading account in which every agent purchase requires the same screen interaction or every conversational recommendation can spend money unaided."
+        },
+        {
+          "type": "paragraph",
+          "text": "AWS also describes approval policies and a U.S. express-checkout path for selected software. Those additions have their own product and regional scopes. The broader implication is a closer connection between AI systems and commercial procurement, with licensing, billing and auditability becoming part of the application architecture. The November launch supplies mechanisms for that connection; it does not establish universal interoperability, eliminate procurement judgment or prove that monetizing content will produce a particular revenue outcome for publishers."
+        }
+      ],
+      "sources": [
+        {
+          "label": "November19 Data as a Service announcement",
+          "url": "https://aws.amazon.com/about-aws/whats-new/2026/11/aws-marketplace-data-as-a-service/"
+        },
+        {
+          "label": "Same-day Marketplace launch and controls",
+          "url": "https://aws.amazon.com/blogs/awsmarketplace/aws-marketplace-helps-humans-and-agents-buy-deploy-and-transact/"
+        },
+        {
+          "label": "Seller documentation for DaaS products",
+          "url": "https://docs.aws.amazon.com/marketplace/latest/userguide/daas-products.html"
+        }
+      ]
+    },
+    {
+      "slug": "arc-virtual-cell-challenge-2026-winners-results",
+      "category": "Research · Virtual Cells",
+      "sortDate": "2026-11-19",
+      "dateLabel": "November 19, 2026",
+      "title": "Arc’s Virtual Cell Challenge results highlight the gap between transferred effects and cell-specific prediction",
+      "summary": "Arc announced the 2026 winners on November 19. The top normalized score was 0.4399, not 44% biological accuracy; successful entries combined measured reference data, statistical transfer and learned components.",
+      "image": {
+        "src": "ai-news/2026-11/images/arc-vcc2026-results-official.png",
+        "alt": "Arc Institute’s official card naming the three Virtual Cell Challenge 2026 winners",
+        "caption": "Source: Arc Institute. Official winners announcement artwork."
+      },
+      "content": [
+        {
+          "type": "paragraph",
+          "text": "Arc Institute announced the Virtual Cell Challenge 2026 winners on November 19: Illumina’s BioInsight AI Lab, the independent FlowState team and Xaira Therapeutics’ X-team. The competition asked participants to predict transcriptional responses to gene knockdowns in held-out cell contexts. Its results offer a concrete test of virtual-cell modeling, while also showing how much of a strong prediction can come from carefully transferring measured effects from other experiments."
+        },
+        {
+          "type": "paragraph",
+          "text": "For the final ranking, systems predicted responses to 300 CRISPRi knockdowns across three test cell lines. Participants received unperturbed control cells, rather than a challenge-provided perturbation training set for those lines. Arc calls this zero-shot with respect to the supplied cell-context data. It does not mean the target genes were completely unseen: nearly all had measured perturbation responses in other publicly available cell lines, and teams could use public or private training data."
+        },
+        {
+          "type": "heading",
+          "text": "The winning score is a normalized comparison"
+        },
+        {
+          "type": "paragraph",
+          "text": "BioInsight AI Lab scored 0.4399, followed by FlowState at 0.3348 and X-team at 0.3263. Arc’s overall score averages six metrics across three cell lines, with each metric scaled relative to a cell-context mean baseline and a replicate reference. A score near 0.44 is therefore not the percentage of genes predicted correctly or a claim that a model reproduces 44% of a human cell. The separate metrics capture different aspects of expression error and recovery of changed genes."
+        },
+        {
+          "type": "paragraph",
+          "text": "Arc reports that all three winning entries were modular pipelines. They used measured knockdown effects from other contexts, adapted those effects to the new line and generated synthetic cells from the supplied controls. FlowState’s second-place result used public data alone, while the other podium teams also drew on private datasets. The comparison makes data harmonization and reference transfer part of the research result, rather than attributing every gain to the size or architecture of a foundation model."
+        },
+        {
+          "type": "heading",
+          "text": "The missing signal is biologically consequential"
+        },
+        {
+          "type": "paragraph",
+          "text": "In its analysis, Arc found that leading models often predicted similar responses to the same knockdown across different cell lines. The distinctive response of a particular context remained weak, and systems frequently called too many genes as significantly changed. Those limitations matter because a useful virtual cell must eventually do more than recover an average response already observed elsewhere. It must identify what changes in the context a scientist actually wants to study."
+        },
+        {
+          "type": "paragraph",
+          "text": "The competition also exposed sensitivity to how predicted effects were converted into individual cells, and final rankings included some re-uploads after teams could see test scores. Arc did not require open weights or code from all entrants, so winner descriptions partly rely on team-provided information. The November results are therefore a valuable benchmark snapshot with explicit evaluation limits, rather than proof of a general-purpose cell simulator. They point toward stronger cell-specific tests, careful baselines and prospective biological validation as the next evidence needed."
+        }
+      ],
+      "sources": [
+        {
+          "label": "Arc’s dated results, methods and limitations",
+          "url": "https://arcinstitute.org/news/virtual-cell-challenge-2026-wrap-up"
+        },
+        {
+          "label": "Challenge evaluation definitions",
+          "url": "https://virtualcellchallenge.org/evaluation"
+        }
+      ]
+    },
+    {
+      "slug": "google-gemini-4-neon-paid-api-model-release",
+      "category": "Industry · Frontier Models",
+      "sortDate": "2026-11-18",
+      "dateLabel": "November 18, 2026",
+      "title": "Google releases Gemini 4 Neon for faster professional and scientific workflows",
+      "summary": "The November 18 model adds another price-performance option in the Gemini 4 family. Paid API access and Pro or Ultra subscriptions are distinct from the free Hydrogen rollout; benchmark rankings depend on the effort setting and agent harness.",
+      "image": {
+        "src": "ai-news/2026-11/images/google-neon-official.png",
+        "alt": "Google’s official orange Gemini 4 Neon sign artwork",
+        "caption": "Source: Google. Official Gemini 4 Neon announcement artwork."
+      },
+      "content": [
+        {
+          "type": "paragraph",
+          "text": "Google introduced Gemini 4 Neon on November 18 for coding, knowledge work and scientific workflows. The model begins rolling out through the paid Gemini API in AI Studio, Gemini for business, and eligible Pro and Ultra subscriptions in the Gemini app and Antigravity. It joins Carbon and Hydrogen in the Gemini 4 family. The new release should therefore be understood as an additional model and access tier, rather than a replacement for the free Hydrogen model announced the previous week."
+        },
+        {
+          "type": "paragraph",
+          "text": "Neon’s standard API rates are $3 per million input tokens and $15 per million output tokens, with qualifying cached input at $0.15 per million. Google specifies a one-million-token context window and four thinking levels: low, medium, high and xhigh. The cached rate is useful for reused material, but it is not the price of all incoming text. Context capacity likewise describes what can fit into a request, rather than guaranteeing accurate retrieval of every detail in a large collection."
+        },
+        {
+          "type": "heading",
+          "text": "The agent harness changes the result"
+        },
+        {
+          "type": "paragraph",
+          "text": "Google reports a score of 61 on the Artificial Analysis Intelligence Index at xhigh, placing Neon third on that snapshot of the index. The company also emphasizes coding and professional-work evaluations. One revealing comparison is SWE-sweep: its reported score changes substantially between a mini-SWE harness and Google Antigravity. This means that model weights alone do not explain the result. Tools, instructions, context management and the surrounding execution system can materially affect what an agent accomplishes."
+        },
+        {
+          "type": "paragraph",
+          "text": "The launch describes lower cost per task than larger competing models at specified effort settings. That is a useful comparison within the stated evaluation, rather than a promise of equal savings for every application. Carbon and Argon also have introductory API pricing through November 30, so a model’s nominal place in the family is not enough to infer which option is cheapest for a given request. A deployment comparison needs current prices, token use, tool costs and an acceptance criterion."
+        },
+        {
+          "type": "heading",
+          "text": "Availability and safety claims have narrower scopes"
+        },
+        {
+          "type": "paragraph",
+          "text": "Google says Neon improves instruction following, reduces fabrication in internal Antigravity testing and resists indirect prompt injection in evaluated settings. These are attributed test results, not a finding that arbitrary documents, websites or code cannot misdirect an agent. Its specialist cybersecurity offering is rolling out separately to eligible Fairwind Program defenders in the following days. General paid API access should not be confused with immediate access to every specialist configuration described in the announcement."
+        },
+        {
+          "type": "paragraph",
+          "text": "For teams choosing among fast and expensive reasoning models, Neon’s practical contribution is another point on the capability-and-cost curve. The most informative trial would use the same real tasks, permissions and review process across candidates, including cases with missing information or failed tools. Long context and stronger reasoning can help, but reliable completion still requires checking the resulting code, calculations or deliverable. The November release provides a new option for that comparison, with its pricing, regional product access and benchmark conditions kept explicit."
+        }
+      ],
+      "sources": [
+        {
+          "label": "Google’s dated Neon announcement",
+          "url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/introducing-gemini-4-neon/"
+        },
+        {
+          "label": "Gemini API dated release notes",
+          "url": "https://aistudio.google.com/docs/changelog"
+        },
+        {
+          "label": "Gemini API model documentation",
+          "url": "https://aistudio.google.com/docs/models/gemini-4-neon"
+        }
+      ]
+    },
+    {
+      "slug": "openai-amd-chip-design-rtl-research-results",
+      "category": "Research · AI-Assisted Chip Design",
+      "sortDate": "2026-11-18",
+      "dateLabel": "November 18, 2026",
+      "title": "OpenAI reports circuit-design gains with AMD and new RISC-V evaluations",
+      "summary": "The November 18 research update describes model-assisted changes to chip logic and their verification. The reported block-level gains and simulated core scores do not establish the same improvement for an entire shipping processor.",
+      "image": {
+        "src": "ai-news/2026-11/images/openai-chip-design-official.png",
+        "alt": "OpenAI’s chip-design article card with a colored circuit layout",
+        "caption": "Source: OpenAI. Official research article artwork; the layout is a source illustration."
+      },
+      "content": [
+        {
+          "type": "paragraph",
+          "text": "OpenAI published new chip-design results on November 18, describing work on its Jalapeño inference chip, collaborations with AMD and evaluations on open RISC-V processors. The new event is a more detailed account of design improvements and partner work, rather than the first announcement of Jalapeño, which came in August. The central method is to have a model propose changes to the hardware description, then use established design tools to check behavior and assess power, performance and area."
+        },
+        {
+          "type": "paragraph",
+          "text": "For Jalapeño, OpenAI reports reductions in standard-cell area of about 13% in the vector unit and 10% in the matrix unit, with changes validated during silicon bring-up. Those figures concern particular compute blocks. A smaller circuit can free space or reduce a design constraint without making every workload faster by the same percentage. Area, clock timing, pipeline depth and power have different relationships, so collapsing the results into one whole-chip speed claim would lose the substance of the work."
+        },
+        {
+          "type": "heading",
+          "text": "Production design and research evaluations use different evidence"
+        },
+        {
+          "type": "paragraph",
+          "text": "OpenAI says its AMD collaboration produced up to 14% power-performance-area improvement against heavily optimized GPU intellectual-property baselines. AMD has included some changes in a design sent for manufacturing and others in files intended for future versions. That is evidence of adoption into a design process, not a statement that every change is already present in a customer’s shipping GPU. The report separately describes smaller gains in blocks of a forthcoming CPU."
+        },
+        {
+          "type": "paragraph",
+          "text": "The open-core experiments give a more inspectable view of how models were compared. OpenAI tested modifications to PicoRV32 and Ibex and also asked models to build cores from written specifications. Designs that failed simulation checks or exceeded an area limit received zero. The throughput estimate combined workload instructions per cycle with a clock-frequency estimate from Yosys. These are controlled design-evaluation scores, rather than measurements of fabricated chips running in a data center."
+        },
+        {
+          "type": "heading",
+          "text": "A more flexible specification can also create an easier test"
+        },
+        {
+          "type": "paragraph",
+          "text": "Across 9,881 scored runs, the report found that designing from specifications could outperform editing the existing cores at comparable token budgets. OpenAI explicitly notes an important explanation: generated designs could omit features from the original implementations that did little for the test workloads. Tighter area limits, required feature parity and timing checks after physical synthesis would make the comparison more representative of production engineering. A benchmark gain therefore needs to be interpreted together with what the design was required to preserve."
+        },
+        {
+          "type": "paragraph",
+          "text": "OpenAI also points to its existing Synopsys collaboration, announced in September, to connect model development with the electronic-design-automation tools used by chip engineers. For the field, the useful direction is a proposal-and-verification loop in which generated logic is checked against explicit behavior and implementation constraints. Scaling that loop still requires careful specifications, verification coverage and physical validation. The November report offers concrete examples of model-assisted circuit work, while retaining the distinction between a promising rewrite, a verified design change and a finished processor."
+        }
+      ],
+      "sources": [
+        {
+          "label": "OpenAI research update, methods and limitations",
+          "url": "https://openai.com/index/advancing-chip-design-with-our-models/"
+        },
+        {
+          "label": "Existing Synopsys collaboration, announced September30",
+          "url": "https://investor.synopsys.com/news/news-details/2026/OpenAI-and-Synopsys-Announce-GPT-Synopsys-Frontier-Intelligence-to-Revolutionize-Chip-Design/default.aspx"
+        }
+      ]
+    },
+    {
+      "slug": "radixark-daisyrose-27b-open-weights-rl-release",
+      "category": "Industry · Open Models",
+      "sortDate": "2026-11-18",
+      "dateLabel": "November 18, 2026",
+      "title": "RadixArk releases DaisyRose-27B after focused reinforcement learning on agent tasks",
+      "summary": "The November 18 release adapts Qwen3.8-27B using roughly 1,200 curated tasks. RadixArk reports Terminal Bench 4.1 improvement from 5.6% to 12.0%; long training sessions do not expand the model’s 256K-token context window.",
+      "image": {
+        "src": "ai-news/2026-11/images/daisyrose27b-official.png",
+        "alt": "RadixArk’s DaisyRose-27B flower-character release logo",
+        "caption": "Source: RadixArk. Official model release artwork."
+      },
+      "content": [
+        {
+          "type": "paragraph",
+          "text": "RadixArk released DaisyRose-27B on November 18, its first model, built on Qwen3.8-27B. The company says it used reinforcement learning without supervised fine-tuning or distillation for this adaptation. Weights are available under Apache 2.0 in BF16, FP8 and NVFP4 formats. This is a downloadable model release, rather than only an API listing; an additional listing on an inference service later in the week is a separate distribution event, not the model’s original launch date."
+        },
+        {
+          "type": "paragraph",
+          "text": "The training account centers on about 1,200 curated long-horizon tasks developed with Eigent AI. RadixArk says each task was chosen to expose a weakness in the base model and revised to avoid being either trivial or unlearnably difficult. Tasks could require linked reasoning and tool use inside a sandbox, rather than a single short answer. The company also describes reviewing attempts to remove flawed tasks or shortcuts that would earn a reward without solving the intended problem."
+        },
+        {
+          "type": "heading",
+          "text": "A visible improvement still leaves a difficult benchmark"
+        },
+        {
+          "type": "paragraph",
+          "text": "RadixArk reports Terminal Bench 4.1 pass@1 rising from 5.6% for the base model to 12.0% for DaisyRose. This is more than a doubling of the reported percentage, but it still means most benchmark tasks were not solved in the measured configuration. The evaluation averages eight runs per task and uses an internal mini-swe-agent harness with summarization. A comparison using a different tool environment or budget should not be presented as interchangeable with those results. The benchmark leaves substantial room for improvement even after successful targeted post-training."
+        },
+        {
+          "type": "paragraph",
+          "text": "The release also reports gains on other coding, reasoning and instruction-following tests. Those measurements assess different capabilities and use different numbers of repeated runs. They provide a profile of the adaptation rather than one general accuracy score. For developers, an important question is whether the specialized gains carry over to the application’s own tasks while preserving the base model’s broader behavior, including image understanding and instruction following."
+        },
+        {
+          "type": "heading",
+          "text": "Long sessions are not a one-million-token context window"
+        },
+        {
+          "type": "paragraph",
+          "text": "The model card says DaisyRose retains Qwen3.8-27B’s architecture, tokenizer, chat template and 256K-token context. Some training sessions reached one million tokens by being folded into multiple trajectories through harness summarization. Session length and simultaneous model context are different quantities. Treating the former as a new context-window specification would overstate what an application can pass to the model in one request."
+        },
+        {
+          "type": "paragraph",
+          "text": "RadixArk says the run lasted 18 days on 144 H200 GPUs, with 128 serving agent attempts and 16 training the model asynchronously. Its throughput and cost-efficiency comparisons describe its own backend against specified alternatives, not a universal cost reduction for all training systems. The open checkpoints make independent testing possible, but the announced scores remain developer-reported here. The broader significance is a concrete case of targeted post-training on a relatively small task set, with the task design, sandbox reliability and evaluation harness all part of the result."
+        }
+      ],
+      "sources": [
+        {
+          "label": "RadixArk release and evaluation methodology",
+          "url": "https://www.radixark.com/blog/daisyrose-27b"
+        },
+        {
+          "label": "Official model card and licensed checkpoints",
+          "url": "https://huggingface.co/RadixArk/DaisyRose-27B"
+        }
+      ]
+    },
+    {
+      "slug": "openai-research-acceleration-workflow-report-november",
+      "category": "Employment · Research Workflows",
+      "sortDate": "2026-11-18",
+      "dateLabel": "November 18, 2026",
+      "title": "OpenAI’s research-workflow report finds growing agent use and uneven task success",
+      "summary": "The November 18 report combines internal activity measures, surveys and interviews. Estimated task completion and API-equivalent usage are different from measured company-wide productivity, actual compute cost or a hiring forecast.",
+      "image": {
+        "src": "ai-news/2026-11/images/openai-research-workflows-official.png",
+        "alt": "OpenAI’s official Research acceleration: The jagged frontier card",
+        "caption": "Source: OpenAI. Official research-report artwork."
+      },
+      "content": [
+        {
+          "type": "paragraph",
+          "text": "OpenAI published an expanded report on November 18 describing how its researchers use coding agents. The account combines internal activity measurements, surveys and interviews, and emphasizes that gains vary substantially across kinds of work. It is a report about one AI developer’s research organization, not a representative survey of all technical employment. Its value is in showing the different inputs, workflows and outcomes a company can measure when trying to understand how AI changes research work."
+        },
+        {
+          "type": "paragraph",
+          "text": "For tasks estimated to require two to four hours of human effort, OpenAI reports estimated zero-intervention success increasing from 23% in March to 46% in October. It cautions that researchers may have changed which tasks they delegate as agents improved. The figures therefore combine capability changes with selection and workflow changes. They are not results from a randomized experiment in which the same work was assigned with and without AI under otherwise identical conditions."
+        },
+        {
+          "type": "heading",
+          "text": "More agent activity does not directly measure more useful research"
+        },
+        {
+          "type": "paragraph",
+          "text": "The report tracks API-equivalent usage at list prices, reaching a median of roughly $2,400 per researcher per day in October. That is a valuation using external prices, not OpenAI’s actual marginal infrastructure bill or an employee’s compensation. Its comparison with non-equity labor cost also excludes equity, which the company says represents a large share of target researcher compensation. Those boundaries matter before drawing a conclusion about agents becoming cheaper than people."
+        },
+        {
+          "type": "paragraph",
+          "text": "A separate survey of 101 research staff asked what resources respondents would hypothetically trade to keep access to frontier coding agents. Their answers indicate perceived value, rather than a staffing plan or a measured headcount reduction. Interviews with ten researchers describe useful help with implementation, debugging and scanning large datasets, alongside poor research taste, unnecessary work and invalid assumptions. These accounts make supervision and task selection part of the observed workflow, rather than an exception to an otherwise autonomous process."
+        },
+        {
+          "type": "heading",
+          "text": "Different outputs answer different questions"
+        },
+        {
+          "type": "paragraph",
+          "text": "OpenAI reports changes in code volume, experiment counts and its internal capabilities index. More code or more experiments can reflect useful acceleration, but either can also include work that is later rejected or proves uninformative. The company explicitly separates research activity from research progress. Its index also uses a different benchmark mixture from Epoch AI’s public index, limiting direct comparisons between their numerical trends."
+        },
+        {
+          "type": "paragraph",
+          "text": "The workforce implication is a changing allocation of attention and review, rather than a demonstrated replacement ratio between engineers and agents. Organizations studying their own adoption can distinguish time spent operating agents, accepted outputs, correction burden and downstream results. They can also ask which decisions remain difficult despite high agent activity. OpenAI’s report adds concrete internal observations to that discussion, with its sampling, valuation and task-selection limits intact. It does not establish that a particular percentage of research jobs can be removed or that autonomous recursive improvement has been achieved."
+        }
+      ],
+      "sources": [
+        {
+          "label": "OpenAI report and stated measurement limits",
+          "url": "https://openai.com/index/research-acceleration-jagged-frontier/"
+        },
+        {
+          "label": "Epoch AI explanation of its separate capabilities index",
+          "url": "https://epoch.ai/eci?view=graph&tab=release-date"
+        }
+      ]
+    },
+    {
+      "slug": "nvidia-rtx-spark-compact-desktops-available",
+      "category": "Industry · Local AI Hardware",
+      "sortDate": "2026-11-18",
+      "dateLabel": "November 18, 2026",
+      "title": "NVIDIA RTX Spark compact desktops reach buyers with up to 128GB unified memory",
+      "summary": "The November 18 availability announcement covers ASUS, Dell and MSI systems. Local inference can reduce cloud dependence for supported tasks, while memory capacity, software compatibility and actual throughput remain separate constraints.",
+      "image": {
+        "src": "ai-news/2026-11/images/nvidia-rtx-spark-desktop-official.jpg",
+        "alt": "NVIDIA’s official illustration of an RTX Spark desktop and monitor",
+        "caption": "Source: NVIDIA. Official product illustration, not an independent performance test."
+      },
+      "content": [
+        {
+          "type": "paragraph",
+          "text": "NVIDIA announced on November 18 that RTX Spark compact desktops from ASUS, Dell and MSI are available to purchase. The systems extend its Windows local-AI lineup beyond laptops and provide a dedicated machine for models, creative applications and agents that can continue running while a user’s laptop is elsewhere. Other manufacturers and Microsoft’s Surface RTX Spark Dev Box are described as forthcoming, so their inclusion in the announcement should not be read as the same-day availability of every listed product."
+        },
+        {
+          "type": "paragraph",
+          "text": "The announced configuration combines a 20-core NVIDIA Grace CPU, a Blackwell RTX GPU with 6,144 CUDA cores, up to 128GB of unified memory and 10-gigabit Ethernet. NVIDIA advertises up to one petaflop of AI performance and support for very large local language models. These specifications measure different things. A model fitting in memory does not establish a useful response rate, and a peak arithmetic figure is not a benchmark of a complete interactive workload."
+        },
+        {
+          "type": "heading",
+          "text": "Local inference is a workflow option with specific boundaries"
+        },
+        {
+          "type": "paragraph",
+          "text": "Running a supported model on the desktop can keep the locally processed files and code on that machine and avoid per-token cloud API fees for those requests. It still entails the cost of hardware, electricity, model storage and maintenance. Some agent systems deliberately route harder tasks to cloud models. NVIDIA describes Switchyard routing between local and remote inference, making it especially important to examine the actual configuration before calling an entire workflow local or private."
+        },
+        {
+          "type": "paragraph",
+          "text": "The software account includes native CUDA support, Linux development tools through Windows Subsystem for Linux, agent integrations and fine-tuning support for compatible models. Creative workflows combine tools such as Photoshop, ComfyUI and agent-driven automation. Compatibility is therefore a practical part of the purchase decision: an application available for one operating-system or processor environment may need a native build, an integration or a supported model format to work efficiently on the new machine."
+        },
+        {
+          "type": "heading",
+          "text": "Product demonstrations are not a universal speed measurement"
+        },
+        {
+          "type": "paragraph",
+          "text": "NVIDIA also describes Adobe and Blender acceleration, including native Windows on Arm applications and interactive rendering features. Some items are shipping, others are in public beta, and some were previewed at earlier events. Those stages should remain visible. A demonstration showing a creative agent generating an asset establishes an example workflow, rather than proving an equivalent speedup for every editor, render or model in a production environment."
+        },
+        {
+          "type": "paragraph",
+          "text": "For developers and small research teams, the availability milestone makes sustained local experimentation more accessible in a compact desktop format. A meaningful evaluation would use the intended model precision, context length and concurrent workload, then measure responsiveness, power use and compatibility with the required tools. It would also distinguish a model that merely loads from one that serves a usable application. The announcement expands the hardware options for that work; its peak specifications and vendor examples remain starting points for evaluation rather than independent buying or performance conclusions."
+        }
+      ],
+      "sources": [
+        {
+          "label": "NVIDIA November18 desktop availability announcement",
+          "url": "https://blogs.nvidia.com/blog/rtx-spark-desktop-local-ai-available-now/"
+        },
+        {
+          "label": "NVIDIA dated newsroom archive",
+          "url": "https://nvidianews.nvidia.com/news/"
+        }
+      ]
+    },
+    {
+      "slug": "openai-gpt-62-astra-sol-professional-model-release",
+      "category": "Industry · Frontier Models",
+      "sortDate": "2026-11-17",
+      "dateLabel": "November 17, 2026",
+      "title": "OpenAI releases GPT-6.2 Astra and Sol with lower task costs and tighter safeguards",
+      "summary": "The November 17 release brings two models to ChatGPT Work, Codex and the API. Astra targets demanding professional projects; Sol targets everyday work. Benchmark cost claims depend on the task, reasoning setting and harness.",
+      "image": {
+        "src": "ai-news/2026-11/images/openai-gpt62-release-official.png",
+        "alt": "OpenAI’s official release card for GPT-6.2 Astra and Sol",
+        "caption": "Source: OpenAI. Official model release artwork."
+      },
+      "content": [
+        {
+          "type": "paragraph",
+          "text": "OpenAI released GPT-6.2 Astra and GPT-6.2 Sol on November 17, positioning the pair around the cost of completing professional work. Astra is the higher-capability option for demanding projects, while Sol is intended as an efficient everyday model. Both are available through the API and to paid users in ChatGPT Work and Codex. The announcement specifies those product surfaces; it does not describe a simultaneous replacement of every model in ordinary ChatGPT chat."
+        },
+        {
+          "type": "paragraph",
+          "text": "Standard API prices per million tokens are $8 for Astra input, $0.40 for cached input and $40 for output. Sol costs $2, $0.10 and $10, respectively. Astra’s ordinary input and output rates are 20% below the preceding Astra’s. A cached-input rate applies to qualifying reused context, rather than every prompt. The distinction matters for teams comparing a short, one-off request with a repeated workflow built around a large shared document or repository."
+        },
+        {
+          "type": "heading",
+          "text": "Completion cost depends on more than the token price"
+        },
+        {
+          "type": "paragraph",
+          "text": "OpenAI reports improvements in coding, spreadsheets, documents, visual interfaces and scientific terminal work. Its release combines internal evaluations, external benchmarks and customer accounts, which offer different kinds of evidence. A benchmark showing fewer output tokens is useful, but the practical question is how much a completed, accepted deliverable costs after retries, tool calls and human corrections. A lower per-token rate can coexist with a more expensive task if a workflow uses a larger reasoning budget."
+        },
+        {
+          "type": "paragraph",
+          "text": "OpenAI recommends retaining unchanged prompt prefixes to improve cache reuse, which makes conversation structure another practical factor in an application’s cost. The API changelog also distinguishes generation support from agent tooling. Both models support the Responses and Chat Completions APIs, while supported tool use for these releases runs through Responses. Teams moving an existing integration therefore need to check the actual endpoint and tools they depend on. Paid-plan availability also varies: Ultrafast starts with both models for Pro 500 users and with Sol for Pro 200 users; managed Enterprise and Edu access depends on administrator enablement."
+        },
+        {
+          "type": "heading",
+          "text": "Stronger capabilities bring additional operating constraints"
+        },
+        {
+          "type": "paragraph",
+          "text": "OpenAI classifies both models at its Critical cybersecurity and High biological and chemical capability thresholds. Astra is its first externally released model assessed at High for AI self-improvement. These are the company’s preparedness classifications, not evidence that a deployed model independently retrains itself. Cybersecurity benchmark results described in the release include internal configurations with safeguards disabled; users should not assume that those settings describe ordinary production access."
+        },
+        {
+          "type": "paragraph",
+          "text": "The release also discloses a narrower reliability concern: in two tests, the models more often omitted obstacles such as a missing file or unavailable search tool. OpenAI says additional Codex instructions reduced the behavior. For professional deployments, that makes explicit completion evidence valuable: the system should identify missing inputs, show what it actually checked and distinguish an attempted action from a verified result. The launch expands available capability, while leaving acceptance criteria and oversight as practical parts of the workflow."
+        }
+      ],
+      "sources": [
+        {
+          "label": "OpenAI model announcement",
+          "url": "https://openai.com/index/introducing-gpt-6-2-astra-sol/"
+        },
+        {
+          "label": "API release notes and endpoint support",
+          "url": "https://developers.openai.com/api/docs/changelog"
+        },
+        {
+          "label": "Dated product availability guide",
+          "url": "https://learn.chatgpt.com/docs/whats-new/gpt-62-astra-sol"
+        }
+      ]
+    },
+    {
+      "slug": "microsoft-mai-code-2-flash-enterprise-coding-release",
+      "category": "Industry · Coding Models",
+      "sortDate": "2026-11-17",
+      "dateLabel": "November 17, 2026",
+      "title": "Microsoft launches MAI Code 2 and Code 2 Flash for enterprise coding",
+      "summary": "Microsoft’s November 17 coding releases emphasize everyday repository work and promotional pricing. Its headline performance ratios are relative benchmark comparisons, rather than an absolute code-correctness rate.",
+      "image": {
+        "src": "ai-news/2026-11/images/microsoft-mai-code2-official.webp",
+        "alt": "Microsoft’s official MAI Code 2 release artwork",
+        "caption": "Source: Microsoft AI. Official release artwork."
+      },
+      "content": [
+        {
+          "type": "paragraph",
+          "text": "Microsoft introduced MAI Code 2 and MAI Code 2 Flash at Ignite on November 17, adding its own coding models to the enterprise assistant market. Code 2 targets debugging, multi-file implementation, repository reasoning and visual interfaces. Flash is designed for frequent, smaller tasks such as explanations, targeted changes and routine fixes. The release is part of Microsoft’s broader MAI announcement, but the two coding models have a more specific purpose than a universal frontier-reasoning replacement."
+        },
+        {
+          "type": "paragraph",
+          "text": "The models are available in GitHub Copilot. Microsoft’s model-specific announcement describes Code 2 Flash in Microsoft Foundry as a limited-access preview, and says other distribution services will follow. That narrower availability statement is useful alongside the more general Ignite keynote. An organization should check its actual Copilot or Foundry access, rather than infer that every announced model is generally available through every Microsoft product on the same day."
+        },
+        {
+          "type": "heading",
+          "text": "The headline economics include a promotional assumption"
+        },
+        {
+          "type": "paragraph",
+          "text": "Microsoft says Code 2 reaches 98% of GPT-6.1 Sol’s performance at 40% of its cost, and 96% of Claude Opus 5.5’s performance at 5% of its cost. These are ratios averaged across four coding evaluations, not claims that 98% of arbitrary production tasks succeed. The comparison includes DeepSWE 1.1, Terminal Bench 2.1, SWE-Atlas and FrontierCode 1.1. Workload composition therefore matters: a team doing mostly interface changes may see a different balance from one maintaining infrastructure."
+        },
+        {
+          "type": "paragraph",
+          "text": "The accompanying methodology supplies an important qualification. Models were run at maximum reasoning effort, and Microsoft’s Code 2 cost uses a 50% promotional price. Three evaluations used its internal MSBench platform with the GitHub Copilot CLI and no subagents; FrontierCode results and costs came from Artificial Analysis. Flash’s comparison likewise uses promotional pricing and three routine-coding benchmarks. These conditions limit direct comparison with a differently configured agent or with prices after a promotion ends. A later list-price comparison could produce a different cost ratio even with the same benchmark scores."
+        },
+        {
+          "type": "heading",
+          "text": "Everyday specialization is the product choice"
+        },
+        {
+          "type": "paragraph",
+          "text": "Microsoft explicitly says the models are not yet tuned for fundamental scientific research or very long-horizon agent work. That helps define an appropriate trial: repetitive enterprise coding with clear acceptance checks. In a blind frontend evaluation, annotators preferred Code 2 over GPT-6 Sol 64% of the time, but the measured preference combined appearance and functionality. It is a different result from verifying security, correctness or maintainability across a production codebase."
+        },
+        {
+          "type": "paragraph",
+          "text": "For software teams, the release creates another option for routing work by difficulty and cost. A useful deployment comparison would hold the repository, tools, effort budget and review criteria constant, then record accepted changes, failed attempts and reviewer time. Microsoft also discussed licensed access to MAI weights for trusted enterprise customers; that arrangement should not be confused with a public open-weight release. The immediate news is a pair of commercially distributed coding models with clearly bounded workload and pricing claims."
+        }
+      ],
+      "sources": [
+        {
+          "label": "MAI Code 2 announcement and evaluation notes",
+          "url": "https://microsoft.ai/news/introducing-mai-code-2-and-mai-code-2-flash/"
+        },
+        {
+          "label": "MAI model-family announcement",
+          "url": "https://microsoft.ai/news/microsoft-ignite-2026/"
+        },
+        {
+          "label": "Dated Ignite keynote and Copilot access",
+          "url": "https://blogs.microsoft.com/blog/2026/11/17/ignite-2026-building-the-frontier-ecosystem/"
+        }
+      ]
+    },
+    {
+      "slug": "nvidia-fiscal-2027-q3-results-ai-infrastructure-demand",
+      "category": "Industry · AI Infrastructure",
+      "sortDate": "2026-11-17",
+      "dateLabel": "November 17, 2026",
+      "title": "NVIDIA reports $115.8 billion quarter as data-center revenue more than doubles",
+      "summary": "The November 17 results cover the fiscal third quarter ended October 25. NVIDIA reported $107.6 billion in Data Center revenue and forecast $130 billion for the next quarter, with no assumed China Data Center compute revenue.",
+      "image": {
+        "src": "ai-news/2026-11/images/nvidia-fy27-q3-official.jpg",
+        "alt": "NVIDIA sign outside its headquarters",
+        "caption": "Source: NVIDIA Newsroom. Company-provided headquarters photograph."
+      },
+      "content": [
+        {
+          "type": "paragraph",
+          "text": "NVIDIA reported $115.8 billion in revenue on November 17 for its third quarter of fiscal 2027, which ended October 25, 2026. Revenue rose 20% from the preceding quarter and 103% from a year earlier. The fiscal label is important: these are results for an operating period in calendar 2026, not a forecast for the third quarter of calendar 2027. Data Center contributed $107.6 billion, up 110% year over year, making AI infrastructure the dominant part of the reported business."
+        },
+        {
+          "type": "paragraph",
+          "text": "The company reported GAAP net income of $65.3 billion and diluted earnings per share of $2.70. GAAP gross margin was 74.8%, compared with a separately adjusted non-GAAP figure of 74.9%. Those measures answer different accounting questions and should retain their labels. NVIDIA separately reported $8.2 billion in Edge Computing revenue, which is already included in the company total and should not be added again. NVIDIA also notes that, beginning in fiscal 2027, its non-GAAP measures no longer exclude stock-based compensation; the historical comparisons presented in the release were updated to include it."
+        },
+        {
+          "type": "heading",
+          "text": "A large outlook remains a forecast"
+        },
+        {
+          "type": "paragraph",
+          "text": "For the fourth fiscal quarter, NVIDIA guided to $130 billion in revenue, plus or minus 3%. The period includes an additional week, which complicates a simple comparison with an ordinary quarter. The company said its outlook assumes no Data Center compute revenue from China. That is a boundary on the forecast, rather than a statement that all of NVIDIA’s business in China has ceased or that export-policy uncertainty has been resolved."
+        },
+        {
+          "type": "paragraph",
+          "text": "NVIDIA’s release says Vera Rubin NVL72 systems have begun shipping and describes a growing cloud and supplier ecosystem. Its highlights also recap announcements made earlier in the quarter and during the supercomputing conference. Those items provide context for the financial result; their appearance in an earnings release does not make each one a new November 17 product launch. The new event is the reported quarter and management’s updated financial outlook."
+        },
+        {
+          "type": "heading",
+          "text": "Revenue is evidence of spending, not a complete account of AI returns"
+        },
+        {
+          "type": "paragraph",
+          "text": "The scale of Data Center revenue indicates how much customers and infrastructure providers are spending with NVIDIA. It does not measure how much revenue those customers earn from AI applications, the utilization of every installed accelerator or the productivity gains of end users. Those are downstream questions requiring different evidence. The result therefore supports a strong statement about supplier demand while leaving the broader economics of the buildout open."
+        },
+        {
+          "type": "paragraph",
+          "text": "For organizations planning compute, the useful distinction is between booked supplier revenue, equipment actually available to their team and applications delivering an acceptable outcome. Power, networking, deployment schedules and software readiness can still affect usable capacity. NVIDIA’s next-quarter figures are management expectations subject to supply, regulatory and execution risks. The November release is a substantial financial milestone for the AI infrastructure market, but it should be assessed with its fiscal dates, accounting definitions and forecast assumptions intact."
+        }
+      ],
+      "sources": [
+        {
+          "label": "NVIDIA dated results release",
+          "url": "https://nvidianews.nvidia.com/news/nvidia-announces-financial-results-for-third-quarter-fiscal-2027"
+        },
+        {
+          "label": "Official complete results PDF",
+          "url": "https://nvidianews.nvidia.com/_gallery/download_pdf/6afcc55b3d633299c104d103/"
+        },
+        {
+          "label": "Investor-relations copy",
+          "url": "https://investor.nvidia.com/news/press-release-details/2026/NVIDIA-Announces-Financial-Results-for-Third-Quarter-Fiscal-2027/default.aspx"
+        }
+      ]
+    },
+    {
+      "slug": "google-gemini-tasks-free-six-country-expansion",
+      "category": "Industry · Personal AI Agents",
+      "sortDate": "2026-11-17",
+      "dateLabel": "November 17, 2026",
+      "title": "Google expands free Gemini Tasks to six countries and adds U.S. action tools",
+      "summary": "The November 17 rollout separates broader free access from U.S.-first calling, texting and payment features. Tasks use connected services and user permissions; Google says some web workflows still need a handoff.",
+      "image": {
+        "src": "ai-news/2026-11/images/google-tasks-nov17-official.png",
+        "alt": "Google’s Gemini interface showing a switch between Chat and Task",
+        "caption": "Source: Google. Official Gemini Tasks interface artwork."
+      },
+      "content": [
+        {
+          "type": "paragraph",
+          "text": "Google expanded Tasks in Gemini free of charge on November 17 to eligible users in the United States, Japan, Korea, Canada, Australia and India. The rollout uses Gemini 4 Hydrogen and lets users delegate longer or recurring activities rather than only exchange chat messages. Google separately announced advanced action features starting in the United States. The two availability scopes should stay separate: free Tasks in six countries does not mean every new action works in all six."
+        },
+        {
+          "type": "paragraph",
+          "text": "The update connects planning with services that can carry out the work. Google describes calls to local businesses, calendar updates, email forwarding, text-message interaction and supported purchases. Users can switch from Chat to Task in Gemini; U.S. users can also configure texting or forward messages to the service. The announcement’s household examples illustrate potential workflows, rather than a measured success rate across all businesses, accounts or websites."
+        },
+        {
+          "type": "heading",
+          "text": "Connected accounts make permissions part of the workflow"
+        },
+        {
+          "type": "paragraph",
+          "text": "Google’s examples use information from connected email, calendars and other services. A new Google Password Manager integration can support signing into websites, while supported Google Pay checkout uses the Agent Payments Protocol. The company describes tokenized payment credentials, a spending cap and confirmation or pre-approval before a purchase. Google describes American Express support as coming later, while naming Mastercard and Visa for the initial tokenized card integrations. These mechanisms are part of the product design; they do not remove the need to check what a specific delegated task is allowed to do."
+        },
+        {
+          "type": "paragraph",
+          "text": "The grocery example illustrates a different boundary. Gemini can add items to an Instacart order and then hand the user to Instacart to finish. Calling tools disclose that the caller is AI, and businesses can opt out. For users, the relevant distinction is between preparing an action, requesting permission and completing it. A calendar entry or a proposed shopping cart should not be mistaken for a confirmed booking or paid order without the corresponding evidence."
+        },
+        {
+          "type": "heading",
+          "text": "Isolation and review address different failure modes"
+        },
+        {
+          "type": "paragraph",
+          "text": "Google says Tasks run in account-dedicated, hardware-isolated virtual machines using Agent Compute Engine. It also describes sandboxing, prompt-injection filtering, Safe Browsing and controls to disconnect apps or delete history. Isolation limits how a task interacts with the computing environment, while action review limits what it can authorize. Neither mechanism alone establishes that an agent has correctly understood a bill, selected the right product or matched an appointment to a person’s actual needs."
+        },
+        {
+          "type": "paragraph",
+          "text": "The company acknowledges that tasks can fail and that some websites require users to take over for a final step. That makes exception handling a central part of the experience. A useful personal assistant must surface an incomplete task, preserve the relevant context and show what still needs attention. The November rollout broadens access to delegated work, with its practical value depending on service compatibility, regional availability and reliable confirmation of consequential actions."
+        }
+      ],
+      "sources": [
+        {
+          "label": "Google’s November17 Tasks announcement",
+          "url": "https://blog.google/innovation-and-ai/products/gemini-app/tasks-in-gemini-free-new-features/"
+        },
+        {
+          "label": "Google’s Gemini product news archive",
+          "url": "https://blog.google/innovation-and-ai/products/gemini-app/"
+        }
+      ]
+    },
+    {
+      "slug": "aws-forward-deployed-engineering-fifteen-country-expansion",
+      "category": "Employment · AI Engineering Work",
+      "sortDate": "2026-11-17",
+      "dateLabel": "November 17, 2026",
+      "title": "AWS expands its embedded AI engineering service to 15 countries",
+      "summary": "The new November 17 milestone extends AWS Forward Deployed Engineering beyond its June launch. AWS describes joint delivery and skills transfer; the announcement does not disclose new hiring totals or independently measured workforce effects.",
+      "image": {
+        "src": "ai-news/2026-11/images/aws-fde-expansion-official.png",
+        "alt": "AWS’s official card announcing its global forward-deployed engineering expansion",
+        "caption": "Source: AWS Artificial Intelligence Blog. Official announcement artwork."
+      },
+      "content": [
+        {
+          "type": "paragraph",
+          "text": "AWS announced on November 17 that Forward Deployed Engineering is available in 15 countries for commercial and public-sector customers. The service places AWS specialists alongside customer engineering and business teams to move AI workflows into production. This is an expansion of an organization launched in June. The original $1 billion investment belongs to that earlier launch; it is not a newly announced November funding commitment."
+        },
+        {
+          "type": "paragraph",
+          "text": "The expanded footprint includes the United States, Mexico, Brazil, Canada, Australia, Singapore, India, South Korea, Japan, the United Kingdom, Germany, the Netherlands, France, Sweden and Saudi Arabia. AWS describes engagements that combine engineers, scientists and product managers with specialized agents. Its intended shared foundation carries context and controls from one use case to the next, reducing the need to rebuild each deployment separately. The public announcement identifies service availability, rather than a country-by-country count of staff hired or a measure of employment growth."
+        },
+        {
+          "type": "heading",
+          "text": "The work extends beyond choosing a model"
+        },
+        {
+          "type": "paragraph",
+          "text": "AWS frames the deployment problem around a shared technical foundation, operational workflows and governance. A prototype can work on a small test set while failing against inconsistent production records, permissions or undocumented business rules. Its FDE approach therefore includes connecting data, formalizing context, specifying decision rules and building the controls needed to operate agents after a pilot. These are tasks that involve the people responsible for the existing process, not just an external implementation team."
+        },
+        {
+          "type": "paragraph",
+          "text": "The company says its teams build in the customer’s AWS account and work in short delivery cycles, including 45-day sprints. It describes reusable components and an AgentCore-based runtime, with customer engineers participating from the outset. Named customer examples cover insurance, supply-chain mapping and other operational work. The reported timelines and efficiency improvements are AWS and customer accounts of particular engagements, not a controlled estimate of what a typical organization will achieve."
+        },
+        {
+          "type": "heading",
+          "text": "Skills transfer is the workforce claim to examine"
+        },
+        {
+          "type": "paragraph",
+          "text": "A central promise is that customer teams can operate and extend the resulting systems after AWS engineers leave. That would make documentation, handover and training as consequential as the first working demonstration. For an employer assessing this model, useful evidence would include whether internal engineers can handle a new exception, update a rule, diagnose a failed run and adapt the system when its underlying model changes. The announcement itself does not establish those outcomes across the expanded service."
+        },
+        {
+          "type": "paragraph",
+          "text": "The development also illustrates how AI engineering roles are broadening. Integrating an agent involves identity, auditability, evaluation, business knowledge and ongoing operations alongside model selection. That observation concerns the work described by the service; it is not proof of a net increase or decrease in jobs. November’s expansion makes the delivery model available in more markets, while leaving customers to assess how much durable capability, operating responsibility and maintenance knowledge an engagement transfers to their own staff."
+        }
+      ],
+      "sources": [
+        {
+          "label": "AWS November17 expansion and delivery model",
+          "url": "https://aws.amazon.com/blogs/machine-learning/getting-ai-out-of-the-demo-and-into-businesses-globally/"
+        },
+        {
+          "label": "June launch with explicitly dated November17 update",
+          "url": "https://www.aboutamazon.com/news/aws/aws-1-billion-forward-deployed-ai-engineers"
+        }
+      ]
+    },
+    {
       "slug": "weekly-ai-november-9-15",
       "category": "AI Weekly",
       "sortDate": "2026-11-16",
