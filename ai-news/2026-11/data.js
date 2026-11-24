@@ -2,6 +2,338 @@ window.AI_NEWS_MONTH_DATA["2026-11"] = {
   "label": "November 2026",
   "articles": [
     {
+      "slug": "anthropic-claude-ship-pr-review-fixes-beta",
+      "category": "Industry · Developer Tools",
+      "sortDate": "2026-11-23",
+      "dateLabel": "November 23, 2026",
+      "title": "Anthropic launches Claude Ship to review, repair and approve pull requests under team policies",
+      "newsletterHeadline": "Claude Ship adds PR repair and approval agents",
+      "summary": "Claude Ship combines generally available Code Review with two beta agents for repairs and policy-based approvals. It works with GitHub branch rules, while repository settings determine whether changes can merge without a person.",
+      "image": {
+        "src": "ai-news/2026-11/images/claude-ship-official.png",
+        "alt": "Anthropic diagram of Code Review, PR Steward and Claude Approvals.",
+        "caption": "Anthropic launch diagram. Code Review is generally available; PR Steward and Claude Approvals are in beta. Source: Anthropic."
+      },
+      "content": [
+        {
+          "type": "paragraph",
+          "text": "Anthropic introduced Claude Ship on November 23 to handle more of the work between opening a GitHub pull request and getting it ready to merge. The offering joins Code Review, which is generally available, with two public-beta agents: PR Steward and Claude Approvals. It is available to Claude Team and Enterprise organizations, subject to the exclusions in the documentation. The distinction between the established review service and the new beta components matters when teams decide what to adopt."
+        },
+        {
+          "type": "paragraph",
+          "text": "The workflow separates finding a problem, repairing it and deciding who must approve the result. Code Review examines changes in their surrounding code and posts findings. PR Steward addresses failed checks, merge conflicts and review feedback by pushing fixes. It is designed not to approve or merge pull requests. Claude Approvals then evaluates a policy that the team keeps in its repository. A successful repair and an approval decision are separate events."
+        },
+        {
+          "type": "heading",
+          "text": "The approval policy needs matching branch rules"
+        },
+        {
+          "type": "paragraph",
+          "text": "The documentation says an Approvals check prevents merging only where GitHub requires that check. Auto-merge or a merge queue can therefore complete a change without a person acting if the policy does not require human approval. Anthropic recommends starting in observe mode. That gives maintainers a way to compare the policy's decisions with their own before making it an enforced condition of merging, while retaining their existing required checks."
+        },
+        {
+          "type": "paragraph",
+          "text": "Billing and eligibility also affect a trial. The agents consume organization usage credits, separately from the plan's included usage; observe mode is billed too. PR Steward has no spend limit of its own until one is set. The documentation excludes organizations using Zero Data Retention, the HIPAA configuration or customer-managed encryption keys. A team should establish which repositories and changes belong in a pilot before interpreting its cost or acceptance rate."
+        },
+        {
+          "type": "heading",
+          "text": "What a useful trial would measure"
+        },
+        {
+          "type": "paragraph",
+          "text": "For a research lab, a practical evaluation would follow complete pull requests rather than count comments or generated patches. Useful records include the original task, findings the maintainer accepted, fixes that survived review and the time a person spent checking the result. Tests should correspond to what the code needs to do. A green check can establish that those tests passed; it cannot establish that every important case was covered."
+        },
+        {
+          "type": "paragraph",
+          "text": "A comparison with the previous review process also needs similar work on both sides. Documentation edits, dependency updates and changes to an experiment's implementation create different review demands. Grouping them together can make a faster workflow look more reliable simply because it handled easier changes. The same concern applies to time saved: waiting for a reviewer and actively investigating a defect are different kinds of delay."
+        },
+        {
+          "type": "paragraph",
+          "text": "Claude Ship makes the approval process itself part of the agent workflow. That is the consequential development in this release. Whether it improves a particular repository will depend on the policy, tests and people maintaining it. The launch provides product availability and a documented control model, while evidence about sustained reliability must come from actual use. Teams can now investigate that question without treating a beta approval agent as a substitute for their own acceptance criteria."
+        }
+      ],
+      "sources": [
+        {
+          "label": "Anthropic: introducing Claude Ship, November 23",
+          "url": "https://claude.com/resources/articles/introducing-claude-ship"
+        },
+        {
+          "label": "Claude Code documentation: agent roles, approvals and billing",
+          "url": "https://code.claude.com/docs/en/claude-ship"
+        }
+      ]
+    },
+    {
+      "slug": "zai-glm-54-loop-transformer-release",
+      "category": "Research · Model Architecture",
+      "sortDate": "2026-11-23",
+      "dateLabel": "November 23, 2026",
+      "title": "Z.ai introduces GLM-5.4 with repeated transformer layers and staged access",
+      "newsletterHeadline": "GLM-5.4 reuses layers for deeper reasoning",
+      "summary": "GLM-5.4 reuses a block of transformer layers to increase computation without adding parameters. Z.ai offers it through its coding plans and products, while describing API availability and downloadable weights as future steps.",
+      "image": {
+        "src": "ai-news/2026-11/images/glm-54-official.jpg",
+        "alt": "Z.ai launch artwork for GLM-5.4 and its Loop Transformer architecture.",
+        "caption": "Official GLM-5.4 launch artwork. Source: Z.ai."
+      },
+      "content": [
+        {
+          "type": "paragraph",
+          "text": "Z.ai announced GLM-5.4 on November 23, making repeated computation inside the model the central feature of its new flagship. The company calls the design a Loop Transformer: a shared group of layers runs again instead of adding another independently parameterized group. Its launch account says GLM-5.4 loops 28 layers of the GLM-5 base model for two iterations. This is an architectural claim from the developer, accompanied by its own evaluations rather than an independent reproduction."
+        },
+        {
+          "type": "paragraph",
+          "text": "The distinction is between how many weights a model stores and how much work it performs with them. Reusing a block can add computational depth without adding parameters to that block. Another pass still requires computation, so a smaller parameter count does not by itself establish lower latency or serving cost. Z.ai presents the architecture as a way to extend reasoning and coding capability; readers should assess any efficiency claim against a stated workload and resource budget."
+        },
+        {
+          "type": "heading",
+          "text": "Available products and promised releases differ"
+        },
+        {
+          "type": "paragraph",
+          "text": "The launch directs users to the GLM Coding Plan, ZCode and Z.ai Chat. It marks the general API as coming soon and says downloadable weights are planned after safety hardening. Today's product access should therefore be distinguished from those future releases. A coding subscription, a general-purpose API and a model that a researcher can run locally support different experiments and are not interchangeable forms of availability."
+        },
+        {
+          "type": "paragraph",
+          "text": "ZCode's official FAQ lists a one-million-token context window and three effort levels: Low, High and Max, with Max selected by default. It includes GLM-5.4 in every current Coding Plan tier. The FAQ suggests reducing effort for straightforward requests when long thinking consumes too much time or quota. It also says GLM-5.3 remains available and is not automatically replaced. Those controls matter when comparing runs made before and after the announcement."
+        },
+        {
+          "type": "heading",
+          "text": "How to test the added depth"
+        },
+        {
+          "type": "paragraph",
+          "text": "A useful comparison would keep the task, available tools and stopping conditions fixed while varying the selected model and effort. For a coding assignment, the outcome should be an accepted change with a recorded test result. Output length alone is a weak measure: a short answer may omit a required step, while a long answer may spend resources reconsidering work that was already correct. Both elapsed time and completion quality belong in the record."
+        },
+        {
+          "type": "paragraph",
+          "text": "Long context introduces a second question. A large window describes capacity, while a practical task tests whether the model finds and uses the relevant material within it. A lab could place the necessary requirements among unrelated files and check the final implementation against those requirements. Recording what context was supplied and what tools the system used would make the comparison more informative than a screenshot of a successful demonstration."
+        },
+        {
+          "type": "paragraph",
+          "text": "The release is useful research news because it connects an architectural idea with a product people can examine. Its broader significance will become clearer as repeatable evaluations and the planned distribution routes become available. For now, the documented settings give users a concrete way to investigate the trade between additional reasoning and time spent. Claims about general superiority should remain attributed to Z.ai until outside evidence establishes where that trade pays off."
+        }
+      ],
+      "sources": [
+        {
+          "label": "Z.ai: GLM-5.4 launch, November 23",
+          "url": "https://z.ai/blog/glm-5.4"
+        },
+        {
+          "label": "ZCode FAQ: model access, context and effort settings",
+          "url": "https://zcode.z.ai/en/docs/qa"
+        },
+        {
+          "label": "AutoClaw: dated November 23 GLM-5.4 integration announcement",
+          "url": "https://autoclaw.z.ai/en/blog/model/GLM-5.4/"
+        }
+      ]
+    },
+    {
+      "slug": "openai-gpt62-chatgpt-chat-tab-rollout",
+      "category": "Industry · Foundation Models",
+      "sortDate": "2026-11-23",
+      "dateLabel": "November 23, 2026",
+      "title": "OpenAI brings GPT-6.2 to ChatGPT's Chat tab, separately from Work and Codex",
+      "newsletterHeadline": "GPT-6.2 reaches the Chat tab",
+      "summary": "A conversation-tuned version of GPT-6.2 begins rolling out to paid ChatGPT tiers. OpenAI reports gains in instruction following and image understanding, while the launch leaves the models in Work and Codex unchanged.",
+      "image": {
+        "src": "ai-news/2026-11/images/gpt62-chat-official.png",
+        "alt": "OpenAI release artwork showing GPT-6.2 surrounded by examples of everyday tasks.",
+        "caption": "Official artwork from the November 23 ChatGPT release notes. Source: OpenAI."
+      },
+      "content": [
+        {
+          "type": "paragraph",
+          "text": "OpenAI began rolling out a conversation-tuned version of GPT-6.2 in ChatGPT's Chat tab on November 23. The release notes list Plus, Pro, Business and Enterprise availability globally, with Enterprise access dependent on administrator settings. This version is based on GPT-6.2 Sol and is tuned for everyday conversation. The announcement is a separate milestone from the November 17 introduction of Astra and Sol in Work and Codex; today's release does not change the models powering those experiences."
+        },
+        {
+          "type": "paragraph",
+          "text": "The company reports stronger results on several Chat-tab evaluations. Image understanding rose from 47.4% for GPT-6 to 71.7%, while success on particularly demanding instruction-following prompts rose from 62.5% to 78.1%. These are developer-reported measurements under the company's test conditions. They describe the evaluated tasks, rather than a probability that any individual image question or conversation will receive a correct answer."
+        },
+        {
+          "type": "figure",
+          "src": "ai-news/2026-11/images/gpt62-image-understanding-official.png",
+          "alt": "OpenAI chart comparing Chat-tab image understanding: GPT-6, 47.4%; GPT-6.2, 71.7%.",
+          "caption": "OpenAI-reported Chat-tab evaluation. GPT-6: 47.4%; GPT-6.2: 71.7%. Source: November 23 release notes. These are developer-run tests."
+        },
+        {
+          "type": "heading",
+          "text": "The comparison depends on the evaluated version"
+        },
+        {
+          "type": "paragraph",
+          "text": "The accompanying system card is dated November 23 and identifies the evaluated model by that release date. It cautions that comparison scores for previous models may come from later evaluated versions rather than their original launch snapshots. A reader comparing two announcements should therefore check the evaluation date as well as the model name. An apparently changed baseline can reflect a different version being measured."
+        },
+        {
+          "type": "paragraph",
+          "text": "OpenAI places this release at its Critical cybersecurity capability threshold and High thresholds for biological and chemical capabilities and AI self-improvement under its Preparedness Framework. The card describes safeguards and safety evaluations alongside those assessments. These are the developer's capability classifications and deployment assessment, rather than a certification that the model is harmless. The card's overview names Plus and Pro; the broader four-tier availability in this report follows the release notes."
+        },
+        {
+          "type": "heading",
+          "text": "What changes for a person using Chat"
+        },
+        {
+          "type": "paragraph",
+          "text": "For someone doing ordinary research or writing, the immediate question is whether the updated Chat experience handles their instructions and supplied material more consistently. A useful check would use the same request, reference documents and available tools, then examine the finished response. Requirements such as preserving a date, following a requested structure or distinguishing an author's claim from verified evidence can be scored directly. A fluent explanation alone does not show that those requirements were met."
+        },
+        {
+          "type": "paragraph",
+          "text": "Image tasks need similarly concrete criteria. Reading a chart label, identifying a visual feature and drawing an inference from that feature are different operations. An evaluator can record each separately and retain the original image so that another reader can inspect the judgment. That avoids turning an aggregate benchmark gain into an assumption that every visual interpretation has improved by the same amount. It also makes consequential mistakes easier to trace."
+        },
+        {
+          "type": "paragraph",
+          "text": "The November 23 update expands where this model family appears in the product. It offers a reason to revisit recurring Chat tasks while preserving the conditions needed for a fair comparison. The strongest evidence for a particular user's workflow will be whether completed answers satisfy those tasks with fewer corrections. Today's sources establish the rollout, its stated scope and OpenAI's evaluation results; they do not independently measure the benefit across all users or professional settings."
+        }
+      ],
+      "sources": [
+        {
+          "label": "OpenAI: ChatGPT release notes, November 23 entry",
+          "url": "https://help.openai.com/en/articles/6825453-chatgpt-release-notes"
+        },
+        {
+          "label": "OpenAI: GPT-6.2 in ChatGPT system card, November 23",
+          "url": "https://deploymentsafety.openai.com/gpt-6-2-chatgpt/gpt-6-2-chatgpt.pdf"
+        }
+      ]
+    },
+    {
+      "slug": "openai-cisco-shirudo-linux-live-protection",
+      "category": "Industry · AI Security",
+      "sortDate": "2026-11-23",
+      "dateLabel": "November 23, 2026",
+      "title": "OpenAI and Cisco release Shirudo for temporary protections on running Linux systems",
+      "newsletterHeadline": "Shirudo adds protections while Linux stays running",
+      "summary": "Shirudo offers signed, temporary protections for running Linux systems while permanent patches are prepared. A controlled demonstration blocked one exploit without a restart; the pre-release project requires specific kernel support and TPM 2.0 for production targets.",
+      "image": {
+        "src": "ai-news/2026-11/images/shirudo-official.png",
+        "alt": "Shirudo project wordmark.",
+        "caption": "Official Shirudo project logo, supplied in its public source repository. The project is pre-release. Source: Shirudo contributors."
+      },
+      "content": [
+        {
+          "type": "paragraph",
+          "text": "OpenAI and Cisco introduced Shirudo on November 23 as an open-source way to protect running Linux systems while teams prepare permanent patches. The idea is to narrow the period when a known vulnerability remains exposed but an ordinary software update cannot yet be rolled out. Operators approve temporary protections, called shields, before deployment. The project is pre-release software, and its repository specifies additional production requirements; the launch should not be read as universal compatibility with existing Linux installations."
+        },
+        {
+          "type": "paragraph",
+          "text": "Shirudo uses eBPF for observation and targeted controls, while its broader protection model also supports application-level changes. The repository describes signed loaders and signed micropatches, with TPM-backed evidence of a target's measured protection state. That evidence helps establish what was installed. It does not, by itself, establish that the installed protection blocks every relevant attack or preserves every legitimate workload. Those are separate questions that require testing."
+        },
+        {
+          "type": "heading",
+          "text": "The demonstration covers a specific running service"
+        },
+        {
+          "type": "paragraph",
+          "text": "Cisco's technical account describes a controlled Java4Shell test against Elasticsearch 9.5.5. Codex helped produce a mitigation that added input validation through Java bytecode in a Base64 decoding path. The shield attached to the running process, and the attempted exploit failed without a restart. This example matters because it used an application-level modification; describing it simply as an eBPF patch would lose the distinction between the platform's mechanisms and the demonstrated mitigation."
+        },
+        {
+          "type": "paragraph",
+          "text": "The system requirements call for a kernel with the signed-loader ABI and Shirudo's required patches, plus TPM 2.0 for production targets. The documentation says there is no fallback compatibility mode for an older kernel. The repository offers a local VM route for experimentation, including a software TPM. Its license is BSD 2-Clause, with BPF programs dual-licensed BSD/GPL. These details make the release inspectable, while setting clear boundaries around an initial trial."
+        },
+        {
+          "type": "heading",
+          "text": "Where the engineering work remains"
+        },
+        {
+          "type": "paragraph",
+          "text": "For an infrastructure team, effectiveness and operational compatibility need separate evidence. A shield can stop the test that motivated it while also affecting a legitimate request that the test never exercised. A useful evaluation would run representative workloads before and after installation, record failures and latency, and retain the exact shield version. The acceptance decision should follow those results rather than the fact that the mitigation was generated quickly."
+        },
+        {
+          "type": "paragraph",
+          "text": "Deployment evidence also needs to be connected to the intended machines. A signed package, a record of installation and a successful application test answer different questions. Keeping them together would let an operator investigate whether a later incident involved an absent shield, an unsuitable shield or an uncovered attack path. A temporary mitigation also needs an owner and a retirement condition when the underlying software can be updated."
+        },
+        {
+          "type": "paragraph",
+          "text": "Shirudo therefore adds a concrete project to the discussion of AI-assisted defense, rather than demonstrating that patch management can be automated away. The controlled example shows one mitigation reaching a running service under stated conditions. The public code and requirements let other teams examine that workflow. Wider conclusions about reliability will require tests across more vulnerabilities, kernels and workloads, with failures reported as carefully as successful demonstrations. No such independent validation was performed for this news report."
+        }
+      ],
+      "sources": [
+        {
+          "label": "OpenAI: introducing Shirudo, November 23",
+          "url": "https://openai.com/index/introducing-shirudo/"
+        },
+        {
+          "label": "Cisco Isovalent: architecture and controlled demonstration",
+          "url": "https://isovalent.com/blog/post/cisco-openai-shirudo/"
+        },
+        {
+          "label": "Shirudo: public source repository and license",
+          "url": "https://github.com/shirudo-dev/shirudo"
+        },
+        {
+          "label": "Shirudo documentation: production system requirements",
+          "url": "https://docs.shirudo.dev/operate/plan/system-requirements.html"
+        }
+      ]
+    },
+    {
+      "slug": "appian-uk-ai-software-maintenance-survey",
+      "category": "Workforce · Software Development",
+      "sortDate": "2026-11-23",
+      "dateLabel": "November 23, 2026",
+      "title": "UK survey highlights maintenance work after AI-assisted coding",
+      "newsletterHeadline": "Survey highlights work after AI code is written",
+      "summary": "An Appian-commissioned survey of 200 UK enterprise decision-makers reports work beyond initial AI-assisted coding. The November 23 announcement reflects October fieldwork and self-reported experience, with testing, support and maintenance part of the picture.",
+      "image": {
+        "src": "ai-news/2026-11/images/appian-official-logo.jpg",
+        "alt": "Appian corporate logo supplied with the survey press release.",
+        "caption": "Official Appian press logo. The UK survey described below has 200 respondents; the release's separate infographic cites a broader 851-person sample and is not reproduced here. Source: Appian / PR Newswire."
+      },
+      "content": [
+        {
+          "type": "paragraph",
+          "text": "Appian released a UK survey on November 23 about the work that follows AI-assisted software development. Censuswide collected responses from 200 senior AI, engineering and IT decision-makers at large enterprises on October 21-30. Respondents worked on at least three software systems annually. The announcement date belongs to November; the reported experiences were collected in October. That timing keeps a newly released survey from being mistaken for a measurement of changes that happened today."
+        },
+        {
+          "type": "paragraph",
+          "text": "In the release, 64% reported faster development with standalone AI tools alongside more time across testing, integration, troubleshooting, scaling or deployment. Another 60% reported unexpected post-launch security, governance or compliance resources. Appian calls software built or modified with AI outside approved enterprise platforms \"aloneware.\" The supplier commissioned the research and sells an enterprise platform. Its commercial framing and the selected population are relevant when interpreting the findings."
+        },
+        {
+          "type": "heading",
+          "text": "The survey asks about reported burdens"
+        },
+        {
+          "type": "paragraph",
+          "text": "These responses do not directly measure hours worked, financial returns or employment changes. Nor does a group of senior UK enterprise decision-makers represent every developer or organization using AI. In particular, an opinion about maintenance difficulty cannot establish how many jobs AI created or displaced. A causal productivity claim would need a defined comparison and a way to account for differences in the software and teams being compared."
+        },
+        {
+          "type": "paragraph",
+          "text": "There is a useful connection to established software practice. NIST's Secure Software Development Framework, published in February 2022, recommends incorporating security practices throughout the development lifecycle. It addresses reducing vulnerabilities, limiting their consequences and addressing root causes. That older guidance is background here, rather than a new November announcement. It helps explain why measuring initial code production alone leaves out responsibilities that continue after an application first works."
+        },
+        {
+          "type": "heading",
+          "text": "Following a system beyond the first working version"
+        },
+        {
+          "type": "paragraph",
+          "text": "For a team investigating its own results, a more complete record would follow a task from requirements through deployment and maintenance. Writing time, review time, failed tests and integration work can be recorded separately. The same record should retain the application's scope and acceptance criteria. Otherwise, a complicated system that took longer to support could be compared unfairly with a small prototype that never faced production demands."
+        },
+        {
+          "type": "paragraph",
+          "text": "Responsibility is another observable part of that process. Someone needs to know how the application is configured, which dependencies it uses and who can change or retire it. A handoff that leaves those questions unanswered may create work later even when the first demonstration was convincing. Conversely, time spent on documentation or tests can be useful investment rather than evidence that faster coding failed. The accounting needs to distinguish those possibilities."
+        },
+        {
+          "type": "paragraph",
+          "text": "The survey provides a reason to ask those questions, with clear limits on what its answers establish. Its contribution to the day's AI news is the attention to work after code generation, when a system must be understood and supported. For readers evaluating coding assistants, the practical next step is to examine their own complete delivery process. The reported percentages describe this sample's experience; the broader question of net benefit remains something to measure rather than assume."
+        }
+      ],
+      "sources": [
+        {
+          "label": "Appian: November 23 announcement and survey methods",
+          "url": "https://investors.appian.com/news-releases/news-release-details/new-survey-uncovers-aloneware-crisis-isolated-ai-development"
+        },
+        {
+          "label": "Appian: archived announcement PDF with fieldwork dates",
+          "url": "https://investors.appian.com/node/14611/pdf"
+        },
+        {
+          "label": "NIST SP 800-218: secure development lifecycle background (February 2022)",
+          "url": "https://csrc.nist.gov/pubs/sp/800/218/final"
+        }
+      ]
+    },
+    {
       "slug": "gis-ai-tuberculosis-systematic-review-integration-gap",
       "category": "Research · Spatial Health AI",
       "sortDate": "2026-11-22",
